@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Arches Cricket Club</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6b1a;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+form {
+    background: #111;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #ff8c42;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    background: #ff6b1a;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+button:hover {
+    background: #ff8c42;
+}
+
+.note {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 15px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Join Arches Cricket Club</h1>
+    <p class="subtitle">Player Registration Form</p>
+
+    <form onsubmit="submitForm(event)">
+
+        <div class="section-title">Personal Information</div>
+
+        <label>Full Name *</label>
+        <input type="text" required>
+
+        <label>Date of Birth *</label>
+        <input type="date" required>
+
+        <label>Email Address *</label>
+        <input type="email" required>
+
+        <label>Phone Number *</label>
+        <input type="tel" required>
+
+        <label>Address</label>
+        <textarea rows="3"></textarea>
+
+        <div class="section-title">Cricket Information</div>
+
+        <label>Primary Role *</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Batsman</option>
+            <option>Bowler</option>
+            <option>All-Rounder</option>
+            <option>Wicket Keeper</option>
+        </select>
+
+        <label>Batting Style</label>
+        <select>
+            <option>Right Hand</option>
+            <option>Left Hand</option>
+        </select>
+
+        <label>Bowling Style</label>
+        <input type="text" placeholder="e.g. Right Arm Medium">
+
+        <label>Previous Clubs / Experience</label>
+        <textarea rows="3"></textarea>
+
+        <div class="section-title">Availability</div>
+
+        <label>Are you available for weekend matches? *</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Limited</option>
+        </select>
+
+        <label>Any injuries or notes</label>
+        <textarea rows="3"></textarea>
+
+        <button type="submit">Submit Registration</button>
+
+        <p class="note">
+            Submitting this form does not guarantee selection.  
+            Our captains will contact you if required.
+        </p>
+    </form>
+</div>
+
+<script>
+function submitForm(e) {
+    e.preventDefault();
+    alert("Thank you for registering! Arches CC will contact you if required.");
+}
+</script>
+
+</body>
+</html>

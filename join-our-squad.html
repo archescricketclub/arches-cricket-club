@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | Join Our Squad</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    color: #ff6b1a;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #ff6b1a;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+button:hover {
+    background: #ff8c42;
+}
+
+.admin-box {
+    max-width: 400px;
+    margin: 120px auto;
+    background: #111;
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.admin-box input {
+    text-align: center;
+}
+
+.note {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ADMIN LOGIN -->
+<div class="admin-box" id="loginBox">
+    <h2>Admin Access</h2>
+    <p>Enter admin password to continue</p>
+    <input type="password" id="adminPassword" placeholder="Admin Password">
+    <button onclick="checkPassword()">Enter</button>
+    <p class="note">Admins only</p>
+</div>
+
+<!-- FORM (HIDDEN UNTIL AUTH) -->
+<div class="container hidden" id="adminContent">
+    <h1>Join Our Squad – Admin Panel</h1>
+    <p>Use this form to register new players.</p>
+
+    <form onsubmit="submitForm(event)">
+        <h2>Personal Details</h2>
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Email Address</label>
+        <input type="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" required>
+
+        <label>Address</label>
+        <textarea rows="3"></textarea>
+
+        <h2>Cricket Details</h2>
+
+        <label>Playing Role</label>
+        <select>
+            <option>Batsman</option>
+            <option>Bowler</option>
+            <option>All-Rounder</option>
+            <option>Wicket Keeper</option>
+        </select>
+
+        <label>Batting Style</label>
+        <select>
+            <option>Right Hand</option>
+            <option>Left Hand</option>
+        </select>
+
+        <label>Bowling Style</label>
+        <input type="text" placeholder="e.g. Right Arm Medium">
+
+        <label>Previous Clubs</label>
+        <textarea rows="3"></textarea>
+
+        <h2>Availability</h2>
+
+        <label>Available for Matches?</label>
+        <select>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Limited</option>
+        </select>
+
+        <label>Notes (Injuries, preferences, etc.)</label>
+        <textarea rows="3"></textarea>
+
+        <button type="submit">Submit Player</button>
+    </form>
+</div>
+
+<script>
+const ADMIN_PASSWORD = "archesadmin"; // 🔴 CHANGE THIS
+
+function checkPassword() {
+    const input = document.getElementById("adminPassword").value;
+    if (input === ADMIN_PASSWORD) {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("adminContent").classList.remove("hidden");
+    } else {
+        alert("Incorrect password");
+    }
+}
+
+function submitForm(e) {
+    e.preventDefault();
+    alert("Player registered (demo only). Connect to backend later.");
+}
+</script>
+
+</body>
+</html>
