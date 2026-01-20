@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Arches Cricket Club</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary:#ff6b1a;
+    --dark:#0d0d0d;
+    --light:#ffffff;
+    --overlay:rgba(0,0,0,0.85);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:'Roboto',sans-serif;
+    background:var(--dark);
+    color:var(--light);
+}
+
+/* NAVBAR (same as index) */
+.navbar {
+    background:linear-gradient(135deg,#000,#1a1a1a);
+    padding:1rem 0;
+    border-bottom:2px solid var(--primary);
+}
+
+.nav-container {
+    max-width:1400px;
+    margin:auto;
+    padding:0 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo {
+    display:flex;
+    gap:1rem;
+    align-items:center;
+}
+
+.logo-icon {
+    width:60px;
+    height:60px;
+    background:url('logo.png') center/contain no-repeat;
+}
+
+.logo-text h1 {
+    font-family:'Oswald',sans-serif;
+    font-size:1.4rem;
+}
+
+.logo-text p {
+    font-size:.75rem;
+    color:var(--primary);
+    letter-spacing:2px;
+}
+
+.nav-menu {
+    list-style:none;
+    display:flex;
+    gap:2rem;
+}
+
+.nav-menu a {
+    text-decoration:none;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:.9rem;
+    position:relative;
+}
+
+.nav-menu a::after {
+    content:'';
+    position:absolute;
+    bottom:-6px;
+    left:50%;
+    width:0;
+    height:2px;
+    background:var(--primary);
+    transition:.3s;
+    transform:translateX(-50%);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width:70%;
+}
+
+/* HERO */
+.about-hero {
+    min-height:45vh;
+    background:
+      linear-gradient(var(--overlay),var(--overlay)),
+      url('logo.png') center/420px no-repeat,
+      linear-gradient(135deg,#000,#111);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.about-hero h2 {
+    font-family:'Oswald',sans-serif;
+    font-size:3rem;
+    letter-spacing:3px;
+}
+
+/* CONTENT */
+.about-section {
+    max-width:1100px;
+    margin:5rem auto;
+    padding:0 2rem;
+    line-height:1.8;
+}
+
+.about-section h3 {
+    font-family:'Oswald',sans-serif;
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:1.5rem;
+    text-transform:uppercase;
+}
+
+.about-section p {
+    margin-bottom:1.5rem;
+    color:#ddd;
+    font-size:1.05rem;
+}
+
+/* MOTTO */
+.motto {
+    margin-top:3rem;
+    padding:2.5rem;
+    text-align:center;
+    border:2px solid var(--primary);
+    border-radius:15px;
+    background:rgba(255,107,26,.05);
+}
+
+.motto h4 {
+    font-family:'Oswald',sans-serif;
+    font-size:2rem;
+    letter-spacing:2px;
+}
+
+.motto span {
+    color:var(--primary);
+}
+
+/* FOOTER */
+.footer {
+    background:#000;
+    border-top:2px solid var(--primary);
+    padding:2rem;
+    text-align:center;
+    color:#aaa;
+    font-size:.85rem;
+}
+
+@media(max-width:768px){
+    .about-hero h2 {
+        font-size:2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="nav-container">
+    <div class="logo">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+            <h1>Arches Cricket Club</h1>
+            <p>BELFAST, NORTHERN IRELAND</p>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fixtures.html">Fixtures</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="about-hero">
+    <h2>About Arches Cricket Club</h2>
+</section>
+
+<!-- CONTENT -->
+<section class="about-section">
+<p>
+Arches Cricket Club was founded in the 2024/25 season with a clear purpose — to build a competitive, disciplined, and welcoming cricket club driven by passion for the game. Based in Belfast, Northern Ireland, the club was formed by a group of committed individuals who shared a strong belief in teamwork, ambition, and long-term growth.
+</p>
+
+<p>
+From the very beginning, the club set high standards both on and off the field. That mindset delivered immediate success, as Arches Cricket Club proudly won the NCU Development Cup in its very first season. This achievement was not just a trophy, but a statement of intent — reflecting the dedication, hard work, and unity of our players, management, and supporters.
+</p>
+
+<p>
+Our philosophy goes beyond results. We aim to create an inclusive environment where players of all backgrounds and experience levels feel welcome and supported. We focus on skill development, discipline, and sportsmanship, ensuring every member has the opportunity to grow as both a cricketer and a team player.
+</p>
+
+<p>
+As a young club with strong foundations, Arches Cricket Club is committed to continuous improvement and long-term success. With growing ambitions and a clear vision for the future, we strive to compete at higher levels, develop emerging talent, and contribute positively to the local cricketing community.
+</p>
+
+<p>
+Our journey has just begun — and the best is yet to come.
+</p>
+
+<div class="motto">
+    <h4>At <span>ARCHES</span>, we Aim, Achieve, and Aspire.</h4>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+&copy; 2026 Arches Cricket Club · All Rights Reserved
+</footer>
+
+</body>
+</html>
