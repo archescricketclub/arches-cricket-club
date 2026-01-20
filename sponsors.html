@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Sponsors | Arches Cricket Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #ff6b1a;
+            --secondary-color: #ff8c42;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #0d0d0d;
+            --light-bg: #f5f5f5;
+            --text-light: #ffffff;
+            --text-dark: #1a1a1a;
+            --transition: all 0.3s ease;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 55px;
+        }
+
+        .logo h1 {
+            color: #fff;
+            font-size: 1.4rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, rgba(13,13,13,.95), rgba(26,26,26,.95)),
+                        url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* SPONSORS */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+        }
+
+        .section-header p {
+            color: #666;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .sponsor-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .sponsor-card img {
+            max-width: 220px;
+            margin-bottom: 2rem;
+        }
+
+        .sponsor-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .sponsor-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .sponsor-card a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .sponsor-card a:hover {
+            background: var(--secondary-color);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark-bg);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Arches Cricket Club Logo">
+            <h1>Arches Cricket Club</h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sponsors.html" class="active">Sponsors</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Our Proud Sponsors</h1>
+    <p>Powering Arches Cricket Club</p>
+</section>
+
+<!-- SPONSORS -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Main Sponsors</h2>
+            <p>Thank you for supporting local cricket in Belfast</p>
+        </div>
+
+        <div class="sponsor-grid">
+
+            <!-- BANJO TECH -->
+            <div class="sponsor-card">
+                <img src="images/banjo-tech.png" alt="Banjo Tech Logo">
+                <h3>Banjo Tech</h3>
+                <p>
+                    Banjo Tech delivers innovative digital and technology solutions,
+                    proudly supporting Arches Cricket Club.
+                </p>
+                <a href="https://banjo.tech" target="_blank">Visit Website</a>
+            </div>
+
+            <!-- ANDHRA PARADISE -->
+            <div class="sponsor-card">
+                <img src="images/ANDHRA1.png" alt="Andhra Paradise Logo">
+                <h3>Andhra Paradise</h3>
+                <p>
+                    Bringing authentic Andhra cuisine to Belfast while backing
+                    community cricket and local talent.
+                </p>
+                <a href="#" target="_blank">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Arches Cricket Club • Belfast, Northern Ireland</p>
+</footer>
+
+</body>
+</html>
