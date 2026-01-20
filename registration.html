@@ -1,173 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join Arches Cricket Club</title>
+  <meta charset="UTF-8" />
+  <title>Join Arches Cricket Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    color: #fff;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 20px;
-}
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255, 107, 26, 0.2);
+      border-top: 4px solid #ff6b1a;
+    }
 
-h1 {
-    text-align: center;
-    color: #ff6b1a;
-    margin-bottom: 10px;
-}
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #ff6b1a;
+    }
 
-.subtitle {
-    text-align: center;
-    color: #ccc;
-    margin-bottom: 40px;
-}
+    p.subtitle {
+      text-align: center;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
 
-form {
-    background: #111;
-    padding: 40px;
-    border-radius: 10px;
-    border: 1px solid #333;
-}
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
 
-.section-title {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #ff8c42;
-    font-size: 18px;
-}
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      background: #222;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
 
-label {
-    display: block;
-    margin-top: 15px;
-    font-size: 14px;
-}
+    textarea {
+      resize: vertical;
+    }
 
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    color: #fff;
-    border-radius: 4px;
-}
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background: #ff6b1a;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-textarea {
-    resize: vertical;
-}
+    button:hover {
+      background: #ff8c42;
+    }
 
-button {
-    margin-top: 30px;
-    width: 100%;
-    padding: 14px;
-    background: #ff6b1a;
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 30px;
-}
-
-button:hover {
-    background: #ff8c42;
-}
-
-.note {
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 15px;
-    text-align: center;
-}
-</style>
+    .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
     <h1>Join Arches Cricket Club</h1>
     <p class="subtitle">Player Registration Form</p>
 
-    <form onsubmit="submitForm(event)">
+    <!-- ✅ FORM -->
+    <form id="registrationForm">
 
-        <div class="section-title">Personal Information</div>
+      <!-- Personal Info -->
+      <label>Full Name *</label>
+      <input type="text" name="fullName" required />
 
-        <label>Full Name *</label>
-        <input type="text" required>
+      <label>Email Address *</label>
+      <input type="email" name="email" required />
 
-        <label>Date of Birth *</label>
-        <input type="date" required>
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required />
 
-        <label>Email Address *</label>
-        <input type="email" required>
+      <label>Date of Birth *</label>
+      <input type="date" name="dob" required />
 
-        <label>Phone Number *</label>
-        <input type="tel" required>
+      <label>Address *</label>
+      <textarea name="address" rows="2" required></textarea>
 
-        <label>Address</label>
-        <textarea rows="3"></textarea>
+      <!-- Cricket Info -->
+      <label>Primary Role *</label>
+      <select name="role" required>
+        <option value="">Select role</option>
+        <option>Batsman</option>
+        <option>Bowler</option>
+        <option>All-Rounder</option>
+        <option>Wicket Keeper</option>
+      </select>
 
-        <div class="section-title">Cricket Information</div>
+      <label>Batting Style *</label>
+      <select name="batting" required>
+        <option value="">Select</option>
+        <option>Right Hand</option>
+        <option>Left Hand</option>
+      </select>
 
-        <label>Primary Role *</label>
-        <select required>
-            <option value="">Select</option>
-            <option>Batsman</option>
-            <option>Bowler</option>
-            <option>All-Rounder</option>
-            <option>Wicket Keeper</option>
-        </select>
+      <label>Bowling Style</label>
+      <input type="text" name="bowling" placeholder="e.g. Right Arm Medium" />
 
-        <label>Batting Style</label>
-        <select>
-            <option>Right Hand</option>
-            <option>Left Hand</option>
-        </select>
+      <label>Previous Clubs / Experience</label>
+      <textarea name="experience" rows="3"></textarea>
 
-        <label>Bowling Style</label>
-        <input type="text" placeholder="e.g. Right Arm Medium">
+      <!-- Availability -->
+      <label>Available for Weekend Matches? *</label>
+      <select name="availability" required>
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Sometimes</option>
+      </select>
 
-        <label>Previous Clubs / Experience</label>
-        <textarea rows="3"></textarea>
+      <label>Injuries / Notes</label>
+      <textarea name="notes" rows="2"></textarea>
 
-        <div class="section-title">Availability</div>
-
-        <label>Are you available for weekend matches? *</label>
-        <select required>
-            <option value="">Select</option>
-            <option>Yes</option>
-            <option>No</option>
-            <option>Limited</option>
-        </select>
-
-        <label>Any injuries or notes</label>
-        <textarea rows="3"></textarea>
-
-        <button type="submit">Submit Registration</button>
-
-        <p class="note">
-            Submitting this form does not guarantee selection.  
-            Our captains will contact you if required.
-        </p>
+      <button type="submit">SUBMIT REGISTRATION</button>
     </form>
-</div>
 
-<script>
-function submitForm(e) {
-    e.preventDefault();
-    alert("Thank you for registering! Arches CC will contact you if required.");
-}
-</script>
+    <p class="note">
+      Submitting this form does not guarantee selection.  
+      Arches CC captains will contact you if required.
+    </p>
+  </div>
+
+  <!-- ✅ GOOGLE SHEETS INTEGRATION -->
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx8sW5hoZd27zXZcjQKu3ek6IwpIK23wkADMkP51tcZW86umJVVGpw4ciMijtwYeFEJ/exec";
+
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: formData
+      })
+      .then(() => {
+        alert("Thank you for registering! Arches CC will contact you if required.");
+        this.reset();
+      })
+      .catch(() => {
+        alert("Error submitting form. Please try again.");
+      });
+    });
+  </script>
 
 </body>
 </html>
