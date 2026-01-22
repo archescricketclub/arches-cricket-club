@@ -691,7 +691,31 @@
     transform: translateY(-2px);
     opacity: 0.85;
 }
+/* =======================
+   CONTACT ALIGNMENT FIX
+   ======================= */
 
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.contact-icon {
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
 /* =====================================
    COPYRIGHT CENTERING
    ===================================== */
@@ -1005,13 +1029,21 @@
                 <a href="registration.html">Join the Team</a>
             </div>
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>📧<a href="mailto:archescricketclub@gmail.com">
-                        archescricketclub@gmail.com
-                    </a>
-                </p>
-                <p>📍 Victoria Park, Belfast BT4 1LS, Northern Ireland</p>
-            </div>
+    <h3>Contact Us</h3>
+
+    <p class="contact-item">
+        <span class="contact-icon">📧</span>
+        <a href="mailto:archescricketclub@gmail.com">
+            archescricketclub@gmail.com
+        </a>
+    </p>
+
+    <p class="contact-item">
+        <span class="contact-icon">📍</span>
+        Victoria Park, Belfast BT4 1LS, Northern Ireland
+    </p>
+</div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Arches Cricket Club
