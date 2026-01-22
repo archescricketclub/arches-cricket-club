@@ -598,17 +598,30 @@
             display: block;
         }
 
-        .footer-section a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
+       /* ================================
+   SOCIAL ICON FINAL FIX
+   ================================ */
 
-        .social-links {
-    display: flex;
-    gap: 16px;
-    margin-top: 1rem;
+/* Keep footer text link animation */
+.footer-section a:not(.social-link):hover {
+    color: var(--primary-color);
+    padding-left: 5px;
 }
 
+/* Reset social icon hover movement */
+.footer-section a.social-link:hover {
+    padding-left: 0;
+}
+
+/* Social icon layout */
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    align-items: center;
+}
+
+/* Social button */
 .social-link {
     width: 46px;
     height: 46px;
@@ -616,19 +629,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    color: #ffffff;
-    border: 2px solid rgba(255,255,255,0.15);
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Icon centering (Font Awesome fix) */
 .social-link i {
+    font-size: 18px;
     line-height: 1;
+    display: block;
+    margin: 0;
+    color: #fff;
 }
 
-/* Platform colours */
+/* Brand colours */
 .social-link.linkedin {
-    background: #0077b5;
+    background-color: #0077b5;
 }
 
 .social-link.instagram {
@@ -636,19 +652,18 @@
 }
 
 .social-link.facebook {
-    background: #1877f2;
+    background-color: #1877f2;
 }
 
 .social-link.youtube {
-    background: #ff0000;
+    background-color: #ff0000;
 }
 
 /* Hover effect */
 .social-link:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
 }
-
 
         /* ============================================
            RESPONSIVE DESIGN
@@ -930,11 +945,20 @@
                 <p>Northern Ireland's cricket club since 2024/25. 
                    Dedicated to excellence, sportsmanship, and community spirit.</p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/company/archescricketclub/" class="social-link" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw==" class="social-link" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" class="social-link" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" class="social-link" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+    <a href="https://www.linkedin.com/company/archescricketclub/" class="social-link linkedin" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw==" class="social-link instagram" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" class="social-link facebook" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" class="social-link youtube" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+</div>
+
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
