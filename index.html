@@ -598,17 +598,43 @@
             display: block;
         }
 
-      /* =====================================
-   FINAL FOOTER SOCIAL ICON STYLES
-   (POLISHED & LOCKED)
-   ===================================== */
-
-/* Footer text spacing polish */
-.footer-section p {
-    margin-bottom: 6px;
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+    color: var(--text-light);
+    padding: 4rem 2rem 2rem;
+    border-top: 3px solid var(--primary-color);
 }
 
-/* Footer text links only (not icons) */
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+/* =====================================
+   SOCIAL ICONS – FINAL (NO CIRCLES)
+   ===================================== */
+
+/* Footer text hover (text links only) */
 .footer-section a:not(.social-link):hover {
     color: var(--primary-color);
     padding-left: 5px;
@@ -618,55 +644,65 @@
 .social-links {
     display: flex;
     gap: 18px;
-    margin-top: 8px; /* tighter visual grouping */
+    margin-top: 10px;
     align-items: center;
 }
 
-/* Social icon button */
+/* Remove circle styling completely */
 .social-link {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
     text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Font Awesome optical centering fix */
+/* Icon styling */
 .social-link i {
-    font-size: 18px;
-    color: #ffffff;
-    position: relative;
-    top: 1px; /* optical alignment (intentional) */
+    font-size: 26px;
+    line-height: 1;
+    display: block;
 }
 
 /* Brand colours */
-.social-link.linkedin {
-    background-color: #0077b5;
+.social-link.linkedin i {
+    color: #0077b5;
 }
 
-.social-link.instagram {
+.social-link.facebook i {
+    color: #1877f2;
+}
+
+.social-link.youtube i {
+    color: #ff0000;
+}
+
+.social-link.instagram i {
     background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.social-link.facebook {
-    background-color: #1877f2;
-}
-
-.social-link.youtube {
-    background-color: #ff0000;
-}
-
-/* Hover effect */
+/* Hover */
 .social-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.45);
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
-
-        /* ============================================
+/* =====================================
+   COPYRIGHT CENTERING
+   ===================================== */
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.8);
+}
+      /* ============================================
            RESPONSIVE DESIGN
            ============================================ */
         @media (max-width: 968px) {
