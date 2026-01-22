@@ -598,31 +598,31 @@
             display: block;
         }
 
-       /* ================================
-   SOCIAL ICON FINAL FIX
-   ================================ */
+      /* =====================================
+   FINAL FOOTER SOCIAL ICON STYLES
+   (POLISHED & LOCKED)
+   ===================================== */
 
-/* Keep footer text link animation */
+/* Footer text spacing polish */
+.footer-section p {
+    margin-bottom: 6px;
+}
+
+/* Footer text links only (not icons) */
 .footer-section a:not(.social-link):hover {
     color: var(--primary-color);
     padding-left: 5px;
 }
 
-/* Reset social icon hover movement */
-.footer-section a.social-link:hover {
-    padding-left: 0;
-}
-
-/* Social icon layout */
-/* FINAL OPTICALLY-CORRECT SOCIAL ICONS */
-
+/* Social icons container */
 .social-links {
     display: flex;
     gap: 18px;
-    margin-top: 16px;
+    margin-top: 8px; /* tighter visual grouping */
+    align-items: center;
 }
 
-/* Button */
+/* Social icon button */
 .social-link {
     width: 48px;
     height: 48px;
@@ -634,17 +634,17 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Icon (optical fix) */
+/* Font Awesome optical centering fix */
 .social-link i {
     font-size: 18px;
-    color: #fff;
+    color: #ffffff;
     position: relative;
-    top: 1px; /* optical centering */
+    top: 1px; /* optical alignment (intentional) */
 }
 
-/* Platform colours */
+/* Brand colours */
 .social-link.linkedin {
-    background: #0077b5;
+    background-color: #0077b5;
 }
 
 .social-link.instagram {
@@ -652,18 +652,19 @@
 }
 
 .social-link.facebook {
-    background: #1877f2;
+    background-color: #1877f2;
 }
 
 .social-link.youtube {
-    background: #ff0000;
+    background-color: #ff0000;
 }
 
-/* Hover */
+/* Hover effect */
 .social-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 22px rgba(0,0,0,0.45);
 }
+
 
         /* ============================================
            RESPONSIVE DESIGN
