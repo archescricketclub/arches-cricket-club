@@ -605,31 +605,51 @@
 
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 16px;
             margin-top: 1rem;
         }
 
         .social-link {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.05);
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            transition: var(--transition);
-            border: 2px solid rgba(255, 107, 26, 0.3);
+            font-size: 18px;
+            color: #ffffff;
+            border: 2px solid rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
         }
 
-        .social-link:hover {
-            background: var(--primary-color);
-            color: var(--text-light);
-            transform: translateY(-3px);
-            border-color: var(--primary-color);
-        }
+        .social-link i {
+    line-height: 1;
+}
 
-        .footer-bottom {
+/* Platform colours */
+.social-link.linkedin {
+    background: #0077b5;
+}
+
+.social-link.instagram {
+    background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+}
+
+.social-link.facebook {
+    background: #1877f2;
+}
+
+.social-link.youtube {
+    background: #ff0000;
+}
+
+/* Hover effect */
+.social-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+        
+         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
