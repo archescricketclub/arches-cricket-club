@@ -5,45 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team | Arches Cricket Club</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    /* ================= RESET & ROOT ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #ff6b1a;
+      --dark-bg: #1a1a1a;
+      --darker-bg: #0d0d0d;
+      --text-light: #ffffff;
+      --transition: all 0.3s ease;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #111;
-      color: #fff;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
     }
 
-    header {
-      background: #000;
-      padding: 15px 30px;
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+      border-bottom: 2px solid var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav a {
-      color: #fff;
-      margin-right: 15px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1100px;
+    .nav-container {
+      max-width: 1400px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: url('logo.png') center/contain no-repeat;
+    }
+
+    .logo-text h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transform: translateX(-50%);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 80%;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      margin: auto;
+      padding: 4rem 2rem 6rem;
+      width: 100%;
     }
 
     h2 {
-      margin-bottom: 20px;
-      border-left: 4px solid #e10600;
-      padding-left: 10px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 12px;
     }
 
     table {
@@ -70,83 +154,94 @@
       background: #262626;
     }
 
+    /* ================= FOOTER ================= */
     footer {
-      background: #000;
-      color: #aaa;
+      background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+      border-top: 3px solid var(--primary-color);
+      padding: 2rem;
       text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      margin-top: 40px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Arches Cricket Club</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="fixtures.html">Fixtures</a>
-      <a href="team.html">Team</a>
-      <a href="results.html">Results</a>
-      <a href="sponsors.html">Sponsors</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"></div>
+      <div class="logo-text">
+        <h1>Arches Cricket Club</h1>
+        <p>Belfast, Northern Ireland</p>
+      </div>
+    </a>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
-    <h2>Team Squad</h2>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Jersey Number</th>
-          <th>Player Name</th>
-          <th>Jersey Name</th>
-          <th>Cap Code</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Harish Padmanabhuni</td><td>HARISH</td><td>PH1</td></tr>
-        <tr><td>2</td><td>Anvesh Choudary Mannuru</td><td>ANVESH</td><td>AM28</td></tr>
-        <tr><td>3</td><td>Srini</td><td>SRINI</td><td>SRI3</td></tr>
-        <tr><td>4</td><td>Hanu Kolagani</td><td>HANU</td><td>HK04</td></tr>
-        <tr><td>5</td><td>Madhu Yellanur</td><td>MADHU</td><td>MY05</td></tr>
-        <tr><td>6</td><td>Harish C</td><td>HARISH</td><td>HC06</td></tr>
-        <tr><td>7</td><td>Tulasi Gangadhar Thatavarthi</td><td>TULASI</td><td>TT07</td></tr>
-        <tr><td>9</td><td>Venkateswarrao Jyothi</td><td>VENKY</td><td>VJ09</td></tr>
-        <tr><td>10</td><td>Vinay Tummala</td><td>VINAY</td><td>VT10</td></tr>
-        <tr><td>11</td><td>Kishan Karneedi</td><td>KISHAN</td><td>KK11</td></tr>
-        <tr><td>14</td><td>Surya Pavan Teja Tummala</td><td>PAVAN</td><td>PA14</td></tr>
-        <tr><td>15</td><td>Vonga Vishnu</td><td>VISHNU</td><td>VV15</td></tr>
-        <tr><td>18</td><td>Raja Mouli Yadavalli</td><td>RAJA</td><td>RY18</td></tr>
-        <tr><td>23</td><td>Dushyanth Reddy B</td><td>DUSHYANTH</td><td>DB23</td></tr>
-        <tr><td>25</td><td>Yonggicho Paul</td><td>YONGGI</td><td>PMY25</td></tr>
-        <tr><td>30</td><td>Anil Narra</td><td>ANIL</td><td>AN30</td></tr>
-        <tr><td>39</td><td>Deepak Sai</td><td>ABHIMANYU</td><td>AD39</td></tr>
-        <tr><td>44</td><td>Veerendra Babu Nagari</td><td>VEERU</td><td>VB44</td></tr>
-        <tr><td>45</td><td>Chandra Obula Reddy B</td><td>CHANDU</td><td>CH45</td></tr>
-        <tr><td>48</td><td>Abhiram Donepudi</td><td>ABHI</td><td>AB48</td></tr>
-        <tr><td>62</td><td>Jaya Surya</td><td>JAY</td><td>SR62</td></tr>
-        <tr><td>63</td><td>Banu Chand Kandukuri</td><td>KBC</td><td>KBC63</td></tr>
-        <tr><td>72</td><td>Arush Nimmagadda</td><td>ARUSH</td><td>AN72</td></tr>
-        <tr><td>75</td><td>Kiran Maheswaram</td><td>KIRAN JALSA</td><td>KM75</td></tr>
-        <tr><td>88</td><td>Veera SR Nimmakayala</td><td>VEERA</td><td>VN88</td></tr>
-        <tr><td>98</td><td>Rohit Singh</td><td>ROHIT SINGH</td><td>RS98</td></tr>
-        <tr><td>99</td><td>Charan Reddy Datla</td><td>CHARAN</td><td>CR99</td></tr>
-        <tr><td>999</td><td>Sri Chowdalla</td><td>SRI</td><td>S9</td></tr>
-      </tbody>
-    </table>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fixtures.html">Fixtures</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Arches Cricket Club · Belfast, Northern Ireland
-  </footer>
+<!-- MAIN -->
+<main>
+  <h2>Team Squad</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Jersey Number</th>
+        <th>Player Name</th>
+        <th>Jersey Name</th>
+        <th>Cap Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Harish Padmanabhuni</td><td>HARISH</td><td>PH1</td></tr>
+      <tr><td>2</td><td>Anvesh Choudary Mannuru</td><td>ANVESH</td><td>AM28</td></tr>
+      <tr><td>3</td><td>Srini</td><td>SRINI</td><td>SRI3</td></tr>
+      <tr><td>4</td><td>Hanu Kolagani</td><td>HANU</td><td>HK04</td></tr>
+      <tr><td>5</td><td>Madhu Yellanur</td><td>MADHU</td><td>MY05</td></tr>
+      <tr><td>6</td><td>Harish C</td><td>HARISH</td><td>HC06</td></tr>
+      <tr><td>7</td><td>Tulasi Gangadhar Thatavarthi</td><td>TULASI</td><td>TT07</td></tr>
+      <tr><td>9</td><td>Venkateswarrao Jyothi</td><td>VENKY</td><td>VJ09</td></tr>
+      <tr><td>10</td><td>Vinay Tummala</td><td>VINAY</td><td>VT10</td></tr>
+      <tr><td>11</td><td>Kishan Karneedi</td><td>KISHAN</td><td>KK11</td></tr>
+      <tr><td>14</td><td>Surya Pavan Teja Tummala</td><td>PAVAN</td><td>PA14</td></tr>
+      <tr><td>15</td><td>Vonga Vishnu</td><td>VISHNU</td><td>VV15</td></tr>
+      <tr><td>18</td><td>Raja Mouli Yadavalli</td><td>RAJA</td><td>RY18</td></tr>
+      <tr><td>23</td><td>Dushyanth Reddy B</td><td>DUSHYANTH</td><td>DB23</td></tr>
+      <tr><td>25</td><td>Yonggicho Paul</td><td>YONGGI</td><td>PMY25</td></tr>
+      <tr><td>30</td><td>Anil Narra</td><td>ANIL</td><td>AN30</td></tr>
+      <tr><td>39</td><td>Deepak Sai</td><td>ABHIMANYU</td><td>AD39</td></tr>
+      <tr><td>44</td><td>Veerendra Babu Nagari</td><td>VEERU</td><td>VB44</td></tr>
+      <tr><td>45</td><td>Chandra Obula Reddy B</td><td>CHANDU</td><td>CH45</td></tr>
+      <tr><td>48</td><td>Abhiram Donepudi</td><td>ABHI</td><td>AB48</td></tr>
+      <tr><td>62</td><td>Jaya Surya</td><td>JAY</td><td>SR62</td></tr>
+      <tr><td>63</td><td>Banu Chand Kandukuri</td><td>KBC</td><td>KBC63</td></tr>
+      <tr><td>72</td><td>Arush Nimmagadda</td><td>ARUSH</td><td>AN72</td></tr>
+      <tr><td>75</td><td>Kiran Maheswaram</td><td>KIRAN JALSA</td><td>KM75</td></tr>
+      <tr><td>88</td><td>Veera SR Nimmakayala</td><td>VEERA</td><td>VN88</td></tr>
+      <tr><td>98</td><td>Rohit Singh</td><td>ROHIT SINGH</td><td>RS98</td></tr>
+      <tr><td>99</td><td>Charan Reddy Datla</td><td>CHARAN</td><td>CR99</td></tr>
+      <tr><td>999</td><td>Sri Chowdalla</td><td>SRI</td><td>S9</td></tr>
+    </tbody>
+  </table>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  © 2024 Arches Cricket Club · Belfast, Northern Ireland
+</footer>
 
 </body>
 </html>
-
-
