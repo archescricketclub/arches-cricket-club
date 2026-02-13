@@ -94,14 +94,76 @@
 
 <body>
 
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="fixtures.html">Fixtures</a>
-    <a href="team.html">Team</a>
-    <a href="results.html">Results</a>
-  </nav>
-</header>
+  /* ================= NAVBAR ================= */
+    .navbar {
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      border-bottom: 2px solid var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+    }
+
+    .logo-text h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--light);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .nav-menu a::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      position: absolute;
+      left: 50%;
+      bottom: -6px;
+      transform: translateX(-50%);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 70%;
+    }
 
 <div class="container">
 
@@ -315,6 +377,7 @@
 
 </body>
 </html>
+
 
 
 
