@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Arches Cricket Club</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
+  
   <style>
     :root {
       --primary: #ff8c1a;
@@ -120,11 +118,59 @@
       font-size: 1.05rem;
     }
 
-    /* ================= GALLERY ================= */
-    .gallery-section {
-      padding: 4rem 2rem;
+    /* ================= CATEGORY FILTERS ================= */
+    .filter-section {
+      padding: 2rem;
       max-width: 1400px;
       margin: auto;
+      text-align: center;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      background: var(--dark-2);
+      border: 2px solid rgba(255,140,26,0.3);
+      color: var(--light);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      border-radius: 8px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--dark);
+    }
+
+    /* ================= GALLERY ================= */
+    .gallery-section {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .category-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(255,140,26,0.3);
+    }
+
+    .gallery-category {
+      margin-bottom: 4rem;
     }
 
     .gallery-grid {
@@ -139,6 +185,14 @@
       overflow: hidden;
       border: 1px solid rgba(255,140,26,0.25);
       transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(255,140,26,0.3);
     }
 
     .gallery-item img {
@@ -155,9 +209,78 @@
     .gallery-caption {
       padding: 1rem;
       text-align: center;
-      font-weight: 500;
+    }
+
+    .gallery-caption h4 {
       color: var(--primary);
-      background: #141414;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .gallery-caption p {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ================= LIGHTBOX ================= */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 8px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 3rem;
+      color: var(--light);
+      cursor: pointer;
+      z-index: 2001;
+      background: rgba(0,0,0,0.7);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .lightbox-close:hover {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    .lightbox-caption {
+      text-align: center;
+      margin-top: 1rem;
+      color: var(--light);
+      font-size: 1.1rem;
     }
 
     /* ================= FOOTER ================= */
@@ -204,6 +327,27 @@
       .nav-menu {
         display: none;
       }
+
+      .filter-buttons {
+        gap: 0.5rem;
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      .page-header h2 {
+        font-size: 2rem;
+      }
+
+      .category-title {
+        font-size: 1.5rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -214,7 +358,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <img src="logo.png" alt="Arches CC Logo">
+        <img src="assets/logo/logo.png" alt="Arches CC Logo">
         <div class="logo-text">
           <h1>Arches Cricket Club</h1>
           <p>Belfast, Northern Ireland</p>
@@ -239,32 +383,158 @@
     <p>Capturing moments, memories, and milestones of Arches Cricket Club</p>
   </section>
 
-  <!-- GALLERY -->
-  <section class="gallery-section">
-    <div class="gallery-grid">
-
-      <div class="gallery-item">
-        <img src="img1.png" alt="Arches CC Match Day">
-        <div class="gallery-caption">Match Day Action</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="img22.png" alt="Arches CC Team">
-        <div class="gallery-caption">Awards Night</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="img33.png" alt="Arches CC Club Moments">
-        <div class="gallery-caption">Proud Club Identity</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="img4.png" alt="Arches CC Club Moments">
-        <div class="gallery-caption">Devolepment Cup 2025</div>
-      </div>
-
+  <!-- FILTER SECTION -->
+  <section class="filter-section">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="matches">Matches</button>
+      <button class="filter-btn" data-filter="awards">Awards & Events</button>
+      <button class="filter-btn" data-filter="team">Team Photos</button>
+      <button class="filter-btn" data-filter="tournaments">Tournaments</button>
     </div>
   </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    
+    <!-- MATCHES CATEGORY -->
+    <div class="gallery-category" data-category="matches">
+      <h3 class="category-title">Match Day Action</h3>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="assets/gallery/matches/match-1.jpg" alt="Match Day Action">
+          <div class="gallery-caption">
+            <h4>Victory Celebration</h4>
+            <p>Season 2024 Highlights</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/matches/match-2.jpg" alt="Cricket Action">
+          <div class="gallery-caption">
+            <h4>Batting Excellence</h4>
+            <p>Century Partnership</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/matches/match-3.jpg" alt="Bowling Action">
+          <div class="gallery-caption">
+            <h4>Bowling Attack</h4>
+            <p>Five Wicket Haul</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AWARDS CATEGORY -->
+    <div class="gallery-category" data-category="awards">
+      <h3 class="category-title">Awards & Events</h3>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="assets/gallery/awards/awards-night.jpg" alt="Awards Night">
+          <div class="gallery-caption">
+            <h4>Annual Awards Night</h4>
+            <p>Celebrating Excellence 2024</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/awards/trophy-presentation.jpg" alt="Trophy Presentation">
+          <div class="gallery-caption">
+            <h4>Trophy Presentation</h4>
+            <p>Champions 2024</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/awards/player-of-year.jpg" alt="Player of the Year">
+          <div class="gallery-caption">
+            <h4>Player of the Year</h4>
+            <p>Outstanding Performance</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TEAM PHOTOS CATEGORY -->
+    <div class="gallery-category" data-category="team">
+      <h3 class="category-title">Team Photos</h3>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="assets/gallery/team/team-lineup.jpg" alt="Team Lineup">
+          <div class="gallery-caption">
+            <h4>Proud Club Identity</h4>
+            <p>Season 2024 Squad</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/team/team-practice.jpg" alt="Team Practice">
+          <div class="gallery-caption">
+            <h4>Training Session</h4>
+            <p>Pre-Season Preparation</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/team/team-huddle.jpg" alt="Team Huddle">
+          <div class="gallery-caption">
+            <h4>Team Unity</h4>
+            <p>Before the Big Match</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TOURNAMENTS CATEGORY -->
+    <div class="gallery-category" data-category="tournaments">
+      <h3 class="category-title">Tournaments</h3>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="assets/gallery/tournaments/development-cup-2025.jpg" alt="Development Cup 2025">
+          <div class="gallery-caption">
+            <h4>Development Cup 2025</h4>
+            <p>Tournament Champions</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/tournaments/league-final.jpg" alt="League Final">
+          <div class="gallery-caption">
+            <h4>League Final</h4>
+            <p>Historic Victory</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/gallery/tournaments/knockout-trophy.jpg" alt="Knockout Trophy">
+          <div class="gallery-caption">
+            <h4>Knockout Trophy</h4>
+            <p>Dramatic Win</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -291,8 +561,90 @@
     </div>
   </footer>
 
+  <script>
+    // ================= FILTER FUNCTIONALITY =================
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const categories = document.querySelectorAll('.gallery-category');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        // Show/hide categories
+        categories.forEach(category => {
+          if (filter === 'all') {
+            category.style.display = 'block';
+          } else if (category.getAttribute('data-category') === filter) {
+            category.style.display = 'block';
+          } else {
+            category.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ================= LIGHTBOX FUNCTIONALITY =================
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imgSrc = item.querySelector('img').src;
+        const caption = item.querySelector('h4').textContent;
+        const subcaption = item.querySelector('p').textContent;
+
+        lightboxImg.src = imgSrc;
+        lightboxCaption.textContent = caption + ' - ' + subcaption;
+        lightbox.classList.add('active');
+        
+        // Prevent body scroll when lightbox is open
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close lightbox with close button
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Close lightbox by clicking outside image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // ================= SMOOTH SCROLL =================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
-
-
-
