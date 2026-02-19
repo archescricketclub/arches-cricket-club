@@ -1,338 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Our Sponsors | Arches Cricket Club</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <title>Our Sponsors | Arches Cricket Club</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --primary:#ff6b1a;
-  --dark:#0d0d0d;
-  --light:#ffffff;
-}
+    <style>
+        :root {
+            --primary-color: #ff6b1a;
+            --secondary-color: #ff8c42;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #0d0d0d;
+            --light-bg: #f5f5f5;
+            --text-light: #ffffff;
+            --text-dark: #1a1a1a;
+            --transition: all 0.3s ease;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
 
-/* RESET */
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-  font-family:'Roboto',sans-serif;
-  background:var(--dark);
-  color:var(--light);
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+        }
 
-/* ================= NAVBAR (SAME AS ABOUT) ================= */
-.navbar {
-  background:linear-gradient(135deg,#000,#1a1a1a);
-  padding:1rem 0;
-  border-bottom:2px solid var(--primary);
-}
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
 
-.nav-container {
-  max-width:1400px;
-  margin:auto;
-  padding:0 2rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--primary-color);
+        }
 
-.logo {
-  display:flex;
-  align-items:center;
-  gap:1rem;
-}
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.logo-icon {
-  width:60px;
-  height:60px;
-  background:url('logo.png') center/contain no-repeat;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-.logo-text h1 {
-  font-family:'Oswald',sans-serif;
-  font-size:1.4rem;
-}
+        .logo img {
+            width: 55px;
+        }
 
-.logo-text p {
-  font-size:.75rem;
-  color:var(--primary);
-  letter-spacing:2px;
-}
+        .logo h1 {
+            color: #fff;
+            font-size: 1.4rem;
+        }
 
-.nav-toggle {
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-}
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
 
-.nav-toggle span {
-  width:26px;
-  height:3px;
-  background:#fff;
-  border-radius:2px;
-}
+        .nav-menu a {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
 
-/* ================= MOBILE MENU OVERLAY (ABOUT STYLE) ================= */
-.mobile-menu {
-  position:fixed;
-  inset:0;
-  background:radial-gradient(circle at top,#111,#000);
-  transform:translateX(100%);
-  transition:.35s ease;
-  z-index:2000;
-  padding:1.5rem;
-}
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+                /* ===== HAMBURGER ===== */
+        .nav-toggle {
+          display: none;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+        }
+        
+        .nav-toggle span {
+          width: 26px;
+          height: 3px;
+          background: #fff;
+          border-radius: 2px;
+        }
+        
+        /* ===== MOBILE NAV ===== */
+        @media (max-width: 768px) {
+          .nav-toggle {
+            display: flex;
+          }
+        
+          .nav-menu {
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            flex-direction: column;
+            background: #111;
+            width: 100%;
+            padding: 2rem;
+            transition: 0.3s ease;
+          }
+        
+          .nav-menu.active {
+            left: 0;
+          }
+        }
 
-.mobile-menu.active {
-  transform:translateX(0);
-}
 
-.mobile-menu-header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding-bottom:1rem;
-  border-bottom:1px solid rgba(255,255,255,.15);
-  margin-bottom:2rem;
-}
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, rgba(13,13,13,.95), rgba(26,26,26,.95)),
+                        url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 2rem;
+            text-align: center;
+            color: #fff;
+        }
 
-.mobile-menu-header strong {
-  font-size:1.1rem;
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-.mobile-menu-header small {
-  display:block;
-  color:var(--primary);
-  font-size:.7rem;
-  letter-spacing:2px;
-}
+        .hero p {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
 
-.close-menu {
-  background:none;
-  border:none;
-  color:#fff;
-  font-size:1.8rem;
-  cursor:pointer;
-}
+        /* SPONSORS */
+        .section {
+            padding: 5rem 2rem;
+        }
 
-.mobile-menu ul {
-  list-style:none;
-}
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
 
-.mobile-menu li {
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-.mobile-menu a {
-  display:block;
-  padding:1.3rem 0;
-  color:#fff;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  text-decoration:none;
-}
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+        }
 
-.mobile-menu a.active {
-  background:linear-gradient(90deg,rgba(255,107,26,.25),transparent);
-  color:var(--primary);
-}
+        .section-header p {
+            color: #666;
+        }
 
-/* ================= HERO ================= */
-.page-hero {
-  min-height:45vh;
-  background:
-    linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
-    linear-gradient(135deg,#000,#111);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
 
-.page-hero h2 {
-  font-family:'Oswald',sans-serif;
-  font-size:3rem;
-  letter-spacing:3px;
-}
+        .sponsor-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+            transition: var(--transition);
+        }
 
-/* ================= CONTENT ================= */
-.section {
-  max-width:1100px;
-  margin:5rem auto;
-  padding:0 2rem;
-}
+        .sponsor-card:hover {
+            transform: translateY(-10px);
+        }
 
-.section h3 {
-  font-family:'Oswald',sans-serif;
-  font-size:2rem;
-  color:var(--primary);
-  margin-bottom:2rem;
-  text-transform:uppercase;
-}
+        .sponsor-card img {
+            max-width: 220px;
+            margin: 0 auto 2rem;
+            display: block;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-/* SPONSORS GRID */
-.sponsor-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:3rem;
-}
+        .sponsor-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
 
-.sponsor-card {
-  background:#1a1a1a;
-  border-radius:15px;
-  padding:3rem 2rem;
-  text-align:center;
-  border-top:4px solid var(--primary);
-}
+        .sponsor-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
 
-.sponsor-card img {
-  max-width:220px;
-  margin:0 auto 1.5rem;
-  display:block;
-  background:#fff;
-  padding:10px;
-  border-radius:8px;
-}
+        .sponsor-card a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
 
-.sponsor-card h4 {
-  font-family:'Oswald',sans-serif;
-  font-size:1.6rem;
-  margin-bottom:1rem;
-}
+        .sponsor-card a:hover {
+            background: var(--secondary-color);
+        }
 
-.sponsor-card p {
-  color:#bbb;
-  margin-bottom:1.5rem;
-  line-height:1.6;
-}
+        /* FOOTER */
+        footer {
+            background: var(--dark-bg);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 3px solid var(--primary-color);
+        }
 
-.sponsor-card a {
-  display:inline-block;
-  padding:.8rem 2rem;
-  border-radius:30px;
-  background:var(--primary);
-  color:#fff;
-  text-transform:uppercase;
-  font-size:.85rem;
-  text-decoration:none;
-}
-
-/* FOOTER */
-.footer {
-  background:#000;
-  border-top:2px solid var(--primary);
-  padding:2rem;
-  text-align:center;
-  color:#aaa;
-  font-size:.85rem;
-}
-</style>
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
 <nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <div class="logo-icon"></div>
-      <div class="logo-text">
-        <h1>Arches Cricket Club</h1>
-        <p>BELFAST, NORTHERN IRELAND</p>
-      </div>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="./logo.png" alt="Arches Cricket Club Logo">
+            <h1>Arches Cricket Club</h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sponsors.html" class="active">Sponsors</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+        </div>
     </div>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu">
-  <div class="mobile-menu-header">
-    <div>
-      <strong>Arches Cricket Club</strong>
-      <small>BELFAST, NORTHERN IRELAND</small>
-    </div>
-    <button class="close-menu">✕</button>
-  </div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="fixtures.html">Fixtures</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="results.html">Results</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="sponsors.html" class="active">Sponsors</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
-
 <!-- HERO -->
-<section class="page-hero">
-  <h2>Our Sponsors</h2>
+<section class="hero">
+    <h1>Our Proud Sponsors</h1>
+    <p>Powering Arches Cricket Club</p>
 </section>
 
-<!-- CONTENT -->
+<!-- SPONSORS -->
 <section class="section">
-  <h3>Proud Partners</h3>
+    <div class="container">
+        <div class="section-header">
+            <h2>Sponsors</h2>
+            <p>Thank you for supporting local cricket in Belfast</p>
+        </div>
 
-  <div class="sponsor-grid">
+        <div class="sponsor-grid">
 
-    <div class="sponsor-card">
-      <img src="banjo-tech.png" alt="Banjo Tech">
-      <h4>Banjo Tech</h4>
-      <p>
-        Delivering innovative digital solutions while proudly supporting
-        Arches Cricket Club.
-      </p>
-      <a href="https://banjo.tech" target="_blank">Visit Website</a>
+            <!-- BANJO TECH -->
+            <div class="sponsor-card">
+                <img src="./banjo-tech.png" alt="Banjo Tech Logo">
+                <h3>Banjo Tech</h3>
+                <p>
+                    Banjo Tech delivers innovative digital and technology solutions,
+                    proudly supporting Arches Cricket Club.
+                </p>
+                <a href="https://banjo.tech" target="_blank">Visit Website</a>
+            </div>
+
+            <!-- ANDHRA PARADISE -->
+            <div class="sponsor-card">
+                <img src="./ANDHRA1.png" alt="Andhra Paradise Logo">
+                <h3>Andhra Paradise</h3>
+                <p>
+                    Bringing authentic Andhra cuisine to Belfast while backing
+                    community cricket and local talent.
+                </p>
+                <a href="https://andhraparadise.sumupstore.com/" target="_blank">Visit Website</a>
+            </div>
+
+        </div>
     </div>
-
-    <div class="sponsor-card">
-      <img src="ANDHRA1.png" alt="Andhra Paradise">
-      <h4>Andhra Paradise</h4>
-      <p>
-        Authentic Andhra cuisine supporting community cricket in Belfast.
-      </p>
-      <a href="https://andhraparadise.sumupstore.com/" target="_blank">Visit Website</a>
-    </div>
-
-  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  © 2026 Arches Cricket Club · Belfast, Northern Ireland
+<footer>
+    <p>© 2026 Arches Cricket Club • Belfast, Northern Ireland</p>
 </footer>
-
-<script>
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.close-menu');
-
-toggle.addEventListener('click', () => {
-  menu.classList.add('active');
-  document.body.style.overflow = 'hidden';
-});
-
-closeBtn.addEventListener('click', () => {
-  menu.classList.remove('active');
-  document.body.style.overflow = '';
-});
-</script>
-
+<script src="mobile-nav.js"></script>
 </body>
 </html>
+
+
+
+
