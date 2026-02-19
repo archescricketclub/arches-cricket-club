@@ -106,6 +106,44 @@
       width: 70%;
     }
 
+    /*new code can be deleted later */
+        /* ===== HAMBURGER ===== */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    
+    .nav-toggle span {
+      width: 26px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    
+    /* ===== MOBILE NAV ===== */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+    
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: #111;
+        width: 100%;
+        padding: 2rem;
+        transition: 0.3s ease;
+      }
+    
+      .nav-menu.active {
+        left: 0;
+      }
+    }
+    /*new code can be deleted later */
     /* ================= HEADER ================= */
     .page-header {
       padding: 4rem 2rem 2rem;
@@ -191,10 +229,7 @@
     }
 
     @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-      }
-
+      
       table {
         font-size: 0.85rem;
       }
@@ -229,6 +264,7 @@
         <span></span>
         <span></span>
     </div>
+  </div>
 </nav>
 
 <!-- HEADER -->
@@ -443,6 +479,7 @@
 <script src="mobile-nav.js"></script>
 </body>
 </html>
+
 
 
 
