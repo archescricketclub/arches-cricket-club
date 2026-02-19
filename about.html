@@ -72,6 +72,7 @@ body {
 
 .nav-menu {
     list-style:none;
+    display: flex;
     gap:2rem;
 }
 
@@ -99,6 +100,43 @@ body {
 .nav-menu a.active::after {
     width:70%;
 }
+/* ===== HAMBURGER ===== */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ===== MOBILE NAV ===== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 2rem;
+    transition: 0.3s ease;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
 
 /* HERO */
 .about-hero {
@@ -201,6 +239,11 @@ body {
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </div>
 </nav>
 
@@ -243,6 +286,7 @@ Our journey has just begun and the best is yet to come.
 <script src="mobile-nav.js"></script>
 </body>
 </html>
+
 
 
 
