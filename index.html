@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="mobile.css">
     <style>
         /* ============================================
            GLOBAL STYLES & RESET
@@ -28,7 +32,7 @@
             --light-bg: #f5f5f5;
             --text-dark: #1a1a1a;
             --text-light: #ffffff;
-            --card-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             --transition: all 0.3s ease;
         }
 
@@ -39,7 +43,11 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Oswald', sans-serif;
             font-weight: 600;
             letter-spacing: 1px;
@@ -65,7 +73,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             border-bottom: 2px solid var(--primary-color);
         }
 
@@ -157,7 +165,7 @@
            ============================================ */
         .hero {
             background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.92) 100%),
-                        url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600&h=900&fit=crop') center/cover;
+                url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600&h=900&fit=crop') center/cover;
             min-height: 85vh;
             display: flex;
             align-items: center;
@@ -191,6 +199,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -202,7 +211,7 @@
             margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero-tagline {
@@ -423,7 +432,7 @@
 
         .news-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .news-image {
@@ -538,6 +547,7 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
@@ -554,17 +564,18 @@
             border: 2px solid rgba(255, 107, 26, 0.3);
             padding: 15px;
         }
+
         .sponsor-logo img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
             filter: brightness(1);
-}
+        }
 
         .sponsor-logo:hover img {
             transform: scale(1.05);
             transition: 0.3s ease;
-}
+        }
 
 
         /* ============================================
@@ -599,148 +610,151 @@
             display: block;
         }
 
-/* ============================================
+        /* ============================================
    FOOTER
    ============================================ */
-.footer {
-    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-    color: var(--text-light);
-    padding: 4rem 2rem 2rem;
-    border-top: 3px solid var(--primary-color);
-}
+        .footer {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            color: var(--text-light);
+            padding: 4rem 2rem 2rem;
+            border-top: 3px solid var(--primary-color);
+        }
 
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
 
-.footer-section h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
+        .footer-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
 
-.footer-section p,
-.footer-section a {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.6rem;
-    display: block;
-}
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.6rem;
+            display: block;
+        }
 
-/* =====================================
+        /* =====================================
    SOCIAL ICONS – FINAL (NO CIRCLES)
    ===================================== */
 
-/* Footer text hover (text links only) */
-.footer-section a:not(.social-link):hover {
-    color: var(--primary-color);
-    padding-left: 5px;
-}
+        /* Footer text hover (text links only) */
+        .footer-section a:not(.social-link):hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
 
-/* Social icons container */
-.social-links {
-    display: flex;
-    gap: 18px;
-    margin-top: 10px;
-    align-items: center;
-}
+        /* Social icons container */
+        .social-links {
+            display: flex;
+            gap: 18px;
+            margin-top: 10px;
+            align-items: center;
+        }
 
-/* Remove circle styling completely */
-.social-link {
-    width: auto;
-    height: auto;
-    background: none;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    text-decoration: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
+        /* Remove circle styling completely */
+        .social-link {
+            width: auto;
+            height: auto;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
 
-/* Icon styling */
-.social-link i {
-    font-size: 26px;
-    line-height: 1;
-    display: block;
-}
+        /* Icon styling */
+        .social-link i {
+            font-size: 26px;
+            line-height: 1;
+            display: block;
+        }
 
-/* Brand colours */
-.social-link.linkedin i {
-    color: #0077b5;
-}
+        /* Brand colours */
+        .social-link.linkedin i {
+            color: #0077b5;
+        }
 
-.social-link.facebook i {
-    color: #1877f2;
-}
+        .social-link.facebook i {
+            color: #1877f2;
+        }
 
-.social-link.youtube i {
-    color: #ff0000;
-}
+        .social-link.youtube i {
+            color: #ff0000;
+        }
 
-.social-link.instagram i {
-    background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        .social-link.instagram i {
+            background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-/* Hover */
-.social-link:hover {
-    transform: translateY(-2px);
-    opacity: 0.85;
-}
-/* =======================
+        /* Hover */
+        .social-link:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+        /* =======================
    CONTACT ALIGNMENT FIX
    ======================= */
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
 
-.contact-icon {
-    font-size: 16px;
-    line-height: 1;
-    flex-shrink: 0;
-}
+        .contact-icon {
+            font-size: 16px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
 
-.contact-item a {
-    color: rgba(255, 255, 255, 0.85);
-}
+        .contact-item a {
+            color: rgba(255, 255, 255, 0.85);
+        }
 
-.contact-item a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
+        .contact-item a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
         /* =======================================
    FOOTER BOTTOM – FINAL FIX
    ======================================= */
 
-.footer-bottom {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.8);
-}
+        .footer-bottom {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+        }
 
-/* =====================================
+        /* =====================================
    COPYRIGHT CENTERING
    ===================================== */
-.footer-bottom {
-    text-align: center;
-    width: 100%;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.8);
-}
-      /* ============================================
+        .footer-bottom {
+            text-align: center;
+            width: 100%;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ============================================
            RESPONSIVE DESIGN
            ============================================ */
         @media (max-width: 968px) {
@@ -811,6 +825,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- NAVIGATION -->
     <nav class="navbar">
@@ -832,7 +847,7 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-toggle" onclick="toggleMenu()">
+            <div class="nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -968,7 +983,8 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" style="color: var(--text-light);">Our Sponsors</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Proud partners supporting Belfast cricket</p>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Proud partners supporting Belfast
+                    cricket</p>
             </div>
             <div class="sponsors-container">
                 <div class="sponsors-track">
@@ -1006,7 +1022,7 @@
                     <div class="sponsor-logo">
                         <img src="ANDHRA1.png" alt="Andhra Paradise">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -1015,58 +1031,64 @@
     <!-- FOOTER -->
     <footer class="footer">
 
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Arches Cricket Club</h3>
-            <p>Northern Ireland's Cricket Club since 2024/25.</p>
-            <p>Excellence in play. Strength in community.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Arches Cricket Club</h3>
+                <p>Northern Ireland's Cricket Club since 2024/25.</p>
+                <p>Excellence in play. Strength in community.</p>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/archescricketclub/" class="social-link linkedin" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw==" class="social-link instagram" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" class="social-link facebook" target="_blank">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" class="social-link youtube" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/archescricketclub/" class="social-link linkedin"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw=="
+                        class="social-link instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" class="social-link facebook"
+                        target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" class="social-link youtube"
+                        target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="fixtures.html">Match Fixtures</a>
+                <a href="team.html">Our Squad</a>
+                <a href="results.html">Recent Results</a>
+                <a href="registration.html">Join the Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                    <a href="mailto:archescricketclub@gmail.com">
+                        archescricketclub@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot contact-icon"></i>
+                    <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">
+                        Victoria Park, Belfast BT4 1LS, Northern Ireland
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <a href="fixtures.html">Match Fixtures</a>
-            <a href="team.html">Our Squad</a>
-            <a href="results.html">Recent Results</a>
-            <a href="registration.html">Join the Team</a>
+        <!-- IMPORTANT: footer-bottom is OUTSIDE footer-content -->
+        <div class="footer-bottom">
+            © 2024 Arches Cricket Club
         </div>
 
-        <div class="footer-section">
-            <h3>Contact Us</h3>
+    </footer>
 
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope contact-icon"></i>
-                <a href="mailto:archescricketclub@gmail.com">
-                    archescricketclub@gmail.com
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot contact-icon"></i>
-                <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">
-                    Victoria Park, Belfast BT4 1LS, Northern Ireland
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- IMPORTANT: footer-bottom is OUTSIDE footer-content -->
-    <div class="footer-bottom">
-        © 2024 Arches Cricket Club
-    </div>
-
-</footer>
+    <script src="mobile-nav.js"></script>
