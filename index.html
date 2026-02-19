@@ -791,18 +791,22 @@
             }
 
             .match-teams {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
 
-            .vs-divider {
-                transform: rotate(90deg);
-            }
+    .vs-divider {
+        transform: none;      /* FIX */
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
 
-            .team-logo {
-                width: 90px;
-                height: 90px;
-                font-size: 2rem;
+    .team-logo {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem;
             }
         }
 
