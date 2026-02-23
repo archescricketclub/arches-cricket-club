@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Sponsors | Arches Cricket Club</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="mobile.css">
+
     <style>
         :root {
             --primary-color: #ff6b1a;
@@ -16,22 +22,16 @@
             --dark-bg: #1a1a1a;
             --darker-bg: #0d0d0d;
             --light-bg: #f5f5f5;
-            --text-light: #ffffff;
             --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             --transition: all 0.3s ease;
-            --card-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
+            margin: 0;
             background: var(--light-bg);
-            color: var(--text-dark);
         }
 
         h1, h2, h3 {
@@ -39,107 +39,27 @@
             letter-spacing: 1px;
         }
 
-        /* NAVBAR */
-        .navbar {
-            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
-            padding: 1rem 0;
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo img {
-            width: 55px;
-        }
-
-        .logo h1 {
-            color: #fff;
-            font-size: 1.4rem;
-        }
-
-        .nav-menu {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-menu a.active,
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-                /* ===== HAMBURGER ===== */
-        .nav-toggle {
-          display: none;
-          flex-direction: column;
-          gap: 5px;
-          cursor: pointer;
-        }
-        
-        .nav-toggle span {
-          width: 26px;
-          height: 3px;
-          background: #fff;
-          border-radius: 2px;
-        }
-        
-        /* ===== MOBILE NAV ===== */
-        @media (max-width: 768px) {
-          .nav-toggle {
-            display: flex;
-          }
-        
-          .nav-menu {
-            position: fixed;
-            top: 70px;
-            left: -100%;
-            flex-direction: column;
-            background: #111;
-            width: 100%;
-            padding: 2rem;
-            transition: 0.3s ease;
-          }
-        
-          .nav-menu.active {
-            left: 0;
-          }
-        }
-
-
-        /* HERO */
+        /* HERO (Same Style as Index) */
         .hero {
-            background: linear-gradient(135deg, rgba(13,13,13,.95), rgba(26,26,26,.95)),
-                        url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600');
-            background-size: cover;
-            background-position: center;
-            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.92) 100%),
+                url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600&h=900&fit=crop') center/cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            color: #fff;
+            color: var(--text-light);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            text-transform: uppercase;
         }
 
         .hero p {
@@ -147,13 +67,13 @@
             font-size: 1.2rem;
         }
 
-        /* SPONSORS */
+        /* SECTION */
         .section {
             padding: 5rem 2rem;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: auto;
         }
 
@@ -162,53 +82,49 @@
             margin-bottom: 3rem;
         }
 
-        .section-header h2 {
+        .section-title {
             font-size: 2.5rem;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .section-header p {
+        .section-subtitle {
             color: #666;
         }
 
+        /* SPONSOR GRID */
         .sponsor-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
+            gap: 2.5rem;
         }
 
         .sponsor-card {
             background: #fff;
-            border-radius: 15px;
-            box-shadow: var(--card-shadow);
+            border-radius: 12px;
             padding: 3rem 2rem;
             text-align: center;
-            border-top: 5px solid var(--primary-color);
+            box-shadow: var(--card-shadow);
             transition: var(--transition);
+            border-top: 4px solid var(--primary-color);
         }
 
         .sponsor-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
         }
 
         .sponsor-card img {
             max-width: 220px;
             margin: 0 auto 2rem;
-            display: block;
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
         }
 
         .sponsor-card h3 {
-            font-size: 1.6rem;
             margin-bottom: 1rem;
         }
 
         .sponsor-card p {
-            color: #555;
-            line-height: 1.6;
+            color: #666;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .sponsor-card a {
@@ -217,23 +133,14 @@
             border-radius: 30px;
             background: var(--primary-color);
             color: #fff;
-            font-weight: 600;
             text-transform: uppercase;
+            font-weight: 600;
             font-size: 0.85rem;
             transition: var(--transition);
         }
 
         .sponsor-card a:hover {
             background: var(--secondary-color);
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--dark-bg);
-            color: rgba(255,255,255,0.8);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 3px solid var(--primary-color);
         }
 
         @media (max-width: 768px) {
@@ -246,85 +153,109 @@
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-<div class="nav-container">
-    <div class="logo">
-        <div class="logo-icon"></div>
-        <div class="logo-text">
-            <h1>Arches Cricket Club</h1>
-            <p>BELFAST, NORTHERN IRELAND</p>
-        </div>
-    </div>
-    <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="fixtures.html">Fixtures</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="results.html">Results</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="sponsors.html" class="active">Sponsors</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-">
-              <span></span>
-              <span></span>
-              <span></span>
-        </div>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>Our Proud Sponsors</h1>
-    <p>Powering Arches Cricket Club</p>
-</section>
-
-<!-- SPONSORS -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Sponsors</h2>
-            <p>Thank you for supporting local cricket in Belfast</p>
-        </div>
-
-        <div class="sponsor-grid">
-
-            <!-- BANJO TECH -->
-            <div class="sponsor-card">
-                <img src="./banjo-tech.png" alt="Banjo Tech Logo">
-                <h3>Banjo Tech</h3>
-                <p>
-                    Banjo Tech delivers innovative digital and technology solutions,
-                    proudly supporting Arches Cricket Club.
-                </p>
-                <a href="https://banjo.tech" target="_blank">Visit Website</a>
+    <!-- NAVIGATION (Copied EXACT from Index) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>Arches Cricket Club</h1>
+                    <p>Belfast, Northern Ireland</p>
+                </div>
             </div>
 
-            <!-- ANDHRA PARADISE -->
-            <div class="sponsor-card">
-                <img src="./ANDHRA1.png" alt="Andhra Paradise Logo">
-                <h3>Andhra Paradise</h3>
-                <p>
-                    Bringing authentic Andhra cuisine to Belfast while backing
-                    community cricket and local talent.
-                </p>
-                <a href="https://andhraparadise.sumupstore.com/" target="_blank">Visit Website</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sponsors.html" class="active">Sponsors</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Proud Sponsors</h1>
+            <p>Powering Arches Cricket Club</p>
+        </div>
+    </section>
+
+    <!-- SPONSORS SECTION -->
+    <section class="section">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title">Sponsors</h2>
+                <p class="section-subtitle">Proud partners supporting Belfast cricket</p>
             </div>
 
-        </div>
-    </div>
-</section>
+            <div class="sponsor-grid">
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Arches Cricket Club • Belfast, Northern Ireland</p>
-</footer>
-<script src="mobile-nav.js"></script>
+                <div class="sponsor-card">
+                    <img src="banjo-tech.png" alt="Banjo Tech">
+                    <h3>Banjo Tech</h3>
+                    <p>
+                        Banjo Tech delivers innovative digital and technology solutions,
+                        proudly supporting Arches Cricket Club.
+                    </p>
+                    <a href="https://banjo.tech" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="sponsor-card">
+                    <img src="ANDHRA1.png" alt="Andhra Paradise">
+                    <h3>Andhra Paradise</h3>
+                    <p>
+                        Bringing authentic Andhra cuisine to Belfast while backing
+                        community cricket and local talent.
+                    </p>
+                    <a href="https://andhraparadise.sumupstore.com/" target="_blank">Visit Website</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Copied EXACT from Index) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Arches Cricket Club</h3>
+                <p>Northern Ireland's Cricket Club since 2024/25.</p>
+                <p>Excellence in play. Strength in community.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="fixtures.html">Match Fixtures</a>
+                <a href="team.html">Our Squad</a>
+                <a href="results.html">Recent Results</a>
+                <a href="registration.html">Join the Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>archescricketclub@gmail.com</p>
+                <p>Victoria Park, Belfast</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2024 Arches Cricket Club
+        </div>
+    </footer>
+
+    <script src="mobile-nav.js"></script>
+
 </body>
 </html>
-
-
-
-
-
