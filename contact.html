@@ -21,11 +21,7 @@
   --transition: all 0.3s ease;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -34,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar {
   background: linear-gradient(135deg, #000, #1a1a1a);
   border-bottom: 2px solid var(--primary);
@@ -48,171 +44,182 @@ body {
   margin: auto;
   padding: 1rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.logo {
-  display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
-.logo img {
-  width: 55px;
-  height: 55px;
-}
+.logo { display:flex; align-items:center; gap:1rem; }
 
-.logo-text h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.4rem;
-}
+.logo img { width:55px; height:55px; }
 
-.logo-text p {
-  font-size: 0.75rem;
-  color: var(--primary);
-  letter-spacing: 1px;
-}
+.logo-text h1 { font-family:'Oswald'; font-size:1.4rem; }
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 1.8rem;
-}
+.logo-text p { font-size:.75rem; color:var(--primary); }
+
+.nav-menu { list-style:none; display:flex; gap:1.8rem; }
 
 .nav-menu a {
-  text-decoration: none;
-  color: var(--light);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  position: relative;
+  text-decoration:none;
+  color:var(--light);
+  font-size:.9rem;
+  text-transform:uppercase;
+  position:relative;
 }
 
 .nav-menu a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  position: absolute;
-  left: 50%;
-  bottom: -6px;
-  transform: translateX(-50%);
-  transition: var(--transition);
+  content:"";
+  width:0;
+  height:2px;
+  background:var(--primary);
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  transform:translateX(-50%);
+  transition:var(--transition);
 }
 
 .nav-menu a:hover::after,
-.nav-menu a.active::after {
-  width: 70%;
-}
+.nav-menu a.active::after { width:70%; }
 
 .nav-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
 }
 
 .nav-toggle span {
-  width: 26px;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
+  width:26px;
+  height:3px;
+  background:#fff;
 }
 
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: flex;
+@media(max-width:768px){
+  .nav-toggle{display:flex;}
+  .nav-menu{
+    position:fixed;
+    top:70px;
+    left:-100%;
+    flex-direction:column;
+    background:#111;
+    width:100%;
+    padding:2rem;
+    transition:.3s;
   }
-
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    flex-direction: column;
-    background: #111;
-    width: 100%;
-    padding: 2rem;
-    transition: 0.3s ease;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
+  .nav-menu.active{left:0;}
 }
 
-/* ================= HEADER ================= */
-.page-header {
-  padding: 4rem 2rem 2rem;
-  text-align: center;
-  background: radial-gradient(circle at top, rgba(255,140,26,0.15), transparent 70%);
+/* HEADER */
+.page-header{
+  padding:4rem 2rem 2rem;
+  text-align:center;
+  background:radial-gradient(circle at top, rgba(255,140,26,.15), transparent 70%);
 }
 
-.page-header h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2.6rem;
-  letter-spacing: 2px;
-  margin-bottom: 0.6rem;
+.page-header h2{
+  font-family:'Oswald';
+  font-size:2.6rem;
+  margin-bottom:.6rem;
 }
 
-.page-header p {
-  color: var(--muted);
-  font-size: 1.05rem;
+.page-header p{ color:var(--muted); }
+
+/* CONTENT */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:3rem 2rem;
 }
 
-/* ================= CONTACT CONTENT ================= */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 3rem 2rem;
+.contact-card{
+  background:var(--dark-2);
+  padding:3rem;
+  border-radius:12px;
+  border:1px solid rgba(255,140,26,.3);
+  box-shadow:0 5px 20px rgba(0,0,0,.4);
 }
 
-.contact-card {
-  background: var(--dark-2);
-  border-radius: 12px;
-  padding: 3rem;
-  border: 1px solid rgba(255,140,26,0.3);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+.contact-item{
+  display:flex;
+  gap:1rem;
+  margin-bottom:2rem;
 }
 
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.contact-icon{
+  font-size:1.4rem;
+  color:var(--primary);
 }
 
-.contact-icon {
-  font-size: 1.4rem;
-  color: var(--primary);
-  margin-top: 4px;
-}
-
-.contact-text h4 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+.contact-text h4{
+  font-family:'Oswald';
+  margin-bottom:.4rem;
 }
 
 .contact-text p,
-.contact-text a {
-  color: var(--muted);
-  font-size: 1rem;
-  text-decoration: none;
+.contact-text a{
+  color:var(--muted);
+  text-decoration:none;
 }
 
-.contact-text a:hover {
-  color: var(--primary);
+.contact-text a:hover{ color:var(--primary); }
+
+/* SOCIAL BUTTONS */
+.social-buttons{
+  margin-top:2rem;
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  border-top: 2px solid var(--primary);
-  background: linear-gradient(135deg, #000, #1a1a1a);
-  padding: 2rem;
-  text-align: center;
-  color: #777;
-  font-size: 0.85rem;
-  margin-top: 4rem;
+.btn{
+  padding:.8rem 1.5rem;
+  border-radius:30px;
+  font-size:.9rem;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  transition:var(--transition);
+}
+
+.btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+.btn-instagram{
+  background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+  color:#fff;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  opacity:.9;
+}
+
+/* MAP */
+.map-container{
+  margin-top:3rem;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(255,140,26,.3);
+}
+
+.map-container iframe{
+  width:100%;
+  height:400px;
+  border:0;
+}
+
+/* FOOTER */
+footer{
+  border-top:2px solid var(--primary);
+  background:linear-gradient(135deg,#000,#1a1a1a);
+  padding:2rem;
+  text-align:center;
+  color:#777;
+  margin-top:4rem;
 }
 </style>
 </head>
@@ -221,41 +228,87 @@ footer {
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="assets/images/assets/images/logo/logo.png" alt="Arches CC Logo">
-      <div class="logo-text">
-        <h1>Arches Cricket Club</h1>
-        <p>Belfast, Northern Ireland</p>
-      </div>
-    </div>
-
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="fixtures.html">Fixtures</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+<div class="nav-container">
+  <div class="logo">
+    <img src="assets/images/assets/images/logo/logo.png" alt="Arches Logo">
+    <div class="logo-text">
+      <h1>Arches Cricket Club</h1>
+      <p>Belfast, Northern Ireland</p>
     </div>
   </div>
+
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fixtures.html">Fixtures</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="results.html">Results</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+
+  <div class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 </nav>
 
 <!-- HEADER -->
 <section class="page-header">
   <h2>Contact Us</h2>
-  <p>Get in touch with Arches Cricket Club</p>
+  <p>Connect with Arches Cricket Club</p>
 </section>
 
-<!-- CONTACT CONTENT -->
+<!-- CONTENT -->
 <div class="container">
-  <di
+<div class="contact-card">
 
+  <div class="contact-item">
+    <i class="fa-solid fa-envelope contact-icon"></i>
+    <div class="contact-text">
+      <h4>Email</h4>
+      <a href="mailto:archescricketclub@gmail.com">archescricketclub@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <i class="fa-solid fa-location-dot contact-icon"></i>
+    <div class="contact-text">
+      <h4>Ground Location</h4>
+      <p>Victoria Park, Belfast BT4 1LS<br>Northern Ireland</p>
+    </div>
+  </div>
+
+  <!-- SOCIAL BUTTONS -->
+  <div class="social-buttons">
+    <a href="https://chat.whatsapp.com/JTL2mTF8p1U8yJz9QfWNGQ" target="_blank" class="btn btn-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group
+    </a>
+
+    <a href="https://www.instagram.com/archescricketclub/" target="_blank" class="btn btn-instagram">
+      <i class="fa-brands fa-instagram"></i> Follow on Instagram
+    </a>
+  </div>
+
+</div>
+
+<!-- GOOGLE MAP -->
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps?q=Victoria+Park+Belfast+BT4+1LS&output=embed"
+    allowfullscreen="">
+  </iframe>
+</div>
+
+</div>
+
+<footer>
+  © 2024 Arches Cricket Club · Contact
+</footer>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>
