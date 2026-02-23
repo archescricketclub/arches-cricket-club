@@ -3,111 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Arches Cricket Club</title>
+<title>Contact | Arches Cricket Club</title>
 <link rel="icon" type="image/png" href="logo.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
 
 <style>
 :root {
-  --primary-color:#ff6b1a;
-  --dark-bg:#0d0d0d;
-  --text-light:#ffffff;
+  --primary: #ff8c1a;
+  --dark: #0f0f0f;
+  --dark-2: #1a1a1a;
+  --light: #ffffff;
+  --muted: #bbbbbb;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin:0;
-  font-family:'Roboto',sans-serif;
-  background:var(--dark-bg);
-  color:var(--text-light);
+  font-family: 'Roboto', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
-  background:#000;
-  padding:1rem 0;
-  border-bottom:2px solid var(--primary-color);
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  border-bottom: 2px solid var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 .nav-container {
-  max-width:1400px;
-  margin:auto;
-  padding:0 2rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .logo {
-  display:flex;
-  align-items:center;
-  gap:1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.logo-icon {
-  width:55px;
-  height:55px;
-  background:url('logo.png') center/contain no-repeat;
+
+.logo img {
+  width: 55px;
+  height: 55px;
 }
+
+.logo-text h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+}
+
+.logo-text p {
+  font-size: 0.75rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
 .nav-menu {
-  display:flex;
-  gap:2rem;
-  list-style:none;
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
 }
+
 .nav-menu a {
-  color:white;
-  text-decoration:none;
-  font-weight:500;
+  text-decoration: none;
+  color: var(--light);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  position: relative;
 }
 
-/* CONTACT SECTION */
-.contact-section {
-  min-height:70vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:4rem 2rem;
+.nav-menu a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  transition: var(--transition);
 }
 
-.contact-box {
-  max-width:600px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,107,26,0.4);
-  border-radius:12px;
-  padding:3rem;
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 70%;
 }
 
-.contact-box h1 {
-  font-family:'Oswald',sans-serif;
-  letter-spacing:2px;
-  margin-bottom:1rem;
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-.contact-box p {
-  font-size:1.1rem;
-  margin:1rem 0;
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
 }
 
-/* FOOTER */
-.footer {
-  background:#000;
-  padding:2rem;
-  text-align:center;
-  border-top:2px solid var(--primary-color);
-  font-size:0.9rem;
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 2rem;
+    transition: 0.3s ease;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+/* ================= HEADER ================= */
+.page-header {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(255,140,26,0.15), transparent 70%);
+}
+
+.page-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ================= CONTACT CONTENT ================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+.contact-card {
+  background: var(--dark-2);
+  border-radius: 12px;
+  padding: 3rem;
+  border: 1px solid rgba(255,140,26,0.3);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.contact-text h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-text p,
+.contact-text a {
+  color: var(--muted);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  color: var(--primary);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  border-top: 2px solid var(--primary);
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  padding: 2rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.85rem;
+  margin-top: 4rem;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
     <div class="logo">
-      <div class="logo-icon"></div>
-      <strong>Arches Cricket Club</strong>
+      <img src="assets/images/assets/images/logo/logo.png" alt="Arches CC Logo">
+      <div class="logo-text">
+        <h1>Arches Cricket Club</h1>
+        <p>Belfast, Northern Ireland</p>
+      </div>
     </div>
+
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="fixtures.html">Fixtures</a></li>
@@ -116,27 +238,24 @@ body {
       <li><a href="about.html">About</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html"  class="active">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
+
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </nav>
 
-<!-- CONTACT -->
-<section class="contact-section">
-  <div class="contact-box">
-    <h1>Contact Us</h1>
-    <p>📧 <strong>Email:</strong><br>archescricketclub@gmail.com</p>
-    <p>📍 <strong>Ground:</strong><br>Victoria Park, Belfast BT4 1LS<br>Northern Ireland</p>
-  </div>
+<!-- HEADER -->
+<section class="page-header">
+  <h2>Contact Us</h2>
+  <p>Get in touch with Arches Cricket Club</p>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  &copy; 2024 Arches Cricket Club. All Rights Reserved.
-</footer>
-
-</body>
-</html>
-
-
+<!-- CONTACT CONTENT -->
+<div class="container">
+  <di
 
