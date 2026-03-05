@@ -346,6 +346,7 @@
                 <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
                 <button class="team-tab" onclick="switchTeam('t2',this)">Team 2 · Junior League</button>
                 <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
+                <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
             </div>
 
             <!-- ══ TEAM 1 ══ -->
@@ -451,6 +452,15 @@
                     </div>
                     <div class="squad-grid" id="mw-ar"></div>
                 </div>
+            </div>
+
+            <!-- ALL PLAYERS ROSTER -->
+            <div class="team-panel" id="panel-all">
+                <div style="margin-bottom:1.5rem;">
+                    <p style="color:var(--muted);font-size:.9rem;">Complete Arches CC roster &mdash; all registered
+                        players sorted by jersey number.</p>
+                </div>
+                <div class="squad-grid" id="all-roster"></div>
             </div>
 
             <div
@@ -660,6 +670,66 @@
                 if (btn) btn.style.display = 'none';
             }
         });
+
+        /* ─── ALL PLAYERS ROSTER ─────────────────────────── */
+        const ALL_PLAYERS = [
+            { jersey: '#1', cap: 'WSM1', name: 'Wasim SM' },
+            { jersey: '#2', cap: 'AM28', name: 'Anvesh Choudary Mannuru' },
+            { jersey: '#3', cap: 'SRI3', name: 'Srini Nadakuditi' },
+            { jersey: '#4', cap: 'HK04', name: 'Hanu K' },
+            { jersey: '#5', cap: 'MY05', name: 'Madhu Yellanur' },
+            { jersey: '#6', cap: 'HC06', name: 'Harish C' },
+            { jersey: '#7', cap: 'TT07', name: 'Tulasi Gangadhar Thatavarthi' },
+            { jersey: '#8', cap: 'VK18', name: 'Harsha Sai' },
+            { jersey: '#9', cap: 'VJ09', name: 'Venkateswarrao Jyothi' },
+            { jersey: '#10', cap: 'VT10', name: 'Vinay Tummala' },
+            { jersey: '#11', cap: 'KK11', name: 'Kishan Karneedi' },
+            { jersey: '#14', cap: 'PA14', name: 'Surya Pavan Teja Tummala' },
+            { jersey: '#15', cap: 'VV15', name: 'Vonga Vishnu' },
+            { jersey: '#16', cap: 'AR69', name: 'Ali Rizwan' },
+            { jersey: '#17', cap: 'VV17', name: 'Vijay Varma' },
+            { jersey: '#18', cap: 'RY18', name: 'Raja Mouli Yadavalli' },
+            { jersey: '#22', cap: 'AM04', name: 'Asad Murtuza' },
+            { jersey: '#23', cap: 'DB23', name: 'Dushyanth Reddy B' },
+            { jersey: '#25', cap: 'PMY25', name: 'Yonggicho Paul' },
+            { jersey: '#30', cap: 'AN30', name: 'Anil Narra' },
+            { jersey: '#44', cap: 'VB44', name: 'Veerendra Babu Nagari' },
+            { jersey: '#45', cap: 'CH45', name: 'Chandra Obula Reddy B' },
+            { jersey: '#48', cap: 'AB48', name: 'Abhiram Donepudi' },
+            { jersey: '#50', cap: 'AD39', name: 'Deepak Sai' },
+            { jersey: '#56', cap: 'SB56', name: 'Sarmad Butt' },
+            { jersey: '#63', cap: 'KBC63', name: 'Banu Chand Kandukuri' },
+            { jersey: '#72', cap: 'AN72', name: 'Arush Nimmagadda' },
+            { jersey: '#75', cap: 'KM75', name: 'Kiran Maheswaram' },
+            { jersey: '#77', cap: 'HS77', name: 'Haneef Shaik' },
+            { jersey: '#88', cap: 'VN88', name: 'Veera SR Nimmakayala' },
+            { jersey: '#98', cap: 'RS98', name: 'Rohit Singh' },
+            { jersey: '#99', cap: 'CR99', name: 'Charan Reddy Datla' },
+            { jersey: '#181', cap: 'ASB18', name: 'Anshuman Singh Baghel' },
+            { jersey: '#777', cap: 'CY777', name: 'Yashwanth' },
+            { jersey: '#999', cap: 'AR999', name: 'Anji Reddy' },
+            { jersey: '#—', cap: 'PH1', name: 'Harish Padmanabhuni ' },
+            { jersey: '#—', cap: 'SRI', name: 'Sri' },
+        ];
+        (function renderRoster() {
+            const el = document.getElementById('all-roster');
+            if (!el) return;
+            el.innerHTML = ALL_PLAYERS.map(p => `
+  <div class="pc">
+    <div class="pc-top">
+      <div class="pc-jersey">${p.jersey}</div>
+      <div class="pc-cap">${p.cap}</div>
+      <img src="player-avatar.svg" class="pc-icon" alt="Player">
+    </div>
+    <div class="pc-body">
+      <div class="pc-name">${p.name}</div>
+      <div class="pc-meta">Jersey&nbsp;${p.jersey} &middot; Cap&nbsp;${p.cap}</div>
+    </div>
+    <div class="pc-stats">
+      <div class="pcs" style="flex:1"><div class="pcs-n" style="color:var(--amber);font-size:1.1rem">&#9679;</div><div class="pcs-l">Registered</div></div>
+    </div>
+  </div>`).join('');
+        })();
 
         /* ─── VIEW ALL ───────────────────────────────────── */
         function toggleAll(gridId, btn) {
