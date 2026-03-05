@@ -1,314 +1,290 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Arches Cricket Club</title>
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile.css">
-
-<style>
-:root {
-  --primary: #ff8c1a;
-  --dark: #0f0f0f;
-  --dark-2: #1a1a1a;
-  --light: #ffffff;
-  --muted: #bbbbbb;
-  --transition: all 0.3s ease;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: var(--dark);
-  color: var(--light);
-  overflow-x: hidden;
-}
-
-/* NAVBAR */
-.navbar {
-  background: linear-gradient(135deg, #000, #1a1a1a);
-  border-bottom: 2px solid var(--primary);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo { display:flex; align-items:center; gap:1rem; }
-
-.logo img { width:55px; height:55px; }
-
-.logo-text h1 { font-family:'Oswald'; font-size:1.4rem; }
-
-.logo-text p { font-size:.75rem; color:var(--primary); }
-
-.nav-menu { list-style:none; display:flex; gap:1.8rem; }
-
-.nav-menu a {
-  text-decoration:none;
-  color:var(--light);
-  font-size:.9rem;
-  text-transform:uppercase;
-  position:relative;
-}
-
-.nav-menu a::after {
-  content:"";
-  width:0;
-  height:2px;
-  background:var(--primary);
-  position:absolute;
-  left:50%;
-  bottom:-6px;
-  transform:translateX(-50%);
-  transition:var(--transition);
-}
-
-.nav-menu a:hover::after,
-.nav-menu a.active::after { width:70%; }
-
-.nav-toggle {
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-}
-
-.nav-toggle span {
-  width:26px;
-  height:3px;
-  background:#fff;
-}
-
-@media(max-width:768px){
-  .nav-toggle{display:flex;}
-  .nav-menu{
-    position:fixed;
-    top:70px;
-    left:-100%;
-    flex-direction:column;
-    background:#111;
-    width:100%;
-    padding:2rem;
-    transition:.3s;
-  }
-  .nav-menu.active{left:0;}
-}
-
-/* HEADER */
-.page-header{
-  padding:4rem 2rem 2rem;
-  text-align:center;
-  background:radial-gradient(circle at top, rgba(255,140,26,.15), transparent 70%);
-}
-
-.page-header h2{
-  font-family:'Oswald';
-  font-size:2.6rem;
-  margin-bottom:.6rem;
-}
-
-.page-header p{ color:var(--muted); }
-
-/* CONTENT */
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:3rem 2rem;
-}
-
-.contact-card{
-  background:var(--dark-2);
-  padding:3rem;
-  border-radius:12px;
-  border:1px solid rgba(255,140,26,.3);
-  box-shadow:0 5px 20px rgba(0,0,0,.4);
-}
-
-.contact-item{
-  display:flex;
-  gap:1rem;
-  margin-bottom:2rem;
-}
-
-.contact-icon{
-  font-size:1.4rem;
-  color:var(--primary);
-}
-
-.contact-text h4{
-  font-family:'Oswald';
-  margin-bottom:.4rem;
-}
-
-.contact-text p,
-.contact-text a{
-  color:var(--muted);
-  text-decoration:none;
-}
-
-.contact-text a:hover{ color:var(--primary); }
-
-/* SOCIAL BUTTONS */
-.social-buttons{
-  margin-top:2rem;
-  display:flex;
-  gap:1rem;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:.8rem 1.5rem;
-  border-radius:30px;
-  font-size:.9rem;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-flex;
-  align-items:center;
-  gap:.5rem;
-  transition:var(--transition);
-}
-
-.btn-whatsapp{
-  background:#25D366;
-  color:#fff;
-}
-
-.btn-instagram{
-  background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
-  color:#fff;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-  opacity:.9;
-}
-
-/* MAP */
-.map-container{
-  margin-top:3rem;
-  border-radius:12px;
-  overflow:hidden;
-  border:1px solid rgba(255,140,26,.3);
-}
-
-.map-container iframe{
-  width:100%;
-  height:400px;
-  border:0;
-}
-
-/* FOOTER */
-footer{
-  border-top:2px solid var(--primary);
-  background:linear-gradient(135deg,#000,#1a1a1a);
-  padding:2rem;
-  text-align:center;
-  color:#777;
-  margin-top:4rem;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Arches Cricket Club</title>
+  <meta name="description" content="Contact Arches Cricket Club — email, location, and social media links.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-<div class="nav-container">
-  <div class="logo">
-    <img src="assets/images/assets/images/logo/logo.png" alt="Arches Logo">
-    <div class="logo-text">
-      <h1>Arches Cricket Club</h1>
-      <p>Belfast, Northern Ireland</p>
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.png" alt="Arches CC Logo">
+          <div class="nav-logo-text">
+            <div class="club-name">Arches CC</div>
+            <div class="club-sub">Belfast · Est. 2024</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fixtures.html">Fixtures</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-cta"><a href="join.html" class="btn btn-primary"
+            style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join The Club</a></div>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="toggleMobileNav()">Home</a><a href="fixtures.html"
+      onclick="toggleMobileNav()">Fixtures</a>
+    <a href="results.html" onclick="toggleMobileNav()">Results</a><a href="players.html"
+      onclick="toggleMobileNav()">Players</a>
+    <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a><a href="sponsors.html"
+      onclick="toggleMobileNav()">Sponsors</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a><a href="join.html" class="btn btn-primary"
+      onclick="toggleMobileNav()">Join The Club</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="badge" style="margin:0 auto 1rem;">💬 Get In Touch</p>
+      <h1 class="page-hero-title">Contact <span class="text-amber">Us</span></h1>
+      <p class="page-hero-sub">Have a question, want to join, or interested in sponsoring? We'd love to hear from you.
+      </p>
     </div>
   </div>
 
-  <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="fixtures.html">Fixtures</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="results.html">Results</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="sponsors.html">Sponsors</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
 
-  <div class="nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-</nav>
+        <!-- Contact Info Side -->
+        <div>
+          <div class="contact-info-card reveal">
+            <p class="section-label" style="margin-bottom:1.5rem;">📍 Find Us</p>
+            <h2 style="font-size:1.8rem;margin-bottom:1.5rem;">Arches Cricket Club</h2>
 
-<!-- HEADER -->
-<section class="page-header">
-  <h2>Contact Us</h2>
-  <p>Connect with Arches Cricket Club</p>
-</section>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope footer-contact-icon"></i>
+              <div>
+                <div
+                  style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">
+                  Email</div>
+                <a href="mailto:archescricketclub@gmail.com"
+                  style="color:var(--text);font-size:0.92rem;">archescricketclub@gmail.com</a>
+              </div>
+            </div>
 
-<!-- CONTENT -->
-<div class="container">
-<div class="contact-card">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+              <div>
+                <div
+                  style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">
+                  Home Ground</div>
+                <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank"
+                  style="color:var(--text);font-size:0.92rem;line-height:1.5;">Victoria Park<br>Belfast BT4
+                  1LS<br>Northern Ireland</a>
+              </div>
+            </div>
 
-  <div class="contact-item">
-    <i class="fa-solid fa-envelope contact-icon"></i>
-    <div class="contact-text">
-      <h4>Email</h4>
-      <a href="mailto:archescricketclub@gmail.com">archescricketclub@gmail.com</a>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-calendar footer-contact-icon"></i>
+              <div>
+                <div
+                  style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">
+                  Season</div>
+                <span style="color:var(--text);font-size:0.92rem;">April — September 2026</span>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock footer-contact-icon"></i>
+              <div>
+                <div
+                  style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">
+                  Response Time</div>
+                <span style="color:var(--text);font-size:0.92rem;">Within 48 hours</span>
+              </div>
+            </div>
+
+            <div class="divider" style="margin:1.5rem 0;"></div>
+
+            <p
+              style="font-size:0.78rem;color:var(--muted);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;">
+              Follow Us</p>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/archescricketclub/" target="_blank" class="social-btn"
+                title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw==" target="_blank"
+                class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" target="_blank" class="social-btn"
+                title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" target="_blank" class="social-btn"
+                title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Map embed -->
+          <div class="glass-card reveal reveal-delay-1"
+            style="margin-top:1.5rem;overflow:hidden;height:240px;display:flex;align-items:center;justify-content:center;background:var(--panel2);">
+            <div style="text-align:center;">
+              <div style="font-size:3rem;margin-bottom:0.75rem;">📍</div>
+              <p style="font-size:0.92rem;color:var(--text);font-weight:600;margin-bottom:0.5rem;">Victoria Park,
+                Belfast</p>
+              <p style="font-size:0.82rem;color:var(--muted);">BT4 1LS, Northern Ireland</p>
+              <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank" class="btn btn-ghost"
+                style="margin-top:1rem;display:inline-flex;">
+                <i class="fa-solid fa-map"></i> Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="join-form-card reveal reveal-delay-2">
+          <div class="form-title">Send Us A Message</div>
+          <p style="color:var(--muted);font-size:0.88rem;margin-bottom:1.75rem;">
+            Whether it's about joining the club, sponsorship opportunities, press enquiries, or general questions — fill
+            out the form and we'll get back to you.
+          </p>
+
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone (optional)</label>
+              <input type="tel" class="form-input" placeholder="+44 7xxx xxxxxx">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject *</label>
+              <select class="form-select" required>
+                <option value="">Select a subject...</option>
+                <option>Joining The Club</option>
+                <option>Sponsorship Enquiry</option>
+                <option>General Question</option>
+                <option>Press & Media</option>
+                <option>Match Information</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Message *</label>
+              <textarea class="form-textarea" placeholder="Tell us what you're looking for..." rows="5"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"
+              style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <div id="contactSuccess" style="display:none;text-align:center;padding:3rem 2rem;">
+            <div style="font-size:3.5rem;margin-bottom:1rem;">✅</div>
+            <h3 style="font-size:1.5rem;margin-bottom:0.75rem;">Message Sent!</h3>
+            <p style="color:var(--muted);line-height:1.7;">Thanks for reaching out! We'll reply to your email within 48
+              hours.<br>In the meantime, follow us on social media for updates.</p>
+            <a href="index.html" class="btn btn-ghost" style="margin-top:1.5rem;display:inline-flex;">← Back to Home</a>
+          </div>
+
+          <p style="text-align:center;font-size:0.75rem;color:var(--muted);margin-top:1.25rem;">
+            Or email us directly at <a href="mailto:archescricketclub@gmail.com"
+              style="color:var(--amber);">archescricketclub@gmail.com</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FAQs -->
+      <div class="reveal" style="margin-top:5rem;">
+        <div class="section-header center" style="margin-bottom:2.5rem;">
+          <p class="section-label">❓ Common Questions</p>
+          <h2 class="section-title" style="font-size:2.5rem;">Frequently Asked</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+          <div class="glass-card" style="padding:1.75rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--amber);">How do I join the club?</h3>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.6;">Fill out our registration form on the <a
+                href="join.html" style="color:var(--amber);">Join The Club page</a> or email us directly. We'll be in
+              touch within 48 hours.</p>
+          </div>
+          <div class="glass-card" style="padding:1.75rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--amber);">Is there an age limit?</h3>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.6;">We currently play adult cricket (18+) but
+              welcome players of all ages within that bracket. We're also exploring junior development programmes.</p>
+          </div>
+          <div class="glass-card" style="padding:1.75rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--amber);">Do I need experience?</h3>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.6;">Not at all! We welcome complete beginners
+              through to experienced players. We have coaches who can help you develop your skills.</p>
+          </div>
+          <div class="glass-card" style="padding:1.75rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--amber);">Where do you train?</h3>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.6;">We train and play home matches at <a
+                href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank" style="color:var(--amber);">Victoria
+                Park, Belfast BT4 1LS</a>. Training times are confirmed after registration.</p>
+          </div>
+          <div class="glass-card" style="padding:1.75rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--amber);">How much does it cost?</h3>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.6;">Membership fees help cover league
+              registration, ground hire, and equipment. Contact us for the latest membership pricing for the 2026
+              season.</p>
+          </div>
+          <div class="glass-card" style="padding:1.75rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--amber);">How can I sponsor the club?</h3>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.6;">Visit our <a href="sponsors.html"
+                style="color:var(--amber);">Sponsors page</a> to learn about partnership opportunities or contact us
+              directly for a sponsorship pack.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
 
-  <div class="contact-item">
-    <i class="fa-solid fa-location-dot contact-icon"></i>
-    <div class="contact-text">
-      <h4>Ground Location</h4>
-      <p>Victoria Park, Belfast BT4 1LS<br>Northern Ireland</p>
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner" style="padding-top:3rem;">
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
+          <div class="footer-legal"><a href="index.html">Home</a><a href="contact.html">Contact</a><a
+              href="join.html">Join</a></div>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- SOCIAL BUTTONS -->
-  <div class="social-buttons">
-    <a href="https://chat.whatsapp.com/JTL2mTF8p1U8yJz9QfWNGQ" target="_blank" class="btn btn-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group
-    </a>
-
-    <a href="https://www.instagram.com/archescricketclub/" target="_blank" class="btn btn-instagram">
-      <i class="fa-brands fa-instagram"></i> Follow on Instagram
-    </a>
-  </div>
-
-</div>
-
-<!-- GOOGLE MAP -->
-<div class="map-container">
-  <iframe 
-    src="https://www.google.com/maps?q=Victoria+Park+Belfast+BT4+1LS&output=embed"
-    allowfullscreen="">
-  </iframe>
-</div>
-
-</div>
-
-<footer>
-  © 2024 Arches Cricket Club · Contact
-</footer>
-
-<script src="mobile-nav.js"></script>
+  <script>
+    function toggleMobileNav() { const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger'); n.classList.toggle('open'); h.classList.toggle('open'); document.body.style.overflow = n.classList.contains('open') ? 'hidden' : ''; }
+    window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+    document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el));
+    function handleContact(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('contactSuccess').style.display = 'block';
+    }
+  </script>
 </body>
+
 </html>

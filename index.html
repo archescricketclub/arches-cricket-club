@@ -1,1098 +1,969 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arches Cricket Club | Belfast's Premier Cricket Team</title>
+    <meta name="description"
+        content="Arches Cricket Club — Belfast's premier cricket club. Passion, Performance, Pride. Playing in the Northern Ireland Cricket League.">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="mobile.css">
-    <style>
-        /* ============================================
-           GLOBAL STYLES & RESET
-           ============================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #ff6b1a;
-            --secondary-color: #ff8c42;
-            --accent-color: #ff4500;
-            --dark-bg: #1a1a1a;
-            --darker-bg: #0d0d0d;
-            --light-bg: #f5f5f5;
-            --text-dark: #1a1a1a;
-            --text-light: #ffffff;
-            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        /* ============================================
-           NAVIGATION BAR
-           ============================================ */
-        .navbar {
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            background: url('logo.png') center/contain no-repeat;
-            border-radius: 0;
-        }
-
-        .logo-text h1 {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .logo-text p {
-            color: var(--primary-color);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: var(--text-light);
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            position: relative;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        .nav-menu a:hover::after,
-        .nav-menu a.active::after {
-            width: 80%;
-        }
-
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .nav-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--text-light);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-
-        /* ============================================
-           HERO SECTION
-           ============================================ */
-        .hero {
-            background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.92) 100%),
-                url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1600&h=900&fit=crop') center/cover;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255, 107, 26, 0.15) 0%, transparent 70%);
-        }
-
-        .hero-content {
-            max-width: 900px;
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-tagline {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: var(--text-light);
-        }
-
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 107, 26, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-light);
-            border: 2px solid var(--text-light);
-        }
-
-        .btn-secondary:hover {
-            background: var(--text-light);
-            color: var(--dark-bg);
-            transform: translateY(-3px);
-        }
-
-        /* ============================================
-           UPCOMING MATCH HIGHLIGHT
-           ============================================ */
-        .section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--dark-bg);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .section-subtitle {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .match-highlight {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
-            padding: 3rem;
-            border-radius: 15px;
-            color: var(--text-light);
-            box-shadow: var(--card-shadow);
-            position: relative;
-            overflow: hidden;
-            border: 2px solid var(--primary-color);
-        }
-
-        .match-highlight::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 107, 26, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .match-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .match-label {
-            display: inline-block;
-            background: var(--accent-color);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .match-title {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .match-date {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-        }
-
-        .match-teams {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 2rem;
-            align-items: center;
-            margin: 2rem 0;
-        }
-
-        .team {
-            text-align: center;
-        }
-
-        .team-logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            border: 3px solid var(--primary-color);
-        }
-
-        .team-name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-record {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-
-        .vs-divider {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .match-details {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .match-detail {
-            text-align: center;
-        }
-
-        .match-detail-label {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .match-detail-value {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        /* ============================================
-           LATEST NEWS
-           ============================================ */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .news-card {
-            background: var(--text-light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .news-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .news-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
-        }
-
-        .news-content {
-            padding: 1.5rem;
-        }
-
-        .news-date {
-            font-size: 0.85rem;
-            color: #999;
-            margin-bottom: 0.5rem;
-        }
-
-        .news-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            color: var(--dark-bg);
-        }
-
-        .news-excerpt {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .news-link {
-            color: var(--primary-color);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .news-link:hover {
-            gap: 1rem;
-        }
-
-        /* ============================================
-           QUICK STATS
-           ============================================ */
-        .stats-section {
-            background: var(--light-bg);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: var(--text-light);
-            padding: 2.5rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
-            border-top: 4px solid var(--primary-color);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-top-color: var(--secondary-color);
-        }
-
-        .stat-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ============================================
-           SPONSORS CAROUSEL
-           ============================================ */
-        .sponsors-section {
-            background: var(--dark-bg);
-            color: var(--text-light);
-        }
-
-        .sponsors-container {
-            overflow: hidden;
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .sponsors-track {
-            display: flex;
-            gap: 4rem;
-            animation: scroll 20s linear infinite;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .sponsor-logo {
-            min-width: 200px;
-            height: 120px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid rgba(255, 107, 26, 0.3);
-            padding: 15px;
-        }
-
-        .sponsor-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            filter: brightness(1);
-        }
-
-        .sponsor-logo:hover img {
-            transform: scale(1.05);
-            transition: 0.3s ease;
-        }
-
-
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-            color: var(--text-light);
-            padding: 4rem 2rem 2rem;
-            border-top: 3px solid var(--primary-color);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0.8rem;
-            display: block;
-        }
-
-        /* ============================================
-   FOOTER
-   ============================================ */
-        .footer {
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-            color: var(--text-light);
-            padding: 4rem 2rem 2rem;
-            border-top: 3px solid var(--primary-color);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0.6rem;
-            display: block;
-        }
-
-        /* =====================================
-   SOCIAL ICONS – FINAL (NO CIRCLES)
-   ===================================== */
-
-        /* Footer text hover (text links only) */
-        .footer-section a:not(.social-link):hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-
-        /* Social icons container */
-        .social-links {
-            display: flex;
-            gap: 18px;
-            margin-top: 10px;
-            align-items: center;
-        }
-
-        /* Remove circle styling completely */
-        .social-link {
-            width: auto;
-            height: auto;
-            background: none;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
-            text-decoration: none;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-
-        /* Icon styling */
-        .social-link i {
-            font-size: 26px;
-            line-height: 1;
-            display: block;
-        }
-
-        /* Brand colours */
-        .social-link.linkedin i {
-            color: #0077b5;
-        }
-
-        .social-link.facebook i {
-            color: #1877f2;
-        }
-
-        .social-link.youtube i {
-            color: #ff0000;
-        }
-
-        .social-link.instagram i {
-            background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Hover */
-        .social-link:hover {
-            transform: translateY(-2px);
-            opacity: 0.85;
-        }
-
-        /* =======================
-   CONTACT ALIGNMENT FIX
-   ======================= */
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .contact-icon {
-            font-size: 16px;
-            line-height: 1;
-            flex-shrink: 0;
-        }
-
-        .contact-item a {
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .contact-item a:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
-        }
-
-        /* =======================================
-   FOOTER BOTTOM – FINAL FIX
-   ======================================= */
-
-        .footer-bottom {
-            width: 100%;
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* =====================================
-   COPYRIGHT CENTERING
-   ===================================== */
-        .footer-bottom {
-            text-align: center;
-            width: 100%;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* ============================================
-           RESPONSIVE DESIGN
-           ============================================ */
-        @media (max-width: 968px) {
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 80px;
-                flex-direction: column;
-                background: var(--dark-bg);
-                width: 100%;
-                padding: 2rem;
-                transition: var(--transition);
-                gap: 0;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-menu li {
-                margin: 1rem 0;
-            }
-
-            .nav-toggle {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-tagline {
-                font-size: 1.2rem;
-            }
-
-            .match-teams {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.2rem;
-    }
-
-    .vs-divider {
-        transform: none;      /* FIX */
-        font-size: 1.5rem;
-        margin: 0.5rem 0;
-    }
-
-    .team-logo {
-        width: 90px;
-        height: 90px;
-        font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <div class="logo-text">
-                    <h1>Arches Cricket Club</h1>
-                    <p>Belfast,Northern Ireland</p>
+
+    <!-- ─── NAVBAR ─── -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="nav-logo">
+                    <img src="logo.png" alt="Arches CC Logo">
+                    <div class="nav-logo-text">
+                        <div class="club-name">Arches Cricket Club</div>
+                        <div class="club-sub">Belfast · Est. 2024</div>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="fixtures.html">Fixtures</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="join.html" class="btn btn-primary" style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join
+                        The Club</a>
                 </div>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="fixtures.html">Fixtures</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="results.html">Results</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Arches Cricket Club</h1>
-            <p class="hero-tagline">Belfast's Premier Cricket Experience</p>
-            <div class="hero-buttons">
-                <a href="registration.html" class="btn btn-primary">Join Our Squad</a>
-                <a href="fixtures.html" class="btn btn-secondary">View Fixtures</a>
+    <!-- ─── MOBILE NAV ─── -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="toggleMobileNav()">Home</a>
+        <div class="mn-divider"></div>
+        <a href="fixtures.html" onclick="toggleMobileNav()">Fixtures</a>
+        <a href="results.html" onclick="toggleMobileNav()">Results</a>
+        <a href="players.html" onclick="toggleMobileNav()">Players</a>
+        <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a>
+        <a href="sponsors.html" onclick="toggleMobileNav()">Sponsors</a>
+        <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+        <div class="mn-divider"></div>
+        <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()">
+            <i class="fa-solid fa-user-plus"></i> Join The Club
+        </a>
+    </div>
+
+    <!-- ─── HERO ─── -->
+    <section id="hero">
+        <div class="hero-grid"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-eyebrow">
+                        <i class="fa-solid fa-circle" style="font-size:0.4rem;"></i>
+                        Belfast · Northern Ireland · Est. 2024
+                    </div>
+                    <h1 class="hero-title" id="heroTitle">
+                        <span class="line1">Arches</span>
+                        <span class="line2">Cricket Club</span>
+                    </h1>
+                    <p class="hero-tagline">
+                        <span>Passion</span> &nbsp;·&nbsp; <span>Performance</span> &nbsp;·&nbsp; <span>Pride</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="fixtures.html" class="btn btn-primary">
+                            <i class="fa-solid fa-calendar-days"></i> View Fixtures
+                        </a>
+                        <a href="join.html" class="btn btn-outline">
+                            <i class="fa-solid fa-user-plus"></i> Join The Club
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-number" data-target="44">0</div>
+                            <div class="hero-stat-label">Matches Played</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-number" data-target="23">0</div>
+                            <div class="hero-stat-label">Victories</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-number" data-target="33">0</div>
+                            <div class="hero-stat-label">Squad Members</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-number" data-target="1">0</div>
+                            <div class="hero-stat-label">Trophy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOGO ORBITAL VISUAL -->
+                <div class="hero-visual">
+                    <div class="logo-hero-wrap">
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                        <div class="orbit orbit-3"></div>
+                        <div class="logo-glow"></div>
+                        <img src="logo.png" alt="Arches Cricket Club" class="logo-hero-img" id="heroLogo">
+
+                        <!-- Floating cards -->
+                        <div class="hero-floating-card hfc-next">
+                            <div class="hfc-label">Next Match</div>
+                            <div class="hfc-value">04 Apr 2026</div>
+                            <div class="hfc-sub">Arches-1 vs Arches-2 · T20</div>
+                        </div>
+                        <div class="hero-floating-card hfc-win">
+                            <div class="hfc-label">Win Rate</div>
+                            <div class="hfc-value">52%</div>
+                            <div class="hfc-sub">2025 Season</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- UPCOMING MATCH HIGHLIGHT -->
+    <!-- ─── LIVE TICKER ─── -->
+    <div class="ticker">
+        <div class="ticker-inner" id="tickerInner">
+            <div class="ticker-item"><span class="ticker-sep"></span> 🏏 Arches CC vs Dunmurry — 03 May 2026 — Victoria
+                Park</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Belfast Superkings vs Arches CC — 10 May 2026 —
+                Away</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs Victoria — 24 May 2026 — Home</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Larne vs Arches CC — 31 May 2026 — Away</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs NIMACC — 14 Jun 2026 — Home</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Amigos vs Arches CC — 22 Jun 2026 — Away</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="ticker-item"><span class="ticker-sep"></span> 🏏 Arches CC vs Dunmurry — 03 May 2026 — Victoria
+                Park</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Belfast Superkings vs Arches CC — 10 May 2026 —
+                Away</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs Victoria — 24 May 2026 — Home</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Larne vs Arches CC — 31 May 2026 — Away</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs NIMACC — 14 Jun 2026 — Home</div>
+            <div class="ticker-item"><span class="ticker-sep"></span> Amigos vs Arches CC — 22 Jun 2026 — Away</div>
+        </div>
+    </div>
+
+    <!-- ─── UPCOMING MATCHES ─── -->
     <section class="section">
         <div class="container">
-            <div class="match-highlight">
-                <div class="match-header">
-                    <span class="match-label">🏏 Upcomming Match</span>
-                    <h2 class="match-title">Warmup Match</h2>
-                    <p class="match-date">Saturday, April 4, 2026 • 2:00 PM </p>
+            <div class="section-header reveal">
+                <p class="section-label">⚡ Upcoming Fixtures</p>
+                <h2 class="section-title">Next On The Pitch</h2>
+                <p class="section-sub">All home games at Victoria Park, Belfast BT4 1LS</p>
+            </div>
+            <div class="matches-grid">
+
+                <div class="match-card reveal reveal-delay-1">
+                    <div class="match-meta">
+                        <span class="match-format">T20 · Warmup</span>
+                        <span class="match-date-text">Sat 04 Apr 2026 · 14:00</span>
+                    </div>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <div class="match-team-logo">🏏</div>
+                            <div class="match-team-name">Arches-1</div>
+                            <div class="match-team-sub">Senior Squad</div>
+                        </div>
+                        <div class="match-vs">VS</div>
+                        <div class="match-team">
+                            <div class="match-team-logo">🏏</div>
+                            <div class="match-team-name">Arches-2</div>
+                            <div class="match-team-sub">Junior Squad</div>
+                        </div>
+                    </div>
+                    <div class="match-info">
+                        <div class="match-info-item">
+                            <div class="match-info-label">Venue</div>
+                            <div class="match-info-value">Victoria Park</div>
+                        </div>
+                        <div class="match-info-item">
+                            <div class="match-info-label">Format</div>
+                            <div class="match-info-value">T20</div>
+                        </div>
+                        <div class="match-info-item">
+                            <div class="match-info-label">Status</div>
+                            <div class="match-info-value" style="color:var(--amber);">Upcoming</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="match-teams">
-                    <div class="team">
-                        <div class="team-logo">🏏</div>
-                        <h3 class="team-name">Arches-1</h3>
-                        <!--<p class="team-record">6W - 4L</p>-->
+
+                <div class="match-card reveal reveal-delay-2">
+                    <div class="match-meta">
+                        <span class="match-format">Senior League</span>
+                        <span class="match-date-text">Sat 03 May 2026 · 11:00</span>
                     </div>
-                    <div class="vs-divider">VS</div>
-                    <div class="team">
-                        <div class="team-logo">🏏</div>
-                        <h3 class="team-name">Arches-2</h3>
-                        <!--<p class="team-record">6W - 4L</p>-->
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <div class="match-team-logo">🏏</div>
+                            <div class="match-team-name">Arches CC</div>
+                            <div class="match-team-sub">Home</div>
+                        </div>
+                        <div class="match-vs">VS</div>
+                        <div class="match-team">
+                            <div class="match-team-logo">⚔️</div>
+                            <div class="match-team-name">Dunmurry</div>
+                            <div class="match-team-sub">Away</div>
+                        </div>
+                    </div>
+                    <div class="match-info">
+                        <div class="match-info-item">
+                            <div class="match-info-label">Venue</div>
+                            <div class="match-info-value">Dunmurry</div>
+                        </div>
+                        <div class="match-info-item">
+                            <div class="match-info-label">Competition</div>
+                            <div class="match-info-value">NICL Div 1</div>
+                        </div>
+                        <div class="match-info-item">
+                            <div class="match-info-label">Status</div>
+                            <div class="match-info-value" style="color:var(--muted);">Scheduled</div>
+                        </div>
                     </div>
                 </div>
-                <div class="match-details">
-                    <div class="match-detail">
-                        <p class="match-detail-label">Venue</p>
-                        <p class="match-detail-value">Victoria Park</p>
+
+                <div class="match-card reveal reveal-delay-3">
+                    <div class="match-meta">
+                        <span class="match-format">Senior League</span>
+                        <span class="match-date-text">Sat 10 May 2026 · 11:00</span>
                     </div>
-                    <div class="match-detail">
-                        <p class="match-detail-label">Format</p>
-                        <p class="match-detail-value">T20</p>
+                    <div class="match-teams">
+                        <div class="match-team">
+                            <div class="match-team-logo">👑</div>
+                            <div class="match-team-name">B. Superkings</div>
+                            <div class="match-team-sub">Home</div>
+                        </div>
+                        <div class="match-vs">VS</div>
+                        <div class="match-team">
+                            <div class="match-team-logo">🏏</div>
+                            <div class="match-team-name">Arches CC</div>
+                            <div class="match-team-sub">Away</div>
+                        </div>
                     </div>
-                    <div class="match-detail">
-                        <p class="match-detail-label">Status</p>
-                        <p class="match-detail-value">Upcoming</p>
+                    <div class="match-info">
+                        <div class="match-info-item">
+                            <div class="match-info-label">Venue</div>
+                            <div class="match-info-value">Mallusk</div>
+                        </div>
+                        <div class="match-info-item">
+                            <div class="match-info-label">Competition</div>
+                            <div class="match-info-value">NICL Div 1</div>
+                        </div>
+                        <div class="match-info-item">
+                            <div class="match-info-label">Status</div>
+                            <div class="match-info-value" style="color:var(--muted);">Scheduled</div>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+            <div style="text-align:center; margin-top:2.5rem;">
+                <a href="fixtures.html" class="btn btn-ghost">View All Fixtures <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- LATEST NEWS -->
-    <!-- <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest News</h2>
-                <p class="section-subtitle">Stay updated with club announcements and highlights</p>
-            </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-image"></div>
-                    <div class="news-content">
-                        <p class="news-date">January 15, 2026</p>
-                        <h3 class="news-title">Dominant Victory Against Dundonald Warriors</h3>
-                        <p class="news-excerpt">Arches CC secured a commanding 8-wicket win with stellar performances from captain James McAllister and opener Ryan O'Brien.</p>
-                        <a href="#" class="news-link">Read More →</a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image"></div>
-                    <div class="news-content">
-                        <p class="news-date">January 10, 2026</p>
-                        <h3 class="news-title">New Signing: Welcome Liam Patterson</h3>
-                        <p class="news-excerpt">We're thrilled to announce the signing of all-rounder Liam Patterson from County Antrim's youth academy.</p>
-                        <a href="#" class="news-link">Read More →</a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image"></div>
-                    <div class="news-content">
-                        <p class="news-date">January 5, 2026</p>
-                        <h3 class="news-title">2026 Season Fixtures Announced</h3>
-                        <p class="news-excerpt">The Northern Ireland Cricket League has released the complete fixture list for the 2026 season with exciting matchups ahead.</p>
-                        <a href="#" class="news-link">Read More →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    <div class="divider"></div>
 
-    <!-- QUICK STATS -->
+    <!-- ─── STATS COUNTER ─── -->
     <section class="section stats-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Season at a Glance</h2>
-                <p class="section-subtitle">2025 Season Performance</p>
-            </div>
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">🏏</div>
-                    <div class="stat-number">44</div>
+                <div class="stat-item reveal">
+                    <span class="stat-icon">🏏</span>
+                    <div class="stat-num"><span class="count" data-target="44">0</span>+</div>
                     <div class="stat-label">Matches Played</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
-                    <div class="stat-number">23</div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <span class="stat-icon">🏆</span>
+                    <div class="stat-num"><span class="count" data-target="23">0</span></div>
                     <div class="stat-label">Victories</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-number">33</div>
-                    <div class="stat-label">Squad Players</div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <span class="stat-icon">👥</span>
+                    <div class="stat-num"><span class="count" data-target="33">0</span></div>
+                    <div class="stat-label">Squad Members</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">⭐</div>
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Trophies Won</div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <span class="stat-icon">⭐</span>
+                    <div class="stat-num"><span class="count" data-target="1">0</span></div>
+                    <div class="stat-label">Trophy Won</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SPONSORS CAROUSEL -->
-    <section class="section sponsors-section">
+    <div class="divider"></div>
+
+    <!-- ─── PLAYER SPOTLIGHT ─── -->
+    <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" style="color: var(--text-light);">Our Sponsors</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Proud partners supporting Belfast
-                    cricket</p>
+            <div class="section-header reveal">
+                <p class="section-label">🌟 Player Spotlight</p>
+                <h2 class="section-title">Meet The Squad</h2>
+                <p class="section-sub">The backbone of Arches CC's remarkable journey in Northern Ireland cricket</p>
             </div>
-            <div class="sponsors-container">
-                <div class="sponsors-track">
-                    <div class="sponsor-logo">
-                        <img src="banjo-tech.png" alt="Banjo Tech">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="ANDHRA1.png" alt="Andhra Paradise">
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="sponsor-logo">
-                        <img src="banjo-tech.png" alt="Banjo Tech">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="ANDHRA1.png" alt="Andhra Paradise">
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="sponsor-logo">
-                        <img src="banjo-tech.png" alt="Banjo Tech">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="ANDHRA1.png" alt="Andhra Paradise">
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="sponsor-logo">
-                        <img src="banjo-tech.png" alt="Banjo Tech">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="ANDHRA1.png" alt="Andhra Paradise">
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="sponsor-logo">
-                        <img src="banjo-tech.png" alt="Banjo Tech">
-                    </div>
-                    <div class="sponsor-logo">
-                        <img src="ANDHRA1.png" alt="Andhra Paradise">
-                    </div>
+<div class="players-grid">
 
+                <div class="player-card reveal reveal-delay-1">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Captain &bull; T1</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Tulasi G. Thatavarthi</div>
+                        <div class="player-team">Team 1 &bull; #7 &bull; TT07</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">84</div><div class="player-stat-label">Runs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">37</div><div class="player-stat-label">High Score</div></div>
+                            <div class="player-stat"><div class="player-stat-num">9.33</div><div class="player-stat-label">Average</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-2">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Captain &bull; T2</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Charan Reddy Datla</div>
+                        <div class="player-team">Team 2 &bull; #99 &bull; CR99</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">59</div><div class="player-stat-label">Runs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">22</div><div class="player-stat-label">High Score</div></div>
+                            <div class="player-stat"><div class="player-stat-num">11.80</div><div class="player-stat-label">Average</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-3">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Captain &bull; Midweek</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Anil Narra</div>
+                        <div class="player-team">Midweek &bull; #30 &bull; AN30</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">157</div><div class="player-stat-label">Runs (T1)</div></div>
+                            <div class="player-stat"><div class="player-stat-num">53</div><div class="player-stat-label">High Score</div></div>
+                            <div class="player-stat"><div class="player-stat-num">15.70</div><div class="player-stat-label">Average</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-4">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Best Batter &bull; T1</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Asad Murtuza</div>
+                        <div class="player-team">Team 1 &bull; #22 &bull; AM04</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">236</div><div class="player-stat-label">Runs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">68</div><div class="player-stat-label">High Score</div></div>
+                            <div class="player-stat"><div class="player-stat-num">23.60</div><div class="player-stat-label">Average</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-1">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Best Batter &bull; T2</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Ali Rizwan</div>
+                        <div class="player-team">Team 2 &bull; #16 &bull; AR69</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">365</div><div class="player-stat-label">Runs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">131</div><div class="player-stat-label">High Score</div></div>
+                            <div class="player-stat"><div class="player-stat-num">91.25</div><div class="player-stat-label">Average</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-2">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Best Bowler &bull; T1</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Venkateswarrao Jyothi</div>
+                        <div class="player-team">Team 1 &bull; #9 &bull; VJ09</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">50.5</div><div class="player-stat-label">Overs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">13</div><div class="player-stat-label">Wickets</div></div>
+                            <div class="player-stat"><div class="player-stat-num">3-26</div><div class="player-stat-label">Best Fig</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-3">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">Best Bowler &bull; T2</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Chandra Obula R. B</div>
+                        <div class="player-team">Team 2 &bull; #45 &bull; CH45</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">47.4</div><div class="player-stat-label">Overs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">14</div><div class="player-stat-label">Wickets</div></div>
+                            <div class="player-stat"><div class="player-stat-num">3-20</div><div class="player-stat-label">Best Fig</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-4">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">All-Rounder &bull; T1</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Veerendra B. Nagari</div>
+                        <div class="player-team">Team 1 &bull; #44 &bull; VB44</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">13</div><div class="player-stat-label">Wickets</div></div>
+                            <div class="player-stat"><div class="player-stat-num">5-17</div><div class="player-stat-label">Best Fig</div></div>
+                            <div class="player-stat"><div class="player-stat-num">54.0</div><div class="player-stat-label">Overs</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-1">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">All-Rounder &bull; T2</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Dushyanth Reddy B</div>
+                        <div class="player-team">Team 2 &bull; #23 &bull; DB23</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">202</div><div class="player-stat-label">Runs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">12</div><div class="player-stat-label">Wickets</div></div>
+                            <div class="player-stat"><div class="player-stat-num">4-30</div><div class="player-stat-label">Best Fig</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card reveal reveal-delay-2">
+                    <div class="player-image-wrap">
+                        <div class="player-avatar"><img src="player-avatar.svg" alt="Player" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                        <span class="player-role-badge">All-Rounder &bull; Midweek</span>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name">Kishan Karneedi</div>
+                        <div class="player-team">Midweek &bull; #11 &bull; KK11</div>
+                        <div class="player-stats">
+                            <div class="player-stat"><div class="player-stat-num">178</div><div class="player-stat-label">Runs</div></div>
+                            <div class="player-stat"><div class="player-stat-num">16</div><div class="player-stat-label">Wickets</div></div>
+                            <div class="player-stat"><div class="player-stat-num">4-15</div><div class="player-stat-label">Best Fig</div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="text-align:center; margin-top:2.5rem;">
+                <a href="players.html" class="btn btn-ghost">View Full Squad <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── LATEST NEWS ─── -->
+    <section class="section" style="background:var(--panel2);">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">📰 Latest News</p>
+                <h2 class="section-title">From The Club</h2>
+                <p class="section-sub">Stay updated with the latest from Arches Cricket Club</p>
+            </div>
+            <div class="news-grid">
+
+                <div class="news-card reveal reveal-delay-1">
+                    <div class="news-image">
+                        <div
+                            style="width:100%;height:100%;background:linear-gradient(135deg,#1a0c00,#2a1500);display:flex;align-items:center;justify-content:center;font-size:5rem;">
+                            🏆</div>
+                        <span class="news-category news-cat-match">Match Report</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">January 2026</div>
+                        <h3 class="news-title">Dominant Season Finale — Arches Finish Strong</h3>
+                        <p class="news-excerpt">Arches CC wrapped up an incredible 2025 season with commanding
+                            performances across both teams, securing a top-3 finish in the NICL.</p>
+                        <a href="https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=m_scorecard#ca060450b-a00d-41c1-9c06-85f6b717b248_m795d7139-4397-4a95-b9f2-cdc7e593c333" class="news-link">Read More <span class="news-link-arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="news-card reveal reveal-delay-2">
+                    <div class="news-image">
+                        <div
+                            style="width:100%;height:100%;background:linear-gradient(135deg,#0a1020,#10152a);display:flex;align-items:center;justify-content:center;font-size:5rem;">
+                            📋</div>
+                        <span class="news-category news-cat-club">Club News</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">January 2026</div>
+                        <h3 class="news-title">2026 Season Fixtures Released — Exciting Matchups Ahead</h3>
+                        <p class="news-excerpt">The Northern Ireland Cricket League has released the complete fixture
+                            list for the 2026 season with some fantastic teams in the division.</p>
+                        <a href="fixtures.html" class="news-link">View Fixtures <span
+                                class="news-link-arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="news-card reveal reveal-delay-3">
+                    <div class="news-image">
+                        <div
+                            style="width:100%;height:100%;background:linear-gradient(135deg,#1a100a,#2a1510);display:flex;align-items:center;justify-content:center;font-size:5rem;">
+                            🤝</div>
+                        <span class="news-category news-cat-player">Partnership</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">December 2025</div>
+                        <h3 class="news-title">Banjo Tech &amp; Andhra Paradise Join As Club Sponsors</h3>
+                        <p class="news-excerpt">We're thrilled to welcome Banjo Tech and Andhra Paradise Restaurant as
+                            official sponsors of Arches Cricket Club for the 2026 season.</p>
+                        <a href="sponsors.html" class="news-link">Meet Our Sponsors <span
+                                class="news-link-arrow">→</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── GALLERY PREVIEW ─── -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">📸 Gallery</p>
+                <h2 class="section-title">Match Moments</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item wide reveal">
+                    <div
+                        style="background:linear-gradient(135deg,#1a0c00,#2a1800);height:100%;display:flex;align-items:center;justify-content:center;font-size:5rem;">
+                        🏏</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Match Day Action 🏏</div>
+                    </div>
+                </div>
+                <div class="gallery-item tall reveal reveal-delay-1">
+                    <div
+                        style="background:linear-gradient(135deg,#1a0c02,#251600);height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;">
+                        🏆</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Trophy Celebrations</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <div
+                        style="background:linear-gradient(135deg,#0a0a1a,#101028);height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;">
+                        👥</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Team Photo 2025</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-3">
+                    <div
+                        style="background:linear-gradient(135deg,#0a1a0a,#102010);height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;">
+                        ⚡</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Victoria Park</div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-4">
+                    <div
+                        style="background:linear-gradient(135deg,#1a1a0a,#282810);height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;">
+                        🎯</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Batting Practice</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2rem;">
+                <a href="gallery.html" class="btn btn-ghost">View Full Gallery <i class="fa-solid fa-images"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── SPONSORS ─── -->
+    <section class="section-sm" style="background:var(--panel2);">
+        <div class="container">
+            <div class="section-header center reveal">
+                <p class="section-label">🤝 Partners</p>
+                <h2 class="section-title">Our Sponsors</h2>
+                <p class="section-sub">Proud partners powering Belfast cricket</p>
+            </div>
+        </div>
+        <div class="sponsors-track-wrap">
+            <div class="sponsors-track reveal">
+                <div class="sponsor-logo-card"><img src="banjo-tech.png" alt="Banjo Tech"></div>
+                <div class="sponsor-logo-card"><img src="ANDHRA1.png" alt="Andhra Paradise"></div>
+                <!--<div class="sponsor-logo-card" style="min-width:180px;justify-content:center;"><span
+                        style="color:var(--muted);font-size:0.8rem;font-weight:600;letter-spacing:1px;">YOUR BRAND
+                        HERE</span></div>
+                <div class="sponsor-logo-card" style="min-width:180px;justify-content:center;"><span
+                        style="color:var(--muted);font-size:0.8rem;font-weight:600;letter-spacing:1px;">YOUR BRAND
+                        HERE</span></div>-->
+                <!-- Duplicates -->
+                <div class="sponsor-logo-card"><img src="banjo-tech.png" alt="Banjo Tech"></div>
+                <div class="sponsor-logo-card"><img src="ANDHRA1.png" alt="Andhra Paradise"></div>
+                <!--<div class="sponsor-logo-card" style="min-width:180px;justify-content:center;"><span
+                        style="color:var(--muted);font-size:0.8rem;font-weight:600;letter-spacing:1px;">YOUR BRAND
+                        HERE</span></div>
+                <div class="sponsor-logo-card" style="min-width:180px;justify-content:center;"><span
+                        style="color:var(--muted);font-size:0.8rem;font-weight:600;letter-spacing:1px;">YOUR BRAND
+                        HERE</span></div>-->
+						                <!-- Duplicates -->
+                <div class="sponsor-logo-card"><img src="banjo-tech.png" alt="Banjo Tech"></div>
+                <div class="sponsor-logo-card"><img src="ANDHRA1.png" alt="Andhra Paradise"></div>
+				                <!-- Duplicates -->
+                <div class="sponsor-logo-card"><img src="banjo-tech.png" alt="Banjo Tech"></div>
+                <div class="sponsor-logo-card"><img src="ANDHRA1.png" alt="Andhra Paradise"></div>
+				                <!-- Duplicates -->
+                <div class="sponsor-logo-card"><img src="banjo-tech.png" alt="Banjo Tech"></div>
+                <div class="sponsor-logo-card"><img src="ANDHRA1.png" alt="Andhra Paradise"></div>
+				                <!-- Duplicates -->
+                <div class="sponsor-logo-card"><img src="banjo-tech.png" alt="Banjo Tech"></div>
+                <div class="sponsor-logo-card"><img src="ANDHRA1.png" alt="Andhra Paradise"></div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+            <a href="sponsors.html" class="btn btn-ghost" style="margin:0 auto;">Become a Sponsor</a>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── JOIN THE CLUB ─── -->
+    <section class="section join-section">
+        <div class="container">
+            <div class="join-inner">
+                <div>
+                    <p class="section-label">🏏 Become Part Of The Family</p>
+                    <h2 class="section-title reveal">Join Arches<br><span class="text-amber">Cricket Club</span></h2>
+                    <p class="section-sub reveal reveal-delay-1">Whether you're a seasoned cricketer or picking up a bat
+                        for the first time — Arches CC welcomes all skill levels. Join Belfast's fastest-growing cricket
+                        club today.</p>
+
+                    <div class="join-benefits">
+                        <div class="join-benefit reveal reveal-delay-1">
+                            <div class="join-benefit-icon">🏏</div>
+                            <div>
+                                <div class="join-benefit-title">Competitive League Cricket</div>
+                                <div class="join-benefit-desc">Play in the Northern Ireland Cricket League across two
+                                    competitive teams</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-2">
+                            <div class="join-benefit-icon">🏋️</div>
+                            <div>
+                                <div class="join-benefit-title">Quality Training</div>
+                                <div class="join-benefit-desc">Weekly training sessions at Victoria Park with
+                                    experienced coaches</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-3">
+                            <div class="join-benefit-icon">🤝</div>
+                            <div>
+                                <div class="join-benefit-title">Inclusive Community</div>
+                                <div class="join-benefit-desc">A welcoming club for all ages, backgrounds, and levels of
+                                    experience</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-4">
+                            <div class="join-benefit-icon">📍</div>
+                            <div>
+                                <div class="join-benefit-title">Victoria Park, Belfast</div>
+                                <div class="join-benefit-desc">Based at one of Belfast's finest cricket grounds — BT4
+                                    1LS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card reveal reveal-delay-2">
+                    <div class="form-title">Register Your Interest</div>
+                    <div class="form-subtitle">Get in touch and we'll reach out within 48 hours.</div>
+                    <form action="mailto:archescricketclub@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" placeholder="Smith" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" placeholder="+44 7xxx xxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Playing Role</label>
+                            <select class="form-select">
+                                <option value="">Select your role...</option>
+                                <option>Batsman</option>
+                                <option>Bowler</option>
+                                <option>All-Rounder</option>
+                                <option>Wicket Keeper</option>
+                                <option>New To Cricket</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Experience Level</label>
+                            <select class="form-select">
+                                <option value="">Select experience...</option>
+                                <option>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                                <option>Professional</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width:100%;justify-content:center;margin-top:0.5rem;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Registration
+                        </button>
+                    </form>
+                    <p style="text-align:center;font-size:0.75rem;color:var(--muted);margin-top:1rem;">
+                        Or email us directly: <a href="mailto:archescricketclub@gmail.com"
+                            style="color:var(--amber);">archescricketclub@gmail.com</a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    <!-- ─── FOOTER ─── -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand-logo">
+                            <img src="logo.png" alt="Arches CC Logo">
+                            <div>
+                                <div class="footer-brand-name">Arches Cricket Club</div>
+                                <div class="footer-brand-sub">Belfast · Est. 2024</div>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Northern Ireland's cricket club since 2024/25. Excellence in play.
+                            Strength in community. Passion, Performance, Pride.</p>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/archescricketclub/" target="_blank"
+                                class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw=="
+                                target="_blank" class="social-btn" title="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" target="_blank"
+                                class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" target="_blank"
+                                class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
 
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Arches Cricket Club</h3>
-                <p>Northern Ireland's Cricket Club since 2024/25.</p>
-                <p>Excellence in play. Strength in community.</p>
+                    <div>
+                        <div class="footer-col-title">Quick Links</div>
+                        <div class="footer-links">
+                            <a href="fixtures.html">Fixtures 2026</a>
+                            <a href="results.html">Results</a>
+                            <a href="players.html">Our Squad</a>
+                            <a href="gallery.html">Gallery</a>
+                            <a href="sponsors.html">Sponsors</a>
+                        </div>
+                    </div>
 
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/archescricketclub/" class="social-link linkedin"
-                        target="_blank">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw=="
-                        class="social-link instagram" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" class="social-link facebook"
-                        target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" class="social-link youtube"
-                        target="_blank">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    <div>
+                        <div class="footer-col-title">Club</div>
+                        <div class="footer-links">
+                            <a href="join.html">Join The Club</a>
+                            <a href="contact.html">Contact Us</a>
+                            <a href="#">About Arches CC</a>
+                            <a href="#">Code of Conduct</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="footer-col-title">Contact</div>
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-envelope footer-contact-icon"></i>
+                            <a href="mailto:archescricketclub@gmail.com">archescricketclub@gmail.com</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+                            <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">Victoria Park, Belfast
+                                BT4 1LS, Northern Ireland</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                            <span>WhatsApp Group</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="fixtures.html">Match Fixtures</a>
-                <a href="team.html">Our Squad</a>
-                <a href="results.html">Recent Results</a>
-                <a href="registration.html">Join the Team</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope contact-icon"></i>
-                    <a href="mailto:archescricketclub@gmail.com">
-                        archescricketclub@gmail.com
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot contact-icon"></i>
-                    <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">
-                        Victoria Park, Belfast BT4 1LS, Northern Ireland
-                    </a>
+                <div class="footer-bottom">
+                    <div class="footer-copy">
+                        © 2026 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland · All rights
+                        reserved.
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- IMPORTANT: footer-bottom is OUTSIDE footer-content -->
-        <div class="footer-bottom">
-            © 2024 Arches Cricket Club
-        </div>
-
     </footer>
 
-    <script src="mobile-nav.js"></script>
+    <!-- ──────────────────────────────────────── -->
+    <!-- SCRIPTS (GSAP only — no Three.js) -->
+    <!-- ──────────────────────────────────────── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        /* ─────────────────────────────
+           MOBILE NAV
+        ───────────────────────────── */
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const hamburger = document.getElementById('hamburger');
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+        }
+
+        /* Close mobile nav on outside click */
+        document.addEventListener('click', (e) => {
+            const nav = document.getElementById('mobileNav');
+            const hamburger = document.getElementById('hamburger');
+            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        /* ─────────────────────────────
+           STICKY NAV
+        ───────────────────────────── */
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        /* ─────────────────────────────
+           LOGO MOUSE PARALLAX
+        ───────────────────────────── */
+        const heroLogo = document.getElementById('heroLogo');
+        if (heroLogo && window.matchMedia('(hover:hover)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                const rx = ((e.clientY / window.innerHeight) - 0.5) * 18;
+                const ry = ((e.clientX / window.innerWidth) - 0.5) * 18;
+                heroLogo.style.transform = `translateY(var(--ty, 0px)) rotate3d(${-rx},${ry},0,1deg)`;
+            }, { passive: true });
+        }
+
+        /* ─────────────────────────────
+           GSAP HERO ANIMATIONS
+        ───────────────────────────── */
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from('.hero-eyebrow', { opacity: 0, y: 30, duration: 0.8, delay: 0.3 });
+            gsap.from('.hero-title .line1', { opacity: 0, y: 70, duration: 1, delay: 0.5 });
+            gsap.from('.hero-title .line2', { opacity: 0, y: 70, duration: 1, delay: 0.7 });
+            gsap.from('.hero-tagline', { opacity: 0, y: 30, duration: 0.8, delay: 0.9 });
+            gsap.from('.hero-buttons', { opacity: 0, y: 30, duration: 0.8, delay: 1.1 });
+            gsap.from('.hero-stats > div', { opacity: 0, y: 20, duration: 0.6, delay: 1.3, stagger: 0.15 });
+            gsap.from('.logo-hero-wrap', { opacity: 0, scale: 0.8, duration: 1.2, delay: 0.6, ease: 'back.out(1.3)' });
+            gsap.from('.hero-floating-card', { opacity: 0, scale: 0.7, duration: 1, delay: 1.4, stagger: 0.25, ease: 'back.out(1.7)' });
+        }
+
+        /* ─────────────────────────────
+           HERO HERO-STAT COUNTER (fast on load)
+        ───────────────────────────── */
+        function animateCount(el, target, duration) {
+            let start = 0;
+            const step = target / (duration / 16);
+            const timer = setInterval(() => {
+                start = Math.min(start + step, target);
+                el.textContent = Math.floor(start);
+                if (start >= target) clearInterval(timer);
+            }, 16);
+        }
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.hero-stat-number').forEach(el => {
+                animateCount(el, parseInt(el.dataset.target), 1200);
+            });
+        });
+
+        /* ─────────────────────────────
+           SCROLL REVEAL
+        ───────────────────────────── */
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        /* ─────────────────────────────
+           SECTION STAT COUNTERS
+        ───────────────────────────── */
+        const countObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                countObs.unobserve(e.target);
+                const target = parseInt(e.target.dataset.target);
+                animateCount(e.target, target, 1500);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.count').forEach(el => countObs.observe(el));
+
+        /* ─────────────────────────────
+           GSAP SCROLL PARALLAX (desktop only)
+        ───────────────────────────── */
+        if (typeof ScrollTrigger !== 'undefined' && window.matchMedia('(min-width:768px)').matches) {
+            gsap.to('.logo-hero-wrap', {
+                scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 },
+                y: 60, opacity: 0.5,
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join The Club | Arches Cricket Club</title>
+    <meta name="description"
+        content="Join Arches Cricket Club — Belfast's premier cricket club. Register your interest today.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="nav-logo">
+                    <img src="logo.png" alt="Arches CC Logo">
+                    <div class="nav-logo-text">
+                        <div class="club-name">Arches CC</div>
+                        <div class="club-sub">Belfast · Est. 2024</div>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fixtures.html">Fixtures</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta"><a href="join.html" class="btn btn-primary"
+                        style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join The Club</a></div>
+                <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+                    <span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="toggleMobileNav()">Home</a><a href="fixtures.html"
+            onclick="toggleMobileNav()">Fixtures</a>
+        <a href="results.html" onclick="toggleMobileNav()">Results</a><a href="players.html"
+            onclick="toggleMobileNav()">Players</a>
+        <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a><a href="sponsors.html"
+            onclick="toggleMobileNav()">Sponsors</a>
+        <a href="contact.html" onclick="toggleMobileNav()">Contact</a><a href="join.html" class="btn btn-primary"
+            onclick="toggleMobileNav()">Join The Club</a>
+    </div>
+
+    <!-- HERO - bigger for join page -->
+    <div class="page-hero" style="padding-bottom:0;">
+        <div class="page-hero-content">
+            <p class="badge"
+                style="margin:0 auto 1rem;background:rgba(250,204,21,0.12);color:var(--gold);border-color:rgba(250,204,21,0.3);">
+                🏏 New Members Welcome</p>
+            <h1 class="page-hero-title">Join <span class="text-amber">Arches CC</span></h1>
+            <p class="page-hero-sub">Become part of Belfast's fastest-growing cricket family. All skill levels welcome.
+            </p>
+        </div>
+    </div>
+
+    <section class="section join-section" style="padding-top:2rem;">
+        <div class="container">
+            <div class="join-inner">
+                <div>
+                    <p class="section-label">🏏 Why Arches CC?</p>
+                    <h2 class="section-title reveal">Everything You<br>Need To <span class="text-amber">Succeed</span>
+                    </h2>
+                    <p class="section-sub text-muted reveal reveal-delay-1">Whether you're playing your first match or
+                        returning to cricket after years away — Arches CC is built for you.</p>
+
+                    <div class="join-benefits" style="margin-top:2rem;">
+                        <div class="join-benefit reveal reveal-delay-1">
+                            <div class="join-benefit-icon">🏏</div>
+                            <div>
+                                <div class="join-benefit-title">Competitive League Cricket</div>
+                                <div class="join-benefit-desc">Play in the Northern Ireland Cricket League — both Team 1
+                                    (Senior) and Team 2 (Junior)</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-2">
+                            <div class="join-benefit-icon">🏋️</div>
+                            <div>
+                                <div class="join-benefit-title">Professional Coaching</div>
+                                <div class="join-benefit-desc">Weekly training sessions with experienced coaches at
+                                    Victoria Park</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-3">
+                            <div class="join-benefit-icon">🌍</div>
+                            <div>
+                                <div class="join-benefit-title">Diverse Community</div>
+                                <div class="join-benefit-desc">A multicultural, welcoming club celebrating cricket's
+                                    beautiful diversity</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-4">
+                            <div class="join-benefit-icon">🤝</div>
+                            <div>
+                                <div class="join-benefit-title">All Levels Welcome</div>
+                                <div class="join-benefit-desc">From absolute beginners to experienced players — we have
+                                    a spot for you</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal reveal-delay-5">
+                            <div class="join-benefit-icon">📍</div>
+                            <div>
+                                <div class="join-benefit-title">Prime Location</div>
+                                <div class="join-benefit-desc">Victoria Park, Belfast BT4 1LS — easily accessible from
+                                    all of Belfast</div>
+                            </div>
+                        </div>
+                        <div class="join-benefit reveal" style="transition-delay:0.6s;">
+                            <div class="join-benefit-icon">🎯</div>
+                            <div>
+                                <div class="join-benefit-title">Kit & Equipment</div>
+                                <div class="join-benefit-desc">Club kit available. Guidance on personal equipment for
+                                    new players</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="glass-card reveal" style="padding:1.75rem;margin-top:2.5rem;">
+                        <div style="font-size:1.5rem;margin-bottom:0.75rem;">⭐⭐⭐⭐⭐</div>
+                        <p
+                            style="font-style:italic;color:var(--muted);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">
+                            "Joining Arches CC was one of the best decisions I've made since moving to Belfast. The team
+                            is incredibly welcoming and the standard of cricket is great!"</p>
+                        <div style="font-weight:600;color:var(--text);">Team Member</div>
+                        <div style="font-size:0.75rem;color:var(--amber);">Joined 2024 · Team 1</div>
+                    </div>
+                </div>
+
+                <div class="join-form-card reveal reveal-delay-3">
+                    <div class="form-title">Register Your Interest</div>
+                    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1.75rem;">Fill in the form below and
+                        we'll get back to you within 48 hours about joining the squad for the 2026 season.</p>
+
+                    <form id="joinForm" onsubmit="handleJoin(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-input" placeholder="Smith" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" placeholder="+44 7xxx xxxxxx">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Playing Role *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select role...</option>
+                                    <option>Batsman</option>
+                                    <option>Bowler</option>
+                                    <option>All-Rounder</option>
+                                    <option>Wicket Keeper</option>
+                                    <option>New To Cricket</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Experience *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select level...</option>
+                                    <option>Beginner</option>
+                                    <option>Intermediate</option>
+                                    <option>Advanced</option>
+                                    <option>Professional</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Team</label>
+                            <select class="form-select">
+                                <option value="">No preference</option>
+                                <option>Team 1 – Senior League</option>
+                                <option>Team 2 – Junior League</option>
+                                <option>Flexible</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Anything else you'd like us to know?</label>
+                            <textarea class="form-textarea" placeholder="Previous club, availability, questions..."
+                                rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Registration
+                        </button>
+                    </form>
+
+                    <div id="joinSuccess" style="display:none;text-align:center;padding:2rem;">
+                        <div style="font-size:3rem;margin-bottom:1rem;">🎉</div>
+                        <h3 style="font-size:1.5rem;margin-bottom:0.75rem;">Registration Received!</h3>
+                        <p style="color:var(--muted);">Thanks for your interest in Arches CC. We'll be in touch within
+                            48 hours.</p>
+                    </div>
+
+                    <div style="border-top:1px solid var(--border);margin-top:1.5rem;padding-top:1.25rem;">
+                        <p style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;text-align:center;">Or get
+                            in touch directly:</p>
+                        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+                            <a href="mailto:archescricketclub@gmail.com" class="btn btn-ghost"
+                                style="font-size:0.78rem;padding:0.5rem 1rem;">
+                                <i class="fa-solid fa-envelope"></i> Email Us
+                            </a>
+                            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
+                                style="font-size:0.78rem;padding:0.5rem 1rem;">
+                                <i class="fa-brands fa-instagram"></i> Instagram DM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner" style="padding-top:3rem;">
+                <div class="footer-bottom">
+                    <div class="footer-copy">© 2026 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern
+                        Ireland</div>
+                    <div class="footer-legal"><a href="index.html">Home</a><a href="contact.html">Contact</a><a
+                            href="join.html">Join</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileNav() { const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger'); n.classList.toggle('open'); h.classList.toggle('open'); document.body.style.overflow = n.classList.contains('open') ? 'hidden' : ''; }
+        window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+        document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el));
+        function handleJoin(e) {
+            e.preventDefault();
+            document.getElementById('joinForm').style.display = 'none';
+            document.getElementById('joinSuccess').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

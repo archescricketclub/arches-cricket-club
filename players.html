@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players | Arches Cricket Club</title>
+    <meta name="description" content="Arches Cricket Club squad — real 2025 season stats from NCU.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team-tabs {
+            display: flex;
+            gap: .5rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            margin-bottom: 2.5rem;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .team-tabs::-webkit-scrollbar {
+            height: 3px
+        }
+
+        .team-tabs::-webkit-scrollbar-thumb {
+            background: var(--amber);
+            border-radius: 2px
+        }
+
+        .team-tab {
+            flex-shrink: 0;
+            padding: .6rem 1.6rem;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            background: var(--panel);
+            color: var(--muted);
+            font-size: .82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .25s;
+            font-family: 'Inter', sans-serif
+        }
+
+        .team-tab.active {
+            background: linear-gradient(135deg, var(--amber), var(--fire));
+            color: #030712;
+            border-color: transparent;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, .35)
+        }
+
+        .team-tab:hover:not(.active) {
+            border-color: var(--border-accent);
+            color: var(--text)
+        }
+
+        .cat-block {
+            margin-bottom: 3rem
+        }
+
+        .cat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem
+        }
+
+        .cat-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: .6rem
+        }
+
+        .cat-title span {
+            font-size: .65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif
+        }
+
+        .cat-bat span {
+            color: var(--gold);
+            background: rgba(250, 204, 21, .1);
+            border: 1px solid rgba(250, 204, 21, .25)
+        }
+
+        .cat-bowl span {
+            color: var(--fire);
+            background: rgba(249, 115, 22, .1);
+            border: 1px solid rgba(249, 115, 22, .25)
+        }
+
+        .cat-ar span {
+            color: var(--amber);
+            background: rgba(245, 158, 11, .1);
+            border: 1px solid rgba(245, 158, 11, .25)
+        }
+
+        .view-all-btn {
+            background: none;
+            border: 1px solid var(--border-accent);
+            color: var(--amber);
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: .45rem 1.1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: .25s;
+            display: flex;
+            align-items: center;
+            gap: .4rem
+        }
+
+        .view-all-btn:hover {
+            background: var(--amber-soft)
+        }
+
+        .squad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.1rem
+        }
+
+        .pc {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform .3s, border-color .3s, box-shadow .3s;
+            position: relative
+        }
+
+        .pc:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-6px);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .5), 0 0 35px rgba(245, 158, 11, .15)
+        }
+
+        .pc.hidden {
+            display: none
+        }
+
+        .pc-top {
+            height: 100px;
+            background: linear-gradient(145deg, var(--panel2), var(--surface));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative
+        }
+
+        .pc-jersey {
+            position: absolute;
+            top: .65rem;
+            left: .8rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: .62rem;
+            font-weight: 700;
+            color: var(--amber);
+            background: rgba(245, 158, 11, .1);
+            border: 1px solid rgba(245, 158, 11, .2);
+            padding: 2px 8px;
+            border-radius: 20px
+        }
+
+        .pc-cap {
+            position: absolute;
+            top: .65rem;
+            right: .8rem;
+            font-size: .58rem;
+            color: var(--muted);
+            font-weight: 700;
+            letter-spacing: .8px
+        }
+
+        .pc-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            opacity: .85
+        }
+
+        .pc-top-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--amber), var(--fire));
+            color: #030712;
+            font-size: .52rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-bottom-left-radius: 10px
+        }
+
+        .pc-body {
+            padding: .9rem 1rem
+        }
+
+        .pc-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1;
+            margin-bottom: .35rem
+        }
+
+        .pc-meta {
+            font-size: .62rem;
+            color: var(--muted);
+            font-weight: 600;
+            letter-spacing: .8px;
+            text-transform: uppercase;
+            margin-bottom: .8rem
+        }
+
+        .pc-stats {
+            display: flex;
+            border-top: 1px solid var(--border)
+        }
+
+        .pcs {
+            flex: 1;
+            padding: .6rem .4rem;
+            text-align: center;
+            border-right: 1px solid var(--border)
+        }
+
+        .pcs:last-child {
+            border-right: none
+        }
+
+        .pcs-n {
+            font-family: 'Orbitron', sans-serif;
+            font-size: .88rem;
+            font-weight: 700;
+            color: var(--text)
+        }
+
+        .pcs-l {
+            font-size: .5rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .7px;
+            margin-top: 2px
+        }
+
+        .pc-nostats {
+            text-align: center;
+            padding: .75rem;
+            color: var(--muted2);
+            font-size: .75rem;
+            font-style: italic;
+            border-top: 1px solid var(--border)
+        }
+
+        .team-panel {
+            display: none
+        }
+
+        .team-panel.active {
+            display: block
+        }
+
+        @media(max-width:500px) {
+            .squad-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: .65rem
+            }
+
+            .pc-name {
+                font-size: 1rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="nav-logo">
+                    <img src="logo.png" alt="Arches CC Logo">
+                    <div class="nav-logo-text">
+                        <div class="club-name">Arches CC</div>
+                        <div class="club-sub">Belfast · Est. 2024</div>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fixtures.html">Fixtures</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="players.html" class="active">Players</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta"><a href="join.html" class="btn btn-primary"
+                        style="padding:.65rem 1.5rem;font-size:.8rem;">Join The Club</a></div>
+                <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" onclick="toggleMobileNav()">Home</a>
+        <div class="mn-divider"></div>
+        <a href="fixtures.html" onclick="toggleMobileNav()">Fixtures</a>
+        <a href="results.html" onclick="toggleMobileNav()">Results</a>
+        <a href="players.html" onclick="toggleMobileNav()">Players</a>
+        <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a>
+        <a href="sponsors.html" onclick="toggleMobileNav()">Sponsors</a>
+        <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+        <div class="mn-divider"></div>
+        <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()"><i class="fa-solid fa-user-plus"></i>
+            Join The Club</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="container page-hero-content">
+            <div class="hero-eyebrow" style="display:inline-flex;margin-bottom:1rem;"><i class="fa-solid fa-circle"
+                    style="font-size:.4rem;"></i> 2025 Season</div>
+            <h1 class="page-hero-title">Our Squad</h1>
+            <p class="page-hero-sub">Stats from the Northern Ireland Cricket Union · Season 2025</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="team-tabs" id="teamTabs">
+                <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
+                <button class="team-tab" onclick="switchTeam('t2',this)">Team 2 · Junior League</button>
+                <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
+            </div>
+
+            <!-- ══ TEAM 1 ══ -->
+            <div class="team-panel active" id="panel-t1">
+
+                <div class="cat-block cat-bat">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
+                                style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('t1-bat',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="t1-bat"></div>
+                </div>
+
+                <div class="cat-block cat-bowl">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-wind"
+                                style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('t1-bowl',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="t1-bowl"></div>
+                </div>
+
+                <div class="cat-block cat-ar">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-star"
+                                style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
+                        </div>
+                        <button class="view-all-btn" onclick="toggleAll('t1-ar',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="t1-ar"></div>
+                </div>
+            </div>
+
+            <!-- ══ TEAM 2 ══ -->
+            <div class="team-panel" id="panel-t2">
+
+                <div class="cat-block cat-bat">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
+                                style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('t2-bat',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="t2-bat"></div>
+                </div>
+
+                <div class="cat-block cat-bowl">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-wind"
+                                style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('t2-bowl',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="t2-bowl"></div>
+                </div>
+
+                <div class="cat-block cat-ar">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-star"
+                                style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
+                        </div>
+                        <button class="view-all-btn" onclick="toggleAll('t2-ar',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="t2-ar"></div>
+                </div>
+            </div>
+
+            <!-- ══ MIDWEEK ══ -->
+            <div class="team-panel" id="panel-mw">
+
+                <div class="cat-block cat-bat">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
+                                style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('mw-bat',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="mw-bat"></div>
+                </div>
+
+                <div class="cat-block cat-bowl">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-wind"
+                                style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('mw-bowl',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="mw-bowl"></div>
+                </div>
+
+                <div class="cat-block cat-ar">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-star"
+                                style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
+                        </div>
+                        <button class="view-all-btn" onclick="toggleAll('mw-ar',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="mw-ar"></div>
+                </div>
+            </div>
+
+            <div
+                style="margin-top:3rem;padding:2rem;background:var(--panel2);border:1px solid var(--border);border-radius:14px;text-align:center;">
+                <p class="section-label" style="justify-content:center;margin-bottom:.6rem;">🏏 Join The Club</p>
+                <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;margin-bottom:.6rem;">Want To Be On This
+                    Page?</h3>
+                <p style="color:var(--muted);margin-bottom:1.2rem;font-size:.9rem;">All skill levels welcome — play for
+                    Team 1, Team 2, or Midweek.</p>
+                <a href="join.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Register Your
+                    Interest</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand-logo"><img src="logo.png" alt="Arches CC Logo">
+                            <div>
+                                <div class="footer-brand-name">Arches Cricket Club</div>
+                                <div class="footer-brand-sub">Belfast · Est. 2024</div>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Northern Ireland cricket since 2024. Passion, Performance, Pride.</p>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/archescricketclub/" target="_blank"
+                                class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw=="
+                                target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" target="_blank"
+                                class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" target="_blank"
+                                class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Quick Links</div>
+                        <div class="footer-links"><a href="fixtures.html">Fixtures 2026</a><a
+                                href="results.html">Results</a><a href="players.html">Our Squad</a><a
+                                href="gallery.html">Gallery</a><a href="sponsors.html">Sponsors</a></div>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Club</div>
+                        <div class="footer-links"><a href="join.html">Join The Club</a><a href="contact.html">Contact
+                                Us</a></div>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Contact</div>
+                        <div class="footer-contact-item"><i class="fa-solid fa-envelope footer-contact-icon"></i><a
+                                href="mailto:archescricketclub@gmail.com">archescricketclub@gmail.com</a></div>
+                        <div class="footer-contact-item"><i class="fa-solid fa-location-dot footer-contact-icon"></i><a
+                                href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">Victoria Park, Belfast
+                                BT4 1LS</a></div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-copy">© 2026 <a href="index.html">Arches Cricket Club</a> · All rights reserved.
+                    </div>
+                    <div class="footer-legal"><a href="#">Privacy</a><a href="contact.html">Contact</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ─── DATA ─────────────────────────────────────────── */
+        // Each player: {name, jersey, cap, badge(optional), stats:[{n,l}], noStats(optional)}
+        // Sorted in display order (top performers first)
+
+        const DATA = {
+            't1-bat': [
+                { name: 'Asad Murtuza', jersey: '#22', cap: 'AM04', badge: 'Top Scorer T1', stats: [{ n: '236', l: 'Runs' }, { n: '68', l: 'High Score' }, { n: '23.60', l: 'Average' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '157', l: 'Runs' }, { n: '53', l: 'High Score' }, { n: '15.70', l: 'Average' }] },
+                { name: 'Vinay Tummala', jersey: '#10', cap: 'VT10', stats: [{ n: '182', l: 'Runs' }, { n: '47', l: 'High Score' }, { n: '15.17', l: 'Average' }] },
+                { name: 'Ali Rizwan', jersey: '#16', cap: 'AR69', stats: [{ n: '103', l: 'Runs' }, { n: '36*', l: 'High Score' }, { n: '17.17', l: 'Average' }] },
+                { name: 'Tulasi G. Thatavarthi', jersey: '#7', cap: 'TT07', stats: [{ n: '84', l: 'Runs' }, { n: '37', l: 'High Score' }, { n: '9.33', l: 'Average' }] },
+                { name: 'Arush Nimmagadda', jersey: '#72', cap: 'AN72', stats: [{ n: '25', l: 'Runs' }, { n: '11*', l: 'High Score' }, { n: '8', l: 'Matches' }] },
+                { name: 'Veera SR Nimmakayala', jersey: '#88', cap: 'VN88', stats: [{ n: '23', l: 'Runs' }, { n: '23', l: 'High Score' }, { n: '23.00', l: 'Average' }] },
+                { name: 'Vonga Vishnu', jersey: '#15', cap: 'VV15' },
+                { name: 'Vijay Varma', jersey: '#17', cap: 'VV17' },
+                { name: 'Wasim SM', jersey: '#1', cap: 'WSM1' },
+                { name: 'Anvesh Choudary', jersey: '#2', cap: 'AM28' },
+                { name: 'Hanu', jersey: '#4', cap: 'HK04' },
+            ],
+            't1-bowl': [
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', badge: '5-22 · 20 Wkts', stats: [{ n: '65.3', l: 'Overs' }, { n: '20', l: 'Wickets' }, { n: '5-22', l: 'Best Fig' }] },
+                { name: 'Veerendra B. Nagari', jersey: '#44', cap: 'VB44', badge: '5-17', stats: [{ n: '54.0', l: 'Overs' }, { n: '13', l: 'Wickets' }, { n: '5-17', l: 'Best Fig' }] },
+                { name: 'Venkateswarrao Jyothi', jersey: '#9', cap: 'VJ09', stats: [{ n: '50.5', l: 'Overs' }, { n: '13', l: 'Wickets' }, { n: '3-26', l: 'Best Fig' }] },
+                { name: 'Surya Pavan T. Tummala', jersey: '#14', cap: 'PA14', stats: [{ n: '51.3', l: 'Overs' }, { n: '9', l: 'Wickets' }, { n: '3-32', l: 'Best Fig' }] },
+                { name: 'Vinay Tummala', jersey: '#10', cap: 'VT10', stats: [{ n: '23.5', l: 'Overs' }, { n: '7', l: 'Wickets' }, { n: '2-46', l: 'Best Fig' }] },
+                { name: 'Deepak Sai', jersey: '#50', cap: 'AD39', stats: [{ n: '34.0', l: 'Overs' }, { n: '7', l: 'Wickets' }, { n: '2-23', l: 'Best Fig' }] },
+                { name: 'Veera SR Nimmakayala', jersey: '#88', cap: 'VN88', stats: [{ n: '7.0', l: 'Overs' }, { n: '2', l: 'Wickets' }, { n: '2-46', l: 'Best Fig' }] },
+            ],
+            't1-ar': [
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '129', l: 'Runs' }, { n: '5', l: 'Wickets' }, { n: '2-22', l: 'Best Fig' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '157', l: 'Runs' }, { n: '5', l: 'Wickets' }, { n: '2-14', l: 'Best Fig' }] },
+                { name: 'Vinay Tummala', jersey: '#10', cap: 'VT10', stats: [{ n: '182', l: 'Runs' }, { n: '7', l: 'Wickets' }, { n: '2-46', l: 'Best Fig' }] },
+                { name: 'Deepak Sai', jersey: '#50', cap: 'AD39', stats: [{ n: '88', l: 'Runs' }, { n: '7', l: 'Wickets' }, { n: '2-23', l: 'Best Fig' }] },
+                { name: 'Surya Pavan T. Tummala', jersey: '#14', cap: 'PA14', stats: [{ n: '71', l: 'Runs' }, { n: '9', l: 'Wickets' }, { n: '3-32', l: 'Best Fig' }] },
+            ],
+
+            't2-bat': [
+                { name: 'Ali Rizwan', jersey: '#16', cap: 'AR69', badge: '131 · 2×100s', stats: [{ n: '365', l: 'Runs' }, { n: '131', l: 'High Score' }, { n: '91.25', l: 'Average' }] },
+                { name: 'Srini Nadakuditi', jersey: '#3', cap: 'SRI3', stats: [{ n: '258', l: 'Runs' }, { n: '54', l: 'High Score' }, { n: '18.43', l: 'Average' }] },
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '202', l: 'Runs' }, { n: '33', l: 'High Score' }, { n: '33.67', l: 'Average' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '183', l: 'Runs' }, { n: '49*', l: 'High Score' }, { n: '36.60', l: 'Average' }] },
+                { name: 'Rohit Singh', jersey: '#98', cap: 'RS98', badge: '114 · Century', stats: [{ n: '128', l: 'Runs' }, { n: '114', l: 'High Score' }, { n: '42.67', l: 'Average' }] },
+                { name: 'Chandra Obula R. B', jersey: '#45', cap: 'CH45', stats: [{ n: '118', l: 'Runs' }, { n: '29', l: 'High Score' }, { n: '16.86', l: 'Average' }] },
+                { name: 'Sarmad', jersey: '#56', cap: 'SB56', stats: [{ n: '73', l: 'Runs' }, { n: '27', l: 'High Score' }, { n: '18.25', l: 'Average' }] },
+                { name: 'Veerendra B. Nagari', jersey: '#44', cap: 'VB44', stats: [{ n: '67', l: 'Runs' }, { n: '37', l: 'High Score' }, { n: '22.33', l: 'Average' }] },
+                { name: 'Charan Reddy Datla', jersey: '#99', cap: 'CR99', stats: [{ n: '59', l: 'Runs' }, { n: '22', l: 'High Score' }, { n: '11.80', l: 'Average' }] },
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', stats: [{ n: '90', l: 'Runs' }, { n: '37', l: 'High Score' }, { n: '11.25', l: 'Average' }] },
+                { name: 'Kiran Maheswaram', jersey: '#75', cap: 'KM75', stats: [{ n: '44', l: 'Runs' }, { n: '16*', l: 'High Score' }, { n: '6.29', l: 'Average' }] },
+                { name: 'Veera SR Nimmakayala', jersey: '#88', cap: 'VN88', stats: [{ n: '37', l: 'Runs' }, { n: '37', l: 'High Score' }, { n: '37.00', l: 'Average' }] },
+            ],
+            't2-bowl': [
+                { name: 'Chandra Obula R. B', jersey: '#45', cap: 'CH45', badge: 'Top Wkt T2', stats: [{ n: '47.4', l: 'Overs' }, { n: '14', l: 'Wickets' }, { n: '3-20', l: 'Best Fig' }] },
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '38.0', l: 'Overs' }, { n: '12', l: 'Wickets' }, { n: '4-30', l: 'Best Fig' }] },
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', stats: [{ n: '58.2', l: 'Overs' }, { n: '10', l: 'Wickets' }, { n: '2-24', l: 'Best Fig' }] },
+                { name: 'Harsha', jersey: '#8', cap: 'VK18', stats: [{ n: '36.0', l: 'Overs' }, { n: '9', l: 'Wickets' }, { n: '3-15', l: 'Best Fig' }] },
+                { name: 'Kiran Maheswaram', jersey: '#75', cap: 'KM75', stats: [{ n: '23.4', l: 'Overs' }, { n: '7', l: 'Wickets' }, { n: '2-11', l: 'Best Fig' }] },
+                { name: 'Anshuman', jersey: '#181', cap: 'ASB18', stats: [{ n: '13.0', l: 'Overs' }, { n: '5', l: 'Wickets' }, { n: '3-35', l: 'Best Fig' }] },
+                { name: 'Yonggicho Paul', jersey: '#25', cap: 'PMY25', badge: '5-31 Five-fer', stats: [{ n: '12.0', l: 'Overs' }, { n: '6', l: 'Wickets' }, { n: '5-31', l: 'Best Fig' }] },
+                { name: 'Veerendra B. Nagari', jersey: '#44', cap: 'VB44', stats: [{ n: '16.0', l: 'Overs' }, { n: '3', l: 'Wickets' }, { n: '1-8', l: 'Best Fig' }] },
+                { name: 'Veera SR Nimmakayala', jersey: '#88', cap: 'VN88', stats: [{ n: '11.0', l: 'Overs' }, { n: '3', l: 'Wickets' }, { n: '2-25', l: 'Best Fig' }] },
+                { name: 'Madhu Yellanur', jersey: '#5', cap: 'MYo5', stats: [{ n: '2.1', l: 'Overs' }, { n: '3', l: 'Wickets' }, { n: '3-14', l: 'Best Fig' }] },
+                { name: 'Raja Mouli Yadavalli', jersey: '#18', cap: 'RY18', stats: [{ n: '5.0', l: 'Overs' }, { n: '1', l: 'Wickets' }, { n: '1-20', l: 'Best Fig' }] },
+            ],
+            't2-ar': [
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '202', l: 'Runs' }, { n: '12', l: 'Wickets' }, { n: '4-30', l: 'Best Fig' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '183', l: 'Runs' }, { n: '4', l: 'Wickets' }, { n: '2-14', l: 'Best Fig' }] },
+                { name: 'Chandra Obula R. B', jersey: '#45', cap: 'CH45', stats: [{ n: '118', l: 'Runs' }, { n: '14', l: 'Wickets' }, { n: '3-20', l: 'Best Fig' }] },
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', stats: [{ n: '90', l: 'Runs' }, { n: '10', l: 'Wickets' }, { n: '2-24', l: 'Best Fig' }] },
+                { name: 'Veerendra B. Nagari', jeremy: '#44', cap: 'VB44', stats: [{ n: '67', l: 'Runs' }, { n: '3', l: 'Wickets' }, { n: '1-8', l: 'Best Fig' }] },
+            ],
+
+            'mw-bat': [
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', badge: 'Top Scorer MW', stats: [{ n: '178', l: 'Runs' }, { n: '35*', l: 'High Score' }, { n: '35.60', l: 'Average' }] },
+                { name: 'Ali Rizwan', jersey: '#16', cap: 'AR69', stats: [{ n: '161', l: 'Runs' }, { n: '35*', l: 'High Score' }, { n: '32.20', l: 'Average' }] },
+                { name: 'Chandra Obula R. B', jersey: '#45', cap: 'CH45', stats: [{ n: '113', l: 'Runs' }, { n: '31*', l: 'High Score' }, { n: '16.14', l: 'Average' }] },
+                { name: 'Srini Nadakuditi', jersey: '#3', cap: 'SRI3', stats: [{ n: '86', l: 'Runs' }, { n: '35*', l: 'High Score' }, { n: '21.50', l: 'Average' }] },
+                { name: 'Sarmad', jersey: '#56', cap: 'SB56', stats: [{ n: '82', l: 'Runs' }, { n: '32*', l: 'High Score' }, { n: '27.33', l: 'Average' }] },
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '80', l: 'Runs' }, { n: '29', l: 'High Score' }, { n: '13.33', l: 'Average' }] },
+                { name: 'Charan Reddy Datla', jersey: '#99', cap: 'CR99', stats: [{ n: '73', l: 'Runs' }, { n: '22*', l: 'High Score' }, { n: '18.25', l: 'Average' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '68', l: 'Runs' }, { n: '28', l: 'High Score' }, { n: '7.56', l: 'Average' }] },
+                { name: 'Abhiram Donepudi', jersey: '#48', cap: 'AB48', stats: [{ n: '59', l: 'Runs' }, { n: '27', l: 'High Score' }, { n: '29.50', l: 'Average' }] },
+                { name: 'Anshuman', jersey: '#181', cap: 'ASB18', stats: [{ n: '49', l: 'Runs' }, { n: '30*', l: 'High Score' }, { n: '16.33', l: 'Average' }] },
+                { name: 'Kiran Maheswaram', jersey: '#75', cap: 'KM75', stats: [{ n: '48', l: 'Runs' }, { n: '31*', l: 'High Score' }, { n: '16.00', l: 'Average' }] },
+                { name: 'Rohit Singh', jersey: '#98', cap: 'RS98', stats: [{ n: '28', l: 'Runs' }, { n: '16', l: 'High Score' }, { n: '14.00', l: 'Average' }] },
+                { name: 'Banu Chand Kandukuri', jersey: '#63', cap: 'KBC63', stats: [{ n: '2', l: 'Runs' }, { n: '2', l: 'Matches' }, { n: '—', l: 'Wickets' }] },
+            ],
+            'mw-bowl': [
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', badge: '4-15 · 16 Wkts', stats: [{ n: '37.0', l: 'Overs' }, { n: '16', l: 'Wickets' }, { n: '4-15', l: 'Best Fig' }] },
+                { name: 'Chandra Obula R. B', jersey: '#45', cap: 'CH45', stats: [{ n: '29.0', l: 'Overs' }, { n: '11', l: 'Wickets' }, { n: '2-20', l: 'Best Fig' }] },
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '20.0', l: 'Overs' }, { n: '10', l: 'Wickets' }, { n: '3-26', l: 'Best Fig' }] },
+                { name: 'Harsha', jersey: '#8', cap: 'VK18', stats: [{ n: '28.5', l: 'Overs' }, { n: '9', l: 'Wickets' }, { n: '3-26', l: 'Best Fig' }] },
+                { name: 'Veera SR Nimmakayala', jersey: '#88', cap: 'VN88', stats: [{ n: '14.4', l: 'Overs' }, { n: '4', l: 'Wickets' }, { n: '3-19', l: 'Best Fig' }] },
+                { name: 'Anshuman', jersey: '#181', cap: 'ASB18', stats: [{ n: '15.0', l: 'Overs' }, { n: '4', l: 'Wickets' }, { n: '3-26', l: 'Best Fig' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '8.3', l: 'Overs' }, { n: '2', l: 'Wickets' }, { n: '1-6', l: 'Best Fig' }] },
+                { name: 'Srini Nadakuditi', jersey: '#3', cap: 'SRI3', stats: [{ n: '4.0', l: 'Overs' }, { n: '2', l: 'Wickets' }, { n: '2-21', l: 'Best Fig' }] },
+                { name: 'Raja Mouli Yadavalli', jersey: '#18', cap: 'RY18', stats: [{ n: '2.0', l: 'Overs' }, { n: '2', l: 'Wickets' }, { n: '2-13', l: 'Best Fig' }] },
+                { name: 'Madhu Yellanur', jersey: '#5', cap: 'MYo5', stats: [{ n: '3.0', l: 'Overs' }, { n: '2', l: 'Wickets' }, { n: '2-23', l: 'Best Fig' }] },
+                { name: 'Kiran Maheswaram', jersey: '#75', cap: 'KM75', stats: [{ n: '4.0', l: 'Overs' }, { n: '1', l: 'Wickets' }, { n: '1-6', l: 'Best Fig' }] },
+            ],
+            'mw-ar': [
+                { name: 'Kishan Karneedi', jersey: '#11', cap: 'KK11', stats: [{ n: '178', l: 'Runs' }, { n: '16', l: 'Wickets' }, { n: '4-15', l: 'Best Fig' }] },
+                { name: 'Dushyanth Reddy B', jersey: '#23', cap: 'DB23', stats: [{ n: '80', l: 'Runs' }, { n: '10', l: 'Wickets' }, { n: '3-26', l: 'Best Fig' }] },
+                { name: 'Chandra Obula R. B', jersey: '#45', cap: 'CH45', stats: [{ n: '113', l: 'Runs' }, { n: '11', l: 'Wickets' }, { n: '2-20', l: 'Best Fig' }] },
+                { name: 'Anil Narra', jersey: '#30', cap: 'AN30', stats: [{ n: '68', l: 'Runs' }, { n: '2', l: 'Wickets' }, { n: '1-6', l: 'Best Fig' }] },
+                { name: 'Anshuman', jersey: '#181', cap: 'ASB18', stats: [{ n: '49', l: 'Runs' }, { n: '4', l: 'Wickets' }, { n: '3-26', l: 'Best Fig' }] },
+                { name: 'Sarmad', jersey: '#56', cap: 'SB56', stats: [{ n: '82', l: 'Runs' }, { n: '1', l: 'Wickets' }, { n: '0-8', l: 'Best Fig' }] },
+            ],
+        };
+
+        /* ─── RENDER ─────────────────────────────────────── */
+        function makeCard(p, idx) {
+            const hidden = idx >= 5 ? 'hidden' : '';
+            const badge = p.badge ? `<div class="pc-top-badge">${p.badge}</div>` : '';
+            const body = p.stats && p.stats.length
+                ? `<div class="pc-stats">${p.stats.map(s => `<div class="pcs"><div class="pcs-n">${s.n}</div><div class="pcs-l">${s.l}</div></div>`).join('')}</div>`
+                : `<div class="pc-stats"><div class="pcs" style="flex:1"><div class="pcs-n" style="color:var(--muted)">—</div><div class="pcs-l">No 2025 stats</div></div></div>`;
+            return `<div class="pc ${hidden}">
+    ${badge}
+    <div class="pc-top">
+      <div class="pc-jersey">${p.jersey}</div>
+      <div class="pc-cap">${p.cap}</div>
+      <img src="player-avatar.svg" class="pc-icon" alt="Player">
+    </div>
+    <div class="pc-body">
+      <div class="pc-name">${p.name}</div>
+      <div class="pc-meta">Jersey ${p.jersey} · Cap ${p.cap}</div>
+    </div>
+    ${body}
+  </div>`;
+        }
+
+        Object.keys(DATA).forEach(key => {
+            const el = document.getElementById(key);
+            if (!el) return;
+            el.innerHTML = DATA[key].map((p, i) => makeCard(p, i)).join('');
+            // hide view-all btn if 5 or fewer
+            if (DATA[key].length <= 5) {
+                const btn = el.closest('.cat-block').querySelector('.view-all-btn');
+                if (btn) btn.style.display = 'none';
+            }
+        });
+
+        /* ─── VIEW ALL ───────────────────────────────────── */
+        function toggleAll(gridId, btn) {
+            const hidden = document.querySelectorAll(`#${gridId} .pc.hidden`);
+            const isExpanded = btn.dataset.expanded === '1';
+            if (!isExpanded) {
+                hidden.forEach(c => c.classList.remove('hidden'));
+                btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Show Less';
+                btn.dataset.expanded = '1';
+            } else {
+                const cards = document.querySelectorAll(`#${gridId} .pc`);
+                cards.forEach((c, i) => { if (i >= 5) c.classList.add('hidden'); });
+                btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> View All';
+                btn.dataset.expanded = '0';
+            }
+        }
+
+        /* ─── TEAM SWITCH ────────────────────────────────── */
+        function switchTeam(team, btn) {
+            document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.team-panel').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('panel-' + team).classList.add('active');
+        }
+
+        /* ─── NAV ────────────────────────────────────────── */
+        function toggleMobileNav() {
+            const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger');
+            n.classList.toggle('open'); h.classList.toggle('open');
+            document.body.style.overflow = n.classList.contains('open') ? 'hidden' : '';
+        }
+        document.addEventListener('click', e => {
+            const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger');
+            if (n.classList.contains('open') && !n.contains(e.target) && !h.contains(e.target)) {
+                n.classList.remove('open'); h.classList.remove('open'); document.body.style.overflow = '';
+            }
+        });
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        /* Reveal */
+        const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: .08 });
+        document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+    </script>
+</body>
+
+</html>

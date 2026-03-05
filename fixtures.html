@@ -1,488 +1,316 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fixtures | Arches Cricket Club</title>
+  <title>Fixtures 2026 | Arches Cricket Club</title>
+  <meta name="description"
+    content="2026 season fixtures for Arches Cricket Club — both Senior and Junior league schedules.">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-  <link rel="stylesheet" href="mobile.css">
-  <style>
-    :root {
-      --primary: #ff8c1a;
-      --dark: #0f0f0f;
-      --dark-2: #1a1a1a;
-      --light: #ffffff;
-      --muted: #bbbbbb;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--dark);
-      color: var(--light);
-      overflow-x: hidden;
-    }
-
-    /* ================= NAVBAR ================= */
-    .navbar {
-      background: linear-gradient(135deg, #000, #1a1a1a);
-      border-bottom: 2px solid var(--primary);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1400px;
-      margin: auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo img {
-      width: 55px;
-      height: 55px;
-    }
-
-    .logo-text h1 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.4rem;
-    }
-
-    .logo-text p {
-      font-size: 0.75rem;
-      color: var(--primary);
-      letter-spacing: 1px;
-    }
-
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 1.8rem;
-    }
-
-    .nav-menu a {
-      text-decoration: none;
-      color: var(--light);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      position: relative;
-    }
-
-    .nav-menu a::after {
-      content: "";
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      position: absolute;
-      left: 50%;
-      bottom: -6px;
-      transform: translateX(-50%);
-      transition: var(--transition);
-    }
-
-    .nav-menu a:hover::after,
-    .nav-menu a.active::after {
-      width: 70%;
-    }
-
-    
-        /* ===== HAMBURGER ===== */
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-    
-    .nav-toggle span {
-      width: 26px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-    }
-    
-    /* ===== MOBILE NAV ===== */
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: flex;
-      }
-    
-      .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        flex-direction: column;
-        background: #111;
-        width: 100%;
-        padding: 2rem;
-        transition: 0.3s ease;
-      }
-    
-      .nav-menu.active {
-        left: 0;
-      }
-    }
-        /* ================= HEADER ================= */
-    .page-header {
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-      background: radial-gradient(circle at top, rgba(255,140,26,0.15), transparent 70%);
-    }
-
-    .page-header h2 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2.6rem;
-      letter-spacing: 2px;
-      margin-bottom: 0.6rem;
-    }
-
-    .page-header p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    /* ================= FIXTURES ================= */
-    .container {
-      max-width: 1400px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    h3.section-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2rem;
-      color: var(--primary);
-      margin: 3rem 0 1.5rem;
-      border-bottom: 2px solid rgba(255,140,26,0.3);
-      padding-bottom: 0.5rem;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--dark-2);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 3rem;
-    }
-
-    th, td {
-      padding: 1rem;
-      text-align: left;
-      font-size: 0.95rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    th {
-      background: #1f1f1f;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      color: var(--muted);
-      letter-spacing: 1px;
-    }
-
-    tr:hover {
-      background: rgba(255,140,26,0.08);
-    }
-
-    .home {
-      color: #4caf50;
-      font-weight: 600;
-    }
-
-    .away {
-      color: #ff9800;
-      font-weight: 600;
-    }
-
-    /* ================= FOOTER ================= */
-    footer {
-      border-top: 2px solid var(--primary);
-      background: linear-gradient(135deg, #000, #1a1a1a);
-      padding: 2rem;
-      text-align: center;
-      color: #777;
-      font-size: 0.85rem;
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 768px) {
-      
-      table {
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="assets/images/assets/images/logo/logo.png" alt="Arches CC Logo">
-      <div class="logo-text">
-        <h1>Arches Cricket Club</h1>
-        <p>Belfast, Northern Ireland</p>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.png" alt="Arches CC Logo">
+          <div class="nav-logo-text">
+            <div class="club-name">Arches CC</div>
+            <div class="club-sub">Belfast · Est. 2024</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fixtures.html" class="active">Fixtures</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="join.html" class="btn btn-primary" style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join The Club</a>
+        </div>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="fixtures.html" class="active">Fixtures</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="toggleMobileNav()">Home</a>
+    <a href="fixtures.html" onclick="toggleMobileNav()">Fixtures</a>
+    <a href="results.html" onclick="toggleMobileNav()">Results</a>
+    <a href="players.html" onclick="toggleMobileNav()">Players</a>
+    <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a>
+    <a href="sponsors.html" onclick="toggleMobileNav()">Sponsors</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()">Join The Club</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="badge" style="margin:0 auto 1rem;">📅 Season Schedule</p>
+      <h1 class="page-hero-title">Fixtures <span class="text-amber">2026</span></h1>
+      <p class="page-hero-sub">Full season schedule for all Arches Cricket Club teams in the Northern Ireland Cricket
+        League</p>
     </div>
   </div>
-</nav>
 
-<!-- HEADER -->
-<section class="page-header">
-  <h2>Fixtures 2025</h2>
-  <p>Season schedule for all Arches Cricket Club teams</p>
-</section>
+  <!-- FIXTURES -->
+  <section class="section">
+    <div class="container">
 
-<div class="container">
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterFixtures('all', this)">All Fixtures</button>
+        <button class="filter-tab" onclick="filterFixtures('team1', this)">Team 1 – Senior League</button>
+        <button class="filter-tab" onclick="filterFixtures('team2', this)">Team 2 – Junior League</button>
+        <button class="filter-tab" onclick="filterFixtures('team2', this)">Midweek League</button>
+      </div>
 
-  <h3 class="section-title">Team 1 – Senior League</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Match</th>
-        <th>Home / Away</th>
-        <th>Ground</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>03 May 2025</td>
-        <td><span class="home">Arches</span> vs Dunmurry</td>
-        <td class="home">Home</td>
-        <td>Dunmurry</td>
-      </tr>
-      <tr>
-        <td>10 May 2025</td>
-        <td>Belfast Superkings vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Mallusk</td>
-      </tr>
-      <tr>
-        <td>24 May 2025</td>
-        <td><span class="home">Arches</span> vs Victoria</td>
-        <td class="home">Home</td>
-        <td>Victoria</td>
-      </tr>
-      <tr>
-        <td>31 May 2025</td>
-        <td>Larne vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Larne</td>
-      </tr>
-      <tr>
-        <td>14 Jun 2025</td>
-        <td>NIMACC vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Mallusk</td>
-      </tr>
-      <tr>
-        <td>22 Jun 2025</td>
-        <td>Amigos vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Mallusk</td>
-      </tr>
-      <tr>
-        <td>05 Jul 2025</td>
-        <td><span class="home">Arches</span> vs Ards & Donaghadee</td>
-        <td class="home">Home</td>
-        <td>Donaghadee</td>
-      </tr>
-      <tr>
-        <td>19 Jul 2025</td>
-        <td><span class="home">Arches</span> vs NIMACC</td>
-        <td class="home">Home</td>
-        <td>Londonderry</td>
-      </tr>
-      <tr>
-        <td>26 Jul 2025</td>
-        <td>Dunmurry vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Dunmurry</td>
-      </tr>
-      <tr>
-        <td>02 Aug 2025</td>
-        <td><span class="home">Arches</span> vs Larne</td>
-        <td class="home">Home</td>
-        <td>Larne</td>
-      </tr>
-      <tr>
-        <td>09 Aug 2025</td>
-        <td><span class="home">Arches</span> vs Amigos</td>
-        <td class="home">Home</td>
-        <td>Victoria Park</td>
-      </tr>
-      <tr>
-        <td>16 Aug 2025</td>
-        <td>Victoria vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Victoria</td>
-      </tr>
-      <tr>
-        <td>23 Aug 2025</td>
-        <td><span class="home">Arches</span> vs Belfast Superkings</td>
-        <td class="home">Home</td>
-        <td>Victoria Park</td>
-      </tr>
-      <tr>
-        <td>30 Aug 2025</td>
-        <td>Ards & Donaghadee vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Donaghadee</td>
-      </tr>
-    </tbody>
-  </table>
+      <!-- Team 1 -->
+      <div class="reveal" id="block-team1">
+        <div style="display:flex;align-items:center;gap:1rem;margin:2.5rem 0 1.5rem;">
+          <h2 style="font-size:1.5rem;color:var(--amber);">Mercury Senior League <span
+              style="color:var(--muted);font-size:0.9rem;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0px;">Section
+              3 · 2026</span></h2>
+        </div>
+        <div class="table-section">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Home / Away</th>
+                <th>Ground</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2nd May 2026</td>
+                <td><span class="td-home">Arches CC</span> vs Ards &amp; Donaghadee</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>16th May 2026</td>
+                <td>NIMACC vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Belfast</td>
+              </tr>
+              <tr>
+                <td>23rd May 2026</td>
+                <td><span class="td-home">Arches CC</span> vs Drumaness Superkings</td>
+                <td class="td-home">Home</td>
+                <td>Drumaness</td>
+              </tr>
+              <tr>
+                <td>30th May 2026</td>
+                <td>Belfast Superkings vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Belfast</td>
+              </tr>
+              <tr>
+                <td>13th June 2026</td>
+                <td>Amigos Belfast vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Belfast</td>
+              </tr>
+              <tr>
+                <td>20th June 2026</td>
+                <td><span class="td-home">Arches CC</span> vs Dundrum</td>
+                <td class="td-home">Home</td>
+                <td>Dundrum</td>
+              </tr>
+              <tr>
+                <td>27th June 2026</td>
+                <td>Victoria vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Victoria Park, Lurgan</td>
+              </tr>
+              <tr>
+                <td>4th July 2026</td>
+                <td>Ards &amp; Donaghadee vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Donaghadee</td>
+              </tr>
+              <tr>
+                <td>18th July 2026</td>
+                <td><span class="td-home">Arches CC</span> vs Belfast Superkings</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>25th July 2026</td>
+                <td>Drumaness Superkings vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Drumaness</td>
+              </tr>
+              <tr>
+                <td>1st August 2026</td>
+                <td><span class="td-home">Arches CC</span> vs NIMACC</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>8th August 2026</td>
+                <td>Dundrum vs <span class="td-away">Arches CC</span></td>
+                <td class="td-away">Away</td>
+                <td>Dundrum</td>
+              </tr>
+              <tr>
+                <td>15th August 2026</td>
+                <td><span class="td-home">Arches CC</span> vs Amigos Belfast</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>22nd August 2026</td>
+                <td><span class="td-home">Arches CC</span> vs Victoria</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Lurgan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-  <h3 class="section-title">Team 2 – Junior League</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Opponent</th>
-        <th>Home / Away</th>
-        <th>Ground</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>26 Apr 2025</td>
-        <td>Lurgan vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Lurgan</td>
-      </tr>
-      <tr>
-        <td>11 May 2025</td>
-        <td>Ardent Blues 4 vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Mallusk</td>
-      </tr>
-      <tr>
-        <td>18 May 2025</td>
-        <td>Belfast Superkings 2 vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Mallusk</td>
-      </tr>
-      <tr>
-        <td>26 May 2025</td>
-        <td>Victoria vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Lurgan</td>
-      </tr>
-      <tr>
-        <td>01 Jun 2025</td>
-        <td><span class="home">Arches</span> vs NIMACC</td>
-        <td class="home">Home</td>
-        <td>Victoria Park</td>
-      </tr>
-      <tr>
-        <td>08 Jun 2025</td>
-        <td><span class="home">Arches</span> vs Amigos</td>
-        <td class="home">Home</td>
-        <td>Londonderry</td>
-      </tr>
-      <tr>
-        <td>15 Jun 2025</td>
-        <td><span class="home">Arches</span> vs Belfast Superkings 2</td>
-        <td class="home">Home</td>
-        <td>Londonderry</td>
-      </tr>
-      <tr>
-        <td>29 Jun 2025</td>
-        <td><span class="home">Arches</span> vs North Down</td>
-        <td class="home">Home</td>
-        <td>Londonderry</td>
-      </tr>
-      <tr>
-        <td>12 Jul 2025</td>
-        <td><span class="home">Arches</span> vs Lurgan</td>
-        <td class="home">Home</td>
-        <td>Victoria Park</td>
-      </tr>
-      <tr>
-        <td>27 Jul 2025</td>
-        <td><span class="home">Arches</span> vs Ardent Blues 4</td>
-        <td class="home">Home</td>
-        <td>Londonderry</td>
-      </tr>
-      <tr>
-        <td>02 Aug 2025</td>
-        <td>North Down vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Comber</td>
-      </tr>
-      <tr>
-        <td>16 Aug 2025</td>
-        <td><span class="home">Arches</span> vs Victoria</td>
-        <td class="home">Home</td>
-        <td>Victoria Park</td>
-      </tr>
-      <tr>
-        <td>24 Aug 2025</td>
-        <td>Amigos vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Comber</td>
-      </tr>
-      <tr>
-        <td>20 Sep 2025</td>
-        <td>NIMACC vs <span class="away">Arches</span></td>
-        <td class="away">Away</td>
-        <td>Londonderry</td>
-      </tr>
-    </tbody>
-  </table>
+      <!-- Team 2 -->
+      <div class="reveal" id="block-team2">
+        <div style="display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;">
+          <h2 style="font-size:1.5rem;color:var(--gold);">Team 2 — Junior League <span
+              style="color:var(--muted);font-size:0.9rem;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0px;">(NCU
+              Junior League 10)</span></h2>
+        </div>
+        <div class="glass-card" style="padding:2.5rem;text-align:center;border:1px dashed var(--border-accent);">
+          <div style="font-size:3rem;margin-bottom:1rem;">📅</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:.5rem;">Schedule To Be Announced
+          </h3>
+          <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0 auto 1.25rem;">The 2026 fixture list for
+            Team 2 (NCU Junior League 10) has not been released yet. Check back soon or follow us on social media for
+            updates.</p>
+          <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
+              style="font-size:.78rem;"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/share/1AWw49P2Ez/" target="_blank" class="btn btn-ghost"
+              style="font-size:.78rem;"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          </div>
+        </div>
+        <div class="glass-card"
+          style="padding:2.5rem;text-align:center;border:1px dashed var(--border-accent);margin-top:2.5rem;">
+          <div style="font-size:3rem;margin-bottom:1rem;">🌙</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:.5rem;">Midweek League —
+            Schedule To Be Announced</h3>
+          <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0 auto 1.25rem;">The 2026 Midweek League
+            schedule is yet to be released. Follow our social channels for the latest updates.</p>
+          <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
+              style="font-size:.78rem;"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/share/1AWw49P2Ez/" target="_blank" class="btn btn-ghost"
+              style="font-size:.78rem;"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          </div>
+        </div></div>
+      </div>
 
-</div>
+      <!-- Venue Info -->
+      <div class="glass-card reveal"
+        style="padding:2rem;margin-top:3rem;display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <p class="section-label" style="margin-bottom:0.75rem;">📍 Home Ground</p>
+          <h3 style="font-size:1.4rem;margin-bottom:0.4rem;">Victoria Park, Belfast</h3>
+          <p style="color:var(--muted);font-size:0.9rem;">Belfast BT4 1LS, Northern Ireland</p>
+          <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank" class="btn btn-ghost"
+            style="margin-top:1rem;display:inline-flex;">
+            <i class="fa-solid fa-map"></i> Get Directions
+          </a>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p class="section-label" style="margin-bottom:0.75rem;">⚡ Match Info</p>
+          <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">
+            Home games start at <strong style="color:var(--text);">11:00 AM</strong> unless stated otherwise.<br>
+            All fixtures subject to weather and ground conditions.<br>
+            Check social media for last-minute updates.
+          </p>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p class="section-label" style="margin-bottom:0.75rem;">📱 Stay Updated</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
+              style="display:inline-flex;padding:0.6rem 1rem;font-size:0.78rem;">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1AWw49P2Ez/" target="_blank" class="btn btn-ghost"
+              style="display:inline-flex;padding:0.6rem 1rem;font-size:0.78rem;">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+          </div>
+        </div>
+      </div>
 
-<footer>
-  © 2024 Arches Cricket Club · Fixtures
-</footer>
-<script src="mobile-nav.js"></script>
+    </div>
+  </section>
+
+  <!-- FOOTER (compact) -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner" style="padding-top:3rem;">
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
+          <div class="footer-legal">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html">Join</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      const hamburger = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      hamburger.classList.toggle('open');
+      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+    }
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Filter tabs
+    function filterFixtures(team, btn) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const t1 = document.getElementById('block-team1');
+      const t2 = document.getElementById('block-team2');
+      if (team === 'all') { t1.style.display = ''; t2.style.display = ''; }
+      if (team === 'team1') { t1.style.display = ''; t2.style.display = 'none'; }
+      if (team === 'team2') { t1.style.display = 'none'; t2.style.display = ''; }
+    }
+
+    // Scroll reveal
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) { el.classList.add('visible'); }
+      }, { threshold: 0.1 }).observe(el);
+    });
+  </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
