@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -79,7 +79,7 @@
         <button class="filter-tab active" onclick="filterFixtures('all', this)">All Fixtures</button>
         <button class="filter-tab" onclick="filterFixtures('team1', this)">Team 1 – Senior League</button>
         <button class="filter-tab" onclick="filterFixtures('team2', this)">Team 2 – Junior League</button>
-        <button class="filter-tab" onclick="filterFixtures('team2', this)">Midweek League</button>
+        <button class="filter-tab" onclick="filterFixtures('midweek', this)">Midweek League</button>
       </div>
 
       <!-- Team 1 -->
@@ -194,36 +194,120 @@
         <div style="display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;">
           <h2 style="font-size:1.5rem;color:var(--gold);">Team 2 — Junior League <span
               style="color:var(--muted);font-size:0.9rem;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0px;">(NCU
-              Junior League 10)</span></h2>
+              Junior League 10 · 2026)</span></h2>
         </div>
-        <div class="glass-card" style="padding:2.5rem;text-align:center;border:1px dashed var(--border-accent);">
-          <div style="font-size:3rem;margin-bottom:1rem;">📅</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:.5rem;">Schedule To Be Announced
-          </h3>
-          <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0 auto 1.25rem;">The 2026 fixture list for
-            Team 2 (NCU Junior League 10) has not been released yet. Check back soon or follow us on social media for
-            updates.</p>
-          <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
-            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
-              style="font-size:.78rem;"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/share/1AWw49P2Ez/" target="_blank" class="btn btn-ghost"
-              style="font-size:.78rem;"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-          </div>
+        <div class="table-section">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Home / Away</th>
+                <th>Ground</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3rd May 2026</td>
+                <td>CI 5 vs <span class="td-away">Arches 2</span></td>
+                <td class="td-away">Away</td>
+                <td>CIYMS</td>
+              </tr>
+              <tr>
+                <td>10th May 2026</td>
+                <td><span class="td-home">Arches 2</span> vs NIMACC 2</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>17th May 2026</td>
+                <td>North Down 4 vs <span class="td-away">Arches 2</span></td>
+                <td class="td-away">Away</td>
+                <td>Comber</td>
+              </tr>
+              <tr>
+                <td>6th June 2026</td>
+                <td>Lurgan 3 vs <span class="td-away">Arches 2</span></td>
+                <td class="td-away">Away</td>
+                <td>Lurgan</td>
+              </tr>
+              <tr>
+                <td>21st June 2026</td>
+                <td><span class="td-home">Arches 2</span> vs Templepatrick 4</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>5th July 2026</td>
+                <td><span class="td-home">Arches 2</span> vs Dungannon 1</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>12th July 2026</td>
+                <td>Amigos Belfast 3 vs <span class="td-away">Arches 2</span></td>
+                <td class="td-away">Away</td>
+                <td>TBC</td>
+              </tr>
+              <tr>
+                <td>19th July 2026</td>
+                <td>Downpatrick 3 vs <span class="td-away">Arches 2</span></td>
+                <td class="td-away">Away</td>
+                <td>Downpatrick</td>
+              </tr>
+              <tr>
+                <td>26th July 2026</td>
+                <td><span class="td-home">Arches 2</span> vs Ardent Blues 4</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>9th August 2026</td>
+                <td><span class="td-home">Arches 2</span> vs Cooke Collegians 4</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+              <tr>
+                <td>23rd August 2026</td>
+                <td>Belfast Superkings 2 vs <span class="td-away">Arches 2</span></td>
+                <td class="td-away">Away</td>
+                <td>TBC</td>
+              </tr>
+              <tr>
+                <td>29th August 2026</td>
+                <td><span class="td-home">Arches 2</span> vs Belfast Superkings 3</td>
+                <td class="td-home">Home</td>
+                <td>Victoria Park, Belfast</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="glass-card"
-          style="padding:2.5rem;text-align:center;border:1px dashed var(--border-accent);margin-top:2.5rem;">
-          <div style="font-size:3rem;margin-bottom:1rem;">🌙</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:.5rem;">Midweek League —
-            Schedule To Be Announced</h3>
-          <p style="color:var(--muted);font-size:.9rem;max-width:400px;margin:0 auto 1.25rem;">The 2026 Midweek League
-            schedule is yet to be released. Follow our social channels for the latest updates.</p>
-          <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
-            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
-              style="font-size:.78rem;"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/share/1AWw49P2Ez/" target="_blank" class="btn btn-ghost"
-              style="font-size:.78rem;"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-          </div>
-        </div></div>
+      </div>
+
+      <!-- Midweek -->
+      <div class="reveal" id="block-midweek">
+        <div style="display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;">
+          <h2 style="font-size:1.5rem;color:#3b82f6;">Midweek League <span
+              style="color:var(--muted);font-size:0.9rem;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0px;">(2026)</span>
+          </h2>
+        </div>
+        <div class="table-section">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Home / Away</th>
+                <th>Ground</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" style="text-align:center;padding:2rem;">Schedule To Be Announced</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <!-- Venue Info -->
@@ -299,9 +383,11 @@
       btn.classList.add('active');
       const t1 = document.getElementById('block-team1');
       const t2 = document.getElementById('block-team2');
-      if (team === 'all') { t1.style.display = ''; t2.style.display = ''; }
-      if (team === 'team1') { t1.style.display = ''; t2.style.display = 'none'; }
-      if (team === 'team2') { t1.style.display = 'none'; t2.style.display = ''; }
+      const mw = document.getElementById('block-midweek');
+      if (team === 'all') { t1.style.display = ''; t2.style.display = ''; mw.style.display = ''; }
+      if (team === 'team1') { t1.style.display = ''; t2.style.display = 'none'; mw.style.display = 'none'; }
+      if (team === 'team2') { t1.style.display = 'none'; t2.style.display = ''; mw.style.display = 'none'; }
+      if (team === 'midweek') { t1.style.display = 'none'; t2.style.display = 'none'; mw.style.display = ''; }
     }
 
     // Scroll reveal
@@ -313,6 +399,4 @@
   </script>
 </body>
 
-
 </html>
-
