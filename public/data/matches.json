@@ -1,47 +1,29 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Amigos Belfast 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "SAT\n13 JUN",
-      "time": "SAT\n13 JUN",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Dundrum 1st XI",
       "date": "SAT\n20 JUN",
       "time": "SAT\n20 JUN",
-      "venue": "TBD",
+      "venue": "The Meadow, Dundrum",
       "status": "",
       "league": "Senior League 3"
     },
     {
       "homeTeam": "Victoria 1st XI",
       "awayTeam": "Arches 1st XI",
-      "date": "TBD",
+      "date": "SAT\n20 JUN",
       "time": "",
-      "venue": "TBD",
+      "venue": "Lurgan Park, Lurgan",
       "status": "",
       "league": "Senior League 3"
-    },
-    {
-      "homeTeam": "North Down 4th XI",
-      "awayTeam": "Arches 2nd XI",
-      "date": "TBD",
-      "time": "",
-      "venue": "TBD",
-      "status": "",
-      "league": "Junior League 10"
     },
     {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Templepatrick 4th XI",
       "date": "SUN\n21 JUN",
       "time": "SUN\n21 JUN",
-      "venue": "TBD",
+      "venue": "TBC, TBC",
       "status": "",
       "league": "Junior League 10"
     },
@@ -50,7 +32,7 @@
       "awayTeam": "Cregagh MW XI",
       "date": "TUE\n16 JUN",
       "time": "TUE\n16 JUN",
-      "venue": "TBD",
+      "venue": "TBC, TBC",
       "status": "",
       "league": "Midweek League"
     },
@@ -59,7 +41,7 @@
       "awayTeam": "Arches MW XI",
       "date": "TUE\n23 JUN",
       "time": "TUE\n23 JUN",
-      "venue": "TBD",
+      "venue": "Pirrie Park, Belfast",
       "status": "",
       "league": "Midweek League"
     },
@@ -68,20 +50,108 @@
       "awayTeam": "Arches 2nd XI",
       "date": "TBD",
       "time": "",
-      "venue": "TBD",
+      "venue": "TBC, TBC",
       "status": "",
       "league": "Development Cup"
-    },
-    {
-      "homeTeam": "Ards & Donaghadee 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "THU\n4 JUN",
-      "time": "THU\n4 JUN",
-      "venue": "TBD",
-      "status": "",
-      "league": "T20 Shield Cup"
     }
   ],
-  "results": [],
-  "lastUpdated": "2026-06-12T15:47:16.249Z"
+  "results": [
+    {
+      "date": "TBD",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast 1st XI",
+      "venue": "TBC, TBC",
+      "result": "Amigos Belfast 1st XI won by 4 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings 1st XI",
+      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
+      "result": "Match Abandoned"
+    },
+    {
+      "date": "TBD",
+      "league": "Senior League 3",
+      "homeTeam": "Drumaness Superkings 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "The Village Ground, Drumaness",
+      "result": "Drumaness Superkings 1st XI won by 235 runs"
+    },
+    {
+      "date": "SUN\n17 MAY",
+      "league": "Senior League 3",
+      "homeTeam": "NIMACC 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "City of Belfast Playing Fields (NIMA), Mallusk",
+      "result": "NIMACC 1st XI won by 98 runs (DLS method)"
+    },
+    {
+      "date": "SUN\n17 MAY",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Ards & Donaghadee 1st XI",
+      "venue": "Northfield, Donaghadee",
+      "result": "Ards & Donaghadee 1st XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "North Down 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "The Green, Comber",
+      "result": "Arches 2nd XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "CI 5th XI",
+      "venue": "TBC, TBC",
+      "result": "CI 5th XI won by 2 wickets"
+    },
+    {
+      "date": "SAT\n6 JUN",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Lurgan 3rd XI",
+      "venue": "TBC, TBC",
+      "result": "Lurgan 3rd XI won by 4 wickets"
+    },
+    {
+      "date": "SUN\n10 MAY",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "NIMACC 2nd XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI beat NIMA 2nd XI - NIMA 2nd XI played an inelgible player"
+    },
+    {
+      "date": "TBD",
+      "league": "Midweek League",
+      "homeTeam": "Belfast MW XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBC, TBC",
+      "result": "Arches MW XI won by 9 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Development Cup",
+      "homeTeam": "Saintfield 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "date": "THU\n4 JUN",
+      "league": "T20 Shield Cup",
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "Northfield, Donaghadee",
+      "result": "Match Postponed"
+    }
+  ],
+  "lastUpdated": "2026-06-15T13:36:30.911Z"
 }

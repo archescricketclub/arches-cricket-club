@@ -163,114 +163,26 @@
             <div class="section-header reveal">
                 <p class="section-label">⚡ Upcoming Fixtures</p>
                 <h2 class="section-title">Next On The Pitch</h2>
-                <p class="section-sub">All home games at Victoria Park, Belfast BT4 1LS</p>
+                <p class="section-sub">Scheduled league, midweek, and cup matches</p>
             </div>
-            <div class="matches-grid" id="upcoming-matches-grid">
-
-                <div class="match-card reveal reveal-delay-1">
-                    <div class="match-meta">
-                        <span class="match-format">T20 · Warmup</span>
-                        <span class="match-date-text">Sat 11 Apr 2026 · 09:00</span>
-                    </div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="match-team-logo">🏏</div>
-                            <div class="match-team-name">Arches-1</div>
-                            <div class="match-team-sub">Senior Squad</div>
-                        </div>
-                        <div class="match-vs">VS</div>
-                        <div class="match-team">
-                            <div class="match-team-logo">🏏</div>
-                            <div class="match-team-name">Arches-2</div>
-                            <div class="match-team-sub">Junior Squad</div>
-                        </div>
-                    </div>
-                    <div class="match-info">
-                        <div class="match-info-item">
-                            <div class="match-info-label">Venue</div>
-                            <div class="match-info-value">Londonderry Park, Newtownards</div>
-                        </div>
-                        <div class="match-info-item">
-                            <div class="match-info-label">Format</div>
-                            <div class="match-info-value">T20</div>
-                        </div>
-                        <div class="match-info-item">
-                            <div class="match-info-label">Status</div>
-                            <div class="match-info-value" style="color:var(--amber);">Upcoming</div>
-                        </div>
-                    </div>
+            
+            <div style="margin-top: 2rem;">
+                <h3 style="font-size:1.3rem; font-family:'Orbitron',sans-serif; margin-bottom:1.25rem; color:var(--amber); display:flex; align-items:center; gap:0.5rem;" class="reveal">
+                    <span>🏠</span> 3 Upcoming Home Matches
+                </h3>
+                <div class="matches-grid" id="upcoming-home-matches-grid" style="margin-bottom: 3rem;">
+                    <div style="grid-column:1/-1;text-align:center;color:var(--muted);">Loading home matches...</div>
                 </div>
 
-                <div class="match-card reveal reveal-delay-2">
-                    <div class="match-meta">
-                        <span class="match-format">Senior League</span>
-                        <span class="match-date-text">Sat 03 May 2026 · 11:00</span>
-                    </div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="match-team-logo">🏏</div>
-                            <div class="match-team-name">Arches 1</div>
-                            <div class="match-team-sub">Home</div>
-                        </div>
-                        <div class="match-vs">VS</div>
-                        <div class="match-team">
-                            <div class="match-team-logo">⚔️</div>
-                            <div class="match-team-name">Ards & Donaghadee 1</div>
-                            <div class="match-team-sub">Away</div>
-                        </div>
-                    </div>
-                    <div class="match-info">
-                        <div class="match-info-item">
-                            <div class="match-info-label">Venue</div>
-                            <div class="match-info-value">Comber</div>
-                        </div>
-                        <div class="match-info-item">
-                            <div class="match-info-label">Competition</div>
-                            <div class="match-info-value">Senior League 3</div>
-                        </div>
-                        <div class="match-info-item">
-                            <div class="match-info-label">Status</div>
-                            <div class="match-info-value" style="color:var(--muted);">Scheduled</div>
-                        </div>
-                    </div>
+                <h3 style="font-size:1.3rem; font-family:'Orbitron',sans-serif; margin-bottom:1.25rem; color:var(--gold); display:flex; align-items:center; gap:0.5rem;" class="reveal">
+                    <span>📅</span> 3 Next Overall Matches
+                </h3>
+                <div class="matches-grid" id="upcoming-all-matches-grid">
+                    <div style="grid-column:1/-1;text-align:center;color:var(--muted);">Loading overall matches...</div>
                 </div>
-
-                <div class="match-card reveal reveal-delay-3">
-                    <div class="match-meta">
-                        <span class="match-format">Junior League</span>
-                        <span class="match-date-text">Sat 10 May 2026 · 11:00</span>
-                    </div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="match-team-logo">👑</div>
-                            <div class="match-team-name">Arches 2</div>
-                            <div class="match-team-sub">Home</div>
-                        </div>
-                        <div class="match-vs">VS</div>
-                        <div class="match-team">
-                            <div class="match-team-logo">🏏</div>
-                            <div class="match-team-name">NIMACC 2</div>
-                            <div class="match-team-sub">Away</div>
-                        </div>
-                    </div>
-                    <div class="match-info">
-                        <div class="match-info-item">
-                            <div class="match-info-label">Venue</div>
-                            <div class="match-info-value">Victoria Park, Belfast</div>
-                        </div>
-                        <div class="match-info-item">
-                            <div class="match-info-label">Competition</div>
-                            <div class="match-info-value">Junior League 10</div>
-                        </div>
-                        <div class="match-info-item">
-                            <div class="match-info-label">Status</div>
-                            <div class="match-info-value" style="color:var(--muted);">Scheduled</div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <div style="text-align:center; margin-top:2.5rem;">
+
+            <div style="text-align:center; margin-top:3rem;">
                 <a href="fixtures.html" class="btn btn-ghost">View All Fixtures <i
                         class="fa-solid fa-arrow-right"></i></a>
             </div>
@@ -1012,6 +924,92 @@
             return null;
         }
 
+        const months = {
+            'JAN': 0, 'FEB': 1, 'MAR': 2, 'APR': 3, 'MAY': 4, 'JUN': 5,
+            'JUL': 6, 'AUG': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DEC': 11
+        };
+
+        function parseMatchDate(dateStr) {
+            if (!dateStr || dateStr.toUpperCase() === 'TBD') return null;
+            const cleanStr = dateStr.replace(/\n/g, ' ').trim();
+            const parts = cleanStr.split(/\s+/);
+            let day = null;
+            let month = null;
+            for (const part of parts) {
+                const upper = part.toUpperCase();
+                if (/^\d+$/.test(part)) {
+                    day = parseInt(part, 10);
+                } else if (months[upper] !== undefined) {
+                    month = months[upper];
+                }
+            }
+            if (day !== null && month !== null) {
+                return new Date(2026, month, day);
+            }
+            return null;
+        }
+
+        function sortFixtures(list) {
+            return list.sort((a, b) => {
+                const dA = parseMatchDate(a.date);
+                const dB = parseMatchDate(b.date);
+                if (!dA && !dB) return 0;
+                if (!dA) return 1;
+                if (!dB) return -1;
+                return dA - dB;
+            });
+        }
+
+        function renderMatchCards(list, containerId, startIdx = 0) {
+            const grid = document.getElementById(containerId);
+            if (!grid) return;
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="glass-card" style="grid-column:1/-1;padding:2rem;text-align:center;color:var(--muted);">No upcoming matches scheduled</div>`;
+                return;
+            }
+            grid.innerHTML = list.map((m, idx) => {
+                const isHome = m.homeTeam.toLowerCase().includes('arches');
+                const dateClean = (m.date || '').replace(/\n/g, ' ');
+                const timeClean = (m.time || '').replace(/\n/g, ' ');
+                const dateText = timeClean ? `${dateClean} · ${timeClean}` : dateClean;
+                return `
+                    <div class="match-card reveal reveal-delay-${((startIdx + idx) % 3) + 1} visible">
+                        <div class="match-meta">
+                            <span class="match-format">${m.league}</span>
+                            <span class="match-date-text">${dateText}</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="match-team">
+                                <div class="match-team-logo">${isHome ? '🏏' : '⚔️'}</div>
+                                <div class="match-team-name">${m.homeTeam}</div>
+                                <div class="match-team-sub">${isHome ? 'Home' : 'Away'}</div>
+                            </div>
+                            <div class="match-vs">VS</div>
+                            <div class="match-team">
+                                <div class="match-team-logo">${!isHome ? '🏏' : '⚔️'}</div>
+                                <div class="match-team-name">${m.awayTeam}</div>
+                                <div class="match-team-sub">${!isHome ? 'Home' : 'Away'}</div>
+                            </div>
+                        </div>
+                        <div class="match-info">
+                            <div class="match-info-item">
+                                <div class="match-info-label">Venue</div>
+                                <div class="match-info-value">${m.venue || 'TBD'}</div>
+                            </div>
+                            <div class="match-info-item">
+                                <div class="match-info-label">Competition</div>
+                                <div class="match-info-value">${m.league}</div>
+                            </div>
+                            <div class="match-info-item">
+                                <div class="match-info-label">Status</div>
+                                <div class="match-info-value" style="color:var(--amber);">${m.status || 'Scheduled'}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
         async function initDynamicData() {
             try {
                 const [matchesRes, rosterRes, playersRes] = await Promise.all([
@@ -1029,7 +1027,7 @@
                 // Count victories
                 const victories = results.filter(r => {
                     const resLower = (r.result || '').toLowerCase();
-                    return resLower.includes('arches') && resLower.includes('won');
+                    return (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
                 }).length;
                 
                 const winRate = matchesPlayed > 0 ? Math.round((victories / matchesPlayed) * 100) : 52;
@@ -1056,9 +1054,12 @@
                 const winRateEl = document.getElementById('hero-win-rate');
                 if (winRateEl) winRateEl.textContent = `${winRate}%`;
 
-                // 2. Next Match Floating Card
-                if (fixtures.length > 0) {
-                    const nextMatch = fixtures[0];
+                // 2. Sort Fixtures Chronologically
+                const sortedFixtures = sortFixtures(fixtures);
+
+                // 3. Next Match Floating Card
+                if (sortedFixtures.length > 0) {
+                    const nextMatch = sortedFixtures[0];
                     const nextDateEl = document.getElementById('hero-next-date');
                     if (nextDateEl) nextDateEl.textContent = (nextMatch.date || '').replace(/\n/g, ' ');
                     
@@ -1068,10 +1069,10 @@
                     }
                 }
 
-                // 3. Live Ticker
+                // 4. Live Ticker
                 const tickerInner = document.getElementById('tickerInner');
                 if (tickerInner) {
-                    const tickerItems = fixtures.slice(0, 6);
+                    const tickerItems = sortedFixtures.slice(0, 6);
                     if (tickerItems.length > 0) {
                         const tickerContent = tickerItems.map(m => {
                             const dateClean = (m.date || '').replace(/\n/g, ' ');
@@ -1081,51 +1082,14 @@
                     }
                 }
 
-                // 4. Upcoming Matches Grid (Top 3)
-                const upcomingGrid = document.getElementById('upcoming-matches-grid');
-                if (upcomingGrid && fixtures.length > 0) {
-                    upcomingGrid.innerHTML = fixtures.slice(0, 3).map((m, idx) => {
-                        const isHome = m.homeTeam.toLowerCase().includes('arches');
-                        const dateClean = (m.date || '').replace(/\n/g, ' ');
-                        const timeClean = (m.time || '').replace(/\n/g, ' ');
-                        const dateText = timeClean ? `${dateClean} · ${timeClean}` : dateClean;
-                        return `
-                            <div class="match-card reveal reveal-delay-${(idx % 3) + 1} visible">
-                                <div class="match-meta">
-                                    <span class="match-format">${m.league}</span>
-                                    <span class="match-date-text">${dateText}</span>
-                                </div>
-                                <div class="match-teams">
-                                    <div class="match-team">
-                                        <div class="match-team-logo">${isHome ? '🏏' : '⚔️'}</div>
-                                        <div class="match-team-name">${m.homeTeam}</div>
-                                        <div class="match-team-sub">${isHome ? 'Home' : 'Away'}</div>
-                                    </div>
-                                    <div class="match-vs">VS</div>
-                                    <div class="match-team">
-                                        <div class="match-team-logo">${!isHome ? '🏏' : '⚔️'}</div>
-                                        <div class="match-team-name">${m.awayTeam}</div>
-                                        <div class="match-team-sub">${!isHome ? 'Home' : 'Away'}</div>
-                                    </div>
-                                </div>
-                                <div class="match-info">
-                                    <div class="match-info-item">
-                                        <div class="match-info-label">Venue</div>
-                                        <div class="match-info-value">${m.venue || 'TBD'}</div>
-                                    </div>
-                                    <div class="match-info-item">
-                                        <div class="match-info-label">Competition</div>
-                                        <div class="match-info-value">${m.league}</div>
-                                    </div>
-                                    <div class="match-info-item">
-                                        <div class="match-info-label">Status</div>
-                                        <div class="match-info-value" style="color:var(--amber);">${m.status || 'Scheduled'}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    }).join('');
-                }
+                // 5. Render Separated Upcoming Matches Grids
+                // A. Upcoming Home Matches (3 matches where Arches is home team)
+                const homeFixtures = sortedFixtures.filter(m => (m.homeTeam || '').toLowerCase().includes('arches')).slice(0, 3);
+                renderMatchCards(homeFixtures, 'upcoming-home-matches-grid', 0);
+
+                // B. Next Overall Matches (3 matches overall)
+                const allFixtures = sortedFixtures.slice(0, 3);
+                renderMatchCards(allFixtures, 'upcoming-all-matches-grid', 3);
 
                 // 5. Player Spotlights
                 document.querySelectorAll('.player-card').forEach(card => {

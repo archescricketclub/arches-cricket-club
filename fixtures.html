@@ -332,11 +332,48 @@
       return (str || '').replace(/\n/g, ' ').trim();
     }
 
+    const months = {
+      'JAN': 0, 'FEB': 1, 'MAR': 2, 'APR': 3, 'MAY': 4, 'JUN': 5,
+      'JUL': 6, 'AUG': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DEC': 11
+    };
+
+    function parseMatchDate(dateStr) {
+      if (!dateStr || dateStr.toUpperCase() === 'TBD') return null;
+      const cleanStr = dateStr.replace(/\n/g, ' ').trim();
+      const parts = cleanStr.split(/\s+/);
+      let day = null;
+      let month = null;
+      for (const part of parts) {
+        const upper = part.toUpperCase();
+        if (/^\d+$/.test(part)) {
+          day = parseInt(part, 10);
+        } else if (months[upper] !== undefined) {
+          month = months[upper];
+        }
+      }
+      if (day !== null && month !== null) {
+        return new Date(2026, month, day);
+      }
+      return null;
+    }
+
+    function sortFixtures(list) {
+      return list.sort((a, b) => {
+        const dA = parseMatchDate(a.date);
+        const dB = parseMatchDate(b.date);
+        if (!dA && !dB) return 0;
+        if (!dA) return 1;
+        if (!dB) return -1;
+        return dA - dB;
+      });
+    }
+
     // Load data dynamically
     fetch('data/matches.json')
       .then(res => res.json())
       .then(data => {
-        const fixtures = data.fixtures || [];
+        const rawFixtures = data.fixtures || [];
+        const fixtures = sortFixtures(rawFixtures);
         const leagues = {
           "Senior League 3": document.getElementById('tbody-Senior-League-3'),
           "Junior League 10": document.getElementById('tbody-Junior-League-10'),

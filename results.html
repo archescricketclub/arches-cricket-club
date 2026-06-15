@@ -69,31 +69,31 @@
       <!-- Season Summary Cards -->
       <div class="season-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:3rem;">
         <div class="glass-card reveal" style="padding:1.5rem;text-align:center;">
-          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">44</div>
+          <div id="stat-total-matches" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">0</div>
           <div
             style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
             Matches</div>
         </div>
         <div class="glass-card reveal reveal-delay-1" style="padding:1.5rem;text-align:center;">
-          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--amber);">23</div>
+          <div id="stat-total-wins" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--amber);">0</div>
           <div
             style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
             Wins</div>
         </div>
         <div class="glass-card reveal reveal-delay-2" style="padding:1.5rem;text-align:center;">
-          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:#f87171;">18</div>
+          <div id="stat-total-losses" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:#f87171;">0</div>
           <div
             style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
             Losses</div>
         </div>
         <div class="glass-card reveal reveal-delay-3" style="padding:1.5rem;text-align:center;">
-          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);">3</div>
+          <div id="stat-total-nr" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);">0</div>
           <div
             style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
             No Result</div>
         </div>
         <div class="glass-card reveal reveal-delay-4" style="padding:1.5rem;text-align:center;">
-          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">52%</div>
+          <div id="stat-total-winrate" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">0%</div>
           <div
             style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
             Win Rate</div>
@@ -264,11 +264,78 @@
       return (str || '').replace(/\n/g, ' ').trim();
     }
 
+    const months = {
+      'JAN': 0, 'FEB': 1, 'MAR': 2, 'APR': 3, 'MAY': 4, 'JUN': 5,
+      'JUL': 6, 'AUG': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DEC': 11
+    };
+
+    function parseMatchDate(dateStr) {
+      if (!dateStr || dateStr.toUpperCase() === 'TBD') return null;
+      const cleanStr = dateStr.replace(/\n/g, ' ').trim();
+      const parts = cleanStr.split(/\s+/);
+      let day = null;
+      let month = null;
+      for (const part of parts) {
+        const upper = part.toUpperCase();
+        if (/^\d+$/.test(part)) {
+          day = parseInt(part, 10);
+        } else if (months[upper] !== undefined) {
+          month = months[upper];
+        }
+      }
+      if (day !== null && month !== null) {
+        return new Date(2026, month, day);
+      }
+      return null;
+    }
+
+    function sortResults(list) {
+      return list.sort((a, b) => {
+        const dA = parseMatchDate(a.date);
+        const dB = parseMatchDate(b.date);
+        if (!dA && !dB) return 0;
+        if (!dA) return 1;
+        if (!dB) return -1;
+        return dB - dA; // descending
+      });
+    }
+
     // Load data dynamically
     fetch('data/matches.json')
       .then(res => res.json())
       .then(data => {
-        const results = data.results || [];
+        const rawResults = data.results || [];
+        const results = sortResults(rawResults);
+        
+        // 1. Calculate and update summary metrics
+        let wins = 0;
+        let losses = 0;
+        let nr = 0;
+        
+        results.forEach(match => {
+          const resLower = (match.result || '').toLowerCase();
+          const isWin = (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
+          const isLoss = (resLower.includes('lost') && resLower.includes('arches')) || 
+                         ((resLower.includes('won') || resLower.includes('beat')) && !resLower.includes('arches'));
+          if (isWin) {
+            wins++;
+          } else if (isLoss) {
+            losses++;
+          } else {
+            nr++;
+          }
+        });
+        
+        const totalPlayed = wins + losses + nr;
+        const winRate = totalPlayed > 0 ? Math.round((wins / totalPlayed) * 100) : 0;
+        
+        document.getElementById('stat-total-matches').textContent = totalPlayed;
+        document.getElementById('stat-total-wins').textContent = wins;
+        document.getElementById('stat-total-losses').textContent = losses;
+        document.getElementById('stat-total-nr').textContent = nr;
+        document.getElementById('stat-total-winrate').textContent = `${winRate}%`;
+
+        // 2. Populate tables
         const leagues = {
           "Senior League 3": document.getElementById('tbody-Senior-League-3'),
           "Junior League 10": document.getElementById('tbody-Junior-League-10'),
@@ -291,10 +358,15 @@
           
           populated.add(match.league);
           
+          const resLower = (match.result || '').toLowerCase();
+          const isWin = (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
+          const isLoss = (resLower.includes('lost') && resLower.includes('arches')) || 
+                         ((resLower.includes('won') || resLower.includes('beat')) && !resLower.includes('arches'));
+          
           let resultSpan = '';
-          if (match.result && match.result.toLowerCase().includes('won')) {
+          if (isWin) {
             resultSpan = `<span class="result-win">WIN</span><br><small>${match.result}</small>`;
-          } else if (match.result && match.result.toLowerCase().includes('lost')) {
+          } else if (isLoss) {
             resultSpan = `<span class="result-loss">LOSS</span><br><small>${match.result}</small>`;
           } else {
             resultSpan = `<span class="result-nr">${match.result || 'N/R'}</span>`;
