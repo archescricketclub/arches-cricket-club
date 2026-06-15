@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results | Arches Cricket Club</title>
+  <meta name="description" content="2025 season results for Arches Cricket Club — match scores and outcomes.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.png" alt="Arches CC Logo">
+          <div class="nav-logo-text">
+            <div class="club-name">Arches Cricket Club</div>
+            <div class="club-sub">Belfast · Est. 2024</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fixtures.html">Fixtures</a></li>
+          <li><a href="results.html" class="active">Results</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta"><a href="join.html" class="btn btn-primary"
+            style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join The Club</a></div>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="toggleMobileNav()">Home</a>
+    <a href="fixtures.html" onclick="toggleMobileNav()">Fixtures</a>
+    <a href="results.html" onclick="toggleMobileNav()">Results</a>
+    <a href="players.html" onclick="toggleMobileNav()">Players</a>
+    <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a>
+    <a href="sponsors.html" onclick="toggleMobileNav()">Sponsors</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()">Join The Club</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="badge" style="margin:0 auto 1rem;">🏆 Match Results</p>
+      <h1 class="page-hero-title">Season <span class="text-amber">Results</span></h1>
+      <p class="page-hero-sub">Full 2025 season results across Team 1 and Team 2</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Season Summary Cards -->
+      <div class="season-summary-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:3rem;">
+        <div class="glass-card reveal" style="padding:1.5rem;text-align:center;">
+          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">44</div>
+          <div
+            style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
+            Matches</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-1" style="padding:1.5rem;text-align:center;">
+          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--amber);">23</div>
+          <div
+            style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
+            Wins</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-2" style="padding:1.5rem;text-align:center;">
+          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:#f87171;">18</div>
+          <div
+            style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
+            Losses</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-3" style="padding:1.5rem;text-align:center;">
+          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);">3</div>
+          <div
+            style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
+            No Result</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-4" style="padding:1.5rem;text-align:center;">
+          <div style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">52%</div>
+          <div
+            style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">
+            Win Rate</div>
+        </div>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterResults('all',this)">All Results</button>
+        <button class="filter-tab" onclick="filterResults('team1',this)">Team 1</button>
+        <button class="filter-tab" onclick="filterResults('team2',this)">Team 2</button>
+        <button class="filter-tab" onclick="filterResults('midweek',this)">Midweek</button>
+        <button class="filter-tab" onclick="filterResults('cups',this)">Cup Matches</button>
+      </div>
+
+      <div id="r-team1" class="reveal">
+         <h2 style="font-size:1.5rem;color:var(--amber);margin:2rem 0 1.25rem;">Team 1 — Senior League Results</h2>
+        <div class="table-section">
+          <table class="data-table data-table--responsive">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Ground</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-Senior-League-3">
+              <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="r-team2" class="reveal">
+        <h2 style="font-size:1.5rem;color:var(--gold);margin:3rem 0 1.25rem;">Team 2 — Junior League Results</h2>
+        <div class="table-section">
+          <table class="data-table data-table--responsive">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Ground</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-Junior-League-10">
+              <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="r-midweek" class="reveal">
+        <h2 style="font-size:1.5rem;color:#3b82f6;margin:3rem 0 1.25rem;">Midweek — League Results</h2>
+        <div class="table-section">
+          <table class="data-table data-table--responsive">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Ground</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-Midweek-League">
+              <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="r-cups" class="reveal">
+        <h2 style="font-size:1.5rem;color:var(--amber);margin:3rem 0 1.25rem;">Team 1 — Junior Cup Results</h2>
+        <div class="table-section">
+          <table class="data-table data-table--responsive">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Ground</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-Junior-Cup">
+              <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size:1.5rem;color:var(--gold);margin:3rem 0 1.25rem;">Team 2 — Development Cup Results</h2>
+        <div class="table-section">
+          <table class="data-table data-table--responsive">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Ground</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-Development-Cup">
+              <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size:1.5rem;color:#3b82f6;margin:3rem 0 1.25rem;">T20 Shield Cup Results</h2>
+        <div class="table-section">
+          <table class="data-table data-table--responsive">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Match</th>
+                <th>Ground</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-T20-Shield-Cup">
+              <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner" style="padding-top:3rem;">
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
+          <div class="footer-legal"><a href="index.html">Home</a><a href="contact.html">Contact</a><a
+              href="join.html">Join</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() { const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger'); n.classList.toggle('open'); h.classList.toggle('open'); document.body.style.overflow = n.classList.contains('open') ? 'hidden' : ''; }
+    window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+    function filterResults(t, btn) {
+      document.querySelectorAll('.filter-tab').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      const t1 = document.getElementById('r-team1');
+      const t2 = document.getElementById('r-team2');
+      const mw = document.getElementById('r-midweek');
+      const cups = document.getElementById('r-cups');
+      
+      const allBlocks = [t1, t2, mw, cups];
+      allBlocks.forEach(b => { if (b) b.style.display = 'none'; });
+      
+      if (t === 'all') {
+        allBlocks.forEach(b => { if (b) b.style.display = ''; });
+      } else if (t === 'team1') {
+        if (t1) t1.style.display = '';
+      } else if (t === 'team2') {
+        if (t2) t2.style.display = '';
+      } else if (t === 'midweek') {
+        if (mw) mw.style.display = '';
+      } else if (t === 'cups') {
+        if (cups) cups.style.display = '';
+      }
+    }
+    document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el));
+
+    function cleanText(str) {
+      return (str || '').replace(/\n/g, ' ').trim();
+    }
+
+    // Load data dynamically
+    fetch('data/matches.json')
+      .then(res => res.json())
+      .then(data => {
+        const results = data.results || [];
+        const leagues = {
+          "Senior League 3": document.getElementById('tbody-Senior-League-3'),
+          "Junior League 10": document.getElementById('tbody-Junior-League-10'),
+          "Midweek League": document.getElementById('tbody-Midweek-League'),
+          "Junior Cup": document.getElementById('tbody-Junior-Cup'),
+          "Development Cup": document.getElementById('tbody-Development-Cup'),
+          "T20 Shield Cup": document.getElementById('tbody-T20-Shield-Cup')
+        };
+        
+        // Clear loading texts
+        Object.values(leagues).forEach(tbody => {
+          if (tbody) tbody.innerHTML = '';
+        });
+
+        const populated = new Set();
+
+        results.forEach(match => {
+          const tbody = leagues[match.league];
+          if (!tbody) return;
+          
+          populated.add(match.league);
+          
+          let resultSpan = '';
+          if (match.result && match.result.toLowerCase().includes('won')) {
+            resultSpan = `<span class="result-win">WIN</span><br><small>${match.result}</small>`;
+          } else if (match.result && match.result.toLowerCase().includes('lost')) {
+            resultSpan = `<span class="result-loss">LOSS</span><br><small>${match.result}</small>`;
+          } else {
+            resultSpan = `<span class="result-nr">${match.result || 'N/R'}</span>`;
+          }
+
+          const row = `
+            <tr>
+              <td data-label="Date">${cleanText(match.date)}</td>
+              <td data-label="Match">${cleanText(match.homeTeam)} vs ${cleanText(match.awayTeam)}</td>
+              <td data-label="Ground">${cleanText(match.venue) || 'TBD'}</td>
+              <td data-label="Result">${resultSpan}</td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
+
+        // Set "No results found" for any unpopulated categories
+        Object.keys(leagues).forEach(leagueName => {
+          if (!populated.has(leagueName)) {
+            const tbody = leagues[leagueName];
+            if (tbody) {
+              tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;">No results found</td></tr>';
+            }
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Error loading matches data:', err);
+      });
+  </script>
+</body>
+
+
+</html>
+
+

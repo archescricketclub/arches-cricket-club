@@ -1,0 +1,87 @@
+{
+  "fixtures": [
+    {
+      "homeTeam": "Amigos Belfast 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "SAT\n13 JUN",
+      "time": "SAT\n13 JUN",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Dundrum 1st XI",
+      "date": "SAT\n20 JUN",
+      "time": "SAT\n20 JUN",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Victoria 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "North Down 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Templepatrick 4th XI",
+      "date": "SUN\n21 JUN",
+      "time": "SUN\n21 JUN",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Cregagh MW XI",
+      "date": "TUE\n16 JUN",
+      "time": "TUE\n16 JUN",
+      "venue": "TBD",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Cooke Collegians MW XI",
+      "awayTeam": "Arches MW XI",
+      "date": "TUE\n23 JUN",
+      "time": "TUE\n23 JUN",
+      "venue": "TBD",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "CSNI 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "TBD",
+      "status": "",
+      "league": "Development Cup"
+    },
+    {
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "THU\n4 JUN",
+      "time": "THU\n4 JUN",
+      "venue": "TBD",
+      "status": "",
+      "league": "T20 Shield Cup"
+    }
+  ],
+  "results": [],
+  "lastUpdated": "2026-06-12T15:47:16.249Z"
+}
