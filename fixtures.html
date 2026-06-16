@@ -396,14 +396,24 @@
           
           populated.add(match.league);
           
-          const isHome = match.homeTeam.toLowerCase().includes('arches');
-          const opponent = isHome ? match.awayTeam : match.homeTeam;
-          const matchLabel = isHome ? `<span class="td-home">${match.homeTeam}</span> vs ${opponent}` : `${opponent} vs <span class="td-away">${match.awayTeam}</span>`;
+          const homeLower = (match.homeTeam || '').toLowerCase();
+          const awayLower = (match.awayTeam || '').toLowerCase();
+          const involvesArches = homeLower.includes('arches') || awayLower.includes('arches');
+          
+          let rowClass = 'match-row-other';
+          let homeDisplay = match.homeTeam;
+          let awayDisplay = match.awayTeam;
+          
+          if (involvesArches) {
+            rowClass = 'match-row-arches';
+            homeDisplay = homeLower.includes('arches') ? `<strong class="text-amber">${match.homeTeam}</strong>` : match.homeTeam;
+            awayDisplay = awayLower.includes('arches') ? `<strong class="text-amber">${match.awayTeam}</strong>` : match.awayTeam;
+          }
 
           const row = `
-            <tr>
+            <tr class="${rowClass}">
               <td data-label="Date">${cleanText(match.date)}</td>
-              <td data-label="Match">${matchLabel}</td>
+              <td data-label="Match">${homeDisplay} vs ${awayDisplay}</td>
               <td data-label="Time">${cleanText(match.time) || 'TBD'}</td>
               <td data-label="Ground">${cleanText(match.venue) || 'TBD'}</td>
             </tr>

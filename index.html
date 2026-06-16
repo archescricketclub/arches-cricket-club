@@ -1022,10 +1022,17 @@
                 const fixtures = matchesRes.fixtures || [];
                 const results = matchesRes.results || [];
                 const squadSize = rosterRes.length || 33;
-                const matchesPlayed = results.length;
+                
+                // Filter matches involving Arches
+                const archesResults = results.filter(r => {
+                    const homeLower = (r.homeTeam || '').toLowerCase();
+                    const awayLower = (r.awayTeam || '').toLowerCase();
+                    return homeLower.includes('arches') || awayLower.includes('arches');
+                });
+                const matchesPlayed = archesResults.length;
                 
                 // Count victories
-                const victories = results.filter(r => {
+                const victories = archesResults.filter(r => {
                     const resLower = (r.result || '').toLowerCase();
                     return (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
                 }).length;
@@ -1054,8 +1061,13 @@
                 const winRateEl = document.getElementById('hero-win-rate');
                 if (winRateEl) winRateEl.textContent = `${winRate}%`;
 
-                // 2. Sort Fixtures Chronologically
-                const sortedFixtures = sortFixtures(fixtures);
+                // 2. Filter and Sort Fixtures Chronologically (Only involving Arches)
+                const archesFixtures = fixtures.filter(m => {
+                    const homeLower = (m.homeTeam || '').toLowerCase();
+                    const awayLower = (m.awayTeam || '').toLowerCase();
+                    return homeLower.includes('arches') || awayLower.includes('arches');
+                });
+                const sortedFixtures = sortFixtures(archesFixtures);
 
                 // 3. Next Match Floating Card
                 if (sortedFixtures.length > 0) {

@@ -2549,3 +2549,19 @@ button {
     color: #030712;
   }
 }
+
+/* ─── HIGHLIGHTING FOR LEAGUE LISTS ─── */
+.match-row-arches {
+  background: rgba(245, 158, 11, 0.05) !important;
+  border-left: 3px solid var(--amber) !important;
+}
+
+.match-row-other {
+  opacity: 0.8;
+}
+
+.result-neutral {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}

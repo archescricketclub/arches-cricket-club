@@ -313,6 +313,11 @@
         let nr = 0;
         
         results.forEach(match => {
+          const homeLower = (match.homeTeam || '').toLowerCase();
+          const awayLower = (match.awayTeam || '').toLowerCase();
+          const involvesArches = homeLower.includes('arches') || awayLower.includes('arches');
+          if (!involvesArches) return;
+          
           const resLower = (match.result || '').toLowerCase();
           const isWin = (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
           const isLoss = (resLower.includes('lost') && resLower.includes('arches')) || 
@@ -358,24 +363,38 @@
           
           populated.add(match.league);
           
-          const resLower = (match.result || '').toLowerCase();
-          const isWin = (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
-          const isLoss = (resLower.includes('lost') && resLower.includes('arches')) || 
-                         ((resLower.includes('won') || resLower.includes('beat')) && !resLower.includes('arches'));
+          const homeLower = (match.homeTeam || '').toLowerCase();
+          const awayLower = (match.awayTeam || '').toLowerCase();
+          const involvesArches = homeLower.includes('arches') || awayLower.includes('arches');
           
           let resultSpan = '';
-          if (isWin) {
-            resultSpan = `<span class="result-win">WIN</span><br><small>${match.result}</small>`;
-          } else if (isLoss) {
-            resultSpan = `<span class="result-loss">LOSS</span><br><small>${match.result}</small>`;
+          let rowClass = 'match-row-other';
+          
+          if (involvesArches) {
+            rowClass = 'match-row-arches';
+            const resLower = (match.result || '').toLowerCase();
+            const isWin = (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
+            const isLoss = (resLower.includes('lost') && resLower.includes('arches')) || 
+                           ((resLower.includes('won') || resLower.includes('beat')) && !resLower.includes('arches'));
+            
+            if (isWin) {
+              resultSpan = `<span class="result-win">WIN</span><br><small>${match.result}</small>`;
+            } else if (isLoss) {
+              resultSpan = `<span class="result-loss">LOSS</span><br><small>${match.result}</small>`;
+            } else {
+              resultSpan = `<span class="result-nr">${match.result || 'N/R'}</span>`;
+            }
           } else {
-            resultSpan = `<span class="result-nr">${match.result || 'N/R'}</span>`;
+            resultSpan = `<span class="result-neutral">${match.result || 'Completed'}</span>`;
           }
 
+          const homeDisplay = homeLower.includes('arches') ? `<strong class="text-amber">${match.homeTeam}</strong>` : match.homeTeam;
+          const awayDisplay = awayLower.includes('arches') ? `<strong class="text-amber">${match.awayTeam}</strong>` : match.awayTeam;
+
           const row = `
-            <tr>
+            <tr class="${rowClass}">
               <td data-label="Date">${cleanText(match.date)}</td>
-              <td data-label="Match">${cleanText(match.homeTeam)} vs ${cleanText(match.awayTeam)}</td>
+              <td data-label="Match">${homeDisplay} vs ${awayDisplay}</td>
               <td data-label="Ground">${cleanText(match.venue) || 'TBD'}</td>
               <td data-label="Result">${resultSpan}</td>
             </tr>
