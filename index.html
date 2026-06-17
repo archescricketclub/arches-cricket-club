@@ -168,14 +168,14 @@
             
             <div style="margin-top: 2rem;">
                 <h3 style="font-size:1.3rem; font-family:'Orbitron',sans-serif; margin-bottom:1.25rem; color:var(--amber); display:flex; align-items:center; gap:0.5rem;" class="reveal">
-                    <span>🏠</span> 3 Upcoming Home Matches
+                    <span>🏠</span> Upcoming Home Fixtures
                 </h3>
                 <div class="matches-grid" id="upcoming-home-matches-grid" style="margin-bottom: 3rem;">
                     <div style="grid-column:1/-1;text-align:center;color:var(--muted);">Loading home matches...</div>
                 </div>
 
                 <h3 style="font-size:1.3rem; font-family:'Orbitron',sans-serif; margin-bottom:1.25rem; color:var(--gold); display:flex; align-items:center; gap:0.5rem;" class="reveal">
-                    <span>📅</span> 3 Next Overall Matches
+                    <span>📅</span> Upcoming Fixtures
                 </h3>
                 <div class="matches-grid" id="upcoming-all-matches-grid">
                     <div style="grid-column:1/-1;text-align:center;color:var(--muted);">Loading overall matches...</div>
@@ -925,8 +925,18 @@
         }
 
         const months = {
-            'JAN': 0, 'FEB': 1, 'MAR': 2, 'APR': 3, 'MAY': 4, 'JUN': 5,
-            'JUL': 6, 'AUG': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DEC': 11
+            'JAN': 0, 'JANUARY': 0,
+            'FEB': 1, 'FEBRUARY': 1,
+            'MAR': 2, 'MARCH': 2,
+            'APR': 3, 'APRIL': 3,
+            'MAY': 4,
+            'JUN': 5, 'JUNE': 5,
+            'JUL': 6, 'JULY': 6,
+            'AUG': 7, 'AUGUST': 7,
+            'SEP': 8, 'SEPTEMBER': 8,
+            'OCT': 9, 'OCTOBER': 9,
+            'NOV': 10, 'NOVEMBER': 10,
+            'DEC': 11, 'DECEMBER': 11
         };
 
         function parseMatchDate(dateStr) {
@@ -937,8 +947,9 @@
             let month = null;
             for (const part of parts) {
                 const upper = part.toUpperCase();
-                if (/^\d+$/.test(part)) {
-                    day = parseInt(part, 10);
+                const dayMatch = part.match(/^(\d+)(?:st|nd|rd|th)?$/i);
+                if (dayMatch) {
+                    day = parseInt(dayMatch[1], 10);
                 } else if (months[upper] !== undefined) {
                     month = months[upper];
                 }
@@ -982,13 +993,13 @@
                             <div class="match-team">
                                 <div class="match-team-logo">${isHome ? '🏏' : '⚔️'}</div>
                                 <div class="match-team-name">${m.homeTeam}</div>
-                                <div class="match-team-sub">${isHome ? 'Home' : 'Away'}</div>
+                                <div class="match-team-sub">Home</div>
                             </div>
                             <div class="match-vs">VS</div>
                             <div class="match-team">
                                 <div class="match-team-logo">${!isHome ? '🏏' : '⚔️'}</div>
                                 <div class="match-team-name">${m.awayTeam}</div>
-                                <div class="match-team-sub">${!isHome ? 'Home' : 'Away'}</div>
+                                <div class="match-team-sub">Away</div>
                             </div>
                         </div>
                         <div class="match-info">
