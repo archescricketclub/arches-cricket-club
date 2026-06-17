@@ -154,15 +154,6 @@
       "league": "Junior League 10"
     },
     {
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Cregagh",
-      "date": "16th June",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Cooke Collegians",
       "awayTeam": "Arches MW XI",
       "date": "23rd June",
@@ -193,6 +184,15 @@
       "homeTeam": "Arches MW XI",
       "awayTeam": "Dunmurry 2",
       "date": "14th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "CSNI",
+      "awayTeam": "Arches MW XI",
+      "date": "22nd July",
       "time": "11:00 AM",
       "venue": "TBD",
       "status": "",
@@ -290,6 +290,14 @@
       "result": "Arches 2 beat NIMACC 2 – NIMACC 2 played an inelgible player"
     },
     {
+      "date": "16th June",
+      "league": "Midweek League",
+      "homeTeam": "Cregagh",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBD",
+      "result": "Arches beat Cregagh by 9 wickets"
+    },
+    {
       "date": "10th June",
       "league": "Midweek League",
       "homeTeam": "CSNI",
@@ -330,5 +338,5 @@
       "result": "Match Postponed"
     }
   ],
-  "lastUpdated": "2026-06-16T12:47:06.621Z"
+  "lastUpdated": "2026-06-17T14:32:26.353Z"
 }
