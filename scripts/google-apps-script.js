@@ -21,7 +21,7 @@
 // You can find the ID in the Google Sheet URL between '/d/' and '/edit'.
 // Leave them empty "" if you want to use the active spreadsheet where the script is hosted.
 var REGISTRATION_SPREADSHEET_ID = ""; 
-var PHOTOS_SPREADSHEET_ID = ""; 
+var PHOTOS_SPREADSHEET_ID = "1JG9fB89FVYJT6_Ehf33X2kEc4JG7Okva-_EBoMsne0o"; 
 var CONTACT_SPREADSHEET_ID = ""; 
 
 // Handle POST request from the website forms
