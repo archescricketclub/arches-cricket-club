@@ -1034,7 +1034,20 @@
                 // Count victories
                 const victories = archesResults.filter(r => {
                     const resLower = (r.result || '').toLowerCase();
-                    return (resLower.includes('won') || resLower.includes('beat')) && resLower.includes('arches');
+                    const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed'];
+                    const isNoResult = noResultKeywords.some(k => resLower.includes(k));
+                    if (isNoResult) return false;
+                    
+                    if (resLower.includes('beat')) {
+                        const winnerPart = resLower.split('beat')[0];
+                        return winnerPart.includes('arches');
+                    } else if (resLower.includes('won')) {
+                        const winnerPart = resLower.split('won')[0];
+                        return winnerPart.includes('arches');
+                    } else if (resLower.includes('walkover')) {
+                        return resLower.includes('arches') && (resLower.includes('to arches') || resLower.includes('won by'));
+                    }
+                    return false;
                 }).length;
                 
                 const winRate = matchesPlayed > 0 ? Math.round((victories / matchesPlayed) * 100) : 52;

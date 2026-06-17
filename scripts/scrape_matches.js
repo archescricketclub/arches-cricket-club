@@ -152,15 +152,36 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
           
           const teams = matchStr.split(' v ');
           if (teams.length >= 2) {
-            fixtures.push({
-              homeTeam: teams[0].trim(),
-              awayTeam: teams[1].trim(),
-              date: dateText,
-              time: '11:00 AM', // default start time
-              venue: venue,
-              status: '',
-              league: leagueName
-            });
+            const homeClean = teams[0].trim();
+            const awayClean = teams[1].trim();
+            
+            // Only keep Arches matches
+            if (homeClean.toLowerCase().includes('arches') || awayClean.toLowerCase().includes('arches')) {
+              let homeTeam = homeClean;
+              let awayTeam = awayClean;
+              
+              // Map Arches squad names
+              if (leagueName === 'Senior League 3') {
+                if (homeClean === 'Arches') homeTeam = 'Arches 1st XI';
+                if (awayClean === 'Arches') awayTeam = 'Arches 1st XI';
+              } else if (leagueName === 'Junior League 10') {
+                if (homeClean === 'Arches' || homeClean === 'Arches 2') homeTeam = 'Arches 2nd XI';
+                if (awayClean === 'Arches' || awayClean === 'Arches 2') awayTeam = 'Arches 2nd XI';
+              } else if (leagueName === 'Midweek League') {
+                if (homeClean === 'Arches') homeTeam = 'Arches MW XI';
+                if (awayClean === 'Arches') awayTeam = 'Arches MW XI';
+              }
+              
+              fixtures.push({
+                homeTeam,
+                awayTeam,
+                date: dateText,
+                time: '11:00 AM', // default start time
+                venue: venue,
+                status: '',
+                league: leagueName
+              });
+            }
           }
         }
       });
@@ -248,14 +269,29 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
         }
       }
       
-      results.push({
-        date: currentDate,
-        league: leagueName,
-        homeTeam,
-        awayTeam,
-        venue: 'TBD', // default venue since results rarely state venue directly in list
-        result: resultText
-      });
+      // Only keep Arches matches
+      if (homeTeam.toLowerCase().includes('arches') || awayTeam.toLowerCase().includes('arches')) {
+        // Map Arches squad names
+        if (leagueName === 'Senior League 3') {
+          if (homeTeam === 'Arches') homeTeam = 'Arches 1st XI';
+          if (awayTeam === 'Arches') awayTeam = 'Arches 1st XI';
+        } else if (leagueName === 'Junior League 10') {
+          if (homeTeam === 'Arches' || homeTeam === 'Arches 2') homeTeam = 'Arches 2nd XI';
+          if (awayTeam === 'Arches' || awayTeam === 'Arches 2') awayTeam = 'Arches 2nd XI';
+        } else if (leagueName === 'Midweek League') {
+          if (homeTeam === 'Arches') homeTeam = 'Arches MW XI';
+          if (awayTeam === 'Arches') awayTeam = 'Arches MW XI';
+        }
+        
+        results.push({
+          date: currentDate,
+          league: leagueName,
+          homeTeam,
+          awayTeam,
+          venue: 'TBD', // default venue since results rarely state venue directly in list
+          result: resultText
+        });
+      }
     });
     
     return { fixtures, results };

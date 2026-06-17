@@ -394,21 +394,16 @@
           const tbody = leagues[match.league];
           if (!tbody) return;
           
-          populated.add(match.league);
-          
           const homeLower = (match.homeTeam || '').toLowerCase();
           const awayLower = (match.awayTeam || '').toLowerCase();
           const involvesArches = homeLower.includes('arches') || awayLower.includes('arches');
+          if (!involvesArches) return;
           
-          let rowClass = 'match-row-other';
-          let homeDisplay = match.homeTeam;
-          let awayDisplay = match.awayTeam;
+          populated.add(match.league);
           
-          if (involvesArches) {
-            rowClass = 'match-row-arches';
-            homeDisplay = homeLower.includes('arches') ? `<strong class="text-amber">${match.homeTeam}</strong>` : match.homeTeam;
-            awayDisplay = awayLower.includes('arches') ? `<strong class="text-amber">${match.awayTeam}</strong>` : match.awayTeam;
-          }
+          let rowClass = 'match-row-arches';
+          let homeDisplay = homeLower.includes('arches') ? `<strong class="text-amber">${match.homeTeam}</strong>` : match.homeTeam;
+          let awayDisplay = awayLower.includes('arches') ? `<strong class="text-amber">${match.awayTeam}</strong>` : match.awayTeam;
 
           const row = `
             <tr class="${rowClass}">
