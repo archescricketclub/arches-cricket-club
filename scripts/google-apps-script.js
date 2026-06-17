@@ -103,55 +103,76 @@ function handleRegistration(data) {
 function handlePhotoUpload(data) {
   var senderName = data.name || "Anonymous";
   var caption = data.caption || "No caption";
-  var base64Data = data.image;
-  var filename = data.filename || "upload.jpg";
+  var images = data.images || [];
   
-  if (!base64Data) {
+  // Backwards compatibility for single image upload
+  if (data.image) {
+    images.push({
+      data: data.image,
+      filename: data.filename || "upload.jpg"
+    });
+  }
+  
+  if (images.length === 0) {
     return createResponse({ result: 'error', error: 'No image data provided' });
   }
   
-  // Save to Google Drive
-  var fileInfo;
-  try {
-    fileInfo = saveFileToDrive(base64Data, filename);
-  } catch (err) {
-    return createResponse({ result: 'error', error: 'Drive upload failed: ' + err.toString() });
-  }
+  var fileLinks = [];
+  var fileAttachments = [];
+  var fileIds = [];
   
-  // Log to Sheet
-  var logPayload = {
-    "Sender Name": senderName,
-    "Caption / Match Details": caption,
-    "Google Drive Link": fileInfo.url,
-    "File ID": fileInfo.fileId
-  };
-  logToSheet("Photos", logPayload);
+  // Save all images to Google Drive and log them
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+    try {
+      var fileInfo = saveFileToDrive(img.data, img.filename);
+      fileLinks.push(fileInfo.url);
+      fileAttachments.push(fileInfo.blob);
+      fileIds.push(fileInfo.fileId);
+      
+      // Log to Sheet (one row per photo)
+      var logPayload = {
+        "Sender Name": senderName,
+        "Caption / Match Details": caption,
+        "Google Drive Link": fileInfo.url,
+        "File ID": fileInfo.fileId
+      };
+      logToSheet("Photos", logPayload);
+    } catch (err) {
+      return createResponse({ result: 'error', error: 'Upload failed on file #' + (i+1) + ': ' + err.toString() });
+    }
+  }
   
   // Send Email Notification
   var emailRecipient = "archescricketclub@gmail.com";
-  var subject = "📸 New Photo Submission: " + senderName;
+  var subject = "📸 New Photo Submission: " + senderName + " (" + images.length + " photos)";
   
-  var emailBodyText = "New photo submitted to Arches CC gallery!\n\n" +
+  var emailBodyText = "New photos submitted to Arches CC gallery!\n\n" +
                       "Sender Name: " + senderName + "\n" +
-                      "Caption / Details: " + caption + "\n" +
-                      "Google Drive Link: " + fileInfo.url + "\n\n" +
-                      "The file is attached to this email and saved in Google Drive folder 'Arches CC Gallery Submissions'.";
+                      "Caption / Details: " + caption + "\n\n" +
+                      "Google Drive Links:\n" + fileLinks.join("\n") + "\n\n" +
+                      "The files are attached to this email and saved in Google Drive.";
                   
+  var linksHtml = "";
+  for (var k = 0; k < fileLinks.length; k++) {
+    linksHtml += "<p style='margin: 5px 0;'><strong>Photo " + (k + 1) + ":</strong> <a href='" + fileLinks[k] + "' target='_blank' style='color: #ff6b1a; font-weight: bold;'>View in Google Drive</a></p>";
+  }
+  
   var htmlBody = 
     "<div style='font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #f8fafc;'>" +
       "<div style='text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #ff6b1a;'>" +
         "<h2 style='color: #ff6b1a; margin: 0; font-size: 24px; letter-spacing: 0.5px;'>ARCHES CRICKET CLUB</h2>" +
-        "<p style='color: #64748b; margin: 5px 0 0; font-size: 14px; font-weight: 500;'>New Gallery Submission</p>" +
+        "<p style='color: #64748b; margin: 5px 0 0; font-size: 14px; font-weight: 500;'>New Gallery Submission (" + images.length + " photos)</p>" +
       "</div>" +
       "<div style='background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 20px; font-size: 14px; line-height: 1.6; color: #333333;'>" +
         "<p style='margin: 0 0 10px;'><strong>Submitted By:</strong> " + senderName + "</p>" +
         "<p style='margin: 0 0 15px;'><strong>Caption / Details:</strong> " + caption + "</p>" +
-        "<div style='margin-top: 20px; padding-top: 15px; border-top: 1px solid #eeeeee; text-align: center;'>" +
-          "<a href='" + fileInfo.url + "' target='_blank' style='background-color: #ff6b1a; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;'>View File on Google Drive</a>" +
+        "<div style='margin-top: 20px; padding-top: 15px; border-top: 1px solid #eeeeee;'>" +
+          linksHtml +
         "</div>" +
       "</div>" +
       "<p style='font-size: 11px; color: #94a3b8; text-align: center; margin-top: 30px; line-height: 1.4;'>" +
-        "This submission is logged in Google Sheet under 'Photos'. The image is attached below.<br>" +
+        "This submission is logged in Google Sheet under 'Photos'. The images are attached below.<br>" +
         "© 2026 Arches Cricket Club · Victoria Park, Belfast" +
       "</p>" +
     "</div>";
@@ -159,14 +180,13 @@ function handlePhotoUpload(data) {
   try {
     GmailApp.sendEmail(emailRecipient, subject, emailBodyText, {
       htmlBody: htmlBody,
-      attachments: [fileInfo.blob]
+      attachments: fileAttachments
     });
   } catch (mailErr) {
-    // If Gmail send fails (e.g. daily quota reached or size too big), log it but don't crash, still return success for upload
     Logger.log("Mail send failed: " + mailErr.toString());
   }
   
-  return createResponse({ result: 'success', url: fileInfo.url });
+  return createResponse({ result: 'success', urls: fileLinks });
 }
 
 // Process Contact Message submissions
