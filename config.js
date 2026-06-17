@@ -1,7 +1,7 @@
 // Arches Cricket Club Website Configuration
 const CONFIG = {
   // Replace this with your Google Apps Script Web App URL after deploying the custom script.
-  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbxPJ6QsCUfQQImmSjKEbAo7w7vuV6WDeVbQ4Tb8qphoNeBya031nv_jNDGzt9Bay2Lljw/exec",
+  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbw5q_Na88W-Taq50AS8KsWrBU2iulfMaN7OrZWpcu7cp1-vZpVtA8Gs4acsqUTOEpDeNg/exec",
 
   /**
    * Helper to submit payloads to Google Apps Script.
