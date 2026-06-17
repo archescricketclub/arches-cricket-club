@@ -17,6 +17,13 @@
  *    SCRIPT_URL: "https://script.google.com/macros/s/.../exec"
  */
 
+// CONFIGURATION: Set the Spreadsheet IDs here if you want to store submissions in separate files.
+// You can find the ID in the Google Sheet URL between '/d/' and '/edit'.
+// Leave them empty "" if you want to use the active spreadsheet where the script is hosted.
+var REGISTRATION_SPREADSHEET_ID = ""; 
+var PHOTOS_SPREADSHEET_ID = ""; 
+var CONTACT_SPREADSHEET_ID = ""; 
+
 // Handle POST request from the website forms
 function doPost(e) {
   try {
@@ -274,7 +281,22 @@ function saveFileToDrive(base64Data, filename) {
 
 // Helper: Log key-value payload dynamically to a sheet
 function logToSheet(sheetName, data) {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss;
+  try {
+    if (sheetName === "Registrations" && REGISTRATION_SPREADSHEET_ID) {
+      ss = SpreadsheetApp.openById(REGISTRATION_SPREADSHEET_ID);
+    } else if (sheetName === "Photos" && PHOTOS_SPREADSHEET_ID) {
+      ss = SpreadsheetApp.openById(PHOTOS_SPREADSHEET_ID);
+    } else if (sheetName === "Contact Messages" && CONTACT_SPREADSHEET_ID) {
+      ss = SpreadsheetApp.openById(CONTACT_SPREADSHEET_ID);
+    } else {
+      ss = SpreadsheetApp.getActiveSpreadsheet();
+    }
+  } catch (err) {
+    Logger.log("Failed to open spreadsheet by ID, falling back to active sheet: " + err.toString());
+    ss = SpreadsheetApp.getActiveSpreadsheet();
+  }
+  
   var sheet = ss.getSheetByName(sheetName);
   if (!sheet) {
     sheet = ss.insertSheet(sheetName);
