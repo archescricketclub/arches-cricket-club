@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
 </head>
 
 <body>
@@ -162,24 +163,24 @@
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label">First Name *</label>
-                <input type="text" class="form-input" placeholder="John" required>
+                <input type="text" id="contactFirstName" class="form-input" placeholder="John" required>
               </div>
               <div class="form-group">
                 <label class="form-label">Last Name *</label>
-                <input type="text" class="form-input" placeholder="Smith" required>
+                <input type="text" id="contactLastName" class="form-input" placeholder="Smith" required>
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Email Address *</label>
-              <input type="email" class="form-input" placeholder="john@example.com" required>
+              <input type="email" id="contactEmail" class="form-input" placeholder="john@example.com" required>
             </div>
             <div class="form-group">
               <label class="form-label">Phone (optional)</label>
-              <input type="tel" class="form-input" placeholder="+44 7xxx xxxxxx">
+              <input type="tel" id="contactPhone" class="form-input" placeholder="+44 7xxx xxxxxx">
             </div>
             <div class="form-group">
               <label class="form-label">Subject *</label>
-              <select class="form-select" required>
+              <select id="contactSubject" class="form-select" required>
                 <option value="">Select a subject...</option>
                 <option>Joining The Club</option>
                 <option>Sponsorship Enquiry</option>
@@ -191,10 +192,10 @@
             </div>
             <div class="form-group">
               <label class="form-label">Your Message *</label>
-              <textarea class="form-textarea" placeholder="Tell us what you're looking for..." rows="5"
+              <textarea id="contactMessage" class="form-textarea" placeholder="Tell us what you're looking for..." rows="5"
                 required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary"
+            <button type="submit" class="btn btn-primary" id="contactSubmitBtn"
               style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;">
               <i class="fa-solid fa-paper-plane"></i> Send Message
             </button>
@@ -281,8 +282,49 @@
     document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el));
     function handleContact(e) {
       e.preventDefault();
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('contactSuccess').style.display = 'block';
+      
+      const submitBtn = document.getElementById('contactSubmitBtn');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      
+      const firstName = document.getElementById('contactFirstName').value;
+      const lastName = document.getElementById('contactLastName').value;
+      const email = document.getElementById('contactEmail').value;
+      const phone = document.getElementById('contactPhone').value;
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value;
+      
+      const payload = {
+        action: 'contact',
+        'First Name': firstName,
+        'Last Name': lastName,
+        'Email Address': email,
+        'Phone Number': phone || 'N/A',
+        'Subject': subject,
+        'Message': message
+      };
+      
+      fetch(CONFIG.SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify(payload)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.result === 'success') {
+          document.getElementById('contactForm').style.display = 'none';
+          document.getElementById('contactSuccess').style.display = 'block';
+        } else {
+          throw new Error(data.error || "Submission failed");
+        }
+      })
+      .catch(error => {
+        console.error("Contact form error:", error);
+        alert("Error sending message. Please try again.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      });
     }
   </script>
 </body>

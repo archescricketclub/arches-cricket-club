@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,6 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
 </head>
 
 <body>
@@ -150,25 +151,25 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label">First Name *</label>
-                                <input type="text" class="form-input" placeholder="John" required>
+                                <input type="text" id="joinFirstName" class="form-input" placeholder="John" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Last Name *</label>
-                                <input type="text" class="form-input" placeholder="Smith" required>
+                                <input type="text" id="joinLastName" class="form-input" placeholder="Smith" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Email Address *</label>
-                            <input type="email" class="form-input" placeholder="john@example.com" required>
+                            <input type="email" id="joinEmail" class="form-input" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Phone Number</label>
-                            <input type="tel" class="form-input" placeholder="+44 7xxx xxxxxx">
+                            <input type="tel" id="joinPhone" class="form-input" placeholder="+44 7xxx xxxxxx">
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label">Playing Role *</label>
-                                <select class="form-select" required>
+                                <select id="joinRole" class="form-select" required>
                                     <option value="">Select role...</option>
                                     <option>Batsman</option>
                                     <option>Bowler</option>
@@ -179,7 +180,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Experience *</label>
-                                <select class="form-select" required>
+                                <select id="joinExperience" class="form-select" required>
                                     <option value="">Select level...</option>
                                     <option>Beginner</option>
                                     <option>Intermediate</option>
@@ -190,7 +191,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Preferred Team</label>
-                            <select class="form-select">
+                            <select id="joinPreferredTeam" class="form-select">
                                 <option value="">No preference</option>
                                 <option>Team 1 – Senior League</option>
                                 <option>Team 2 – Junior League</option>
@@ -199,10 +200,10 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Anything else you'd like us to know?</label>
-                            <textarea class="form-textarea" placeholder="Previous club, availability, questions..."
+                            <textarea id="joinNotes" class="form-textarea" placeholder="Previous club, availability, questions..."
                                 rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary"
+                        <button type="submit" class="btn btn-primary" id="joinSubmitBtn"
                             style="width:100%;justify-content:center;padding:1rem 2rem;font-size:1rem;">
                             <i class="fa-solid fa-paper-plane"></i> Submit Registration
                         </button>
@@ -253,8 +254,54 @@
         document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el));
         function handleJoin(e) {
             e.preventDefault();
-            document.getElementById('joinForm').style.display = 'none';
-            document.getElementById('joinSuccess').style.display = 'block';
+            
+            const submitBtn = document.getElementById('joinSubmitBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+            
+            const firstName = document.getElementById('joinFirstName').value;
+            const lastName = document.getElementById('joinLastName').value;
+            const email = document.getElementById('joinEmail').value;
+            const phone = document.getElementById('joinPhone').value;
+            const role = document.getElementById('joinRole').value;
+            const experience = document.getElementById('joinExperience').value;
+            const preferredTeam = document.getElementById('joinPreferredTeam').value;
+            const notes = document.getElementById('joinNotes').value;
+            
+            const payload = {
+                action: 'register',
+                'Source Form': 'Join The Club Interest',
+                'First Name': firstName,
+                'Last Name': lastName,
+                'Email Address': email,
+                'Phone Number': phone,
+                'Playing Role': role,
+                'Experience Level': experience,
+                'Preferred Team': preferredTeam,
+                'Notes': notes
+            };
+            
+            fetch(CONFIG.SCRIPT_URL, {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    document.getElementById('joinForm').style.display = 'none';
+                    document.getElementById('joinSuccess').style.display = 'block';
+                } else {
+                    throw new Error(data.error || "Submission failed");
+                }
+            })
+            .catch(error => {
+                console.error("Join submission error:", error);
+                alert("Error submitting registration. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
         }
     </script>
 </body>

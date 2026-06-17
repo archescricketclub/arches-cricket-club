@@ -14,6 +14,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
   <style>
     .full-gallery-grid {
       display: grid;
@@ -277,14 +278,50 @@
       </div>
 
       <!-- Upload CTA -->
-      <div class="glass-card reveal" style="padding:2.5rem;text-align:center;margin-top:3rem;">
+      <div class="glass-card reveal" id="uploadCard" style="padding:2.5rem;text-align:center;margin-top:3rem;max-width:600px;margin-left:auto;margin-right:auto;">
         <p style="font-size:2rem;margin-bottom:1rem;">📸</p>
         <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Got Photos From A Match?</h3>
-        <p style="color:var(--muted);margin-bottom:1.5rem;">Share your photos with us and we'll feature them in our
-          gallery.</p>
-        <a href="mailto:archescricketclub@gmail.com?subject=Gallery Photos" class="btn btn-primary">
+        <p style="color:var(--muted);margin-bottom:1.5rem;" id="uploadSubtext">Share your photos with us and we'll feature them in our gallery.</p>
+        
+        <button id="toggleUploadBtn" class="btn btn-primary" onclick="toggleUploadForm()" style="margin: 0 auto; display: inline-flex; align-items: center; gap: 8px;">
           <i class="fa-solid fa-paper-plane"></i> Send Your Photos
-        </a>
+        </button>
+
+        <form id="photoUploadForm" style="display:none; text-align:left; margin-top:2rem;" onsubmit="handlePhotoUpload(event)">
+          <div class="form-group">
+            <label class="form-label">Your Name *</label>
+            <input type="text" id="photoSenderName" class="form-input" placeholder="e.g. John Smith" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Photo Caption / Match Details *</label>
+            <textarea id="photoCaption" class="form-textarea" placeholder="e.g. Senior XI winning match against Belfast CC, 12th July" rows="3" required></textarea>
+          </div>
+          
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="form-label">Select Photo *</label>
+            <div class="file-drop-zone" style="border:2px dashed var(--border);border-radius:12px;padding:2rem;text-align:center;background:rgba(255,255,255,0.02);cursor:pointer;transition:all 0.3s;" onclick="document.getElementById('photoFile').click()">
+              <i class="fa-solid fa-cloud-arrow-up" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+              <p style="margin:0;font-size:0.9rem;color:var(--text);" id="fileNameDisplay">Drag and drop or click to upload</p>
+              <p style="margin:0.25rem 0 0;font-size:0.75rem;color:var(--muted);">Supports JPG, PNG, GIF (max 10MB)</p>
+              <input type="file" id="photoFile" accept="image/*" required style="display:none;" onchange="handleFileSelect(event)">
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;justify-content:flex-end;">
+            <button type="button" class="btn btn-ghost" onclick="toggleUploadForm()" style="padding:0.75rem 1.5rem;">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="photoSubmitBtn" style="padding:0.75rem 1.5rem;">
+              <i class="fa-solid fa-upload"></i> Upload & Send
+            </button>
+          </div>
+        </form>
+
+        <div id="uploadSuccess" style="display:none;padding:2rem 0;text-align:center;">
+          <div style="font-size:3rem;margin-bottom:1rem;">🎉</div>
+          <h3 style="font-size:1.5rem;margin-bottom:0.75rem;">Photo Sent!</h3>
+          <p style="color:var(--muted);margin-bottom:1.5rem;line-height:1.7;">Thank you for contributing! Your photo has been sent to our inbox at <strong style="color:var(--amber);">archescricketclub@gmail.com</strong> and saved in Google Sheets. We will review and add it to the gallery soon.</p>
+          <button class="btn btn-ghost" onclick="resetUploadForm()">Send Another Photo</button>
+        </div>
       </div>
     </div>
   </section>
@@ -334,6 +371,135 @@
     }
     function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Gallery Photo Upload Logic
+    function toggleUploadForm() {
+      const form = document.getElementById('photoUploadForm');
+      const toggleBtn = document.getElementById('toggleUploadBtn');
+      const subtext = document.getElementById('uploadSubtext');
+      
+      if (form.style.display === 'none') {
+        form.style.display = 'block';
+        toggleBtn.style.display = 'none';
+        subtext.style.display = 'none';
+        initDragAndDrop();
+      } else {
+        form.style.display = 'none';
+        toggleBtn.style.display = 'inline-flex';
+        subtext.style.display = 'block';
+      }
+    }
+    
+    function handleFileSelect(e) {
+      const file = e.target.files[0];
+      if (file) {
+        document.getElementById('fileNameDisplay').textContent = file.name;
+        document.getElementById('fileNameDisplay').style.color = 'var(--amber)';
+      }
+    }
+    
+    let dragDropInitialized = false;
+    function initDragAndDrop() {
+      if (dragDropInitialized) return;
+      const dropZone = document.querySelector('.file-drop-zone');
+      if (dropZone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, e => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'var(--amber)';
+            dropZone.style.background = 'rgba(245, 158, 11, 0.05)';
+          }, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, e => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'var(--border)';
+            dropZone.style.background = 'rgba(255, 255, 255, 0.02)';
+          }, false);
+        });
+        
+        dropZone.addEventListener('drop', e => {
+          const dt = e.dataTransfer;
+          const files = dt.files;
+          if (files.length) {
+            const fileInput = document.getElementById('photoFile');
+            fileInput.files = files;
+            document.getElementById('fileNameDisplay').textContent = files[0].name;
+            document.getElementById('fileNameDisplay').style.color = 'var(--amber)';
+          }
+        });
+        dragDropInitialized = true;
+      }
+    }
+    
+    function handlePhotoUpload(e) {
+      e.preventDefault();
+      
+      const fileInput = document.getElementById('photoFile');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert("Please select a photo to upload.");
+        return;
+      }
+      
+      const senderName = document.getElementById('photoSenderName').value;
+      const caption = document.getElementById('photoCaption').value;
+      const submitBtn = document.getElementById('photoSubmitBtn');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const base64Data = evt.target.result;
+        
+        const payload = {
+          action: 'uploadPhoto',
+          name: senderName,
+          caption: caption,
+          image: base64Data,
+          filename: file.name
+        };
+        
+        fetch(CONFIG.SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.result === 'success') {
+            document.getElementById('photoUploadForm').style.display = 'none';
+            document.getElementById('uploadSuccess').style.display = 'block';
+          } else {
+            throw new Error(data.error || "Submission failed");
+          }
+        })
+        .catch(error => {
+          console.error("Photo upload error:", error);
+          alert("Error sending photo: " + error.message + ". Please try again.");
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
+      };
+      
+      reader.onerror = function() {
+        alert("Error reading file.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      };
+      
+      reader.readAsDataURL(file);
+    }
+    
+    function resetUploadForm() {
+      document.getElementById('photoUploadForm').reset();
+      document.getElementById('fileNameDisplay').textContent = "Drag and drop or click to upload";
+      document.getElementById('fileNameDisplay').style.color = 'var(--text)';
+      document.getElementById('uploadSuccess').style.display = 'none';
+      document.getElementById('photoUploadForm').style.display = 'block';
+    }
   </script>
 </body>
 

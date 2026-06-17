@@ -5,6 +5,7 @@
   <title>Join Arches Cricket Club</title>
   <link rel="icon" type="image/png" href="logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="config.js"></script>
 
   <style>
     body {
@@ -156,23 +157,52 @@
 
   <!-- ✅ GOOGLE SHEETS INTEGRATION -->
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxPJ6QsCUfQQImmSjKEbAo7w7vuV6WDeVbQ4Tb8qphoNeBya031nv_jNDGzt9Bay2Lljw/exec";
-
     document.getElementById("registrationForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const formData = new FormData(this);
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = "SUBMITTING...";
 
-      fetch(scriptURL, {
+      const formData = new FormData(this);
+      const payload = {
+        action: 'register',
+        'Source Form': 'Player Registration Form',
+        'Full Name': formData.get('fullName'),
+        'Email Address': formData.get('email'),
+        'Phone Number': formData.get('phone'),
+        'Date of Birth': formData.get('dob'),
+        'Address': formData.get('address'),
+        'Primary Role': formData.get('role'),
+        'Batting Style': formData.get('batting'),
+        'Bowling Style': formData.get('bowling'),
+        'Previous Clubs / Experience': formData.get('experience'),
+        'Weekend Availability': formData.get('availability'),
+        'Injuries / Notes': formData.get('notes')
+      };
+
+      fetch(CONFIG.SCRIPT_URL, {
         method: "POST",
-        body: formData
+        body: JSON.stringify(payload)
       })
-      .then(() => {
-        alert("Thank you for registering! Arches CC will contact you if required.");
-        this.reset();
+      .then(response => response.json())
+      .then(data => {
+        if (data.result === 'success') {
+          alert("Thank you for registering! Arches CC will contact you if required.");
+          this.reset();
+        } else {
+          throw new Error(data.error || "Submission failed");
+        }
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error("Registration submission error:", err);
         alert("Error submitting form. Please try again.");
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
       });
     });
   </script>
