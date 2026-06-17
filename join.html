@@ -283,11 +283,7 @@
                 'Notes': notes
             };
             
-            fetch(CONFIG.SCRIPT_URL, {
-                method: 'POST',
-                body: JSON.stringify(payload)
-            })
-            .then(response => response.json())
+            CONFIG.submitForm(payload)
             .then(data => {
                 if (data.result === 'success') {
                     document.getElementById('joinForm').style.display = 'none';

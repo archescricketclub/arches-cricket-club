@@ -183,11 +183,7 @@
         'Injuries / Notes': formData.get('notes')
       };
 
-      fetch(CONFIG.SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify(payload)
-      })
-      .then(response => response.json())
+      CONFIG.submitForm(payload)
       .then(data => {
         if (data.result === 'success') {
           alert("Thank you for registering! Arches CC will contact you if required.");
