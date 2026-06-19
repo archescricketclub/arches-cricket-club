@@ -298,6 +298,59 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
   }, leagueName);
 }
 
+function deduplicateMatches(fixtures, results) {
+  function canonicalizeTeamName(name) {
+    return (name || '').toLowerCase()
+      .replace(/\b(1st|2nd|3rd|4th|5th|xi)\b/gi, '')
+      .replace(/\b(1|2|3|4|5)\b/g, '')
+      .replace(/[^a-z\s]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  
+  function isSameTeam(t1, t2) {
+    return canonicalizeTeamName(t1) === canonicalizeTeamName(t2);
+  }
+
+  const cleanResults = results.filter(r => {
+    const rText = (r.result || '').toLowerCase();
+    const isPostponed = rText.includes('postponed') || rText.includes('rescheduled') || rText.includes('postponement');
+    if (!isPostponed) return true;
+    
+    const hasPlayedResult = results.some(other => {
+      if (other === r) return false;
+      if (other.league !== r.league) return false;
+      const sameTeams = isSameTeam(other.homeTeam, r.homeTeam) && isSameTeam(other.awayTeam, r.awayTeam);
+      if (!sameTeams) return false;
+      const otherText = (other.result || '').toLowerCase();
+      const otherPostponed = otherText.includes('postponed') || otherText.includes('rescheduled') || otherText.includes('postponement');
+      return !otherPostponed;
+    });
+    
+    const hasFixture = fixtures.some(f => {
+      if (f.league !== r.league) return false;
+      const sameTeams = isSameTeam(f.homeTeam, r.homeTeam) && isSameTeam(f.awayTeam, r.awayTeam);
+      return sameTeams;
+    });
+    
+    return !(hasPlayedResult || hasFixture);
+  });
+
+  const cleanFixtures = fixtures.filter(f => {
+    const hasBeenPlayed = results.some(r => {
+      if (r.league !== f.league) return false;
+      const sameTeams = isSameTeam(r.homeTeam, f.homeTeam) && isSameTeam(r.awayTeam, f.awayTeam);
+      if (!sameTeams) return false;
+      const rText = (r.result || '').toLowerCase();
+      const rPostponed = rText.includes('postponed') || rText.includes('rescheduled') || rText.includes('postponement');
+      return !rPostponed;
+    });
+    return !hasBeenPlayed;
+  });
+
+  return { fixtures: cleanFixtures, results: cleanResults };
+}
+
 (async () => {
   console.log('Starting Northern Cricket Union match scraper...');
   const browser = await puppeteer.launch({
@@ -396,9 +449,11 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
 
   await browser.close();
 
+  const { fixtures: cleanFixtures, results: cleanResults } = deduplicateMatches(allFixtures, allResults);
+
   const outputData = {
-    fixtures: allFixtures,
-    results: allResults,
+    fixtures: cleanFixtures,
+    results: cleanResults,
     lastUpdated: new Date().toISOString()
   };
 
@@ -412,6 +467,6 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
   fs.writeFileSync(outPath2, JSON.stringify(outputData, null, 2));
 
   console.log('\n===================================');
-  console.log(`Saved ${allFixtures.length} fixtures and ${allResults.length} results successfully!`);
+  console.log(`Saved ${cleanFixtures.length} fixtures and ${cleanResults.length} results successfully (after deduplicating reschedules)!`);
   console.log('Saved data to data/matches.json and public/data/matches.json');
 })();

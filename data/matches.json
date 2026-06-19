@@ -37,15 +37,6 @@
       "league": "Senior League 3"
     },
     {
-      "homeTeam": "Drumaness Superkings",
-      "awayTeam": "Arches 1st XI",
-      "date": "25th July",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "NIMACC",
       "date": "1st August",
@@ -58,15 +49,6 @@
       "homeTeam": "Dundrum",
       "awayTeam": "Arches 1st XI",
       "date": "8th August",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Amigos Belfast",
-      "date": "15th August",
       "time": "11:00 AM",
       "venue": "TBD",
       "status": "",
@@ -203,9 +185,18 @@
       "awayTeam": "Arches 2nd XI",
       "date": "TBD",
       "time": "",
-      "venue": "TBC, TBC",
+      "venue": "Londonderry Park, Newtownards",
       "status": "",
       "league": "Development Cup"
+    },
+    {
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "THU\n25 JUN",
+      "time": "THU\n25 JUN",
+      "venue": "Northfield, Donaghadee",
+      "status": "",
+      "league": "T20 Shield Cup"
     }
   ],
   "results": [
@@ -274,14 +265,6 @@
       "result": "Lurgan 3 beat Arches 2 by 4 wickets"
     },
     {
-      "date": "17th May",
-      "league": "Junior League 10",
-      "homeTeam": "North Down 4",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBD",
-      "result": "North Down 4 v Arches 2 – Postponed"
-    },
-    {
       "date": "10th May",
       "league": "Junior League 10",
       "homeTeam": "Arches 2nd XI",
@@ -296,14 +279,6 @@
       "awayTeam": "Arches MW XI",
       "venue": "TBD",
       "result": "Arches beat Cregagh by 9 wickets"
-    },
-    {
-      "date": "10th June",
-      "league": "Midweek League",
-      "homeTeam": "CSNI",
-      "awayTeam": "Arches MW XI",
-      "venue": "TBD",
-      "result": "CSNI v Arches – Match Postponed"
     },
     {
       "date": "2nd June",
@@ -328,15 +303,7 @@
       "awayTeam": "Arches 2nd XI",
       "venue": "TBC, TBC",
       "result": "Arches 2nd XI won by 5 wickets"
-    },
-    {
-      "date": "THU\n4 JUN",
-      "league": "T20 Shield Cup",
-      "homeTeam": "Ards & Donaghadee 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "venue": "Northfield, Donaghadee",
-      "result": "Match Postponed"
     }
   ],
-  "lastUpdated": "2026-06-17T14:32:26.353Z"
+  "lastUpdated": "2026-06-19T13:44:18.238Z"
 }
