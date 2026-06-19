@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players | Arches Cricket Club</title>
-    <meta name="description" content="Arches Cricket Club squad — real 2025 season stats from NCU.">
+    <meta name="description" content="Arches Cricket Club squad — real 2026 season stats from NCU.">
     <link rel="icon" type="image/png" href="logo.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
@@ -341,9 +341,9 @@
     <section class="page-hero">
         <div class="container page-hero-content">
             <div class="hero-eyebrow" style="display:inline-flex;margin-bottom:1rem;"><i class="fa-solid fa-circle"
-                    style="font-size:.4rem;"></i> 2025 Season</div>
+                    style="font-size:.4rem;"></i> 2026 Season</div>
             <h1 class="page-hero-title">Our Squad</h1>
-            <p class="page-hero-sub">Stats from the Northern Ireland Cricket Union · Season 2025</p>
+            <p class="page-hero-sub">Stats from the Northern Ireland Cricket Union · Season 2026</p>
         </div>
     </section>
 
@@ -353,6 +353,7 @@
                 <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
                 <button class="team-tab" onclick="switchTeam('t2',this)">Team 2 · Junior League</button>
                 <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
+                <button class="team-tab" onclick="switchTeam('cup',this)">Cup Matches</button>
                 <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
             </div>
 
@@ -461,6 +462,41 @@
                 </div>
             </div>
 
+            <!-- ══ CUP MATCHES ══ -->
+            <div class="team-panel" id="panel-cup">
+
+                <div class="cat-block cat-bat">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
+                                style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('cup-bat',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="cup-bat"></div>
+                </div>
+
+                <div class="cat-block cat-bowl">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-wind"
+                                style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
+                        <button class="view-all-btn" onclick="toggleAll('cup-bowl',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="cup-bowl"></div>
+                </div>
+
+                <div class="cat-block cat-ar">
+                    <div class="cat-header">
+                        <div class="cat-title"><i class="fa-solid fa-star"
+                                style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
+                        </div>
+                        <button class="view-all-btn" onclick="toggleAll('cup-ar',this)"><i
+                                class="fa-solid fa-chevron-down"></i> View All</button>
+                    </div>
+                    <div class="squad-grid" id="cup-ar"></div>
+                </div>
+            </div>
+
             <!-- ALL PLAYERS ROSTER -->
             <div class="team-panel" id="panel-all">
                 <div style="margin-bottom:1.5rem;">
@@ -554,7 +590,8 @@
                 DATA = {
                     't1-bat': [], 't1-bowl': [], 't1-ar': [],
                     't2-bat': [], 't2-bowl': [], 't2-ar': [],
-                    'mw-bat': [], 'mw-bowl': [], 'mw-ar': []
+                    'mw-bat': [], 'mw-bowl': [], 'mw-ar': [],
+                    'cup-bat': [], 'cup-bowl': [], 'cup-ar': []
                 };
                 ALL_PLAYERS = [];
             }

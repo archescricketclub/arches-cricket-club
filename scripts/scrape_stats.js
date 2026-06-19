@@ -25,19 +25,19 @@ const LEAGUES = [
     name: 'Junior Cup',
     url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_statistics#c84150658-3379-4e15-bc80-32c5f6a281eb',
     teamName: 'Arches 1st XI',
-    prefix: 't1'
+    prefix: 'cup'
   },
   {
     name: 'Development Cup',
     url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_statistics#cb51feb8b-2615-4f62-ba30-8cdc080657b1',
     teamName: 'Arches 2nd XI',
-    prefix: 't2'
+    prefix: 'cup'
   },
   {
     name: 'T20 Shield Cup',
     url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_statistics#c81a85c9d-6a55-4a21-8eef-b128fdca3ad1',
     teamName: 'Arches MW XI',
-    prefix: 'mw'
+    prefix: 'cup'
   }
 ];
 
@@ -114,7 +114,8 @@ function getInitials(name) {
   const prefixRawData = {
     't1': { batting: [], bowling: [] },
     't2': { batting: [], bowling: [] },
-    'mw': { batting: [], bowling: [] }
+    'mw': { batting: [], bowling: [] },
+    'cup': { batting: [], bowling: [] }
   };
 
   try {
@@ -313,7 +314,7 @@ function getInitials(name) {
     }
     
     // ---------------- PROCESS, MERGE, AND ENRICH DATA ----------------
-    for (const prefix of ['t1', 't2', 'mw']) {
+    for (const prefix of ['t1', 't2', 'mw', 'cup']) {
       console.log(`\nProcessing and merging stats for prefix '${prefix}'...`);
       
       const rawBat = prefixRawData[prefix].batting;
@@ -446,7 +447,7 @@ function getInitials(name) {
       // 5. Badges
       if (battingList.length > 0) {
         battingList.sort((a, b) => parseInt(b.stats[0].n) - parseInt(a.stats[0].n));
-        battingList[0].badge = `Top Scorer ${prefix.toUpperCase()}`;
+        battingList[0].badge = `Top Scorer ${prefix === 'cup' ? 'Cup' : prefix.toUpperCase()}`;
       }
       
       if (bowlingList.length > 0) {
@@ -456,7 +457,7 @@ function getInitials(name) {
         const wkts = topBowler.stats[1].n;
         topBowler.badge = (bestFig !== '-' && bestFig.startsWith('5')) 
           ? `${bestFig} · ${wkts} Wkts` 
-          : `Top Wkt ${prefix.toUpperCase()}`;
+          : `Top Wkt ${prefix === 'cup' ? 'Cup' : prefix.toUpperCase()}`;
       }
       
       // 6. Format All-Rounders
