@@ -125,6 +125,11 @@ function getInitials(name) {
       const page = await browser.newPage();
       
       try {
+        // Set User-Agent and Viewport to avoid bot-detection and responsive layout issues
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36');
+        await page.setViewport({ width: 1280, height: 800 });
+        await page.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
+
         // Navigate
         await page.goto(league.url, { waitUntil: 'networkidle2', timeout: 60000 });
         
@@ -491,6 +496,21 @@ function getInitials(name) {
       finalOutput[`${prefix}-ar`] = allRoundersList;
     }
     
+    // Safety check: ensure we didn't scrape 0 records for all lists
+    let totalRecords = 0;
+    for (const key in finalOutput) {
+      if (Array.isArray(finalOutput[key])) {
+        totalRecords += finalOutput[key].length;
+      }
+    }
+
+    if (totalRecords === 0) {
+      console.error('\n===================================');
+      console.error('ERROR: Scraped 0 player stats records. Aborting save to prevent overwriting existing data with empty arrays.');
+      console.error('===================================');
+      process.exit(1);
+    }
+
     // Save
     const outPath1 = path.join(__dirname, '../data/players.json');
     const outPath2 = path.join(__dirname, '../public/data/players.json');

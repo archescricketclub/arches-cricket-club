@@ -367,6 +367,11 @@ function deduplicateMatches(fixtures, results) {
     const page = await browser.newPage();
     
     try {
+      // Set User-Agent and Viewport to avoid bot-detection and responsive layout issues
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36');
+      await page.setViewport({ width: 1280, height: 800 });
+      await page.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
+
       if (league.type === 'html') {
         await page.goto(league.url, { waitUntil: 'networkidle2', timeout: 60000 });
         const res = await scrapeHtmlLeaguePage(page, league.name);
@@ -450,6 +455,14 @@ function deduplicateMatches(fixtures, results) {
   await browser.close();
 
   const { fixtures: cleanFixtures, results: cleanResults } = deduplicateMatches(allFixtures, allResults);
+
+  // Safety check: do not overwrite with empty data
+  if (cleanFixtures.length === 0 && cleanResults.length === 0) {
+    console.error('\n===================================');
+    console.error('ERROR: Scraped 0 fixtures and 0 results. Aborting save to prevent overwriting existing data with empty arrays.');
+    console.error('===================================');
+    process.exit(1);
+  }
 
   const outputData = {
     fixtures: cleanFixtures,
