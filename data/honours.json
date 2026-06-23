@@ -1,0 +1,462 @@
+[
+  {
+    "name": "A Rehmani",
+    "record": "8-7",
+    "type": "bowling",
+    "date": "20th June",
+    "opponent": "Dundrum",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Veerendra Babu Nagari",
+    "record": "5-53",
+    "type": "bowling",
+    "date": "17th May",
+    "opponent": "NIMACC",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "61*",
+    "type": "batting",
+    "date": "14th June",
+    "opponent": "North Down 4",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "60",
+    "type": "batting",
+    "date": "7th June",
+    "opponent": "CI 5",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "A Rehmani",
+    "record": "50",
+    "type": "batting",
+    "date": "6th June",
+    "opponent": "Lurgan 3",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Anil Narra",
+    "record": "58",
+    "type": "batting",
+    "date": "10th May",
+    "opponent": "NIMACC",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "33*",
+    "type": "batting",
+    "date": "16th June",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "31*",
+    "type": "batting",
+    "date": "16th June",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "A Murtaza",
+    "record": "34*",
+    "type": "batting",
+    "date": "16th June",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "33*",
+    "type": "batting",
+    "date": "2nd June",
+    "opponent": "Belfast",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "33*",
+    "type": "batting",
+    "date": "2nd June",
+    "opponent": "Belfast",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "35*",
+    "type": "batting",
+    "date": "26th May",
+    "opponent": "Ardent Blues 2",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "51",
+    "type": "batting",
+    "date": "2026 Season",
+    "opponent": "Opposition",
+    "league": "Cup Matches",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Asad Murtuza",
+    "record": "50*",
+    "type": "batting",
+    "date": "2026 Season",
+    "opponent": "Opposition",
+    "league": "Cup Matches",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "66",
+    "type": "batting",
+    "date": "2026 Season",
+    "opponent": "Opposition",
+    "league": "Cup Matches",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "73",
+    "type": "batting",
+    "date": "23rd August 2025",
+    "opponent": "Belfast Superkings",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "half-century"
+  },
+  {
+    "name": "Veerendra Babu Nagari",
+    "record": "5-17",
+    "type": "bowling",
+    "date": "9th August 2025",
+    "opponent": "Amigos Belfast",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "68",
+    "type": "batting",
+    "date": "3rd August 2025",
+    "opponent": "Larne",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "half-century"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "5-22",
+    "type": "bowling",
+    "date": "26th July 2025",
+    "opponent": "Dunmurry",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Anil Narra",
+    "record": "53",
+    "type": "batting",
+    "date": "19th July 2025",
+    "opponent": "NIMACC",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "half-century"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "54",
+    "type": "batting",
+    "date": "24th August 2025",
+    "opponent": "Amigos Belfast",
+    "league": "Junior League 10",
+    "season": "2025",
+    "category": "half-century"
+  },
+  {
+    "name": "Rohit Singh",
+    "record": "114",
+    "type": "batting",
+    "date": "16th August 2025",
+    "opponent": "Victoria",
+    "league": "Junior League 10",
+    "season": "2025",
+    "category": "century"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "131",
+    "type": "batting",
+    "date": "8th June 2025",
+    "opponent": "Amigos Belfast",
+    "league": "Junior League 10",
+    "season": "2025",
+    "category": "century"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "5-31",
+    "type": "bowling",
+    "date": "8th June 2025",
+    "opponent": "Amigos Belfast",
+    "league": "Junior League 10",
+    "season": "2025",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "101*",
+    "type": "batting",
+    "date": "1st June 2025",
+    "opponent": "NIMACC",
+    "league": "Junior League 10",
+    "season": "2025",
+    "category": "century"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "62",
+    "type": "batting",
+    "date": "TBD 2025",
+    "opponent": "Dunmurry",
+    "league": "Development Cup",
+    "season": "2025",
+    "category": "half-century"
+  },
+  {
+    "name": "Rohit Singh",
+    "record": "83",
+    "type": "batting",
+    "date": "TBD 2025",
+    "opponent": "Dunmurry",
+    "league": "Development Cup",
+    "season": "2025",
+    "category": "half-century"
+  },
+  {
+    "name": "Harsha Sai",
+    "record": "3-26",
+    "type": "bowling",
+    "date": "22nd July 2025",
+    "opponent": "Holywood MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "35*",
+    "type": "batting",
+    "date": "9th July 2025",
+    "opponent": "Dunmurry MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Kiran Maheswaram",
+    "record": "31*",
+    "type": "batting",
+    "date": "1st July 2025",
+    "opponent": "CSNI MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "35*",
+    "type": "batting",
+    "date": "24th June 2025",
+    "opponent": "Cooke Collegians MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Veera SR Nimmakayala",
+    "record": "3-19",
+    "type": "bowling",
+    "date": "24th June 2025",
+    "opponent": "Cooke Collegians MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "4-15",
+    "type": "bowling",
+    "date": "24th June 2025",
+    "opponent": "Cooke Collegians MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "32*",
+    "type": "batting",
+    "date": "19th June 2025",
+    "opponent": "Lisburn MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "3-26",
+    "type": "bowling",
+    "date": "3rd June 2025",
+    "opponent": "Dunmurry MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "34",
+    "type": "batting",
+    "date": "3rd June 2025",
+    "opponent": "Dunmurry MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "32*",
+    "type": "batting",
+    "date": "3rd June 2025",
+    "opponent": "Dunmurry MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "35*",
+    "type": "batting",
+    "date": "28th May 2025",
+    "opponent": "CSNI MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Sarmad Butt",
+    "record": "30",
+    "type": "batting",
+    "date": "28th May 2025",
+    "opponent": "CSNI MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "3-26",
+    "type": "bowling",
+    "date": "28th May 2025",
+    "opponent": "CSNI MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "3-21",
+    "type": "bowling",
+    "date": "20th May 2025",
+    "opponent": "Cooke Collegians MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "32*",
+    "type": "batting",
+    "date": "20th May 2025",
+    "opponent": "Cooke Collegians MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "31*",
+    "type": "batting",
+    "date": "20th May 2025",
+    "opponent": "Cooke Collegians MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "30*",
+    "type": "batting",
+    "date": "15th May 2025",
+    "opponent": "Lisburn MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "30*",
+    "type": "batting",
+    "date": "15th May 2025",
+    "opponent": "Lisburn MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Sarmad Butt",
+    "record": "32*",
+    "type": "batting",
+    "date": "15th May 2025",
+    "opponent": "Lisburn MW",
+    "league": "Midweek League",
+    "season": "2025",
+    "category": "midweek-30"
+  }
+]

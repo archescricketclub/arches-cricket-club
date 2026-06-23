@@ -292,6 +292,35 @@
                 gap: .75rem
             }
         }
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+        .search-input {
+            width: 100%;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.55rem 1.25rem 0.55rem 2.5rem;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            outline: none;
+            transition: var(--trans);
+        }
+        .search-input:focus {
+            border-color: var(--amber);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+        }
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 
@@ -312,6 +341,7 @@
                     <li><a href="fixtures.html">Fixtures</a></li>
                     <li><a href="results.html">Results</a></li>
                     <li><a href="players.html" class="active">Players</a></li>
+                    <li><a href="honours.html">Honours Board</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="sponsors.html">Sponsors</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -330,6 +360,7 @@
         <a href="fixtures.html" onclick="toggleMobileNav()">Fixtures</a>
         <a href="results.html" onclick="toggleMobileNav()">Results</a>
         <a href="players.html" onclick="toggleMobileNav()">Players</a>
+        <a href="honours.html" onclick="toggleMobileNav()">Honours Board</a>
         <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a>
         <a href="sponsors.html" onclick="toggleMobileNav()">Sponsors</a>
         <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
@@ -355,6 +386,7 @@
                 <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
                 <button class="team-tab" onclick="switchTeam('cup',this)">Cup Matches</button>
                 <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
+                <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
             </div>
 
             <!-- ══ TEAM 1 ══ -->
@@ -506,6 +538,20 @@
                 <div class="squad-grid" id="all-roster"></div>
             </div>
 
+            <!-- ALL-TIME CAREER STATS -->
+            <div class="team-panel" id="panel-career">
+                <div style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+                    <div>
+                        <p style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
+                    </div>
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="careerSearchInput" class="search-input" placeholder="Search player career stats..." onkeyup="filterCareerStats()">
+                    </div>
+                </div>
+                <div class="squad-grid" id="career-roster"></div>
+            </div>
+
             <div
                 style="margin-top:3rem;padding:2rem;background:var(--panel2);border:1px solid var(--border);border-radius:14px;text-align:center;">
                 <p class="section-label" style="justify-content:center;margin-bottom:.6rem;">🏏 Join The Club</p>
@@ -573,18 +619,21 @@
 
     <script>
         /* ─── DATA ─────────────────────────────────────────── */
-        // Dynamic stats loaded from data/players.json and data/roster.json
+        // Dynamic stats loaded from data/players.json, data/roster.json, and data/career_stats.json
         let DATA = {};
         let ALL_PLAYERS = [];
+        let CAREER_STATS = [];
 
         async function initData() {
             try {
-                const [playersRes, rosterRes] = await Promise.all([
+                const [playersRes, rosterRes, careerRes] = await Promise.all([
                     fetch('data/players.json'),
-                    fetch('data/roster.json')
+                    fetch('data/roster.json'),
+                    fetch('data/career_stats.json')
                 ]);
                 DATA = await playersRes.json();
                 ALL_PLAYERS = await rosterRes.json();
+                CAREER_STATS = await careerRes.json();
             } catch (e) {
                 console.error('Error loading data dynamically:', e);
                 DATA = {
@@ -594,9 +643,11 @@
                     'cup-bat': [], 'cup-bowl': [], 'cup-ar': []
                 };
                 ALL_PLAYERS = [];
+                CAREER_STATS = [];
             }
             renderStats();
             renderRoster();
+            renderCareerStats();
         }
 
         /* ─── RENDER ─────────────────────────────────────── */
@@ -657,6 +708,65 @@
       <div class="pcs" style="flex:1"><div class="pcs-n" style="color:var(--amber);font-size:1.1rem">&#9679;</div><div class="pcs-l">Registered</div></div>
     </div>
   </div>`).join('');
+        }
+
+        function renderCareerStats(filteredList = null) {
+            const el = document.getElementById('career-roster');
+            if (!el) return;
+            const listToRender = filteredList || CAREER_STATS;
+            if (listToRender.length === 0) {
+                el.innerHTML = `
+                  <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--muted); font-style: italic;">
+                    No career stats found matching your search.
+                  </div>`;
+                return;
+            }
+            el.innerHTML = listToRender.map(p => {
+                const runs = p.batting.runs !== undefined ? p.batting.runs : 0;
+                const hs = p.batting.hs || '-';
+                const wkts = p.bowling.wickets !== undefined ? p.bowling.wickets : 0;
+                const best = p.bowling.bestFig || '-';
+                
+                return `<div class="pc">
+                    <div class="pc-top">
+                        <div class="pc-jersey">${p.jersey}</div>
+                        <div class="pc-cap">${p.cap}</div>
+                        <img src="player-avatar.svg" class="pc-icon" alt="Player">
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-name">${p.name}</div>
+                        <div class="pc-meta">Jersey ${p.jersey} · Cap ${p.cap}</div>
+                    </div>
+                    <div class="pc-stats">
+                        <div class="pcs">
+                            <div class="pcs-n">${runs}</div>
+                            <div class="pcs-l">Runs</div>
+                        </div>
+                        <div class="pcs">
+                            <div class="pcs-n">${hs}</div>
+                            <div class="pcs-l">HS</div>
+                        </div>
+                        <div class="pcs">
+                            <div class="pcs-n">${wkts}</div>
+                            <div class="pcs-l">Wkts</div>
+                        </div>
+                        <div class="pcs">
+                            <div class="pcs-n">${best}</div>
+                            <div class="pcs-l">Best Bowl</div>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function filterCareerStats() {
+            const query = document.getElementById('careerSearchInput').value.toLowerCase().trim();
+            if (!query) {
+                renderCareerStats(CAREER_STATS);
+                return;
+            }
+            const filtered = CAREER_STATS.filter(p => p.name.toLowerCase().includes(query));
+            renderCareerStats(filtered);
         }
 
         // Initialize on DOM load

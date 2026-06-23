@@ -237,12 +237,28 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
       
       const parseTeamFromScoreLine = (str) => {
         let cleaned = str.replace(/\s+inc\s+.*$/i, '').trim();
+        
+        // Strip stats like "J Johnson 31ret" or "Harsha G 2-5)" if there's no opening parenthesis
+        const statsPattern = /\s+([A-Z](?:\.|\b[A-Za-z]*\b)\s+)?([A-Z][a-z']+(?:\s+[A-Z][a-z']*)?)\s+\d+(?:ret|-[0-9]+|\*|runs|wkts|o|overs)/i;
+        const matchStats = cleaned.match(statsPattern);
+        if (matchStats && !cleaned.includes('(')) {
+          cleaned = cleaned.substring(0, matchStats.index).trim();
+        }
+
         const p1 = /^(.*?)\s+\d+-\d+(?:\s*\(|$)/i;
         let m = cleaned.match(p1);
         if (m) return m[1].trim();
-        const p2 = /^(.*?)\s+\d+(?:\s*\(|$)/i;
+        
+        const p2 = /^(.*?)\s+(\d+)(?:\s*\(|$)/i;
         m = cleaned.match(p2);
-        if (m) return m[1].trim();
+        if (m) {
+          const num = parseInt(m[2]);
+          // If it's a team number (like 1, 2, 3, 4, 5) at the end of the string (no parenthesis), don't strip it.
+          if (num <= 5 && !cleaned.includes('(') && cleaned.endsWith(m[2])) {
+            return cleaned;
+          }
+          return m[1].trim();
+        }
         return cleaned;
       };
       
@@ -289,7 +305,8 @@ async function scrapeHtmlLeaguePage(page, leagueName) {
           homeTeam,
           awayTeam,
           venue: 'TBD', // default venue since results rarely state venue directly in list
-          result: resultText
+          result: resultText,
+          scorelines: scoreLines
         });
       }
     });
@@ -453,6 +470,23 @@ function deduplicateMatches(fixtures, results) {
   }
 
   await browser.close();
+
+  // Default home grounds for Team 2 and Midweek Team to Victoria Park, Belfast
+  allFixtures.forEach(f => {
+    if (f.homeTeam === 'Arches 2nd XI' || f.homeTeam === 'Arches MW XI') {
+      if (!f.venue || f.venue === 'TBD' || f.venue === 'TBC' || f.venue === 'TBD/TBC') {
+        f.venue = 'Victoria Park, Belfast';
+      }
+    }
+  });
+
+  allResults.forEach(r => {
+    if (r.homeTeam === 'Arches 2nd XI' || r.homeTeam === 'Arches MW XI') {
+      if (!r.venue || r.venue === 'TBD' || r.venue === 'TBC' || r.venue === 'TBD/TBC') {
+        r.venue = 'Victoria Park, Belfast';
+      }
+    }
+  });
 
   const { fixtures: cleanFixtures, results: cleanResults } = deduplicateMatches(allFixtures, allResults);
 

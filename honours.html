@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honours Board | Arches Cricket Club</title>
+  <meta name="description" content="Arches Cricket Club Honours Board — outstanding individual match performances since 2025.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .tabs-row {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      margin-bottom: 2rem;
+      -webkit-overflow-scrolling: touch;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tabs-row::-webkit-scrollbar {
+      height: 3px;
+    }
+
+    .tabs-row::-webkit-scrollbar-thumb {
+      background: var(--amber);
+      border-radius: 2px;
+    }
+
+    .tab-btn {
+      flex-shrink: 0;
+      padding: .65rem 1.6rem;
+      border-radius: 50px 50px 0 0;
+      border: 1px solid transparent;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .25s;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: -1px;
+    }
+
+    .tab-btn.active {
+      background: var(--panel);
+      color: var(--amber);
+      border-color: var(--border) var(--border) transparent var(--border);
+      border-bottom: 1.5px solid var(--amber);
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: var(--text);
+    }
+
+    .filters-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .filter-select {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.55rem 1.25rem;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      transition: var(--trans);
+    }
+
+    .filter-select:focus,
+    .filter-select:hover {
+      border-color: var(--border-accent);
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.55rem 1.25rem 0.55rem 2.5rem;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      outline: none;
+      transition: var(--trans);
+    }
+
+    .search-input:focus {
+      border-color: var(--amber);
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .honours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .honour-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: var(--trans);
+    }
+
+    .honour-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-accent);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(245, 158, 11, 0.1);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.2rem;
+    }
+
+    .card-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      color: var(--text);
+    }
+
+    .card-record {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--amber);
+      line-height: 1;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 0.5rem;
+    }
+
+    .badge-batting {
+      background: rgba(250, 204, 21, 0.08);
+      color: var(--gold);
+      border: 1px solid rgba(250, 204, 21, 0.15);
+    }
+
+    .badge-bowling {
+      background: rgba(249, 115, 22, 0.08);
+      color: var(--fire);
+      border: 1px solid rgba(249, 115, 22, 0.15);
+    }
+
+    .card-details {
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .detail-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-item i {
+      width: 14px;
+      text-align: center;
+      color: var(--amber);
+    }
+
+    .card-bg-icon {
+      position: absolute;
+      right: -10px;
+      bottom: -15px;
+      font-size: 5rem;
+      color: rgba(255, 255, 255, 0.015);
+      pointer-events: none;
+      transform: rotate(-15deg);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      grid-column: 1 / -1;
+    }
+
+    .empty-icon {
+      font-size: 2.5rem;
+      color: var(--muted2);
+      margin-bottom: 1rem;
+    }
+
+    .empty-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-desc {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.png" alt="Arches CC Logo">
+          <div class="nav-logo-text">
+            <div class="club-name">Arches CC</div>
+            <div class="club-sub">Belfast · Est. 2024</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fixtures.html">Fixtures</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="honours.html" class="active">Honours Board</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta"><a href="join.html" class="btn btn-primary"
+            style="padding:.65rem 1.5rem;font-size:.8rem;">Join The Club</a></div>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="toggleMobileNav()">Home</a>
+    <div class="mn-divider"></div>
+    <a href="fixtures.html" onclick="toggleMobileNav()">Fixtures</a>
+    <a href="results.html" onclick="toggleMobileNav()">Results</a>
+    <a href="players.html" onclick="toggleMobileNav()">Players</a>
+    <a href="honours.html" onclick="toggleMobileNav()">Honours Board</a>
+    <a href="gallery.html" onclick="toggleMobileNav()">Gallery</a>
+    <a href="sponsors.html" onclick="toggleMobileNav()">Sponsors</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <div class="mn-divider"></div>
+    <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()"><i class="fa-solid fa-user-plus"></i> Join
+      The Club</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="hero-eyebrow" style="display:inline-flex;margin-bottom:1rem;"><i class="fa-solid fa-medal"
+          style="font-size:.65rem;"></i> Honours Board</div>
+      <h1 class="page-hero-title">Achievements</h1>
+      <p class="page-hero-sub">Celebrating outstanding Centuries, Half-Centuries, and Bowling Milestones since 2025</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tabs-row" id="honoursTabs">
+        <button class="tab-btn active" onclick="switchCategory('century', this)">Centuries (100+)</button>
+        <button class="tab-btn" onclick="switchCategory('half-century', this)">Half-Centuries (50-99)</button>
+        <button class="tab-btn" onclick="switchCategory('five-wickets', this)">5+ Wicket Hauls</button>
+        <button class="tab-btn" onclick="switchCategory('midweek-30', this)">Midweek Batting (30+)</button>
+        <button class="tab-btn" onclick="switchCategory('midweek-3w', this)">Midweek Bowling (3+ Wkts)</button>
+      </div>
+
+      <div class="filters-bar">
+        <div class="filter-group">
+          <select id="seasonFilter" class="filter-select" onchange="filterData()">
+            <option value="all">All Seasons</option>
+            <option value="2026">2026 Season</option>
+            <option value="2025">2025 Season</option>
+          </select>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search player name..."
+            onkeyup="filterData()">
+        </div>
+      </div>
+
+      <div class="honours-grid" id="honoursGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-logo"><img src="logo.png" alt="Arches CC Logo">
+              <div>
+                <div class="footer-brand-name">Arches Cricket Club</div>
+                <div class="footer-brand-sub">Belfast · Est. 2024</div>
+              </div>
+            </div>
+            <p class="footer-desc">Northern Ireland cricket since 2024. Passion, Performance, Pride.</p>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/archescricketclub/" target="_blank" class="social-btn"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/archescricketclub?igsh=MXJtb2c2Yng5MG14Mw==" target="_blank"
+                class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/share/1AWw49P2Ez/?mibextid=wwXIfr" target="_blank" class="social-btn"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://youtube.com/@archescricketclub?si=TFDe-ZcF1-hb4SoG" target="_blank" class="social-btn"><i
+                  class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Quick Links</div>
+            <div class="footer-links"><a href="fixtures.html">Fixtures 2026</a><a href="results.html">Results</a><a
+                href="players.html">Our Squad</a><a href="gallery.html">Gallery</a><a
+                href="sponsors.html">Sponsors</a></div>
+          </div>
+          <div>
+            <div class="footer-col-title">Club</div>
+            <div class="footer-links"><a href="join.html">Join The Club</a><a href="contact.html">Contact Us</a></div>
+          </div>
+          <div>
+            <div class="footer-col-title">Contact</div>
+            <div class="footer-contact-item"><i class="fa-solid fa-envelope footer-contact-icon"></i><a
+                href="mailto:archescricketclub@gmail.com">archescricketclub@gmail.com</a></div>
+            <div class="footer-contact-item"><i class="fa-solid fa-location-dot footer-contact-icon"></i><a
+                href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">Victoria Park, Belfast BT4 1LS</a></div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · All rights reserved.</div>
+          <div class="footer-legal"><a href="#">Privacy</a><a href="contact.html">Contact</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let HONOURS = [];
+    let currentCategory = 'century';
+
+    async function loadHonours() {
+      try {
+        const res = await fetch('data/honours.json');
+        HONOURS = await res.json();
+      } catch (e) {
+        console.error('Error loading honours.json:', e);
+        HONOURS = [];
+      }
+      filterData();
+    }
+
+    function switchCategory(cat, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCategory = cat;
+      filterData();
+    }
+
+    function filterData() {
+      const season = document.getElementById('seasonFilter').value;
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+      const grid = document.getElementById('honoursGrid');
+
+      // Filter by category, season, and search query
+      const filtered = HONOURS.filter(item => {
+        const matchCat = item.category === currentCategory;
+        const matchSeason = season === 'all' || item.season === season;
+        const matchSearch = item.name.toLowerCase().includes(search);
+        return matchCat && matchSeason && matchSearch;
+      });
+
+      // Sort by record value descending
+      filtered.sort((a, b) => {
+        if (currentCategory.includes('wickets') || currentCategory.includes('3w')) {
+          const wA = parseInt(a.record.split('-')[0]) || 0;
+          const wB = parseInt(b.record.split('-')[0]) || 0;
+          if (wA !== wB) return wB - wA;
+          const rA = parseInt(a.record.split('-')[1]) || 999;
+          const rB = parseInt(b.record.split('-')[1]) || 999;
+          return rA - rB; // lower runs is better
+        } else {
+          const rA = parseInt(a.record.replace('*', '')) || 0;
+          const rB = parseInt(b.record.replace('*', '')) || 0;
+          return rB - rA;
+        }
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <i class="fa-solid fa-trophy empty-icon"></i>
+            <div class="empty-title">No Records Found</div>
+            <p class="empty-desc">No player achievements match the selected season, category, or search criteria.</p>
+          </div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const isBatting = item.type === 'batting';
+        const typeBadge = isBatting 
+          ? `<span class="card-badge badge-batting"><i class="fa-solid fa-cricket-bat-ball"></i> Batting</span>` 
+          : `<span class="card-badge badge-bowling"><i class="fa-solid fa-wind"></i> Bowling</span>`;
+        const iconClass = isBatting ? 'fa-solid fa-cricket-bat-ball' : 'fa-solid fa-baseball';
+
+        return `
+          <div class="honour-card reveal visible">
+            <div class="card-top">
+              <div>
+                <div class="card-name">${item.name}</div>
+                ${typeBadge}
+              </div>
+              <div class="card-record">${item.record}</div>
+            </div>
+            <div class="card-details">
+              <div class="detail-item"><i class="fa-solid fa-shield-halved"></i> ${item.opponent ? 'vs ' + item.opponent : 'Opposition TBD'}</div>
+              <div class="detail-item"><i class="fa-solid fa-calendar-days"></i> ${item.date || 'Date TBD'}</div>
+              <div class="detail-item"><i class="fa-solid fa-trophy"></i> ${item.league || 'League TBD'}</div>
+            </div>
+            <i class="${iconClass} card-bg-icon"></i>
+          </div>`;
+      }).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadHonours);
+
+    /* Mobile nav */
+    function toggleMobileNav() {
+      const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger');
+      n.classList.toggle('open'); h.classList.toggle('open');
+      document.body.style.overflow = n.classList.contains('open') ? 'hidden' : '';
+    }
+    document.addEventListener('click', e => {
+      const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger');
+      if (n.classList.contains('open') && !n.contains(e.target) && !h.contains(e.target)) {
+        n.classList.remove('open'); h.classList.remove('open'); document.body.style.overflow = '';
+      }
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+  </script>
+</body>
+
+</html>
