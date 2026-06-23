@@ -125,112 +125,80 @@
       font-size: 0.85rem;
     }
 
-    .honours-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .honour-card {
+    .honours-table-container {
+      width: 100%;
+      overflow-x: auto;
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-      transition: var(--trans);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      margin-bottom: 2rem;
     }
 
-    .honour-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--border-accent);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(245, 158, 11, 0.1);
+    .honours-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
     }
 
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1.2rem;
-    }
-
-    .card-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
+    .honours-table th {
+      background: var(--surface);
+      color: var(--amber);
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
       letter-spacing: 1px;
-      line-height: 1.1;
+      padding: 1.1rem 1.25rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .honours-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }
+
+    .honours-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .honours-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .table-sno {
+      font-weight: 700;
+      color: var(--muted);
+      width: 60px;
+    }
+
+    .table-player {
+      font-weight: 600;
       color: var(--text);
     }
 
-    .card-record {
+    .table-record {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--amber);
-      line-height: 1;
     }
 
-    .card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.58rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-top: 0.5rem;
+    .table-opp {
+      color: var(--text);
     }
 
-    .badge-batting {
-      background: rgba(250, 204, 21, 0.08);
-      color: var(--gold);
-      border: 1px solid rgba(250, 204, 21, 0.15);
-    }
-
-    .badge-bowling {
-      background: rgba(249, 115, 22, 0.08);
-      color: var(--fire);
-      border: 1px solid rgba(249, 115, 22, 0.15);
-    }
-
-    .card-details {
-      border-top: 1px solid var(--border);
-      padding-top: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .detail-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.72rem;
+    .table-date {
       color: var(--muted);
-      margin-bottom: 0.4rem;
+      white-space: nowrap;
     }
 
-    .detail-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .detail-item i {
-      width: 14px;
-      text-align: center;
-      color: var(--amber);
-    }
-
-    .card-bg-icon {
-      position: absolute;
-      right: -10px;
-      bottom: -15px;
-      font-size: 5rem;
-      color: rgba(255, 255, 255, 0.015);
-      pointer-events: none;
-      transform: rotate(-15deg);
+    .table-league {
+      color: var(--muted);
+      font-size: 0.78rem;
     }
 
     .empty-state {
@@ -239,7 +207,7 @@
       background: var(--panel2);
       border: 1px solid var(--border);
       border-radius: 14px;
-      grid-column: 1 / -1;
+      width: 100%;
     }
 
     .empty-icon {
@@ -457,30 +425,45 @@
         return;
       }
 
-      grid.innerHTML = filtered.map(item => {
-        const isBatting = item.type === 'batting';
-        const typeBadge = isBatting 
-          ? `<span class="card-badge badge-batting"><i class="fa-solid fa-cricket-bat-ball"></i> Batting</span>` 
-          : `<span class="card-badge badge-bowling"><i class="fa-solid fa-wind"></i> Bowling</span>`;
-        const iconClass = isBatting ? 'fa-solid fa-cricket-bat-ball' : 'fa-solid fa-baseball';
+      const isBowling = currentCategory.includes('wickets') || currentCategory.includes('3w');
+      const recordHeader = isBowling ? 'Figures' : 'Score';
 
+      let tableHTML = `
+        <div class="honours-table-container">
+          <table class="honours-table">
+            <thead>
+              <tr>
+                <th class="table-sno">S.No</th>
+                <th>Player Name</th>
+                <th>${recordHeader}</th>
+                <th>Opposition</th>
+                <th>Date</th>
+                <th>League</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      tableHTML += filtered.map((item, index) => {
         return `
-          <div class="honour-card reveal visible">
-            <div class="card-top">
-              <div>
-                <div class="card-name">${item.name}</div>
-                ${typeBadge}
-              </div>
-              <div class="card-record">${item.record}</div>
-            </div>
-            <div class="card-details">
-              <div class="detail-item"><i class="fa-solid fa-shield-halved"></i> ${item.opponent ? 'vs ' + item.opponent : 'Opposition TBD'}</div>
-              <div class="detail-item"><i class="fa-solid fa-calendar-days"></i> ${item.date || 'Date TBD'}</div>
-              <div class="detail-item"><i class="fa-solid fa-trophy"></i> ${item.league || 'League TBD'}</div>
-            </div>
-            <i class="${iconClass} card-bg-icon"></i>
-          </div>`;
+          <tr>
+            <td class="table-sno">${index + 1}</td>
+            <td class="table-player">${item.name}</td>
+            <td class="table-record">${item.record}</td>
+            <td class="table-opp">vs ${item.opponent || 'Opposition TBD'}</td>
+            <td class="table-date">${item.date || 'Date TBD'}</td>
+            <td class="table-league">${item.league || 'League TBD'}</td>
+          </tr>
+        `;
       }).join('');
+
+      tableHTML += `
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      grid.innerHTML = tableHTML;
     }
 
     document.addEventListener('DOMContentLoaded', loadHonours);

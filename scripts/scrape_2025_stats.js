@@ -27,8 +27,34 @@ if (fs.existsSync(rosterPath)) {
   roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
 }
 
+const PLAYER_NAME_MAP = {
+  'a rizwan': 'Ali Rizwan',
+  'a rehmani': 'Abubakar Rehmani',
+  'a murtaza': 'Asad Murtuza',
+  'v nagari': 'Veerendra Babu Nagari',
+  'h shaik': 'Haneef Shaik',
+  'r yadavalli': 'Raja Mouli Yadavalli',
+  's tummala': 'Surya Pavan Teja Tummala',
+  'k karneedi': 'Kishan Karneedi',
+  'a narra': 'Anil Narra',
+  'c obula reddy': 'Chandra Obula Reddy B',
+  'v vonga': 'Vonga Vishnu',
+  's nadakuditi': 'Srini Nadakuditi',
+  'c datla': 'Charan Reddy Datla',
+  'm yellanur': 'Madhu Yellanur',
+  'harsha g': 'Harsha Sai',
+  'y chinthakindi': 'Yashwanth'
+};
+
 // Normalize player matching
 function matchPlayer(scrapedName) {
+  const normalized = scrapedName.trim().toLowerCase().replace(/\s+/g, ' ');
+  for (const [short, full] of Object.entries(PLAYER_NAME_MAP)) {
+    if (normalized === short || normalized.startsWith(short) || short.startsWith(normalized)) {
+      return full;
+    }
+  }
+
   const cleanScraped = scrapedName.toLowerCase().replace(/[^a-z0-9\s]/g, '');
   const scrapedTokens = cleanScraped.split(/\s+/).filter(t => t.length > 1);
   if (scrapedTokens.length === 0) return scrapedName;
