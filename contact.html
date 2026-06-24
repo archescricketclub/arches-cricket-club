@@ -271,12 +271,21 @@
       <div class="footer-inner" style="padding-top:3rem;">
         <div class="footer-bottom">
           <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
-          <div class="footer-legal"><a href="index.html">Home</a><a href="contact.html">Contact</a><a
-              href="join.html">Join</a></div>
+          <div class="footer-legal"><a href="data_policy.html">Data Policy</a><a href="contact.html">Contact</a><a href="join.html">Join</a></div>
         </div>
+        <p id="footer-note">All data is from NCU cricket and last updated at <span id="last-updated"></span></p>
       </div>
     </div>
   </footer>
+  <script>
+      fetch('public/data/last_update.json')
+          .then(res => res.json())
+          .then(data => {
+              const el = document.getElementById('last-updated');
+              if (el && data.lastUpdated) el.textContent = new Date(data.lastUpdated).toLocaleString();
+          })
+          .catch(() => {});
+  </script>
 
   <script>
     function toggleMobileNav() { const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger'); n.classList.toggle('open'); h.classList.toggle('open'); document.body.style.overflow = n.classList.contains('open') ? 'hidden' : ''; }

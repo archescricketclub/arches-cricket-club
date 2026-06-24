@@ -624,27 +624,38 @@
                             <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank">Victoria Park, Belfast
                                 BT4 1LS, Northern Ireland</a>
                         </div>
-                        <div class="footer-contact-item">
-                            <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
-                            <span>WhatsApp Group</span>
-                        </div>
                     </div>
                 </div>
 
                 <div class="footer-bottom">
-                    <div class="footer-copy">
-                        © 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland · All rights
-                        reserved.
-                    </div>
-                    <div class="footer-legal">
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
-                        <a href="contact.html">Contact</a>
                     </div>
                 </div>
             </div>
         </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner" style="padding-top:3rem;">
+                <div class="footer-bottom">
+                    <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
+                    <div class="footer-legal">
+                        <a href="data_policy.html">Data Policy</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                </div>
+                <p id="footer-note">All data is from NCU cricket and last updated at <span id="last-updated"></span></p>
+            </div>
+        </div>
     </footer>
+    <script>
+        fetch('public/data/last_update.json')
+            .then(res => res.json())
+            .then(data => {
+                const el = document.getElementById('last-updated');
+                if (el && data.lastUpdated) el.textContent = new Date(data.lastUpdated).toLocaleString();
+            })
+            .catch(() => {});
+    </script>
 
     <!-- ──────────────────────────────────────── -->
     <!-- SCRIPTS (GSAP only — no Three.js) -->
