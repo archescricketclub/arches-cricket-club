@@ -127,15 +127,6 @@
       "league": "Junior League 10"
     },
     {
-      "homeTeam": "Cooke Collegians",
-      "awayTeam": "Arches MW XI",
-      "date": "23rd June",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Arches MW XI",
       "awayTeam": "Cliftonville Academy",
       "date": "30th June",
@@ -314,6 +305,18 @@
       ]
     },
     {
+      "date": "23rd June",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Cooke Collegians",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches beat Cooke Collegians by 27 runs",
+      "scorelines": [
+        "Arches 183-5 (20 overs, A Rizwan 28, V Vonga 30ret, Wasim SM 31ret, K Maheswaram 21*)",
+        "Cooke Collegians 156-6 (20 overs, V Gupta 35ret, R McCann 23, A Ani 28, A Hunter 30ret, V Vonga 2-17)"
+      ]
+    },
+    {
       "date": "16th June",
       "league": "Midweek League",
       "homeTeam": "Cregagh",
@@ -366,5 +369,5 @@
       "result": "Arches 2nd XI won by 5 wickets"
     }
   ],
-  "lastUpdated": "2026-06-24T03:37:53.212Z"
+  "lastUpdated": "2026-06-24T12:35:11.232Z"
 }

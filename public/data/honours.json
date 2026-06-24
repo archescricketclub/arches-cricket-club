@@ -60,6 +60,26 @@
     "category": "half-century"
   },
   {
+    "name": "Vonga Vishnu",
+    "record": "30*",
+    "type": "batting",
+    "date": "23rd June 2026",
+    "opponent": "Cooke Collegians",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "31*",
+    "type": "batting",
+    "date": "23rd June 2026",
+    "opponent": "Cooke Collegians",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
     "name": "Ali Rizwan",
     "record": "33*",
     "type": "batting",
@@ -146,6 +166,16 @@
     "date": "30th May 2026",
     "opponent": "Saintfield 3rd XI",
     "league": "Development Cup",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Maree Lourens",
+    "record": "51*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Cup Matches",
     "season": "2026",
     "category": "half-century"
   },
