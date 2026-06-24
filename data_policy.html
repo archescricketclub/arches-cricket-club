@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Policy – Arches Cricket Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html">Join</a>
+            <a href="data_policy.html" class="active">Data Policy</a>
+        </nav>
+    </header>
+    <main class="content">
+        <h1>Data Policy</h1>
+        <p>All match fixtures, results and player statistics displayed on this site are sourced directly from the <strong>NCU Cricket</strong> platform. We do not alter or augment the data.</p>
+        <p>The data is refreshed automatically twice a day (00:00 UTC & 12:00 UTC) and can also be refreshed manually via the GitHub Actions workflow “Update Cricket Club Data”.</p>
+        <p id="policy-timestamp">Loading last‑updated time…</p>
+    </main>
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html">Join</a>
+            <a href="data_policy.html">Data Policy</a>
+        </nav>
+        <p id="footer-note">All data is from NCU cricket and last updated at …</p>
+    </footer>
+    <script>
+        fetch('data/last_update.json')
+            .then(r => r.ok ? r.json() : Promise.reject('no JSON'))
+            .then(d => {
+                const fmt = new Date(d.lastUpdated).toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+                const foot = document.getElementById('footer-note');
+                if (foot) foot.textContent = `All data is from NCU cricket and last updated at ${fmt}.`;
+                const policy = document.getElementById('policy-timestamp');
+                if (policy) policy.textContent = `Last updated: ${fmt}`;
+            })
+            .catch(() => {
+                const foot = document.getElementById('footer-note');
+                if (foot) foot.textContent = `All data is from NCU cricket and last updated at unknown.`;
+            });
+    </script>
+</body>
+</html>
