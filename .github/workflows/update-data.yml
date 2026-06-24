@@ -12,33 +12,62 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # --------------------------------------------------------------
+      # 1️⃣  Checkout the repo
+      # --------------------------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # --------------------------------------------------------------
+      # 2️⃣  Install Node & cache npm modules
+      # --------------------------------------------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
+      # --------------------------------------------------------------
+      # 3️⃣  Install project dependencies
+      # --------------------------------------------------------------
       - name: Install dependencies
         run: npm install
 
+      # --------------------------------------------------------------
+      # 4️⃣  Scrape the *stats* (player stats)
+      # --------------------------------------------------------------
       - name: Run Stats Scraper
         run: node scripts/scrape_stats.js
 
+      # --------------------------------------------------------------
+      # 5️⃣  Scrape the *matches* (fixtures / results)
+      # --------------------------------------------------------------
       - name: Run Matches Scraper
         run: node scripts/scrape_matches.js
 
+      # --------------------------------------------------------------
+      # 6️⃣  **NEW** – Compile Honours & Career‑Stats
+      # --------------------------------------------------------------
+      - name: Compile Honours and Career Stats
+        run: node scripts/compile_honours.js   # <-- this is the line you add
+
+      # --------------------------------------------------------------
+      # 7️⃣  Commit any JSON files that changed & push back to the repo
+      # --------------------------------------------------------------
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/players.json data/matches.json public/data/players.json public/data/matches.json
-          
+
+          # Add all JSON files that may have been updated
+          git add data/players.json data/matches.json \
+                  data/honours.json data/career_stats.json \
+                  public/data/players.json public/data/matches.json \
+                  public/data/honours.json public/data/career_stats.json
+
           if git diff --staged --quiet; then
             echo "No changes in scraped data."
           else
-            git commit -m "Auto-update matches and player stats from NCU [skip ci]"
+            git commit -m "Auto‑update matches, player stats, honours & career records [skip ci]"
             git push
           fi
