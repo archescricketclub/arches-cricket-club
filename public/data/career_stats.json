@@ -105,21 +105,6 @@
     }
   },
   {
-    "name": "Wasim SM",
-    "jersey": "#1",
-    "cap": "WSM1",
-    "batting": {
-      "runs": 321,
-      "hs": "66",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 25,
-      "bestFig": "5-31",
-      "matches": 0
-    }
-  },
-  {
     "name": "Veerendra Babu Nagari",
     "jersey": "#44",
     "cap": "VB44",
@@ -146,6 +131,21 @@
     "bowling": {
       "wickets": 3,
       "bestFig": "1-3",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Wasim SM",
+    "jersey": "#1",
+    "cap": "WSM1",
+    "batting": {
+      "runs": 199,
+      "hs": "66",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 7,
+      "bestFig": "3-57",
       "matches": 0
     }
   },
@@ -345,6 +345,21 @@
     }
   },
   {
+    "name": "Anshul Krishali",
+    "jersey": "#—",
+    "cap": "ANSH",
+    "batting": {
+      "runs": 53,
+      "hs": "30*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 8,
+      "bestFig": "3-26",
+      "matches": 0
+    }
+  },
+  {
     "name": "Venkateswarrao Jyothi",
     "jersey": "#9",
     "cap": "VJ09",
@@ -362,15 +377,45 @@
   {
     "name": "Yaungicha Mirthivada",
     "jersey": "#—",
-    "cap": "YM",
+    "cap": "YAUN",
     "batting": {
-      "runs": 18,
+      "runs": 37,
       "hs": "18",
       "matches": 0
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "0-10",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Jaya Sukhavasi‡",
+    "jersey": "#—",
+    "cap": "JAYA",
+    "batting": {
+      "runs": 25,
+      "hs": "20",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Jaya Sukhavasi",
+    "jersey": "#—",
+    "cap": "JAYA",
+    "batting": {
+      "runs": 23,
+      "hs": "17",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "2-26",
       "matches": 0
     }
   },
@@ -465,6 +510,21 @@
     }
   },
   {
+    "name": "Sharan Bezawada",
+    "jersey": "#—",
+    "cap": "SHAR",
+    "batting": {
+      "runs": 2,
+      "hs": "2*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
     "name": "Anvesh Choudary Mannuru",
     "jersey": "#2",
     "cap": "AM28",
@@ -521,6 +581,36 @@
     "bowling": {
       "wickets": 2,
       "bestFig": "2-22",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Yaungicha Mirthivada‡",
+    "jersey": "#—",
+    "cap": "YAUN",
+    "batting": {
+      "runs": 0,
+      "hs": "0",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 6,
+      "bestFig": "5-31",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Anshul Krishali‡",
+    "jersey": "#—",
+    "cap": "ANSH",
+    "batting": {
+      "runs": 0,
+      "hs": "0",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "1-4",
       "matches": 0
     }
   }

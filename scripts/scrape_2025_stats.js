@@ -43,7 +43,12 @@ const PLAYER_NAME_MAP = {
   'c datla': 'Charan Reddy Datla',
   'm yellanur': 'Madhu Yellanur',
   'harsha g': 'Harsha Sai',
-  'y chinthakindi': 'Yashwanth'
+  'y chinthakindi': 'Yashwanth',
+  'd bommana': 'Dushyanth Reddy B',
+  'a mutaza': 'Asad Murtuza',
+  'y mirthivada': 'Yaungicha Mirthivada',
+  'a krishali': 'Anshul Krishali',
+  'c borra': 'Chandra Obula Reddy B'
 };
 
 // Normalize player matching
@@ -88,7 +93,7 @@ function matchPlayer(scrapedName) {
   const cleanScrapedFull = cleanScraped.replace(/\s+/g, '');
   for (const player of roster) {
     const cleanRosterFull = player.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-    if (cleanRosterFull.includes(cleanScrapedFull) || cleanScrapedFull.includes(cleanScrapedFull)) {
+    if (cleanRosterFull.includes(cleanScrapedFull) || cleanScrapedFull.includes(cleanRosterFull)) {
       return player.name;
     }
   }

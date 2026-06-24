@@ -386,6 +386,24 @@
       filterData();
     }
 
+    function parseDate(dateStr) {
+      if (!dateStr) return new Date(0);
+      const clean = dateStr.trim();
+      if (/^\d{4}$/.test(clean)) {
+        return new Date(parseInt(clean), 0, 1);
+      }
+      const normalized = clean.replace(/(\d+)(st|nd|rd|th)/i, '$1');
+      const parsed = Date.parse(normalized);
+      if (!isNaN(parsed)) {
+        return new Date(parsed);
+      }
+      const yearMatch = clean.match(/\b\d{4}\b/);
+      if (yearMatch) {
+        return new Date(parseInt(yearMatch[0]), 0, 1);
+      }
+      return new Date(0);
+    }
+
     function filterData() {
       const season = document.getElementById('seasonFilter').value;
       const search = document.getElementById('searchInput').value.toLowerCase().trim();
@@ -399,8 +417,14 @@
         return matchCat && matchSeason && matchSearch;
       });
 
-      // Sort by record value descending
+      // Sort by date oldest to newest (ascending), then by record descending
       filtered.sort((a, b) => {
+        const dA = parseDate(a.date);
+        const dB = parseDate(b.date);
+        if (dA.getTime() !== dB.getTime()) {
+          return dA.getTime() - dB.getTime();
+        }
+
         if (currentCategory.includes('wickets') || currentCategory.includes('3w')) {
           const wA = parseInt(a.record.split('-')[0]) || 0;
           const wB = parseInt(b.record.split('-')[0]) || 0;

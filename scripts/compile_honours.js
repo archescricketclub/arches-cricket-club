@@ -47,8 +47,34 @@ const PLAYER_NAME_MAP = {
   'c datla': 'Charan Reddy Datla',
   'm yellanur': 'Madhu Yellanur',
   'harsha g': 'Harsha Sai',
-  'y chinthakindi': 'Yashwanth'
+  'y chinthakindi': 'Yashwanth',
+  'd bommana': 'Dushyanth Reddy B',
+  'a mutaza': 'Asad Murtuza',
+  'y mirthivada': 'Yaungicha Mirthivada',
+  'a krishali': 'Anshul Krishali',
+  'c borra': 'Chandra Obula Reddy B'
 };
+
+const CUP_HONOURS_LOOKUP = {
+  "Ali Rizwan|51|batting": { opponent: "Saintfield 3rd XI", date: "30th May 2026", league: "Development Cup" },
+  "Wasim SM|66|batting": { opponent: "Saintfield 3rd XI", date: "30th May 2026", league: "Development Cup" },
+  "Asad Murtuza|50*|batting": { opponent: "CSNI 5th XI", date: "20th June 2026", league: "Development Cup" }
+};
+
+function cleanDate(dateStr, season) {
+  if (!dateStr) return season;
+  let clean = dateStr.trim();
+  if (clean.toUpperCase().includes('TBD') || clean.toLowerCase().includes('season')) {
+    return season;
+  }
+  if (clean.endsWith(season)) {
+    return clean;
+  }
+  if (/\b\d{4}$/.test(clean)) {
+    return clean;
+  }
+  return `${clean} ${season}`;
+}
 
 // Normalize player names matching
 function matchPlayer(scrapedName) {
@@ -357,13 +383,15 @@ if (players2026) {
         // Avoid duplicate entries if already scraped match-by-match (e.g. if we add cup scorelines in future)
         const exists = honours2026.some(h => h.name === p.name && h.category === (hs >= 100 ? 'century' : 'half-century') && h.league.includes('Cup'));
         if (!exists) {
+          const lookupKey = `${p.name}|${p.stats[1].n}|batting`;
+          const lookup = CUP_HONOURS_LOOKUP[lookupKey];
           honours2026.push({
             name: p.name,
             record: p.stats[1].n,
             type: 'batting',
-            date: '2026 Season',
-            opponent: 'Opposition',
-            league: 'Cup Matches',
+            date: lookup ? lookup.date : '2026',
+            opponent: lookup ? lookup.opponent : 'Opposition',
+            league: lookup ? lookup.league : 'Cup Matches',
             season: '2026',
             category: hs >= 100 ? 'century' : 'half-century'
           });
@@ -381,13 +409,15 @@ if (players2026) {
         if (wkts >= 5) {
           const exists = honours2026.some(h => h.name === p.name && h.category === 'five-wickets' && h.league.includes('Cup'));
           if (!exists) {
+            const lookupKey = `${p.name}|${best}|bowling`;
+            const lookup = CUP_HONOURS_LOOKUP[lookupKey];
             honours2026.push({
               name: p.name,
               record: best,
               type: 'bowling',
-              date: '2026 Season',
-              opponent: 'Opposition',
-              league: 'Cup Matches',
+              date: lookup ? lookup.date : '2026',
+              opponent: lookup ? lookup.opponent : 'Opposition',
+              league: lookup ? lookup.league : 'Cup Matches',
               season: '2026',
               category: 'five-wickets'
             });
@@ -399,7 +429,10 @@ if (players2026) {
 }
 
 // Merge 2025 and 2026 honours
-const combinedHonours = [...honours2026, ...honours2025];
+const combinedHonours = [...honours2026, ...honours2025].map(h => {
+  h.date = cleanDate(h.date, h.season);
+  return h;
+});
 console.log(`Unified Honours Board has ${combinedHonours.length} total records.`);
 
 // Save honours JSON
