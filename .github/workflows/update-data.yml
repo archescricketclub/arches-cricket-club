@@ -2,79 +2,72 @@ name: Update Cricket Club Data
 
 on:
   schedule:
-    # Runs twice a day (at 00:00 and 12:00 UTC)
-    - cron: '0 0,12 * * *'
-  workflow_dispatch:   # Allows manual runs from the GitHub Actions tab
+    - cron: '0 0,12 * * *'   # twice a day UTC
+  workflow_dispatch:          # manual trigger
 
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
 
     steps:
-      # ----------------------------------------------
+      # --------------------------------------------------
       # 1️⃣ Checkout the repository
-      # ----------------------------------------------
+      # --------------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ----------------------------------------------
-      # 2️⃣ Install Node.js and cache npm modules
-      # ----------------------------------------------
+      # --------------------------------------------------
+      # 2️⃣ Install Node.js (Node 22 LTS)
+      # --------------------------------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
-      # ----------------------------------------------
+      # --------------------------------------------------
       # 3️⃣ Install project dependencies
-      # ----------------------------------------------
+      # --------------------------------------------------
       - name: Install dependencies
-        run: npm ci   # uses lock‑file for reproducible builds
+        run: npm ci
 
-      # ----------------------------------------------
-      # 4️⃣ Run the *stats* scraper
-      # ----------------------------------------------
+      # --------------------------------------------------
+      # 4️⃣ Run the Stats scraper
+      # --------------------------------------------------
       - name: Run Stats Scraper
         run: node scripts/scrape_stats.js
 
-      # ----------------------------------------------
-      # 5️⃣ Run the *matches* scraper
-      # ----------------------------------------------
+      # --------------------------------------------------
+      # 5️⃣ Run the Matches scraper
+      # --------------------------------------------------
       - name: Run Matches Scraper
         run: node scripts/scrape_matches.js
 
-      # ----------------------------------------------
-      # 6️⃣ **NEW** – Compile honours & career stats
-      # ----------------------------------------------
+      # --------------------------------------------------
+      # 6️⃣ Compile Honours & Career Stats  (new step)
+      # --------------------------------------------------
       - name: Compile Honours and Career Stats
         run: node scripts/compile_honours.js
 
-      # ----------------------------------------------
+      # --------------------------------------------------
       # 7️⃣ Commit and push all generated JSON files
-      # ----------------------------------------------
+      # --------------------------------------------------
       - name: Commit and Push Changes
         env:
-          # Pull the PAT from the secret we created earlier
-          GIT_TOKEN: ${{ secrets.PAT }}
+          GIT_TOKEN: ${{ secrets.PAT }}   # PAT with `repo` + `workflow` scopes
         run: |
-          # Configure the bot identity
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Stage every JSON file that may have changed
           git add data/players.json data/matches.json \
                   data/honours.json data/career_stats.json \
                   public/data/players.json public/data/matches.json \
                   public/data/honours.json public/data/career_stats.json
 
-          # Only commit if something actually changed
           if git diff --staged --quiet; then
             echo "No changes in scraped data."
             exit 0
           fi
 
           git commit -m "Auto‑update matches, stats, honours & career records [skip ci]"
-
-          # Push using the PAT (HTTPS auth)
           git push https://x-access-token:${GIT_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
