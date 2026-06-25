@@ -570,9 +570,9 @@
     }
   },
   {
-    "name": "Gowri Sankar",
+    "name": "Shashank Rama",
     "jersey": "#—",
-    "cap": "GS",
+    "cap": "SR",
     "batting": {
       "runs": 5,
       "hs": "5",
@@ -585,9 +585,9 @@
     }
   },
   {
-    "name": "Shashank Rama",
+    "name": "Gowri Sankar",
     "jersey": "#—",
-    "cap": "SR",
+    "cap": "GS",
     "batting": {
       "runs": 5,
       "hs": "5",
@@ -660,21 +660,6 @@
     }
   },
   {
-    "name": "Amarnath Karunakaran",
-    "jersey": "#—",
-    "cap": "AK",
-    "batting": {
-      "runs": 2,
-      "hs": "2",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-13",
-      "matches": 0
-    }
-  },
-  {
     "name": "Sharath Bhuvaneshwari",
     "jersey": "#—",
     "cap": "SB",
@@ -690,17 +675,17 @@
     }
   },
   {
-    "name": "Dino James",
+    "name": "Amarnath Karunakaran",
     "jersey": "#—",
-    "cap": "DJ",
+    "cap": "AK",
     "batting": {
-      "runs": 1,
-      "hs": "1",
+      "runs": 2,
+      "hs": "2",
       "matches": 0
     },
     "bowling": {
       "wickets": 0,
-      "bestFig": "0-18",
+      "bestFig": "0-13",
       "matches": 0
     }
   },
@@ -716,6 +701,21 @@
     "bowling": {
       "wickets": 0,
       "bestFig": "0-5",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Dino James",
+    "jersey": "#—",
+    "cap": "DJ",
+    "batting": {
+      "runs": 1,
+      "hs": "1",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "0-18",
       "matches": 0
     }
   },
@@ -810,21 +810,6 @@
     }
   },
   {
-    "name": "Stuart Campbell",
-    "jersey": "#—",
-    "cap": "SC",
-    "batting": {
-      "runs": 0,
-      "hs": "0",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "2-13",
-      "matches": 0
-    }
-  },
-  {
     "name": "Andrew Campbell",
     "jersey": "#—",
     "cap": "AC",
@@ -840,17 +825,17 @@
     }
   },
   {
-    "name": "Caleb Armstrong",
+    "name": "Stuart Campbell",
     "jersey": "#—",
-    "cap": "CA",
+    "cap": "SC",
     "batting": {
       "runs": 0,
       "hs": "0",
       "matches": 0
     },
     "bowling": {
-      "wickets": 1,
-      "bestFig": "1-21",
+      "wickets": 2,
+      "bestFig": "2-13",
       "matches": 0
     }
   },
@@ -866,6 +851,21 @@
     "bowling": {
       "wickets": 1,
       "bestFig": "1-13",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Caleb Armstrong",
+    "jersey": "#—",
+    "cap": "CA",
+    "batting": {
+      "runs": 0,
+      "hs": "0",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 1,
+      "bestFig": "1-21",
       "matches": 0
     }
   }
