@@ -4,7 +4,7 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1191,
+      "runs": 1196,
       "hs": "131",
       "matches": 0
     },
@@ -64,12 +64,12 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 519,
+      "runs": 525,
       "hs": "41",
       "matches": 0
     },
     "bowling": {
-      "wickets": 64,
+      "wickets": 65,
       "bestFig": "5-22",
       "matches": 0
     }
@@ -79,7 +79,7 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 489,
+      "runs": 509,
       "hs": "68",
       "matches": 0
     },
@@ -114,7 +114,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 37,
+      "wickets": 38,
       "bestFig": "5-17",
       "matches": 0
     }
@@ -195,6 +195,21 @@
     }
   },
   {
+    "name": "Surya Pavan Teja Tummala",
+    "jersey": "#14",
+    "cap": "PA14",
+    "batting": {
+      "runs": 139,
+      "hs": "27*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 21,
+      "bestFig": "4-32",
+      "matches": 0
+    }
+  },
+  {
     "name": "Charan Reddy Datla",
     "jersey": "#99",
     "cap": "CR99",
@@ -206,21 +221,6 @@
     "bowling": {
       "wickets": 1,
       "bestFig": "1-10",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Surya Pavan Teja Tummala",
-    "jersey": "#14",
-    "cap": "PA14",
-    "batting": {
-      "runs": 135,
-      "hs": "27*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 20,
-      "bestFig": "4-32",
       "matches": 0
     }
   },
@@ -259,7 +259,7 @@
     "jersey": "#7",
     "cap": "TT07",
     "batting": {
-      "runs": 109,
+      "runs": 110,
       "hs": "37",
       "matches": 0
     },
@@ -289,12 +289,12 @@
     "jersey": "#—",
     "cap": "AR",
     "batting": {
-      "runs": 94,
+      "runs": 105,
       "hs": "50",
       "matches": 0
     },
     "bowling": {
-      "wickets": 13,
+      "wickets": 16,
       "bestFig": "8-7",
       "matches": 0
     }
@@ -384,7 +384,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 17,
+      "wickets": 18,
       "bestFig": "3-26",
       "matches": 0
     }

@@ -14,7 +14,7 @@
           "l": "High Score"
         },
         {
-          "n": "17.75",
+          "n": "14.20",
           "l": "Average"
         }
       ],
@@ -34,7 +34,7 @@
           "l": "High Score"
         },
         {
-          "n": "10.00",
+          "n": "8.57",
           "l": "Average"
         }
       ]
@@ -45,7 +45,7 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "52",
+          "n": "58",
           "l": "Runs"
         },
         {
@@ -53,7 +53,45 @@
           "l": "High Score"
         },
         {
-          "n": "17.33",
+          "n": "14.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Asad Murtuza",
+      "jersey": "#22",
+      "cap": "AM04",
+      "stats": [
+        {
+          "n": "42",
+          "l": "Runs"
+        },
+        {
+          "n": "20",
+          "l": "High Score"
+        },
+        {
+          "n": "7.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Abubakar Rehmani",
+      "jersey": "#—",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "36",
+          "l": "Runs"
+        },
+        {
+          "n": "16",
+          "l": "High Score"
+        },
+        {
+          "n": "7.20",
           "l": "Average"
         }
       ]
@@ -72,7 +110,7 @@
           "l": "High Score"
         },
         {
-          "n": "5.60",
+          "n": "4.67",
           "l": "Average"
         }
       ]
@@ -91,45 +129,26 @@
           "l": "High Score"
         },
         {
-          "n": "26.00",
+          "n": "13.00",
           "l": "Average"
         }
       ]
     },
     {
-      "name": "Abubakar Rehmani",
-      "jersey": "#—",
-      "cap": "AR",
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#14",
+      "cap": "PA14",
       "stats": [
         {
-          "n": "25",
+          "n": "15",
           "l": "Runs"
         },
         {
-          "n": "16",
+          "n": "5",
           "l": "High Score"
         },
         {
-          "n": "6.25",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Asad Murtuza",
-      "jersey": "#22",
-      "cap": "AM04",
-      "stats": [
-        {
-          "n": "22",
-          "l": "Runs"
-        },
-        {
-          "n": "13",
-          "l": "High Score"
-        },
-        {
-          "n": "4.40",
+          "n": "5.00",
           "l": "Average"
         }
       ]
@@ -173,6 +192,25 @@
       ]
     },
     {
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
+      "stats": [
+        {
+          "n": "12",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "3.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Chandra Obula Reddy B",
       "jersey": "#45",
       "cap": "CH45",
@@ -192,44 +230,6 @@
       ]
     },
     {
-      "name": "Tulasi Gangadhar Thatavarthi",
-      "jersey": "#7",
-      "cap": "TT07",
-      "stats": [
-        {
-          "n": "11",
-          "l": "Runs"
-        },
-        {
-          "n": "6",
-          "l": "High Score"
-        },
-        {
-          "n": "3.67",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Surya Pavan Teja Tummala",
-      "jersey": "#14",
-      "cap": "PA14",
-      "stats": [
-        {
-          "n": "11",
-          "l": "Runs"
-        },
-        {
-          "n": "5",
-          "l": "High Score"
-        },
-        {
-          "n": "3.67",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -243,7 +243,7 @@
           "l": "High Score"
         },
         {
-          "n": "3.33",
+          "n": "2.50",
           "l": "Average"
         }
       ]
@@ -306,6 +306,25 @@
       ]
     },
     {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Runs"
+        },
+        {
+          "n": "5",
+          "l": "High Score"
+        },
+        {
+          "n": "5.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Deepak Sai",
       "jersey": "#50",
       "cap": "AD39",
@@ -327,40 +346,40 @@
   ],
   "t1-bowl": [
     {
-      "name": "Veerendra Babu Nagari",
-      "jersey": "#44",
-      "cap": "VB44",
-      "stats": [
-        {
-          "n": "27",
-          "l": "Overs"
-        },
-        {
-          "n": "11",
-          "l": "Wickets"
-        },
-        {
-          "n": "5-53",
-          "l": "Best Fig"
-        }
-      ],
-      "badge": "5-53 · 11 Wkts"
-    },
-    {
       "name": "Abubakar Rehmani",
       "jersey": "#—",
       "cap": "AR",
       "stats": [
         {
-          "n": "22.1",
+          "n": "26.1",
           "l": "Overs"
         },
         {
-          "n": "10",
+          "n": "13",
           "l": "Wickets"
         },
         {
           "n": "8-7",
+          "l": "Best Fig"
+        }
+      ],
+      "badge": "Top Wkt T1"
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
+      "stats": [
+        {
+          "n": "31",
+          "l": "Overs"
+        },
+        {
+          "n": "12",
+          "l": "Wickets"
+        },
+        {
+          "n": "5-53",
           "l": "Best Fig"
         }
       ]
@@ -371,11 +390,11 @@
       "cap": "VJ09",
       "stats": [
         {
-          "n": "23",
+          "n": "27",
           "l": "Overs"
         },
         {
-          "n": "4",
+          "n": "5",
           "l": "Wickets"
         },
         {
@@ -390,11 +409,11 @@
       "cap": "PA14",
       "stats": [
         {
-          "n": "23",
+          "n": "26",
           "l": "Overs"
         },
         {
-          "n": "4",
+          "n": "5",
           "l": "Wickets"
         },
         {
@@ -409,7 +428,7 @@
       "cap": "DB23",
       "stats": [
         {
-          "n": "11",
+          "n": "13",
           "l": "Overs"
         },
         {
@@ -428,15 +447,15 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "11.2",
+          "n": "14.2",
           "l": "Overs"
         },
         {
-          "n": "1",
+          "n": "2",
           "l": "Wickets"
         },
         {
-          "n": "1-59",
+          "n": "1-29",
           "l": "Best Fig"
         }
       ]
@@ -461,25 +480,6 @@
       ]
     },
     {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
-      "stats": [
-        {
-          "n": "16",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-9",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Tulasi Gangadhar Thatavarthi",
       "jersey": "#7",
       "cap": "TT07",
@@ -494,6 +494,25 @@
         },
         {
           "n": "0-29",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
+      "stats": [
+        {
+          "n": "16",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-9",
           "l": "Best Fig"
         }
       ]
@@ -529,7 +548,7 @@
           "l": "Runs"
         },
         {
-          "n": "11",
+          "n": "12",
           "l": "Wickets"
         },
         {
@@ -544,15 +563,34 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "52",
+          "n": "58",
           "l": "Runs"
         },
         {
-          "n": "1",
+          "n": "2",
           "l": "Wickets"
         },
         {
-          "n": "1-59",
+          "n": "1-29",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Abubakar Rehmani",
+      "jersey": "#—",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "36",
+          "l": "Runs"
+        },
+        {
+          "n": "13",
+          "l": "Wickets"
+        },
+        {
+          "n": "8-7",
           "l": "Best Fig"
         }
       ]
@@ -586,30 +624,11 @@
           "l": "Runs"
         },
         {
-          "n": "4",
+          "n": "5",
           "l": "Wickets"
         },
         {
           "n": "3-44",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Abubakar Rehmani",
-      "jersey": "#—",
-      "cap": "AR",
-      "stats": [
-        {
-          "n": "25",
-          "l": "Runs"
-        },
-        {
-          "n": "10",
-          "l": "Wickets"
-        },
-        {
-          "n": "8-7",
           "l": "Best Fig"
         }
       ]
