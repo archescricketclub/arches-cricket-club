@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Belfast Superkings",
-      "awayTeam": "Arches (M2)",
-      "date": "24th June",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Victoria",
       "awayTeam": "Arches 1st XI",
       "date": "27th June",
@@ -161,18 +152,21 @@
       "venue": "TBD",
       "status": "",
       "league": "Midweek League"
-    },
-    {
-      "homeTeam": "Ards & Donaghadee 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "TBD",
-      "time": "",
-      "venue": "Northfield, Donaghadee",
-      "status": "",
-      "league": "T20 Shield Cup"
     }
   ],
   "results": [
+    {
+      "date": "24th June",
+      "league": "Senior League 3",
+      "homeTeam": "Belfast Superkings",
+      "awayTeam": "Arches 1st XI",
+      "venue": "TBD",
+      "result": "Belfast Superkings beat Arches by 62 runs",
+      "scorelines": [
+        "Belfast Superkings 122-8 (20 overs, A Praveen 28, A Rehmeni 3-8)",
+        "Arches 60 (16.3 overs, A Murtaza 20, S Chandrasekaran 2-15, A Karunakaran 3-9, K Arumugam 3-19)"
+      ]
+    },
     {
       "date": "20th June",
       "league": "Senior League 3",
@@ -367,7 +361,15 @@
       "awayTeam": "Arches 2nd XI",
       "venue": "TBC, TBC",
       "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "T20 Shield Cup",
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "Northfield, Donaghadee",
+      "result": "Ards & Donaghadee 1st XI won by 24 runs"
     }
   ],
-  "lastUpdated": "2026-06-25T14:35:37.287Z"
+  "lastUpdated": "2026-06-26T03:43:10.468Z"
 }
