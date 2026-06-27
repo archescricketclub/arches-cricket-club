@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Victoria",
-      "awayTeam": "Arches 1st XI",
-      "date": "27th June",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Ards & Donaghadee",
       "awayTeam": "Arches 1st XI",
       "date": "4th July",
@@ -155,6 +146,17 @@
     }
   ],
   "results": [
+    {
+      "date": "27th June",
+      "league": "Senior League 3",
+      "homeTeam": "Victoria",
+      "awayTeam": "Arches 1st XI",
+      "venue": "TBD",
+      "result": "Victoria v Arches",
+      "scorelines": [
+        "Arches 79 (20.5 overs, A Rizwan 30*, V Vonga 29, A Khan 3-15, J Davison 2-13, R Hendricks 2-12, A Quinn 2-20)"
+      ]
+    },
     {
       "date": "24th June",
       "league": "Senior League 3",
@@ -371,5 +373,5 @@
       "result": "Ards & Donaghadee 1st XI won by 24 runs"
     }
   ],
-  "lastUpdated": "2026-06-27T03:29:29.008Z"
+  "lastUpdated": "2026-06-27T13:45:13.035Z"
 }
