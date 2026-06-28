@@ -555,21 +555,6 @@
     }
   },
   {
-    "name": "Hafis Siyad",
-    "jersey": "#—",
-    "cap": "HS",
-    "batting": {
-      "runs": 23,
-      "hs": "23",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
     "name": "Byshal Varghese",
     "jersey": "#—",
     "cap": "BV",
@@ -581,6 +566,21 @@
     "bowling": {
       "wickets": 0,
       "bestFig": "0-13",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Hafis Siyad",
+    "jersey": "#—",
+    "cap": "HS",
+    "batting": {
+      "runs": 23,
+      "hs": "23",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
       "matches": 0
     }
   },
@@ -765,21 +765,6 @@
     }
   },
   {
-    "name": "Firose Abdul Rasheed",
-    "jersey": "#—",
-    "cap": "FAR",
-    "batting": {
-      "runs": 10,
-      "hs": "10",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "2-1",
-      "matches": 0
-    }
-  },
-  {
     "name": "Jestin  Kr",
     "jersey": "#—",
     "cap": "JK",
@@ -791,6 +776,21 @@
     "bowling": {
       "wickets": 3,
       "bestFig": "3-29",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Firose Abdul Rasheed",
+    "jersey": "#—",
+    "cap": "FAR",
+    "batting": {
+      "runs": 10,
+      "hs": "10",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "2-1",
       "matches": 0
     }
   },
@@ -885,9 +885,9 @@
     }
   },
   {
-    "name": "Shashank Rama",
+    "name": "Gowri Sankar",
     "jersey": "#—",
-    "cap": "SR",
+    "cap": "GS",
     "batting": {
       "runs": 5,
       "hs": "5",
@@ -900,9 +900,9 @@
     }
   },
   {
-    "name": "Gowri Sankar",
+    "name": "Shashank Rama",
     "jersey": "#—",
-    "cap": "GS",
+    "cap": "SR",
     "batting": {
       "runs": 5,
       "hs": "5",
@@ -960,12 +960,12 @@
     }
   },
   {
-    "name": "Kannan Vijayakumar",
+    "name": "Iain Aitken",
     "jersey": "#—",
-    "cap": "KV",
+    "cap": "IA",
     "batting": {
       "runs": 4,
-      "hs": "4*",
+      "hs": "4",
       "matches": 0
     },
     "bowling": {
@@ -975,12 +975,12 @@
     }
   },
   {
-    "name": "Iain Aitken",
+    "name": "Kannan Vijayakumar",
     "jersey": "#—",
-    "cap": "IA",
+    "cap": "KV",
     "batting": {
       "runs": 4,
-      "hs": "4",
+      "hs": "4*",
       "matches": 0
     },
     "bowling": {
@@ -1035,9 +1035,9 @@
     }
   },
   {
-    "name": "Sharath Bhuvaneshwari",
+    "name": "Muthusivan Selvaraj",
     "jersey": "#—",
-    "cap": "SB",
+    "cap": "MS",
     "batting": {
       "runs": 2,
       "hs": "2",
@@ -1045,22 +1045,7 @@
     },
     "bowling": {
       "wickets": 0,
-      "bestFig": "0-20",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Amarnath Karunakaran",
-    "jersey": "#—",
-    "cap": "AK",
-    "batting": {
-      "runs": 2,
-      "hs": "2",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-13",
+      "bestFig": "-",
       "matches": 0
     }
   },
@@ -1080,9 +1065,9 @@
     }
   },
   {
-    "name": "Muthusivan Selvaraj",
+    "name": "Amarnath Karunakaran",
     "jersey": "#—",
-    "cap": "MS",
+    "cap": "AK",
     "batting": {
       "runs": 2,
       "hs": "2",
@@ -1090,7 +1075,22 @@
     },
     "bowling": {
       "wickets": 0,
-      "bestFig": "-",
+      "bestFig": "0-13",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Sharath Bhuvaneshwari",
+    "jersey": "#—",
+    "cap": "SB",
+    "batting": {
+      "runs": 2,
+      "hs": "2",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "0-20",
       "matches": 0
     }
   },
@@ -1125,9 +1125,39 @@
     }
   },
   {
-    "name": "Benny Varughese",
+    "name": "Byjo Varghese",
     "jersey": "#—",
     "cap": "BV",
+    "batting": {
+      "runs": 1,
+      "hs": "1",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 1,
+      "bestFig": "1-4",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Subhilesh Ps",
+    "jersey": "#—",
+    "cap": "SP",
+    "batting": {
+      "runs": 1,
+      "hs": "1",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Bony Alexander",
+    "jersey": "#—",
+    "cap": "BA",
     "batting": {
       "runs": 1,
       "hs": "1",
@@ -1155,22 +1185,7 @@
     }
   },
   {
-    "name": "Bony Alexander",
-    "jersey": "#—",
-    "cap": "BA",
-    "batting": {
-      "runs": 1,
-      "hs": "1",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Byjo Varghese",
+    "name": "Benny Varughese",
     "jersey": "#—",
     "cap": "BV",
     "batting": {
@@ -1179,23 +1194,8 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 1,
-      "bestFig": "1-4",
-      "matches": 0
-    }
-  },
-  {
-    "name": "AP Praveen",
-    "jersey": "#—",
-    "cap": "AP",
-    "batting": {
-      "runs": 1,
-      "hs": "1",
-      "matches": 0
-    },
-    "bowling": {
       "wickets": 0,
-      "bestFig": "0-5",
+      "bestFig": "-",
       "matches": 0
     }
   },
@@ -1215,9 +1215,9 @@
     }
   },
   {
-    "name": "Subhilesh Ps",
+    "name": "AP Praveen",
     "jersey": "#—",
-    "cap": "SP",
+    "cap": "AP",
     "batting": {
       "runs": 1,
       "hs": "1",
@@ -1225,52 +1225,22 @@
     },
     "bowling": {
       "wickets": 0,
-      "bestFig": "-",
+      "bestFig": "0-5",
       "matches": 0
     }
   },
   {
-    "name": "Garry Walsh",
+    "name": "Conor Balfour",
     "jersey": "#—",
-    "cap": "GW",
+    "cap": "CB",
     "batting": {
       "runs": 1,
-      "hs": "1",
+      "hs": "1*",
       "matches": 0
     },
     "bowling": {
-      "wickets": 0,
-      "bestFig": "0-34",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Neil Gelston",
-    "jersey": "#—",
-    "cap": "NG",
-    "batting": {
-      "runs": 1,
-      "hs": "1",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 1,
-      "bestFig": "1-16",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Zaheer Gondal",
-    "jersey": "#—",
-    "cap": "ZG",
-    "batting": {
-      "runs": 1,
-      "hs": "1",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
+      "wickets": 2,
+      "bestFig": "2-16",
       "matches": 0
     }
   },
@@ -1290,17 +1260,47 @@
     }
   },
   {
-    "name": "Conor Balfour",
+    "name": "Zaheer Gondal",
     "jersey": "#—",
-    "cap": "CB",
+    "cap": "ZG",
     "batting": {
       "runs": 1,
-      "hs": "1*",
+      "hs": "1",
       "matches": 0
     },
     "bowling": {
-      "wickets": 2,
-      "bestFig": "2-16",
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Neil Gelston",
+    "jersey": "#—",
+    "cap": "NG",
+    "batting": {
+      "runs": 1,
+      "hs": "1",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 1,
+      "bestFig": "1-16",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Garry Walsh",
+    "jersey": "#—",
+    "cap": "GW",
+    "batting": {
+      "runs": 1,
+      "hs": "1",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "0-34",
       "matches": 0
     }
   },
@@ -1410,9 +1410,9 @@
     }
   },
   {
-    "name": "Adam Quinn",
+    "name": "Stuart Campbell",
     "jersey": "#—",
-    "cap": "AQ",
+    "cap": "SC",
     "batting": {
       "runs": 0,
       "hs": "0",
@@ -1420,7 +1420,7 @@
     },
     "bowling": {
       "wickets": 2,
-      "bestFig": "2-33",
+      "bestFig": "2-13",
       "matches": 0
     }
   },
@@ -1440,21 +1440,6 @@
     }
   },
   {
-    "name": "Stuart Campbell",
-    "jersey": "#—",
-    "cap": "SC",
-    "batting": {
-      "runs": 0,
-      "hs": "0",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "2-13",
-      "matches": 0
-    }
-  },
-  {
     "name": "Phil McNamara",
     "jersey": "#—",
     "cap": "PM",
@@ -1466,6 +1451,21 @@
     "bowling": {
       "wickets": 2,
       "bestFig": "2-21",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Adam Quinn",
+    "jersey": "#—",
+    "cap": "AQ",
+    "batting": {
+      "runs": 0,
+      "hs": "0",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "2-33",
       "matches": 0
     }
   },
@@ -1485,9 +1485,9 @@
     }
   },
   {
-    "name": "Satyawan Satyawan",
+    "name": "Caleb Armstrong",
     "jersey": "#—",
-    "cap": "SS",
+    "cap": "CA",
     "batting": {
       "runs": 0,
       "hs": "0",
@@ -1496,21 +1496,6 @@
     "bowling": {
       "wickets": 1,
       "bestFig": "1-21",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Senthilkumar Santhanakrishnan",
-    "jersey": "#—",
-    "cap": "SS",
-    "batting": {
-      "runs": 0,
-      "hs": "0",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 1,
-      "bestFig": "1-29",
       "matches": 0
     }
   },
@@ -1530,9 +1515,9 @@
     }
   },
   {
-    "name": "Caleb Armstrong",
+    "name": "Joel Davison",
     "jersey": "#—",
-    "cap": "CA",
+    "cap": "JD",
     "batting": {
       "runs": 0,
       "hs": "0",
@@ -1560,9 +1545,24 @@
     }
   },
   {
-    "name": "Joel Davison",
+    "name": "Senthilkumar Santhanakrishnan",
     "jersey": "#—",
-    "cap": "JD",
+    "cap": "SS",
+    "batting": {
+      "runs": 0,
+      "hs": "0",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 1,
+      "bestFig": "1-29",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Satyawan Satyawan",
+    "jersey": "#—",
+    "cap": "SS",
     "batting": {
       "runs": 0,
       "hs": "0",
