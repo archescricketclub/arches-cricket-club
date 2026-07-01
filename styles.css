@@ -545,7 +545,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0;
-  padding: 6rem 2rem 2rem;
+  padding: 0 2rem;
 }
 
 .mobile-nav.open {
@@ -555,9 +555,7 @@ button {
 .mobile-nav a {
   width: 100%;
   max-width: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   padding: 1.1rem 2rem;
   margin: 0.2rem 0;
   font-family: 'Bebas Neue', sans-serif;
