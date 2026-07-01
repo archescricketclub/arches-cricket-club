@@ -3,11 +3,11 @@ const fs = require('fs');
 const path = require('path');
 
 const URLS = [
-  { name: 'Senior League 3', type: 'html', url: 'https://northerncricketunion.org/ncu-section-3-2026/' },
-  { name: 'Junior League 10', type: 'html', url: 'https://northerncricketunion.org/junior-league-section-10-2026/' },
-  { name: 'Midweek League', type: 'html', url: 'https://northerncricketunion.org/midweek-league-group-b-2026/' },
+  { name: 'Senior League 3', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#c1d034fd1-a70a-4c98-bf8e-5e6060e13c98' },
+  { name: 'Junior League 10', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#c9a6acead-a912-4846-a8e6-0c95b25137d6' },
+  { name: 'Midweek League', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#ce89df381-8db9-449b-9046-6c84152083fb' },
   { name: 'Junior Cup', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#c84150658-3379-4e15-bc80-32c5f6a281eb' },
-  { name: 'Development Cup', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#cb51feb8b-2615-4f62-ba30-8cdc080657b1' },
+  { name: 'Development Cup', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#ca060450b-a00d-41c1-9c06-85f6b717b248' },
   { name: 'T20 Shield Cup', type: 'nvplay', url: 'https://northerncricketunion.org/ncu-nv-play-match-zone/?tab=c_matches#c81a85c9d-6a55-4a21-8eef-b128fdca3ad1' }
 ];
 

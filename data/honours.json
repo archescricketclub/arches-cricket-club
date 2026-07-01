@@ -140,21 +140,21 @@
     "category": "midweek-30"
   },
   {
-    "name": "Asad Murtuza",
-    "record": "50*",
-    "type": "batting",
-    "date": "20th June 2026",
-    "opponent": "CSNI 5th XI",
-    "league": "Development Cup",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
     "name": "Ali Rizwan",
     "record": "51",
     "type": "batting",
     "date": "30th May 2026",
     "opponent": "Saintfield 3rd XI",
+    "league": "Development Cup",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Asad Murtuza",
+    "record": "50*",
+    "type": "batting",
+    "date": "20th June 2026",
+    "opponent": "CSNI 5th XI",
     "league": "Development Cup",
     "season": "2026",
     "category": "half-century"
@@ -170,16 +170,6 @@
     "category": "half-century"
   },
   {
-    "name": "Robin Hendricks",
-    "record": "58",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
     "name": "Maree Lourens",
     "record": "51*",
     "type": "batting",
@@ -188,16 +178,6 @@
     "league": "Cup Matches",
     "season": "2026",
     "category": "half-century"
-  },
-  {
-    "name": "Baby Varghese",
-    "record": "5-10",
-    "type": "bowling",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "five-wickets"
   },
   {
     "name": "Dushyanth Reddy B",
