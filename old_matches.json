@@ -1,27 +1,36 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Ards & Donaghadee 1st XI",
+      "homeTeam": "Ards & Donaghadee",
       "awayTeam": "Arches 1st XI",
-      "date": "TBD",
-      "time": "",
-      "venue": "Northfield, Donaghadee",
+      "date": "4th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
       "status": "",
       "league": "Senior League 3"
     },
     {
-      "homeTeam": "Muckamore MW2 XI",
-      "awayTeam": "Arches MW XI",
-      "date": "TBD",
-      "time": "",
-      "venue": "Moylena, Muckamore",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings",
+      "date": "18th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
       "status": "",
-      "league": "Midweek League"
+      "league": "Senior League 3"
     },
     {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "NIMACC",
       "date": "1st August",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Dundrum",
+      "awayTeam": "Arches 1st XI",
+      "date": "8th August",
       "time": "11:00 AM",
       "venue": "TBD",
       "status": "",
@@ -120,132 +129,63 @@
   ],
   "results": [
     {
-      "date": "SAT\n27 JUN",
+      "date": "27th June",
       "league": "Senior League 3",
       "homeTeam": "Arches 1st XI",
-      "awayTeam": "Victoria 1st XI",
-      "venue": "Lurgan Park, Lurgan",
-      "result": "Victoria 1st XI won by 8 wickets"
+      "awayTeam": "Victoria",
+      "venue": "TBD",
+      "result": "Victoria beat Arches by 8 wickets",
+      "scorelines": [
+        "Arches 79 (20.5 overs, A Rizwan 30*, V Vonga 29, A Khan 3-15, J Davison 2-13, R Hendricks 2-12, A Quinn 2-20)",
+        "Victoria 80-2 (15.1 overs, A Gray 25*, R Hendricks 24)"
+      ]
     },
     {
-      "date": "WED\n24 JUN",
+      "date": "24th June",
       "league": "Senior League 3",
-      "homeTeam": "Belfast Superkings 1st XI",
+      "homeTeam": "Belfast Superkings",
       "awayTeam": "Arches 1st XI",
-      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
-      "result": "Belfast Superkings 1st XI won by 62 runs"
+      "venue": "TBD",
+      "result": "Belfast Superkings beat Arches by 62 runs",
+      "scorelines": [
+        "Belfast Superkings 122-8 (20 overs, A Praveen 28, A Rehmeni 3-8)",
+        "Arches 60 (16.3 overs, A Murtaza 20, S Chandrasekaran 2-15, A Karunakaran 3-9, K Arumugam 3-19)"
+      ]
     },
     {
-      "date": "WED\n24 JUN",
+      "date": "20th June",
       "league": "Senior League 3",
       "homeTeam": "Arches 1st XI",
-      "awayTeam": "Dundrum 1st XI",
-      "venue": "The Meadow, Dundrum",
-      "result": "Arches 1st XI won by 36 runs"
+      "awayTeam": "Dundrum",
+      "venue": "TBD",
+      "result": "Arches beat Dundrum by 36 runs",
+      "scorelines": [
+        "Arches 121 (35.4 overs, C Armstrong 3-19, M Douglas 2-21, D Glover 3-25)",
+        "Dundrum 85 (23.1 overs, D Glover 21, A Rehmani 8-7)"
+      ]
     },
     {
-      "date": "WED\n24 JUN",
+      "date": "13th June",
       "league": "Senior League 3",
       "homeTeam": "Arches 1st XI",
-      "awayTeam": "Amigos Belfast 1st XI",
-      "venue": "TBC, TBC",
-      "result": "Amigos Belfast 1st XI won by 4 wickets"
+      "awayTeam": "Amigos Belfast",
+      "venue": "TBD",
+      "result": "Amigos Belfast beat Arches by 4 wickets",
+      "scorelines": [
+        "Arches 88 (31.4 overs, N Paul 2-14, Jestin Kr 5-30, V Mohanadas 2-24)",
+        "Amigos Belfast 92-6 (21.1 overs, A Thayil 32, V Nagari 2-13, D Bommana 2-17)"
+      ]
     },
     {
-      "date": "WED\n24 JUN",
+      "date": "30th May",
       "league": "Senior League 3",
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Belfast Superkings 1st XI",
-      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
-      "result": "Match Abandoned"
-    },
-    {
-      "date": "TBD",
-      "league": "Junior League 10",
-      "homeTeam": "Templepatrick 4th XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBC, TBC",
-      "result": "Arches 2nd XI won by 5 wickets"
-    },
-    {
-      "date": "TBD",
-      "league": "Junior League 10",
-      "homeTeam": "North Down 4th XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "The Green, Comber",
-      "result": "Arches 2nd XI won by 7 wickets"
-    },
-    {
-      "date": "TBD",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "CI 5th XI",
-      "venue": "TBC, TBC",
-      "result": "CI 5th XI won by 2 wickets"
-    },
-    {
-      "date": "SAT\n6 JUN",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Lurgan 3rd XI",
-      "venue": "TBC, TBC",
-      "result": "Lurgan 3rd XI won by 4 wickets"
-    },
-    {
-      "date": "TBD",
-      "league": "Midweek League",
-      "homeTeam": "Cliftonville Academy MW XI",
-      "awayTeam": "Arches MW XI",
-      "venue": "TBC, TBC",
-      "result": "Arches MW XI won by 7 wickets"
-    },
-    {
-      "date": "TBD",
-      "league": "Midweek League",
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Cooke Collegians MW XI",
-      "venue": "Pirrie Park, Belfast",
-      "result": "Arches MW XI won by 27 runs"
-    },
-    {
-      "date": "6 SEP\n2025",
-      "league": "Development Cup",
-      "homeTeam": "Amigos Belfast 2nd XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "The Green (Upper Ground), Comber",
-      "result": "Arches 2nd XI won by 4 wickets"
-    },
-    {
-      "date": "2 AUG\n2025",
-      "league": "Development Cup",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Dunmurry 4th XI",
-      "venue": "TBC, TBC",
-      "result": "Arches 2nd XI won by 58 runs"
-    },
-    {
-      "date": "16 JUL\n2025",
-      "league": "Development Cup",
-      "homeTeam": "Lisburn 5th XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "Wallace Park, Lisburn",
-      "result": "Arches 2nd XI won by 4 wickets"
-    },
-    {
-      "date": "16 JUL\n2025",
-      "league": "Development Cup",
-      "homeTeam": "Victoria 3rd XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "Victoria Park, Belfast",
-      "result": "Arches 2nd XI won by 7 wickets"
-    },
-    {
-      "date": "TBD",
-      "league": "T20 Shield Cup",
-      "homeTeam": "Ards & Donaghadee 1st XI",
+      "homeTeam": "Belfast Superkings",
       "awayTeam": "Arches 1st XI",
-      "venue": "Northfield, Donaghadee",
-      "result": "Ards & Donaghadee 1st XI won by 24 runs"
+      "venue": "TBD",
+      "result": "Belfast Superkings v Arches – Abandoned",
+      "scorelines": [
+        "Arches 20-4 (9.4 overs, F Manzoor 4-7 inc hat trick)"
+      ]
     },
     {
       "date": "23rd May",
@@ -281,6 +221,54 @@
       "scorelines": [
         "Arches 84 (25.4 overs, V Nagari 29, C Balfour 5-31, E Busby 2-22)",
         "Ards & Donaghadee 85-3 (18.1 overs, M Martin 40*, S Tummala 2-15)"
+      ]
+    },
+    {
+      "date": "21st June",
+      "league": "Junior League 10",
+      "homeTeam": "Templepatrick 4",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBD",
+      "result": "Arches 2 beat Templepatrick 4 by 5 wickets",
+      "scorelines": [
+        "Templepatrick 4 106-8 (30 overs, H Shaik 2-29, Wasim SM 2-13)",
+        "Arches 2 110-5 (21.1 overs, A Rizwan 24, A Murtaza 35*, K Karneedi 25*, A McGookin 2-21, A Orr 2-26)"
+      ]
+    },
+    {
+      "date": "14th June",
+      "league": "Junior League 10",
+      "homeTeam": "North Down 4",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBD",
+      "result": "Arches beat North Down by 7 wickets",
+      "scorelines": [
+        "North Down 4 129-8 (20 overs, J Montgomery 66*, V Nagari 2-19, K Maheswaram 2-27, Y Chinthakindi 2-22)",
+        "Arches 2 130-3 (18.1 overs, A Rizwan 61*, V Nagari 41)"
+      ]
+    },
+    {
+      "date": "7th June",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "CI 5",
+      "venue": "Victoria Park, Belfast",
+      "result": "CI 5 beat Arches 2 by 2 wickets",
+      "scorelines": [
+        "Arches 2 148-6 (20 overs, S Nadakuditi 26, A Rizwan 60, K Karneedi 21*)",
+        "CI 5 151-8 (19.3 overs, D Brown 20, Z Cameron 23, D Shanmuganathan 22, P Holmes 26*, A Holmes 3-43, Harsha G 2-20, H Shaik 2-34, K Karneedi 2-14)"
+      ]
+    },
+    {
+      "date": "6th June",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Lurgan 3",
+      "venue": "Victoria Park, Belfast",
+      "result": "Lurgan 3 beat Arches 2 by 4 wickets",
+      "scorelines": [
+        "Arches 2 147-6 (20 overs, A Rehmani 50, Wasim SM 46*, J John 2-28, T McClenahan 3-39)",
+        "Lurgan 3 148-6 (20 overs, T McClenahan 34, J John 33, K Singh 28, H Shaik 2-22)"
       ]
     },
     {
@@ -370,7 +358,15 @@
       "awayTeam": "Arches 2nd XI",
       "venue": "TBC, TBC",
       "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "T20 Shield Cup",
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "Northfield, Donaghadee",
+      "result": "Ards & Donaghadee 1st XI won by 24 runs"
     }
   ],
-  "lastUpdated": "2026-07-01T12:16:10.237Z"
+  "lastUpdated": "2026-07-01T03:55:53.637Z"
 }

@@ -17,6 +17,105 @@
       "venue": "Moylena, Muckamore",
       "status": "",
       "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "NIMACC",
+      "date": "1st August",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dungannon",
+      "date": "5th July",
+      "time": "11:00 AM",
+      "venue": "Victoria Park, Belfast",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Amigos Belfast 3",
+      "awayTeam": "Arches 2nd XI",
+      "date": "12th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Downpatrick 3",
+      "awayTeam": "Arches 2nd XI",
+      "date": "19th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Ardent Blues 4",
+      "date": "26th July",
+      "time": "11:00 AM",
+      "venue": "Victoria Park, Belfast",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Cooke Collegians 4",
+      "date": "9th August",
+      "time": "11:00 AM",
+      "venue": "Victoria Park, Belfast",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Belfast Superkings 2",
+      "awayTeam": "Arches 2nd XI",
+      "date": "23rd August",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Belfast Superkings 3",
+      "date": "29th August",
+      "time": "11:00 AM",
+      "venue": "Victoria Park, Belfast",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Muckamore 2",
+      "awayTeam": "Arches MW XI",
+      "date": "8th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry 2",
+      "date": "14th July",
+      "time": "11:00 AM",
+      "venue": "Victoria Park, Belfast",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "CSNI",
+      "awayTeam": "Arches MW XI",
+      "date": "22nd July",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Midweek League"
     }
   ],
   "results": [
@@ -147,7 +246,131 @@
       "awayTeam": "Arches 1st XI",
       "venue": "Northfield, Donaghadee",
       "result": "Ards & Donaghadee 1st XI won by 24 runs"
+    },
+    {
+      "date": "23rd May",
+      "league": "Senior League 3",
+      "homeTeam": "Drumaness Superkings",
+      "awayTeam": "Arches 1st XI",
+      "venue": "TBD",
+      "result": "Drumaness Superkings beat Arches by 235 runs",
+      "scorelines": [
+        "Drumaness Superkings 334-6 (40 overs, D Oldroyd 116, G Walsh 41, N Walsh 103ret, V Nagari 2-59)",
+        "Arches 99 (26.2 overs, K Karneedi 41, M Abid 5-9, E Gelston 3-34)"
+      ]
+    },
+    {
+      "date": "17th May",
+      "league": "Senior League 3",
+      "homeTeam": "NIMACC",
+      "awayTeam": "Arches 1st XI",
+      "venue": "TBD",
+      "result": "NIMACC beat Arches by 98 runs (DLS)",
+      "scorelines": [
+        "NIMACC 258 (40 overs, B Varghese 32, Ji George 51, Jo George 26, By Varghese 21, Be Varghese 27, MH Siyad 27*, V Jyothi 3-44, V Nagari 5-53)",
+        "Arches 88-6 (23 overs, A Nimmagadda 40*, Ba Varghese 2-12)"
+      ]
+    },
+    {
+      "date": "2nd May",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Ards & Donaghadee",
+      "venue": "TBD",
+      "result": "Ards & Donaghadee beat Arches by 7 wickets",
+      "scorelines": [
+        "Arches 84 (25.4 overs, V Nagari 29, C Balfour 5-31, E Busby 2-22)",
+        "Ards & Donaghadee 85-3 (18.1 overs, M Martin 40*, S Tummala 2-15)"
+      ]
+    },
+    {
+      "date": "10th May",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "NIMACC",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2 beat NIMACC 2 – NIMACC 2 played an inelgible player",
+      "scorelines": [
+        "Arches 2 193 (24.2 overs, A Rizwan 27, S Nadakuditi 26, Wasim SM 23, A Narra 58, J George 2-20, J Thomas 2-43, E Varghese 2-34)",
+        "NIMACC 2 ( overs, R John 35, Sidharth 27*, E Varghese 36, J Thomas 30*, Harsha G 3-27, Wasim SM 3-57)"
+      ]
+    },
+    {
+      "date": "30th June",
+      "league": "Midweek League",
+      "homeTeam": "Arches v Cliftonville Academy",
+      "awayTeam": "Ardent Blues 2 v CSNI",
+      "venue": "TBD",
+      "result": "Muckamore 2 beat Cregagh – Cregagh unable to field a team",
+      "scorelines": [
+        "Arches v Cliftonville Academy",
+        "Ardent Blues 2 v CSNI"
+      ]
+    },
+    {
+      "date": "23rd June",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Cooke Collegians",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches beat Cooke Collegians by 27 runs",
+      "scorelines": [
+        "Arches 183-5 (20 overs, A Rizwan 28, V Vonga 30ret, Wasim SM 31ret, K Maheswaram 21*)",
+        "Cooke Collegians 156-6 (20 overs, V Gupta 35ret, R McCann 23, A Ani 28, A Hunter 30ret, V Vonga 2-17)"
+      ]
+    },
+    {
+      "date": "16th June",
+      "league": "Midweek League",
+      "homeTeam": "Cregagh",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBD",
+      "result": "Arches beat Cregagh by 9 wickets",
+      "scorelines": [
+        "Cregagh 145-9 (20 overs, B Browne 31ret, C De Silva 32ret, Harsha G 2-18, H Shaik 2-16, R Yadavalli 2-28)",
+        "Arches 147-1 (12.5 overs, A Rizwan 33ret, V Vonga 31ret, A Murtaza 34ret)"
+      ]
+    },
+    {
+      "date": "2nd June",
+      "league": "Midweek League",
+      "homeTeam": "Belfast",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBD",
+      "result": "Arches beat Belfast by 9 wickets",
+      "scorelines": [
+        "Belfast 151-4 (20 overs, K Pandey 35ret, M Asif 35ret, R Baghel 23*, V Vonga 2-14)",
+        "Arches 152-1 (15.5 overs, A Rizwan 33ret, S Nadakuditi 33ret, Wasim SM 24*, A Narra 25*)"
+      ]
+    },
+    {
+      "date": "26th May",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Ardent Blues 2",
+      "venue": "Victoria Park, Belfast",
+      "result": "Ardent Blues 2 beat Arches by 7 wickets",
+      "scorelines": [
+        "Arches 115-9 (17.5 overs, V Vonga 35ret, S Nair 2-10, S Babu 3-4)",
+        "Ardent Blues 2 J Johnson 31ret, S Nair 31ret, Harsha G 2-5)"
+      ]
+    },
+    {
+      "date": "TBD",
+      "league": "Development Cup",
+      "homeTeam": "CSNI 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Londonderry Park, Newtownards",
+      "result": "Arches 2nd XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Development Cup",
+      "homeTeam": "Saintfield 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI won by 5 wickets"
     }
   ],
-  "lastUpdated": "2026-07-01T12:05:25.361Z"
+  "lastUpdated": "2026-07-01T12:16:10.237Z"
 }
