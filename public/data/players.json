@@ -2404,44 +2404,6 @@
       ]
     },
     {
-      "name": "Stuart Campbell",
-      "jersey": "#—",
-      "cap": "SC",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "2",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-13",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Andrew Campbell",
-      "jersey": "#—",
-      "cap": "AC",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "2",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-28",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Maree Lourens",
       "jersey": "#—",
       "cap": "ML",
@@ -2513,44 +2475,6 @@
         },
         {
           "n": "1-19",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Caleb Armstrong",
-      "jersey": "#—",
-      "cap": "CA",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-21",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Frank Pedigrew",
-      "jersey": "#—",
-      "cap": "FP",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-13",
           "l": "Best Fig"
         }
       ]
