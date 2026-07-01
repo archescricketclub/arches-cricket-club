@@ -194,7 +194,7 @@ function getInitials(name) {
             const select = selects.find(s => s.offsetWidth > 0 || s.offsetHeight > 0);
             if (select) {
               const options = Array.from(select.options);
-              const opt = options.find(o => o.text.toLowerCase().includes(targetTeam.toLowerCase()));
+              const opt = options.find(o => o.text.toLowerCase().includes('arches'));
               if (opt) {
                 select.value = opt.value;
                 select.dispatchEvent(new Event('change', { bubbles: true }));
@@ -217,7 +217,7 @@ function getInitials(name) {
             return rows.map(row => {
               const cells = Array.from(row.querySelectorAll('.nvp-stats-grid__cell-item'));
               return {
-                name: cells[0] ? cells[0].textContent.trim() : '',
+                name: cells[0] ? cells[0].textContent.trim().replace(/[^a-zA-Z\\s]/g, '').trim() : '',
                 runs: cells[4] ? cells[4].textContent.trim() : '0',
                 avg: cells[5] ? cells[5].textContent.trim() : '0.00',
                 hs: cells[6] ? cells[6].textContent.trim() : '0'
@@ -272,7 +272,7 @@ function getInitials(name) {
             const select = selects.find(s => s.offsetWidth > 0 || s.offsetHeight > 0);
             if (select) {
               const options = Array.from(select.options);
-              const opt = options.find(o => o.text.toLowerCase().includes(targetTeam.toLowerCase()));
+              const opt = options.find(o => o.text.toLowerCase().includes('arches'));
               if (opt) {
                 select.value = opt.value;
                 select.dispatchEvent(new Event('change', { bubbles: true }));
@@ -295,7 +295,7 @@ function getInitials(name) {
             return rows.map(row => {
               const cells = Array.from(row.querySelectorAll('.nvp-stats-grid__cell-item'));
               return {
-                name: cells[0] ? cells[0].textContent.trim() : '',
+                name: cells[0] ? cells[0].textContent.trim().replace(/[^a-zA-Z\\s]/g, '').trim() : '',
                 overs: cells[3] ? cells[3].textContent.trim() : '0',
                 wickets: cells[6] ? cells[6].textContent.trim() : '0',
                 bestFig: cells[11] ? cells[11].textContent.trim() : '-'

@@ -1,5 +1,105 @@
 [
   {
+    "name": "Veerendra Babu Nagari",
+    "record": "5-53",
+    "type": "bowling",
+    "date": "17th May 2026",
+    "opponent": "NIMACC",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Anil Narra",
+    "record": "58",
+    "type": "batting",
+    "date": "10th May 2026",
+    "opponent": "NIMACC",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "30*",
+    "type": "batting",
+    "date": "23rd June 2026",
+    "opponent": "Cooke Collegians",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "31*",
+    "type": "batting",
+    "date": "23rd June 2026",
+    "opponent": "Cooke Collegians",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "33*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "31*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Asad Murtuza",
+    "record": "34*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "33*",
+    "type": "batting",
+    "date": "2nd June 2026",
+    "opponent": "Belfast",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "33*",
+    "type": "batting",
+    "date": "2nd June 2026",
+    "opponent": "Belfast",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "35*",
+    "type": "batting",
+    "date": "26th May 2026",
+    "opponent": "Ardent Blues 2",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
     "name": "Asad Murtuza",
     "record": "50*",
     "type": "batting",
@@ -28,36 +128,6 @@
     "league": "Development Cup",
     "season": "2026",
     "category": "half-century"
-  },
-  {
-    "name": "Robin Hendricks",
-    "record": "58",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Maree Lourens",
-    "record": "51*",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Baby Varghese",
-    "record": "5-10",
-    "type": "bowling",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "five-wickets"
   },
   {
     "name": "Dushyanth Reddy B",
