@@ -354,7 +354,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 8,
+      "wickets": 10,
       "bestFig": "3-26",
       "matches": 0
     }
@@ -384,23 +384,8 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 0,
-      "bestFig": "0-10",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Jaya Sukhavasi‡",
-    "jersey": "#—",
-    "cap": "JAYA",
-    "batting": {
-      "runs": 25,
-      "hs": "20",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
+      "wickets": 6,
+      "bestFig": "5-31",
       "matches": 0
     }
   },
@@ -409,8 +394,8 @@
     "jersey": "#—",
     "cap": "JAYA",
     "batting": {
-      "runs": 23,
-      "hs": "17",
+      "runs": 48,
+      "hs": "20",
       "matches": 0
     },
     "bowling": {
@@ -581,36 +566,6 @@
     "bowling": {
       "wickets": 2,
       "bestFig": "2-22",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Yaungicha Mirthivada‡",
-    "jersey": "#—",
-    "cap": "YAUN",
-    "batting": {
-      "runs": 0,
-      "hs": "0",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 6,
-      "bestFig": "5-31",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Anshul Krishali‡",
-    "jersey": "#—",
-    "cap": "ANSH",
-    "batting": {
-      "runs": 0,
-      "hs": "0",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "1-4",
       "matches": 0
     }
   }

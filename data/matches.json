@@ -116,6 +116,24 @@
       "venue": "TBD",
       "status": "",
       "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings",
+      "date": "18th July",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Dundrum",
+      "awayTeam": "Arches 1st XI",
+      "date": "8th August",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
     }
   ],
   "results": [
@@ -192,7 +210,7 @@
       "result": "Lurgan 3rd XI won by 4 wickets"
     },
     {
-      "date": "TBD",
+      "date": "30th June",
       "league": "Midweek League",
       "homeTeam": "Cliftonville Academy MW XI",
       "awayTeam": "Arches MW XI",
@@ -264,18 +282,6 @@
       ]
     },
     {
-      "date": "30th June",
-      "league": "Midweek League",
-      "homeTeam": "Arches v Cliftonville Academy",
-      "awayTeam": "Ardent Blues 2 v CSNI",
-      "venue": "TBD",
-      "result": "Muckamore 2 beat Cregagh – Cregagh unable to field a team",
-      "scorelines": [
-        "Arches v Cliftonville Academy",
-        "Ardent Blues 2 v CSNI"
-      ]
-    },
-    {
       "date": "23rd June",
       "league": "Midweek League",
       "homeTeam": "Arches MW XI",
@@ -340,5 +346,5 @@
       "result": "Arches 2nd XI won by 5 wickets"
     }
   ],
-  "lastUpdated": "2026-07-01T12:16:10.237Z"
+  "lastUpdated": "2026-07-01T13:31:15.515Z"
 }
