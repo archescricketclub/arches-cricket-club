@@ -4,7 +4,7 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1226,
+      "runs": 1253,
       "hs": "131",
       "matches": 0
     },
@@ -19,7 +19,7 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 651,
+      "runs": 657,
       "hs": "58",
       "matches": 0
     },
@@ -49,7 +49,7 @@
     "jersey": "#3",
     "cap": "SRI3",
     "batting": {
-      "runs": 551,
+      "runs": 573,
       "hs": "54",
       "matches": 0
     },
@@ -84,7 +84,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 68,
+      "wickets": 69,
       "bestFig": "5-22",
       "matches": 0
     }
@@ -94,12 +94,12 @@
     "jersey": "#45",
     "cap": "CH45",
     "batting": {
-      "runs": 344,
+      "runs": 358,
       "hs": "31*",
       "matches": 0
     },
     "bowling": {
-      "wickets": 35,
+      "wickets": 36,
       "bestFig": "3-20",
       "matches": 0
     }
@@ -139,7 +139,7 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 232,
+      "runs": 263,
       "hs": "66",
       "matches": 0
     },
@@ -180,6 +180,21 @@
     }
   },
   {
+    "name": "Vonga Vishnu",
+    "jersey": "#15",
+    "cap": "VV15",
+    "batting": {
+      "runs": 190,
+      "hs": "35*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 10,
+      "bestFig": "3-18",
+      "matches": 0
+    }
+  },
+  {
     "name": "Kiran Maheswaram",
     "jersey": "#75",
     "cap": "KM75",
@@ -189,23 +204,8 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 14,
+      "wickets": 15,
       "bestFig": "2-11",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Vonga Vishnu",
-    "jersey": "#15",
-    "cap": "VV15",
-    "batting": {
-      "runs": 157,
-      "hs": "35*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 10,
-      "bestFig": "3-18",
       "matches": 0
     }
   },
@@ -630,6 +630,21 @@
     }
   },
   {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 20,
+      "hs": "12*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 3,
+      "bestFig": "1-6",
+      "matches": 0
+    }
+  },
+  {
     "name": "Jordan Wilson",
     "jersey": "#—",
     "cap": "JW",
@@ -806,21 +821,6 @@
     "bowling": {
       "wickets": 0,
       "bestFig": "0-14",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 8,
-      "hs": "5",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 3,
-      "bestFig": "1-6",
       "matches": 0
     }
   },
@@ -1329,7 +1329,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 10,
+      "wickets": 11,
       "bestFig": "2-16",
       "matches": 0
     }

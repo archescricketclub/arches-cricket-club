@@ -1347,32 +1347,12 @@
   ],
   "mw-bat": [
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
-      "stats": [
-        {
-          "n": "100",
-          "l": "Runs"
-        },
-        {
-          "n": "33*",
-          "l": "High Score"
-        },
-        {
-          "n": "50.00",
-          "l": "Average"
-        }
-      ],
-      "badge": "Top Scorer MW"
-    },
-    {
       "name": "Vonga Vishnu",
       "jersey": "#15",
       "cap": "VV15",
       "stats": [
         {
-          "n": "96",
+          "n": "129",
           "l": "Runs"
         },
         {
@@ -1383,6 +1363,26 @@
           "n": "",
           "l": "Average"
         }
+      ],
+      "badge": "Top Scorer MW"
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "127",
+          "l": "Runs"
+        },
+        {
+          "n": "33*",
+          "l": "High Score"
+        },
+        {
+          "n": "42.33",
+          "l": "Average"
+        }
       ]
     },
     {
@@ -1391,7 +1391,7 @@
       "cap": "WSM1",
       "stats": [
         {
-          "n": "76",
+          "n": "107",
           "l": "Runs"
         },
         {
@@ -1399,7 +1399,7 @@
           "l": "High Score"
         },
         {
-          "n": "38.00",
+          "n": "53.50",
           "l": "Average"
         }
       ]
@@ -1410,7 +1410,7 @@
       "cap": "AN30",
       "stats": [
         {
-          "n": "65",
+          "n": "71",
           "l": "Runs"
         },
         {
@@ -1418,7 +1418,26 @@
           "l": "High Score"
         },
         {
-          "n": "32.50",
+          "n": "23.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Srini Nadakuditi",
+      "jersey": "#3",
+      "cap": "SRI3",
+      "stats": [
+        {
+          "n": "58",
+          "l": "Runs"
+        },
+        {
+          "n": "33*",
+          "l": "High Score"
+        },
+        {
+          "n": "29.00",
           "l": "Average"
         }
       ]
@@ -1443,31 +1462,12 @@
       ]
     },
     {
-      "name": "Srini Nadakuditi",
-      "jersey": "#3",
-      "cap": "SRI3",
-      "stats": [
-        {
-          "n": "36",
-          "l": "Runs"
-        },
-        {
-          "n": "33*",
-          "l": "High Score"
-        },
-        {
-          "n": "36.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Chandra Obula Reddy B",
       "jersey": "#45",
       "cap": "CH45",
       "stats": [
         {
-          "n": "25",
+          "n": "39",
           "l": "Runs"
         },
         {
@@ -1475,7 +1475,7 @@
           "l": "High Score"
         },
         {
-          "n": "12.50",
+          "n": "19.50",
           "l": "Average"
         }
       ]
@@ -1519,6 +1519,25 @@
       ]
     },
     {
+      "name": "Vijaykumar Hugar",
+      "jersey": "#—",
+      "cap": "VH",
+      "stats": [
+        {
+          "n": "15",
+          "l": "Runs"
+        },
+        {
+          "n": "12*",
+          "l": "High Score"
+        },
+        {
+          "n": "15.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Kishan Karneedi",
       "jersey": "#11",
       "cap": "KK11",
@@ -1533,25 +1552,6 @@
         },
         {
           "n": "10.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Vijaykumar Hugar",
-      "jersey": "#—",
-      "cap": "VH",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Runs"
-        },
-        {
-          "n": "2",
-          "l": "High Score"
-        },
-        {
-          "n": "3.00",
           "l": "Average"
         }
       ]
@@ -1583,7 +1583,7 @@
       "cap": "VK18",
       "stats": [
         {
-          "n": "12",
+          "n": "16",
           "l": "Overs"
         },
         {
@@ -1603,7 +1603,7 @@
       "cap": "VV15",
       "stats": [
         {
-          "n": "16",
+          "n": "20",
           "l": "Overs"
         },
         {
@@ -1622,11 +1622,11 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "11",
+          "n": "15",
           "l": "Overs"
         },
         {
-          "n": "3",
+          "n": "4",
           "l": "Wickets"
         },
         {
@@ -1641,7 +1641,26 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "9",
+          "n": "13",
+          "l": "Overs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-15",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
+      "stats": [
+        {
+          "n": "13",
           "l": "Overs"
         },
         {
@@ -1650,6 +1669,25 @@
         },
         {
           "n": "1-15",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kiran Maheswaram",
+      "jersey": "#75",
+      "cap": "KM75",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Overs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-10",
           "l": "Best Fig"
         }
       ]
@@ -1693,44 +1731,6 @@
       ]
     },
     {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
-      "stats": [
-        {
-          "n": "11",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-23",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Kiran Maheswaram",
-      "jersey": "#75",
-      "cap": "KM75",
-      "stats": [
-        {
-          "n": "7",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-10",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -1757,7 +1757,7 @@
       "cap": "VV15",
       "stats": [
         {
-          "n": "96",
+          "n": "129",
           "l": "Runs"
         },
         {
@@ -1776,15 +1776,15 @@
       "cap": "CH45",
       "stats": [
         {
-          "n": "25",
+          "n": "39",
           "l": "Runs"
         },
         {
-          "n": "1",
+          "n": "2",
           "l": "Wickets"
         },
         {
-          "n": "1-23",
+          "n": "1-15",
           "l": "Best Fig"
         }
       ]
@@ -1799,7 +1799,7 @@
           "l": "Runs"
         },
         {
-          "n": "1",
+          "n": "2",
           "l": "Wickets"
         },
         {

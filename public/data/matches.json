@@ -100,15 +100,6 @@
       "league": "Junior League 10"
     },
     {
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Cliftonville Academy",
-      "date": "30th June",
-      "time": "11:00 AM",
-      "venue": "Victoria Park, Belfast",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Muckamore 2",
       "awayTeam": "Arches MW XI",
       "date": "8th July",
@@ -293,6 +284,18 @@
       ]
     },
     {
+      "date": "30th June",
+      "league": "Midweek League",
+      "homeTeam": "Arches v Cliftonville Academy",
+      "awayTeam": "Ardent Blues 2 v CSNI",
+      "venue": "TBD",
+      "result": "Muckamore 2 beat Cregagh – Cregagh unable to field a team",
+      "scorelines": [
+        "Arches v Cliftonville Academy",
+        "Ardent Blues 2 v CSNI"
+      ]
+    },
+    {
       "date": "23rd June",
       "league": "Midweek League",
       "homeTeam": "Arches MW XI",
@@ -365,5 +368,5 @@
       "result": "Ards & Donaghadee 1st XI won by 24 runs"
     }
   ],
-  "lastUpdated": "2026-06-30T03:41:27.772Z"
+  "lastUpdated": "2026-07-01T03:55:53.637Z"
 }
