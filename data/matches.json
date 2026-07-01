@@ -4,7 +4,7 @@
       "homeTeam": "Muckamore MW2 XI",
       "awayTeam": "Arches MW XI",
       "date": "TBD",
-      "time": "",
+      "time": "6:00 PM",
       "venue": "Moylena, Muckamore",
       "status": "",
       "league": "Midweek League"
@@ -13,7 +13,7 @@
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Dungannon",
       "date": "5th July",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "Victoria Park, Belfast",
       "status": "",
       "league": "Junior League 10"
@@ -22,7 +22,7 @@
       "homeTeam": "Amigos Belfast 3",
       "awayTeam": "Arches 2nd XI",
       "date": "12th July",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "TBD",
       "status": "",
       "league": "Junior League 10"
@@ -31,7 +31,7 @@
       "homeTeam": "Downpatrick 3",
       "awayTeam": "Arches 2nd XI",
       "date": "19th July",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "TBD",
       "status": "",
       "league": "Junior League 10"
@@ -40,7 +40,7 @@
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Ardent Blues 4",
       "date": "26th July",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "Victoria Park, Belfast",
       "status": "",
       "league": "Junior League 10"
@@ -49,7 +49,7 @@
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Cooke Collegians 4",
       "date": "9th August",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "Victoria Park, Belfast",
       "status": "",
       "league": "Junior League 10"
@@ -58,7 +58,7 @@
       "homeTeam": "Belfast Superkings 2",
       "awayTeam": "Arches 2nd XI",
       "date": "23rd August",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "TBD",
       "status": "",
       "league": "Junior League 10"
@@ -67,7 +67,7 @@
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Belfast Superkings 3",
       "date": "29th August",
-      "time": "11:00 AM",
+      "time": "1:00 PM",
       "venue": "Victoria Park, Belfast",
       "status": "",
       "league": "Junior League 10"
@@ -76,7 +76,7 @@
       "homeTeam": "Muckamore 2",
       "awayTeam": "Arches MW XI",
       "date": "8th July",
-      "time": "11:00 AM",
+      "time": "6:00 PM",
       "venue": "TBD",
       "status": "",
       "league": "Midweek League"
@@ -85,7 +85,7 @@
       "homeTeam": "Arches MW XI",
       "awayTeam": "Dunmurry 2",
       "date": "14th July",
-      "time": "11:00 AM",
+      "time": "6:00 PM",
       "venue": "Victoria Park, Belfast",
       "status": "",
       "league": "Midweek League"
@@ -94,7 +94,7 @@
       "homeTeam": "CSNI",
       "awayTeam": "Arches MW XI",
       "date": "22nd July",
-      "time": "11:00 AM",
+      "time": "6:00 PM",
       "venue": "TBD",
       "status": "",
       "league": "Midweek League"
@@ -103,7 +103,7 @@
       "date": "4th July",
       "homeTeam": "Ards & Donaghadee 1st XI",
       "awayTeam": "Arches 1st XI",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     },
@@ -111,7 +111,7 @@
       "date": "18th July",
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Belfast Superkings",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     },
@@ -119,7 +119,7 @@
       "date": "25th July",
       "homeTeam": "Drumaness Superkings",
       "awayTeam": "Arches 1st XI",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     },
@@ -127,7 +127,7 @@
       "date": "1st August",
       "homeTeam": "Arches 1st XI",
       "awayTeam": "NIMACC",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     },
@@ -135,7 +135,7 @@
       "date": "8th August",
       "homeTeam": "Dundrum",
       "awayTeam": "Arches 1st XI",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     },
@@ -143,7 +143,7 @@
       "date": "15th August",
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Amigos Belfast",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     },
@@ -151,7 +151,7 @@
       "date": "22nd August",
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Victoria",
-      "time": "11:00 AM",
+      "time": "12:00 PM",
       "venue": "TBD",
       "league": "Senior League 3"
     }

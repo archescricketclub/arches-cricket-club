@@ -543,9 +543,10 @@ button {
   backdrop-filter: blur(36px);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0;
-  padding: 0 2rem;
+  padding: 6rem 2rem 2rem;
+  overflow-y: auto;
 }
 
 .mobile-nav.open {
@@ -555,7 +556,9 @@ button {
 .mobile-nav a {
   width: 100%;
   max-width: 340px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   padding: 1.1rem 2rem;
   margin: 0.2rem 0;
   font-family: 'Bebas Neue', sans-serif;
