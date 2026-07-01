@@ -360,21 +360,6 @@
     }
   },
   {
-    "name": "Maree Lourens",
-    "jersey": "#—",
-    "cap": "ML",
-    "batting": {
-      "runs": 51,
-      "hs": "51*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "2-16",
-      "matches": 0
-    }
-  },
-  {
     "name": "Venkateswarrao Jyothi",
     "jersey": "#9",
     "cap": "VJ09",
@@ -386,21 +371,6 @@
     "bowling": {
       "wickets": 17,
       "bestFig": "3-26",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Rhodri Phillips",
-    "jersey": "#—",
-    "cap": "RP",
-    "batting": {
-      "runs": 44,
-      "hs": "44*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
       "matches": 0
     }
   },
@@ -450,51 +420,6 @@
     }
   },
   {
-    "name": "Abdul Qadir",
-    "jersey": "#—",
-    "cap": "AQ",
-    "batting": {
-      "runs": 23,
-      "hs": "23",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-31",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Sivakumar Baratharaj",
-    "jersey": "#—",
-    "cap": "SB",
-    "batting": {
-      "runs": 19,
-      "hs": "19",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Senthilkumar Ponnuchamy",
-    "jersey": "#—",
-    "cap": "SP",
-    "batting": {
-      "runs": 18,
-      "hs": "18*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-11",
-      "matches": 0
-    }
-  },
-  {
     "name": "Purvik Prasad",
     "jersey": "#—",
     "cap": "PP",
@@ -540,21 +465,6 @@
     }
   },
   {
-    "name": "Saravana Chandrasekaran",
-    "jersey": "#—",
-    "cap": "SC",
-    "batting": {
-      "runs": 7,
-      "hs": "7",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-15",
-      "matches": 0
-    }
-  },
-  {
     "name": "Madhu Yellanur",
     "jersey": "#5",
     "cap": "MY05",
@@ -566,36 +476,6 @@
     "bowling": {
       "wickets": 6,
       "bestFig": "3-14",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Gowri Sankar",
-    "jersey": "#—",
-    "cap": "GS",
-    "batting": {
-      "runs": 5,
-      "hs": "5",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Shashank Rama",
-    "jersey": "#—",
-    "cap": "SR",
-    "batting": {
-      "runs": 5,
-      "hs": "5",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
       "matches": 0
     }
   },
@@ -630,21 +510,6 @@
     }
   },
   {
-    "name": "Viswath Balaguru",
-    "jersey": "#—",
-    "cap": "VB",
-    "batting": {
-      "runs": 4,
-      "hs": "4",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
     "name": "Sharan Bezawada",
     "jersey": "#—",
     "cap": "SHAR",
@@ -656,66 +521,6 @@
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Amarnath Karunakaran",
-    "jersey": "#—",
-    "cap": "AK",
-    "batting": {
-      "runs": 2,
-      "hs": "2",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-13",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Sharath Bhuvaneshwari",
-    "jersey": "#—",
-    "cap": "SB",
-    "batting": {
-      "runs": 2,
-      "hs": "2",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-20",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Dino James",
-    "jersey": "#—",
-    "cap": "DJ",
-    "batting": {
-      "runs": 1,
-      "hs": "1",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-18",
-      "matches": 0
-    }
-  },
-  {
-    "name": "AP Praveen",
-    "jersey": "#—",
-    "cap": "AP",
-    "batting": {
-      "runs": 1,
-      "hs": "1",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-5",
       "matches": 0
     }
   },
