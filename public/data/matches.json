@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Ards & Donaghadee 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "TBD",
-      "time": "",
-      "venue": "Northfield, Donaghadee",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Muckamore MW2 XI",
       "awayTeam": "Arches MW XI",
       "date": "TBD",
@@ -17,15 +8,6 @@
       "venue": "Moylena, Muckamore",
       "status": "",
       "league": "Midweek League"
-    },
-    {
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "NIMACC",
-      "date": "1st August",
-      "time": "11:00 AM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
     },
     {
       "homeTeam": "Arches 2nd XI",
@@ -118,21 +100,59 @@
       "league": "Midweek League"
     },
     {
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Belfast Superkings",
-      "date": "18th July",
+      "date": "4th July",
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
       "time": "11:00 AM",
       "venue": "TBD",
-      "status": "",
       "league": "Senior League 3"
     },
     {
-      "homeTeam": "Dundrum",
-      "awayTeam": "Arches 1st XI",
-      "date": "8th August",
+      "date": "18th July",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings",
       "time": "11:00 AM",
       "venue": "TBD",
-      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "date": "25th July",
+      "homeTeam": "Drumaness Superkings",
+      "awayTeam": "Arches 1st XI",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "league": "Senior League 3"
+    },
+    {
+      "date": "1st August",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "NIMACC",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "league": "Senior League 3"
+    },
+    {
+      "date": "8th August",
+      "homeTeam": "Dundrum",
+      "awayTeam": "Arches 1st XI",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "league": "Senior League 3"
+    },
+    {
+      "date": "15th August",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast",
+      "time": "11:00 AM",
+      "venue": "TBD",
+      "league": "Senior League 3"
+    },
+    {
+      "date": "22nd August",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Victoria",
+      "time": "11:00 AM",
+      "venue": "TBD",
       "league": "Senior League 3"
     }
   ],
@@ -346,5 +366,5 @@
       "result": "Arches 2nd XI won by 5 wickets"
     }
   ],
-  "lastUpdated": "2026-07-01T13:31:15.515Z"
+  "lastUpdated": "2026-07-01T13:42:25.749Z"
 }
