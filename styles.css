@@ -2450,15 +2450,13 @@ button {
   }
 }
 
-@media (max-width:480px) {
-  .nav-logo-text .club-name {
-    font-size: 1.1rem;
+@media (max-width:768px) {
+  .nav-logo-text {
+    display: none;
   }
+}
 
-  .nav-logo-text .club-sub {
-    font-size: 0.55rem;
-    letter-spacing: 1.5px;
-  }
+@media (max-width:480px) {
 
   .section {
     padding: 2.5rem 0;
