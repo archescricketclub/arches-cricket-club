@@ -2,25 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arches Cricket Club | Belfast's Premier Cricket Team</title>
-    <meta name="description" content="Arches Cricket Club — Belfast's premier cricket club. Passion, Performance, Pride. Playing in the Northern Ireland Cricket League.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Arches Cricket Club</title>
+  <meta name="description" content="Photo gallery from Arches Cricket Club matches, events, and training sessions.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <style>
+    .full-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .full-gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      background: var(--panel2);
+      aspect-ratio: 4/3;
+    }
+
+    .full-gallery-item.large {
+      aspect-ratio: 16/9;
+      grid-column: span 2;
+    }
+
+    .full-gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      transition: transform 0.5s ease;
+    }
+
+    .full-gallery-item:hover .full-gallery-placeholder {
+      transform: scale(1.07);
+    }
+
+    .full-gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(2, 6, 23, 0.8), transparent 60%);
+      opacity: 0;
+      transition: all 0.35s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem 1.25rem;
+    }
+
+    .full-gallery-item:hover .full-gallery-overlay {
+      opacity: 1;
+    }
+
+    .fg-caption {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .fg-expand {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(2, 6, 23, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: all 0.35s;
+    }
+
+    .full-gallery-item:hover .fg-expand {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .full-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .full-gallery-item.large {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .full-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full-gallery-item.large {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
     
-    <!-- Open Graph SEO Tags -->
-    <meta property="og:title" content="Arches Cricket Club | Belfast">
-    <meta property="og:description" content="Belfast's premier cricket club. Passion, Performance, Pride.">
-    <meta property="og:image" content="https://archescricket.club/logo.png">
-    <meta property="og:url" content="https://archescricket.club">
-    <meta property="og:type" content="website">
-
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-
+    .full-gallery-item:hover .gallery-image {
+      transform: scale(1.07);
+    }
+  </style>
 </head>
 
 <body>
