@@ -6,7 +6,8 @@ async function resizeImage(filePath) {
     const image = await Jimp.read(filePath);
     console.log(`Original size of ${filePath}: ${image.bitmap.width}x${image.bitmap.height}`);
     
-    image.scale(0.2); // scale down to 20%
+    // Scale the image down to 20%
+    image.scale(0.2);
     
     await image.write(filePath);
     console.log(`Successfully resized and compressed ${filePath}`);
@@ -16,8 +17,8 @@ async function resizeImage(filePath) {
 }
 
 async function main() {
-  await resizeImage('banjo-tech.png');
-  await resizeImage('ANDHRA1.png');
+  await resizeImage('logo.png');
+  await resizeImage('assets/images/gallery/team.png');
   console.log("Done!");
 }
 
