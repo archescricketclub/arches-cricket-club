@@ -7,7 +7,7 @@
       "time": "12:00 PM",
       "venue": "Northfield",
       "status": "",
-      "league": "Senior League"
+      "league": "Senior League 3"
     },
     {
       "homeTeam": "Arches 2nd XI",
@@ -16,7 +16,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League"
+      "league": "Junior League 10"
     },
     {
       "homeTeam": "Muckamore MW2 XI",
@@ -34,7 +34,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League"
+      "league": "Junior League 10"
     },
     {
       "homeTeam": "Arches MW XI",
@@ -73,7 +73,7 @@
       "time": "12:00 PM",
       "venue": "Lurgan Park",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Victoria 1st XI won by 8 wickets"
     },
     {
@@ -83,7 +83,7 @@
       "time": "12:00 PM",
       "venue": "Northfield",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Ards & Donaghadee 1st XI won by 24 runs"
     },
     {
@@ -93,7 +93,7 @@
       "time": "12:00 PM",
       "venue": "City of Belfast Playing Fields (BSK)",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Belfast Superkings 1st XI won by 62 runs"
     },
     {
@@ -113,7 +113,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "Arches 2nd XI won by 5 wickets"
     },
     {
@@ -123,7 +123,7 @@
       "time": "1:00 PM",
       "venue": "Londonderry Park",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "Arches 2nd XI won by 7 wickets"
     },
     {
@@ -133,7 +133,7 @@
       "time": "12:00 PM",
       "venue": "The Meadow",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Arches 1st XI won by 36 runs"
     },
     {
@@ -153,7 +153,7 @@
       "time": "1:00 PM",
       "venue": "The Green",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "Arches 2nd XI won by 7 wickets"
     },
     {
@@ -163,7 +163,7 @@
       "time": "12:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Amigos Belfast 1st XI won by 4 wickets"
     },
     {
@@ -173,7 +173,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "CI 5th XI won by 2 wickets"
     },
     {
@@ -183,7 +183,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "Lurgan 3rd XI won by 4 wickets"
     },
     {
@@ -193,7 +193,7 @@
       "time": "12:00 PM",
       "venue": "Northfield",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Match Postponed"
     },
     {
@@ -213,7 +213,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "Arches 2nd XI won by 5 wickets"
     },
     {
@@ -223,7 +223,7 @@
       "time": "12:00 PM",
       "venue": "City of Belfast Playing Fields (BSK)",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Match Abandoned"
     },
     {
@@ -243,7 +243,7 @@
       "time": "12:00 PM",
       "venue": "The Village Ground",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Drumaness Superkings 1st XI won by 235 runs"
     },
     {
@@ -253,7 +253,7 @@
       "time": "12:00 PM",
       "venue": "City of Belfast Playing Fields (NIMA)",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "NIMACC 1st XI won by 98 runs (DLS method)"
     },
     {
@@ -263,7 +263,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League",
+      "league": "Junior League 10",
       "result": "Arches 2nd XI beat NIMA 2nd XI - NIMA 2nd XI played an inelgible player"
     },
     {
@@ -273,7 +273,7 @@
       "time": "12:00 PM",
       "venue": "City of Belfast Playing Fields (BISC)",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "BISC 1st XI won by 87 runs"
     },
     {
@@ -283,8 +283,97 @@
       "time": "12:00 PM",
       "venue": "Northfield",
       "status": "",
-      "league": "Senior League",
+      "league": "Senior League 3",
       "result": "Ards & Donaghadee 1st XI won by 7 wickets"
+    },
+    {
+      "date": "SAT\n27 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Victoria 1st XI",
+      "venue": "Lurgan Park, Lurgan",
+      "result": "Victoria 1st XI won by 8 wickets"
+    },
+    {
+      "date": "WED\n24 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast 1st XI",
+      "venue": "TBC, TBC",
+      "result": "Amigos Belfast 1st XI won by 4 wickets"
+    },
+    {
+      "date": "WED\n24 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings 1st XI",
+      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
+      "result": "Match Abandoned"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "Templepatrick 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "CI 5th XI",
+      "venue": "TBC, TBC",
+      "result": "CI 5th XI won by 2 wickets"
+    },
+    {
+      "date": "SAT\n6 JUN",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Lurgan 3rd XI",
+      "venue": "TBC, TBC",
+      "result": "Lurgan 3rd XI won by 4 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Midweek League",
+      "homeTeam": "Cliftonville Academy MW XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBC, TBC",
+      "result": "Arches MW XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Cooke Collegians MW XI",
+      "venue": "Pirrie Park, Belfast",
+      "result": "Arches MW XI won by 27 runs"
+    },
+    {
+      "date": "2 AUG\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dunmurry 4th XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI won by 58 runs"
+    },
+    {
+      "date": "16 JUL\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Lisburn 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Wallace Park, Lisburn",
+      "result": "Arches 2nd XI won by 4 wickets"
+    },
+    {
+      "date": "16 JUL\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Victoria 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2nd XI won by 7 wickets"
     }
-  ]
+  ],
+  "lastUpdated": "2026-07-02T14:54:08.747Z"
 }

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const allMatchesPath = path.join(__dirname, 'all_matches.json');
+const allMatchesPath = path.join(__dirname, 'all_matches_full.json');
 const matchesPath = path.join(__dirname, 'data', 'matches.json');
 
 const rawFile = fs.readFileSync(allMatchesPath, 'utf8');
@@ -41,13 +41,14 @@ allMatches.forEach(match => {
     const archesTeam = match.Team1Name.includes('Arches') ? match.Team1Name : match.Team2Name;
 
     if (titleStr.includes('cup') || titleStr.includes('shield') || titleStr.includes('trophy')) {
-        league = "Cup Match";
+        // preserve the API's CompetitionName if it exists, otherwise generic cup
+        league = match.CompetitionName || "Cup Match";
         time = "1:00 PM";
     } else if (archesTeam.includes('1st XI')) {
-        league = "Senior League";
+        league = "Senior League 3";
         time = "12:00 PM";
     } else if (archesTeam.includes('2nd XI') || archesTeam.includes('3rd XI')) {
-        league = "Junior League";
+        league = "Junior League 10";
         time = "1:00 PM";
     } else if (archesTeam.includes('MW')) {
         league = "Midweek League";
