@@ -2,25 +2,231 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arches Cricket Club | Belfast's Premier Cricket Team</title>
-    <meta name="description" content="Arches Cricket Club — Belfast's premier cricket club. Passion, Performance, Pride. Playing in the Northern Ireland Cricket League.">
-    
-    <!-- Open Graph SEO Tags -->
-    <meta property="og:title" content="Arches Cricket Club | Belfast">
-    <meta property="og:description" content="Belfast's premier cricket club. Passion, Performance, Pride.">
-    <meta property="og:image" content="https://archescricket.club/logo.png">
-    <meta property="og:url" content="https://archescricket.club">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honours Board | Arches Cricket Club</title>
+  <meta name="description" content="Arches Cricket Club Honours Board — outstanding individual match performances since 2025.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .tabs-row {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      margin-bottom: 2rem;
+      -webkit-overflow-scrolling: touch;
+      border-bottom: 1px solid var(--border);
+    }
 
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    .tabs-row::-webkit-scrollbar {
+      height: 3px;
+    }
 
+    .tabs-row::-webkit-scrollbar-thumb {
+      background: var(--amber);
+      border-radius: 2px;
+    }
+
+    .tab-btn {
+      flex-shrink: 0;
+      padding: .65rem 1.6rem;
+      border-radius: 50px 50px 0 0;
+      border: 1px solid transparent;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .25s;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: -1px;
+    }
+
+    .tab-btn.active {
+      background: var(--panel);
+      color: var(--amber);
+      border-color: var(--border) var(--border) transparent var(--border);
+      border-bottom: 1.5px solid var(--amber);
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: var(--text);
+    }
+
+    .filters-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .filter-select {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.55rem 1.25rem;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      transition: var(--trans);
+    }
+
+    .filter-select:focus,
+    .filter-select:hover {
+      border-color: var(--border-accent);
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.55rem 1.25rem 0.55rem 2.5rem;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      outline: none;
+      transition: var(--trans);
+    }
+
+    .search-input:focus {
+      border-color: var(--amber);
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .honours-table-container {
+      width: 100%;
+      overflow-x: auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      margin-bottom: 2rem;
+    }
+
+    .honours-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .honours-table th {
+      background: var(--surface);
+      color: var(--amber);
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 1.1rem 1.25rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .honours-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }
+
+    .honours-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .honours-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .table-sno {
+      font-weight: 700;
+      color: var(--muted);
+      width: 60px;
+    }
+
+    .table-player {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .table-record {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      color: var(--amber);
+    }
+
+    .table-opp {
+      color: var(--text);
+    }
+
+    .table-date {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .table-league {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      width: 100%;
+    }
+
+    .empty-icon {
+      font-size: 2.5rem;
+      color: var(--muted2);
+      margin-bottom: 1rem;
+    }
+
+    .empty-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-desc {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 
 <body>

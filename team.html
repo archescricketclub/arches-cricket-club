@@ -1,25 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arches Cricket Club | Belfast's Premier Cricket Team</title>
-    <meta name="description" content="Arches Cricket Club — Belfast's premier cricket club. Passion, Performance, Pride. Playing in the Northern Ireland Cricket League.">
-    
-    <!-- Open Graph SEO Tags -->
-    <meta property="og:title" content="Arches Cricket Club | Belfast">
-    <meta property="og:description" content="Belfast's premier cricket club. Passion, Performance, Pride.">
-    <meta property="og:image" content="https://archescricket.club/logo.png">
-    <meta property="og:url" content="https://archescricket.club">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team | Arches Cricket Club</title>
+  <link rel="icon" type="image/png" href="logo.png">
 
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css">
+  <style>
+    /* ================= RESET & ROOT ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    :root {
+      --primary-color: #ff6b1a;
+      --dark-bg: #1a1a1a;
+      --darker-bg: #0d0d0d;
+      --text-light: #ffffff;
+      --transition: all 0.3s ease;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+      border-bottom: 2px solid var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: url('logo.png') center/contain no-repeat;
+    }
+
+    .logo-text h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transform: translateX(-50%);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 80%;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      margin: auto;
+      padding: 4rem 2rem 6rem;
+      width: 100%;
+    }
+
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1a1a1a;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: #222;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    tr:hover {
+      background: #262626;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+      border-top: 3px solid var(--primary-color);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+    }
+  </style>
 </head>
 
 <body>
