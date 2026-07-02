@@ -1,80 +1,169 @@
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
-const allMatchesPath = path.join(__dirname, 'all_matches_full.json');
 const matchesPath = path.join(__dirname, 'data', 'matches.json');
+const publicMatchesPath = path.join(__dirname, 'public', 'data', 'matches.json');
 
-const rawFile = fs.readFileSync(allMatchesPath, 'utf8');
-const rawData = JSON.parse(rawFile.replace(/^\uFEFF/, ''));
-
-let finalData = {
-    fixtures: [],
-    results: []
-};
-
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-function getSuffix(d) {
-    if (d > 3 && d < 21) return 'th';
-    switch (d % 10) {
-        case 1:  return "st";
-        case 2:  return "nd";
-        case 3:  return "rd";
-        default: return "th";
-    }
+// Helper to fetch JSON from URL
+function fetchJson(url) {
+    return new Promise((resolve, reject) => {
+        https.get(url, res => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => {
+                try {
+                    resolve(JSON.parse(data.replace(/^\uFEFF/, '')));
+                } catch (e) {
+                    reject(e);
+                }
+            });
+        }).on('error', reject);
+    });
 }
 
-const allMatches = [...(rawData.Fixtures || []), ...(rawData.Results || [])];
+function normalizeTeam(t) {
+    return t.toLowerCase().replace(/1st xi/g, '').replace(/2nd xi/g, '').replace(/mw xi/g, '').replace(/mw2 xi/g, '').trim();
+}
 
-allMatches.forEach(match => {
-    if (!match.Team1Name.includes('Arches') && !match.Team2Name.includes('Arches')) return;
+function matchesAreSame(m1, m2) {
+    return normalizeTeam(m1.homeTeam) === normalizeTeam(m2.homeTeam) &&
+           normalizeTeam(m1.awayTeam) === normalizeTeam(m2.awayTeam);
+}
 
-    const dateObj = new Date(match.StartDateTime);
-    const day = dateObj.getDate();
-    const month = months[dateObj.getMonth()];
-    const dateStr = `${day}${getSuffix(day)} ${month}`;
+async function syncMatches() {
+    let allFixtures = [];
+    let allResults = [];
+    let page = 0;
+    let hasMore = true;
 
-    let league = "";
-    let time = "TBD";
-    const titleStr = match.MatchTitle.toLowerCase();
-    
-    const archesTeam = match.Team1Name.includes('Arches') ? match.Team1Name : match.Team2Name;
+    console.log("Fetching live matches from NVPlay API...");
+    while (hasMore) {
+        const url = `https://w-api.cdn.nvplay.net/api/matchlist/filter?customerid=4c07e17d-8e58-426e-82cc-bd4b02b5183b&currentSeason=false&competitionId=&showFixtures=true&showResults=true&maxResults=500&page=${page}`;
+        const json = await fetchJson(url);
+        
+        const fixturesCount = json.Fixtures ? json.Fixtures.length : 0;
+        const resultsCount = json.Results ? json.Results.length : 0;
+        
+        if (fixturesCount > 0 || resultsCount > 0) {
+            if (json.Fixtures) allFixtures.push(...json.Fixtures);
+            if (json.Results) allResults.push(...json.Results);
+            page++;
+        } else {
+            hasMore = false;
+        }
+    }
+    console.log(`Fetched ${allFixtures.length} total fixtures and ${allResults.length} total results from NCU.`);
 
-    if (titleStr.includes('cup') || titleStr.includes('shield') || titleStr.includes('trophy')) {
-        // preserve the API's CompetitionName if it exists, otherwise generic cup
-        league = match.CompetitionName || "Cup Match";
-        time = "1:00 PM";
-    } else if (archesTeam.includes('1st XI')) {
-        league = "Senior League 3";
-        time = "12:00 PM";
-    } else if (archesTeam.includes('2nd XI') || archesTeam.includes('3rd XI')) {
-        league = "Junior League 10";
-        time = "1:00 PM";
-    } else if (archesTeam.includes('MW')) {
-        league = "Midweek League";
-        time = "6:00 PM";
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    function getSuffix(d) {
+        if (d > 3 && d < 21) return 'th';
+        switch (d % 10) {
+            case 1:  return "st";
+            case 2:  return "nd";
+            case 3:  return "rd";
+            default: return "th";
+        }
     }
 
-    const matchObj = {
-        homeTeam: match.Team1Name,
-        awayTeam: match.Team2Name,
-        date: dateStr,
-        time: time,
-        venue: match.MatchTitle.split(', ')[1]?.split(' -')[0] || "TBD",
-        status: "",
-        league: league
+    const newFixtures = [];
+    const newResults = [];
+    const allMatches = [...allFixtures, ...allResults];
+
+    allMatches.forEach(match => {
+        if (!match.Team1Name.includes('Arches') && !match.Team2Name.includes('Arches')) return;
+
+        const dateObj = new Date(match.StartDateTime);
+        const day = dateObj.getDate();
+        const month = months[dateObj.getMonth()];
+        const dateStr = `${day}${getSuffix(day)} ${month}`;
+
+        let league = "";
+        let time = "TBD";
+        const titleStr = match.MatchTitle.toLowerCase();
+        
+        const archesTeam = match.Team1Name.includes('Arches') ? match.Team1Name : match.Team2Name;
+
+        if (titleStr.includes('cup') || titleStr.includes('shield') || titleStr.includes('trophy')) {
+            league = match.CompetitionName || "Cup Match";
+            time = "1:00 PM";
+        } else if (archesTeam.includes('1st XI')) {
+            league = "Senior League 3";
+            time = "12:00 PM";
+        } else if (archesTeam.includes('2nd XI') || archesTeam.includes('3rd XI')) {
+            league = "Junior League 10";
+            time = "1:00 PM";
+        } else if (archesTeam.includes('MW')) {
+            league = "Midweek League";
+            time = "6:00 PM";
+        }
+
+        const matchObj = {
+            homeTeam: match.Team1Name,
+            awayTeam: match.Team2Name,
+            date: dateStr,
+            time: time,
+            venue: match.MatchTitle.split(', ')[1]?.split(' -')[0] || "TBD",
+            status: "",
+            league: league
+        };
+
+        if (match.Result) {
+            matchObj.result = match.Result;
+            newResults.push(matchObj);
+        } else {
+            newFixtures.push(matchObj);
+        }
+    });
+
+    console.log(`Filtered for Arches: ${newFixtures.length} fixtures, ${newResults.length} results.`);
+
+    // Read existing matches to preserve historic data
+    let existingData = { fixtures: [], results: [] };
+    if (fs.existsSync(matchesPath)) {
+        existingData = JSON.parse(fs.readFileSync(matchesPath, 'utf8'));
+    }
+
+    const mergedFixtures = [...newFixtures];
+    const mergedResults = [...newResults];
+
+    existingData.fixtures.forEach(oldF => {
+        const exists = mergedFixtures.some(newF => matchesAreSame(oldF, newF)) || 
+                       mergedResults.some(newR => matchesAreSame(oldF, newR));
+        if (!exists) {
+            mergedFixtures.push(oldF);
+        }
+    });
+
+    existingData.results.forEach(oldR => {
+        const exists = mergedResults.some(newR => matchesAreSame(oldR, newR));
+        if (!exists) {
+            mergedResults.push(oldR);
+        }
+    });
+
+    // Sort by date (assuming we can parse '4th July' or fallback)
+    function parseCustomDate(dStr) {
+        const cleaned = dStr.replace(/st|nd|rd|th/g, '').replace(/\n/g, ' ');
+        return new Date(cleaned + " 2026").getTime() || Date.now();
+    }
+    
+    mergedFixtures.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
+    mergedResults.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
+
+    const finalData = {
+        fixtures: mergedFixtures,
+        results: mergedResults,
+        lastUpdated: new Date().toISOString()
     };
 
-    if (match.Result) {
-        matchObj.result = match.Result;
-        finalData.results.push(matchObj);
-    } else {
-        finalData.fixtures.push(matchObj);
-    }
-});
+    fs.mkdirSync(path.dirname(matchesPath), { recursive: true });
+    fs.writeFileSync(matchesPath, JSON.stringify(finalData, null, 2));
 
-finalData.fixtures.sort((a, b) => new Date(a.date + " 2026") - new Date(b.date + " 2026"));
-finalData.results.sort((a, b) => new Date(a.date + " 2026") - new Date(b.date + " 2026"));
+    fs.mkdirSync(path.dirname(publicMatchesPath), { recursive: true });
+    fs.writeFileSync(publicMatchesPath, JSON.stringify(finalData, null, 2));
 
-fs.writeFileSync(matchesPath, JSON.stringify(finalData, null, 2));
-console.log(`Successfully synced ${finalData.fixtures.length} fixtures and ${finalData.results.length} results.`);
+    console.log(`Successfully merged! Final counts: ${mergedFixtures.length} fixtures, ${mergedResults.length} results.`);
+}
+
+syncMatches().catch(console.error);
