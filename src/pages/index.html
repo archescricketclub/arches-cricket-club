@@ -1,78 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arches Cricket Club | Belfast's Premier Cricket Team</title>
-    <meta name="description" content="Arches Cricket Club — Belfast's premier cricket club. Passion, Performance, Pride. Playing in the Northern Ireland Cricket League.">
-    
-    <!-- Open Graph SEO Tags -->
-    <meta property="og:title" content="Arches Cricket Club | Belfast">
-    <meta property="og:description" content="Belfast's premier cricket club. Passion, Performance, Pride.">
-    <meta property="og:image" content="https://archescricket.club/logo.png">
-    <meta property="og:url" content="https://archescricket.club">
-    <meta property="og:type" content="website">
-
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
+<!-- INCLUDE HEAD -->
 
 <body>
 
-        <!-- ─── NAVBAR ─── -->
-    <nav id="navbar">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="index.html" class="nav-logo" aria-label="Home">
-                    <img src="logo.png" alt="Arches CC Logo">
-                    <div class="nav-logo-text">
-                        <div class="club-name">Arches Cricket Club</div>
-                        <div class="club-sub">Belfast · Est. 2024</div>
-                    </div>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="fixtures.html" class="nav-link-fixtures">Fixtures</a></li>
-                    <li><a href="results.html" class="nav-link-results">Results</a></li>
-                    <li><a href="players.html" class="nav-link-players">Players</a></li>
-                    <li><a href="honours.html" class="nav-link-honours">Honours Board</a></li>
-                    <li><a href="gallery.html" class="nav-link-gallery">Gallery</a></li>
-                    <li><a href="sponsors.html" class="nav-link-sponsors">Sponsors</a></li>
-                    <li><a href="contact.html" class="nav-link-contact">Contact</a></li>
-                </ul>
-                <div class="nav-cta">
-                    <a href="join.html" class="btn btn-primary" style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join The Club</a>
-                </div>
-                <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle mobile menu" aria-expanded="false" style="background:none; border:none; cursor:pointer;">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ─── MOBILE NAV ─── -->
-    <div class="mobile-nav" id="mobileNav">
-        <a href="index.html" onclick="toggleMobileNav()"><i class="fa-solid fa-house" style="margin-right: 12px; color: var(--amber);"></i> Home</a>
-        <div class="mn-divider"></div>
-        <a href="fixtures.html" onclick="toggleMobileNav()"><i class="fa-solid fa-calendar-days" style="margin-right: 12px; color: var(--amber);"></i> Fixtures</a>
-        <a href="results.html" onclick="toggleMobileNav()"><i class="fa-solid fa-trophy" style="margin-right: 12px; color: var(--amber);"></i> Results</a>
-        <a href="players.html" onclick="toggleMobileNav()"><i class="fa-solid fa-users" style="margin-right: 12px; color: var(--amber);"></i> Players</a>
-        <a href="honours.html" onclick="toggleMobileNav()"><i class="fa-solid fa-award" style="margin-right: 12px; color: var(--amber);"></i> Honours Board</a>
-        <a href="gallery.html" onclick="toggleMobileNav()"><i class="fa-solid fa-image" style="margin-right: 12px; color: var(--amber);"></i> Gallery</a>
-        <a href="sponsors.html" onclick="toggleMobileNav()"><i class="fa-solid fa-handshake" style="margin-right: 12px; color: var(--amber);"></i> Sponsors</a>
-        <a href="contact.html" onclick="toggleMobileNav()"><i class="fa-solid fa-envelope" style="margin-right: 12px; color: var(--amber);"></i> Contact</a>
-        <div class="mn-divider"></div>
-        <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()">
-            <i class="fa-solid fa-user-plus"></i> Join The Club
-        </a>
-    </div>
-
+    <!-- INCLUDE HEADER -->
 
     
         <a href="fixtures.html" onclick="toggleMobileNav()"><i class="fa-solid fa-calendar-days" style="margin-right: 12px; color: var(--amber);"></i> Fixtures</a>
@@ -583,47 +516,7 @@
         </div>
     </section>
 
-        <!-- ─── FOOTER ─── -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="Arches CC Logo" class="footer-logo">
-                    <p>Belfast's most exciting cricket club. Fostering talent, passion, and community since 2024.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="fixtures.html">Fixtures</a></li>
-                        <li><a href="results.html">Results</a></li>
-                        <li><a href="players.html">Players</a></li>
-                        <li><a href="sponsors.html">Sponsors</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fa-solid fa-envelope" style="color:var(--amber);margin-right:8px;"></i> info@archescricket.club</p>
-                    <p><i class="fa-solid fa-location-dot" style="color:var(--amber);margin-right:8px;"></i> Belfast, Northern Ireland</p>
-                    <div class="social-links" style="margin-top:1.5rem;">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-inner">
-                    <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
-                    <div class="footer-legal">
-                        <a href="data_policy.html">Data Policy</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="join.html">Join</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- INCLUDE FOOTER -->
     
 
     <!-- ──────────────────────────────────────── -->

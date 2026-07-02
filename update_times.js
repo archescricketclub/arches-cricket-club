@@ -1,25 +1,29 @@
 const fs = require('fs');
+const path = require('path');
 
-const file = 'data/matches.json';
-const d = JSON.parse(fs.readFileSync(file));
+const matchesPath = path.join(__dirname, 'data', 'matches.json');
+const data = JSON.parse(fs.readFileSync(matchesPath, 'utf8'));
 
-d.fixtures.forEach(f => {
-  let l = f.league.toLowerCase();
-  if (l.includes('senior')) {
-    f.time = '12:00 PM';
-  } else if (l.includes('junior league')) {
-    f.time = '1:00 PM';
-  } else if (l.includes('midweek')) {
-    f.time = '6:00 PM';
-  } else if (l.includes('cup') || l.includes('shield')) {
-    f.time = '1:00 PM';
-  } else {
-    // Default fallback if any unknown
-    f.time = '12:00 PM';
+let updated = 0;
+
+data.fixtures.forEach(match => {
+  if (match.time.includes('11:00 AM') || match.time.includes('11:AM')) {
+    match.time = '12:00 PM';
+    updated++;
+  } else if (match.league.includes('Senior')) {
+    match.time = '12:00 PM';
+    updated++;
+  } else if (match.league.includes('Junior')) {
+    match.time = '1:00 PM';
+    updated++;
+  } else if (match.league.includes('Midweek')) {
+    match.time = '6:00 PM';
+    updated++;
+  } else if (match.league.includes('Cup')) {
+    match.time = '1:00 PM';
+    updated++;
   }
 });
 
-fs.writeFileSync(file, JSON.stringify(d, null, 2));
-fs.writeFileSync('public/data/matches.json', JSON.stringify(d, null, 2));
-
-console.log("Updated match times based on league logic.");
+fs.writeFileSync(matchesPath, JSON.stringify(data, null, 2));
+console.log(`Updated ${updated} matches successfully.`);
