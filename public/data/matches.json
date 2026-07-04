@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Ards & Donaghadee 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "4th July",
-      "time": "12:00 PM",
-      "venue": "Northfield",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Dungannon 1st XI",
       "date": "5th July",
@@ -375,5 +366,5 @@
       "result": "Arches MW XI won by 7 wickets"
     }
   ],
-  "lastUpdated": "2026-07-04T02:55:11.516Z"
+  "lastUpdated": "2026-07-04T13:26:37.851Z"
 }
