@@ -364,7 +364,17 @@
       "status": "",
       "league": "Midweek League",
       "result": "Arches MW XI won by 7 wickets"
+    },
+    {
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "4th July",
+      "time": "12:00 PM",
+      "venue": "Northfield",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Ards & Donaghadee 1st XI won by 106 runs"
     }
   ],
-  "lastUpdated": "2026-07-04T13:26:37.851Z"
+  "lastUpdated": "2026-07-05T03:24:56.837Z"
 }

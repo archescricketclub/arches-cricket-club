@@ -6,7 +6,7 @@
       "cap": "AN72",
       "stats": [
         {
-          "n": "71",
+          "n": "83",
           "l": "Runs"
         },
         {
@@ -14,30 +14,11 @@
           "l": "High Score"
         },
         {
-          "n": "11.83",
+          "n": "11.86",
           "l": "Average"
         }
       ],
       "badge": "Top Scorer T1"
-    },
-    {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "66",
-          "l": "Runs"
-        },
-        {
-          "n": "29",
-          "l": "High Score"
-        },
-        {
-          "n": "8.25",
-          "l": "Average"
-        }
-      ]
     },
     {
       "name": "Kishan Karneedi",
@@ -45,7 +26,7 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "60",
+          "n": "70",
           "l": "Runs"
         },
         {
@@ -53,7 +34,64 @@
           "l": "High Score"
         },
         {
-          "n": "12.00",
+          "n": "11.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "VeerendraNagari",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "29",
+          "l": "High Score"
+        },
+        {
+          "n": "7.44",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "AbubakarRehmani",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "31",
+          "l": "High Score"
+        },
+        {
+          "n": "11.17",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "AsadMurtaza",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "51",
+          "l": "Runs"
+        },
+        {
+          "n": "20",
+          "l": "High Score"
+        },
+        {
+          "n": "6.38",
           "l": "Average"
         }
       ]
@@ -78,50 +116,12 @@
       ]
     },
     {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "42",
-          "l": "Runs"
-        },
-        {
-          "n": "20",
-          "l": "High Score"
-        },
-        {
-          "n": "6.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "36",
-          "l": "Runs"
-        },
-        {
-          "n": "16",
-          "l": "High Score"
-        },
-        {
-          "n": "7.20",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Ali Rizwan",
       "jersey": "#16",
       "cap": "AR69",
       "stats": [
         {
-          "n": "35",
+          "n": "43",
           "l": "Runs"
         },
         {
@@ -129,7 +129,7 @@
           "l": "High Score"
         },
         {
-          "n": "35.00",
+          "n": "21.50",
           "l": "Average"
         }
       ]
@@ -140,7 +140,7 @@
       "cap": "D",
       "stats": [
         {
-          "n": "28",
+          "n": "30",
           "l": "Runs"
         },
         {
@@ -148,7 +148,7 @@
           "l": "High Score"
         },
         {
-          "n": "4.00",
+          "n": "3.75",
           "l": "Average"
         }
       ]
@@ -167,7 +167,45 @@
           "l": "High Score"
         },
         {
-          "n": "8.67",
+          "n": "6.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "TulasiThatavarthi",
+      "jersey": "#—",
+      "cap": "T",
+      "stats": [
+        {
+          "n": "19",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "3.80",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Deepak Sai",
+      "jersey": "#50",
+      "cap": "AD39",
+      "stats": [
+        {
+          "n": "17",
+          "l": "Runs"
+        },
+        {
+          "n": "16",
+          "l": "High Score"
+        },
+        {
+          "n": "8.50",
           "l": "Average"
         }
       ]
@@ -187,25 +225,6 @@
         },
         {
           "n": "5.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
-      "stats": [
-        {
-          "n": "14",
-          "l": "Runs"
-        },
-        {
-          "n": "6",
-          "l": "High Score"
-        },
-        {
-          "n": "2.80",
           "l": "Average"
         }
       ]
@@ -325,20 +344,20 @@
       ]
     },
     {
-      "name": "Deepak Sai",
-      "jersey": "#50",
-      "cap": "AD39",
+      "name": "HarshaG",
+      "jersey": "#—",
+      "cap": "H",
       "stats": [
         {
-          "n": "1",
+          "n": "4",
           "l": "Runs"
         },
         {
-          "n": "1",
+          "n": "4",
           "l": "High Score"
         },
         {
-          "n": "1.00",
+          "n": "2.00",
           "l": "Average"
         }
       ]
@@ -351,11 +370,11 @@
       "cap": "A",
       "stats": [
         {
-          "n": "26.1",
+          "n": "34.1",
           "l": "Overs"
         },
         {
-          "n": "13",
+          "n": "14",
           "l": "Wickets"
         },
         {
@@ -371,15 +390,34 @@
       "cap": "V",
       "stats": [
         {
-          "n": "34",
+          "n": "40",
           "l": "Overs"
         },
         {
-          "n": "12",
+          "n": "13",
           "l": "Wickets"
         },
         {
           "n": "5-53",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VenkatJyothi",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "38",
+          "l": "Overs"
+        },
+        {
+          "n": "6",
+          "l": "Wickets"
+        },
+        {
+          "n": "3-44",
           "l": "Best Fig"
         }
       ]
@@ -404,12 +442,12 @@
       ]
     },
     {
-      "name": "VenkatJyothi",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
       "stats": [
         {
-          "n": "30",
+          "n": "26.3",
           "l": "Overs"
         },
         {
@@ -417,7 +455,7 @@
           "l": "Wickets"
         },
         {
-          "n": "3-44",
+          "n": "2-45",
           "l": "Best Fig"
         }
       ]
@@ -442,20 +480,20 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
+      "name": "TulasiThatavarthi",
+      "jersey": "#—",
+      "cap": "T",
       "stats": [
         {
-          "n": "18.3",
+          "n": "10",
           "l": "Overs"
         },
         {
-          "n": "3",
+          "n": "2",
           "l": "Wickets"
         },
         {
-          "n": "1-29",
+          "n": "2-20",
           "l": "Best Fig"
         }
       ]
@@ -485,7 +523,7 @@
       "cap": "H",
       "stats": [
         {
-          "n": "4",
+          "n": "9",
           "l": "Overs"
         },
         {
@@ -494,25 +532,6 @@
         },
         {
           "n": "1-11",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
-      "stats": [
-        {
-          "n": "5",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-7",
           "l": "Best Fig"
         }
       ]
@@ -558,39 +577,39 @@
   ],
   "t1-ar": [
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "66",
-          "l": "Runs"
-        },
-        {
-          "n": "12",
-          "l": "Wickets"
-        },
-        {
-          "n": "5-53",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Kishan Karneedi",
       "jersey": "#11",
       "cap": "KK11",
       "stats": [
         {
-          "n": "60",
+          "n": "70",
           "l": "Runs"
         },
         {
-          "n": "3",
+          "n": "5",
           "l": "Wickets"
         },
         {
-          "n": "1-29",
+          "n": "2-45",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VeerendraNagari",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "13",
+          "l": "Wickets"
+        },
+        {
+          "n": "5-53",
           "l": "Best Fig"
         }
       ]
@@ -601,11 +620,11 @@
       "cap": "A",
       "stats": [
         {
-          "n": "36",
+          "n": "67",
           "l": "Runs"
         },
         {
-          "n": "13",
+          "n": "14",
           "l": "Wickets"
         },
         {
@@ -620,7 +639,7 @@
       "cap": "D",
       "stats": [
         {
-          "n": "28",
+          "n": "30",
           "l": "Runs"
         },
         {
@@ -643,11 +662,30 @@
           "l": "Runs"
         },
         {
-          "n": "5",
+          "n": "6",
           "l": "Wickets"
         },
         {
           "n": "3-44",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "TulasiThatavarthi",
+      "jersey": "#—",
+      "cap": "T",
+      "stats": [
+        {
+          "n": "19",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-20",
           "l": "Best Fig"
         }
       ]

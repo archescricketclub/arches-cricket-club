@@ -4,7 +4,7 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1253,
+      "runs": 1261,
       "hs": "131",
       "matches": 0
     },
@@ -49,12 +49,12 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 535,
+      "runs": 545,
       "hs": "41",
       "matches": 0
     },
     "bowling": {
-      "wickets": 69,
+      "wickets": 71,
       "bestFig": "5-22",
       "matches": 0
     }
@@ -139,7 +139,7 @@
     "jersey": "#—",
     "cap": "A",
     "batting": {
-      "runs": 235,
+      "runs": 244,
       "hs": "50*",
       "matches": 0
     },
@@ -240,6 +240,21 @@
     }
   },
   {
+    "name": "AbubakarRehmani",
+    "jersey": "#—",
+    "cap": "A",
+    "batting": {
+      "runs": 136,
+      "hs": "50",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 17,
+      "bestFig": "8-7",
+      "matches": 0
+    }
+  },
+  {
     "name": "Charan Reddy Datla",
     "jersey": "#99",
     "cap": "CR99",
@@ -270,26 +285,11 @@
     }
   },
   {
-    "name": "VeerendraNagari",
-    "jersey": "#—",
-    "cap": "V",
-    "batting": {
-      "runs": 118,
-      "hs": "41",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 18,
-      "bestFig": "5-53",
-      "matches": 0
-    }
-  },
-  {
     "name": "Arush Nimmagadda",
     "jersey": "#72",
     "cap": "AN72",
     "batting": {
-      "runs": 107,
+      "runs": 119,
       "hs": "40*",
       "matches": 0
     },
@@ -300,17 +300,32 @@
     }
   },
   {
-    "name": "AbubakarRehmani",
+    "name": "VeerendraNagari",
     "jersey": "#—",
-    "cap": "A",
+    "cap": "V",
     "batting": {
-      "runs": 105,
-      "hs": "50",
+      "runs": 119,
+      "hs": "41",
       "matches": 0
     },
     "bowling": {
-      "wickets": 16,
-      "bestFig": "8-7",
+      "wickets": 19,
+      "bestFig": "5-53",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Deepak Sai",
+    "jersey": "#50",
+    "cap": "AD39",
+    "batting": {
+      "runs": 105,
+      "hs": "46*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 7,
+      "bestFig": "2-23",
       "matches": 0
     }
   },
@@ -356,21 +371,6 @@
     "bowling": {
       "wickets": 13,
       "bestFig": "4-32",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Deepak Sai",
-    "jersey": "#50",
-    "cap": "AD39",
-    "batting": {
-      "runs": 89,
-      "hs": "46*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 7,
-      "bestFig": "2-23",
       "matches": 0
     }
   },
@@ -424,7 +424,7 @@
     "jersey": "#—",
     "cap": "D",
     "batting": {
-      "runs": 42,
+      "runs": 44,
       "hs": "15",
       "matches": 0
     },
@@ -454,7 +454,7 @@
     "jersey": "#—",
     "cap": "H",
     "batting": {
-      "runs": 34,
+      "runs": 38,
       "hs": "14",
       "matches": 0
     },
@@ -469,12 +469,12 @@
     "jersey": "#—",
     "cap": "T",
     "batting": {
-      "runs": 29,
+      "runs": 34,
       "hs": "15*",
       "matches": 0
     },
     "bowling": {
-      "wickets": 2,
+      "wickets": 4,
       "bestFig": "2-11",
       "matches": 0
     }
@@ -489,7 +489,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 5,
+      "wickets": 6,
       "bestFig": "3-44",
       "matches": 0
     }
