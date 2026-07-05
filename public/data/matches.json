@@ -37,6 +37,15 @@
       "league": "Midweek League"
     },
     {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings 1st XI",
+      "date": "19th July",
+      "time": "12:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
       "homeTeam": "CSNI MW XI",
       "awayTeam": "Arches MW XI",
       "date": "22nd July",
@@ -44,6 +53,24 @@
       "venue": "Stormont",
       "status": "",
       "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Drumaness Superkings 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "25th July",
+      "time": "12:00 PM",
+      "venue": "The Village Ground",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "NIMACC 1st XI",
+      "date": "1st August",
+      "time": "12:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Senior League 3"
     }
   ],
   "results": [
@@ -376,5 +403,5 @@
       "result": "Ards & Donaghadee 1st XI won by 106 runs"
     }
   ],
-  "lastUpdated": "2026-07-05T03:24:56.837Z"
+  "lastUpdated": "2026-07-05T13:40:12.160Z"
 }
