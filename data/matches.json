@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Dungannon 1st XI",
-      "date": "5th July",
-      "time": "1:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Muckamore MW2 XI",
       "awayTeam": "Arches MW XI",
       "date": "8th July",
@@ -401,7 +392,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Ards & Donaghadee 1st XI won by 106 runs"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dungannon 1st XI",
+      "date": "5th July",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Dungannon 1st XI won by 31 runs"
     }
   ],
-  "lastUpdated": "2026-07-05T13:40:12.160Z"
+  "lastUpdated": "2026-07-06T03:33:01.838Z"
 }
