@@ -28,6 +28,15 @@
       "league": "Midweek League"
     },
     {
+      "homeTeam": "Lisburn 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "18th July",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Belfast Superkings 1st XI",
       "date": "19th July",
@@ -35,6 +44,15 @@
       "venue": "TBC",
       "status": "",
       "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Downpatrick 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "19th July",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10"
     },
     {
       "homeTeam": "CSNI MW XI",
@@ -53,6 +71,15 @@
       "venue": "The Village Ground",
       "status": "",
       "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Ardent Blues 4th XI",
+      "date": "26th July",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10"
     },
     {
       "homeTeam": "Arches 1st XI",
@@ -404,5 +431,5 @@
       "result": "Dungannon 1st XI won by 31 runs"
     }
   ],
-  "lastUpdated": "2026-07-06T15:34:06.904Z"
+  "lastUpdated": "2026-07-07T03:23:46.539Z"
 }
