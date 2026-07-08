@@ -1693,25 +1693,6 @@
       "badge": "Top Wkt MW"
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "20",
-          "l": "Overs"
-        },
-        {
-          "n": "4",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-14",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Haneef Shaik",
       "jersey": "#77",
       "cap": "HS77",
@@ -1726,6 +1707,25 @@
         },
         {
           "n": "2-16",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VishnuVonga",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "20",
+          "l": "Overs"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-14",
           "l": "Best Fig"
         }
       ]
