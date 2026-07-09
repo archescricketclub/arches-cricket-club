@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Muckamore MW2 XI",
-      "awayTeam": "Arches MW XI",
-      "date": "8th July",
-      "time": "6:00 PM",
-      "venue": "Moylena",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Amigos Belfast 3rd XI",
       "awayTeam": "Arches 2nd XI",
       "date": "12th July",
@@ -429,7 +420,17 @@
       "status": "",
       "league": "Junior League 10",
       "result": "Dungannon 1st XI won by 31 runs"
+    },
+    {
+      "homeTeam": "Muckamore MW2 XI",
+      "awayTeam": "Arches MW XI",
+      "date": "8th July",
+      "time": "6:00 PM",
+      "venue": "Moylena",
+      "status": "",
+      "league": "Midweek League",
+      "result": "Muckamore MW2 XI won by 7 wickets"
     }
   ],
-  "lastUpdated": "2026-07-08T14:07:19.386Z"
+  "lastUpdated": "2026-07-09T02:59:51.679Z"
 }

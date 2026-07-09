@@ -19,7 +19,7 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 669,
+      "runs": 683,
       "hs": "58",
       "matches": 0
     },
@@ -49,7 +49,7 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 545,
+      "runs": 558,
       "hs": "41",
       "matches": 0
     },
@@ -75,6 +75,21 @@
     }
   },
   {
+    "name": "Wasim SM",
+    "jersey": "#1",
+    "cap": "WSM1",
+    "batting": {
+      "runs": 330,
+      "hs": "66",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 7,
+      "bestFig": "3-57",
+      "matches": 0
+    }
+  },
+  {
     "name": "Asad Murtuza",
     "jersey": "#22",
     "cap": "AM04",
@@ -90,17 +105,17 @@
     }
   },
   {
-    "name": "Wasim SM",
-    "jersey": "#1",
-    "cap": "WSM1",
+    "name": "AsadMurtaza",
+    "jersey": "#—",
+    "cap": "A",
     "batting": {
-      "runs": 307,
-      "hs": "66",
+      "runs": 278,
+      "hs": "50*",
       "matches": 0
     },
     "bowling": {
-      "wickets": 7,
-      "bestFig": "3-57",
+      "wickets": 0,
+      "bestFig": "-",
       "matches": 0
     }
   },
@@ -131,21 +146,6 @@
     "bowling": {
       "wickets": 31,
       "bestFig": "3-20",
-      "matches": 0
-    }
-  },
-  {
-    "name": "AsadMurtaza",
-    "jersey": "#—",
-    "cap": "A",
-    "batting": {
-      "runs": 247,
-      "hs": "50*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
       "matches": 0
     }
   },
@@ -210,32 +210,32 @@
     }
   },
   {
-    "name": "Kiran Maheswaram",
-    "jersey": "#75",
-    "cap": "KM75",
-    "batting": {
-      "runs": 166,
-      "hs": "31*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 15,
-      "bestFig": "2-11",
-      "matches": 0
-    }
-  },
-  {
     "name": "Sri",
     "jersey": "#—",
     "cap": "SRI",
     "batting": {
-      "runs": 165,
+      "runs": 176,
       "hs": "33*",
       "matches": 0
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Kiran Maheswaram",
+    "jersey": "#75",
+    "cap": "KM75",
+    "batting": {
+      "runs": 168,
+      "hs": "31*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 15,
+      "bestFig": "2-11",
       "matches": 0
     }
   },
@@ -266,6 +266,21 @@
     "bowling": {
       "wickets": 1,
       "bestFig": "1-10",
+      "matches": 0
+    }
+  },
+  {
+    "name": "ChandraBorra",
+    "jersey": "#—",
+    "cap": "C",
+    "batting": {
+      "runs": 126,
+      "hs": "26",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 7,
+      "bestFig": "2-25",
       "matches": 0
     }
   },
@@ -326,21 +341,6 @@
     "bowling": {
       "wickets": 7,
       "bestFig": "2-23",
-      "matches": 0
-    }
-  },
-  {
-    "name": "ChandraBorra",
-    "jersey": "#—",
-    "cap": "C",
-    "batting": {
-      "runs": 100,
-      "hs": "19",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 7,
-      "bestFig": "2-25",
       "matches": 0
     }
   },
@@ -729,7 +729,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 15,
+      "wickets": 18,
       "bestFig": "4-47",
       "matches": 0
     }

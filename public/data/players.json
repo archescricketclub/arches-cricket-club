@@ -1442,6 +1442,26 @@
   ],
   "mw-bat": [
     {
+      "name": "Wasim SM",
+      "jersey": "#1",
+      "cap": "WSM1",
+      "stats": [
+        {
+          "n": "130",
+          "l": "Runs"
+        },
+        {
+          "n": "31*",
+          "l": "High Score"
+        },
+        {
+          "n": "43.33",
+          "l": "Average"
+        }
+      ],
+      "badge": "Top Scorer MW"
+    },
+    {
       "name": "VishnuVonga",
       "jersey": "#—",
       "cap": "V",
@@ -1458,8 +1478,7 @@
           "n": "",
           "l": "Average"
         }
-      ],
-      "badge": "Top Scorer MW"
+      ]
     },
     {
       "name": "Ali Rizwan",
@@ -1475,26 +1494,7 @@
           "l": "High Score"
         },
         {
-          "n": "42.33",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Wasim SM",
-      "jersey": "#1",
-      "cap": "WSM1",
-      "stats": [
-        {
-          "n": "107",
-          "l": "Runs"
-        },
-        {
-          "n": "31*",
-          "l": "High Score"
-        },
-        {
-          "n": "53.50",
+          "n": "31.75",
           "l": "Average"
         }
       ]
@@ -1505,7 +1505,7 @@
       "cap": "AN30",
       "stats": [
         {
-          "n": "71",
+          "n": "85",
           "l": "Runs"
         },
         {
@@ -1513,26 +1513,7 @@
           "l": "High Score"
         },
         {
-          "n": "23.67",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Sri",
-      "jersey": "#—",
-      "cap": "SRI",
-      "stats": [
-        {
-          "n": "58",
-          "l": "Runs"
-        },
-        {
-          "n": "33*",
-          "l": "High Score"
-        },
-        {
-          "n": "29.00",
+          "n": "21.25",
           "l": "Average"
         }
       ]
@@ -1543,7 +1524,7 @@
       "cap": "A",
       "stats": [
         {
-          "n": "51",
+          "n": "82",
           "l": "Runs"
         },
         {
@@ -1551,7 +1532,26 @@
           "l": "High Score"
         },
         {
-          "n": "51.00",
+          "n": "82.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Sri",
+      "jersey": "#—",
+      "cap": "SRI",
+      "stats": [
+        {
+          "n": "69",
+          "l": "Runs"
+        },
+        {
+          "n": "33*",
+          "l": "High Score"
+        },
+        {
+          "n": "23.00",
           "l": "Average"
         }
       ]
@@ -1562,15 +1562,15 @@
       "cap": "C",
       "stats": [
         {
-          "n": "39",
+          "n": "65",
           "l": "Runs"
         },
         {
-          "n": "15",
+          "n": "26",
           "l": "High Score"
         },
         {
-          "n": "19.50",
+          "n": "21.67",
           "l": "Average"
         }
       ]
@@ -1581,7 +1581,7 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "23",
+          "n": "25",
           "l": "Runs"
         },
         {
@@ -1589,7 +1589,26 @@
           "l": "High Score"
         },
         {
-          "n": "23.00",
+          "n": "12.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "23",
+          "l": "Runs"
+        },
+        {
+          "n": "13",
+          "l": "High Score"
+        },
+        {
+          "n": "11.50",
           "l": "Average"
         }
       ]
@@ -1627,26 +1646,7 @@
           "l": "High Score"
         },
         {
-          "n": "15.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "10",
-          "l": "Runs"
-        },
-        {
-          "n": "10",
-          "l": "High Score"
-        },
-        {
-          "n": "10.00",
+          "n": "7.50",
           "l": "Average"
         }
       ]
@@ -1673,12 +1673,32 @@
   ],
   "mw-bowl": [
     {
+      "name": "Haneef Shaik",
+      "jersey": "#77",
+      "cap": "HS77",
+      "stats": [
+        {
+          "n": "19",
+          "l": "Overs"
+        },
+        {
+          "n": "7",
+          "l": "Wickets"
+        },
+        {
+          "n": "3-18",
+          "l": "Best Fig"
+        }
+      ],
+      "badge": "Top Wkt MW"
+    },
+    {
       "name": "HarshaG",
       "jersey": "#—",
       "cap": "H",
       "stats": [
         {
-          "n": "16",
+          "n": "19.3",
           "l": "Overs"
         },
         {
@@ -1687,26 +1707,6 @@
         },
         {
           "n": "2-5",
-          "l": "Best Fig"
-        }
-      ],
-      "badge": "Top Wkt MW"
-    },
-    {
-      "name": "Haneef Shaik",
-      "jersey": "#77",
-      "cap": "HS77",
-      "stats": [
-        {
-          "n": "15",
-          "l": "Overs"
-        },
-        {
-          "n": "4",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-16",
           "l": "Best Fig"
         }
       ]
@@ -1736,7 +1736,7 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "13",
+          "n": "17",
           "l": "Overs"
         },
         {
@@ -1755,7 +1755,7 @@
       "cap": "C",
       "stats": [
         {
-          "n": "13",
+          "n": "17",
           "l": "Overs"
         },
         {
@@ -1774,7 +1774,7 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "9",
+          "n": "10",
           "l": "Overs"
         },
         {
@@ -1826,6 +1826,25 @@
       ]
     },
     {
+      "name": "Wasim SM",
+      "jersey": "#1",
+      "cap": "WSM1",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-20",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -1871,7 +1890,7 @@
       "cap": "C",
       "stats": [
         {
-          "n": "39",
+          "n": "65",
           "l": "Runs"
         },
         {
@@ -1890,7 +1909,7 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "23",
+          "n": "25",
           "l": "Runs"
         },
         {
@@ -1899,6 +1918,25 @@
         },
         {
           "n": "1-10",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "23",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-15",
           "l": "Best Fig"
         }
       ]
