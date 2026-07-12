@@ -1210,25 +1210,6 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-22",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "VishnuVonga",
       "jersey": "#—",
       "cap": "V",
@@ -1243,6 +1224,25 @@
         },
         {
           "n": "1-23",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "AbubakarRehmani",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-22",
           "l": "Best Fig"
         }
       ]
@@ -1286,25 +1286,6 @@
       ]
     },
     {
-      "name": "YaungichaMirthivada",
-      "jersey": "#—",
-      "cap": "Y",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-10",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "VijaykumarHugar",
       "jersey": "#—",
       "cap": "V",
@@ -1319,6 +1300,25 @@
         },
         {
           "n": "0-6",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "YaungichaMirthivada",
+      "jersey": "#—",
+      "cap": "Y",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-10",
           "l": "Best Fig"
         }
       ]
