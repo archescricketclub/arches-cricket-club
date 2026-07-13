@@ -40,25 +40,6 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "67",
-          "l": "Runs"
-        },
-        {
-          "n": "29",
-          "l": "High Score"
-        },
-        {
-          "n": "7.44",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "AbubakarRehmani",
       "jersey": "#—",
       "cap": "A",
@@ -73,6 +54,25 @@
         },
         {
           "n": "11.17",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "VeerendraNagari",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "29",
+          "l": "High Score"
+        },
+        {
+          "n": "7.44",
           "l": "Average"
         }
       ]
@@ -97,25 +97,6 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "43",
-          "l": "Runs"
-        },
-        {
-          "n": "29",
-          "l": "High Score"
-        },
-        {
-          "n": "8.60",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Ali Rizwan",
       "jersey": "#16",
       "cap": "AR69",
@@ -130,6 +111,25 @@
         },
         {
           "n": "21.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "VishnuVonga",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "43",
+          "l": "Runs"
+        },
+        {
+          "n": "29",
+          "l": "High Score"
+        },
+        {
+          "n": "8.60",
           "l": "Average"
         }
       ]
@@ -423,25 +423,6 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "26.3",
-          "l": "Overs"
-        },
-        {
-          "n": "5",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-45",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "SuryaTummala",
       "jersey": "#—",
       "cap": "S",
@@ -456,6 +437,25 @@
         },
         {
           "n": "2-15",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "26.3",
+          "l": "Overs"
+        },
+        {
+          "n": "5",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-45",
           "l": "Best Fig"
         }
       ]
@@ -499,25 +499,6 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
-      "stats": [
-        {
-          "n": "9",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-11",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "VijaykumarHugar",
       "jersey": "#—",
       "cap": "V",
@@ -532,6 +513,25 @@
         },
         {
           "n": "1-12",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "HarshaG",
+      "jersey": "#—",
+      "cap": "H",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-11",
           "l": "Best Fig"
         }
       ]
@@ -596,25 +596,6 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "67",
-          "l": "Runs"
-        },
-        {
-          "n": "13",
-          "l": "Wickets"
-        },
-        {
-          "n": "5-53",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "AbubakarRehmani",
       "jersey": "#—",
       "cap": "A",
@@ -629,6 +610,25 @@
         },
         {
           "n": "8-7",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VeerendraNagari",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "13",
+          "l": "Wickets"
+        },
+        {
+          "n": "5-53",
           "l": "Best Fig"
         }
       ]
@@ -922,25 +922,6 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "6",
-          "l": "Runs"
-        },
-        {
-          "n": "6",
-          "l": "High Score"
-        },
-        {
-          "n": "6.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Rohit Singh",
       "jersey": "#98",
       "cap": "RS98",
@@ -963,6 +944,25 @@
       "name": "CharanDatla",
       "jersey": "#—",
       "cap": "C",
+      "stats": [
+        {
+          "n": "6",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "6.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "VishnuVonga",
+      "jersey": "#—",
+      "cap": "V",
       "stats": [
         {
           "n": "6",
@@ -1172,44 +1172,6 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-23",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-22",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Anvesh Choudary Mannuru",
       "jersey": "#2",
       "cap": "AM28",
@@ -1248,9 +1210,47 @@
       ]
     },
     {
-      "name": "RajaYadavalli",
+      "name": "AbubakarRehmani",
       "jersey": "#—",
-      "cap": "R",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-22",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VishnuVonga",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-23",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "AsadMurtaza",
+      "jersey": "#—",
+      "cap": "A",
       "stats": [
         {
           "n": "1",
@@ -1261,7 +1261,7 @@
           "l": "Wickets"
         },
         {
-          "n": "0-16",
+          "n": "0-12",
           "l": "Best Fig"
         }
       ]
@@ -1305,25 +1305,6 @@
       ]
     },
     {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-12",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "YaungichaMirthivada",
       "jersey": "#—",
       "cap": "Y",
@@ -1338,6 +1319,25 @@
         },
         {
           "n": "0-10",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "RajaYadavalli",
+      "jersey": "#—",
+      "cap": "R",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-16",
           "l": "Best Fig"
         }
       ]
