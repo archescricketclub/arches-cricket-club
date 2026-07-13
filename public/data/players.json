@@ -40,25 +40,6 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "67",
-          "l": "Runs"
-        },
-        {
-          "n": "31",
-          "l": "High Score"
-        },
-        {
-          "n": "11.17",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "VeerendraNagari",
       "jersey": "#—",
       "cap": "V",
@@ -73,6 +54,25 @@
         },
         {
           "n": "7.44",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "AbubakarRehmani",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "31",
+          "l": "High Score"
+        },
+        {
+          "n": "11.17",
           "l": "Average"
         }
       ]
@@ -97,25 +97,6 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
-      "stats": [
-        {
-          "n": "43",
-          "l": "Runs"
-        },
-        {
-          "n": "30*",
-          "l": "High Score"
-        },
-        {
-          "n": "21.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "VishnuVonga",
       "jersey": "#—",
       "cap": "V",
@@ -130,6 +111,25 @@
         },
         {
           "n": "8.60",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "43",
+          "l": "Runs"
+        },
+        {
+          "n": "30*",
+          "l": "High Score"
+        },
+        {
+          "n": "21.50",
           "l": "Average"
         }
       ]
@@ -423,25 +423,6 @@
       ]
     },
     {
-      "name": "SuryaTummala",
-      "jersey": "#—",
-      "cap": "S",
-      "stats": [
-        {
-          "n": "26",
-          "l": "Overs"
-        },
-        {
-          "n": "5",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-15",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Kishan Karneedi",
       "jersey": "#11",
       "cap": "KK11",
@@ -456,6 +437,25 @@
         },
         {
           "n": "2-45",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "SuryaTummala",
+      "jersey": "#—",
+      "cap": "S",
+      "stats": [
+        {
+          "n": "26",
+          "l": "Overs"
+        },
+        {
+          "n": "5",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-15",
           "l": "Best Fig"
         }
       ]
@@ -499,25 +499,6 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-12",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "HarshaG",
       "jersey": "#—",
       "cap": "H",
@@ -532,6 +513,25 @@
         },
         {
           "n": "1-11",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VijaykumarHugar",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-12",
           "l": "Best Fig"
         }
       ]
@@ -596,25 +596,6 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "67",
-          "l": "Runs"
-        },
-        {
-          "n": "14",
-          "l": "Wickets"
-        },
-        {
-          "n": "8-7",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "VeerendraNagari",
       "jersey": "#—",
       "cap": "V",
@@ -629,6 +610,25 @@
         },
         {
           "n": "5-53",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "AbubakarRehmani",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "14",
+          "l": "Wickets"
+        },
+        {
+          "n": "8-7",
           "l": "Best Fig"
         }
       ]
@@ -698,15 +698,15 @@
       "cap": "AR69",
       "stats": [
         {
-          "n": "205",
+          "n": "332",
           "l": "Runs"
         },
         {
-          "n": "61*",
+          "n": "127*",
           "l": "High Score"
         },
         {
-          "n": "51.25",
+          "n": "83.00",
           "l": "Average"
         }
       ],
@@ -718,7 +718,7 @@
       "cap": "WSM1",
       "stats": [
         {
-          "n": "129",
+          "n": "168",
           "l": "Runs"
         },
         {
@@ -726,7 +726,7 @@
           "l": "High Score"
         },
         {
-          "n": "32.25",
+          "n": "33.60",
           "l": "Average"
         }
       ]
@@ -737,15 +737,15 @@
       "cap": "SRI",
       "stats": [
         {
-          "n": "90",
+          "n": "117",
           "l": "Runs"
         },
         {
-          "n": "26",
+          "n": "27",
           "l": "High Score"
         },
         {
-          "n": "18.00",
+          "n": "19.50",
           "l": "Average"
         }
       ]
@@ -756,7 +756,7 @@
       "cap": "AN30",
       "stats": [
         {
-          "n": "81",
+          "n": "103",
           "l": "Runs"
         },
         {
@@ -764,7 +764,7 @@
           "l": "High Score"
         },
         {
-          "n": "20.25",
+          "n": "20.60",
           "l": "Average"
         }
       ]
@@ -832,7 +832,7 @@
       "cap": "A",
       "stats": [
         {
-          "n": "38",
+          "n": "40",
           "l": "Runs"
         },
         {
@@ -840,7 +840,7 @@
           "l": "High Score"
         },
         {
-          "n": "38.00",
+          "n": "40.00",
           "l": "Average"
         }
       ]
@@ -922,6 +922,25 @@
       ]
     },
     {
+      "name": "VishnuVonga",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "6",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "6.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Rohit Singh",
       "jersey": "#98",
       "cap": "RS98",
@@ -944,25 +963,6 @@
       "name": "CharanDatla",
       "jersey": "#—",
       "cap": "C",
-      "stats": [
-        {
-          "n": "6",
-          "l": "Runs"
-        },
-        {
-          "n": "6",
-          "l": "High Score"
-        },
-        {
-          "n": "6.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
       "stats": [
         {
           "n": "6",
@@ -1024,11 +1024,11 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "24",
+          "n": "29",
           "l": "Overs"
         },
         {
-          "n": "10",
+          "n": "12",
           "l": "Wickets"
         },
         {
@@ -1044,15 +1044,34 @@
       "cap": "H",
       "stats": [
         {
-          "n": "22",
+          "n": "27",
           "l": "Overs"
         },
         {
-          "n": "9",
+          "n": "10",
           "l": "Wickets"
         },
         {
           "n": "3-27",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "ChandraBorra",
+      "jersey": "#—",
+      "cap": "C",
+      "stats": [
+        {
+          "n": "26",
+          "l": "Overs"
+        },
+        {
+          "n": "7",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-11",
           "l": "Best Fig"
         }
       ]
@@ -1077,31 +1096,31 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
-      "stats": [
-        {
-          "n": "23",
-          "l": "Overs"
-        },
-        {
-          "n": "5",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-25",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Kishan Karneedi",
       "jersey": "#11",
       "cap": "KK11",
       "stats": [
         {
-          "n": "13",
+          "n": "17",
+          "l": "Overs"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-14",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kiran Maheswaram",
+      "jersey": "#75",
+      "cap": "KM75",
+      "stats": [
+        {
+          "n": "15",
           "l": "Overs"
         },
         {
@@ -1109,7 +1128,7 @@
           "l": "Wickets"
         },
         {
-          "n": "2-14",
+          "n": "2-27",
           "l": "Best Fig"
         }
       ]
@@ -1134,25 +1153,6 @@
       ]
     },
     {
-      "name": "Kiran Maheswaram",
-      "jersey": "#75",
-      "cap": "KM75",
-      "stats": [
-        {
-          "n": "11",
-          "l": "Overs"
-        },
-        {
-          "n": "2",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-27",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "VeerendraNagari",
       "jersey": "#—",
       "cap": "V",
@@ -1167,44 +1167,6 @@
         },
         {
           "n": "2-19",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Anvesh Choudary Mannuru",
-      "jersey": "#2",
-      "cap": "AM28",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-31",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "AnshumanBaghel",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-13",
           "l": "Best Fig"
         }
       ]
@@ -1248,20 +1210,39 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
+      "name": "Anvesh Choudary Mannuru",
+      "jersey": "#2",
+      "cap": "AM28",
       "stats": [
         {
-          "n": "1",
+          "n": "4",
           "l": "Overs"
         },
         {
-          "n": "0",
+          "n": "1",
           "l": "Wickets"
         },
         {
-          "n": "0-3",
+          "n": "1-31",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "AnshumanBaghel",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-13",
           "l": "Best Fig"
         }
       ]
@@ -1286,12 +1267,31 @@
       ]
     },
     {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-3",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "VijaykumarHugar",
       "jersey": "#—",
       "cap": "V",
       "stats": [
         {
-          "n": "2",
+          "n": "5",
           "l": "Overs"
         },
         {
@@ -1300,6 +1300,25 @@
         },
         {
           "n": "0-6",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "AsadMurtaza",
+      "jersey": "#—",
+      "cap": "A",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-12",
           "l": "Best Fig"
         }
       ]
@@ -1331,7 +1350,7 @@
       "cap": "WSM1",
       "stats": [
         {
-          "n": "129",
+          "n": "168",
           "l": "Runs"
         },
         {
@@ -1373,7 +1392,7 @@
           "l": "Runs"
         },
         {
-          "n": "3",
+          "n": "4",
           "l": "Wickets"
         },
         {
@@ -1411,11 +1430,11 @@
           "l": "Runs"
         },
         {
-          "n": "5",
+          "n": "7",
           "l": "Wickets"
         },
         {
-          "n": "2-25",
+          "n": "2-11",
           "l": "Best Fig"
         }
       ]
@@ -1430,7 +1449,7 @@
           "l": "Runs"
         },
         {
-          "n": "9",
+          "n": "10",
           "l": "Wickets"
         },
         {

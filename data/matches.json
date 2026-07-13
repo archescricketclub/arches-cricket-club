@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Amigos Belfast 3rd XI",
-      "awayTeam": "Arches 2nd XI",
-      "date": "12th July",
-      "time": "1:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Arches MW XI",
       "awayTeam": "Dunmurry MW2 XI",
       "date": "14th July",
@@ -430,7 +421,17 @@
       "status": "",
       "league": "Midweek League",
       "result": "Muckamore MW2 XI won by 7 wickets"
+    },
+    {
+      "homeTeam": "Amigos Belfast 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "12th July",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Arches 2nd XI won by 79 runs"
     }
   ],
-  "lastUpdated": "2026-07-12T13:20:29.383Z"
+  "lastUpdated": "2026-07-13T02:47:18.620Z"
 }

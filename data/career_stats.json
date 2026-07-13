@@ -4,7 +4,7 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1294,
+      "runs": 1421,
       "hs": "131",
       "matches": 0
     },
@@ -19,7 +19,7 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 683,
+      "runs": 705,
       "hs": "58",
       "matches": 0
     },
@@ -54,7 +54,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 71,
+      "wickets": 72,
       "bestFig": "5-22",
       "matches": 0
     }
@@ -79,7 +79,7 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 330,
+      "runs": 369,
       "hs": "66",
       "matches": 0
     },
@@ -109,13 +109,13 @@
     "jersey": "#—",
     "cap": "A",
     "batting": {
-      "runs": 278,
+      "runs": 280,
       "hs": "50*",
       "matches": 0
     },
     "bowling": {
       "wickets": 0,
-      "bestFig": "-",
+      "bestFig": "0-12",
       "matches": 0
     }
   },
@@ -146,6 +146,21 @@
     "bowling": {
       "wickets": 31,
       "bestFig": "3-20",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Sri",
+    "jersey": "#—",
+    "cap": "SRI",
+    "batting": {
+      "runs": 203,
+      "hs": "33*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
       "matches": 0
     }
   },
@@ -210,21 +225,6 @@
     }
   },
   {
-    "name": "Sri",
-    "jersey": "#—",
-    "cap": "SRI",
-    "batting": {
-      "runs": 176,
-      "hs": "33*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
     "name": "Kiran Maheswaram",
     "jersey": "#75",
     "cap": "KM75",
@@ -234,7 +234,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 15,
+      "wickets": 16,
       "bestFig": "2-11",
       "matches": 0
     }
@@ -279,8 +279,8 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 7,
-      "bestFig": "2-25",
+      "wickets": 9,
+      "bestFig": "2-11",
       "matches": 0
     }
   },
@@ -444,7 +444,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 20,
+      "wickets": 21,
       "bestFig": "3-27",
       "matches": 0
     }
@@ -729,7 +729,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 18,
+      "wickets": 20,
       "bestFig": "4-47",
       "matches": 0
     }
