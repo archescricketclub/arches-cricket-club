@@ -1172,25 +1172,6 @@
       ]
     },
     {
-      "name": "Anvesh Choudary Mannuru",
-      "jersey": "#2",
-      "cap": "AM28",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-31",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "AnshumanBaghel",
       "jersey": "#—",
       "cap": "A",
@@ -1205,6 +1186,25 @@
         },
         {
           "n": "1-13",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Anvesh Choudary Mannuru",
+      "jersey": "#2",
+      "cap": "AM28",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-31",
           "l": "Best Fig"
         }
       ]
@@ -1248,6 +1248,25 @@
       ]
     },
     {
+      "name": "VijaykumarHugar",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-6",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "AsadMurtaza",
       "jersey": "#—",
       "cap": "A",
@@ -1281,25 +1300,6 @@
         },
         {
           "n": "0-3",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "VijaykumarHugar",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "5",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-6",
           "l": "Best Fig"
         }
       ]
