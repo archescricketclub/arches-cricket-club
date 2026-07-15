@@ -1,20 +1,20 @@
 [
   {
-    "name": "AbubakarRehmani",
+    "name": "Abubakar Rehmani",
     "record": "8-7",
     "type": "bowling",
     "date": "24th June 2026",
-    "opponent": "Belfast Superkings 1st XI",
+    "opponent": "Belfast Superkings 1st",
     "league": "Senior League 3",
     "season": "2026",
     "category": "five-wickets"
   },
   {
-    "name": "VeerendraNagari",
+    "name": "Veerendra Babu Nagari",
     "record": "5-53",
     "type": "bowling",
     "date": "24th June 2026",
-    "opponent": "Amigos Belfast 1st XI",
+    "opponent": "Amigos Belfast 1st",
     "league": "Senior League 3",
     "season": "2026",
     "category": "five-wickets"
@@ -24,37 +24,87 @@
     "record": "127*",
     "type": "batting",
     "date": "27th June 2026",
-    "opponent": "Amigos Belfast 3rd XI",
+    "opponent": "Amigos Belfast 3rd",
     "league": "Junior League 10",
     "season": "2026",
     "category": "century"
   },
   {
-    "name": "Anil Narra",
-    "record": "58",
-    "type": "batting",
-    "date": "27th June 2026",
-    "opponent": "Amigos Belfast 3rd XI",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "AbubakarRehmani",
+    "name": "Abubakar Rehmani",
     "record": "50",
     "type": "batting",
     "date": "20th June 2026",
-    "opponent": "Dungannon 1st XI",
+    "opponent": "Dungannon 1st",
     "league": "Junior League 10",
     "season": "2026",
     "category": "half-century"
   },
   {
-    "name": "AsadMurtaza",
+    "name": "Ali Rizwan",
+    "record": "34*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "31*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "35*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Asad Murtuza",
+    "record": "34*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "33*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Haneef Shaik",
+    "record": "3-18",
+    "type": "bowling",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-3w"
+  },
+  {
+    "name": "Asad Murtuza",
     "record": "50*",
     "type": "batting",
     "date": "20th June 2026",
-    "opponent": "CSNI 5th XI",
+    "opponent": "CSNI 5th",
     "league": "Development Cup",
     "season": "2026",
     "category": "half-century"
@@ -64,7 +114,7 @@
     "record": "51",
     "type": "batting",
     "date": "30th May 2026",
-    "opponent": "Saintfield 3rd XI",
+    "opponent": "Saintfield 3rd",
     "league": "Development Cup",
     "season": "2026",
     "category": "half-century"
@@ -74,7 +124,7 @@
     "record": "66",
     "type": "batting",
     "date": "30th May 2026",
-    "opponent": "Saintfield 3rd XI",
+    "opponent": "Saintfield 3rd",
     "league": "Development Cup",
     "season": "2026",
     "category": "half-century"

@@ -40,28 +40,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "67",
-          "l": "Runs"
-        },
-        {
-          "n": "31",
-          "l": "High Score"
-        },
-        {
-          "n": "11.17",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "67",
@@ -78,9 +59,28 @@
       ]
     },
     {
-      "name": "AsadMurtaza",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "31",
+          "l": "High Score"
+        },
+        {
+          "n": "11.17",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Asad Murtuza",
+      "jersey": "#22",
+      "cap": "AM04",
       "stats": [
         {
           "n": "51",
@@ -92,6 +92,25 @@
         },
         {
           "n": "6.38",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
+      "stats": [
+        {
+          "n": "43",
+          "l": "Runs"
+        },
+        {
+          "n": "29",
+          "l": "High Score"
+        },
+        {
+          "n": "8.60",
           "l": "Average"
         }
       ]
@@ -116,28 +135,9 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "43",
-          "l": "Runs"
-        },
-        {
-          "n": "29",
-          "l": "High Score"
-        },
-        {
-          "n": "8.60",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "DushyanthBommana",
-      "jersey": "#—",
-      "cap": "D",
+      "name": "Dushyanth Reddy B",
+      "jersey": "#23",
+      "cap": "DB23",
       "stats": [
         {
           "n": "30",
@@ -154,9 +154,9 @@
       ]
     },
     {
-      "name": "VenkatJyothi",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#9",
+      "cap": "VJ09",
       "stats": [
         {
           "n": "26",
@@ -173,9 +173,9 @@
       ]
     },
     {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
       "stats": [
         {
           "n": "19",
@@ -211,9 +211,9 @@
       ]
     },
     {
-      "name": "SuryaTummala",
-      "jersey": "#—",
-      "cap": "S",
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#14",
+      "cap": "PA14",
       "stats": [
         {
           "n": "15",
@@ -249,9 +249,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "12",
@@ -287,9 +287,9 @@
       ]
     },
     {
-      "name": "PurvikPrasad",
+      "name": "Purvik Prasad",
       "jersey": "#—",
-      "cap": "P",
+      "cap": "PP",
       "stats": [
         {
           "n": "8",
@@ -306,9 +306,9 @@
       ]
     },
     {
-      "name": "Sri",
-      "jersey": "#—",
-      "cap": "SRI",
+      "name": "Vinay Tummala",
+      "jersey": "#10",
+      "cap": "VT10",
       "stats": [
         {
           "n": "7",
@@ -325,9 +325,9 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
+      "name": "Vijaykumar Hugar",
       "jersey": "#—",
-      "cap": "V",
+      "cap": "VH",
       "stats": [
         {
           "n": "5",
@@ -344,9 +344,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "4",
@@ -365,9 +365,9 @@
   ],
   "t1-bowl": [
     {
-      "name": "AbubakarRehmani",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
       "stats": [
         {
           "n": "34.1",
@@ -385,9 +385,9 @@
       "badge": "Top Wkt T1"
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "40",
@@ -404,9 +404,9 @@
       ]
     },
     {
-      "name": "VenkatJyothi",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#9",
+      "cap": "VJ09",
       "stats": [
         {
           "n": "38",
@@ -423,9 +423,9 @@
       ]
     },
     {
-      "name": "SuryaTummala",
-      "jersey": "#—",
-      "cap": "S",
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#14",
+      "cap": "PA14",
       "stats": [
         {
           "n": "26",
@@ -461,9 +461,9 @@
       ]
     },
     {
-      "name": "DushyanthBommana",
-      "jersey": "#—",
-      "cap": "D",
+      "name": "Dushyanth Reddy B",
+      "jersey": "#23",
+      "cap": "DB23",
       "stats": [
         {
           "n": "13",
@@ -480,9 +480,9 @@
       ]
     },
     {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
       "stats": [
         {
           "n": "10",
@@ -499,9 +499,9 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
+      "name": "Vijaykumar Hugar",
       "jersey": "#—",
-      "cap": "V",
+      "cap": "VH",
       "stats": [
         {
           "n": "2",
@@ -518,9 +518,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "9",
@@ -537,9 +537,9 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "16",
@@ -596,28 +596,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "67",
-          "l": "Runs"
-        },
-        {
-          "n": "14",
-          "l": "Wickets"
-        },
-        {
-          "n": "8-7",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "67",
@@ -634,9 +615,28 @@
       ]
     },
     {
-      "name": "DushyanthBommana",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "D",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "14",
+          "l": "Wickets"
+        },
+        {
+          "n": "8-7",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#23",
+      "cap": "DB23",
       "stats": [
         {
           "n": "30",
@@ -653,9 +653,9 @@
       ]
     },
     {
-      "name": "VenkatJyothi",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#9",
+      "cap": "VJ09",
       "stats": [
         {
           "n": "26",
@@ -672,9 +672,9 @@
       ]
     },
     {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
       "stats": [
         {
           "n": "19",
@@ -732,9 +732,9 @@
       ]
     },
     {
-      "name": "Sri",
-      "jersey": "#—",
-      "cap": "SRI",
+      "name": "Srini Nadakuditi",
+      "jersey": "#3",
+      "cap": "SRI3",
       "stats": [
         {
           "n": "117",
@@ -770,9 +770,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
       "stats": [
         {
           "n": "50",
@@ -808,9 +808,9 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "41",
@@ -827,9 +827,9 @@
       ]
     },
     {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
+      "name": "Asad Murtuza",
+      "jersey": "#22",
+      "cap": "AM04",
       "stats": [
         {
           "n": "40",
@@ -846,9 +846,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "34",
@@ -865,9 +865,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "22",
@@ -922,6 +922,25 @@
       ]
     },
     {
+      "name": "Charan Reddy Datla",
+      "jersey": "#99",
+      "cap": "CR99",
+      "stats": [
+        {
+          "n": "6",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "6.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Rohit Singh",
       "jersey": "#98",
       "cap": "RS98",
@@ -941,28 +960,9 @@
       ]
     },
     {
-      "name": "CharanDatla",
-      "jersey": "#—",
-      "cap": "C",
-      "stats": [
-        {
-          "n": "6",
-          "l": "Runs"
-        },
-        {
-          "n": "6",
-          "l": "High Score"
-        },
-        {
-          "n": "6.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "6",
@@ -1039,9 +1039,9 @@
       "badge": "Top Wkt T2"
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "27",
@@ -1058,9 +1058,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "26",
@@ -1153,9 +1153,9 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "4",
@@ -1167,25 +1167,6 @@
         },
         {
           "n": "2-19",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "AnshumanBaghel",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-13",
           "l": "Best Fig"
         }
       ]
@@ -1210,9 +1191,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
-      "jersey": "#—",
-      "cap": "A",
+      "name": "Anshuman Singh Baghel",
+      "jersey": "#181",
+      "cap": "ASB18",
       "stats": [
         {
           "n": "4",
@@ -1223,15 +1204,15 @@
           "l": "Wickets"
         },
         {
-          "n": "1-22",
+          "n": "1-13",
           "l": "Best Fig"
         }
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "4",
@@ -1248,39 +1229,20 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "V",
+      "cap": "AR",
       "stats": [
         {
-          "n": "5",
+          "n": "4",
           "l": "Overs"
         },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-6",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
         {
           "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
           "l": "Wickets"
         },
         {
-          "n": "0-12",
+          "n": "1-22",
           "l": "Best Fig"
         }
       ]
@@ -1305,9 +1267,47 @@
       ]
     },
     {
-      "name": "YaungichaMirthivada",
+      "name": "Vijaykumar Hugar",
       "jersey": "#—",
-      "cap": "Y",
+      "cap": "VH",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-6",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Asad Murtuza",
+      "jersey": "#22",
+      "cap": "AM04",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-12",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Yaungicha Mirthivada",
+      "jersey": "#—",
+      "cap": "YM",
       "stats": [
         {
           "n": "1",
@@ -1324,9 +1324,9 @@
       ]
     },
     {
-      "name": "RajaYadavalli",
-      "jersey": "#—",
-      "cap": "R",
+      "name": "Raja Mouli Yadavalli",
+      "jersey": "#18",
+      "cap": "RY18",
       "stats": [
         {
           "n": "1",
@@ -1364,9 +1364,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
       "stats": [
         {
           "n": "50",
@@ -1402,9 +1402,9 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "41",
@@ -1421,9 +1421,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "34",
@@ -1440,9 +1440,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "22",
@@ -1500,9 +1500,9 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "129",
@@ -1519,9 +1519,9 @@
       ]
     },
     {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
+      "name": "Asad Murtuza",
+      "jersey": "#22",
+      "cap": "AM04",
       "stats": [
         {
           "n": "114",
@@ -1557,9 +1557,9 @@
       ]
     },
     {
-      "name": "Sri",
-      "jersey": "#—",
-      "cap": "SRI",
+      "name": "Srini Nadakuditi",
+      "jersey": "#3",
+      "cap": "SRI3",
       "stats": [
         {
           "n": "86",
@@ -1576,9 +1576,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "67",
@@ -1595,9 +1595,9 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
+      "name": "Vijaykumar Hugar",
       "jersey": "#—",
-      "cap": "V",
+      "cap": "VH",
       "stats": [
         {
           "n": "44",
@@ -1652,9 +1652,9 @@
       ]
     },
     {
-      "name": "YaungichaMirthivada",
+      "name": "Yaungicha Mirthivada",
       "jersey": "#—",
-      "cap": "Y",
+      "cap": "YM",
       "stats": [
         {
           "n": "18",
@@ -1671,9 +1671,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "7",
@@ -1712,9 +1712,9 @@
       "badge": "Top Wkt MW"
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "23.3",
@@ -1750,9 +1750,9 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "20",
@@ -1788,9 +1788,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "21",
@@ -1807,9 +1807,9 @@
       ]
     },
     {
-      "name": "RajaYadavalli",
-      "jersey": "#—",
-      "cap": "R",
+      "name": "Raja Mouli Yadavalli",
+      "jersey": "#18",
+      "cap": "RY18",
       "stats": [
         {
           "n": "3",
@@ -1826,9 +1826,9 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
+      "name": "Vijaykumar Hugar",
       "jersey": "#—",
-      "cap": "V",
+      "cap": "VH",
       "stats": [
         {
           "n": "4.2",
@@ -1840,25 +1840,6 @@
         },
         {
           "n": "1-6",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Wasim SM",
-      "jersey": "#1",
-      "cap": "WSM1",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-20",
           "l": "Best Fig"
         }
       ]
@@ -1881,13 +1862,32 @@
           "l": "Best Fig"
         }
       ]
+    },
+    {
+      "name": "Wasim SM",
+      "jersey": "#1",
+      "cap": "WSM1",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-20",
+          "l": "Best Fig"
+        }
+      ]
     }
   ],
   "mw-ar": [
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "129",
@@ -1904,9 +1904,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "67",
@@ -1923,9 +1923,9 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
+      "name": "Vijaykumar Hugar",
       "jersey": "#—",
-      "cap": "V",
+      "cap": "VH",
       "stats": [
         {
           "n": "44",
@@ -1982,9 +1982,9 @@
   ],
   "cup-bat": [
     {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
+      "name": "Asad Murtuza",
+      "jersey": "#22",
+      "cap": "AM04",
       "stats": [
         {
           "n": "107",
@@ -2040,9 +2040,9 @@
       ]
     },
     {
-      "name": "SuryaTummala",
-      "jersey": "#—",
-      "cap": "S",
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#14",
+      "cap": "PA14",
       "stats": [
         {
           "n": "27",
@@ -2059,9 +2059,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
       "stats": [
         {
           "n": "19",
@@ -2097,9 +2097,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "15",
@@ -2135,9 +2135,9 @@
       ]
     },
     {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
       "stats": [
         {
           "n": "15",
@@ -2154,9 +2154,9 @@
       ]
     },
     {
-      "name": "DushyanthBommana",
-      "jersey": "#—",
-      "cap": "D",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "14",
@@ -2173,9 +2173,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Dushyanth Reddy B",
+      "jersey": "#23",
+      "cap": "DB23",
       "stats": [
         {
           "n": "14",
@@ -2192,9 +2192,9 @@
       ]
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "12",
@@ -2211,9 +2211,9 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "11",
@@ -2249,9 +2249,9 @@
       ]
     },
     {
-      "name": "Sri",
-      "jersey": "#—",
-      "cap": "SRI",
+      "name": "Srini Nadakuditi",
+      "jersey": "#3",
+      "cap": "SRI3",
       "stats": [
         {
           "n": "10",
@@ -2287,9 +2287,9 @@
       ]
     },
     {
-      "name": "VenkatJyothi",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#9",
+      "cap": "VJ09",
       "stats": [
         {
           "n": "1",
@@ -2306,9 +2306,9 @@
       ]
     },
     {
-      "name": "PurvikPrasad",
+      "name": "Purvik Prasad",
       "jersey": "#—",
-      "cap": "P",
+      "cap": "PP",
       "stats": [
         {
           "n": "1",
@@ -2347,9 +2347,9 @@
       "badge": "Top Wkt Cup"
     },
     {
-      "name": "VishnuVonga",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "17.0",
@@ -2366,9 +2366,9 @@
       ]
     },
     {
-      "name": "HarshaG",
-      "jersey": "#—",
-      "cap": "H",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "15.0",
@@ -2385,9 +2385,9 @@
       ]
     },
     {
-      "name": "VeerendraNagari",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
           "n": "11.0",
@@ -2404,9 +2404,9 @@
       ]
     },
     {
-      "name": "SuryaTummala",
-      "jersey": "#—",
-      "cap": "S",
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#14",
+      "cap": "PA14",
       "stats": [
         {
           "n": "6",
@@ -2423,9 +2423,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
       "stats": [
         {
           "n": "7",
@@ -2442,9 +2442,9 @@
       ]
     },
     {
-      "name": "TulasiThatavarthi",
-      "jersey": "#—",
-      "cap": "T",
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
       "stats": [
         {
           "n": "3",
@@ -2518,9 +2518,9 @@
       ]
     },
     {
-      "name": "VenkatJyothi",
-      "jersey": "#—",
-      "cap": "V",
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#9",
+      "cap": "VJ09",
       "stats": [
         {
           "n": "7",
@@ -2537,9 +2537,9 @@
       ]
     },
     {
-      "name": "ChandraBorra",
-      "jersey": "#—",
-      "cap": "C",
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
       "stats": [
         {
           "n": "8",
@@ -2556,28 +2556,9 @@
       ]
     },
     {
-      "name": "DushyanthBommana",
+      "name": "Purvik Prasad",
       "jersey": "#—",
-      "cap": "D",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-17",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "PurvikPrasad",
-      "jersey": "#—",
-      "cap": "P",
+      "cap": "PP",
       "stats": [
         {
           "n": "1",
@@ -2589,6 +2570,25 @@
         },
         {
           "n": "0-14",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#23",
+      "cap": "DB23",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-17",
           "l": "Best Fig"
         }
       ]
@@ -2615,9 +2615,9 @@
       ]
     },
     {
-      "name": "SuryaTummala",
-      "jersey": "#—",
-      "cap": "S",
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#14",
+      "cap": "PA14",
       "stats": [
         {
           "n": "27",
@@ -2634,9 +2634,9 @@
       ]
     },
     {
-      "name": "AbubakarRehmani",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "A",
+      "cap": "AR",
       "stats": [
         {
           "n": "19",

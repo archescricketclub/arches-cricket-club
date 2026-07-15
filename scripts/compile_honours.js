@@ -58,14 +58,14 @@ const PLAYER_NAME_MAP = {
 // Due to NVPlay API limitations, exact dates and opponents for season aggregates
 // must be mapped here. Add to this lookup when a player hits a milestone in players.json.
 const HONOURS_LOOKUP = {
-  "Ali Rizwan|51|batting": { opponent: "Saintfield 3rd XI", date: "30th May 2026", league: "Development Cup" },
-  "Wasim SM|66|batting": { opponent: "Saintfield 3rd XI", date: "30th May 2026", league: "Development Cup" },
-  "AsadMurtaza|50*|batting": { opponent: "CSNI 5th XI", date: "20th June 2026", league: "Development Cup" },
-  "AbubakarRehmani|8-7|bowling": { opponent: "Belfast Superkings 1st XI", date: "24th June 2026", league: "Senior League 3" },
-  "VeerendraNagari|5-53|bowling": { opponent: "Amigos Belfast 1st XI", date: "24th June 2026", league: "Senior League 3" },
-  "Ali Rizwan|127*|batting": { opponent: "Amigos Belfast 3rd XI", date: "27th June 2026", league: "Junior League 10" },
-  "Anil Narra|58|batting": { opponent: "Amigos Belfast 3rd XI", date: "27th June 2026", league: "Junior League 10" },
-  "AbubakarRehmani|50|batting": { opponent: "Dungannon 1st XI", date: "20th June 2026", league: "Junior League 10" }
+  "Ali Rizwan|51|batting": { opponent: "Saintfield 3rd", date: "30th May 2026", league: "Development Cup" },
+  "Wasim SM|66|batting": { opponent: "Saintfield 3rd", date: "30th May 2026", league: "Development Cup" },
+  "Asad Murtuza|50*|batting": { opponent: "CSNI 5th", date: "20th June 2026", league: "Development Cup" },
+  "Abubakar Rehmani|8-7|bowling": { opponent: "Belfast Superkings 1st", date: "24th June 2026", league: "Senior League 3" },
+  "Veerendra Babu Nagari|5-53|bowling": { opponent: "Amigos Belfast 1st", date: "24th June 2026", league: "Senior League 3" },
+  "Ali Rizwan|127*|batting": { opponent: "Amigos Belfast 3rd", date: "27th June 2026", league: "Junior League 10" },
+  "Anil Narra|58|batting": { opponent: "Amigos Belfast 3rd", date: "27th June 2026", league: "Junior League 10" },
+  "Abubakar Rehmani|50|batting": { opponent: "Dungannon 1st", date: "20th June 2026", league: "Junior League 10" }
 };
 
 function cleanDate(dateStr, season) {
@@ -390,9 +390,17 @@ if (players2026) {
         if (!p.stats || p.stats.length < 2) return;
         const hsStr = p.stats[1].n.replace('*', '').trim();
         const hs = parseInt(hsStr);
-        if (hs >= 50) {
+        
+        let threshold = prefix === 'mw' ? 30 : 50;
+        
+        if (hs >= threshold) {
+          // Manual exclusion requested by user
+          if (p.name.includes('Anil') && p.name.includes('Narra') && hs === 58 && prefix === 't2') return;
+
           // Avoid duplicate entries if already scraped match-by-match
-          const categoryName = hs >= 100 ? 'century' : 'half-century';
+          let categoryName = hs >= 100 ? 'century' : 'half-century';
+          if (prefix === 'mw') categoryName = 'midweek-30';
+
           let leagueName = 'Cup Matches';
           if (prefix === 't1') leagueName = 'Senior League 3';
           else if (prefix === 't2') leagueName = 'Junior League 10';
@@ -425,13 +433,17 @@ if (players2026) {
         const best = p.stats[2].n;
         if (best && best.includes('-')) {
           const wkts = parseInt(best.split('-')[0]);
-          if (wkts >= 5) {
+          
+          let threshold = prefix === 'mw' ? 3 : 5;
+          let categoryName = prefix === 'mw' ? 'midweek-3w' : 'five-wickets';
+
+          if (wkts >= threshold) {
             let leagueName = 'Cup Matches';
             if (prefix === 't1') leagueName = 'Senior League 3';
             else if (prefix === 't2') leagueName = 'Junior League 10';
             else if (prefix === 'mw') leagueName = 'Midweek League';
 
-            const exists = honours2026.some(h => h.name === p.name && h.category === 'five-wickets' && h.league === leagueName);
+            const exists = honours2026.some(h => h.name === p.name && h.category === categoryName && h.league === leagueName);
             if (!exists) {
               const lookupKey = `${p.name}|${best}|bowling`;
               const lookup = HONOURS_LOOKUP[lookupKey];
@@ -444,7 +456,7 @@ if (players2026) {
                 opponent: lookup ? lookup.opponent : 'Opposition',
                 league: lookup ? lookup.league : leagueName,
                 season: '2026',
-                category: 'five-wickets'
+                category: categoryName
               });
             }
           }
