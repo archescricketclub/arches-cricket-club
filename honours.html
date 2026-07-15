@@ -275,9 +275,8 @@
             <i class="fa-solid fa-user-plus"></i> Join The Club
         </a>
     </div>
-  </section>
 
-  <section class="section">
+  <section class="section page-top-padding">
     <div class="container">
       <div class="tabs-row" id="honoursTabs">
         <button class="tab-btn active" onclick="switchCategory('century', this)">Centuries (100+)</button>
@@ -287,6 +286,15 @@
         <button class="tab-btn" onclick="switchCategory('midweek-3w', this)">Midweek Bowling (3+ Wkts)</button>
         <button class="tab-btn" onclick="switchCategory('hat-trick', this)">Hat-Tricks</button>
       </div>
+
+      <select class="mobile-tab-select" onchange="switchCategory(this.value, null)">
+        <option value="century">Centuries (100+)</option>
+        <option value="half-century">Half-Centuries (50-99)</option>
+        <option value="five-wickets">5+ Wicket Hauls</option>
+        <option value="midweek-30">Midweek Batting (30+)</option>
+        <option value="midweek-3w">Midweek Bowling (3+ Wkts)</option>
+        <option value="hat-trick">Hat-Tricks</option>
+      </select>
 
       <div class="filters-bar">
         <div class="filter-group">
@@ -352,7 +360,14 @@
         </div>
         <div class="footer-bottom">
           <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · All rights reserved.</div>
-          <div class="footer-legal"><a href="#">Privacy</a><a href="contact.html">Contact</a></div>
+          <div class="footer-legal">
+            <a href="data_policy.html">Data Policy</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html">Join</a>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted);">
+          Powered by <a href="https://www.banjotech.ai/" target="_blank" style="color: var(--amber); text-decoration: none; font-weight: bold;">Banjo Tech</a>
         </div>
       </div>
     </div>
@@ -374,8 +389,10 @@
     }
 
     function switchCategory(cat, btn) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      if (btn) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
       currentCategory = cat;
       filterData();
     }

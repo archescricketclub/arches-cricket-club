@@ -65,10 +65,9 @@
             <i class="fa-solid fa-user-plus"></i> Join The Club
         </a>
     </div>
-  </div>
 
   <!-- FIXTURES -->
-  <section class="section">
+  <section class="section page-top-padding">
     <div class="container">
 
       <!-- Filter Tabs -->
@@ -79,6 +78,14 @@
         <button class="filter-tab" onclick="filterFixtures('midweek', this)">Midweek League</button>
         <button class="filter-tab" onclick="filterFixtures('cups', this)">Cup Matches</button>
       </div>
+
+      <select class="mobile-tab-select" onchange="filterFixtures(this.value)">
+        <option value="all">All Fixtures</option>
+        <option value="team1">Team 1 – Senior League</option>
+        <option value="team2">Team 2 – Junior League</option>
+        <option value="midweek">Midweek League</option>
+        <option value="cups">Cup Matches</option>
+      </select>
 
       <!-- Team 1 -->
       <div class="reveal" id="block-team1">
@@ -270,10 +277,14 @@
               reserved.
             </div>
             <div class="footer-legal">
-                            <a href="data_policy.html">Data Policy</a>
+              <a href="data_policy.html">Data Policy</a>
               <a href="contact.html">Contact</a>
               <a href="join.html">Join</a>
             </div>
+          </div>
+          <div style="text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted);">
+            Powered by <a href="https://www.banjotech.ai/" target="_blank" style="color: var(--amber); text-decoration: none; font-weight: bold;">Banjo Tech</a>
+          </div>
 
           </div>
   </footer>
@@ -304,8 +315,10 @@
 
     // Filter tabs
     function filterFixtures(team, btn) {
-      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
+      if (btn) {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+      }
       const t1 = document.getElementById('block-team1');
       const t2 = document.getElementById('block-team2');
       const mw = document.getElementById('block-midweek');

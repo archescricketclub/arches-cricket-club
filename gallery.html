@@ -170,7 +170,6 @@
             <i class="fa-solid fa-user-plus"></i> Join The Club
         </a>
     </div>
-  </div>
 
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -180,7 +179,7 @@
     </div>
   </div>
 
-  <section class="section">
+  <section class="section page-top-padding">
     <div class="container">
       <div class="filter-tabs" style="margin-bottom:2.5rem;">
         <button class="filter-tab active" onclick="filterGallery('all', this)">All Photos</button>
@@ -188,6 +187,13 @@
         <button class="filter-tab" onclick="filterGallery('training', this)">Training</button>
         <button class="filter-tab" onclick="filterGallery('events', this)">Events</button>
       </div>
+
+      <select class="mobile-tab-select" onchange="filterGallery(this.value, null)">
+        <option value="all">All Photos</option>
+        <option value="matches">Matches</option>
+        <option value="training">Training</option>
+        <option value="events">Events</option>
+      </select>
 
       <div class="full-gallery-grid">
 
@@ -333,6 +339,9 @@
           <div class="footer-legal"><a href="index.html">Home</a><a href="contact.html">Contact</a><a
               href="join.html">Join</a></div>
         </div>
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted);">
+          Powered by <a href="https://www.banjotech.ai/" target="_blank" style="color: var(--amber); text-decoration: none; font-weight: bold;">Banjo Tech</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -343,8 +352,10 @@
     document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el));
     
     function filterGallery(category, btn) {
-      document.querySelectorAll('.filter-tab').forEach(x => x.classList.remove('active'));
-      btn.classList.add('active');
+      if (btn) {
+        document.querySelectorAll('.filter-tab').forEach(x => x.classList.remove('active'));
+        btn.classList.add('active');
+      }
       
       const items = document.querySelectorAll('.full-gallery-item');
       items.forEach(item => {

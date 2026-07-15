@@ -379,7 +379,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section page-top-padding">
         <div class="container">
             <div class="team-tabs" id="teamTabs">
                 <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
@@ -389,6 +389,15 @@
                 <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
                 <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
             </div>
+
+            <select class="mobile-tab-select" onchange="switchTeam(this.value, null)">
+                <option value="t1">Team 1 · Senior League</option>
+                <option value="t2">Team 2 · Junior League</option>
+                <option value="mw">Midweek League</option>
+                <option value="cup">Cup Matches</option>
+                <option value="all">All Players</option>
+                <option value="career">All-Time Career Stats</option>
+            </select>
 
             <!-- ══ TEAM 1 ══ -->
             <div class="team-panel active" id="panel-t1">
@@ -610,9 +619,15 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-        <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · All rights reserved.
+                    <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · All rights reserved.</div>
+                    <div class="footer-legal">
+                        <a href="data_policy.html">Data Policy</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="join.html">Join</a>
                     </div>
-                    <div class="footer-legal"><a href="#">Privacy</a><a href="contact.html">Contact</a></div>
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted);">
+                    Powered by <a href="https://www.banjotech.ai/" target="_blank" style="color: var(--amber); text-decoration: none; font-weight: bold;">Banjo Tech</a>
                 </div>
             </div>
         </div>
@@ -791,9 +806,11 @@
 
         /* ─── TEAM SWITCH ────────────────────────────────── */
         function switchTeam(team, btn) {
-            document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+            if (btn) {
+                document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+                btn.classList.add('active');
+            }
             document.querySelectorAll('.team-panel').forEach(p => p.classList.remove('active'));
-            btn.classList.add('active');
             document.getElementById('panel-' + team).classList.add('active');
         }
 
