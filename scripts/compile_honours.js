@@ -55,10 +55,17 @@ const PLAYER_NAME_MAP = {
   'c borra': 'Chandra Obula Reddy B'
 };
 
-const CUP_HONOURS_LOOKUP = {
+// Due to NVPlay API limitations, exact dates and opponents for season aggregates
+// must be mapped here. Add to this lookup when a player hits a milestone in players.json.
+const HONOURS_LOOKUP = {
   "Ali Rizwan|51|batting": { opponent: "Saintfield 3rd XI", date: "30th May 2026", league: "Development Cup" },
   "Wasim SM|66|batting": { opponent: "Saintfield 3rd XI", date: "30th May 2026", league: "Development Cup" },
-  "Asad Murtuza|50*|batting": { opponent: "CSNI 5th XI", date: "20th June 2026", league: "Development Cup" }
+  "AsadMurtaza|50*|batting": { opponent: "CSNI 5th XI", date: "20th June 2026", league: "Development Cup" },
+  "AbubakarRehmani|8-7|bowling": { opponent: "Belfast Superkings 1st XI", date: "24th June 2026", league: "Senior League 3" },
+  "VeerendraNagari|5-53|bowling": { opponent: "Amigos Belfast 1st XI", date: "24th June 2026", league: "Senior League 3" },
+  "Ali Rizwan|127*|batting": { opponent: "Amigos Belfast 3rd XI", date: "27th June 2026", league: "Junior League 10" },
+  "Anil Narra|58|batting": { opponent: "Amigos Belfast 3rd XI", date: "27th June 2026", league: "Junior League 10" },
+  "AbubakarRehmani|50|batting": { opponent: "Dungannon 1st XI", date: "20th June 2026", league: "Junior League 10" }
 };
 
 function cleanDate(dateStr, season) {
@@ -394,7 +401,7 @@ if (players2026) {
           const exists = honours2026.some(h => h.name === p.name && h.category === categoryName && h.league === leagueName);
           if (!exists) {
             const lookupKey = `${p.name}|${p.stats[1].n}|batting`;
-            const lookup = CUP_HONOURS_LOOKUP[lookupKey];
+            const lookup = HONOURS_LOOKUP[lookupKey];
 
             honours2026.push({
               name: p.name,
@@ -427,7 +434,7 @@ if (players2026) {
             const exists = honours2026.some(h => h.name === p.name && h.category === 'five-wickets' && h.league === leagueName);
             if (!exists) {
               const lookupKey = `${p.name}|${best}|bowling`;
-              const lookup = CUP_HONOURS_LOOKUP[lookupKey];
+              const lookup = HONOURS_LOOKUP[lookupKey];
 
               honours2026.push({
                 name: p.name,

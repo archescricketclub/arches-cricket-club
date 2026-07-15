@@ -76,7 +76,8 @@ async function syncMatches() {
         const dateObj = new Date(match.StartDateTime);
         const day = dateObj.getDate();
         const month = months[dateObj.getMonth()];
-        const dateStr = `${day}${getSuffix(day)} ${month}`;
+        const year = dateObj.getFullYear();
+        const dateStr = `${day}${getSuffix(day)} ${month} ${year}`;
 
         let league = "";
         let time = "TBD";
