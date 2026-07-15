@@ -65,7 +65,13 @@ const HONOURS_LOOKUP = {
   "Veerendra Babu Nagari|5-53|bowling": { opponent: "Amigos Belfast 1st", date: "24th June 2026", league: "Senior League 3" },
   "Ali Rizwan|127*|batting": { opponent: "Amigos Belfast 3rd", date: "27th June 2026", league: "Junior League 10" },
   "Anil Narra|58|batting": { opponent: "Amigos Belfast 3rd", date: "27th June 2026", league: "Junior League 10" },
-  "Abubakar Rehmani|50|batting": { opponent: "Dungannon 1st", date: "20th June 2026", league: "Junior League 10" }
+  "Abubakar Rehmani|50|batting": { opponent: "Dungannon 1st", date: "20th June 2026", league: "Junior League 10" },
+  "Vonga Vishnu|35*|batting": { opponent: "Belfast MW", date: "2nd June 2026", league: "Midweek League" },
+  "Asad Murtuza|34*|batting": { opponent: "Cregagh MW", date: "16th June 2026", league: "Midweek League" },
+  "Ali Rizwan|34*|batting": { opponent: "Cooke Collegians MW", date: "23rd June 2026", league: "Midweek League" },
+  "Srini Nadakuditi|33*|batting": { opponent: "Cliftonville Academy MW", date: "30th June 2026", league: "Midweek League" },
+  "Wasim SM|31*|batting": { opponent: "Dunmurry MW2", date: "14th July 2026", league: "Midweek League" },
+  "Haneef Shaik|3-18|bowling": { opponent: "Belfast MW", date: "2nd June 2026", league: "Midweek League" }
 };
 
 function cleanDate(dateStr, season) {

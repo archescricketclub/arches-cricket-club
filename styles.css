@@ -543,9 +543,8 @@ button {
   backdrop-filter: blur(36px);
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   gap: 0;
-  padding: 6rem 2rem 2rem;
+  padding: 5rem 1rem 1rem;
   overflow-y: auto;
 }
 
@@ -559,10 +558,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 1.1rem 2rem;
-  margin: 0.2rem 0;
+  padding: 0.8rem 1.5rem;
+  margin: 0.1rem 0;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: 2px;
   color: var(--text);
   text-transform: uppercase;
@@ -2518,8 +2517,8 @@ button {
   }
 
   .mobile-nav a {
-    font-size: 1.7rem;
-    padding: 0.9rem 1.5rem;
+    font-size: 1.4rem;
+    padding: 0.6rem 1.25rem;
   }
 }
 
