@@ -4,7 +4,7 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1421,
+      "runs": 1455,
       "hs": "131",
       "matches": 0
     },
@@ -19,7 +19,7 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 705,
+      "runs": 726,
       "hs": "58",
       "matches": 0
     },
@@ -49,12 +49,12 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 558,
+      "runs": 574,
       "hs": "41",
       "matches": 0
     },
     "bowling": {
-      "wickets": 72,
+      "wickets": 73,
       "bestFig": "5-22",
       "matches": 0
     }
@@ -79,13 +79,28 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 369,
+      "runs": 376,
       "hs": "66",
       "matches": 0
     },
     "bowling": {
       "wickets": 7,
       "bestFig": "3-57",
+      "matches": 0
+    }
+  },
+  {
+    "name": "AsadMurtaza",
+    "jersey": "#—",
+    "cap": "A",
+    "batting": {
+      "runs": 312,
+      "hs": "50*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "0-12",
       "matches": 0
     }
   },
@@ -101,21 +116,6 @@
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 0
-    }
-  },
-  {
-    "name": "AsadMurtaza",
-    "jersey": "#—",
-    "cap": "A",
-    "batting": {
-      "runs": 280,
-      "hs": "50*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "0-12",
       "matches": 0
     }
   },
@@ -154,7 +154,7 @@
     "jersey": "#—",
     "cap": "SRI",
     "batting": {
-      "runs": 203,
+      "runs": 220,
       "hs": "33*",
       "matches": 0
     },
@@ -234,7 +234,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 16,
+      "wickets": 17,
       "bestFig": "2-11",
       "matches": 0
     }
@@ -274,7 +274,7 @@
     "jersey": "#—",
     "cap": "C",
     "batting": {
-      "runs": 126,
+      "runs": 128,
       "hs": "26",
       "matches": 0
     },
@@ -420,6 +420,36 @@
     }
   },
   {
+    "name": "VijaykumarHugar",
+    "jersey": "#—",
+    "cap": "V",
+    "batting": {
+      "runs": 49,
+      "hs": "29",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 3,
+      "bestFig": "1-6",
+      "matches": 0
+    }
+  },
+  {
+    "name": "HarshaG",
+    "jersey": "#—",
+    "cap": "H",
+    "batting": {
+      "runs": 47,
+      "hs": "14",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 23,
+      "bestFig": "3-27",
+      "matches": 0
+    }
+  },
+  {
     "name": "DushyanthBommana",
     "jersey": "#—",
     "cap": "D",
@@ -431,21 +461,6 @@
     "bowling": {
       "wickets": 3,
       "bestFig": "2-17",
-      "matches": 0
-    }
-  },
-  {
-    "name": "HarshaG",
-    "jersey": "#—",
-    "cap": "H",
-    "batting": {
-      "runs": 43,
-      "hs": "14",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 21,
-      "bestFig": "3-27",
       "matches": 0
     }
   },
@@ -536,21 +551,6 @@
     "bowling": {
       "wickets": 2,
       "bestFig": "2-26",
-      "matches": 0
-    }
-  },
-  {
-    "name": "VijaykumarHugar",
-    "jersey": "#—",
-    "cap": "V",
-    "batting": {
-      "runs": 20,
-      "hs": "12*",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 3,
-      "bestFig": "1-6",
       "matches": 0
     }
   },
@@ -729,7 +729,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 20,
+      "wickets": 22,
       "bestFig": "4-47",
       "matches": 0
     }

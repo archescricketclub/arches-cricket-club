@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Dunmurry MW2 XI",
-      "date": "14th July",
-      "time": "6:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Lisburn 5th XI",
       "awayTeam": "Arches 2nd XI",
       "date": "18th July",
@@ -431,7 +422,17 @@
       "status": "",
       "league": "Junior League 10",
       "result": "Arches 2nd XI won by 79 runs"
+    },
+    {
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "date": "14th July",
+      "time": "6:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Midweek League",
+      "result": "Arches MW XI won by 5 wickets"
     }
   ],
-  "lastUpdated": "2026-07-14T13:43:54.607Z"
+  "lastUpdated": "2026-07-15T02:29:13.132Z"
 }

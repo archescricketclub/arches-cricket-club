@@ -1461,12 +1461,32 @@
   ],
   "mw-bat": [
     {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "161",
+          "l": "Runs"
+        },
+        {
+          "n": "34*",
+          "l": "High Score"
+        },
+        {
+          "n": "40.25",
+          "l": "Average"
+        }
+      ],
+      "badge": "Top Scorer MW"
+    },
+    {
       "name": "Wasim SM",
       "jersey": "#1",
       "cap": "WSM1",
       "stats": [
         {
-          "n": "130",
+          "n": "137",
           "l": "Runs"
         },
         {
@@ -1474,11 +1494,10 @@
           "l": "High Score"
         },
         {
-          "n": "43.33",
+          "n": "34.25",
           "l": "Average"
         }
-      ],
-      "badge": "Top Scorer MW"
+      ]
     },
     {
       "name": "VishnuVonga",
@@ -1500,20 +1519,20 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
+      "name": "AsadMurtaza",
+      "jersey": "#—",
+      "cap": "A",
       "stats": [
         {
-          "n": "127",
+          "n": "114",
           "l": "Runs"
         },
         {
-          "n": "33*",
+          "n": "34*",
           "l": "High Score"
         },
         {
-          "n": "31.75",
+          "n": "114.00",
           "l": "Average"
         }
       ]
@@ -1524,7 +1543,7 @@
       "cap": "AN30",
       "stats": [
         {
-          "n": "85",
+          "n": "106",
           "l": "Runs"
         },
         {
@@ -1532,26 +1551,7 @@
           "l": "High Score"
         },
         {
-          "n": "21.25",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "AsadMurtaza",
-      "jersey": "#—",
-      "cap": "A",
-      "stats": [
-        {
-          "n": "82",
-          "l": "Runs"
-        },
-        {
-          "n": "34*",
-          "l": "High Score"
-        },
-        {
-          "n": "82.00",
+          "n": "21.20",
           "l": "Average"
         }
       ]
@@ -1562,7 +1562,7 @@
       "cap": "SRI",
       "stats": [
         {
-          "n": "69",
+          "n": "86",
           "l": "Runs"
         },
         {
@@ -1570,7 +1570,7 @@
           "l": "High Score"
         },
         {
-          "n": "23.00",
+          "n": "21.50",
           "l": "Average"
         }
       ]
@@ -1581,7 +1581,7 @@
       "cap": "C",
       "stats": [
         {
-          "n": "65",
+          "n": "67",
           "l": "Runs"
         },
         {
@@ -1589,7 +1589,45 @@
           "l": "High Score"
         },
         {
-          "n": "21.67",
+          "n": "16.75",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "VijaykumarHugar",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "44",
+          "l": "Runs"
+        },
+        {
+          "n": "29",
+          "l": "High Score"
+        },
+        {
+          "n": "14.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "39",
+          "l": "Runs"
+        },
+        {
+          "n": "16*",
+          "l": "High Score"
+        },
+        {
+          "n": "19.50",
           "l": "Average"
         }
       ]
@@ -1614,25 +1652,6 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "23",
-          "l": "Runs"
-        },
-        {
-          "n": "13",
-          "l": "High Score"
-        },
-        {
-          "n": "11.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "YaungichaMirthivada",
       "jersey": "#—",
       "cap": "Y",
@@ -1652,39 +1671,20 @@
       ]
     },
     {
-      "name": "VijaykumarHugar",
-      "jersey": "#—",
-      "cap": "V",
-      "stats": [
-        {
-          "n": "15",
-          "l": "Runs"
-        },
-        {
-          "n": "12*",
-          "l": "High Score"
-        },
-        {
-          "n": "7.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "HarshaG",
       "jersey": "#—",
       "cap": "H",
       "stats": [
         {
-          "n": "3",
+          "n": "7",
           "l": "Runs"
         },
         {
-          "n": "3*",
+          "n": "4*",
           "l": "High Score"
         },
         {
-          "n": "3.00",
+          "n": "7.00",
           "l": "Average"
         }
       ]
@@ -1697,11 +1697,11 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "19",
+          "n": "23",
           "l": "Overs"
         },
         {
-          "n": "7",
+          "n": "9",
           "l": "Wickets"
         },
         {
@@ -1717,15 +1717,34 @@
       "cap": "H",
       "stats": [
         {
-          "n": "19.3",
+          "n": "23.3",
           "l": "Overs"
         },
         {
-          "n": "5",
+          "n": "7",
           "l": "Wickets"
         },
         {
           "n": "2-5",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "21",
+          "l": "Overs"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-15",
           "l": "Best Fig"
         }
       ]
@@ -1750,12 +1769,12 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
+      "name": "Kiran Maheswaram",
+      "jersey": "#75",
+      "cap": "KM75",
       "stats": [
         {
-          "n": "17",
+          "n": "14",
           "l": "Overs"
         },
         {
@@ -1763,7 +1782,7 @@
           "l": "Wickets"
         },
         {
-          "n": "1-15",
+          "n": "1-10",
           "l": "Best Fig"
         }
       ]
@@ -1774,7 +1793,7 @@
       "cap": "C",
       "stats": [
         {
-          "n": "17",
+          "n": "21",
           "l": "Overs"
         },
         {
@@ -1783,25 +1802,6 @@
         },
         {
           "n": "1-15",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Kiran Maheswaram",
-      "jersey": "#75",
-      "cap": "KM75",
-      "stats": [
-        {
-          "n": "10",
-          "l": "Overs"
-        },
-        {
-          "n": "2",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-10",
           "l": "Best Fig"
         }
       ]
@@ -1909,11 +1909,49 @@
       "cap": "C",
       "stats": [
         {
-          "n": "65",
+          "n": "67",
           "l": "Runs"
         },
         {
           "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-15",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "VijaykumarHugar",
+      "jersey": "#—",
+      "cap": "V",
+      "stats": [
+        {
+          "n": "44",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-6",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "39",
+          "l": "Runs"
+        },
+        {
+          "n": "4",
           "l": "Wickets"
         },
         {
@@ -1932,30 +1970,11 @@
           "l": "Runs"
         },
         {
-          "n": "2",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-10",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "23",
-          "l": "Runs"
-        },
-        {
           "n": "3",
           "l": "Wickets"
         },
         {
-          "n": "1-15",
+          "n": "1-10",
           "l": "Best Fig"
         }
       ]
