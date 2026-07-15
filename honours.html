@@ -482,12 +482,12 @@
       tableHTML += filtered.map((item, index) => {
         return `
           <tr>
-            <td class="table-sno">${index + 1}</td>
-            <td class="table-player">${item.name}</td>
-            <td class="table-record">${item.record}</td>
-            <td class="table-opp">vs ${item.opponent || 'Opposition TBD'}</td>
-            <td class="table-date">${item.date || 'Date TBD'}</td>
-            <td class="table-league">${item.league || 'League TBD'}</td>
+            <td class="table-sno" data-label="S.No">${index + 1}</td>
+            <td class="table-player" data-label="Player Name">${item.name}</td>
+            <td class="table-record" data-label="${recordHeader}">${item.record}</td>
+            <td class="table-opp" data-label="Opposition">vs ${item.opponent || 'Opposition TBD'}</td>
+            <td class="table-date" data-label="Date">${item.date || 'Date TBD'}</td>
+            <td class="table-league" data-label="League">${item.league || 'League TBD'}</td>
           </tr>
         `;
       }).join('');

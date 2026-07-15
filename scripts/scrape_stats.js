@@ -218,6 +218,7 @@ function getInitials(name) {
               const cells = Array.from(row.querySelectorAll('.nvp-stats-grid__cell-item'));
               return {
                 name: cells[0] ? cells[0].textContent.trim().replace(/[^a-zA-Z\s]/g, '').trim() : '',
+                matches: cells[1] ? cells[1].textContent.trim() : '0',
                 runs: cells[4] ? cells[4].textContent.trim() : '0',
                 avg: cells[5] ? cells[5].textContent.trim() : '0.00',
                 hs: cells[6] ? cells[6].textContent.trim() : '0'
@@ -296,6 +297,7 @@ function getInitials(name) {
               const cells = Array.from(row.querySelectorAll('.nvp-stats-grid__cell-item'));
               return {
                 name: cells[0] ? cells[0].textContent.trim().replace(/[^a-zA-Z\s]/g, '').trim() : '',
+                matches: cells[1] ? cells[1].textContent.trim() : '0',
                 overs: cells[3] ? cells[3].textContent.trim() : '0',
                 wickets: cells[6] ? cells[6].textContent.trim() : '0',
                 bestFig: cells[11] ? cells[11].textContent.trim() : '-'
@@ -336,6 +338,10 @@ function getInitials(name) {
           const runs1 = parseInt(existing.runs) || 0;
           const runs2 = parseInt(p.runs) || 0;
           existing.runs = (runs1 + runs2).toString();
+
+          const matches1 = parseInt(existing.matches) || 0;
+          const matches2 = parseInt(p.matches) || 0;
+          existing.matches = (matches1 + matches2).toString();
           
           const hs1Str = existing.hs || '0';
           const hs2Str = p.hs || '0';
@@ -363,6 +369,7 @@ function getInitials(name) {
             canonicalName,
             match,
             name: p.name,
+            matches: p.matches,
             runs: p.runs,
             hs: p.hs,
             avg: p.avg
@@ -393,6 +400,10 @@ function getInitials(name) {
           const wkts2 = parseInt(p.wickets) || 0;
           existing.wickets = (wkts1 + wkts2).toString();
           
+          const mat1 = parseInt(existing.matches) || 0;
+          const mat2 = parseInt(p.matches) || 0;
+          existing.matches = (mat1 + mat2).toString();
+          
           const fig1Str = existing.bestFig || '-';
           const fig2Str = p.bestFig || '-';
           
@@ -414,6 +425,7 @@ function getInitials(name) {
             canonicalName,
             match,
             name: p.name,
+            matches: p.matches,
             overs: p.overs,
             wickets: p.wickets,
             bestFig: p.bestFig
@@ -428,6 +440,7 @@ function getInitials(name) {
           jersey: p.match ? p.match.jersey : '#—',
           cap: p.match ? p.match.cap : getInitials(p.name),
           stats: [
+            { n: p.matches || '0', l: 'Matches' },
             { n: p.runs, l: 'Runs' },
             { n: p.hs, l: 'High Score' },
             { n: p.avg, l: 'Average' }
@@ -442,6 +455,7 @@ function getInitials(name) {
           jersey: p.match ? p.match.jersey : '#—',
           cap: p.match ? p.match.cap : getInitials(p.name),
           stats: [
+            { n: p.matches || '0', l: 'Matches' },
             { n: p.overs, l: 'Overs' },
             { n: p.wickets, l: 'Wickets' },
             { n: p.bestFig, l: 'Best Fig' }
@@ -480,6 +494,7 @@ function getInitials(name) {
               jersey: batPlayer.jersey,
               cap: batPlayer.cap,
               stats: [
+                { n: batPlayer.matches || '0', l: 'Matches' },
                 { n: runs.toString(), l: 'Runs' },
                 { n: wickets.toString(), l: 'Wickets' },
                 { n: bestFig, l: 'Best Fig' }

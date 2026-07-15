@@ -263,15 +263,15 @@
       const allBlocks = [t1, t2, mw, cups];
       allBlocks.forEach(b => { if (b) b.style.display = 'none'; });
       
-      if (t === 'all') {
+      if (team === 'all') {
         allBlocks.forEach(b => { if (b) b.style.display = ''; });
-      } else if (t === 'team1') {
+      } else if (team === 'team1') {
         if (t1) t1.style.display = '';
-      } else if (t === 'team2') {
+      } else if (team === 'team2') {
         if (t2) t2.style.display = '';
-      } else if (t === 'midweek') {
+      } else if (team === 'midweek') {
         if (mw) mw.style.display = '';
-      } else if (t === 'cups') {
+      } else if (team === 'cups') {
         if (cups) cups.style.display = '';
       }
     }
