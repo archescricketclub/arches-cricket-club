@@ -374,58 +374,77 @@ if (Array.isArray(matches2026.results)) {
 // ────────────────────────────────────────────────────────
 console.log('Compiling 2026 Cup honours from players.json...');
 if (players2026) {
-  // Check cup batting milestones
-  if (Array.isArray(players2026['cup-bat'])) {
-    players2026['cup-bat'].forEach(p => {
-      const hsStr = p.stats[1].n.replace('*', '').trim();
-      const hs = parseInt(hsStr);
-      if (hs >= 50) {
-        // Avoid duplicate entries if already scraped match-by-match (e.g. if we add cup scorelines in future)
-        const exists = honours2026.some(h => h.name === p.name && h.category === (hs >= 100 ? 'century' : 'half-century') && h.league.includes('Cup'));
-        if (!exists) {
-          const lookupKey = `${p.name}|${p.stats[1].n}|batting`;
-          const lookup = CUP_HONOURS_LOOKUP[lookupKey];
-          honours2026.push({
-            name: p.name,
-            record: p.stats[1].n,
-            type: 'batting',
-            date: lookup ? lookup.date : '2026',
-            opponent: lookup ? lookup.opponent : 'Opposition',
-            league: lookup ? lookup.league : 'Cup Matches',
-            season: '2026',
-            category: hs >= 100 ? 'century' : 'half-century'
-          });
-        }
-      }
-    });
-  }
+  const prefixes = ['t1', 't2', 'mw', 'cup'];
+  
+  prefixes.forEach(prefix => {
+    // Check batting milestones
+    if (Array.isArray(players2026[`${prefix}-bat`])) {
+      players2026[`${prefix}-bat`].forEach(p => {
+        if (!p.stats || p.stats.length < 2) return;
+        const hsStr = p.stats[1].n.replace('*', '').trim();
+        const hs = parseInt(hsStr);
+        if (hs >= 50) {
+          // Avoid duplicate entries if already scraped match-by-match
+          const categoryName = hs >= 100 ? 'century' : 'half-century';
+          let leagueName = 'Cup Matches';
+          if (prefix === 't1') leagueName = 'Senior League 3';
+          else if (prefix === 't2') leagueName = 'Junior League 10';
+          else if (prefix === 'mw') leagueName = 'Midweek League';
 
-  // Check cup bowling milestones
-  if (Array.isArray(players2026['cup-bowl'])) {
-    players2026['cup-bowl'].forEach(p => {
-      const best = p.stats[2].n;
-      if (best && best.includes('-')) {
-        const wkts = parseInt(best.split('-')[0]);
-        if (wkts >= 5) {
-          const exists = honours2026.some(h => h.name === p.name && h.category === 'five-wickets' && h.league.includes('Cup'));
+          const exists = honours2026.some(h => h.name === p.name && h.category === categoryName && h.league === leagueName);
           if (!exists) {
-            const lookupKey = `${p.name}|${best}|bowling`;
+            const lookupKey = `${p.name}|${p.stats[1].n}|batting`;
             const lookup = CUP_HONOURS_LOOKUP[lookupKey];
+
             honours2026.push({
               name: p.name,
-              record: best,
-              type: 'bowling',
+              record: p.stats[1].n,
+              type: 'batting',
               date: lookup ? lookup.date : '2026',
               opponent: lookup ? lookup.opponent : 'Opposition',
-              league: lookup ? lookup.league : 'Cup Matches',
+              league: lookup ? lookup.league : leagueName,
               season: '2026',
-              category: 'five-wickets'
+              category: categoryName
             });
           }
         }
-      }
-    });
-  }
+      });
+    }
+
+    // Check bowling milestones
+    if (Array.isArray(players2026[`${prefix}-bowl`])) {
+      players2026[`${prefix}-bowl`].forEach(p => {
+        if (!p.stats || p.stats.length < 3) return;
+        const best = p.stats[2].n;
+        if (best && best.includes('-')) {
+          const wkts = parseInt(best.split('-')[0]);
+          if (wkts >= 5) {
+            let leagueName = 'Cup Matches';
+            if (prefix === 't1') leagueName = 'Senior League 3';
+            else if (prefix === 't2') leagueName = 'Junior League 10';
+            else if (prefix === 'mw') leagueName = 'Midweek League';
+
+            const exists = honours2026.some(h => h.name === p.name && h.category === 'five-wickets' && h.league === leagueName);
+            if (!exists) {
+              const lookupKey = `${p.name}|${best}|bowling`;
+              const lookup = CUP_HONOURS_LOOKUP[lookupKey];
+
+              honours2026.push({
+                name: p.name,
+                record: best,
+                type: 'bowling',
+                date: lookup ? lookup.date : '2026',
+                opponent: lookup ? lookup.opponent : 'Opposition',
+                league: lookup ? lookup.league : leagueName,
+                season: '2026',
+                category: 'five-wickets'
+              });
+            }
+          }
+        }
+      });
+    }
+  });
 }
 
 // Merge 2025 and 2026 honours

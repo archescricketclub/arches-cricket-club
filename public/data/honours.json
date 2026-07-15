@@ -1,5 +1,55 @@
 [
   {
+    "name": "AbubakarRehmani",
+    "record": "8-7",
+    "type": "bowling",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "VeerendraNagari",
+    "record": "5-53",
+    "type": "bowling",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "127*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "century"
+  },
+  {
+    "name": "Anil Narra",
+    "record": "58",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "AbubakarRehmani",
+    "record": "50",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
     "name": "AsadMurtaza",
     "record": "50*",
     "type": "batting",
