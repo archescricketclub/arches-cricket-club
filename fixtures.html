@@ -378,7 +378,7 @@
       let month = null;
       for (const part of parts) {
         const upper = part.toUpperCase();
-        const dayMatch = part.match(/^(\d+)(?:st|nd|rd|th)?$/i);
+        const dayMatch = part.match(/^(\d{1,2})(?:st|nd|rd|th)?$/i);
         if (dayMatch) {
           day = parseInt(dayMatch[1], 10);
         } else if (months[upper] !== undefined) {
