@@ -539,21 +539,27 @@ button {
 
 /* ─── MOBILE NAV OVERLAY ─── */
 .mobile-nav {
-  display: none;
+  display: flex;
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 380px;
+  height: 100vh;
   z-index: 999;
-  background: rgba(3, 7, 18, 0.97);
-  backdrop-filter: blur(36px);
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  box-shadow: none;
   flex-direction: column;
-  align-items: center;
-  gap: 0;
-  padding: 5rem 1rem 1rem;
+  align-items: flex-start;
+  padding: 6rem 2rem 2rem;
   overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
 }
 
 .mobile-nav.open {
-  display: flex;
+  right: 0;
+  box-shadow: 0 0 0 100vw rgba(3, 7, 18, 0.8), -10px 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-nav a {
@@ -561,47 +567,43 @@ button {
   max-width: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 1.2rem 1.5rem;
-  margin: 0.1rem 0;
+  justify-content: flex-start;
+  padding: 1.2rem 0;
+  margin: 0;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: 2px;
   color: var(--text);
   text-transform: uppercase;
-  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--trans);
-  border: 1px solid transparent;
 }
 
 .mobile-nav a i {
-  width: 40px;
-  text-align: center;
-  font-size: 1.5rem;
+  width: 36px;
+  text-align: left;
+  font-size: 1.3rem;
+  color: var(--amber) !important;
 }
 
 .mobile-nav a:hover,
 .mobile-nav a:active {
   color: var(--amber);
-  background: var(--amber-soft);
-  border-color: var(--border-accent);
+  background: transparent;
+  padding-left: 10px;
 }
 
 .mobile-nav .mn-divider {
-  width: 100%;
-  max-width: none;
-  height: 1px;
-  background: var(--border);
-  margin: 0.75rem 0;
+  display: none;
 }
 
 .mobile-nav .btn {
   padding: 1.2rem 2rem;
   font-size: 1.2rem;
   width: 100%;
-  max-width: 280px;
+  max-width: none;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /* ─────────────────────────────────────────
@@ -2430,27 +2432,23 @@ button {
   }
 
   /* Tables — card layout on mobile */
-  .table-section:has(.data-table--responsive),
-  .honours-table-container {
+  .table-section:has(.data-table--responsive) {
     border: none;
     background: none;
     box-shadow: none;
     overflow: visible;
   }
 
-  .data-table--responsive,
-  .honours-table {
+  .data-table--responsive {
     display: block;
     width: 100%;
   }
 
-  .data-table--responsive thead,
-  .honours-table thead {
+  .data-table--responsive thead {
     display: none;
   }
 
-  .data-table--responsive tbody tr,
-  .honours-table tbody tr {
+  .data-table--responsive tbody tr {
     display: block;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -2459,44 +2457,41 @@ button {
     padding: 1rem;
   }
 
-  .data-table--responsive tbody tr:hover td,
-  .honours-table tbody tr:hover td {
+  .data-table--responsive tbody tr:hover td {
     background: transparent;
   }
 
-  .data-table--responsive td,
-  .honours-table td {
-    display: flex;
-    justify-content: space-between;
+  .data-table--responsive td {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
     align-items: center;
     padding: 0.5rem 0;
     border: none;
     font-size: 0.85rem;
+    text-align: left;
   }
 
-  .data-table--responsive td::before,
-  .honours-table td::before {
+  .data-table--responsive td::before {
     content: attr(data-label);
     font-family: 'Orbitron', sans-serif;
     color: var(--amber);
     font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: 700;
+    text-align: left;
   }
 
-  .data-table--responsive td:last-child,
-  .honours-table td:last-child {
+  .data-table--responsive td:last-child {
     border-bottom: none;
   }
 
-  .data-table--responsive td[colspan],
-  .honours-table td[colspan] {
-    justify-content: center;
+  .data-table--responsive td[colspan] {
+    display: block;
     text-align: center;
   }
 
-  .data-table--responsive td[colspan]::before,
-  .honours-table td[colspan]::before {
+  .data-table--responsive td[colspan]::before {
     display: none;
   }
   .season-summary-grid {
@@ -2546,7 +2541,15 @@ button {
 
 @media (max-width:768px) {
   .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-logo-text .club-sub {
     display: none;
+  }
+  .nav-logo-text .club-name {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
   }
 }
 
