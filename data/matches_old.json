@@ -1,0 +1,180 @@
+﻿{
+  "fixtures": [
+    {
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "Northfield, Donaghadee",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dungannon 1st XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "TBC, TBC",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Amigos Belfast 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "SUN\n12 JUL",
+      "time": "SUN\n12 JUL",
+      "venue": "TBC, TBC",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Muckamore MW2 XI",
+      "awayTeam": "Arches MW XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "Moylena, Muckamore",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "date": "TBD",
+      "time": "",
+      "venue": "TBC, TBC",
+      "status": "",
+      "league": "Midweek League"
+    }
+  ],
+  "results": [
+    {
+      "date": "SAT\n27 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Victoria 1st XI",
+      "venue": "Lurgan Park, Lurgan",
+      "result": "Victoria 1st XI won by 8 wickets"
+    },
+    {
+      "date": "WED\n24 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Belfast Superkings 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
+      "result": "Belfast Superkings 1st XI won by 62 runs"
+    },
+    {
+      "date": "WED\n24 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Dundrum 1st XI",
+      "venue": "The Meadow, Dundrum",
+      "result": "Arches 1st XI won by 36 runs"
+    },
+    {
+      "date": "WED\n24 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast 1st XI",
+      "venue": "TBC, TBC",
+      "result": "Amigos Belfast 1st XI won by 4 wickets"
+    },
+    {
+      "date": "WED\n24 JUN",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings 1st XI",
+      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
+      "result": "Match Abandoned"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "Templepatrick 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "North Down 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "The Green, Comber",
+      "result": "Arches 2nd XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "CI 5th XI",
+      "venue": "TBC, TBC",
+      "result": "CI 5th XI won by 2 wickets"
+    },
+    {
+      "date": "SAT\n6 JUN",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Lurgan 3rd XI",
+      "venue": "TBC, TBC",
+      "result": "Lurgan 3rd XI won by 4 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Midweek League",
+      "homeTeam": "Cliftonville Academy MW XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBC, TBC",
+      "result": "Arches MW XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Cooke Collegians MW XI",
+      "venue": "Pirrie Park, Belfast",
+      "result": "Arches MW XI won by 27 runs"
+    },
+    {
+      "date": "6 SEP\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Amigos Belfast 2nd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "The Green (Upper Ground), Comber",
+      "result": "Arches 2nd XI won by 4 wickets"
+    },
+    {
+      "date": "2 AUG\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dunmurry 4th XI",
+      "venue": "TBC, TBC",
+      "result": "Arches 2nd XI won by 58 runs"
+    },
+    {
+      "date": "16 JUL\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Lisburn 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Wallace Park, Lisburn",
+      "result": "Arches 2nd XI won by 4 wickets"
+    },
+    {
+      "date": "16 JUL\n2025",
+      "league": "Development Cup",
+      "homeTeam": "Victoria 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2nd XI won by 7 wickets"
+    },
+    {
+      "date": "TBD",
+      "league": "T20 Shield Cup",
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "Northfield, Donaghadee",
+      "result": "Ards & Donaghadee 1st XI won by 24 runs"
+    }
+  ],
+  "lastUpdated": "2026-07-02T14:03:33.158Z"
+}

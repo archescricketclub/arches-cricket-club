@@ -628,9 +628,9 @@
         async function initData() {
             try {
                 const [playersRes, rosterRes, careerRes] = await Promise.all([
-                    fetch('data/players.json'),
-                    fetch('data/roster.json'),
-                    fetch('data/career_stats.json')
+                    fetch(`data/players.json?v=${new Date().getTime()}`),
+                    fetch(`data/roster.json?v=${new Date().getTime()}`),
+                    fetch(`data/career_stats.json?v=${new Date().getTime()}`)
                 ]);
                 DATA = await playersRes.json();
                 ALL_PLAYERS = await rosterRes.json();

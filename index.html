@@ -915,9 +915,9 @@
         async function initDynamicData() {
             try {
                 const [matchesRes, rosterRes, playersRes] = await Promise.all([
-                    fetch('data/matches.json').then(r => r.json()).catch(() => ({ fixtures: [], results: [] })),
-                    fetch('data/roster.json').then(r => r.json()).catch(() => []),
-                    fetch('data/players.json').then(r => r.json()).catch(() => ({}))
+                    fetch(`data/matches.json?v=${new Date().getTime()}`).then(r => r.json()).catch(() => ({ fixtures: [], results: [] })),
+                    fetch(`data/roster.json?v=${new Date().getTime()}`).then(r => r.json()).catch(() => []),
+                    fetch(`data/players.json?v=${new Date().getTime()}`).then(r => r.json()).catch(() => ({}))
                 ]);
 
                 // 1. Calculate Metrics

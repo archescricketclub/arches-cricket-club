@@ -379,7 +379,7 @@
     }
 
     // Load data dynamically
-    fetch('data/matches.json')
+    fetch(`data/matches.json?v=${new Date().getTime()}`)
       .then(res => res.json())
       .then(data => {
         const rawFixtures = data.fixtures || [];

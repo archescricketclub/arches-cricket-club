@@ -363,7 +363,7 @@
 
     async function loadHonours() {
       try {
-        const res = await fetch('data/honours.json');
+        const res = await fetch(`data/honours.json?v=${new Date().getTime()}`);
         HONOURS = await res.json();
       } catch (e) {
         console.error('Error loading honours.json:', e);
