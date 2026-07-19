@@ -191,7 +191,17 @@
   },
   {
     "name": "Wasim SM",
-    "record": "71",
+    "record": "93",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Cup Matches",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "92",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -208,16 +218,6 @@
     "league": "Cup Matches",
     "season": "2026",
     "category": "century"
-  },
-  {
-    "name": "Ali Rizwan",
-    "record": "76",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "half-century"
   },
   {
     "name": "Dushyanth Reddy B",

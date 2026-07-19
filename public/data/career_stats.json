@@ -4,7 +4,7 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 862,
+      "runs": 863,
       "hs": "332",
       "matches": 0
     },
@@ -49,7 +49,7 @@
     "jersey": "#3",
     "cap": "SRI3",
     "batting": {
-      "runs": 452,
+      "runs": 453,
       "hs": "117",
       "matches": 0
     },
@@ -64,12 +64,12 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 423,
+      "runs": 424,
       "hs": "70",
       "matches": 0
     },
     "bowling": {
-      "wickets": 133,
+      "wickets": 138,
       "bestFig": "5-22",
       "matches": 0
     }
@@ -99,7 +99,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 86,
+      "wickets": 91,
       "bestFig": "3-20",
       "matches": 0
     }
@@ -184,12 +184,12 @@
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
-      "runs": 132,
-      "hs": "31*",
+      "runs": 133,
+      "hs": "45",
       "matches": 0
     },
     "bowling": {
-      "wickets": 43,
+      "wickets": 45,
       "bestFig": "2-11",
       "matches": 0
     }
@@ -199,12 +199,12 @@
     "jersey": "#88",
     "cap": "VN88",
     "batting": {
-      "runs": 120,
-      "hs": "37",
+      "runs": 121,
+      "hs": "45",
       "matches": 0
     },
     "bowling": {
-      "wickets": 18,
+      "wickets": 23,
       "bestFig": "4-36",
       "matches": 0
     }
@@ -264,7 +264,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 93,
+      "wickets": 96,
       "bestFig": "3-15",
       "matches": 0
     }
@@ -379,7 +379,7 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 17,
+      "runs": 18,
       "hs": "168",
       "matches": 0
     },
@@ -495,6 +495,21 @@
     }
   },
   {
+    "name": "Yashwanth",
+    "jersey": "#777",
+    "cap": "CY777",
+    "batting": {
+      "runs": 3,
+      "hs": "4",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 10,
+      "bestFig": "2",
+      "matches": 0
+    }
+  },
+  {
     "name": "Purvik Prasad",
     "jersey": "#—",
     "cap": "PP",
@@ -506,21 +521,6 @@
     "bowling": {
       "wickets": 1,
       "bestFig": "0",
-      "matches": 0
-    }
-  },
-  {
-    "name": "Yashwanth",
-    "jersey": "#777",
-    "cap": "CY777",
-    "batting": {
-      "runs": 2,
-      "hs": "4",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 8,
-      "bestFig": "2",
       "matches": 0
     }
   },
@@ -564,7 +564,7 @@
       "matches": 0
     },
     "bowling": {
-      "wickets": 61,
+      "wickets": 64,
       "bestFig": "12",
       "matches": 0
     }

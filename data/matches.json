@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Lisburn 5th XI",
-      "awayTeam": "Arches 2nd XI",
-      "date": "18th July 2026",
-      "time": "1:00 PM",
-      "venue": "Victoria Park",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Belfast Superkings 1st XI",
       "date": "19th July 2026",
@@ -65,14 +56,6 @@
     }
   ],
   "results": [
-    {
-      "date": "16 JUL\n2025",
-      "league": "Development Cup",
-      "homeTeam": "Lisburn 5th XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "Wallace Park, Lisburn",
-      "result": "Arches 2nd XI won by 4 wickets"
-    },
     {
       "date": "16 JUL\n2025",
       "league": "Development Cup",
@@ -424,7 +407,17 @@
       "status": "",
       "league": "Midweek League",
       "result": "Arches MW XI won by 5 wickets"
+    },
+    {
+      "homeTeam": "Lisburn 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "18th July 2026",
+      "time": "1:00 PM",
+      "venue": "Victoria Park",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Arches 2nd XI won by 5 wickets"
     }
   ],
-  "lastUpdated": "2026-07-18T13:15:35.437Z"
+  "lastUpdated": "2026-07-19T13:18:11.495Z"
 }
