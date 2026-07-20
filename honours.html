@@ -461,6 +461,7 @@
       }
 
       const isBowling = currentCategory.includes('wickets') || currentCategory.includes('3w');
+      const isHatTrick = currentCategory === 'hat-trick';
       const recordHeader = isBowling ? 'Figures' : 'Score';
 
       let tableHTML = `
@@ -470,7 +471,7 @@
               <tr>
                 <th class="table-sno">S.No</th>
                 <th>Player Name</th>
-                <th>${recordHeader}</th>
+                ${!isHatTrick ? `<th>${recordHeader}</th>` : ''}
                 <th>Opposition</th>
                 <th>Date</th>
                 <th>League</th>
@@ -484,7 +485,7 @@
           <tr>
             <td class="table-sno" data-label="S.No">${index + 1}</td>
             <td class="table-player" data-label="Player Name">${item.name}</td>
-            <td class="table-record" data-label="${recordHeader}">${item.record}</td>
+            ${!isHatTrick ? `<td class="table-record" data-label="${recordHeader}">${item.record}</td>` : ''}
             <td class="table-opp" data-label="Opposition">vs ${item.opponent || 'Opposition TBD'}</td>
             <td class="table-date" data-label="Date">${item.date || 'Date TBD'}</td>
             <td class="table-league" data-label="League">${item.league || 'League TBD'}</td>

@@ -58,9 +58,9 @@ const PLAYER_NAME_MAP = {
 // Due to NVPlay API limitations, exact dates and opponents for season aggregates
 // must be mapped here. Add to this lookup when a player hits a milestone in players.json.
 const HONOURS_LOOKUP = {
-  "Ali Rizwan|51|batting": { opponent: "Saintfield 3rd", date: "30th May 2026", league: "Development Cup" },
-  "Wasim SM|66|batting": { opponent: "Saintfield 3rd", date: "30th May 2026", league: "Development Cup" },
-  "Asad Murtuza|50*|batting": { opponent: "CSNI 5th", date: "20th June 2026", league: "Development Cup" },
+  "Ali Rizwan|51|batting": { opponent: "Saintfield 3rd", date: "30th May 2026", league: "Cup Matches" },
+  "Wasim SM|66|batting": { opponent: "Saintfield 3rd", date: "30th May 2026", league: "Cup Matches" },
+  "Asad Murtuza|50*|batting": { opponent: "CSNI 5th", date: "20th June 2026", league: "Cup Matches" },
   "Abubakar Rehmani|8-7|bowling": { opponent: "Belfast Superkings 1st", date: "24th June 2026", league: "Senior League 3" },
   "Veerendra Babu Nagari|5-53|bowling": { opponent: "Amigos Belfast 1st", date: "24th June 2026", league: "Senior League 3" },
   "Ali Rizwan|127*|batting": { opponent: "Amigos Belfast 3rd", date: "27th June 2026", league: "Junior League 10" },
@@ -414,7 +414,7 @@ if (players2026) {
 
           const exists = honours2026.some(h => h.name === p.name && h.category === categoryName && h.league === leagueName);
           if (!exists) {
-            const lookupKey = `${p.name}|${p.stats[1].n}|batting`;
+            const lookupKey = `${p.name}|${p.stats[2].n}|batting`;
             const lookup = HONOURS_LOOKUP[lookupKey];
 
             honours2026.push({

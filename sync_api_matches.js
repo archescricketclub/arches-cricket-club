@@ -136,12 +136,35 @@ async function syncMatches() {
         }
     });
 
+    // We only keep Postponed/Abandoned if there isn't another valid result for the same two teams
+    const isPostponed = (r) => r.result && (r.result.toLowerCase().includes('postponed') || r.result.toLowerCase().includes('abandoned'));
+    
     existingData.results.forEach(oldR => {
         const exists = mergedResults.some(newR => matchesAreSame(oldR, newR));
         if (!exists) {
             mergedResults.push(oldR);
         }
     });
+
+    // Post-process to remove postponed matches if a played match exists for the same teams in the same league
+    const finalResults = [];
+    mergedResults.forEach(r => {
+        if (isPostponed(r)) {
+            // Check if there's another match for the same teams that ISN'T postponed
+            const hasValidResult = mergedResults.some(other => 
+                matchesAreSame(other, r) && !isPostponed(other)
+            );
+            if (!hasValidResult) {
+                finalResults.push(r);
+            }
+        } else {
+            finalResults.push(r);
+        }
+    });
+
+    // Write back to matches.json
+    existingData.fixtures = mergedFixtures;
+    existingData.results = finalResults;
 
     // Sort by date (assuming we can parse '4th July' or fallback)
     function parseCustomDate(dStr) {
@@ -150,7 +173,7 @@ async function syncMatches() {
     }
     
     mergedFixtures.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
-    mergedResults.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
+    finalResults.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
 
     const finalData = {
         fixtures: mergedFixtures,
