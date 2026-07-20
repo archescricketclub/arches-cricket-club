@@ -106,10 +106,10 @@
       "homeTeam": "BISC 1st XI",
       "awayTeam": "Arches 1st XI",
       "date": "9th May 2026",
-      "time": "12:00 PM",
+      "time": "1:00 PM",
       "venue": "City of Belfast Playing Fields (BISC)",
       "status": "",
-      "league": "Senior League 3",
+      "league": "Junior Cup",
       "result": "BISC 1st XI won by 87 runs"
     },
     {
@@ -159,7 +159,7 @@
       "time": "1:00 PM",
       "venue": "TBC",
       "status": "",
-      "league": "Junior League 10",
+      "league": "Development Cup",
       "result": "Arches 2nd XI won by 5 wickets"
     },
     {
@@ -229,7 +229,7 @@
       "time": "1:00 PM",
       "venue": "Londonderry Park",
       "status": "",
-      "league": "Junior League 10",
+      "league": "Development Cup",
       "result": "Arches 2nd XI won by 7 wickets"
     },
     {
@@ -276,10 +276,10 @@
       "homeTeam": "Ards & Donaghadee 1st XI",
       "awayTeam": "Arches 1st XI",
       "date": "25th June 2026",
-      "time": "12:00 PM",
+      "time": "1:00 PM",
       "venue": "Northfield",
       "status": "",
-      "league": "Senior League 3",
+      "league": "T20 Shield Cup",
       "result": "Ards & Donaghadee 1st XI won by 24 runs"
     },
     {
@@ -359,7 +359,7 @@
       "time": "1:00 PM",
       "venue": "Victoria Park",
       "status": "",
-      "league": "Junior League 10",
+      "league": "Development Cup",
       "result": "Arches 2nd XI won by 5 wickets"
     },
     {
@@ -383,5 +383,5 @@
       "result": "Belfast Superkings 1st XI won by 4 wickets"
     }
   ],
-  "lastUpdated": "2026-07-20T15:46:40.449Z"
+  "lastUpdated": "2026-07-20T15:58:44.074Z"
 }

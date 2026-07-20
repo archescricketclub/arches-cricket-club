@@ -120,12 +120,15 @@ async function syncMatches() {
 
         let league = "";
         let time = "TBD";
-        const titleStr = match.MatchTitle.toLowerCase();
+        const compStr = (match.CompetitionName || "").toLowerCase();
         
         const archesTeam = match.Team1Name.includes('Arches') ? match.Team1Name : match.Team2Name;
 
-        if (titleStr.includes('cup') || titleStr.includes('shield') || titleStr.includes('trophy')) {
-            league = match.CompetitionName || "Cup Match";
+        if (compStr.includes('cup') || compStr.includes('shield') || compStr.includes('trophy')) {
+            if (compStr.includes('development')) league = "Development Cup";
+            else if (compStr.includes('junior')) league = "Junior Cup";
+            else if (compStr.includes('t20 shield')) league = "T20 Shield Cup";
+            else league = "Cup Match";
             time = "1:00 PM";
         } else if (archesTeam.includes('1st XI')) {
             league = "Senior League 3";
