@@ -41,7 +41,9 @@ jobs:
       # 5️⃣ Run the Matches scraper
       # --------------------------------------------------
       - name: Run Matches Scraper
-        run: node sync_api_matches.js
+        run: |
+          node sync_api_matches.js
+          node scripts/scrape_fixtures.js
 
       # --------------------------------------------------
       # 6️⃣ Compile Honours & Career Stats  (new step)

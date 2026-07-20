@@ -393,8 +393,8 @@ if (players2026) {
     // Check batting milestones
     if (Array.isArray(players2026[`${prefix}-bat`])) {
       players2026[`${prefix}-bat`].forEach(p => {
-        if (!p.stats || p.stats.length < 2) return;
-        const hsStr = p.stats[1].n.replace('*', '').trim();
+        if (!p.stats || p.stats.length < 3) return;
+        const hsStr = p.stats[2].n.replace('*', '').trim();
         const hs = parseInt(hsStr);
         
         let threshold = prefix === 'mw' ? 30 : 50;
@@ -419,7 +419,7 @@ if (players2026) {
 
             honours2026.push({
               name: p.name,
-              record: p.stats[1].n,
+              record: p.stats[2].n,
               type: 'batting',
               date: lookup ? lookup.date : '2026',
               opponent: lookup ? lookup.opponent : 'Opposition',
@@ -540,6 +540,7 @@ for (const [key, players] of Object.entries(players2025)) {
           bowling: { wickets: 0, bestFig: '-', matches: 0 }
         };
       }
+      careerMap[p.name].batting.matches += p.matches || 0;
       careerMap[p.name].batting.runs += p.runs || 0;
       careerMap[p.name].batting.hs = compareHighScores(careerMap[p.name].batting.hs, p.hs);
     });
@@ -554,6 +555,7 @@ for (const [key, players] of Object.entries(players2025)) {
           bowling: { wickets: 0, bestFig: '-', matches: 0 }
         };
       }
+      careerMap[p.name].bowling.matches += p.matches || 0;
       careerMap[p.name].bowling.wickets += p.wickets || 0;
       careerMap[p.name].bowling.bestFig = compareBowlingFigs(careerMap[p.name].bowling.bestFig, p.bestFig);
     });
@@ -573,8 +575,10 @@ for (const [key, players] of Object.entries(players2026)) {
           bowling: { wickets: 0, bestFig: '-', matches: 0 }
         };
       }
-      const runs = parseInt(p.stats[0].n) || 0;
-      const hs = p.stats[1].n;
+      const matches = parseInt(p.stats[0].n) || 0;
+      const runs = parseInt(p.stats[1].n) || 0;
+      const hs = p.stats[2].n;
+      careerMap[p.name].batting.matches += matches;
       careerMap[p.name].batting.runs += runs;
       careerMap[p.name].batting.hs = compareHighScores(careerMap[p.name].batting.hs, hs);
     });
@@ -589,8 +593,10 @@ for (const [key, players] of Object.entries(players2026)) {
           bowling: { wickets: 0, bestFig: '-', matches: 0 }
         };
       }
+      const matches = parseInt(p.stats[0].n) || 0;
       const wickets = parseInt(p.stats[1].n) || 0;
       const best = p.stats[2].n;
+      careerMap[p.name].bowling.matches += matches;
       careerMap[p.name].bowling.wickets += wickets;
       careerMap[p.name].bowling.bestFig = compareBowlingFigs(careerMap[p.name].bowling.bestFig, best);
     });

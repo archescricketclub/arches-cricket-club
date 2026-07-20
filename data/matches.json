@@ -1,11 +1,47 @@
 {
   "fixtures": [
     {
+      "homeTeam": "CSNI",
+      "awayTeam": "Arches – Match Postponed",
+      "date": "10th June 2026",
+      "time": "6:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Belfast Superkings",
+      "awayTeam": "Arches – Abandoned",
+      "date": "",
+      "time": "12:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "North Down 4",
+      "awayTeam": "Arches 2 – Postponed",
+      "date": "",
+      "time": "1:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
       "homeTeam": "CSNI MW XI",
       "awayTeam": "Arches MW XI",
       "date": "22nd July 2026",
       "time": "6:00 PM",
       "venue": "Stormont",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
+      "homeTeam": "CSNI",
+      "awayTeam": "Arches",
+      "date": "22nd July (Rearrangements) 2026",
+      "time": "6:00 PM",
+      "venue": "TBD",
       "status": "",
       "league": "Midweek League"
     },
@@ -28,6 +64,15 @@
       "league": "Junior League 10"
     },
     {
+      "homeTeam": "Arches 2",
+      "awayTeam": "Ardent Blues 4",
+      "date": "26th July 2026",
+      "time": "1:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "NIMACC 1st XI",
       "date": "1st August 2026",
@@ -35,6 +80,42 @@
       "venue": "TBC",
       "status": "",
       "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Dundrum",
+      "awayTeam": "Arches",
+      "date": "8th August 2026",
+      "time": "12:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 2",
+      "awayTeam": "Cooke Collegians 4",
+      "date": "9th August 2026",
+      "time": "1:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Belfast Superkings 2",
+      "awayTeam": "Arches 2",
+      "date": "23rd August 2026",
+      "time": "1:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches 2",
+      "awayTeam": "Belfast Superkings 3",
+      "date": "29th August (Development Cup F) 2026",
+      "time": "1:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
     }
   ],
   "results": [
@@ -421,5 +502,5 @@
       "result": "Belfast Superkings 1st XI won by 4 wickets"
     }
   ],
-  "lastUpdated": "2026-07-20T02:56:40.176Z"
+  "lastUpdated": "2026-07-20T12:27:43.577Z"
 }

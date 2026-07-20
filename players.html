@@ -382,12 +382,12 @@
     <section class="section page-top-padding">
         <div class="container">
             <div class="team-tabs" id="teamTabs">
-                <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
+                <button class="team-tab active" onclick="switchTeam('all',this)">All Players</button>
+                <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
+                <button class="team-tab" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
                 <button class="team-tab" onclick="switchTeam('t2',this)">Team 2 · Junior League</button>
                 <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
                 <button class="team-tab" onclick="switchTeam('cup',this)">Cup Matches</button>
-                <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
-                <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
             </div>
 
             <select class="mobile-tab-select" onchange="switchTeam(this.value, null)">

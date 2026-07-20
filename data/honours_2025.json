@@ -308,5 +308,15 @@
     "league": "Midweek League",
     "season": "2025",
     "category": "midweek-30"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "Hat-trick",
+    "type": "bowling",
+    "date": "26th July 2025",
+    "opponent": "vs Dunmurry",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "hat-trick"
   }
 ]

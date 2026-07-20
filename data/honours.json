@@ -1,113 +1,13 @@
 [
   {
-    "name": "Veerendra Babu Nagari",
-    "record": "115",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Senior League 3",
-    "season": "2026",
-    "category": "century"
-  },
-  {
-    "name": "Arush Nimmagadda",
-    "record": "83",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Asad Murtuza",
-    "record": "71",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Abubakar Rehmani",
-    "record": "86",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Kishan Karneedi",
-    "record": "70",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Chandra Obula Reddy B",
-    "record": "68",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
     "name": "Ali Rizwan",
-    "record": "337",
+    "record": "127*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
     "league": "Junior League 10",
     "season": "2026",
     "category": "century"
-  },
-  {
-    "name": "Wasim SM",
-    "record": "168",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "century"
-  },
-  {
-    "name": "Srini Nadakuditi",
-    "record": "129",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "century"
-  },
-  {
-    "name": "Anil Narra",
-    "record": "120",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "century"
-  },
-  {
-    "name": "Kishan Karneedi",
-    "record": "68",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "half-century"
   },
   {
     "name": "Abubakar Rehmani",
@@ -121,7 +21,7 @@
   },
   {
     "name": "Ali Rizwan",
-    "record": "161",
+    "record": "34*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -131,47 +31,7 @@
   },
   {
     "name": "Wasim SM",
-    "record": "137",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Anil Narra",
-    "record": "106",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Chandra Obula Reddy B",
-    "record": "67",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "record": "44",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Kishan Karneedi",
-    "record": "39",
+    "record": "31*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -181,7 +41,7 @@
   },
   {
     "name": "Vonga Vishnu",
-    "record": "129",
+    "record": "35*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -191,7 +51,7 @@
   },
   {
     "name": "Srini Nadakuditi",
-    "record": "86",
+    "record": "33*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -201,7 +61,7 @@
   },
   {
     "name": "Asad Murtuza",
-    "record": "114",
+    "record": "34*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -211,7 +71,7 @@
   },
   {
     "name": "Wasim SM",
-    "record": "93",
+    "record": "66",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -221,7 +81,7 @@
   },
   {
     "name": "Ali Rizwan",
-    "record": "92",
+    "record": "51",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -231,13 +91,13 @@
   },
   {
     "name": "Asad Murtuza",
-    "record": "107",
+    "record": "50*",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
     "league": "Cup Matches",
     "season": "2026",
-    "category": "century"
+    "category": "half-century"
   },
   {
     "name": "Dushyanth Reddy B",
@@ -548,5 +408,15 @@
     "league": "Midweek League",
     "season": "2025",
     "category": "midweek-30"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "Hat-trick",
+    "type": "bowling",
+    "date": "26th July 2025",
+    "opponent": "vs Dunmurry",
+    "league": "Senior League 3",
+    "season": "2025",
+    "category": "hat-trick"
   }
 ]
