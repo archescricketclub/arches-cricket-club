@@ -114,9 +114,9 @@
       <!-- Team 2 -->
       <div class="reveal" id="block-team2">
         <div style="display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;">
-          <h2 style="font-size:1.5rem;color:var(--gold);">Team 2 — Junior League <span
+          <h2 style="font-size:1.5rem;color:var(--amber);">Team 2 — Junior League & Dev Cup <span
               style="color:var(--muted);font-size:0.9rem;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0px;">(NCU
-              Junior League 10 · 2026)</span></h2>
+              Junior League 10 & Development Cup · 2026)</span></h2>
         </div>
         <div class="table-section">
           <table class="data-table data-table--responsive">
@@ -182,28 +182,7 @@
         </div>
       </div>
 
-      <!-- Development Cup -->
-      <div class="reveal" id="block-devcup">
-        <div style="display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;">
-          <h2 style="font-size:1.5rem;color:var(--gold);">Development Cup <span
-              style="color:var(--muted);font-size:0.9rem;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0px;">(2026)</span></h2>
-        </div>
-        <div class="table-section">
-          <table class="data-table data-table--responsive">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Match</th>
-                <th>Time</th>
-                <th>Ground</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-Development-Cup">
-               <tr><td colspan="4" style="text-align:center;">Loading latest data...</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+
 
       <!-- T20 Shield Cup -->
       <div class="reveal" id="block-t20shield">
@@ -244,7 +223,7 @@
         <div style="flex:1;min-width:200px;">
           <p class="section-label" style="margin-bottom:0.75rem;">⚡ Match Info</p>
           <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">
-            Home games start at <strong style="color:var(--text);">11:00 AM</strong> unless stated otherwise.<br>
+            Home games start at <strong style="color:var(--text);">12:00 PM</strong> unless stated otherwise.<br>
             All fixtures subject to weather and ground conditions.<br>
             Check social media for last-minute updates.
           </p>
@@ -326,7 +305,7 @@
       const dc = document.getElementById('block-devcup');
       const ts = document.getElementById('block-t20shield');
       
-      const allBlocks = [t1, t2, mw, jc, dc, ts];
+      const allBlocks = [t1, t2, mw, jc, ts];
       allBlocks.forEach(b => { if (b) b.style.display = 'none'; });
       
       if (team === 'all') {
@@ -339,7 +318,6 @@
         if (mw) mw.style.display = '';
       } else if (team === 'cups') {
         if (jc) jc.style.display = '';
-        if (dc) dc.style.display = '';
         if (ts) ts.style.display = '';
       }
     }
@@ -413,7 +391,7 @@
           "Junior League 10": document.getElementById('tbody-Junior-League-10'),
           "Midweek League": document.getElementById('tbody-Midweek-League'),
           "Junior Cup": document.getElementById('tbody-Junior-Cup'),
-          "Development Cup": document.getElementById('tbody-Development-Cup'),
+          "Development Cup": document.getElementById('tbody-Junior-League-10'),
           "T20 Shield Cup": document.getElementById('tbody-T20-Shield-Cup')
         };
         

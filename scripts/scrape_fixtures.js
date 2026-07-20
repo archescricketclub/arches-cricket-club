@@ -45,7 +45,7 @@ async function scrapeFixtures() {
                             // This is a date line
                             currentDate = text;
                             // Clean up date
-                            currentDate = currentDate.replace(/\(.*?\)/g, '').trim(); // remove (Junior Cup - Final) etc
+                            currentDate = currentDate.replace(/\(.*?\)/g, '').replace(/Development Cup F/g, '').replace(/\(\)/g, '').trim(); // remove (Junior Cup - Final) etc
                             if (!currentDate.includes('2026')) currentDate += ' 2026';
                         } else if (text.includes(' v ') && text.includes('Arches')) {
                             // Filter out postponed/abandoned matches which are results, not upcoming fixtures

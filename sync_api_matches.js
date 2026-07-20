@@ -23,12 +23,51 @@ function fetchJson(url) {
 }
 
 function normalizeTeam(t) {
-    return t.toLowerCase().replace(/1st xi/g, '').replace(/2nd xi/g, '').replace(/mw xi/g, '').replace(/mw2 xi/g, '').trim();
+    if (!t) return "";
+    return t.toLowerCase()
+            .replace(/1st/g, '1')
+            .replace(/2nd/g, '2')
+            .replace(/3rd/g, '3')
+            .replace(/4th/g, '4')
+            .replace(/5th/g, '5')
+            .replace(/xi/g, '')
+            .replace(/mw2/g, 'mw')
+            .replace(/mw/g, 'mw')
+            .replace(/[^a-z0-9 ]/g, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+}
+
+function parseCustomDate(dStr) {
+    if (!dStr) return 0;
+    const cleaned = dStr.replace(/st|nd|rd|th/g, '').replace(/\n/g, ' ').replace(/\(.*?\)/g, '');
+    return new Date(cleaned + (cleaned.includes('2026') ? "" : " 2026")).getTime() || 0;
 }
 
 function matchesAreSame(m1, m2) {
-    return normalizeTeam(m1.homeTeam) === normalizeTeam(m2.homeTeam) &&
-           normalizeTeam(m1.awayTeam) === normalizeTeam(m2.awayTeam);
+    const home1 = normalizeTeam(m1.homeTeam);
+    const away1 = normalizeTeam(m1.awayTeam);
+    const home2 = normalizeTeam(m2.homeTeam);
+    const away2 = normalizeTeam(m2.awayTeam);
+    
+    const homeMatch = home1.includes(home2) || home2.includes(home1);
+    const awayMatch = away1.includes(away2) || away2.includes(away1);
+    const cross1Match = home1.includes(away2) || away2.includes(home1);
+    const cross2Match = away1.includes(home2) || home2.includes(away1);
+
+    const isSameMatchup = (homeMatch && awayMatch) || (cross1Match && cross2Match);
+    
+    // Check if dates are close (within 5 days) to avoid deleting legitimate rematches in the same season
+    const t1 = parseCustomDate(m1.date);
+    const t2 = parseCustomDate(m2.date);
+    
+    if (t1 && t2) {
+        const diffDays = Math.abs(t1 - t2) / (1000 * 60 * 60 * 24);
+        return isSameMatchup && diffDays <= 7;
+    }
+    
+    // If one is missing a date (like TBD), just merge them
+    return isSameMatchup;
 }
 
 async function syncMatches() {
@@ -166,12 +205,6 @@ async function syncMatches() {
     existingData.fixtures = mergedFixtures;
     existingData.results = finalResults;
 
-    // Sort by date (assuming we can parse '4th July' or fallback)
-    function parseCustomDate(dStr) {
-        const cleaned = dStr.replace(/st|nd|rd|th/g, '').replace(/\n/g, ' ');
-        return new Date(cleaned + " 2026").getTime() || Date.now();
-    }
-    
     mergedFixtures.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
     finalResults.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
 
