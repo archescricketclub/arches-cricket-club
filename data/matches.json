@@ -1,24 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Belfast Superkings 1st XI",
-      "date": "19th July 2026",
-      "time": "12:00 PM",
-      "venue": "City of Belfast Playing Fields (BSK)",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
-      "homeTeam": "Downpatrick 3rd XI",
-      "awayTeam": "Arches 2nd XI",
-      "date": "19th July 2026",
-      "time": "1:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "CSNI MW XI",
       "awayTeam": "Arches MW XI",
       "date": "22nd July 2026",
@@ -417,7 +399,27 @@
       "status": "",
       "league": "Junior League 10",
       "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "homeTeam": "Downpatrick 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "19th July 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Arches 2nd XI won by 22 runs"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings 1st XI",
+      "date": "19th July 2026",
+      "time": "12:00 PM",
+      "venue": "City of Belfast Playing Fields (BSK)",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Belfast Superkings 1st XI won by 4 wickets"
     }
   ],
-  "lastUpdated": "2026-07-19T13:18:11.495Z"
+  "lastUpdated": "2026-07-20T02:56:40.176Z"
 }

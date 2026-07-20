@@ -1,5 +1,15 @@
 [
   {
+    "name": "Veerendra Babu Nagari",
+    "record": "115",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "century"
+  },
+  {
     "name": "Arush Nimmagadda",
     "record": "83",
     "type": "batting",
@@ -10,18 +20,8 @@
     "category": "half-century"
   },
   {
-    "name": "Veerendra Babu Nagari",
-    "record": "67",
-    "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
     "name": "Asad Murtuza",
-    "record": "51",
+    "record": "71",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Abubakar Rehmani",
-    "record": "67",
+    "record": "86",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -50,8 +50,18 @@
     "category": "half-century"
   },
   {
+    "name": "Chandra Obula Reddy B",
+    "record": "68",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
     "name": "Ali Rizwan",
-    "record": "332",
+    "record": "337",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -71,7 +81,7 @@
   },
   {
     "name": "Srini Nadakuditi",
-    "record": "117",
+    "record": "129",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
@@ -81,13 +91,23 @@
   },
   {
     "name": "Anil Narra",
-    "record": "103",
+    "record": "120",
     "type": "batting",
     "date": "2026",
     "opponent": "Opposition",
     "league": "Junior League 10",
     "season": "2026",
     "category": "century"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "68",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
   },
   {
     "name": "Abubakar Rehmani",
