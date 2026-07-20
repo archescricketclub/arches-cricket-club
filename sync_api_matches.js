@@ -175,9 +175,12 @@ async function syncMatches() {
     mergedFixtures.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
     finalResults.sort((a, b) => parseCustomDate(a.date) - parseCustomDate(b.date));
 
+    // Filter out postponed/abandoned from fixtures as well
+    const finalFixtures = mergedFixtures.filter(f => !isPostponed(f) && !f.awayTeam.toLowerCase().includes('abandoned') && !f.awayTeam.toLowerCase().includes('postponed'));
+
     const finalData = {
-        fixtures: mergedFixtures,
-        results: mergedResults,
+        fixtures: finalFixtures,
+        results: finalResults,
         lastUpdated: new Date().toISOString()
     };
 
