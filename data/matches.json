@@ -163,16 +163,6 @@
       "result": "Arches 2nd XI won by 5 wickets"
     },
     {
-      "homeTeam": "Belfast Superkings 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "30th May 2026",
-      "time": "12:00 PM",
-      "venue": "City of Belfast Playing Fields (BSK)",
-      "status": "",
-      "league": "Senior League 3",
-      "result": "Match Abandoned"
-    },
-    {
       "homeTeam": "Arches MW XI",
       "awayTeam": "Belfast MW XI",
       "date": "2nd June 2026",
@@ -181,16 +171,6 @@
       "status": "",
       "league": "Midweek League",
       "result": "Arches MW XI won by 9 wickets"
-    },
-    {
-      "homeTeam": "Ards & Donaghadee 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "4th June 2026",
-      "time": "12:00 PM",
-      "venue": "Northfield",
-      "status": "",
-      "league": "Senior League 3",
-      "result": "Match Postponed"
     },
     {
       "homeTeam": "Lurgan 3rd XI",
@@ -403,5 +383,5 @@
       "result": "Belfast Superkings 1st XI won by 4 wickets"
     }
   ],
-  "lastUpdated": "2026-07-20T15:34:07.689Z"
+  "lastUpdated": "2026-07-20T15:46:40.449Z"
 }

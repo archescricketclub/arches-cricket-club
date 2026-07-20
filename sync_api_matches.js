@@ -185,13 +185,25 @@ async function syncMatches() {
         }
     });
 
+    function isSameMatchupIgnoringDate(m1, m2) {
+        const home1 = normalizeTeam(m1.homeTeam);
+        const away1 = normalizeTeam(m1.awayTeam);
+        const home2 = normalizeTeam(m2.homeTeam);
+        const away2 = normalizeTeam(m2.awayTeam);
+        const homeMatch = home1.includes(home2) || home2.includes(home1);
+        const awayMatch = away1.includes(away2) || away2.includes(away1);
+        const cross1Match = home1.includes(away2) || away2.includes(home1);
+        const cross2Match = away1.includes(home2) || home2.includes(away1);
+        return (homeMatch && awayMatch) || (cross1Match && cross2Match);
+    }
+
     // Post-process to remove postponed matches if a played match exists for the same teams in the same league
     const finalResults = [];
     mergedResults.forEach(r => {
         if (isPostponed(r)) {
             // Check if there's another match for the same teams that ISN'T postponed
             const hasValidResult = mergedResults.some(other => 
-                matchesAreSame(other, r) && !isPostponed(other)
+                isSameMatchupIgnoringDate(other, r) && !isPostponed(other)
             );
             if (!hasValidResult) {
                 finalResults.push(r);
