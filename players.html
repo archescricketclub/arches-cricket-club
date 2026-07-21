@@ -321,6 +321,26 @@
             color: var(--muted);
             font-size: 0.85rem;
         }
+        .sort-filter {
+            background: var(--panel);
+            border: 1px solid var(--border-accent);
+            color: var(--amber);
+            font-size: .75rem;
+            font-weight: 700;
+            padding: .45rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: .25s;
+        }
+        .sort-filter:focus, .sort-filter:hover {
+            border-color: var(--amber);
+        }
+        .sort-filter option {
+            background: var(--panel2);
+            color: var(--text);
+        }
     </style>
 </head>
 
@@ -650,6 +670,49 @@
                 DATA = await playersRes.json();
                 ALL_PLAYERS = await rosterRes.json();
                 CAREER_STATS = await careerRes.json();
+                
+                ['t1', 't2', 'mw', 'cup'].forEach(team => {
+                    const batKey = `${team}-bat`;
+                    const bowlKey = `${team}-bowl`;
+                    const arKey = `${team}-ar`;
+                    
+                    if (DATA[batKey] && DATA[bowlKey]) {
+                        const bowlersMap = {};
+                        DATA[bowlKey].forEach(p => bowlersMap[p.name] = p);
+                        
+                        const allRounders = [];
+                        DATA[batKey].forEach(batPlayer => {
+                            const bowlPlayer = bowlersMap[batPlayer.name];
+                            if (bowlPlayer) {
+                                const getStat = (p, label) => {
+                                    const s = p.stats.find(x => x.l === label);
+                                    return s ? s.n : '0';
+                                };
+                                
+                                const runsStr = getStat(batPlayer, 'Runs');
+                                const runs = parseInt(runsStr.replace('*', '')) || 0;
+                                const wktsStr = getStat(bowlPlayer, 'Wickets');
+                                const wkts = parseInt(wktsStr) || 0;
+                                const matches = Math.max(parseInt(getStat(batPlayer, 'Matches')) || 0, parseInt(getStat(bowlPlayer, 'Matches')) || 0);
+                                
+                                if (runs >= 20 && wkts >= 2) {
+                                    allRounders.push({
+                                        ...batPlayer,
+                                        stats: [
+                                            { n: matches.toString(), l: 'Matches' },
+                                            { n: runsStr, l: 'Runs' },
+                                            { n: wktsStr, l: 'Wickets' },
+                                            { n: getStat(bowlPlayer, 'Best Fig'), l: 'Best Fig' }
+                                        ]
+                                    });
+                                }
+                            }
+                        });
+                        DATA[arKey] = allRounders;
+                    }
+                });
+                
+                injectSortFilters();
             } catch (e) {
                 console.error('Error loading data dynamically:', e);
                 DATA = {
@@ -667,8 +730,8 @@
         }
 
         /* ─── RENDER ─────────────────────────────────────── */
-        function makeCard(p, idx) {
-            const hidden = idx >= 5 ? 'hidden' : '';
+        function makeCard(p, idx, isExpanded = false) {
+            const hidden = (!isExpanded && idx >= 5) ? 'hidden' : '';
             const badge = p.badge ? `<div class="pc-top-badge">${p.badge}</div>` : '';
             const body = p.stats && p.stats.length
                 ? `<div class="pc-stats">${p.stats.map(s => `<div class="pcs"><div class="pcs-n">${s.n}</div><div class="pcs-l">${s.l}</div></div>`).join('')}</div>`
@@ -688,21 +751,119 @@
   </div>`;
         }
 
+        let CURRENT_SORTS = {};
+
+        function injectSortFilters() {
+            const categories = {
+                'bat': [
+                    {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'},
+                    {val: 'runs', label: 'Runs'}, {val: 'matches', label: 'Matches'}, {val: 'hs', label: 'Highest Score'}
+                ],
+                'bowl': [
+                    {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'},
+                    {val: 'wickets', label: 'Wickets'}, {val: 'matches', label: 'Matches'}, {val: 'bestfig', label: 'Best Fig'}
+                ],
+                'ar': [
+                    {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'},
+                    {val: 'runs', label: 'Runs'}, {val: 'wickets', label: 'Wickets'}
+                ]
+            };
+
+            document.querySelectorAll('.cat-block').forEach(block => {
+                let type = '';
+                if (block.classList.contains('cat-bat')) type = 'bat';
+                else if (block.classList.contains('cat-bowl')) type = 'bowl';
+                else if (block.classList.contains('cat-ar')) type = 'ar';
+                else return;
+
+                const grid = block.querySelector('.squad-grid');
+                if (!grid) return;
+                const gridId = grid.id;
+                
+                const btn = block.querySelector('.view-all-btn');
+                if (!btn) return;
+
+                if (block.querySelector('.sort-filter')) return;
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'header-actions';
+                wrapper.style.display = 'flex';
+                wrapper.style.gap = '0.5rem';
+                wrapper.style.alignItems = 'center';
+
+                const select = document.createElement('select');
+                select.className = 'sort-filter';
+                select.innerHTML = '<option value="">Sort By</option>' + 
+                    categories[type].map(o => `<option value="${o.val}">${o.label}</option>`).join('');
+                select.onchange = (e) => sortCategory(gridId, e.target.value);
+
+                btn.parentNode.insertBefore(wrapper, btn);
+                wrapper.appendChild(select);
+                wrapper.appendChild(btn);
+            });
+        }
+
+        function sortCategory(key, sortType) {
+            CURRENT_SORTS[key] = sortType;
+            applySortAndRender(key);
+        }
+
+        function applySortAndRender(key) {
+            if (!DATA[key]) return;
+            const sortType = CURRENT_SORTS[key];
+            
+            let list = [...DATA[key]];
+            
+            if (sortType === 'az') {
+                list.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (sortType === 'za') {
+                list.sort((a, b) => b.name.localeCompare(a.name));
+            } else if (sortType) {
+                list.sort((a, b) => {
+                    const getVal = (p) => {
+                        let label = '';
+                        if (sortType === 'runs') label = 'Runs';
+                        else if (sortType === 'matches') label = 'Matches';
+                        else if (sortType === 'hs') label = 'High Score';
+                        else if (sortType === 'wickets') label = 'Wickets';
+                        else if (sortType === 'bestfig') label = 'Best Fig';
+                        
+                        const s = p.stats.find(x => x.l === label);
+                        if (!s) return 0;
+                        
+                        if (sortType === 'bestfig') {
+                            const parts = s.n.split('-');
+                            if (parts.length === 2) {
+                                return parseInt(parts[0]) * 1000 - parseInt(parts[1]); 
+                            }
+                            return 0;
+                        }
+                        return parseInt(s.n.replace('*', '')) || 0;
+                    };
+                    return getVal(b) - getVal(a);
+                });
+            }
+            
+            const el = document.getElementById(key);
+            if (!el) return;
+            
+            const btn = el.closest('.cat-block').querySelector('.view-all-btn');
+            const isExpanded = btn && btn.dataset.expanded === '1';
+            
+            el.innerHTML = list.map((p, i) => makeCard(p, i, isExpanded)).join('');
+            
+            if (btn) {
+                if (list.length <= 5) {
+                    btn.style.display = 'none';
+                } else {
+                    btn.style.display = '';
+                }
+            }
+        }
+
         function renderStats() {
             Object.keys(DATA).forEach(key => {
-                const el = document.getElementById(key);
-                if (!el) return;
-                el.innerHTML = DATA[key].map((p, i) => makeCard(p, i)).join('');
-                
-                // Show/hide view-all btn based on length
-                const btn = el.closest('.cat-block').querySelector('.view-all-btn');
-                if (btn) {
-                    if (DATA[key].length <= 5) {
-                        btn.style.display = 'none';
-                    } else {
-                        btn.style.display = '';
-                    }
-                }
+                applySortAndRender(key);
             });
         }
 
