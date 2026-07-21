@@ -28,11 +28,20 @@
       "league": "Junior League 10"
     },
     {
+      "homeTeam": "Arches 2",
+      "awayTeam": "Ardent Blues 4",
+      "date": "26th July 2026",
+      "time": "1:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "NIMACC 1st XI",
-      "date": "1st August 2026",
+      "date": "2nd August 2026",
       "time": "12:00 PM",
-      "venue": "TBC",
+      "venue": "City of Belfast Playing Fields (NIMA)",
       "status": "",
       "league": "Senior League 3"
     },
@@ -383,5 +392,5 @@
       "result": "Belfast Superkings 1st XI won by 4 wickets"
     }
   ],
-  "lastUpdated": "2026-07-20T15:58:44.074Z"
+  "lastUpdated": "2026-07-21T02:40:13.256Z"
 }
