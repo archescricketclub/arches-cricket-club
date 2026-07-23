@@ -4,9 +4,9 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1476,
+      "runs": 1477,
       "hs": "131",
-      "matches": 21
+      "matches": 22
     },
     "bowling": {
       "wickets": 2,
@@ -19,14 +19,14 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 743,
+      "runs": 745,
       "hs": "58",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
       "wickets": 9,
       "bestFig": "2-14",
-      "matches": 7
+      "matches": 8
     }
   },
   {
@@ -49,9 +49,9 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 643,
+      "runs": 664,
       "hs": "68",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
       "wickets": 1,
@@ -64,14 +64,14 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 628,
+      "runs": 661,
       "hs": "41",
-      "matches": 21
+      "matches": 22
     },
     "bowling": {
-      "wickets": 143,
+      "wickets": 147,
       "bestFig": "5-22",
-      "matches": 21
+      "matches": 22
     }
   },
   {
@@ -94,14 +94,14 @@
     "jersey": "#45",
     "cap": "CH45",
     "batting": {
-      "runs": 421,
+      "runs": 447,
       "hs": "34*",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
       "wickets": 96,
       "bestFig": "3-20",
-      "matches": 18
+      "matches": 19
     }
   },
   {
@@ -109,14 +109,14 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 398,
+      "runs": 419,
       "hs": "66",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
       "wickets": 23,
       "bestFig": "0",
-      "matches": 19
+      "matches": 20
     }
   },
   {
@@ -154,14 +154,14 @@
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
-      "runs": 221,
+      "runs": 235,
       "hs": "31*",
-      "matches": 17
+      "matches": 18
     },
     "bowling": {
-      "wickets": 48,
+      "wickets": 52,
       "bestFig": "2-11",
-      "matches": 17
+      "matches": 18
     }
   },
   {
@@ -199,14 +199,14 @@
     "jersey": "#15",
     "cap": "VV15",
     "batting": {
-      "runs": 190,
+      "runs": 192,
       "hs": "35*",
-      "matches": 13
+      "matches": 14
     },
     "bowling": {
-      "wickets": 57,
+      "wickets": 61,
       "bestFig": "0",
-      "matches": 14
+      "matches": 15
     }
   },
   {
@@ -306,12 +306,12 @@
     "batting": {
       "runs": 117,
       "hs": "16",
-      "matches": 17
+      "matches": 18
     },
     "bowling": {
-      "wickets": 100,
+      "wickets": 103,
       "bestFig": "3-15",
-      "matches": 20
+      "matches": 21
     }
   },
   {
@@ -327,6 +327,21 @@
       "wickets": 8,
       "bestFig": "2-23",
       "matches": 4
+    }
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 80,
+      "hs": "30*",
+      "matches": 11
+    },
+    "bowling": {
+      "wickets": 11,
+      "bestFig": "1",
+      "matches": 14
     }
   },
   {
@@ -387,21 +402,6 @@
       "wickets": 62,
       "bestFig": "3-26",
       "matches": 11
-    }
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 50,
-      "hs": "29",
-      "matches": 10
-    },
-    "bowling": {
-      "wickets": 11,
-      "bestFig": "1",
-      "matches": 13
     }
   },
   {
@@ -510,6 +510,21 @@
     }
   },
   {
+    "name": "Haneef Shaik",
+    "jersey": "#77",
+    "cap": "HS77",
+    "batting": {
+      "runs": 5,
+      "hs": "5*",
+      "matches": 8
+    },
+    "bowling": {
+      "wickets": 72,
+      "bestFig": "15",
+      "matches": 18
+    }
+  },
+  {
     "name": "Raja Mouli Yadavalli",
     "jersey": "#18",
     "cap": "RY18",
@@ -552,21 +567,6 @@
       "wickets": 0,
       "bestFig": "-",
       "matches": 0
-    }
-  },
-  {
-    "name": "Haneef Shaik",
-    "jersey": "#77",
-    "cap": "HS77",
-    "batting": {
-      "runs": 0,
-      "hs": "0",
-      "matches": 0
-    },
-    "bowling": {
-      "wickets": 68,
-      "bestFig": "15",
-      "matches": 17
     }
   },
   {

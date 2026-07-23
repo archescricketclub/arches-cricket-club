@@ -40,6 +40,26 @@
     "category": "midweek-30"
   },
   {
+    "name": "Kishan Karneedi",
+    "record": "33*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "record": "30*",
+    "type": "batting",
+    "date": "2026",
+    "opponent": "Opposition",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
     "name": "Vonga Vishnu",
     "record": "35*",
     "type": "batting",
@@ -50,21 +70,21 @@
     "category": "midweek-30"
   },
   {
-    "name": "Srini Nadakuditi",
-    "record": "33*",
-    "type": "batting",
-    "date": "30th June 2026",
-    "opponent": "Cliftonville Academy MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
     "name": "Asad Murtuza",
     "record": "34*",
     "type": "batting",
     "date": "16th June 2026",
     "opponent": "Cregagh MW",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "33*",
+    "type": "batting",
+    "date": "30th June 2026",
+    "opponent": "Cliftonville Academy MW",
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-30"

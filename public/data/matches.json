@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "CSNI MW XI",
-      "awayTeam": "Arches MW XI",
-      "date": "22nd July 2026",
-      "time": "6:00 PM",
-      "venue": "Stormont",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Drumaness Superkings 1st XI",
       "awayTeam": "Arches 1st XI",
       "date": "25th July 2026",
@@ -390,7 +381,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Belfast Superkings 1st XI won by 4 wickets"
+    },
+    {
+      "homeTeam": "CSNI MW XI",
+      "awayTeam": "Arches MW XI",
+      "date": "22nd July 2026",
+      "time": "6:00 PM",
+      "venue": "Stormont",
+      "status": "",
+      "league": "Midweek League",
+      "result": "Arches MW XI won by 50 runs"
     }
   ],
-  "lastUpdated": "2026-07-22T13:54:25.042Z"
+  "lastUpdated": "2026-07-23T13:59:37.502Z"
 }
