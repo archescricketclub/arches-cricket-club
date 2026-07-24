@@ -1,7 +1,27 @@
 [
   {
+    "name": "Veerendra Babu Nagari",
+    "record": "5-53",
+    "type": "bowling",
+    "date": "17th May 2026",
+    "opponent": "NIMACC 1st XI",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "record": "8-7",
+    "type": "bowling",
+    "date": "20th June 2026",
+    "opponent": "Dundrum",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
     "name": "Vijaykumar Hugar",
-    "record": "30 retired",
+    "record": "30*",
     "type": "batting",
     "date": "22nd July 2026",
     "opponent": "CSNI MW XI",
@@ -21,7 +41,7 @@
   },
   {
     "name": "Kishan Karneedi",
-    "record": "33 retired",
+    "record": "33*",
     "type": "batting",
     "date": "22nd July 2026",
     "opponent": "CSNI MW XI",
@@ -31,7 +51,7 @@
   },
   {
     "name": "Vonga Vishnu",
-    "record": "35 retired",
+    "record": "35*",
     "type": "batting",
     "date": "26th May 2026",
     "opponent": "Ardent Blues MW2 XI",
@@ -41,7 +61,7 @@
   },
   {
     "name": "Ali Rizwan",
-    "record": "33 retired",
+    "record": "33*",
     "type": "batting",
     "date": "2nd June 2026",
     "opponent": "Belfast MW XI",
@@ -51,7 +71,7 @@
   },
   {
     "name": "Srini Nadakuditi",
-    "record": "33 retired",
+    "record": "33*",
     "type": "batting",
     "date": "2nd June 2026",
     "opponent": "Belfast MW XI",
@@ -61,7 +81,7 @@
   },
   {
     "name": "Asad Murtuza",
-    "record": "34 retired",
+    "record": "34*",
     "type": "batting",
     "date": "16th June 2026",
     "opponent": "Cregagh MW XI",
@@ -71,7 +91,7 @@
   },
   {
     "name": "Ali Rizwan",
-    "record": "33 retired",
+    "record": "33*",
     "type": "batting",
     "date": "16th June 2026",
     "opponent": "Cregagh MW XI",
@@ -81,7 +101,7 @@
   },
   {
     "name": "Vonga Vishnu",
-    "record": "30 retired",
+    "record": "30*",
     "type": "batting",
     "date": "23rd June 2026",
     "opponent": "Cooke Collegians MW XI",
@@ -91,7 +111,7 @@
   },
   {
     "name": "Wasim SM",
-    "record": "31 retired",
+    "record": "31*",
     "type": "batting",
     "date": "23rd June 2026",
     "opponent": "Cooke Collegians MW XI",
