@@ -1,5 +1,55 @@
 [
   {
+    "name": "Ali Rizwan",
+    "record": "61*",
+    "type": "batting",
+    "date": "14th June 2026",
+    "opponent": "Cooke Collegians 3rd XI",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "60",
+    "type": "batting",
+    "date": "7th June 2026",
+    "opponent": "Instonians 4th XI",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "record": "50",
+    "type": "batting",
+    "date": "6th June 2026",
+    "opponent": "Victoria 2nd XI",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Anil Narra",
+    "record": "58",
+    "type": "batting",
+    "date": "10th May 2026",
+    "opponent": "Belfast Superkings 2nd XI",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "31*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh MW XI",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
     "name": "Veerendra Babu Nagari",
     "record": "5-53",
     "type": "bowling",
