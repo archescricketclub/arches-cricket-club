@@ -7,6 +7,7 @@ const PLAYERS_2025_PATH = path.join(__dirname, '../data/players_2025.json');
 const HONOURS_2025_PATH = path.join(__dirname, '../data/honours_2025.json');
 const PLAYERS_2026_PATH = path.join(__dirname, '../data/players.json');
 const MATCHES_2026_PATH = path.join(__dirname, '../data/matches.json');
+const OLD_MATCHES_PATH = path.join(__dirname, '../old_matches.json');
 
 const OUT_HONOURS_1 = path.join(__dirname, '../data/honours.json');
 const OUT_HONOURS_2 = path.join(__dirname, '../public/data/honours.json');
@@ -30,6 +31,7 @@ const players2025 = readJSON(PLAYERS_2025_PATH, {});
 const honours2025 = readJSON(HONOURS_2025_PATH, []);
 const players2026 = readJSON(PLAYERS_2026_PATH, {});
 const matches2026 = readJSON(MATCHES_2026_PATH, { fixtures: [], results: [] });
+const oldMatches = readJSON(OLD_MATCHES_PATH, { fixtures: [], results: [] });
 
 const PLAYER_NAME_MAP = {
   'a rizwan': 'Ali Rizwan',
@@ -71,7 +73,10 @@ const HONOURS_LOOKUP = {
   "Ali Rizwan|34*|batting": { opponent: "Cooke Collegians MW", date: "23rd June 2026", league: "Midweek League" },
   "Srini Nadakuditi|33*|batting": { opponent: "Cliftonville Academy MW", date: "30th June 2026", league: "Midweek League" },
   "Wasim SM|31*|batting": { opponent: "Dunmurry MW2", date: "14th July 2026", league: "Midweek League" },
-  "Haneef Shaik|3-18|bowling": { opponent: "Belfast MW", date: "2nd June 2026", league: "Midweek League" }
+  "Haneef Shaik|3-18|bowling": { opponent: "Belfast MW", date: "2nd June 2026", league: "Midweek League" },
+  "Kishan Karneedi|33*|batting": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" },
+  "Vijaykumar Hugar|30*|batting": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" },
+  "Kiran Maheswaram|3-25|bowling": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" }
 };
 
 function cleanDate(dateStr, season) {
@@ -147,7 +152,7 @@ function parseHighlightItem(item) {
   }
   
   // Bowling pattern: Name W-R (e.g. T Jadhav 4-19)
-  const bowlMatch = item.match(/^([A-Za-z'\s\.\-]+)\s+(\d+)-(\d+)/);
+  const bowlMatch = item.match(/([A-Za-z'\s\.\-]+)\s+(\d+)-(\d+)/);
   if (bowlMatch) {
     return {
       type: 'bowling',
@@ -159,7 +164,7 @@ function parseHighlightItem(item) {
   }
   
   // Batting pattern: Name Runs (e.g. A Rizwan 33ret or K Pandey 35*)
-  const batMatch = item.match(/^([A-Za-z'\s\.\-]+)\s+(\d+)(?:ret|\*)?$/i);
+  const batMatch = item.match(/([A-Za-z'\s\.\-]+)\s+(\d+)(?:\*|ret|retired|retd)?$/i);
   if (batMatch) {
     const runsVal = parseInt(batMatch[2]);
     const isNotOut = item.includes('*') || item.toLowerCase().includes('ret');
@@ -303,8 +308,10 @@ function parseMatchScorelines(scorelines, currentDate, leagueName, oppositionTea
 console.log('Compiling dynamic 2026 Honours Board from results...');
 const honours2026 = [];
 
-if (Array.isArray(matches2026.results)) {
-  matches2026.results.forEach(res => {
+const allResults = [...(matches2026.results || []), ...(oldMatches.results || [])];
+
+if (allResults.length > 0) {
+  allResults.forEach(res => {
     if (res.scorelines && res.scorelines.length >= 2) {
       const parsedRecords = parseMatchScorelines(res.scorelines, res.date, res.league, 'Opposition');
       parsedRecords.forEach(rec => {
@@ -417,16 +424,20 @@ if (players2026) {
             const lookupKey = `${p.name}|${p.stats[2].n}|batting`;
             const lookup = HONOURS_LOOKUP[lookupKey];
 
-            honours2026.push({
-              name: p.name,
-              record: p.stats[2].n,
-              type: 'batting',
-              date: lookup ? lookup.date : '2026',
-              opponent: lookup ? lookup.opponent : 'Opposition',
-              league: lookup ? lookup.league : leagueName,
-              season: '2026',
-              category: categoryName
-            });
+            if (lookup) {
+              honours2026.push({
+                name: p.name,
+                record: p.stats[2].n,
+                type: 'batting',
+                date: lookup.date,
+                opponent: lookup.opponent,
+                league: lookup.league,
+                season: '2026',
+                category: categoryName
+              });
+            } else {
+              console.warn(`[WARNING] Missing match data for batting milestone: ${p.name} scored ${p.stats[2].n} in ${leagueName}. Please add to HONOURS_LOOKUP or old_matches.json`);
+            }
           }
         }
       });
@@ -454,16 +465,20 @@ if (players2026) {
               const lookupKey = `${p.name}|${best}|bowling`;
               const lookup = HONOURS_LOOKUP[lookupKey];
 
-              honours2026.push({
-                name: p.name,
-                record: best,
-                type: 'bowling',
-                date: lookup ? lookup.date : '2026',
-                opponent: lookup ? lookup.opponent : 'Opposition',
-                league: lookup ? lookup.league : leagueName,
-                season: '2026',
-                category: categoryName
-              });
+              if (lookup) {
+                honours2026.push({
+                  name: p.name,
+                  record: best,
+                  type: 'bowling',
+                  date: lookup.date,
+                  opponent: lookup.opponent,
+                  league: lookup.league,
+                  season: '2026',
+                  category: categoryName
+                });
+              } else {
+                console.warn(`[WARNING] Missing match data for bowling milestone: ${p.name} took ${best} in ${leagueName}. Please add to HONOURS_LOOKUP or old_matches.json`);
+              }
             }
           }
         }

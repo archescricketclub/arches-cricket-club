@@ -1,5 +1,145 @@
 [
   {
+    "name": "Abubakar Rehmani",
+    "record": "8-7",
+    "type": "bowling",
+    "date": "20th June 2026",
+    "opponent": "Dundrum",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Veerendra Babu Nagari",
+    "record": "5-53",
+    "type": "bowling",
+    "date": "17th May 2026",
+    "opponent": "NIMACC",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "five-wickets"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "61*",
+    "type": "batting",
+    "date": "14th June 2026",
+    "opponent": "North Down 4",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "60",
+    "type": "batting",
+    "date": "7th June 2026",
+    "opponent": "CI 5",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "record": "50",
+    "type": "batting",
+    "date": "6th June 2026",
+    "opponent": "Lurgan 3",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Anil Narra",
+    "record": "58",
+    "type": "batting",
+    "date": "10th May 2026",
+    "opponent": "NIMACC",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "30*",
+    "type": "batting",
+    "date": "23rd June 2026",
+    "opponent": "Cooke Collegians",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "31*",
+    "type": "batting",
+    "date": "23rd June 2026",
+    "opponent": "Cooke Collegians",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "33*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "31*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Asad Murtuza",
+    "record": "34*",
+    "type": "batting",
+    "date": "16th June 2026",
+    "opponent": "Cregagh",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "33*",
+    "type": "batting",
+    "date": "2nd June 2026",
+    "opponent": "Belfast",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "record": "33*",
+    "type": "batting",
+    "date": "2nd June 2026",
+    "opponent": "Belfast",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "35*",
+    "type": "batting",
+    "date": "26th May 2026",
+    "opponent": "Ardent Blues 2",
+    "league": "Midweek League",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
     "name": "Ali Rizwan",
     "record": "127*",
     "type": "batting",
@@ -10,41 +150,11 @@
     "category": "century"
   },
   {
-    "name": "Abubakar Rehmani",
-    "record": "50",
-    "type": "batting",
-    "date": "20th June 2026",
-    "opponent": "Dungannon 1st",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Ali Rizwan",
-    "record": "34*",
-    "type": "batting",
-    "date": "23rd June 2026",
-    "opponent": "Cooke Collegians MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Wasim SM",
-    "record": "31*",
-    "type": "batting",
-    "date": "14th July 2026",
-    "opponent": "Dunmurry MW2",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
     "name": "Kishan Karneedi",
     "record": "33*",
     "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
+    "date": "22nd July 2026",
+    "opponent": "CSNI MW XI",
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-30"
@@ -53,38 +163,8 @@
     "name": "Vijaykumar Hugar",
     "record": "30*",
     "type": "batting",
-    "date": "2026",
-    "opponent": "Opposition",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Vonga Vishnu",
-    "record": "35*",
-    "type": "batting",
-    "date": "2nd June 2026",
-    "opponent": "Belfast MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Asad Murtuza",
-    "record": "34*",
-    "type": "batting",
-    "date": "16th June 2026",
-    "opponent": "Cregagh MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Srini Nadakuditi",
-    "record": "33*",
-    "type": "batting",
-    "date": "30th June 2026",
-    "opponent": "Cliftonville Academy MW",
+    "date": "22nd July 2026",
+    "opponent": "CSNI MW XI",
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-30"
