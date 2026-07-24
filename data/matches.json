@@ -28,6 +28,15 @@
       "league": "Junior League 10"
     },
     {
+      "homeTeam": "Muckamore MW1 XI",
+      "awayTeam": "Arches MW XI",
+      "date": "29th July 2026",
+      "time": "6:00 PM",
+      "venue": "Moylena",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "NIMACC 1st XI",
       "date": "2nd August 2026",
@@ -393,5 +402,5 @@
       "result": "Arches MW XI won by 50 runs"
     }
   ],
-  "lastUpdated": "2026-07-23T13:59:37.502Z"
+  "lastUpdated": "2026-07-24T02:39:53.448Z"
 }

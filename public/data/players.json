@@ -1090,9 +1090,9 @@
       ]
     },
     {
-      "name": "Rohit Singh",
-      "jersey": "#98",
-      "cap": "RS98",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "1",
@@ -1113,9 +1113,9 @@
       ]
     },
     {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
+      "name": "Rohit Singh",
+      "jersey": "#98",
+      "cap": "RS98",
       "stats": [
         {
           "n": "1",
@@ -1346,9 +1346,9 @@
       ]
     },
     {
-      "name": "Anvesh Choudary Mannuru",
-      "jersey": "#2",
-      "cap": "AM28",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "1",
@@ -1363,7 +1363,7 @@
           "l": "Wickets"
         },
         {
-          "n": "1-31",
+          "n": "1-23",
           "l": "Best Fig"
         }
       ]
@@ -1392,29 +1392,6 @@
       ]
     },
     {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-23",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Abubakar Rehmani",
       "jersey": "#—",
       "cap": "AR",
@@ -1438,6 +1415,29 @@
       ]
     },
     {
+      "name": "Anvesh Choudary Mannuru",
+      "jersey": "#2",
+      "cap": "AM28",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-31",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Yaungicha Mirthivada",
       "jersey": "#—",
       "cap": "YM",
@@ -1456,6 +1456,29 @@
         },
         {
           "n": "1-12",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Raja Mouli Yadavalli",
+      "jersey": "#18",
+      "cap": "RY18",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-16",
           "l": "Best Fig"
         }
       ]
@@ -1502,29 +1525,6 @@
         },
         {
           "n": "0-12",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "jersey": "#18",
-      "cap": "RY18",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-16",
           "l": "Best Fig"
         }
       ]
@@ -2020,29 +2020,6 @@
       ]
     },
     {
-      "name": "Anil Narra",
-      "jersey": "#30",
-      "cap": "AN30",
-      "stats": [
-        {
-          "n": "8",
-          "l": "Matches"
-        },
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-17",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Wasim SM",
       "jersey": "#1",
       "cap": "WSM1",
@@ -2061,6 +2038,29 @@
         },
         {
           "n": "0-20",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Anil Narra",
+      "jersey": "#30",
+      "cap": "AN30",
+      "stats": [
+        {
+          "n": "8",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-17",
           "l": "Best Fig"
         }
       ]
@@ -2461,9 +2461,9 @@
       ]
     },
     {
-      "name": "Harsha Sai",
-      "jersey": "#8",
-      "cap": "VK18",
+      "name": "Dushyanth Reddy B",
+      "jersey": "#23",
+      "cap": "DB23",
       "stats": [
         {
           "n": "1",
@@ -2484,9 +2484,9 @@
       ]
     },
     {
-      "name": "Dushyanth Reddy B",
-      "jersey": "#23",
-      "cap": "DB23",
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
       "stats": [
         {
           "n": "1",
