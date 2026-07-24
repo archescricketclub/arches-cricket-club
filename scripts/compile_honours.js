@@ -400,8 +400,11 @@ if (players2026) {
     // Check batting milestones
     if (Array.isArray(players2026[`${prefix}-bat`])) {
       players2026[`${prefix}-bat`].forEach(p => {
-        if (!p.stats || p.stats.length < 3) return;
-        const hsStr = p.stats[2].n.replace('*', '').trim();
+        if (!p.stats) return;
+        const hsStat = p.stats.find(s => s.l === 'High Score');
+        if (!hsStat) return;
+        
+        const hsStr = hsStat.n.replace('*', '').trim();
         const hs = parseInt(hsStr);
         
         let threshold = prefix === 'mw' ? 30 : 50;
@@ -421,13 +424,13 @@ if (players2026) {
 
           const exists = honours2026.some(h => h.name === p.name && h.category === categoryName && h.league === leagueName);
           if (!exists) {
-            const lookupKey = `${p.name}|${p.stats[2].n}|batting`;
+            const lookupKey = `${p.name}|${hsStat.n}|batting`;
             const lookup = HONOURS_LOOKUP[lookupKey];
 
             if (lookup) {
               honours2026.push({
                 name: p.name,
-                record: p.stats[2].n,
+                record: hsStat.n,
                 type: 'batting',
                 date: lookup.date,
                 opponent: lookup.opponent,
@@ -436,7 +439,7 @@ if (players2026) {
                 category: categoryName
               });
             } else {
-              console.warn(`[WARNING] Missing match data for batting milestone: ${p.name} scored ${p.stats[2].n} in ${leagueName}. Please add to HONOURS_LOOKUP or old_matches.json`);
+              console.warn(`[WARNING] Missing match data for batting milestone: ${p.name} scored ${hsStat.n} in ${leagueName}. Please add to HONOURS_LOOKUP or old_matches.json`);
             }
           }
         }
@@ -446,8 +449,11 @@ if (players2026) {
     // Check bowling milestones
     if (Array.isArray(players2026[`${prefix}-bowl`])) {
       players2026[`${prefix}-bowl`].forEach(p => {
-        if (!p.stats || p.stats.length < 3) return;
-        const best = p.stats[2].n;
+        if (!p.stats) return;
+        const bestStat = p.stats.find(s => s.l === 'Best Fig');
+        if (!bestStat) return;
+        
+        const best = bestStat.n;
         if (best && best.includes('-')) {
           const wkts = parseInt(best.split('-')[0]);
           
