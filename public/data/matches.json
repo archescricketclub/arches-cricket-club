@@ -10,6 +10,15 @@
       "league": "Senior League 3"
     },
     {
+      "homeTeam": "Drumaness Superkings",
+      "awayTeam": "Arches",
+      "date": "",
+      "time": "12:00 PM",
+      "venue": "TBD",
+      "status": "",
+      "league": "Senior League 3"
+    },
+    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Ardent Blues 4th XI",
       "date": "26th July 2026",
@@ -402,5 +411,5 @@
       "result": "Arches MW XI won by 50 runs"
     }
   ],
-  "lastUpdated": "2026-07-24T13:46:07.491Z"
+  "lastUpdated": "2026-07-25T13:26:50.803Z"
 }
