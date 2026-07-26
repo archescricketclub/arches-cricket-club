@@ -1,24 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Drumaness Superkings 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "25th July 2026",
-      "time": "12:00 PM",
-      "venue": "The Village Ground",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
-      "homeTeam": "Drumaness Superkings",
-      "awayTeam": "Arches",
-      "date": "",
-      "time": "12:00 PM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Ardent Blues 4th XI",
       "date": "26th July 2026",
@@ -44,6 +26,15 @@
       "venue": "Moylena",
       "status": "",
       "league": "Midweek League"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Amigos Belfast 2nd XI",
+      "date": "1st August 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Development Cup"
     },
     {
       "homeTeam": "Arches 1st XI",
@@ -409,7 +400,17 @@
       "status": "",
       "league": "Midweek League",
       "result": "Arches MW XI won by 50 runs"
+    },
+    {
+      "homeTeam": "Drumaness Superkings 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "25th July 2026",
+      "time": "12:00 PM",
+      "venue": "The Village Ground",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Drumaness Superkings 1st XI won by 37 runs"
     }
   ],
-  "lastUpdated": "2026-07-25T13:26:50.803Z"
+  "lastUpdated": "2026-07-26T02:47:06.813Z"
 }
