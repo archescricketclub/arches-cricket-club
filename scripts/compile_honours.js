@@ -76,7 +76,10 @@ const HONOURS_LOOKUP = {
   "Haneef Shaik|3-18|bowling": { opponent: "Belfast MW", date: "2nd June 2026", league: "Midweek League" },
   "Kishan Karneedi|33*|batting": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" },
   "Vijaykumar Hugar|30*|batting": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" },
-  "Kiran Maheswaram|3-25|bowling": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" }
+  "Kiran Maheswaram|3-25|bowling": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" },
+  "Arush Nimmagadda|65|batting": { opponent: "Drumaness Superkings 1st XI", date: "25th July 2026", league: "Senior League 3" },
+  "Vonga Vishnu|51|batting": { opponent: "Drumaness Superkings 1st XI", date: "25th July 2026", league: "Senior League 3" },
+  "Vijaykumar Hugar|58*|batting": { opponent: "Ardent Blues 4th XI", date: "26th July 2026", league: "Junior League 10" }
 };
 
 function cleanDate(dateStr, season) {

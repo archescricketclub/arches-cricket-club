@@ -140,6 +140,26 @@
     "category": "midweek-30"
   },
   {
+    "name": "Arush Nimmagadda",
+    "record": "65",
+    "type": "batting",
+    "date": "25th July 2026",
+    "opponent": "Drumaness Superkings 1st XI",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "record": "51",
+    "type": "batting",
+    "date": "25th July 2026",
+    "opponent": "Drumaness Superkings 1st XI",
+    "league": "Senior League 3",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
     "name": "Ali Rizwan",
     "record": "127*",
     "type": "batting",
@@ -148,6 +168,16 @@
     "league": "Junior League 10",
     "season": "2026",
     "category": "century"
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "record": "58*",
+    "type": "batting",
+    "date": "26th July 2026",
+    "opponent": "Ardent Blues 4th XI",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
   },
   {
     "name": "Kishan Karneedi",
