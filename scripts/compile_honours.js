@@ -79,7 +79,8 @@ const HONOURS_LOOKUP = {
   "Kiran Maheswaram|3-25|bowling": { opponent: "CSNI MW XI", date: "22nd July 2026", league: "Midweek League" },
   "Arush Nimmagadda|65|batting": { opponent: "Drumaness Superkings 1st XI", date: "25th July 2026", league: "Senior League 3" },
   "Vonga Vishnu|51|batting": { opponent: "Drumaness Superkings 1st XI", date: "25th July 2026", league: "Senior League 3" },
-  "Vijaykumar Hugar|58*|batting": { opponent: "Ardent Blues 4th XI", date: "26th July 2026", league: "Junior League 10" }
+  "Vijaykumar Hugar|58*|batting": { opponent: "Ardent Blues 4th XI", date: "26th July 2026", league: "Junior League 10" },
+  "Ali Rizwan|63|batting": { opponent: "Ardent Blues 4th XI", date: "26th July 2026", league: "Junior League 10" }
 };
 
 function cleanDate(dateStr, season) {
@@ -501,6 +502,24 @@ const combinedHonours = [...honours2026, ...honours2025].map(h => {
   h.date = cleanDate(h.date, h.season);
   return h;
 });
+
+// Manual overrides for secondary milestones (like a player's 2nd 50+ score) 
+// that NV Play hides from the basic season stats API.
+const MANUAL_HONOURS = [
+  {
+    name: "Ali Rizwan",
+    record: "63",
+    type: "batting",
+    date: "26th July 2026",
+    opponent: "Ardent Blues 4th XI",
+    league: "Junior League 10",
+    season: "2026",
+    category: "half-century"
+  }
+];
+
+combinedHonours.push(...MANUAL_HONOURS);
+
 console.log(`Unified Honours Board has ${combinedHonours.length} total records.`);
 
 // Save honours JSON
