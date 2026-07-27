@@ -4,14 +4,14 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1477,
+      "runs": 1540,
       "hs": "131",
-      "matches": 22
+      "matches": 23
     },
     "bowling": {
       "wickets": 2,
       "bestFig": "1-13",
-      "matches": 7
+      "matches": 8
     }
   },
   {
@@ -21,7 +21,7 @@
     "batting": {
       "runs": 745,
       "hs": "58",
-      "matches": 20
+      "matches": 21
     },
     "bowling": {
       "wickets": 9,
@@ -36,12 +36,12 @@
     "batting": {
       "runs": 708,
       "hs": "47",
-      "matches": 23
+      "matches": 24
     },
     "bowling": {
-      "wickets": 155,
+      "wickets": 159,
       "bestFig": "5-22",
-      "matches": 23
+      "matches": 24
     }
   },
   {
@@ -66,12 +66,12 @@
     "batting": {
       "runs": 668,
       "hs": "68",
-      "matches": 21
+      "matches": 22
     },
     "bowling": {
       "wickets": 1,
       "bestFig": "0",
-      "matches": 3
+      "matches": 4
     }
   },
   {
@@ -96,12 +96,12 @@
     "batting": {
       "runs": 464,
       "hs": "66",
-      "matches": 22
+      "matches": 23
     },
     "bowling": {
       "wickets": 24,
       "bestFig": "0",
-      "matches": 21
+      "matches": 22
     }
   },
   {
@@ -135,6 +135,21 @@
     }
   },
   {
+    "name": "Vonga Vishnu",
+    "jersey": "#15",
+    "cap": "VV15",
+    "batting": {
+      "runs": 275,
+      "hs": "51",
+      "matches": 16
+    },
+    "bowling": {
+      "wickets": 73,
+      "bestFig": "2",
+      "matches": 17
+    }
+  },
+  {
     "name": "Rohit Singh",
     "jersey": "#98",
     "cap": "RS98",
@@ -150,33 +165,18 @@
     }
   },
   {
-    "name": "Vonga Vishnu",
-    "jersey": "#15",
-    "cap": "VV15",
-    "batting": {
-      "runs": 243,
-      "hs": "51",
-      "matches": 15
-    },
-    "bowling": {
-      "wickets": 68,
-      "bestFig": "2",
-      "matches": 16
-    }
-  },
-  {
     "name": "Kiran Maheswaram",
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
       "runs": 235,
       "hs": "31*",
-      "matches": 18
+      "matches": 19
     },
     "bowling": {
-      "wickets": 52,
+      "wickets": 56,
       "bestFig": "2-11",
-      "matches": 18
+      "matches": 19
     }
   },
   {
@@ -300,18 +300,33 @@
     }
   },
   {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 138,
+      "hs": "58*",
+      "matches": 15
+    },
+    "bowling": {
+      "wickets": 11,
+      "bestFig": "1",
+      "matches": 15
+    }
+  },
+  {
     "name": "Harsha Sai",
     "jersey": "#8",
     "cap": "VK18",
     "batting": {
       "runs": 117,
       "hs": "16",
-      "matches": 18
+      "matches": 19
     },
     "bowling": {
-      "wickets": 103,
+      "wickets": 106,
       "bestFig": "3-15",
-      "matches": 21
+      "matches": 22
     }
   },
   {
@@ -327,21 +342,6 @@
       "wickets": 8,
       "bestFig": "2-23",
       "matches": 4
-    }
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 80,
-      "hs": "30*",
-      "matches": 11
-    },
-    "bowling": {
-      "wickets": 11,
-      "bestFig": "1",
-      "matches": 14
     }
   },
   {
@@ -459,9 +459,9 @@
       "matches": 5
     },
     "bowling": {
-      "wickets": 2,
+      "wickets": 6,
       "bestFig": "0",
-      "matches": 5
+      "matches": 6
     }
   },
   {
@@ -519,9 +519,9 @@
       "matches": 8
     },
     "bowling": {
-      "wickets": 72,
-      "bestFig": "15",
-      "matches": 18
+      "wickets": 77,
+      "bestFig": "18",
+      "matches": 19
     }
   },
   {

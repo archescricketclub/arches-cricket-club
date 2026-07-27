@@ -1,24 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Ardent Blues 4th XI",
-      "date": "26th July 2026",
-      "time": "1:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
-      "homeTeam": "Arches 2",
-      "awayTeam": "Ardent Blues 4",
-      "date": "",
-      "time": "1:00 PM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Muckamore MW1 XI",
       "awayTeam": "Arches MW XI",
       "date": "29th July 2026",
@@ -410,7 +392,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Drumaness Superkings 1st XI won by 37 runs"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Ardent Blues 4th XI",
+      "date": "26th July 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Arches 2nd XI won by 9 wickets"
     }
   ],
-  "lastUpdated": "2026-07-26T13:22:20.696Z"
+  "lastUpdated": "2026-07-27T02:54:47.060Z"
 }
