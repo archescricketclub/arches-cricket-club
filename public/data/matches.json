@@ -28,11 +28,11 @@
       "league": "Senior League 3"
     },
     {
-      "homeTeam": "Dundrum",
-      "awayTeam": "Arches",
+      "homeTeam": "Dundrum 1st XI",
+      "awayTeam": "Arches 1st XI",
       "date": "8th August 2026",
       "time": "12:00 PM",
-      "venue": "TBD",
+      "venue": "The Meadow",
       "status": "",
       "league": "Senior League 3"
     },
@@ -46,20 +46,20 @@
       "league": "Junior League 10"
     },
     {
-      "homeTeam": "Arches",
-      "awayTeam": "Amigos Belfast",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast 1st XI",
       "date": "15th August 2026",
       "time": "12:00 PM",
-      "venue": "TBD",
+      "venue": "TBC",
       "status": "",
       "league": "Senior League 3"
     },
     {
-      "homeTeam": "Arches",
-      "awayTeam": "Victoria",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Victoria 1st XI",
       "date": "22nd August 2026",
       "time": "12:00 PM",
-      "venue": "TBD",
+      "venue": "TBC",
       "status": "",
       "league": "Senior League 3"
     },
@@ -404,5 +404,5 @@
       "result": "Arches 2nd XI won by 9 wickets"
     }
   ],
-  "lastUpdated": "2026-07-29T02:36:51.552Z"
+  "lastUpdated": "2026-07-29T14:10:27.935Z"
 }
