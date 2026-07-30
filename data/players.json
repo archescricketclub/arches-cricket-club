@@ -255,29 +255,6 @@
       ]
     },
     {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Matches"
-        },
-        {
-          "n": "10",
-          "l": "Runs"
-        },
-        {
-          "n": "8",
-          "l": "High Score"
-        },
-        {
-          "n": "3.33",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -296,6 +273,29 @@
         },
         {
           "n": "2.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "10",
+          "l": "Runs"
+        },
+        {
+          "n": "8",
+          "l": "High Score"
+        },
+        {
+          "n": "3.33",
           "l": "Average"
         }
       ]
@@ -1461,6 +1461,29 @@
       ]
     },
     {
+      "name": "Abubakar Rehmani",
+      "jersey": "#—",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-22",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Anvesh Choudary Mannuru",
       "jersey": "#2",
       "cap": "AM28",
@@ -1507,29 +1530,6 @@
       ]
     },
     {
-      "name": "Abubakar Rehmani",
-      "jersey": "#—",
-      "cap": "AR",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-22",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Yaungicha Mirthivada",
       "jersey": "#—",
       "cap": "YM",
@@ -1553,12 +1553,12 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
+      "name": "Raja Mouli Yadavalli",
+      "jersey": "#18",
+      "cap": "RY18",
       "stats": [
         {
-          "n": "8",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -1570,7 +1570,7 @@
           "l": "Wickets"
         },
         {
-          "n": "0-3",
+          "n": "0-16",
           "l": "Best Fig"
         }
       ]
@@ -1599,12 +1599,12 @@
       ]
     },
     {
-      "name": "Raja Mouli Yadavalli",
-      "jersey": "#18",
-      "cap": "RY18",
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
       "stats": [
         {
-          "n": "1",
+          "n": "8",
           "l": "Matches"
         },
         {
@@ -1616,7 +1616,7 @@
           "l": "Wickets"
         },
         {
-          "n": "0-16",
+          "n": "0-3",
           "l": "Best Fig"
         }
       ]

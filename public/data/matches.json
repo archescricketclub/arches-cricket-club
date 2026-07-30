@@ -19,6 +19,15 @@
       "league": "Senior League 3"
     },
     {
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "date": "5th August 2026",
+      "time": "6:00 PM",
+      "venue": "City of Belfast Playing Fields (Dunmurry)",
+      "status": "",
+      "league": "Midweek League"
+    },
+    {
       "homeTeam": "Dundrum 1st XI",
       "awayTeam": "Arches 1st XI",
       "date": "8th August 2026",
@@ -432,5 +441,5 @@
       "result": "Arches MW XI won by 13 runs"
     }
   ],
-  "lastUpdated": "2026-07-30T02:24:43.693Z"
+  "lastUpdated": "2026-07-30T14:01:33.672Z"
 }
