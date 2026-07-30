@@ -4,9 +4,9 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1540,
+      "runs": 1565,
       "hs": "131",
-      "matches": 23
+      "matches": 24
     },
     "bowling": {
       "wickets": 2,
@@ -19,14 +19,14 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 745,
+      "runs": 750,
       "hs": "58",
-      "matches": 21
+      "matches": 22
     },
     "bowling": {
       "wickets": 9,
       "bestFig": "2-14",
-      "matches": 8
+      "matches": 9
     }
   },
   {
@@ -34,14 +34,14 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 708,
+      "runs": 737,
       "hs": "47",
-      "matches": 24
+      "matches": 25
     },
     "bowling": {
-      "wickets": 159,
+      "wickets": 163,
       "bestFig": "5-22",
-      "matches": 24
+      "matches": 25
     }
   },
   {
@@ -64,9 +64,9 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 668,
+      "runs": 674,
       "hs": "68",
-      "matches": 22
+      "matches": 23
     },
     "bowling": {
       "wickets": 1,
@@ -94,14 +94,14 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 464,
+      "runs": 494,
       "hs": "66",
-      "matches": 23
+      "matches": 24
     },
     "bowling": {
       "wickets": 24,
       "bestFig": "0",
-      "matches": 22
+      "matches": 23
     }
   },
   {
@@ -109,14 +109,14 @@
     "jersey": "#45",
     "cap": "CH45",
     "batting": {
-      "runs": 447,
+      "runs": 469,
       "hs": "34*",
-      "matches": 20
+      "matches": 21
     },
     "bowling": {
-      "wickets": 96,
+      "wickets": 99,
       "bestFig": "3-20",
-      "matches": 19
+      "matches": 20
     }
   },
   {
@@ -139,14 +139,14 @@
     "jersey": "#15",
     "cap": "VV15",
     "batting": {
-      "runs": 275,
+      "runs": 298,
       "hs": "51",
-      "matches": 16
+      "matches": 17
     },
     "bowling": {
-      "wickets": 73,
+      "wickets": 77,
       "bestFig": "2",
-      "matches": 17
+      "matches": 18
     }
   },
   {
@@ -169,14 +169,14 @@
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
-      "runs": 235,
+      "runs": 236,
       "hs": "31*",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
-      "wickets": 56,
+      "wickets": 57,
       "bestFig": "2-11",
-      "matches": 19
+      "matches": 20
     }
   },
   {
@@ -270,6 +270,21 @@
     }
   },
   {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 145,
+      "hs": "58*",
+      "matches": 16
+    },
+    "bowling": {
+      "wickets": 11,
+      "bestFig": "1",
+      "matches": 16
+    }
+  },
+  {
     "name": "Tulasi Gangadhar Thatavarthi",
     "jersey": "#7",
     "cap": "TT07",
@@ -300,33 +315,18 @@
     }
   },
   {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 138,
-      "hs": "58*",
-      "matches": 15
-    },
-    "bowling": {
-      "wickets": 11,
-      "bestFig": "1",
-      "matches": 15
-    }
-  },
-  {
     "name": "Harsha Sai",
     "jersey": "#8",
     "cap": "VK18",
     "batting": {
       "runs": 117,
       "hs": "16",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
-      "wickets": 106,
+      "wickets": 110,
       "bestFig": "3-15",
-      "matches": 22
+      "matches": 23
     }
   },
   {
@@ -516,12 +516,12 @@
     "batting": {
       "runs": 5,
       "hs": "5*",
-      "matches": 8
+      "matches": 9
     },
     "bowling": {
-      "wickets": 77,
+      "wickets": 81,
       "bestFig": "18",
-      "matches": 19
+      "matches": 20
     }
   },
   {

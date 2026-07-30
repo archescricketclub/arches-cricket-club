@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Muckamore MW1 XI",
-      "awayTeam": "Arches MW XI",
-      "date": "29th July 2026",
-      "time": "6:00 PM",
-      "venue": "Moylena",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Amigos Belfast 2nd XI",
       "date": "1st August 2026",
@@ -35,6 +26,15 @@
       "venue": "The Meadow",
       "status": "",
       "league": "Senior League 3"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Cooke Collegians 4th XI",
+      "date": "9th August 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10"
     },
     {
       "homeTeam": "Arches 2",
@@ -64,11 +64,29 @@
       "league": "Senior League 3"
     },
     {
+      "homeTeam": "Belfast Superkings 2nd XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "23rd August 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
       "homeTeam": "Belfast Superkings 2",
       "awayTeam": "Arches 2",
       "date": "23rd August 2026",
       "time": "1:00 PM",
       "venue": "TBD",
+      "status": "",
+      "league": "Junior League 10"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Belfast Superkings 3rd XI",
+      "date": "29th August 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
       "status": "",
       "league": "Junior League 10"
     },
@@ -402,7 +420,17 @@
       "status": "",
       "league": "Junior League 10",
       "result": "Arches 2nd XI won by 9 wickets"
+    },
+    {
+      "homeTeam": "Muckamore MW1 XI",
+      "awayTeam": "Arches MW XI",
+      "date": "29th July 2026",
+      "time": "6:00 PM",
+      "venue": "Moylena",
+      "status": "",
+      "league": "Midweek League",
+      "result": "Arches MW XI won by 13 runs"
     }
   ],
-  "lastUpdated": "2026-07-29T14:10:27.935Z"
+  "lastUpdated": "2026-07-30T02:24:43.693Z"
 }
