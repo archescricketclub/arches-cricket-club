@@ -255,29 +255,6 @@
       ]
     },
     {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Matches"
-        },
-        {
-          "n": "10",
-          "l": "Runs"
-        },
-        {
-          "n": "8",
-          "l": "High Score"
-        },
-        {
-          "n": "3.33",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -296,6 +273,29 @@
         },
         {
           "n": "2.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "10",
+          "l": "Runs"
+        },
+        {
+          "n": "8",
+          "l": "High Score"
+        },
+        {
+          "n": "3.33",
           "l": "Average"
         }
       ]
@@ -1438,9 +1438,9 @@
       ]
     },
     {
-      "name": "Purvik Prasad",
+      "name": "Abubakar Rehmani",
       "jersey": "#—",
-      "cap": "PP",
+      "cap": "AR",
       "stats": [
         {
           "n": "1",
@@ -1455,30 +1455,7 @@
           "l": "Wickets"
         },
         {
-          "n": "1-24",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Anshuman Singh Baghel",
-      "jersey": "#181",
-      "cap": "ASB18",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-13",
+          "n": "1-22",
           "l": "Best Fig"
         }
       ]
@@ -1507,9 +1484,32 @@
       ]
     },
     {
-      "name": "Abubakar Rehmani",
+      "name": "Anshuman Singh Baghel",
+      "jersey": "#181",
+      "cap": "ASB18",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-13",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Purvik Prasad",
       "jersey": "#—",
-      "cap": "AR",
+      "cap": "PP",
       "stats": [
         {
           "n": "1",
@@ -1524,7 +1524,7 @@
           "l": "Wickets"
         },
         {
-          "n": "1-22",
+          "n": "1-24",
           "l": "Best Fig"
         }
       ]
@@ -1553,29 +1553,6 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
-      "stats": [
-        {
-          "n": "8",
-          "l": "Matches"
-        },
-        {
-          "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-3",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Asad Murtuza",
       "jersey": "#22",
       "cap": "AM04",
@@ -1594,6 +1571,29 @@
         },
         {
           "n": "0-12",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "8",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-3",
           "l": "Best Fig"
         }
       ]
