@@ -98,6 +98,11 @@ function cleanDate(dateStr, season) {
   return `${clean} ${season}`;
 }
 
+function cleanOpponent(opponentStr) {
+  if (!opponentStr) return opponentStr;
+  return opponentStr.replace(/\s+XI$/i, '').trim();
+}
+
 // Normalize player names matching
 function matchPlayer(scrapedName) {
   const normalized = scrapedName.trim().toLowerCase().replace(/\s+/g, ' ');
@@ -498,8 +503,14 @@ if (players2026) {
 }
 
 // Merge 2025 and 2026 honours
-const combinedHonours = [...honours2026, ...honours2025].map(h => {
+const combinedHonours = [...honours2026, ...honours2025]
+  .filter(h => {
+    const n = h.name ? h.name.toLowerCase() : '';
+    return !n.includes('total') && !n.includes('extras') && !n.includes('did not bat');
+  })
+  .map(h => {
   h.date = cleanDate(h.date, h.season);
+  h.opponent = cleanOpponent(h.opponent);
   return h;
 });
 

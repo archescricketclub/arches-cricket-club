@@ -144,7 +144,7 @@
     "record": "65",
     "type": "batting",
     "date": "25th July 2026",
-    "opponent": "Drumaness Superkings 1st XI",
+    "opponent": "Drumaness Superkings 1st",
     "league": "Senior League 3",
     "season": "2026",
     "category": "half-century"
@@ -174,7 +174,7 @@
     "record": "58*",
     "type": "batting",
     "date": "26th July 2026",
-    "opponent": "Ardent Blues 4th XI",
+    "opponent": "Ardent Blues 4th",
     "league": "Junior League 10",
     "season": "2026",
     "category": "half-century"
@@ -184,7 +184,7 @@
     "record": "33*",
     "type": "batting",
     "date": "22nd July 2026",
-    "opponent": "CSNI MW XI",
+    "opponent": "CSNI MW",
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-30"
@@ -194,7 +194,7 @@
     "record": "30*",
     "type": "batting",
     "date": "22nd July 2026",
-    "opponent": "CSNI MW XI",
+    "opponent": "CSNI MW",
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-30"
@@ -214,7 +214,7 @@
     "record": "3-25",
     "type": "bowling",
     "date": "22nd July 2026",
-    "opponent": "CSNI MW XI",
+    "opponent": "CSNI MW",
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-3w"
