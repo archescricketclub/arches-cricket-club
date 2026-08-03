@@ -567,11 +567,23 @@ const MANUAL_HONOURS = [
 
 combinedHonours.push(...MANUAL_HONOURS);
 
-console.log(`Unified Honours Board has ${combinedHonours.length} total records.`);
+// Deduplicate the combined honours to ensure no duplicate records exist for the same player, score, and opponent
+const seenHonours = new Set();
+const dedupedHonours = [];
+combinedHonours.forEach(h => {
+  const oppFirstWord = h.opponent ? h.opponent.split(' ')[0].toLowerCase() : '';
+  const key = `${h.name}|${h.record}|${h.category}|${oppFirstWord}`;
+  if (!seenHonours.has(key)) {
+    seenHonours.add(key);
+    dedupedHonours.push(h);
+  }
+});
+
+console.log(`Unified Honours Board has ${dedupedHonours.length} total records (deduplicated).`);
 
 // Save honours JSON
-fs.writeFileSync(OUT_HONOURS_1, JSON.stringify(combinedHonours, null, 2));
-fs.writeFileSync(OUT_HONOURS_2, JSON.stringify(combinedHonours, null, 2));
+fs.writeFileSync(OUT_HONOURS_1, JSON.stringify(dedupedHonours, null, 2));
+fs.writeFileSync(OUT_HONOURS_2, JSON.stringify(dedupedHonours, null, 2));
 
 // ────────────────────────────────────────────────────────
 // 3. COMPILE ALL-TIME CAREER STATISTICS (2025 - PRESENT)
