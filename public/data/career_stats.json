@@ -4,9 +4,9 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1633,
+      "runs": 1635,
       "hs": "131",
-      "matches": 25
+      "matches": 26
     },
     "bowling": {
       "wickets": 2,
@@ -21,7 +21,7 @@
     "batting": {
       "runs": 758,
       "hs": "58",
-      "matches": 23
+      "matches": 24
     },
     "bowling": {
       "wickets": 9,
@@ -30,33 +30,33 @@
     }
   },
   {
-    "name": "Kishan Karneedi",
-    "jersey": "#11",
-    "cap": "KK11",
-    "batting": {
-      "runs": 737,
-      "hs": "47",
-      "matches": 26
-    },
-    "bowling": {
-      "wickets": 168,
-      "bestFig": "5-22",
-      "matches": 26
-    }
-  },
-  {
     "name": "Asad Murtuza",
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 705,
+      "runs": 755,
       "hs": "68",
-      "matches": 24
+      "matches": 25
     },
     "bowling": {
       "wickets": 1,
       "bestFig": "0",
       "matches": 4
+    }
+  },
+  {
+    "name": "Kishan Karneedi",
+    "jersey": "#11",
+    "cap": "KK11",
+    "batting": {
+      "runs": 738,
+      "hs": "47",
+      "matches": 27
+    },
+    "bowling": {
+      "wickets": 175,
+      "bestFig": "5-22",
+      "matches": 27
     }
   },
   {
@@ -79,14 +79,14 @@
     "jersey": "#23",
     "cap": "DB23",
     "batting": {
-      "runs": 627,
+      "runs": 646,
       "hs": "73",
-      "matches": 11
+      "matches": 12
     },
     "bowling": {
-      "wickets": 48,
+      "wickets": 52,
       "bestFig": "4-30",
-      "matches": 11
+      "matches": 12
     }
   },
   {
@@ -120,6 +120,21 @@
     }
   },
   {
+    "name": "Vonga Vishnu",
+    "jersey": "#15",
+    "cap": "VV15",
+    "batting": {
+      "runs": 369,
+      "hs": "56",
+      "matches": 19
+    },
+    "bowling": {
+      "wickets": 86,
+      "bestFig": "4",
+      "matches": 20
+    }
+  },
+  {
     "name": "Veerendra Babu Nagari",
     "jersey": "#44",
     "cap": "VB44",
@@ -132,21 +147,6 @@
       "wickets": 83,
       "bestFig": "5-17",
       "matches": 13
-    }
-  },
-  {
-    "name": "Vonga Vishnu",
-    "jersey": "#15",
-    "cap": "VV15",
-    "batting": {
-      "runs": 313,
-      "hs": "51",
-      "matches": 18
-    },
-    "bowling": {
-      "wickets": 82,
-      "bestFig": "2",
-      "matches": 19
     }
   },
   {
@@ -169,14 +169,14 @@
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
-      "runs": 237,
+      "runs": 239,
       "hs": "31*",
-      "matches": 21
+      "matches": 22
     },
     "bowling": {
-      "wickets": 62,
+      "wickets": 65,
       "bestFig": "2-11",
-      "matches": 21
+      "matches": 22
     }
   },
   {
@@ -216,12 +216,12 @@
     "batting": {
       "runs": 190,
       "hs": "50",
-      "matches": 11
+      "matches": 12
     },
     "bowling": {
-      "wickets": 60,
-      "bestFig": "17",
-      "matches": 11
+      "wickets": 68,
+      "bestFig": "21",
+      "matches": 12
     }
   },
   {
@@ -229,9 +229,9 @@
     "jersey": "#72",
     "cap": "AN72",
     "batting": {
-      "runs": 184,
+      "runs": 186,
       "hs": "65",
-      "matches": 12
+      "matches": 13
     },
     "bowling": {
       "wickets": 0,
@@ -244,14 +244,14 @@
     "jersey": "#14",
     "cap": "PA14",
     "batting": {
-      "runs": 166,
+      "runs": 174,
       "hs": "27*",
-      "matches": 10
+      "matches": 11
     },
     "bowling": {
-      "wickets": 50,
+      "wickets": 54,
       "bestFig": "4-32",
-      "matches": 10
+      "matches": 11
     }
   },
   {
@@ -345,6 +345,21 @@
     }
   },
   {
+    "name": "Venkateswarrao Jyothi",
+    "jersey": "#9",
+    "cap": "VJ09",
+    "batting": {
+      "runs": 75,
+      "hs": "23",
+      "matches": 13
+    },
+    "bowling": {
+      "wickets": 74,
+      "bestFig": "3-26",
+      "matches": 13
+    }
+  },
+  {
     "name": "Abhiram Donepudi",
     "jersey": "#48",
     "cap": "AB48",
@@ -387,21 +402,6 @@
       "wickets": 8,
       "bestFig": "3-26",
       "matches": 0
-    }
-  },
-  {
-    "name": "Venkateswarrao Jyothi",
-    "jersey": "#9",
-    "cap": "VJ09",
-    "batting": {
-      "runs": 52,
-      "hs": "15*",
-      "matches": 12
-    },
-    "bowling": {
-      "wickets": 66,
-      "bestFig": "3-26",
-      "matches": 12
     }
   },
   {

@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "NIMACC 1st XI",
-      "date": "2nd August 2026",
-      "time": "12:00 PM",
-      "venue": "City of Belfast Playing Fields (NIMA)",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Arches MW XI",
       "awayTeam": "Dunmurry MW2 XI",
       "date": "5th August 2026",
@@ -440,7 +431,17 @@
       "status": "",
       "league": "Development Cup",
       "result": "Amigos Belfast 2nd XI won by 10 runs"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "NIMACC 1st XI",
+      "date": "2nd August 2026",
+      "time": "12:00 PM",
+      "venue": "City of Belfast Playing Fields (NIMA)",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Arches 1st XI won by 1 wicket"
     }
   ],
-  "lastUpdated": "2026-08-02T13:21:19.024Z"
+  "lastUpdated": "2026-08-03T02:47:02.190Z"
 }
