@@ -32,6 +32,7 @@ const honours2025 = readJSON(HONOURS_2025_PATH, []);
 const players2026 = readJSON(PLAYERS_2026_PATH, {});
 const matches2026 = readJSON(MATCHES_2026_PATH, { fixtures: [], results: [] });
 const oldMatches = readJSON(OLD_MATCHES_PATH, { fixtures: [], results: [] });
+const scorecardMilestones = readJSON(path.join(__dirname, '../data/scorecard_milestones.json'), []);
 
 const PLAYER_NAME_MAP = {
   'a rizwan': 'Ali Rizwan',
@@ -499,6 +500,41 @@ if (players2026) {
         }
       });
     }
+  });
+}
+
+// ────────────────────────────────────────────────────────
+// 2.5 MERGE DYNAMIC SCORECARD MILESTONES
+// ────────────────────────────────────────────────────────
+console.log('Merging scorecard milestones...');
+if (scorecardMilestones && scorecardMilestones.length > 0) {
+  scorecardMilestones.forEach(m => {
+     let categoryName = '';
+     if (m.type === 'batting') {
+         if (m.league && m.league.toLowerCase().includes('midweek')) categoryName = 'midweek-30';
+         else if (m.runs >= 100) categoryName = 'century';
+         else if (m.runs >= 50) categoryName = 'half-century';
+     } else if (m.type === 'bowling') {
+         if (m.league && m.league.toLowerCase().includes('midweek')) categoryName = 'midweek-3w';
+         else if (m.wickets >= 5) categoryName = 'five-wickets';
+     }
+     
+     if (categoryName) {
+         const exists = honours2026.some(h => h.name === m.name && h.category === categoryName && h.league === m.league && h.date === m.date);
+         if (!exists) {
+             honours2026.push({
+                 name: m.name,
+                 record: m.record,
+                 type: m.type,
+                 date: cleanDate(m.date, '2026'),
+                 opponent: m.opponent,
+                 league: m.league,
+                 season: '2026',
+                 category: categoryName
+             });
+             console.log(`+ Added scorecard milestone: ${m.name} ${m.record} vs ${m.opponent}`);
+         }
+     }
   });
 }
 

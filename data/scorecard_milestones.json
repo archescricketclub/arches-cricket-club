@@ -1,0 +1,636 @@
+[
+  {
+    "name": "Vonga Vishnu",
+    "type": "batting",
+    "record": "56",
+    "runs": 56,
+    "date": "2nd August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "NIMACC 1st XI"
+  },
+  {
+    "name": "Asad Murtuza",
+    "type": "batting",
+    "record": "50*",
+    "runs": 50,
+    "date": "2nd August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "NIMACC 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "195",
+    "runs": 195,
+    "date": "2nd August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "NIMACC 1st XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "68",
+    "runs": 68,
+    "date": "1st August 2026",
+    "league": "NCU Development Cup",
+    "opponent": "Amigos Belfast 2nd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "204",
+    "runs": 204,
+    "date": "1st August 2026",
+    "league": "NCU Development Cup",
+    "opponent": "Amigos Belfast 2nd XI"
+  },
+  {
+    "name": "Wasim SM",
+    "type": "batting",
+    "record": "30*",
+    "runs": 30,
+    "date": "29th July 2026",
+    "league": "NCU Midweek League Playoffs",
+    "opponent": "Muckamore MW1 XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "169",
+    "runs": 169,
+    "date": "29th July 2026",
+    "league": "NCU Midweek League Playoffs",
+    "opponent": "Muckamore MW1 XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "63*",
+    "runs": 63,
+    "date": "26th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Ardent Blues 4th XI"
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "type": "batting",
+    "record": "58*",
+    "runs": 58,
+    "date": "26th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Ardent Blues 4th XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "180",
+    "runs": 180,
+    "date": "26th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Ardent Blues 4th XI"
+  },
+  {
+    "name": "Arush Nimmagadda",
+    "type": "batting",
+    "record": "65",
+    "runs": 65,
+    "date": "25th July 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Drumaness Superkings 1st XI"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "type": "batting",
+    "record": "51",
+    "runs": 51,
+    "date": "25th July 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Drumaness Superkings 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "321",
+    "runs": 321,
+    "date": "25th July 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Drumaness Superkings 1st XI"
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "type": "batting",
+    "record": "30*",
+    "runs": 30,
+    "date": "22nd July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "CSNI MW XI"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "type": "batting",
+    "record": "33*",
+    "runs": 33,
+    "date": "22nd July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "CSNI MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "178",
+    "runs": 178,
+    "date": "22nd July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "CSNI MW XI"
+  },
+  {
+    "name": "Kiran Maheswaram",
+    "type": "bowling",
+    "record": "3-25",
+    "wickets": 3,
+    "runs": 25,
+    "date": "22nd July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "CSNI MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "170",
+    "runs": 170,
+    "date": "19th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Downpatrick 3rd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "125",
+    "runs": 125,
+    "date": "19th July 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Belfast Superkings 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "200",
+    "runs": 200,
+    "date": "18th July 2026",
+    "league": "NCU Development Cup",
+    "opponent": "Lisburn 5th XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "34*",
+    "runs": 34,
+    "date": "14th July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Dunmurry MW2 XI"
+  },
+  {
+    "name": "Asad Murtuza",
+    "type": "batting",
+    "record": "32*",
+    "runs": 32,
+    "date": "14th July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Dunmurry MW2 XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "181",
+    "runs": 181,
+    "date": "14th July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Dunmurry MW2 XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "127*",
+    "runs": 127,
+    "date": "12th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Amigos Belfast 3rd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "242",
+    "runs": 242,
+    "date": "12th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Amigos Belfast 3rd XI"
+  },
+  {
+    "name": "Asad Murtuza",
+    "type": "batting",
+    "record": "31*",
+    "runs": 31,
+    "date": "8th July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Muckamore MW2 XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "138",
+    "runs": 138,
+    "date": "8th July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Muckamore MW2 XI"
+  },
+  {
+    "name": "Haneef Shaik",
+    "type": "bowling",
+    "record": "3-18",
+    "wickets": 3,
+    "runs": 18,
+    "date": "8th July 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Muckamore MW2 XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "167",
+    "runs": 167,
+    "date": "5th July 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Dungannon 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "118",
+    "runs": 118,
+    "date": "4th July 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Ards & Donaghadee 1st XI"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "type": "batting",
+    "record": "33*",
+    "runs": 33,
+    "date": "30th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cliftonville Academy MW XI"
+  },
+  {
+    "name": "Wasim SM",
+    "type": "batting",
+    "record": "31*",
+    "runs": 31,
+    "date": "30th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cliftonville Academy MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "160",
+    "runs": 160,
+    "date": "30th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cliftonville Academy MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "79",
+    "runs": 79,
+    "date": "27th June 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Victoria 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "126",
+    "runs": 126,
+    "date": "25th June 2026",
+    "league": "NCU Lagan Valley Steels T20 Shield",
+    "opponent": "Ards & Donaghadee 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "60",
+    "runs": 60,
+    "date": "24th June 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Belfast Superkings 1st XI"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "type": "batting",
+    "record": "30*",
+    "runs": 30,
+    "date": "23rd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cooke Collegians MW XI"
+  },
+  {
+    "name": "Wasim SM",
+    "type": "batting",
+    "record": "31*",
+    "runs": 31,
+    "date": "23rd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cooke Collegians MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "183",
+    "runs": 183,
+    "date": "23rd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cooke Collegians MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "110",
+    "runs": 110,
+    "date": "21st June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Templepatrick 4th XI"
+  },
+  {
+    "name": "Asad Murtuza",
+    "type": "batting",
+    "record": "50*",
+    "runs": 50,
+    "date": "20th June 2026",
+    "league": "NCU Development Cup",
+    "opponent": "CSNI 5th XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "95",
+    "runs": 95,
+    "date": "20th June 2026",
+    "league": "NCU Development Cup",
+    "opponent": "CSNI 5th XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "121",
+    "runs": 121,
+    "date": "20th June 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Dundrum 1st XI"
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "type": "bowling",
+    "record": "8-7",
+    "wickets": 8,
+    "runs": 7,
+    "date": "20th June 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Dundrum 1st XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "33*",
+    "runs": 33,
+    "date": "16th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cregagh MW XI"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "type": "batting",
+    "record": "31*",
+    "runs": 31,
+    "date": "16th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cregagh MW XI"
+  },
+  {
+    "name": "Asad Murtuza",
+    "type": "batting",
+    "record": "34*",
+    "runs": 34,
+    "date": "16th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cregagh MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "147",
+    "runs": 147,
+    "date": "16th June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Cregagh MW XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "61*",
+    "runs": 61,
+    "date": "14th June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "North Down 4th XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "130",
+    "runs": 130,
+    "date": "14th June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "North Down 4th XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "88",
+    "runs": 88,
+    "date": "13th June 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Amigos Belfast 1st XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "60",
+    "runs": 60,
+    "date": "7th June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "CI 5th XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "148",
+    "runs": 148,
+    "date": "7th June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "CI 5th XI"
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "type": "batting",
+    "record": "50",
+    "runs": 50,
+    "date": "6th June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Lurgan 3rd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "147",
+    "runs": 147,
+    "date": "6th June 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Lurgan 3rd XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "33*",
+    "runs": 33,
+    "date": "2nd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Belfast MW XI"
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "type": "batting",
+    "record": "33*",
+    "runs": 33,
+    "date": "2nd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Belfast MW XI"
+  },
+  {
+    "name": "Extras",
+    "type": "batting",
+    "record": "35",
+    "runs": 35,
+    "date": "2nd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Belfast MW XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "152",
+    "runs": 152,
+    "date": "2nd June 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Belfast MW XI"
+  },
+  {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "51",
+    "runs": 51,
+    "date": "30th May 2026",
+    "league": "NCU Development Cup",
+    "opponent": "Saintfield 3rd XI"
+  },
+  {
+    "name": "Wasim SM",
+    "type": "batting",
+    "record": "66",
+    "runs": 66,
+    "date": "30th May 2026",
+    "league": "NCU Development Cup",
+    "opponent": "Saintfield 3rd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "183",
+    "runs": 183,
+    "date": "30th May 2026",
+    "league": "NCU Development Cup",
+    "opponent": "Saintfield 3rd XI"
+  },
+  {
+    "name": "Vonga Vishnu",
+    "type": "batting",
+    "record": "35*",
+    "runs": 35,
+    "date": "26th May 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Ardent Blues MW2 XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "115",
+    "runs": 115,
+    "date": "26th May 2026",
+    "league": "NCU Midweek League Group B",
+    "opponent": "Ardent Blues MW2 XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "99",
+    "runs": 99,
+    "date": "23rd May 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Drumaness Superkings 1st XI"
+  },
+  {
+    "name": "Veerendra Babu Nagari",
+    "type": "bowling",
+    "record": "5-53",
+    "wickets": 5,
+    "runs": 53,
+    "date": "17th May 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "NIMACC 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "88",
+    "runs": 88,
+    "date": "17th May 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "NIMACC 1st XI"
+  },
+  {
+    "name": "Anil Narra",
+    "type": "batting",
+    "record": "58",
+    "runs": 58,
+    "date": "10th May 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "NIMACC 2nd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "193",
+    "runs": 193,
+    "date": "10th May 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "NIMACC 2nd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "120",
+    "runs": 120,
+    "date": "9th May 2026",
+    "league": "NCU Junior Cup",
+    "opponent": "BISC 1st XI"
+  }
+]
