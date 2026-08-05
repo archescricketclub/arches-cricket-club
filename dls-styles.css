@@ -64,9 +64,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.8rem;
-    background: var(--bg);
-    border: 2px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     transition: all 0.2s ease;
     text-align: center;
@@ -119,12 +119,13 @@
 .penalty-box { display: flex; align-items: center; gap: 0.8rem; color: #fff; }
 .penalty-box label { font-size: 0.9rem; text-align: right; max-width: 200px; line-height: 1.3; }
 .penalty-box input, .input-line input, .stoppage-table input {
-    background: var(--bg);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #fff;
+    color: #000;
+    border: 1px solid rgba(255, 183, 3, 0.5);
     border-radius: 4px;
     text-align: center;
     font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 .penalty-box input { width: 60px; padding: 0.4rem; font-size: 1.1rem; }
 
@@ -210,6 +211,23 @@
 .pulse-btn {
     animation: pulse-amber 2s infinite;
 }
+
+.secondary-btn, .ghost-btn, .primary-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+.secondary-btn { background: #fff; color: #000; border: 1px solid #ccc; }
+.secondary-btn:hover { background: #f1f5f9; }
+.ghost-btn { background: transparent; color: var(--muted); border: 1px solid rgba(255,255,255,0.2); }
+.ghost-btn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+.primary-btn { background: var(--amber); color: #000; border: none; font-size: 1rem; padding: 0.6rem 1.5rem; }
+.primary-btn:hover { background: var(--gold); transform: translateY(-1px); }
 
 @keyframes pulse-amber {
     0% { box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.4); }
