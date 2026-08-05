@@ -96,9 +96,15 @@ async function scrapeFixtures() {
         data = JSON.parse(fs.readFileSync(matchesPath, 'utf8'));
     }
     
-    // Simple normalize function to avoid duplicates
-    function normalize(t) {
-        return t.toLowerCase().replace(/1st xi/g, '').replace(/2nd xi/g, '').replace(/mw xi/g, '').trim();
+    // Robust normalize function to avoid duplicates and handle "2nd XI" vs "2"
+    function normalize(teamName) {
+        let name = teamName.toLowerCase();
+        let num = 1;
+        if (name.includes('2nd') || /\\b2\\b/.test(name)) num = 2;
+        else if (name.includes('3rd') || /\\b3\\b/.test(name)) num = 3;
+        else if (name.includes('4th') || /\\b4\\b/.test(name)) num = 4;
+        else if (name.includes('mw')) num = 'mw';
+        return name.split(' ')[0] + '_' + num;
     }
     
     let added = 0;

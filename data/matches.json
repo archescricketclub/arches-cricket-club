@@ -28,15 +28,6 @@
       "league": "Junior League 10"
     },
     {
-      "homeTeam": "Arches 2",
-      "awayTeam": "Cooke Collegians 4",
-      "date": "9th August 2026",
-      "time": "1:00 PM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Amigos Belfast 1st XI",
       "date": "15th August 2026",
@@ -64,29 +55,11 @@
       "league": "Junior League 10"
     },
     {
-      "homeTeam": "Belfast Superkings 2",
-      "awayTeam": "Arches 2",
-      "date": "23rd August 2026",
-      "time": "1:00 PM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Belfast Superkings 3rd XI",
       "date": "29th August 2026",
       "time": "1:00 PM",
       "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
-      "homeTeam": "Arches 2",
-      "awayTeam": "Belfast Superkings 3",
-      "date": "29th August 2026",
-      "time": "1:00 PM",
-      "venue": "TBD",
       "status": "",
       "league": "Junior League 10"
     }
