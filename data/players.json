@@ -1484,29 +1484,6 @@
       ]
     },
     {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-24",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Abubakar Rehmani",
       "jersey": "#—",
       "cap": "AR",
@@ -1530,9 +1507,9 @@
       ]
     },
     {
-      "name": "Anvesh Choudary Mannuru",
-      "jersey": "#2",
-      "cap": "AM28",
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
       "stats": [
         {
           "n": "1",
@@ -1547,7 +1524,7 @@
           "l": "Wickets"
         },
         {
-          "n": "1-31",
+          "n": "1-24",
           "l": "Best Fig"
         }
       ]
@@ -1576,6 +1553,29 @@
       ]
     },
     {
+      "name": "Anvesh Choudary Mannuru",
+      "jersey": "#2",
+      "cap": "AM28",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-31",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Yaungicha Mirthivada",
       "jersey": "#—",
       "cap": "YM",
@@ -1599,29 +1599,6 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
-      "stats": [
-        {
-          "n": "8",
-          "l": "Matches"
-        },
-        {
-          "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-3",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Asad Murtuza",
       "jersey": "#22",
       "cap": "AM04",
@@ -1640,6 +1617,29 @@
         },
         {
           "n": "0-12",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "8",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-3",
           "l": "Best Fig"
         }
       ]
@@ -2158,29 +2158,6 @@
       ]
     },
     {
-      "name": "Wasim SM",
-      "jersey": "#1",
-      "cap": "WSM1",
-      "stats": [
-        {
-          "n": "9",
-          "l": "Matches"
-        },
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-20",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -2199,6 +2176,29 @@
         },
         {
           "n": "0-17",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Wasim SM",
+      "jersey": "#1",
+      "cap": "WSM1",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-20",
           "l": "Best Fig"
         }
       ]
