@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Dunmurry MW2 XI",
-      "date": "6th August 2026",
-      "time": "6:00 PM",
-      "venue": "City of Belfast Playing Fields (Dunmurry)",
-      "status": "",
-      "league": "Midweek League"
-    },
-    {
       "homeTeam": "Dundrum 1st XI",
       "awayTeam": "Arches 1st XI",
       "date": "8th August 2026",
@@ -423,7 +414,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Arches 1st XI won by 1 wicket"
+    },
+    {
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "date": "6th August 2026",
+      "time": "6:00 PM",
+      "venue": "City of Belfast Playing Fields (Dunmurry)",
+      "status": "",
+      "league": "Midweek League",
+      "result": "Dunmurry MW2 XI won by 101 runs"
     }
   ],
-  "lastUpdated": "2026-08-06T14:09:18.954Z"
+  "lastUpdated": "2026-08-07T02:39:37.855Z"
 }
