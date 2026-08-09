@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Dundrum 1st XI",
-      "awayTeam": "Arches 1st XI",
-      "date": "8th August 2026",
-      "time": "12:00 PM",
-      "venue": "The Meadow",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Cooke Collegians 4th XI",
       "date": "9th August 2026",
@@ -424,7 +415,17 @@
       "status": "",
       "league": "Midweek League",
       "result": "Dunmurry MW2 XI won by 101 runs"
+    },
+    {
+      "homeTeam": "Dundrum 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "date": "8th August 2026",
+      "time": "12:00 PM",
+      "venue": "The Meadow",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Dundrum 1st XI won by 80 runs"
     }
   ],
-  "lastUpdated": "2026-08-08T12:48:07.183Z"
+  "lastUpdated": "2026-08-09T12:50:27.683Z"
 }

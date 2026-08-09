@@ -4,14 +4,29 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 1635,
+      "runs": 1669,
       "hs": "131",
-      "matches": 27
+      "matches": 28
     },
     "bowling": {
       "wickets": 2,
       "bestFig": "1-13",
       "matches": 8
+    }
+  },
+  {
+    "name": "Kishan Karneedi",
+    "jersey": "#11",
+    "cap": "KK11",
+    "batting": {
+      "runs": 768,
+      "hs": "47",
+      "matches": 29
+    },
+    "bowling": {
+      "wickets": 185,
+      "bestFig": "5-22",
+      "matches": 29
     }
   },
   {
@@ -45,18 +60,18 @@
     }
   },
   {
-    "name": "Kishan Karneedi",
-    "jersey": "#11",
-    "cap": "KK11",
+    "name": "Dushyanth Reddy B",
+    "jersey": "#23",
+    "cap": "DB23",
     "batting": {
-      "runs": 741,
-      "hs": "47",
-      "matches": 28
+      "runs": 684,
+      "hs": "73",
+      "matches": 13
     },
     "bowling": {
-      "wickets": 179,
-      "bestFig": "5-22",
-      "matches": 28
+      "wickets": 56,
+      "bestFig": "4-30",
+      "matches": 13
     }
   },
   {
@@ -72,21 +87,6 @@
       "wickets": 2,
       "bestFig": "2-38",
       "matches": 0
-    }
-  },
-  {
-    "name": "Dushyanth Reddy B",
-    "jersey": "#23",
-    "cap": "DB23",
-    "batting": {
-      "runs": 646,
-      "hs": "73",
-      "matches": 12
-    },
-    "bowling": {
-      "wickets": 52,
-      "bestFig": "4-30",
-      "matches": 12
     }
   },
   {
@@ -109,14 +109,14 @@
     "jersey": "#45",
     "cap": "CH45",
     "batting": {
-      "runs": 474,
+      "runs": 480,
       "hs": "34*",
-      "matches": 22
+      "matches": 23
     },
     "bowling": {
-      "wickets": 102,
+      "wickets": 104,
       "bestFig": "3-20",
-      "matches": 21
+      "matches": 24
     }
   },
   {
@@ -126,12 +126,12 @@
     "batting": {
       "runs": 404,
       "hs": "56",
-      "matches": 20
+      "matches": 21
     },
     "bowling": {
-      "wickets": 90,
-      "bestFig": "4",
-      "matches": 21
+      "wickets": 98,
+      "bestFig": "5",
+      "matches": 22
     }
   },
   {
@@ -180,6 +180,21 @@
     }
   },
   {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 212,
+      "hs": "58*",
+      "matches": 19
+    },
+    "bowling": {
+      "wickets": 11,
+      "bestFig": "1",
+      "matches": 18
+    }
+  },
+  {
     "name": "Vinay Tummala",
     "jersey": "#10",
     "cap": "VT10",
@@ -214,14 +229,14 @@
     "jersey": "#—",
     "cap": "AR",
     "batting": {
-      "runs": 190,
+      "runs": 196,
       "hs": "50",
-      "matches": 12
+      "matches": 13
     },
     "bowling": {
-      "wickets": 68,
+      "wickets": 76,
       "bestFig": "21",
-      "matches": 12
+      "matches": 13
     }
   },
   {
@@ -229,14 +244,14 @@
     "jersey": "#72",
     "cap": "AN72",
     "batting": {
-      "runs": 186,
+      "runs": 187,
       "hs": "65",
-      "matches": 13
+      "matches": 14
     },
     "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 0
+      "wickets": 2,
+      "bestFig": "0",
+      "matches": 13
     }
   },
   {
@@ -270,21 +285,6 @@
     }
   },
   {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 156,
-      "hs": "58*",
-      "matches": 18
-    },
-    "bowling": {
-      "wickets": 11,
-      "bestFig": "1",
-      "matches": 17
-    }
-  },
-  {
     "name": "Harsha Sai",
     "jersey": "#8",
     "cap": "VK18",
@@ -304,9 +304,9 @@
     "jersey": "#99",
     "cap": "CR99",
     "batting": {
-      "runs": 152,
+      "runs": 153,
       "hs": "22*",
-      "matches": 7
+      "matches": 8
     },
     "bowling": {
       "wickets": 1,
@@ -349,14 +349,14 @@
     "jersey": "#9",
     "cap": "VJ09",
     "batting": {
-      "runs": 75,
+      "runs": 76,
       "hs": "23",
-      "matches": 13
+      "matches": 14
     },
     "bowling": {
-      "wickets": 74,
+      "wickets": 82,
       "bestFig": "3-26",
-      "matches": 13
+      "matches": 14
     }
   },
   {
@@ -471,12 +471,12 @@
     "batting": {
       "runs": 15,
       "hs": "8",
-      "matches": 6
+      "matches": 7
     },
     "bowling": {
-      "wickets": 9,
-      "bestFig": "0",
-      "matches": 7
+      "wickets": 11,
+      "bestFig": "1",
+      "matches": 8
     }
   },
   {
