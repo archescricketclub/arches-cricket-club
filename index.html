@@ -96,20 +96,19 @@
                     </div>
                     <div class="hero-stats reveal">
                         <div>
-                            <div class="hero-stat-number" data-target="44" id="hero-stat-matches">0</div>
+                            <div class="hero-stat-number" data-target="44" id="hero-stat-matches">-</div>
                             <div class="hero-stat-label">Matches Played</div>
                         </div>
                         <div>
-                            <div class="hero-stat-number" data-target="23" id="hero-stat-victories">0</div>
+                            <div class="hero-stat-number" data-target="23" id="hero-stat-victories">-</div>
                             <div class="hero-stat-label">Victories</div>
                         </div>
                         <div>
-                            <div class="hero-stat-number" data-target="33" id="hero-stat-squad">0</div>
+                            <div class="hero-stat-number" data-target="33" id="hero-stat-squad">-</div>
                             <div class="hero-stat-label">Squad Members</div>
                         </div>
                         <div>
-                            <div class="hero-stat-number" data-target="1">0</div>
-                            <div class="hero-stat-label">Trophy</div>
+                            
                         </div>
                     </div>
                 </div>
@@ -126,13 +125,13 @@
                         <!-- Floating cards -->
                         <div class="hero-floating-card hfc-next">
                             <div class="hfc-label">Next Match</div>
-                            <div class="hfc-value" id="hero-next-date">04 Apr 2026</div>
-                            <div class="hfc-sub" id="hero-next-teams">Arches-1 vs Arches-2 · T20</div>
+                            <div class="hfc-value" id="hero-next-date">-</div>
+                            <div class="hfc-sub" id="hero-next-teams">-</div>
                         </div>
                         <div class="hero-floating-card hfc-win">
                             <div class="hfc-label">Win Rate</div>
                             <div class="hfc-value" id="hero-win-rate">52%</div>
-                            <div class="hfc-sub">2025 Season</div>
+                            <div class="hfc-sub">CURRENT SEASON 2026</div>
                         </div>
                     </div>
                 </div>
@@ -173,14 +172,14 @@
                     <span>🏠</span> Upcoming Home Fixtures
                 </h3>
                 <div class="matches-grid" id="upcoming-home-matches-grid" style="margin-bottom: 3rem;">
-                    <div style="grid-column:1/-1;text-align:center;color:var(--muted);">Loading home matches...</div>
+                    <div class="loading-state" style="padding: 2rem;"><div class="spinner"></div><p>Loading home matches...</p></div>
                 </div>
 
                 <h3 style="font-size:1.3rem; font-family:'Orbitron',sans-serif; margin-bottom:1.25rem; color:var(--gold); display:flex; align-items:center; gap:0.5rem;" class="reveal">
                     <span>📅</span> Upcoming Fixtures
                 </h3>
                 <div class="matches-grid" id="upcoming-all-matches-grid">
-                    <div style="grid-column:1/-1;text-align:center;color:var(--muted);">Loading overall matches...</div>
+                    <div class="loading-state" style="padding: 2rem;"><div class="spinner"></div><p>Loading overall matches...</p></div>
                 </div>
             </div>
 
@@ -199,23 +198,22 @@
             <div class="stats-grid">
                 <div class="stat-item reveal">
                     <span class="stat-icon">🏏</span>
-                    <div class="stat-num"><span class="count" data-target="44" id="stats-matches">0</span>+</div>
+                    <div class="stat-num"><span class="count" data-target="44" id="stats-matches">-</span>+</div>
                     <div class="stat-label">Matches Played</div>
                 </div>
                 <div class="stat-item reveal reveal-delay-1">
                     <span class="stat-icon">🏆</span>
-                    <div class="stat-num"><span class="count" data-target="23" id="stats-victories">0</span></div>
+                    <div class="stat-num"><span class="count" data-target="23" id="stats-victories">-</span></div>
                     <div class="stat-label">Victories</div>
                 </div>
                 <div class="stat-item reveal reveal-delay-2">
                     <span class="stat-icon">👥</span>
-                    <div class="stat-num"><span class="count" data-target="33" id="stats-squad">0</span></div>
+                    <div class="stat-num"><span class="count" data-target="33" id="stats-squad">-</span></div>
                     <div class="stat-label">Squad Members</div>
                 </div>
                 <div class="stat-item reveal reveal-delay-3">
                     <span class="stat-icon">⭐</span>
-                    <div class="stat-num"><span class="count" data-target="1">0</span></div>
-                    <div class="stat-label">Trophy Won</div>
+                    
                 </div>
             </div>
         </div>
@@ -662,7 +660,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script src="js/main.js"></script>
-  <script src="js/dls.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 
