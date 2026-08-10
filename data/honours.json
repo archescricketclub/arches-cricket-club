@@ -718,5 +718,15 @@
     "league": "Senior League 3",
     "season": "2025",
     "category": "hat-trick"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "63",
+    "type": "batting",
+    "date": "26th July 2026",
+    "opponent": "Ardent Blues 4th XI",
+    "league": "Junior League 10",
+    "season": "2026",
+    "category": "half-century"
   }
 ]
