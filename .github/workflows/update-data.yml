@@ -49,7 +49,9 @@ jobs:
       # 6️⃣ Compile Honours & Career Stats  (new step)
       # --------------------------------------------------
       - name: Compile Honours and Career Stats
-        run: node scripts/compile_honours.js
+        run: |
+          node scripts/scrape_scorecards.js
+          node scripts/compile_honours.js
 
       # --------------------------------------------------
       # 7️⃣ Commit and push all generated JSON files
@@ -63,6 +65,7 @@ jobs:
 
           git add data/players.json data/matches.json \
                   data/honours.json data/career_stats.json \
+                  data/scorecard_milestones.json \
                   public/data/players.json public/data/matches.json \
                   public/data/honours.json public/data/career_stats.json
 

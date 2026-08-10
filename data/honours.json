@@ -160,26 +160,6 @@
     "category": "half-century"
   },
   {
-    "name": "Ali Rizwan",
-    "record": "127*",
-    "type": "batting",
-    "date": "27th June 2026",
-    "opponent": "Amigos Belfast 3rd",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "century"
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "record": "58*",
-    "type": "batting",
-    "date": "26th July 2026",
-    "opponent": "Ardent Blues 4th",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
     "name": "Kishan Karneedi",
     "record": "33*",
     "type": "batting",
@@ -228,106 +208,6 @@
     "league": "Cup Matches",
     "season": "2026",
     "category": "half-century"
-  },
-  {
-    "name": "Vonga Vishnu",
-    "record": "56",
-    "type": "batting",
-    "date": "2nd August 2026",
-    "opponent": "NIMACC 1st",
-    "league": "NCU Mercury Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Asad Murtuza",
-    "record": "50*",
-    "type": "batting",
-    "date": "2nd August 2026",
-    "opponent": "NIMACC 1st",
-    "league": "NCU Mercury Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Ali Rizwan",
-    "record": "68",
-    "type": "batting",
-    "date": "1st August 2026",
-    "opponent": "Amigos Belfast 2nd",
-    "league": "NCU Development Cup",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Wasim SM",
-    "record": "30*",
-    "type": "batting",
-    "date": "29th July 2026",
-    "opponent": "Muckamore MW1",
-    "league": "NCU Midweek League Playoffs",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Ali Rizwan",
-    "record": "63*",
-    "type": "batting",
-    "date": "26th July 2026",
-    "opponent": "Ardent Blues 4th",
-    "league": "NCU Junior League 10",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Vonga Vishnu",
-    "record": "51",
-    "type": "batting",
-    "date": "25th July 2026",
-    "opponent": "Drumaness Superkings 1st",
-    "league": "NCU Mercury Senior League 3",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Ali Rizwan",
-    "record": "34*",
-    "type": "batting",
-    "date": "14th July 2026",
-    "opponent": "Dunmurry MW2",
-    "league": "NCU Midweek League Group B",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Asad Murtuza",
-    "record": "32*",
-    "type": "batting",
-    "date": "14th July 2026",
-    "opponent": "Dunmurry MW2",
-    "league": "NCU Midweek League Group B",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Asad Murtuza",
-    "record": "31*",
-    "type": "batting",
-    "date": "8th July 2026",
-    "opponent": "Muckamore MW2",
-    "league": "NCU Midweek League Group B",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Haneef Shaik",
-    "record": "3-18",
-    "type": "bowling",
-    "date": "8th July 2026",
-    "opponent": "Muckamore MW2",
-    "league": "NCU Midweek League Group B",
-    "season": "2026",
-    "category": "midweek-3w"
   },
   {
     "name": "Vonga Vishnu",
