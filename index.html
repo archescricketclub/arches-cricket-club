@@ -131,7 +131,7 @@
                         <div class="hero-floating-card hfc-win">
                             <div class="hfc-label">Win Rate</div>
                             <div class="hfc-value" id="hero-win-rate">52%</div>
-                            <div class="hfc-sub">CURRENT SEASON 2026</div>
+                            <div class="hfc-sub">CURRENT SEASON 2026 <br><span id="season-status" style="display:none; color:var(--gold); font-size:1.2rem; margin-top:0.5rem;">🏆 SEASON COMPLETE</span></div>
                         </div>
                     </div>
                 </div>
@@ -141,21 +141,7 @@
 
     <!-- ─── LIVE TICKER ─── -->
     <div class="ticker">
-        <div class="ticker-inner" id="tickerInner">
-            <div class="ticker-item"><span class="ticker-sep"></span> 🏏 Arches CC vs Ards & Donaghadee — 02 May 2026 — Comber</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> NIMACC  vs Arches CC — 16 May 2026 — TBC</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs Drumaness Superkings — 23 May 2026 — Drumaness</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Belfast Superkings vs Arches CC — 30 May 2026 — TBC</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Amigos Belfast  vs Arches CC — 13 Jun 2026 — Home</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs Dundrum — 20 Jun 2026 — Dundrum</div>
-            <!-- Duplicate for seamless loop -->
-             <div class="ticker-item"><span class="ticker-sep"></span> 🏏 Arches CC vs Ards & Donaghadee — 02 May 2026 — Comber</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> NIMACC  vs Arches CC — 16 May 2026 — TBC</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs Drumaness Superkings — 23 May 2026 — Drumaness</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Belfast Superkings vs Arches CC — 30 May 2026 — TBC</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Amigos Belfast  vs Arches CC — 13 Jun 2026 — Home</div>
-            <div class="ticker-item"><span class="ticker-sep"></span> Arches CC vs Dundrum — 20 Jun 2026 — Dundrum</div>
-        </div>
+        <div class="ticker-inner" id="dynamic-ticker"></div>
     </div>
 
     <!-- ─── UPCOMING MATCHES ─── -->
@@ -660,7 +646,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script src="js/main.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index.js?v=1786372768"></script>
 
 </body>
 

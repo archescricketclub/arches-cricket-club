@@ -200,19 +200,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // --- 1. HERO "NEXT MATCH" LOGIC ---
             if (futureMatches.length > 0) {
                 const nextMatch = futureMatches[0];
-                const safeDate = escapeHTML((nextMatch.date || '').replace(/\n/g, ' '));
+                const safeDate = escapeHTML((nextMatch.date || '').replace(/
+/g, ' '));
                 document.getElementById('hero-next-date').textContent = safeDate;
                 const safeHome = escapeHTML(nextMatch.homeTeam);
                 const safeAway = escapeHTML(nextMatch.awayTeam);
                 const safeFormat = escapeHTML(nextMatch.league || 'T20');
                 document.getElementById('hero-next-teams').textContent = `${safeHome} vs ${safeAway} · ${safeFormat}`;
             } else if (pastMatches.length > 0) {
+                const badge = document.getElementById('season-status');
+                if (badge) badge.style.display = 'inline-block';
                 // Fallback to Latest Result
                 const hLabel = document.getElementById('hero-next-heading');
                 if (hLabel) hLabel.textContent = "Latest Result";
                 
                 const latestMatch = pastMatches[0];
-                const safeDate = escapeHTML((latestMatch.date || '').replace(/\n/g, ' '));
+                const safeDate = escapeHTML((latestMatch.date || '').replace(/
+/g, ' '));
                 document.getElementById('hero-next-date').textContent = safeDate;
                 const safeHome = escapeHTML(latestMatch.homeTeam);
                 const safeAway = escapeHTML(latestMatch.awayTeam);
