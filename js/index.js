@@ -242,6 +242,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderMatchCards(pastMatches.slice(3, 6), 'upcoming-other', 3);
             }
             
+            // --- 4. STATS LOGIC ---
+            const statMatches = document.getElementById('hero-stat-matches');
+            if (statMatches) statMatches.textContent = pastMatches.length;
+            
+            const statVictories = document.getElementById('hero-stat-victories');
+            const victories = pastMatches.filter(m => m.result && m.result.toLowerCase().includes('arches') && m.result.toLowerCase().includes('won')).length + pastMatches.filter(m => m.result && m.result.toLowerCase().includes('arches') && m.result.toLowerCase().includes('beat')).length;
+            if (statVictories) statVictories.textContent = victories;
+            
+            const statWinRate = document.getElementById('hero-win-rate');
+            if (statWinRate && pastMatches.length > 0) {
+                statWinRate.textContent = Math.round((victories / pastMatches.length) * 100) + '%';
+            }
+
             // --- 3. TICKER LOGIC ---
             // Take up to 10 most recent matches/upcoming matches to form the ticker
             let tickerMatches = [];
