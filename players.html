@@ -953,7 +953,15 @@
         }
 
         // Initialize on DOM load
-        document.addEventListener('DOMContentLoaded', () => { if (window.location.hash) { const t = window.location.hash.substring(1); const b = document.querySelector(.team-tab[onclick*='']); if (b) switchTeam(t, b); else switchTeam(t); } initData(); });
+        document.addEventListener('DOMContentLoaded', () => { 
+            if (window.location.hash) { 
+                const t = window.location.hash.substring(1); 
+                const b = document.querySelector(".team-tab[onclick*='" + t + "']"); 
+                if (b) switchTeam(t, b); 
+                else switchTeam(t); 
+            } 
+            initData(); 
+        });
 
         /* ─── VIEW ALL ───────────────────────────────────── */
         function toggleAll(gridId, btn) {

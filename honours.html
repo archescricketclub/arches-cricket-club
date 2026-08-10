@@ -504,7 +504,14 @@
       grid.innerHTML = tableHTML;
     }
 
-    document.addEventListener('DOMContentLoaded', () => { if (window.location.hash) { const cat = window.location.hash.substring(1); const btn = document.querySelector(.tab-btn[onclick*='']); if (btn) { switchCategory(cat, btn); } else { switchCategory(cat); } } loadHonours(); });
+    document.addEventListener('DOMContentLoaded', () => { 
+      if (window.location.hash) { 
+        const cat = window.location.hash.substring(1); 
+        const btn = document.querySelector(".tab-btn[onclick*='" + cat + "']"); 
+        if (btn) { switchCategory(cat, btn); } else { switchCategory(cat); } 
+      } 
+      loadHonours(); 
+    });
 
     /* Mobile nav */
     function toggleMobileNav() {
