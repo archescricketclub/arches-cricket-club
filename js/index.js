@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function parseMatchDate(dateStr) {
         if (!dateStr || dateStr.toUpperCase() === 'TBD') return null;
-        const cleanStr = dateStr.replace(/\n/g, ' ').trim();
+        const cleanStr = dateStr.replace(/\\n/g, ' ').trim();
         const parts = cleanStr.split(/\s+/);
         let day = null;
         let month = null;
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         grid.innerHTML = list.map((m, idx) => {
             const isHome = m.homeTeam.toLowerCase().includes('arches');
-            const safeDate = escapeHTML((m.date || '').replace(/\n/g, ' '));
-            const safeTime = escapeHTML((m.time || '').replace(/\n/g, ' '));
+            const safeDate = escapeHTML((m.date || '').replace(/\\n/g, ' '));
+            const safeTime = escapeHTML((m.time || '').replace(/\\n/g, ' '));
             const dateText = safeTime ? `${safeDate} · ${safeTime}` : safeDate;
             const safeHome = escapeHTML(m.homeTeam);
             const safeAway = escapeHTML(m.awayTeam);
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let tickerHtml = '';
         matches.forEach(m => {
-            const safeDate = escapeHTML((m.date || '').replace(/\n/g, ' '));
+            const safeDate = escapeHTML((m.date || '').replace(/\\n/g, ' '));
             const safeHome = escapeHTML(m.homeTeam);
             const safeAway = escapeHTML(m.awayTeam);
             const safeVenue = escapeHTML(m.venue);
@@ -200,8 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // --- 1. HERO "NEXT MATCH" LOGIC ---
             if (futureMatches.length > 0) {
                 const nextMatch = futureMatches[0];
-                const safeDate = escapeHTML((nextMatch.date || '').replace(/
-/g, ' '));
+                const safeDate = escapeHTML((nextMatch.date || '').replace(/\n/g, ' '));
                 document.getElementById('hero-next-date').textContent = safeDate;
                 const safeHome = escapeHTML(nextMatch.homeTeam);
                 const safeAway = escapeHTML(nextMatch.awayTeam);
@@ -215,8 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (hLabel) hLabel.textContent = "Latest Result";
                 
                 const latestMatch = pastMatches[0];
-                const safeDate = escapeHTML((latestMatch.date || '').replace(/
-/g, ' '));
+                const safeDate = escapeHTML((latestMatch.date || '').replace(/\n/g, ' '));
                 document.getElementById('hero-next-date').textContent = safeDate;
                 const safeHome = escapeHTML(latestMatch.homeTeam);
                 const safeAway = escapeHTML(latestMatch.awayTeam);
@@ -264,9 +262,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (!isNoResult) {
                     played++;
-                    if (resLower.includes('beat arches') || resLower.includes('lost') || resLower.includes('defeat')) {
-                        // Loss
-                    } else if (resLower.includes('arches beat') || resLower.includes('won') || resLower.includes('walkover to arches')) {
+                    // Win logic: Starts with arches, or explicitly says arches won/beat/walkover
+                    const isWin = resLower.startsWith('arches') || resLower.includes('arches won') || resLower.includes('arches beat') || resLower.includes('walkover to arches');
+                    if (isWin) {
                         wins++;
                     }
                 }
