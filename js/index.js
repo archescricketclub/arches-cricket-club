@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    function sortFixtures(list) {
+    function sortFixturesAsc(list) {
         return list.sort((a, b) => {
             const dA = parseMatchDate(a.date);
             const dB = parseMatchDate(b.date);
@@ -63,12 +63,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return dA - dB;
         });
     }
+    
+    function sortFixturesDesc(list) {
+        return list.sort((a, b) => {
+            const dA = parseMatchDate(a.date);
+            const dB = parseMatchDate(b.date);
+            if (!dA && !dB) return 0;
+            if (!dA) return 1;
+            if (!dB) return -1;
+            return dB - dA;
+        });
+    }
 
     function renderMatchCards(list, containerId, startIdx = 0) {
         const grid = document.getElementById(containerId);
         if (!grid) return;
         if (list.length === 0) {
-            grid.innerHTML = `<div class="glass-card" style="grid-column:1/-1;padding:2rem;text-align:center;color:var(--muted);">No upcoming matches scheduled</div>`;
+            grid.innerHTML = `<div class="glass-card" style="grid-column:1/-1;padding:2rem;text-align:center;color:var(--muted);">No matches found</div>`;
             return;
         }
         grid.innerHTML = list.map((m, idx) => {
@@ -79,6 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const safeHome = escapeHTML(m.homeTeam);
             const safeAway = escapeHTML(m.awayTeam);
             const safeVenue = escapeHTML(m.venue);
+            
+            // Show result if available
+            let resultHtml = '';
+            if (m.result && !m.result.toLowerCase().includes('tbd')) {
+                 resultHtml = `<div style="font-size: 0.8rem; color: var(--gold); margin-top: 0.5rem; text-align: center;">${escapeHTML(m.result)}</div>`;
+            }
             
             return `
                 <div class="match-card reveal reveal-delay-${((startIdx + idx) % 3) + 1} visible">
@@ -97,12 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="match-team-name ${!isHome ? 'highlight' : ''}">${safeAway}</div>
                         </div>
                     </div>
-                    <div class="match-footer">
+                    <div class="match-footer" style="flex-direction: column;">
                         <div class="match-venue"><i class="fa-solid fa-location-dot"></i> ${safeVenue}</div>
+                        ${resultHtml}
                     </div>
                 </div>
             `;
         }).join('');
+    }
+
+    function renderTicker(matches) {
+        const ticker = document.getElementById('dynamic-ticker');
+        if (!ticker) return;
+        
+        let tickerHtml = '';
+        matches.forEach(m => {
+            const safeDate = escapeHTML((m.date || '').replace(/\n/g, ' '));
+            const safeHome = escapeHTML(m.homeTeam);
+            const safeAway = escapeHTML(m.awayTeam);
+            const safeVenue = escapeHTML(m.venue);
+            let icon = safeHome.toLowerCase().includes('arches') ? '🏏' : '⚔️';
+            tickerHtml += `<div class="ticker-item"><span class="ticker-sep"></span> ${icon} ${safeHome} vs ${safeAway} — ${safeDate} — ${safeVenue}</div>\n`;
+        });
+        
+        // Duplicate the content so the scrolling CSS works seamlessly
+        ticker.innerHTML = tickerHtml + tickerHtml;
     }
 
     function showError(containerIds, message) {
@@ -128,36 +164,93 @@ document.addEventListener('DOMContentLoaded', () => {
             return res.json();
         })
         .then(data => {
-            const rawFixtures = data.fixtures || [];
-            const rawResults = data.results || [];
+            let rawFixtures = data.fixtures || [];
+            let rawResults = data.results || [];
             
-            // Calculate Next Match
-            const sortedFixtures = sortFixtures(rawFixtures);
             const now = new Date();
             now.setHours(0,0,0,0);
             
-            let nextMatch = null;
-            for (let i = 0; i < sortedFixtures.length; i++) {
-                const matchDate = parseMatchDate(sortedFixtures[i].date);
-                if (matchDate && matchDate >= now) {
-                    nextMatch = sortedFixtures[i];
-                    break;
-                }
-            }
+            // Separate all known matches into Past and Future based on date
+            // Note: rawResults are inherently past, rawFixtures might be past or future
+            let allMatches = [...rawFixtures, ...rawResults];
             
-            if (nextMatch) {
+            // Remove exact duplicates by comparing teams and date
+            const uniqueMap = new Map();
+            allMatches.forEach(m => {
+                const key = `${m.date}-${m.homeTeam}-${m.awayTeam}`;
+                if (!uniqueMap.has(key)) {
+                    uniqueMap.set(key, m);
+                } else if (m.result && !uniqueMap.get(key).result) {
+                    // Prefer the one with a result
+                    uniqueMap.set(key, m);
+                }
+            });
+            allMatches = Array.from(uniqueMap.values());
+            
+            const futureMatches = sortFixturesAsc(allMatches.filter(m => {
+                const matchDate = parseMatchDate(m.date);
+                return matchDate && matchDate >= now;
+            }));
+            
+            const pastMatches = sortFixturesDesc(allMatches.filter(m => {
+                const matchDate = parseMatchDate(m.date);
+                return !matchDate || matchDate < now;
+            }));
+
+            // --- 1. HERO "NEXT MATCH" LOGIC ---
+            if (futureMatches.length > 0) {
+                const nextMatch = futureMatches[0];
                 const safeDate = escapeHTML((nextMatch.date || '').replace(/\n/g, ' '));
                 document.getElementById('hero-next-date').textContent = safeDate;
                 const safeHome = escapeHTML(nextMatch.homeTeam);
                 const safeAway = escapeHTML(nextMatch.awayTeam);
                 const safeFormat = escapeHTML(nextMatch.league || 'T20');
                 document.getElementById('hero-next-teams').textContent = `${safeHome} vs ${safeAway} · ${safeFormat}`;
+            } else if (pastMatches.length > 0) {
+                // Fallback to Latest Result
+                const hLabel = document.getElementById('hero-next-heading');
+                if (hLabel) hLabel.textContent = "Latest Result";
+                
+                const latestMatch = pastMatches[0];
+                const safeDate = escapeHTML((latestMatch.date || '').replace(/\n/g, ' '));
+                document.getElementById('hero-next-date').textContent = safeDate;
+                const safeHome = escapeHTML(latestMatch.homeTeam);
+                const safeAway = escapeHTML(latestMatch.awayTeam);
+                const safeFormat = escapeHTML(latestMatch.league || 'T20');
+                document.getElementById('hero-next-teams').textContent = `${safeHome} vs ${safeAway} · ${safeFormat}`;
             } else {
-                document.getElementById('hero-next-date').textContent = "End of Season";
+                document.getElementById('hero-next-date').textContent = "Season Completed";
                 document.getElementById('hero-next-teams').textContent = "Check back next year";
             }
             
-            // Calculate Stats (Matches Played & Victories)
+            // --- 2. UPCOMING FIXTURES LOGIC ---
+            if (futureMatches.length > 0) {
+                const homeMatches = futureMatches.filter(m => m.homeTeam && m.homeTeam.toLowerCase().includes('arches')).slice(0, 3);
+                const otherMatches = futureMatches.filter(m => !(m.homeTeam && m.homeTeam.toLowerCase().includes('arches'))).slice(0, 3);
+                renderMatchCards(homeMatches, 'upcoming-home', 0);
+                renderMatchCards(otherMatches, 'upcoming-other', 3);
+            } else {
+                // Fallback: Show recent results if there are no future fixtures
+                const h1 = document.getElementById('home-fixtures-heading');
+                if (h1) h1.textContent = "Recent Matches";
+                const h2 = document.getElementById('other-fixtures-heading');
+                if (h2) h2.textContent = "Earlier Matches";
+                
+                renderMatchCards(pastMatches.slice(0, 3), 'upcoming-home', 0);
+                renderMatchCards(pastMatches.slice(3, 6), 'upcoming-other', 3);
+            }
+            
+            // --- 3. TICKER LOGIC ---
+            // Take up to 10 most recent matches/upcoming matches to form the ticker
+            let tickerMatches = [];
+            if (futureMatches.length >= 3) {
+                tickerMatches = [...futureMatches.slice(0, 5), ...pastMatches.slice(0, 5)];
+            } else {
+                tickerMatches = [...futureMatches, ...pastMatches.slice(0, 10 - futureMatches.length)];
+            }
+            renderTicker(tickerMatches);
+            
+            // --- 4. STATS LOGIC ---
             let wins = 0;
             let played = 0;
             rawResults.forEach(match => {
@@ -175,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             
-            // Update Stats UI
             const heroMatches = document.getElementById('hero-stat-matches');
             if (heroMatches) { heroMatches.dataset.target = played; animateCount(heroMatches, played, 1500); }
             const statsMatches = document.getElementById('stats-matches');
@@ -186,19 +278,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const statsVictories = document.getElementById('stats-victories');
             if (statsVictories) { statsVictories.dataset.target = wins; animateCount(statsVictories, wins, 1500); }
             
-            // Render upcoming fixtures (Home vs Away)
-            const homeMatches = sortedFixtures.filter(m => m.homeTeam && m.homeTeam.toLowerCase().includes('arches')).slice(0, 3);
-            const otherMatches = sortedFixtures.filter(m => !(m.homeTeam && m.homeTeam.toLowerCase().includes('arches'))).slice(0, 3);
-            
-            renderMatchCards(homeMatches, 'upcoming-home', 0);
-            renderMatchCards(otherMatches, 'upcoming-other', 3);
         })
         .catch(err => {
             console.error('Error fetching matches:', err);
-            showError(['upcoming-home', 'upcoming-other'], 'Unable to load fixtures. Please check the Fixtures page.');
+            showError(['upcoming-home', 'upcoming-other'], 'Unable to load matches. Please check the Fixtures page.');
             
-            document.getElementById('hero-next-date').textContent = "Unable to load";
-            document.getElementById('hero-next-teams').textContent = "Data unavailable";
+            const nextDate = document.getElementById('hero-next-date');
+            if(nextDate) nextDate.textContent = "Unable to load";
+            const nextTeams = document.getElementById('hero-next-teams');
+            if(nextTeams) nextTeams.textContent = "Data unavailable";
         });
         
     // Fetch Roster Data for Squad Members stat
@@ -212,7 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.ALL_PLAYERS && Array.isArray(data.ALL_PLAYERS)) {
                 squadCount = data.ALL_PLAYERS.length;
             } else {
-                // Fallback if structure changes
                 squadCount = Object.keys(data).length > 0 ? 30 : 0; 
             }
             
