@@ -305,9 +305,8 @@
           </select>
         </div>
         <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" id="searchInput" class="search-input" placeholder="Search player name..."
-            onkeyup="filterData()">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search Player Name..." aria-label="Search by player name" oninput="filterData()">
         </div>
       </div>
 
@@ -373,162 +372,8 @@
         </div>
       </div>
     </div>
-  </footer>
-
-  <script>
-    let HONOURS = [];
-    let currentCategory = window.location.hash ? window.location.hash.substring(1) : 'century';
-
-    async function loadHonours() {
-      try {
-        const res = await fetch(`data/honours.json?v=${new Date().getTime()}`);
-        HONOURS = await res.json();
-      } catch (e) {
-        console.error('Error loading honours.json:', e);
-        HONOURS = [];
-      }
-      filterData();
-    }
-
-    function switchCategory(cat, btn) {
-      if (btn) {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      }
-      currentCategory = cat; if (window.history.replaceState) { window.history.replaceState(null, null, '#' + cat); } else { window.location.hash = cat; }
-      filterData();
-    }
-
-    function parseDate(dateStr) {
-      if (!dateStr) return new Date(0);
-      const clean = dateStr.trim();
-      if (/^\d{4}$/.test(clean)) {
-        return new Date(parseInt(clean), 0, 1);
-      }
-      const normalized = clean.replace(/(\d+)(st|nd|rd|th)/i, '$1');
-      const parsed = Date.parse(normalized);
-      if (!isNaN(parsed)) {
-        return new Date(parsed);
-      }
-      const yearMatch = clean.match(/\b\d{4}\b/);
-      if (yearMatch) {
-        return new Date(parseInt(yearMatch[0]), 0, 1);
-      }
-      return new Date(0);
-    }
-
-    function filterData() {
-      const season = document.getElementById('seasonFilter').value;
-      const search = document.getElementById('searchInput').value.toLowerCase().trim();
-      const grid = document.getElementById('honoursGrid');
-
-      // Filter by category, season, and search query
-      const filtered = HONOURS.filter(item => {
-        const matchCat = item.category === currentCategory;
-        const matchSeason = season === 'all' || item.season === season;
-        const matchSearch = item.name.toLowerCase().includes(search);
-        return matchCat && matchSeason && matchSearch;
-      });
-
-      // Sort by date oldest to newest (ascending), then by record descending
-      filtered.sort((a, b) => {
-        const dA = parseDate(a.date);
-        const dB = parseDate(b.date);
-        if (dA.getTime() !== dB.getTime()) {
-          return dA.getTime() - dB.getTime();
-        }
-
-        if (currentCategory.includes('wickets') || currentCategory.includes('3w')) {
-          const wA = parseInt(a.record.split('-')[0]) || 0;
-          const wB = parseInt(b.record.split('-')[0]) || 0;
-          if (wA !== wB) return wB - wA;
-          const rA = parseInt(a.record.split('-')[1]) || 999;
-          const rB = parseInt(b.record.split('-')[1]) || 999;
-          return rA - rB; // lower runs is better
-        } else {
-          const rA = parseInt(a.record.replace('*', '')) || 0;
-          const rB = parseInt(b.record.replace('*', '')) || 0;
-          return rB - rA;
-        }
-      });
-
-      if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div class="empty-state">
-            <i class="fa-solid fa-trophy empty-icon"></i>
-            <div class="empty-title">No Records Found</div>
-            <p class="empty-desc">No player achievements match the selected season, category, or search criteria.</p>
-          </div>`;
-        return;
-      }
-
-      const isBowling = currentCategory.includes('wickets') || currentCategory.includes('3w');
-      const isHatTrick = currentCategory === 'hat-trick';
-      const recordHeader = isBowling ? 'Figures' : 'Score';
-
-      let tableHTML = `
-        <div class="honours-table-container">
-          <table class="honours-table">
-            <thead>
-              <tr>
-                <th class="table-sno">S.No</th>
-                <th>Player Name</th>
-                ${!isHatTrick ? `<th>${recordHeader}</th>` : ''}
-                <th>Opposition</th>
-                <th>Date</th>
-                <th>League</th>
-              </tr>
-            </thead>
-            <tbody>
-      `;
-
-      tableHTML += filtered.map((item, index) => {
-        return `
-          <tr>
-            <td class="table-sno" data-label="S.No">${index + 1}</td>
-            <td class="table-player" data-label="Player Name">${item.name}</td>
-            ${!isHatTrick ? `<td class="table-record" data-label="${recordHeader}">${item.record}</td>` : ''}
-            <td class="table-opp" data-label="Opposition">vs ${item.opponent || 'Opposition TBD'}</td>
-            <td class="table-date" data-label="Date">${item.date || 'Date TBD'}</td>
-            <td class="table-league" data-label="League">${item.league || 'League TBD'}</td>
-          </tr>
-        `;
-      }).join('');
-
-      tableHTML += `
-            </tbody>
-          </table>
-        </div>
-      `;
-
-      grid.innerHTML = tableHTML;
-    }
-
-    document.addEventListener('DOMContentLoaded', () => { 
-      if (window.location.hash) { 
-        const cat = window.location.hash.substring(1); 
-        const btn = document.querySelector(".tab-btn[onclick*='" + cat + "']"); 
-        if (btn) { switchCategory(cat, btn); } else { switchCategory(cat); } 
-      } 
-      loadHonours(); 
-    });
-
-    /* Mobile nav */
-    function toggleMobileNav() {
-      const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger');
-      n.classList.toggle('open'); h.classList.toggle('open');
-      document.body.style.overflow = n.classList.contains('open') ? 'hidden' : '';
-    }
-    document.addEventListener('click', e => {
-      const n = document.getElementById('mobileNav'), h = document.getElementById('hamburger');
-      if (n.classList.contains('open') && !n.contains(e.target) && !h.contains(e.target)) {
-        n.classList.remove('open'); h.classList.remove('open'); document.body.style.overflow = '';
-      }
-    });
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
-  </script>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/honours.js"></script>
 </body>
-
 </html>

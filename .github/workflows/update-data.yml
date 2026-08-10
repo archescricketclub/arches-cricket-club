@@ -50,6 +50,7 @@ jobs:
       # --------------------------------------------------
       - name: Compile Honours and Career Stats
         run: |
+          node fetch_all.js
           node scripts/scrape_scorecards.js
           node scripts/compile_honours.js
 
@@ -65,7 +66,7 @@ jobs:
 
           git add data/players.json data/matches.json \
                   data/honours.json data/career_stats.json \
-                  data/scorecard_milestones.json \
+                  data/scorecard_milestones.json all_matches_full.json \
                   public/data/players.json public/data/matches.json \
                   public/data/honours.json public/data/career_stats.json
 
