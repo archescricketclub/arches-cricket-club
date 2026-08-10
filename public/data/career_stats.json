@@ -19,14 +19,14 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 768,
-      "hs": "47",
-      "matches": 29
+      "runs": 834,
+      "hs": "66",
+      "matches": 30
     },
     "bowling": {
-      "wickets": 185,
+      "wickets": 189,
       "bestFig": "5-22",
-      "matches": 29
+      "matches": 30
     }
   },
   {
@@ -34,14 +34,14 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 766,
+      "runs": 815,
       "hs": "58",
-      "matches": 25
+      "matches": 26
     },
     "bowling": {
-      "wickets": 9,
+      "wickets": 10,
       "bestFig": "2-14",
-      "matches": 10
+      "matches": 18
     }
   },
   {
@@ -49,14 +49,14 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 765,
+      "runs": 776,
       "hs": "68",
-      "matches": 26
+      "matches": 27
     },
     "bowling": {
       "wickets": 1,
       "bestFig": "0",
-      "matches": 4
+      "matches": 5
     }
   },
   {
@@ -94,14 +94,14 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 496,
+      "runs": 502,
       "hs": "66",
-      "matches": 26
+      "matches": 27
     },
     "bowling": {
       "wickets": 24,
       "bestFig": "0",
-      "matches": 25
+      "matches": 26
     }
   },
   {
@@ -109,14 +109,14 @@
     "jersey": "#45",
     "cap": "CH45",
     "batting": {
-      "runs": 480,
+      "runs": 484,
       "hs": "34*",
-      "matches": 23
+      "matches": 24
     },
     "bowling": {
-      "wickets": 104,
+      "wickets": 108,
       "bestFig": "3-20",
-      "matches": 24
+      "matches": 25
     }
   },
   {
@@ -124,14 +124,14 @@
     "jersey": "#15",
     "cap": "VV15",
     "batting": {
-      "runs": 404,
-      "hs": "56",
-      "matches": 21
+      "runs": 466,
+      "hs": "62",
+      "matches": 22
     },
     "bowling": {
-      "wickets": 98,
+      "wickets": 102,
       "bestFig": "5",
-      "matches": 22
+      "matches": 23
     }
   },
   {
@@ -184,14 +184,14 @@
     "jersey": "#—",
     "cap": "VH",
     "batting": {
-      "runs": 212,
+      "runs": 220,
       "hs": "58*",
-      "matches": 19
+      "matches": 20
     },
     "bowling": {
       "wickets": 11,
       "bestFig": "1",
-      "matches": 18
+      "matches": 19
     }
   },
   {
@@ -289,14 +289,14 @@
     "jersey": "#8",
     "cap": "VK18",
     "batting": {
-      "runs": 153,
+      "runs": 154,
       "hs": "27",
-      "matches": 25
+      "matches": 26
     },
     "bowling": {
-      "wickets": 117,
+      "wickets": 119,
       "bestFig": "3-15",
-      "matches": 25
+      "matches": 26
     }
   },
   {
@@ -306,7 +306,7 @@
     "batting": {
       "runs": 153,
       "hs": "22*",
-      "matches": 8
+      "matches": 9
     },
     "bowling": {
       "wickets": 1,
@@ -444,9 +444,9 @@
       "matches": 14
     },
     "bowling": {
-      "wickets": 90,
-      "bestFig": "18",
-      "matches": 22
+      "wickets": 92,
+      "bestFig": "19",
+      "matches": 23
     }
   },
   {
@@ -474,9 +474,9 @@
       "matches": 7
     },
     "bowling": {
-      "wickets": 11,
+      "wickets": 14,
       "bestFig": "1",
-      "matches": 8
+      "matches": 9
     }
   },
   {

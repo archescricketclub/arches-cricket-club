@@ -1,24 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Cooke Collegians 4th XI",
-      "date": "9th August 2026",
-      "time": "1:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
-      "homeTeam": "Arches 2",
-      "awayTeam": "Cooke Collegians 4",
-      "date": "9th August 2026",
-      "time": "1:00 PM",
-      "venue": "TBD",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Arches 1st XI",
       "awayTeam": "Amigos Belfast 1st XI",
       "date": "15th August 2026",
@@ -425,7 +407,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Dundrum 1st XI won by 80 runs"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Cooke Collegians 4th XI",
+      "date": "9th August 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Arches 2nd XI won by 64 runs"
     }
   ],
-  "lastUpdated": "2026-08-09T12:50:27.683Z"
+  "lastUpdated": "2026-08-10T01:46:41.903Z"
 }

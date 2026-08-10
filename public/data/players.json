@@ -882,6 +882,76 @@
   "t1-ar": [],
   "t2-bat": [
     {
+      "name": "Wasim SM",
+      "jersey": "#1",
+      "cap": "WSM1",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Matches"
+        },
+        {
+          "n": "174",
+          "l": "Runs"
+        },
+        {
+          "n": "46*",
+          "l": "High Score"
+        },
+        {
+          "n": "24.86",
+          "l": "Average"
+        }
+      ],
+      "badge": "Top Scorer T2"
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Matches"
+        },
+        {
+          "n": "72",
+          "l": "Runs"
+        },
+        {
+          "n": "34*",
+          "l": "High Score"
+        },
+        {
+          "n": "14.40",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Harsha Sai",
+      "jersey": "#8",
+      "cap": "VK18",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Matches"
+        },
+        {
+          "n": "23",
+          "l": "Runs"
+        },
+        {
+          "n": "10",
+          "l": "High Score"
+        },
+        {
+          "n": "5.75",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Ali Rizwan",
       "jersey": "#16",
       "cap": "AR69",
@@ -902,51 +972,27 @@
           "n": "80.00",
           "l": "Average"
         }
-      ],
-      "badge": "Top Scorer T2"
-    },
-    {
-      "name": "Wasim SM",
-      "jersey": "#1",
-      "cap": "WSM1",
-      "stats": [
-        {
-          "n": "8",
-          "l": "Matches"
-        },
-        {
-          "n": "168",
-          "l": "Runs"
-        },
-        {
-          "n": "46*",
-          "l": "High Score"
-        },
-        {
-          "n": "28.00",
-          "l": "Average"
-        }
       ]
     },
     {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
+      "name": "Anil Narra",
+      "jersey": "#30",
+      "cap": "AN30",
       "stats": [
         {
           "n": "8",
           "l": "Matches"
         },
         {
-          "n": "68",
+          "n": "169",
           "l": "Runs"
         },
         {
-          "n": "34*",
+          "n": "58",
           "l": "High Score"
         },
         {
-          "n": "17.00",
+          "n": "24.14",
           "l": "Average"
         }
       ]
@@ -975,47 +1021,24 @@
       ]
     },
     {
-      "name": "Harsha Sai",
-      "jersey": "#8",
-      "cap": "VK18",
-      "stats": [
-        {
-          "n": "8",
-          "l": "Matches"
-        },
-        {
-          "n": "22",
-          "l": "Runs"
-        },
-        {
-          "n": "10",
-          "l": "High Score"
-        },
-        {
-          "n": "5.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Anil Narra",
-      "jersey": "#30",
-      "cap": "AN30",
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
       "stats": [
         {
           "n": "7",
           "l": "Matches"
         },
         {
-          "n": "120",
+          "n": "134",
           "l": "Runs"
         },
         {
-          "n": "58",
+          "n": "66",
           "l": "High Score"
         },
         {
-          "n": "20.00",
+          "n": "67.00",
           "l": "Average"
         }
       ]
@@ -1044,39 +1067,16 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "6",
-          "l": "Matches"
-        },
-        {
-          "n": "68",
-          "l": "Runs"
-        },
-        {
-          "n": "25*",
-          "l": "High Score"
-        },
-        {
-          "n": "68.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Vijaykumar Hugar",
       "jersey": "#—",
       "cap": "VH",
       "stats": [
         {
-          "n": "4",
+          "n": "5",
           "l": "Matches"
         },
         {
-          "n": "58",
+          "n": "66",
           "l": "Runs"
         },
         {
@@ -1084,7 +1084,7 @@
           "l": "High Score"
         },
         {
-          "n": "",
+          "n": "66.00",
           "l": "Average"
         }
       ]
@@ -1095,11 +1095,11 @@
       "cap": "AM04",
       "stats": [
         {
-          "n": "4",
+          "n": "5",
           "l": "Matches"
         },
         {
-          "n": "40",
+          "n": "51",
           "l": "Runs"
         },
         {
@@ -1107,7 +1107,7 @@
           "l": "High Score"
         },
         {
-          "n": "40.00",
+          "n": "25.50",
           "l": "Average"
         }
       ]
@@ -1118,7 +1118,7 @@
       "cap": "CR99",
       "stats": [
         {
-          "n": "3",
+          "n": "4",
           "l": "Matches"
         },
         {
@@ -1141,19 +1141,19 @@
       "cap": "VV15",
       "stats": [
         {
-          "n": "2",
+          "n": "3",
           "l": "Matches"
         },
         {
-          "n": "38",
+          "n": "100",
           "l": "Runs"
         },
         {
-          "n": "32",
+          "n": "62",
           "l": "High Score"
         },
         {
-          "n": "19.00",
+          "n": "33.33",
           "l": "Average"
         }
       ]
@@ -1327,15 +1327,15 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "8",
+          "n": "9",
           "l": "Matches"
         },
         {
-          "n": "38",
+          "n": "40",
           "l": "Overs"
         },
         {
-          "n": "18",
+          "n": "19",
           "l": "Wickets"
         },
         {
@@ -1351,11 +1351,11 @@
       "cap": "VK18",
       "stats": [
         {
-          "n": "8",
+          "n": "9",
           "l": "Matches"
         },
         {
-          "n": "34.3",
+          "n": "36.3",
           "l": "Overs"
         },
         {
@@ -1374,15 +1374,15 @@
       "cap": "CH45",
       "stats": [
         {
-          "n": "8",
+          "n": "9",
           "l": "Matches"
         },
         {
-          "n": "31",
+          "n": "35.0",
           "l": "Overs"
         },
         {
-          "n": "9",
+          "n": "10",
           "l": "Wickets"
         },
         {
@@ -1397,15 +1397,15 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "6",
+          "n": "7",
           "l": "Matches"
         },
         {
-          "n": "26",
+          "n": "30",
           "l": "Overs"
         },
         {
-          "n": "8",
+          "n": "10",
           "l": "Wickets"
         },
         {
@@ -1438,12 +1438,35 @@
       ]
     },
     {
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "13",
+          "l": "Overs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-23",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Wasim SM",
       "jersey": "#1",
       "cap": "WSM1",
       "stats": [
         {
-          "n": "8",
+          "n": "9",
           "l": "Matches"
         },
         {
@@ -1456,29 +1479,6 @@
         },
         {
           "n": "3-57",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Matches"
-        },
-        {
-          "n": "9",
-          "l": "Overs"
-        },
-        {
-          "n": "2",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-23",
           "l": "Best Fig"
         }
       ]
@@ -1507,12 +1507,35 @@
       ]
     },
     {
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "7",
+          "l": "Overs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-22",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Vijaykumar Hugar",
       "jersey": "#—",
       "cap": "VH",
       "stats": [
         {
-          "n": "4",
+          "n": "5",
           "l": "Matches"
         },
         {
@@ -1548,29 +1571,6 @@
         },
         {
           "n": "2-19",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-24",
           "l": "Best Fig"
         }
       ]
@@ -1668,6 +1668,29 @@
       ]
     },
     {
+      "name": "Anil Narra",
+      "jersey": "#30",
+      "cap": "AN30",
+      "stats": [
+        {
+          "n": "8",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-11",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
       "name": "Ali Rizwan",
       "jersey": "#16",
       "cap": "AR69",
@@ -1696,7 +1719,7 @@
       "cap": "AM04",
       "stats": [
         {
-          "n": "4",
+          "n": "5",
           "l": "Matches"
         },
         {
