@@ -377,7 +377,7 @@
 
   <script>
     let HONOURS = [];
-    let currentCategory = 'century';
+    let currentCategory = window.location.hash ? window.location.hash.substring(1) : 'century';
 
     async function loadHonours() {
       try {
@@ -395,7 +395,7 @@
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
       }
-      currentCategory = cat;
+      currentCategory = cat; if (window.history.replaceState) { window.history.replaceState(null, null, '#' + cat); } else { window.location.hash = cat; }
       filterData();
     }
 
@@ -504,7 +504,7 @@
       grid.innerHTML = tableHTML;
     }
 
-    document.addEventListener('DOMContentLoaded', loadHonours);
+    document.addEventListener('DOMContentLoaded', () => { if (window.location.hash) { const cat = window.location.hash.substring(1); const btn = document.querySelector(.tab-btn[onclick*='']); if (btn) { switchCategory(cat, btn); } else { switchCategory(cat); } } loadHonours(); });
 
     /* Mobile nav */
     function toggleMobileNav() {

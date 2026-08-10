@@ -953,7 +953,7 @@
         }
 
         // Initialize on DOM load
-        document.addEventListener('DOMContentLoaded', initData);
+        document.addEventListener('DOMContentLoaded', () => { if (window.location.hash) { const t = window.location.hash.substring(1); const b = document.querySelector(.team-tab[onclick*='']); if (b) switchTeam(t, b); else switchTeam(t); } initData(); });
 
         /* ─── VIEW ALL ───────────────────────────────────── */
         function toggleAll(gridId, btn) {
@@ -972,7 +972,7 @@
         }
 
         /* ─── TEAM SWITCH ────────────────────────────────── */
-        function switchTeam(team, btn) {
+        function switchTeam(team, btn) { if (window.history.replaceState) { window.history.replaceState(null, null, '#' + team); } else { window.location.hash = team; }
             if (btn) {
                 document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
                 btn.classList.add('active');
