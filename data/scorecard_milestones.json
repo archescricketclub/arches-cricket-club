@@ -668,23 +668,5 @@
     "date": "17th May 2026",
     "league": "NCU Mercury Senior League 3",
     "opponent": "NIMACC 1st XI"
-  },
-  {
-    "name": "Anil Narra",
-    "type": "batting",
-    "record": "58",
-    "runs": 58,
-    "date": "10th May 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "NIMACC 2nd XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "193",
-    "runs": 193,
-    "date": "10th May 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "NIMACC 2nd XI"
   }
 ]
