@@ -1,5 +1,32 @@
 [
   {
+    "name": "Dushyanth Reddy B",
+    "type": "batting",
+    "record": "55",
+    "runs": 55,
+    "date": "15th August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Amigos Belfast 1st XI"
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "type": "batting",
+    "record": "64",
+    "runs": 64,
+    "date": "15th August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Amigos Belfast 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "277",
+    "runs": 277,
+    "date": "15th August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Amigos Belfast 1st XI"
+  },
+  {
     "name": "Vonga Vishnu",
     "type": "batting",
     "record": "62",

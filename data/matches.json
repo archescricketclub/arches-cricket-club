@@ -2,15 +2,6 @@
   "fixtures": [
     {
       "homeTeam": "Arches 1st XI",
-      "awayTeam": "Amigos Belfast 1st XI",
-      "date": "15th August 2026",
-      "time": "12:00 PM",
-      "venue": "City of Belfast Playing Fields (Amigos Belfast)",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
-      "homeTeam": "Arches 1st XI",
       "awayTeam": "Victoria 1st XI",
       "date": "22nd August 2026",
       "time": "12:00 PM",
@@ -417,7 +408,17 @@
       "status": "",
       "league": "Junior League 10",
       "result": "Arches 2nd XI won by 64 runs"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast 1st XI",
+      "date": "15th August 2026",
+      "time": "12:00 PM",
+      "venue": "City of Belfast Playing Fields (Amigos Belfast)",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Arches 1st XI won by 113 runs"
     }
   ],
-  "lastUpdated": "2026-08-15T12:36:57.336Z"
+  "lastUpdated": "2026-08-16T01:17:03.834Z"
 }

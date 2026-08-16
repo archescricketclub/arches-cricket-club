@@ -6,11 +6,11 @@
       "cap": "AN72",
       "stats": [
         {
-          "n": "13",
+          "n": "14",
           "l": "Matches"
         },
         {
-          "n": "151",
+          "n": "166",
           "l": "Runs"
         },
         {
@@ -18,7 +18,7 @@
           "l": "High Score"
         },
         {
-          "n": "13.73",
+          "n": "13.83",
           "l": "Average"
         }
       ],
@@ -30,11 +30,11 @@
       "cap": "VJ09",
       "stats": [
         {
-          "n": "13",
+          "n": "14",
           "l": "Matches"
         },
         {
-          "n": "52",
+          "n": "63",
           "l": "Runs"
         },
         {
@@ -42,7 +42,7 @@
           "l": "High Score"
         },
         {
-          "n": "6.50",
+          "n": "7.88",
           "l": "Average"
         }
       ]
@@ -53,19 +53,19 @@
       "cap": "DB23",
       "stats": [
         {
-          "n": "12",
+          "n": "13",
           "l": "Matches"
         },
         {
-          "n": "87",
+          "n": "142",
           "l": "Runs"
         },
         {
-          "n": "38",
+          "n": "55",
           "l": "High Score"
         },
         {
-          "n": "7.91",
+          "n": "11.83",
           "l": "Average"
         }
       ]
@@ -76,19 +76,19 @@
       "cap": "AR",
       "stats": [
         {
-          "n": "11",
+          "n": "12",
           "l": "Matches"
         },
         {
-          "n": "127",
+          "n": "191",
           "l": "Runs"
         },
         {
-          "n": "35",
+          "n": "64",
           "l": "High Score"
         },
         {
-          "n": "12.70",
+          "n": "17.36",
           "l": "Average"
         }
       ]
@@ -99,7 +99,7 @@
       "cap": "AM04",
       "stats": [
         {
-          "n": "11",
+          "n": "12",
           "l": "Matches"
         },
         {
@@ -111,7 +111,7 @@
           "l": "High Score"
         },
         {
-          "n": "12.50",
+          "n": "11.36",
           "l": "Average"
         }
       ]
@@ -122,11 +122,11 @@
       "cap": "VB44",
       "stats": [
         {
-          "n": "10",
+          "n": "11",
           "l": "Matches"
         },
         {
-          "n": "115",
+          "n": "120",
           "l": "Runs"
         },
         {
@@ -134,7 +134,30 @@
           "l": "High Score"
         },
         {
-          "n": "11.50",
+          "n": "10.91",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "10",
+          "l": "Matches"
+        },
+        {
+          "n": "157",
+          "l": "Runs"
+        },
+        {
+          "n": "47",
+          "l": "High Score"
+        },
+        {
+          "n": "15.70",
           "l": "Average"
         }
       ]
@@ -163,47 +186,24 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "9",
-          "l": "Matches"
-        },
-        {
-          "n": "145",
-          "l": "Runs"
-        },
-        {
-          "n": "47",
-          "l": "High Score"
-        },
-        {
-          "n": "16.11",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Tulasi Gangadhar Thatavarthi",
       "jersey": "#7",
       "cap": "TT07",
       "stats": [
         {
-          "n": "9",
+          "n": "10",
           "l": "Matches"
         },
         {
-          "n": "26",
+          "n": "39",
           "l": "Runs"
         },
         {
-          "n": "6*",
+          "n": "13*",
           "l": "High Score"
         },
         {
-          "n": "4.33",
+          "n": "6.50",
           "l": "Average"
         }
       ]
@@ -214,11 +214,11 @@
       "cap": "VV15",
       "stats": [
         {
-          "n": "8",
+          "n": "9",
           "l": "Matches"
         },
         {
-          "n": "150",
+          "n": "168",
           "l": "Runs"
         },
         {
@@ -226,7 +226,7 @@
           "l": "High Score"
         },
         {
-          "n": "18.75",
+          "n": "18.67",
           "l": "Average"
         }
       ]
@@ -237,19 +237,42 @@
       "cap": "AR69",
       "stats": [
         {
-          "n": "5",
+          "n": "6",
           "l": "Matches"
         },
         {
-          "n": "79",
+          "n": "115",
           "l": "Runs"
         },
         {
-          "n": "34",
+          "n": "36",
           "l": "High Score"
         },
         {
-          "n": "19.75",
+          "n": "23.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Anil Narra",
+      "jersey": "#30",
+      "cap": "AN30",
+      "stats": [
+        {
+          "n": "6",
+          "l": "Matches"
+        },
+        {
+          "n": "24",
+          "l": "Runs"
+        },
+        {
+          "n": "14",
+          "l": "High Score"
+        },
+        {
+          "n": "4.00",
           "l": "Average"
         }
       ]
@@ -296,29 +319,6 @@
         },
         {
           "n": "2.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Anil Narra",
-      "jersey": "#30",
-      "cap": "AN30",
-      "stats": [
-        {
-          "n": "5",
-          "l": "Matches"
-        },
-        {
-          "n": "10",
-          "l": "Runs"
-        },
-        {
-          "n": "5",
-          "l": "High Score"
-        },
-        {
-          "n": "2.00",
           "l": "Average"
         }
       ]
@@ -515,15 +515,15 @@
       "cap": "AR",
       "stats": [
         {
-          "n": "11",
+          "n": "12",
           "l": "Matches"
         },
         {
-          "n": "65.1",
+          "n": "73.1",
           "l": "Overs"
         },
         {
-          "n": "21",
+          "n": "24",
           "l": "Wickets"
         },
         {
@@ -539,42 +539,19 @@
       "cap": "VJ09",
       "stats": [
         {
+          "n": "14",
+          "l": "Matches"
+        },
+        {
+          "n": "70",
+          "l": "Overs"
+        },
+        {
           "n": "13",
-          "l": "Matches"
-        },
-        {
-          "n": "62",
-          "l": "Overs"
-        },
-        {
-          "n": "9",
           "l": "Wickets"
         },
         {
-          "n": "3-44",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "9",
-          "l": "Matches"
-        },
-        {
-          "n": "47",
-          "l": "Overs"
-        },
-        {
-          "n": "8",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-45",
+          "n": "4-37",
           "l": "Best Fig"
         }
       ]
@@ -585,11 +562,11 @@
       "cap": "VB44",
       "stats": [
         {
-          "n": "10",
+          "n": "11",
           "l": "Matches"
         },
         {
-          "n": "46",
+          "n": "53",
           "l": "Overs"
         },
         {
@@ -598,6 +575,52 @@
         },
         {
           "n": "5-53",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "10",
+          "l": "Matches"
+        },
+        {
+          "n": "48",
+          "l": "Overs"
+        },
+        {
+          "n": "9",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-45",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
+      "stats": [
+        {
+          "n": "9",
+          "l": "Matches"
+        },
+        {
+          "n": "40.4",
+          "l": "Overs"
+        },
+        {
+          "n": "7",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-30",
           "l": "Best Fig"
         }
       ]
@@ -626,39 +649,16 @@
       ]
     },
     {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
-      "stats": [
-        {
-          "n": "8",
-          "l": "Matches"
-        },
-        {
-          "n": "35",
-          "l": "Overs"
-        },
-        {
-          "n": "5",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-30",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Tulasi Gangadhar Thatavarthi",
       "jersey": "#7",
       "cap": "TT07",
       "stats": [
         {
-          "n": "9",
+          "n": "10",
           "l": "Matches"
         },
         {
-          "n": "21",
+          "n": "22",
           "l": "Overs"
         },
         {
@@ -677,7 +677,7 @@
       "cap": "DB23",
       "stats": [
         {
-          "n": "12",
+          "n": "13",
           "l": "Matches"
         },
         {
@@ -815,7 +815,7 @@
       "cap": "AN72",
       "stats": [
         {
-          "n": "13",
+          "n": "14",
           "l": "Matches"
         },
         {
