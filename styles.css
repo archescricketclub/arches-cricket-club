@@ -2554,7 +2554,7 @@ button {
 
 /* ─── MATCHES PAGE SPECIFIC STYLES ─── */
 .matches-header-section {
-  background-color: #020C73; /* Dark blue background mimicking reference */
+  /* Using default background instead of exact blue from reference */
 }
 .matches-header {
   display: flex;

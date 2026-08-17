@@ -193,10 +193,17 @@ function renderMatches() {
   });
   
   if (filtered.length === 0) {
-    container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
-      <h3 style="color:var(--text); margin-bottom: 0.5rem;">No ${currentMode} found</h3>
-      <p style="color:var(--muted);">There are no ${currentMode} to display for this category.</p>
-    </div>`;
+    if (currentMode === 'fixtures') {
+      container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
+        <h3 style="color:var(--text); margin-bottom: 0.5rem;">No Fixtures found</h3>
+        <p style="color:var(--muted);">There are no upcoming fixtures for this year.</p>
+      </div>`;
+    } else {
+      container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
+        <h3 style="color:var(--text); margin-bottom: 0.5rem;">No Results found</h3>
+        <p style="color:var(--muted);">There are no results to display for this category.</p>
+      </div>`;
+    }
     return;
   }
   
