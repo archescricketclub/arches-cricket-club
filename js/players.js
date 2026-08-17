@@ -160,7 +160,23 @@
 
         function applySortAndRender(key) {
             if (!DATA[key]) return;
-            const sortType = CURRENT_SORTS[key];
+            
+            // Set default sort types based on category
+            let defaultSort = 'az';
+            if (key.includes('-bat')) defaultSort = 'runs';
+            else if (key.includes('-bowl')) defaultSort = 'wickets';
+            else if (key.includes('-ar')) defaultSort = 'runs';
+            
+            const sortType = CURRENT_SORTS[key] || defaultSort;
+            
+            // Update the select dropdown to reflect the default if it exists
+            const el = document.getElementById(key);
+            if (el) {
+                const select = el.closest('.cat-block')?.querySelector('.sort-filter');
+                if (select && select.value !== sortType) {
+                    select.value = sortType;
+                }
+            }
             
             let list = [...DATA[key]];
             
