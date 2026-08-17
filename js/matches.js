@@ -78,23 +78,15 @@ function toggleMatchesMode(mode, btn) {
   }
   currentMode = mode;
   
-  if (mode === 'tables') {
-    document.getElementById('matches-content').style.display = 'none';
-    document.getElementById('stats-summary').style.display = 'none';
+  document.getElementById('matches-content').style.display = 'block';
+  if (mode === 'results') {
+    document.getElementById('stats-summary').style.display = 'grid';
     document.getElementById('venue-info').style.display = 'none';
-    document.getElementById('tables-content').style.display = 'block';
   } else {
-    document.getElementById('tables-content').style.display = 'none';
-    document.getElementById('matches-content').style.display = 'block';
-    if (mode === 'results') {
-      document.getElementById('stats-summary').style.display = 'grid';
-      document.getElementById('venue-info').style.display = 'none';
-    } else {
-      document.getElementById('stats-summary').style.display = 'none';
-      document.getElementById('venue-info').style.display = 'flex';
-    }
-    renderMatches();
+    document.getElementById('stats-summary').style.display = 'none';
+    document.getElementById('venue-info').style.display = 'flex';
   }
+  renderMatches();
 }
 
 function filterMatches(league, btn) {
@@ -103,9 +95,7 @@ function filterMatches(league, btn) {
     btn.classList.add('active');
   }
   currentLeague = league;
-  if (currentMode !== 'tables') {
-    renderMatches();
-  }
+  renderMatches();
 }
 
 function getLeagueKey(leagueName) {
