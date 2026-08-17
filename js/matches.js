@@ -317,19 +317,21 @@ function loadData() {
     fetch(`data/matches.json?v=${v}`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
     fetch(`old_matches.json?v=${v}`).then(res => res.ok ? res.json() : {}).catch(() => ({}))
   ]).then(([newData, oldData]) => {
-    let combinedFixtures = [];
-    if (newData.fixtures) combinedFixtures = combinedFixtures.concat(newData.fixtures);
-    if (oldData.fixtures) combinedFixtures = combinedFixtures.concat(oldData.fixtures);
+    let currentFixtures = [];
+    if (newData.fixtures) currentFixtures = currentFixtures.concat(newData.fixtures);
     
-    let combinedResults = [];
-    if (newData.results) combinedResults = combinedResults.concat(newData.results);
-    if (oldData.results) combinedResults = combinedResults.concat(oldData.results);
+    let currentResults = [];
+    if (newData.results) currentResults = currentResults.concat(newData.results);
     
-    // Sort fixtures ascending, results descending
-    allFixtures = sortMatches(combinedFixtures, false);
-    allResults = sortMatches(combinedResults, true);
+    let allTimeResults = [...currentResults];
+    if (oldData.results) allTimeResults = allTimeResults.concat(oldData.results);
     
-    calculateStats(allResults);
+    // Sort and store ONLY current year data for display
+    allFixtures = sortMatches(currentFixtures, false);
+    allResults = sortMatches(currentResults, true);
+    
+    // Calculate all-time stats using the merged results
+    calculateStats(allTimeResults);
     toggleMatchesMode(currentMode); // Render initial view
   });
 }
