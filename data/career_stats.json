@@ -1,92 +1,17 @@
 [
   {
-    "name": "Arush Nimmagadda",
-    "jersey": "#72",
-    "cap": "AN72",
+    "name": "Ali Rizwan",
+    "jersey": "#16",
+    "cap": "AR69",
     "batting": {
-      "matches": 15,
-      "runs": 202,
-      "hs": "65"
+      "runs": 1705,
+      "hs": "131",
+      "matches": 29
     },
     "bowling": {
-      "matches": 14,
-      "wickets": 0,
-      "bestFig": "-"
-    }
-  },
-  {
-    "name": "Venkateswarrao Jyothi",
-    "jersey": "#9",
-    "cap": "VJ09",
-    "batting": {
-      "matches": 15,
-      "runs": 87,
-      "hs": "23"
-    },
-    "bowling": {
-      "matches": 15,
-      "wickets": 26,
-      "bestFig": "4-37"
-    }
-  },
-  {
-    "name": "Dushyanth Reddy B",
-    "jersey": "#23",
-    "cap": "DB23",
-    "batting": {
-      "matches": 14,
-      "runs": 739,
-      "hs": "73"
-    },
-    "bowling": {
-      "matches": 14,
-      "wickets": 36,
-      "bestFig": "4-30"
-    }
-  },
-  {
-    "name": "Abubakar Rehmani",
-    "jersey": "#—",
-    "cap": "AR",
-    "batting": {
-      "matches": 14,
-      "runs": 260,
-      "hs": "64"
-    },
-    "bowling": {
-      "matches": 14,
-      "wickets": 27,
-      "bestFig": "8-7"
-    }
-  },
-  {
-    "name": "Asad Murtuza",
-    "jersey": "#22",
-    "cap": "AM04",
-    "batting": {
-      "matches": 28,
-      "runs": 776,
-      "hs": "68"
-    },
-    "bowling": {
-      "matches": 5,
-      "wickets": 0,
-      "bestFig": "-"
-    }
-  },
-  {
-    "name": "Veerendra Babu Nagari",
-    "jersey": "#44",
-    "cap": "VB44",
-    "batting": {
-      "matches": 14,
-      "runs": 373,
-      "hs": "48"
-    },
-    "bowling": {
-      "matches": 14,
-      "wickets": 41,
-      "bestFig": "5-17"
+      "wickets": 2,
+      "bestFig": "1-13",
+      "matches": 8
     }
   },
   {
@@ -94,74 +19,14 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "matches": 31,
       "runs": 846,
-      "hs": "66"
+      "hs": "66",
+      "matches": 31
     },
     "bowling": {
-      "matches": 31,
-      "wickets": 88,
-      "bestFig": "5-22"
-    }
-  },
-  {
-    "name": "Surya Pavan Teja Tummala",
-    "jersey": "#14",
-    "cap": "PA14",
-    "batting": {
-      "matches": 11,
-      "runs": 174,
-      "hs": "27"
-    },
-    "bowling": {
-      "matches": 11,
-      "wickets": 22,
-      "bestFig": "4-32"
-    }
-  },
-  {
-    "name": "Tulasi Gangadhar Thatavarthi",
-    "jersey": "#7",
-    "cap": "TT07",
-    "batting": {
-      "matches": 11,
-      "runs": 152,
-      "hs": "37"
-    },
-    "bowling": {
-      "matches": 11,
-      "wickets": 10,
-      "bestFig": "3-25"
-    }
-  },
-  {
-    "name": "Vonga Vishnu",
-    "jersey": "#15",
-    "cap": "VV15",
-    "batting": {
-      "matches": 23,
-      "runs": 484,
-      "hs": "62"
-    },
-    "bowling": {
-      "matches": 24,
-      "wickets": 24,
-      "bestFig": "3-18"
-    }
-  },
-  {
-    "name": "Ali Rizwan",
-    "jersey": "#16",
-    "cap": "AR69",
-    "batting": {
-      "matches": 29,
-      "runs": 1705,
-      "hs": "131"
-    },
-    "bowling": {
-      "matches": 8,
-      "wickets": 1,
-      "bestFig": "1-13"
+      "wickets": 190,
+      "bestFig": "5-22",
+      "matches": 31
     }
   },
   {
@@ -169,164 +34,44 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "matches": 27,
       "runs": 829,
-      "hs": "58"
+      "hs": "58",
+      "matches": 27
     },
     "bowling": {
-      "matches": 18,
-      "wickets": 7,
-      "bestFig": "2-14"
+      "wickets": 10,
+      "bestFig": "2-14",
+      "matches": 18
     }
   },
   {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
+    "name": "Asad Murtuza",
+    "jersey": "#22",
+    "cap": "AM04",
     "batting": {
-      "matches": 20,
-      "runs": 220,
-      "hs": "58"
+      "runs": 776,
+      "hs": "68",
+      "matches": 28
     },
     "bowling": {
-      "matches": 19,
-      "wickets": 3,
-      "bestFig": "1-6"
-    }
-  },
-  {
-    "name": "Purvik Prasad",
-    "jersey": "#—",
-    "cap": "PP",
-    "batting": {
-      "matches": 7,
-      "runs": 15,
-      "hs": "8"
-    },
-    "bowling": {
-      "matches": 9,
-      "wickets": 4,
-      "bestFig": "2-22"
-    }
-  },
-  {
-    "name": "Deepak Sai",
-    "jersey": "#50",
-    "cap": "AD39",
-    "batting": {
-      "matches": 4,
-      "runs": 108,
-      "hs": "46"
-    },
-    "bowling": {
-      "matches": 4,
-      "wickets": 8,
-      "bestFig": "2-23"
-    }
-  },
-  {
-    "name": "Chandra Obula Reddy B",
-    "jersey": "#45",
-    "cap": "CH45",
-    "batting": {
-      "matches": 24,
-      "runs": 484,
-      "hs": "34"
-    },
-    "bowling": {
-      "matches": 25,
-      "wickets": 44,
-      "bestFig": "3-20"
-    }
-  },
-  {
-    "name": "Wasim SM",
-    "jersey": "#1",
-    "cap": "WSM1",
-    "batting": {
-      "matches": 27,
-      "runs": 502,
-      "hs": "66"
-    },
-    "bowling": {
-      "matches": 26,
-      "wickets": 7,
-      "bestFig": "3-57"
-    }
-  },
-  {
-    "name": "Vinay Tummala",
-    "jersey": "#10",
-    "cap": "VT10",
-    "batting": {
-      "matches": 2,
-      "runs": 198,
-      "hs": "47"
-    },
-    "bowling": {
-      "matches": 0,
-      "wickets": 11,
-      "bestFig": "2-21"
-    }
-  },
-  {
-    "name": "Harsha Sai",
-    "jersey": "#8",
-    "cap": "VK18",
-    "batting": {
-      "matches": 26,
-      "runs": 154,
-      "hs": "27"
-    },
-    "bowling": {
-      "matches": 26,
-      "wickets": 47,
-      "bestFig": "3-15"
-    }
-  },
-  {
-    "name": "Sarmad Butt",
-    "jersey": "#56",
-    "cap": "SB56",
-    "batting": {
-      "matches": 3,
-      "runs": 197,
-      "hs": "32"
-    },
-    "bowling": {
-      "matches": 0,
-      "wickets": 0,
-      "bestFig": "-"
-    }
-  },
-  {
-    "name": "Kiran Maheswaram",
-    "jersey": "#75",
-    "cap": "KM75",
-    "batting": {
-      "matches": 22,
-      "runs": 239,
-      "hs": "31"
-    },
-    "bowling": {
-      "matches": 22,
-      "wickets": 23,
-      "bestFig": "3-25"
-    }
-  },
-  {
-    "name": "Charan Reddy Datla",
-    "jersey": "#99",
-    "cap": "CR99",
-    "batting": {
-      "matches": 9,
-      "runs": 153,
-      "hs": "22"
-    },
-    "bowling": {
-      "matches": 0,
       "wickets": 1,
-      "bestFig": "1-10"
+      "bestFig": "0",
+      "matches": 5
+    }
+  },
+  {
+    "name": "Dushyanth Reddy B",
+    "jersey": "#23",
+    "cap": "DB23",
+    "batting": {
+      "runs": 739,
+      "hs": "73",
+      "matches": 14
+    },
+    "bowling": {
+      "wickets": 56,
+      "bestFig": "4-30",
+      "matches": 14
     }
   },
   {
@@ -334,59 +79,74 @@
     "jersey": "#3",
     "cap": "SRI3",
     "batting": {
-      "matches": 15,
       "runs": 683,
-      "hs": "54"
+      "hs": "54",
+      "matches": 15
     },
     "bowling": {
-      "matches": 0,
       "wickets": 2,
-      "bestFig": "2-38"
+      "bestFig": "2-38",
+      "matches": 0
     }
   },
   {
-    "name": "Yaungicha Mirthivada",
-    "jersey": "#—",
-    "cap": "YM",
+    "name": "Wasim SM",
+    "jersey": "#1",
+    "cap": "WSM1",
     "batting": {
-      "matches": 3,
-      "runs": 55,
-      "hs": "18"
+      "runs": 502,
+      "hs": "66",
+      "matches": 27
     },
     "bowling": {
-      "matches": 2,
-      "wickets": 1,
-      "bestFig": "1-12"
+      "wickets": 24,
+      "bestFig": "0",
+      "matches": 26
     }
   },
   {
-    "name": "Yashwanth",
-    "jersey": "#777",
-    "cap": "CY777",
+    "name": "Vonga Vishnu",
+    "jersey": "#15",
+    "cap": "VV15",
     "batting": {
-      "matches": 3,
-      "runs": 8,
-      "hs": "4"
+      "runs": 484,
+      "hs": "62",
+      "matches": 23
     },
     "bowling": {
-      "matches": 3,
-      "wickets": 3,
-      "bestFig": "2-22"
+      "wickets": 107,
+      "bestFig": "7",
+      "matches": 24
     }
   },
   {
-    "name": "Anvesh Choudary Mannuru",
-    "jersey": "#2",
-    "cap": "AM28",
+    "name": "Chandra Obula Reddy B",
+    "jersey": "#45",
+    "cap": "CH45",
     "batting": {
-      "matches": 1,
-      "runs": 15,
-      "hs": "15"
+      "runs": 484,
+      "hs": "34*",
+      "matches": 24
     },
     "bowling": {
-      "matches": 1,
-      "wickets": 4,
-      "bestFig": "3-25"
+      "wickets": 108,
+      "bestFig": "3-20",
+      "matches": 25
+    }
+  },
+  {
+    "name": "Veerendra Babu Nagari",
+    "jersey": "#44",
+    "cap": "VB44",
+    "batting": {
+      "runs": 373,
+      "hs": "48",
+      "matches": 14
+    },
+    "bowling": {
+      "wickets": 90,
+      "bestFig": "5-17",
+      "matches": 14
     }
   },
   {
@@ -394,59 +154,119 @@
     "jersey": "#98",
     "cap": "RS98",
     "batting": {
-      "matches": 1,
       "runs": 266,
-      "hs": "114"
+      "hs": "114",
+      "matches": 1
     },
     "bowling": {
-      "matches": 0,
       "wickets": 3,
-      "bestFig": "1-3"
+      "bestFig": "1-3",
+      "matches": 0
     }
   },
   {
-    "name": "Haneef Shaik",
-    "jersey": "#77",
-    "cap": "HS77",
+    "name": "Abubakar Rehmani",
+    "jersey": "#—",
+    "cap": "AR",
     "batting": {
-      "matches": 14,
-      "runs": 18,
-      "hs": "12"
+      "runs": 260,
+      "hs": "64",
+      "matches": 14
     },
     "bowling": {
-      "matches": 23,
-      "wickets": 34,
-      "bestFig": "4-47"
+      "wickets": 84,
+      "bestFig": "24",
+      "matches": 14
     }
   },
   {
-    "name": "Anshuman Singh Baghel",
-    "jersey": "#181",
-    "cap": "ASB18",
+    "name": "Kiran Maheswaram",
+    "jersey": "#75",
+    "cap": "KM75",
     "batting": {
-      "matches": 0,
-      "runs": 0,
-      "hs": "-"
+      "runs": 239,
+      "hs": "31*",
+      "matches": 22
     },
     "bowling": {
-      "matches": 2,
-      "wickets": 1,
-      "bestFig": "1-13"
+      "wickets": 65,
+      "bestFig": "2-11",
+      "matches": 22
     }
   },
   {
-    "name": "Raja Mouli Yadavalli",
-    "jersey": "#18",
-    "cap": "RY18",
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
     "batting": {
-      "matches": 0,
-      "runs": 4,
-      "hs": "2"
+      "runs": 220,
+      "hs": "58*",
+      "matches": 20
     },
     "bowling": {
-      "matches": 2,
-      "wickets": 6,
-      "bestFig": "2-13"
+      "wickets": 11,
+      "bestFig": "1",
+      "matches": 19
+    }
+  },
+  {
+    "name": "Arush Nimmagadda",
+    "jersey": "#72",
+    "cap": "AN72",
+    "batting": {
+      "runs": 202,
+      "hs": "65",
+      "matches": 15
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "0",
+      "matches": 14
+    }
+  },
+  {
+    "name": "Vinay Tummala",
+    "jersey": "#10",
+    "cap": "VT10",
+    "batting": {
+      "runs": 198,
+      "hs": "47",
+      "matches": 2
+    },
+    "bowling": {
+      "wickets": 11,
+      "bestFig": "2-21",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Sarmad Butt",
+    "jersey": "#56",
+    "cap": "SB56",
+    "batting": {
+      "runs": 197,
+      "hs": "32*",
+      "matches": 3
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "0-8",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Surya Pavan Teja Tummala",
+    "jersey": "#14",
+    "cap": "PA14",
+    "batting": {
+      "runs": 174,
+      "hs": "27*",
+      "matches": 11
+    },
+    "bowling": {
+      "wickets": 54,
+      "bestFig": "4-32",
+      "matches": 11
     }
   },
   {
@@ -454,74 +274,89 @@
     "jersey": "#88",
     "cap": "VN88",
     "batting": {
-      "matches": 1,
       "runs": 165,
-      "hs": "45"
+      "hs": "45*",
+      "matches": 1
     },
     "bowling": {
-      "matches": 1,
-      "wickets": 22,
-      "bestFig": "4-30"
+      "wickets": 23,
+      "bestFig": "4-36",
+      "matches": 1
     }
   },
   {
-    "name": "Jaya Sukhavasi",
-    "jersey": "TBD",
-    "cap": "TBD",
+    "name": "Harsha Sai",
+    "jersey": "#8",
+    "cap": "VK18",
     "batting": {
-      "matches": 0,
-      "runs": 23,
-      "hs": "17"
+      "runs": 154,
+      "hs": "27",
+      "matches": 26
     },
     "bowling": {
-      "matches": 0,
-      "wickets": 2,
-      "bestFig": "2-26"
+      "wickets": 119,
+      "bestFig": "3-15",
+      "matches": 26
     }
   },
   {
-    "name": "Hanu K",
-    "jersey": "#4",
-    "cap": "HK04",
+    "name": "Charan Reddy Datla",
+    "jersey": "#99",
+    "cap": "CR99",
     "batting": {
-      "matches": 0,
-      "runs": 7,
-      "hs": "4"
+      "runs": 153,
+      "hs": "22*",
+      "matches": 9
     },
     "bowling": {
-      "matches": 0,
-      "wickets": 0,
-      "bestFig": "-"
+      "wickets": 1,
+      "bestFig": "1-10",
+      "matches": 0
     }
   },
   {
-    "name": "Madhu Yellanur",
-    "jersey": "#5",
-    "cap": "MY05",
+    "name": "Tulasi Gangadhar Thatavarthi",
+    "jersey": "#7",
+    "cap": "TT07",
     "batting": {
-      "matches": 0,
-      "runs": 6,
-      "hs": "5"
+      "runs": 152,
+      "hs": "37",
+      "matches": 11
     },
     "bowling": {
-      "matches": 0,
-      "wickets": 6,
-      "bestFig": "3-14"
+      "wickets": 27,
+      "bestFig": "1-3",
+      "matches": 11
     }
   },
   {
-    "name": "Anshul Krishali",
-    "jersey": "TBD",
-    "cap": "TBD",
+    "name": "Deepak Sai",
+    "jersey": "#50",
+    "cap": "AD39",
     "batting": {
-      "matches": 0,
-      "runs": 53,
-      "hs": "30"
+      "runs": 108,
+      "hs": "46*",
+      "matches": 4
     },
     "bowling": {
-      "matches": 0,
       "wickets": 8,
-      "bestFig": "3-26"
+      "bestFig": "2-23",
+      "matches": 4
+    }
+  },
+  {
+    "name": "Venkateswarrao Jyothi",
+    "jersey": "#9",
+    "cap": "VJ09",
+    "batting": {
+      "runs": 87,
+      "hs": "23",
+      "matches": 15
+    },
+    "bowling": {
+      "wickets": 90,
+      "bestFig": "3-26",
+      "matches": 15
     }
   },
   {
@@ -529,14 +364,179 @@
     "jersey": "#48",
     "cap": "AB48",
     "batting": {
-      "matches": 0,
       "runs": 59,
-      "hs": "27"
+      "hs": "27",
+      "matches": 0
     },
     "bowling": {
-      "matches": 0,
       "wickets": 0,
-      "bestFig": "-"
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Yaungicha Mirthivada",
+    "jersey": "#—",
+    "cap": "YAUN",
+    "batting": {
+      "runs": 55,
+      "hs": "18",
+      "matches": 3
+    },
+    "bowling": {
+      "wickets": 3,
+      "bestFig": "0-11",
+      "matches": 2
+    }
+  },
+  {
+    "name": "Anshul Krishali",
+    "jersey": "#—",
+    "cap": "ANSH",
+    "batting": {
+      "runs": 53,
+      "hs": "30*",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 8,
+      "bestFig": "3-26",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Jaya Sukhavasi‡",
+    "jersey": "#—",
+    "cap": "JAYA",
+    "batting": {
+      "runs": 25,
+      "hs": "20",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Jaya Sukhavasi",
+    "jersey": "#—",
+    "cap": "JAYA",
+    "batting": {
+      "runs": 23,
+      "hs": "17",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "2-26",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Haneef Shaik",
+    "jersey": "#77",
+    "cap": "HS77",
+    "batting": {
+      "runs": 18,
+      "hs": "12*",
+      "matches": 14
+    },
+    "bowling": {
+      "wickets": 92,
+      "bestFig": "19",
+      "matches": 23
+    }
+  },
+  {
+    "name": "Anvesh Choudary Mannuru",
+    "jersey": "#2",
+    "cap": "AM28",
+    "batting": {
+      "runs": 15,
+      "hs": "15*",
+      "matches": 1
+    },
+    "bowling": {
+      "wickets": 7,
+      "bestFig": "3-25",
+      "matches": 1
+    }
+  },
+  {
+    "name": "Purvik Prasad",
+    "jersey": "#—",
+    "cap": "PP",
+    "batting": {
+      "runs": 15,
+      "hs": "8",
+      "matches": 7
+    },
+    "bowling": {
+      "wickets": 14,
+      "bestFig": "1",
+      "matches": 9
+    }
+  },
+  {
+    "name": "Yashwanth",
+    "jersey": "#777",
+    "cap": "CY777",
+    "batting": {
+      "runs": 8,
+      "hs": "4",
+      "matches": 3
+    },
+    "bowling": {
+      "wickets": 10,
+      "bestFig": "2",
+      "matches": 3
+    }
+  },
+  {
+    "name": "Hanu K",
+    "jersey": "#4",
+    "cap": "HK04",
+    "batting": {
+      "runs": 7,
+      "hs": "4",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Madhu Yellanur",
+    "jersey": "#5",
+    "cap": "MY05",
+    "batting": {
+      "runs": 6,
+      "hs": "5",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 6,
+      "bestFig": "3-14",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Raja Mouli Yadavalli",
+    "jersey": "#18",
+    "cap": "RY18",
+    "batting": {
+      "runs": 4,
+      "hs": "2",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 8,
+      "bestFig": "2-13",
+      "matches": 2
     }
   },
   {
@@ -544,74 +544,74 @@
     "jersey": "#63",
     "cap": "KBC63",
     "batting": {
-      "matches": 0,
       "runs": 4,
-      "hs": "2"
+      "hs": "2",
+      "matches": 0
     },
     "bowling": {
-      "matches": 0,
       "wickets": 0,
-      "bestFig": "-"
-    }
-  },
-  {
-    "name": "Jaya Sukhavasi‡",
-    "jersey": "TBD",
-    "cap": "TBD",
-    "batting": {
-      "matches": 0,
-      "runs": 25,
-      "hs": "20"
-    },
-    "bowling": {
-      "matches": 0,
-      "wickets": 0,
-      "bestFig": "-"
+      "bestFig": "-",
+      "matches": 0
     }
   },
   {
     "name": "Sharan Bezawada",
-    "jersey": "TBD",
-    "cap": "TBD",
+    "jersey": "#—",
+    "cap": "SHAR",
     "batting": {
-      "matches": 0,
       "runs": 2,
-      "hs": "2"
+      "hs": "2*",
+      "matches": 0
     },
     "bowling": {
-      "matches": 0,
       "wickets": 0,
-      "bestFig": "-"
+      "bestFig": "-",
+      "matches": 0
+    }
+  },
+  {
+    "name": "Anshuman Singh Baghel",
+    "jersey": "#181",
+    "cap": "ASB18",
+    "batting": {
+      "runs": 0,
+      "hs": "0",
+      "matches": 0
+    },
+    "bowling": {
+      "wickets": 4,
+      "bestFig": "1",
+      "matches": 2
     }
   },
   {
     "name": "Yaungicha Mirthivada‡",
-    "jersey": "TBD",
-    "cap": "TBD",
+    "jersey": "#—",
+    "cap": "YAUN",
     "batting": {
-      "matches": 0,
       "runs": 0,
-      "hs": "-"
+      "hs": "0",
+      "matches": 0
     },
     "bowling": {
-      "matches": 0,
       "wickets": 6,
-      "bestFig": "5-31"
+      "bestFig": "5-31",
+      "matches": 0
     }
   },
   {
     "name": "Anshul Krishali‡",
-    "jersey": "TBD",
-    "cap": "TBD",
+    "jersey": "#—",
+    "cap": "ANSH",
     "batting": {
-      "matches": 0,
       "runs": 0,
-      "hs": "-"
+      "hs": "0",
+      "matches": 0
     },
     "bowling": {
-      "matches": 0,
       "wickets": 2,
-      "bestFig": "1-4"
+      "bestFig": "1-4",
+      "matches": 0
     }
   }
 ]
