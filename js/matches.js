@@ -214,7 +214,7 @@ function renderMatches() {
     if (leagueName.includes('Midweek') || leagueName.includes('T20')) colorClass = '#3b82f6';
     
     html += `
-      <div class="reveal active" style="margin-bottom: 2rem;">
+      <div class="reveal visible" style="margin-bottom: 2rem;">
         <h2 style="font-size:1.5rem;color:${colorClass};margin:2rem 0 1.25rem;">${escapeHTML(leagueName)}</h2>
         <div class="table-section">
           <table class="data-table data-table--responsive">
