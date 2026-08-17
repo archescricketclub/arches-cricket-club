@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matches | Arches Cricket Club</title>
+  <meta name="description" content="Match fixtures, results, and tables for Arches Cricket Club.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="logo.png" alt="Arches CC Logo">
+          <div class="nav-logo-text">
+            <div class="club-name">Arches Cricket Club</div>
+            <div class="club-sub">Belfast · Est. 2024</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="matches.html" class="active">Matches</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="honours.html">Honours Board</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="join.html" class="btn btn-primary" style="padding:0.65rem 1.5rem;font-size:0.8rem;">Join The Club</a>
+        </div>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="toggleMobileNav()"><i class="fa-solid fa-house" style="margin-right: 12px; color: var(--amber);"></i> Home</a>
+    <div class="mn-divider"></div>
+    <a href="matches.html" onclick="toggleMobileNav()"><i class="fa-solid fa-calendar-days" style="margin-right: 12px; color: var(--amber);"></i> Matches</a>
+    <a href="players.html" onclick="toggleMobileNav()"><i class="fa-solid fa-users" style="margin-right: 12px; color: var(--amber);"></i> Players</a>
+    <a href="honours.html" onclick="toggleMobileNav()"><i class="fa-solid fa-award" style="margin-right: 12px; color: var(--amber);"></i> Honours Board</a>
+    <a href="gallery.html" onclick="toggleMobileNav()"><i class="fa-solid fa-image" style="margin-right: 12px; color: var(--amber);"></i> Gallery</a>
+    <a href="sponsors.html" onclick="toggleMobileNav()"><i class="fa-solid fa-handshake" style="margin-right: 12px; color: var(--amber);"></i> Sponsors</a>
+    <a href="contact.html" onclick="toggleMobileNav()"><i class="fa-solid fa-envelope" style="margin-right: 12px; color: var(--amber);"></i> Contact</a>
+    <div class="mn-divider"></div>
+    <a href="join.html" class="btn btn-primary" onclick="toggleMobileNav()">
+        <i class="fa-solid fa-user-plus"></i> Join The Club
+    </a>
+  </div>
+
+  <!-- MATCHES HEADER SECTION -->
+  <section class="section matches-header-section page-top-padding" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="matches-header">
+        <h6 class="matches-subtitle" style="color: var(--amber); font-family: 'Bebas Neue', cursive; letter-spacing: 2px; font-size: 1.1rem; margin-bottom: -5px;">MATCHES</h6>
+        <h1 class="matches-title" style="font-family: 'Bebas Neue', cursive; font-size: 4rem; color: #fff; margin-bottom: 2rem;">FIXTURES & RESULTS</h1>
+        
+        <div class="matches-nav-row">
+          <div class="matches-pill-nav">
+            <button class="matches-pill active" data-mode="fixtures" onclick="toggleMatchesMode('fixtures', this)">Fixtures</button>
+            <button class="matches-pill" data-mode="results" onclick="toggleMatchesMode('results', this)">Results</button>
+            <button class="matches-pill" data-mode="tables" onclick="toggleMatchesMode('tables', this)">Tables</button>
+          </div>
+
+          <div class="matches-league-nav" id="leagueNav">
+            <button class="matches-league-tab active" data-league="all" onclick="filterMatches('all', this)">All</button>
+            <button class="matches-league-tab" data-league="team1" onclick="filterMatches('team1', this)">Team 1</button>
+            <button class="matches-league-tab" data-league="team2" onclick="filterMatches('team2', this)">Team 2</button>
+            <button class="matches-league-tab" data-league="midweek" onclick="filterMatches('midweek', this)">Midweek</button>
+            <button class="matches-league-tab" data-league="cups" onclick="filterMatches('cups', this)">Cups</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT SECTION -->
+  <section class="section matches-content-section" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <!-- Stats Summary (hidden by default, shown in Results mode) -->
+      <div id="stats-summary" class="season-summary-grid" style="display:none;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:3rem;">
+        <div class="glass-card reveal" style="padding:1.5rem;text-align:center;">
+          <div id="stat-total-matches" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">0</div>
+          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Matches</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-1" style="padding:1.5rem;text-align:center;">
+          <div id="stat-total-wins" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--amber);">0</div>
+          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Wins</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-2" style="padding:1.5rem;text-align:center;">
+          <div id="stat-total-losses" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:#f87171;">0</div>
+          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Losses</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-3" style="padding:1.5rem;text-align:center;">
+          <div id="stat-total-nr" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);">0</div>
+          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">No Result</div>
+        </div>
+        <div class="glass-card reveal reveal-delay-4" style="padding:1.5rem;text-align:center;">
+          <div id="stat-total-winrate" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">0%</div>
+          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Win Rate</div>
+        </div>
+      </div>
+
+      <div id="matches-content">
+         <div class="loading-state" style="padding: 2rem; text-align: center;">
+            <div class="spinner"></div>
+            <p style="margin-top: 1rem;">Loading data...</p>
+         </div>
+      </div>
+      
+      <!-- Tables view placeholder -->
+      <div id="tables-content" style="display:none; text-align:center; padding: 4rem 1rem;">
+        <i class="fa-solid fa-table" style="font-size: 3rem; color: var(--muted); margin-bottom: 1rem;"></i>
+        <h2 style="color: var(--text);">League Tables</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 1rem auto;">League tables are currently unavailable. Please check back later during the season.</p>
+      </div>
+
+      <!-- Venue Info (shown in Fixtures mode) -->
+      <div id="venue-info" class="glass-card reveal"
+        style="padding:2rem;margin-top:3rem;display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <p class="section-label" style="margin-bottom:0.75rem;">📍 Home Ground</p>
+          <h3 style="font-size:1.4rem;margin-bottom:0.4rem;">Victoria Park, Belfast</h3>
+          <p style="color:var(--muted);font-size:0.9rem;">Belfast BT4 1LS, Northern Ireland</p>
+          <a href="https://maps.app.goo.gl/E4k8V9rZgFZ1RpaG9" target="_blank" class="btn btn-ghost"
+            style="margin-top:1rem;display:inline-flex;">
+            <i class="fa-solid fa-map"></i> Get Directions
+          </a>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p class="section-label" style="margin-bottom:0.75rem;">⚡ Match Info</p>
+          <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">
+            Home games start at <strong style="color:var(--text);">12:00 PM</strong> unless stated otherwise.<br>
+            All fixtures subject to weather and ground conditions.<br>
+            Check social media for last-minute updates.
+          </p>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p class="section-label" style="margin-bottom:0.75rem;">📱 Stay Updated</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/archescricketclub" target="_blank" class="btn btn-ghost"
+              style="display:inline-flex;padding:0.6rem 1rem;font-size:0.78rem;">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1AWw49P2Ez/" target="_blank" class="btn btn-ghost"
+              style="display:inline-flex;padding:0.6rem 1rem;font-size:0.78rem;">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner" style="padding-top:3rem;">
+          <div class="footer-bottom">
+            <div class="footer-copy">
+              © 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland · All rights reserved.
+            </div>
+            <div class="footer-legal">
+              <a href="data_policy.html">Data Policy</a>
+              <a href="dls.html">DLS</a>
+              <a href="contact.html">Contact</a>
+              <a href="join.html">Join</a>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted);">
+            Powered by <a href="https://www.banjotech.ai/" target="_blank" style="color: var(--amber); text-decoration: none; font-weight: bold;">Banjo Tech</a>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/matches.js"></script>
+</body>
+</html>

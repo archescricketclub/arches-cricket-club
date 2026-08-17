@@ -2551,3 +2551,75 @@ button {
 .error-icon { font-size: 3rem; color: #ff4444; margin-bottom: 1rem; }
 .error-title { font-size: 1.25rem; color: #fff; margin-bottom: 0.5rem; font-weight: 600; }
 .error-desc { color: var(--text-secondary); }
+
+/* ─── MATCHES PAGE SPECIFIC STYLES ─── */
+.matches-header-section {
+  background-color: #020C73; /* Dark blue background mimicking reference */
+}
+.matches-header {
+  display: flex;
+  flex-direction: column;
+}
+.matches-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
+.matches-pill-nav {
+  display: flex;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 40px;
+  overflow: hidden;
+  padding: 2px;
+  margin-bottom: 0.5rem;
+}
+.matches-pill {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+.matches-pill.active {
+  background-color: #fff;
+  color: #020C73;
+}
+.matches-pill:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.matches-league-nav {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 0;
+  align-self: flex-end;
+  scrollbar-width: none; /* Firefox */
+}
+.matches-league-nav::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.matches-league-tab {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+  background: none;
+}
+.matches-league-tab.active {
+  border-bottom: 3px solid var(--amber);
+}
+.matches-league-tab:hover:not(.active) {
+  border-bottom: 3px solid rgba(245, 158, 11, 0.4);
+}
