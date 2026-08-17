@@ -26,6 +26,7 @@ function formatOvers(oversDecimal) {
     const full = Math.floor(oversDecimal);
     const balls = Math.round((oversDecimal - full) * 6);
     if (balls === 6) return (full + 1).toString();
+    if (balls === 0) return full.toString();
     return `${full}.${balls}`;
 }
 
