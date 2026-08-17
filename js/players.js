@@ -169,13 +169,13 @@
             
             const sortType = CURRENT_SORTS[key] || defaultSort;
             
-            // Update the select dropdown to reflect the default if it exists
             const el = document.getElementById(key);
-            if (el) {
-                const select = el.closest('.cat-block')?.querySelector('.sort-filter');
-                if (select && select.value !== sortType) {
-                    select.value = sortType;
-                }
+            if (!el) return;
+            
+            // Update the select dropdown to reflect the default if it exists
+            const select = el.closest('.cat-block')?.querySelector('.sort-filter');
+            if (select && select.value !== sortType) {
+                select.value = sortType;
             }
             
             let list = [...DATA[key]];
@@ -209,8 +209,6 @@
                     return getVal(b) - getVal(a);
                 });
             }
-            
-            const el = document.getElementById(key);
             if (!el) return;
             
             const btn = el.closest('.cat-block').querySelector('.view-all-btn');
