@@ -676,24 +676,5 @@
     "date": "23rd May 2026",
     "league": "NCU Mercury Senior League 3",
     "opponent": "Drumaness Superkings 1st XI"
-  },
-  {
-    "name": "Veerendra Babu Nagari",
-    "type": "bowling",
-    "record": "5-53",
-    "wickets": 5,
-    "runs": 53,
-    "date": "17th May 2026",
-    "league": "NCU Mercury Senior League 3",
-    "opponent": "NIMACC 1st XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "88",
-    "runs": 88,
-    "date": "17th May 2026",
-    "league": "NCU Mercury Senior League 3",
-    "opponent": "NIMACC 1st XI"
   }
 ]
