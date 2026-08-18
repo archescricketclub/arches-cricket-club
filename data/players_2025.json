@@ -1,1030 +1,2747 @@
 {
   "t1-bat": [
     {
-      "name": "Asad Murtuza",
-      "runs": 39,
-      "hs": "39",
-      "avg": 39
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "runs": 16,
-      "hs": "16*",
-      "avg": null
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "runs": 15,
-      "hs": "15",
-      "avg": 15
-    },
-    {
       "name": "Surya Pavan Teja Tummala",
-      "runs": 14,
-      "hs": "14",
-      "avg": 14
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "47",
+          "l": "Runs"
+        },
+        {
+          "n": "27",
+          "l": "High Score"
+        },
+        {
+          "n": "47.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "6",
+          "l": "Runs"
+        },
+        {
+          "n": "6*",
+          "l": "High Score"
+        },
+        {
+          "n": "6.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veera SR Nimmakayala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "23",
+          "l": "Runs"
+        },
+        {
+          "n": "23",
+          "l": "High Score"
+        },
+        {
+          "n": "23.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Deepak Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "58",
+          "l": "Runs"
+        },
+        {
+          "n": "46",
+          "l": "High Score"
+        },
+        {
+          "n": "19.33",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Kishan Karneedi",
-      "runs": 13,
-      "hs": "13",
-      "avg": 13
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "24",
+          "l": "Runs"
+        },
+        {
+          "n": "16",
+          "l": "High Score"
+        },
+        {
+          "n": "8.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Ali Rizwan",
-      "runs": 13,
-      "hs": "13",
-      "avg": 13
+      "name": "Sri Tummala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "17",
+          "l": "Runs"
+        },
+        {
+          "n": "7",
+          "l": "High Score"
+        },
+        {
+          "n": "3.40",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Vinay Tummala",
-      "runs": 8,
-      "hs": "8",
-      "avg": 8
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "108",
+          "l": "Runs"
+        },
+        {
+          "n": "73",
+          "l": "High Score"
+        },
+        {
+          "n": "27.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Arush Nimmagadda",
-      "runs": 2,
-      "hs": "2",
-      "avg": 2
+      "name": "Srini Nadakuditi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Tulasi Gangadhar Thatavarthi",
-      "runs": 1,
-      "hs": "1",
-      "avg": 1
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "57",
+          "l": "Runs"
+        },
+        {
+          "n": "37",
+          "l": "High Score"
+        },
+        {
+          "n": "19.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Anil Narra",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "37",
+          "l": "Runs"
+        },
+        {
+          "n": "30",
+          "l": "High Score"
+        },
+        {
+          "n": "12.33",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Arush Nimmagadda",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "11",
+          "l": "Runs"
+        },
+        {
+          "n": "11",
+          "l": "High Score"
+        },
+        {
+          "n": "5.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Asad Murtuza",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "122",
+          "l": "Runs"
+        },
+        {
+          "n": "68",
+          "l": "High Score"
+        },
+        {
+          "n": "30.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Jaya Sukhavasi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Runs"
+        },
+        {
+          "n": "4",
+          "l": "High Score"
+        },
+        {
+          "n": "4.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Hanu Kolagani",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Runs"
+        },
+        {
+          "n": "4",
+          "l": "High Score"
+        },
+        {
+          "n": "4.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Yaungicha Mirthivada",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "9",
+          "l": "Runs"
+        },
+        {
+          "n": "9",
+          "l": "High Score"
+        },
+        {
+          "n": "9.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Yellanur Madhu Soodhan",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "High Score"
+        },
+        {
+          "n": "1.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "12",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "4.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "64",
+          "l": "Runs"
+        },
+        {
+          "n": "36",
+          "l": "High Score"
+        },
+        {
+          "n": "32.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     }
   ],
   "t1-bowl": [
     {
-      "name": "Dushyanth Reddy B",
-      "overs": 4,
-      "wickets": 3,
-      "bestFig": "3-25"
-    },
-    {
-      "name": "Vinay Tummala",
-      "overs": 3,
-      "wickets": 2,
-      "bestFig": "2-25"
-    },
-    {
-      "name": "Kishan Karneedi",
-      "overs": 4,
-      "wickets": 0,
-      "bestFig": "0-25"
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-19",
+          "l": "Best Fig"
+        },
+        {
+          "n": "42.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Venkateswarrao Jyothi",
-      "overs": 4,
-      "wickets": 0,
-      "bestFig": "0-41"
-    },
-    {
-      "name": "Ali Rizwan",
-      "overs": 1,
-      "wickets": 0,
-      "bestFig": "0-14"
-    },
-    {
-      "name": "Surya Pavan Teja Tummala",
-      "overs": 4,
-      "wickets": 0,
-      "bestFig": "0-37"
-    }
-  ],
-  "t1-ar": [],
-  "t2-bat": [
-    {
-      "name": "Asad Murtuza",
-      "runs": 236,
-      "hs": "68",
-      "avg": 23.6
-    },
-    {
-      "name": "Vinay Tummala",
-      "runs": 182,
-      "hs": "47",
-      "avg": 15.17
-    },
-    {
-      "name": "Anil Narra",
-      "runs": 157,
-      "hs": "53",
-      "avg": 15.7
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "runs": 129,
-      "hs": "73",
-      "avg": 12.9
-    },
-    {
-      "name": "Veerendra Babu Nagari",
-      "runs": 120,
-      "hs": "34",
-      "avg": 13.33
-    },
-    {
-      "name": "Ali Rizwan",
-      "runs": 103,
-      "hs": "36*",
-      "avg": 17.17
-    },
-    {
-      "name": "Deepak Sai",
-      "runs": 88,
-      "hs": "46*",
-      "avg": 17.6
-    },
-    {
-      "name": "Tulasi Gangadhar Thatavarthi",
-      "runs": 84,
-      "hs": "37",
-      "avg": 9.33
-    },
-    {
-      "name": "Surya Pavan Teja Tummala",
-      "runs": 71,
-      "hs": "27*",
-      "avg": 14.2
-    },
-    {
-      "name": "Kishan Karneedi",
-      "runs": 50,
-      "hs": "16",
-      "avg": 5.56
-    },
-    {
-      "name": "Arush Nimmagadda",
-      "runs": 25,
-      "hs": "11*",
-      "avg": 4.17
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "8",
+          "l": "Wickets"
+        },
+        {
+          "n": "3-26",
+          "l": "Best Fig"
+        },
+        {
+          "n": "13.25",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Veera SR Nimmakayala",
-      "runs": 23,
-      "hs": "23",
-      "avg": 23
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-46",
+          "l": "Best Fig"
+        },
+        {
+          "n": "23.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Venkateswarrao Jyothi",
-      "runs": 19,
-      "hs": "10",
-      "avg": 6.33
+      "name": "Deepak Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-40",
+          "l": "Best Fig"
+        },
+        {
+          "n": "34.33",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "9",
+          "l": "Wickets"
+        },
+        {
+          "n": "5-22",
+          "l": "Best Fig"
+        },
+        {
+          "n": "13.11",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Sri Tummala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-46",
+          "l": "Best Fig"
+        },
+        {
+          "n": "33.33",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-41",
+          "l": "Best Fig"
+        },
+        {
+          "n": "70.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-3",
+          "l": "Best Fig"
+        },
+        {
+          "n": "3.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Yaungicha Mirthivada",
-      "runs": 9,
-      "hs": "9",
-      "avg": 9
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "-",
+          "l": "Best Fig"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Yellanur Madhu Soodhan",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "-",
+          "l": "Best Fig"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "7",
+          "l": "Wickets"
+        },
+        {
+          "n": "5-17",
+          "l": "Best Fig"
+        },
+        {
+          "n": "10.00",
+          "l": "Average"
+        }
+      ]
+    }
+  ],
+  "t1-ar": [
+    {
+      "name": "Surya Pavan Teja Tummala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "47",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Venkateswarrao Jyothi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "6",
+          "l": "Runs"
+        },
+        {
+          "n": "8",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Veera SR Nimmakayala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "23",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Deepak Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "58",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "24",
+          "l": "Runs"
+        },
+        {
+          "n": "9",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Sri Tummala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "17",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "108",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "57",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "12",
+          "l": "Runs"
+        },
+        {
+          "n": "7",
+          "l": "Wickets"
+        }
+      ]
+    }
+  ],
+  "t2-bat": [
+    {
+      "name": "Srini Nadakuditi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "160",
+          "l": "Runs"
+        },
+        {
+          "n": "54",
+          "l": "High Score"
+        },
+        {
+          "n": "32.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Anil Narra",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "44",
+          "l": "Runs"
+        },
+        {
+          "n": "33",
+          "l": "High Score"
+        },
+        {
+          "n": "14.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "32",
+          "l": "Runs"
+        },
+        {
+          "n": "16",
+          "l": "High Score"
+        },
+        {
+          "n": "8.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Harsha Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "14",
+          "l": "Runs"
+        },
+        {
+          "n": "14",
+          "l": "High Score"
+        },
+        {
+          "n": "4.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "88",
+          "l": "Runs"
+        },
+        {
+          "n": "30",
+          "l": "High Score"
+        },
+        {
+          "n": "29.33",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "37",
+          "l": "High Score"
+        },
+        {
+          "n": "22.33",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Chandra Obula Reddy B",
-      "runs": 5,
-      "hs": "5",
-      "avg": 5
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "78",
+          "l": "Runs"
+        },
+        {
+          "n": "29",
+          "l": "High Score"
+        },
+        {
+          "n": "19.50",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Jaya Sukhavasi",
-      "runs": 4,
-      "hs": "4",
-      "avg": 4
+      "name": "Yaungicha Mirthivada",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "10",
+          "l": "Runs"
+        },
+        {
+          "n": "10*",
+          "l": "High Score"
+        },
+        {
+          "n": "10.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Hanu K",
-      "runs": 4,
-      "hs": "4",
-      "avg": 4
+      "name": "Kiran Maheswaram",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "13",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "3.25",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Raja Yadavalli",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "High Score"
+        },
+        {
+          "n": "2.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "20",
+          "l": "Runs"
+        },
+        {
+          "n": "9",
+          "l": "High Score"
+        },
+        {
+          "n": "10.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "58",
+          "l": "Runs"
+        },
+        {
+          "n": "27",
+          "l": "High Score"
+        },
+        {
+          "n": "14.50",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Rohit Singh",
-      "runs": 2,
-      "hs": "2",
-      "avg": 2
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "128",
+          "l": "Runs"
+        },
+        {
+          "n": "114",
+          "l": "High Score"
+        },
+        {
+          "n": "42.67",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Madhu Yellanur",
-      "runs": 1,
-      "hs": "1",
-      "avg": 1
+      "name": "Sharan Bezawada",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Runs"
+        },
+        {
+          "n": "2*",
+          "l": "High Score"
+        },
+        {
+          "n": "2.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veera SR Nimmakayala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "37",
+          "l": "Runs"
+        },
+        {
+          "n": "37",
+          "l": "High Score"
+        },
+        {
+          "n": "37.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Sarmad Butt",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "High Score"
+        },
+        {
+          "n": "1.00",
+          "l": "Average"
+        }
+      ]
     }
   ],
   "t2-bowl": [
     {
       "name": "Kishan Karneedi",
-      "overs": 65.3,
-      "wickets": 20,
-      "bestFig": "5-22"
-    },
-    {
-      "name": "Veerendra Babu Nagari",
-      "overs": 54,
-      "wickets": 13,
-      "bestFig": "5-17"
-    },
-    {
-      "name": "Venkateswarrao Jyothi",
-      "overs": 50.5,
-      "wickets": 13,
-      "bestFig": "3-26"
-    },
-    {
-      "name": "Surya Pavan Teja Tummala",
-      "overs": 51.3,
-      "wickets": 9,
-      "bestFig": "3-32"
-    },
-    {
-      "name": "Vinay Tummala",
-      "overs": 23.5,
-      "wickets": 7,
-      "bestFig": "2-46"
-    },
-    {
-      "name": "Deepak Sai",
-      "overs": 34,
-      "wickets": 7,
-      "bestFig": "2-23"
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "overs": 36,
-      "wickets": 5,
-      "bestFig": "2-22"
-    },
-    {
-      "name": "Tulasi Gangadhar Thatavarthi",
-      "overs": 6,
-      "wickets": 2,
-      "bestFig": "1-3"
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "overs": 7,
-      "wickets": 2,
-      "bestFig": "2-46"
-    },
-    {
-      "name": "Anil Narra",
-      "overs": 2,
-      "wickets": 1,
-      "bestFig": "1-6"
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "overs": 2,
-      "wickets": 1,
-      "bestFig": "1-18"
-    },
-    {
-      "name": "Anshul Krishali",
-      "overs": 3,
-      "wickets": 0,
-      "bestFig": "0-10"
-    },
-    {
-      "name": "Madhu Yellanur",
-      "overs": 2,
-      "wickets": 0,
-      "bestFig": "0-20"
-    },
-    {
-      "name": "Yaungicha Mirthivada",
-      "overs": 1,
-      "wickets": 0,
-      "bestFig": "0-11"
-    }
-  ],
-  "t2-ar": [],
-  "mw-bat": [
-    {
-      "name": "Kishan Karneedi",
-      "runs": 178,
-      "hs": "35*",
-      "avg": 35.6
-    },
-    {
-      "name": "Ali Rizwan",
-      "runs": 161,
-      "hs": "35*",
-      "avg": 32.2
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "runs": 113,
-      "hs": "31*",
-      "avg": 16.14
-    },
-    {
-      "name": "Srini Nadakuditi",
-      "runs": 86,
-      "hs": "35*",
-      "avg": 21.5
-    },
-    {
-      "name": "Sarmad Butt",
-      "runs": 82,
-      "hs": "32*",
-      "avg": 27.33
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "runs": 80,
-      "hs": "29",
-      "avg": 13.33
-    },
-    {
-      "name": "Charan Reddy Datla",
-      "runs": 73,
-      "hs": "22*",
-      "avg": 18.25
-    },
-    {
-      "name": "Anil Narra",
-      "runs": 68,
-      "hs": "28",
-      "avg": 7.56
-    },
-    {
-      "name": "Abhiram Donepudi",
-      "runs": 59,
-      "hs": "27",
-      "avg": 29.5
-    },
-    {
-      "name": "Anshul Krishali",
-      "runs": 49,
-      "hs": "30*",
-      "avg": 16.33
-    },
-    {
-      "name": "Kiran Maheswaram",
-      "runs": 48,
-      "hs": "31*",
-      "avg": 16
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "6",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-33",
+          "l": "Best Fig"
+        },
+        {
+          "n": "26.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Harsha Sai",
-      "runs": 40,
-      "hs": "13",
-      "avg": 6.67
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "5",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-22",
+          "l": "Best Fig"
+        },
+        {
+          "n": "33.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-23",
+          "l": "Best Fig"
+        },
+        {
+          "n": "33.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-8",
+          "l": "Best Fig"
+        },
+        {
+          "n": "46.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "6",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-13",
+          "l": "Best Fig"
+        },
+        {
+          "n": "19.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kiran Maheswaram",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-11",
+          "l": "Best Fig"
+        },
+        {
+          "n": "19.75",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Raja Yadavalli",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-24",
+          "l": "Best Fig"
+        },
+        {
+          "n": "29.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-10",
+          "l": "Best Fig"
+        },
+        {
+          "n": "10.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "-",
+          "l": "Best Fig"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Rohit Singh",
-      "runs": 28,
-      "hs": "16",
-      "avg": 14
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-36",
+          "l": "Best Fig"
+        },
+        {
+          "n": "36.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veera SR Nimmakayala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-25",
+          "l": "Best Fig"
+        },
+        {
+          "n": "12.50",
+          "l": "Average"
+        }
+      ]
+    }
+  ],
+  "t2-ar": [
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "32",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Harsha Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "14",
+          "l": "Runs"
+        },
+        {
+          "n": "5",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "88",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "67",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "78",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Kiran Maheswaram",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "13",
+          "l": "Runs"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Raja Yadavalli",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "5",
+          "l": "Matches"
+        },
+        {
+          "n": "20",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Rohit Singh",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "128",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Veera SR Nimmakayala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "37",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        }
+      ]
+    }
+  ],
+  "mw-bat": [
+    {
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "12",
+          "l": "Runs"
+        },
+        {
+          "n": "12",
+          "l": "High Score"
+        },
+        {
+          "n": "12.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Harsha Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Runs"
+        },
+        {
+          "n": "1*",
+          "l": "High Score"
+        },
+        {
+          "n": "1.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Veera SR Nimmakayala",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kiran Maheswaram",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Raja Yadavalli",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "High Score"
+        },
+        {
+          "n": "2.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Sarmad Butt",
-      "runs": 23,
-      "hs": "16",
-      "avg": 7.67
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "runs": 19,
-      "hs": "19*",
-      "avg": null
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "16",
+          "l": "Runs"
+        },
+        {
+          "n": "16",
+          "l": "High Score"
+        },
+        {
+          "n": "16.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Jaya Sukhavasi",
-      "runs": 19,
-      "hs": "17",
-      "avg": 9.5
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "17",
+          "l": "Runs"
+        },
+        {
+          "n": "17",
+          "l": "High Score"
+        },
+        {
+          "n": "17.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Veera SR Nimmakayala",
-      "runs": 14,
-      "hs": "9",
-      "avg": 2.8
+      "name": "Anil Narra",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "17",
+          "l": "Runs"
+        },
+        {
+          "n": "17*",
+          "l": "High Score"
+        },
+        {
+          "n": "17.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Madhu Yellanur",
-      "runs": 5,
-      "hs": "5",
-      "avg": 5
-    },
-    {
-      "name": "Banu Chand Kandukuri",
-      "runs": 2,
-      "hs": "1",
-      "avg": 1
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "runs": 2,
-      "hs": "2",
-      "avg": 2
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     }
   ],
   "mw-bowl": [
     {
-      "name": "Kishan Karneedi",
-      "overs": 37,
-      "wickets": 16,
-      "bestFig": "4-15"
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "overs": 29,
-      "wickets": 11,
-      "bestFig": "2-20"
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "overs": 20,
-      "wickets": 10,
-      "bestFig": "3-26"
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "-",
+          "l": "Best Fig"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Harsha Sai",
-      "overs": 28.5,
-      "wickets": 9,
-      "bestFig": "3-26"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "3-26",
+          "l": "Best Fig"
+        },
+        {
+          "n": "8.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-5",
+          "l": "Best Fig"
+        },
+        {
+          "n": "5.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Veera SR Nimmakayala",
-      "overs": 14.4,
-      "wickets": 4,
-      "bestFig": "3-19"
-    },
-    {
-      "name": "Anshul Krishali",
-      "overs": 15,
-      "wickets": 4,
-      "bestFig": "3-26"
-    },
-    {
-      "name": "Anil Narra",
-      "overs": 8.3,
-      "wickets": 2,
-      "bestFig": "1-6"
-    },
-    {
-      "name": "Vinay Tummala",
-      "overs": 4,
-      "wickets": 2,
-      "bestFig": "2-21"
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "overs": 2,
-      "wickets": 2,
-      "bestFig": "2-13"
-    },
-    {
-      "name": "Madhu Yellanur",
-      "overs": 3,
-      "wickets": 2,
-      "bestFig": "2-23"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "-",
+          "l": "Best Fig"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Kiran Maheswaram",
-      "overs": 4,
-      "wickets": 1,
-      "bestFig": "1-6"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-6",
+          "l": "Best Fig"
+        },
+        {
+          "n": "6.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Veera SR Nimmakayala",
-      "overs": 6.5,
-      "wickets": 1,
-      "bestFig": "1-33"
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-10",
+          "l": "Best Fig"
+        },
+        {
+          "n": "5.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Charan Reddy Datla",
-      "overs": 2,
-      "wickets": 0,
-      "bestFig": "0-16"
-    },
-    {
-      "name": "Yaungicha Mirthivada",
-      "overs": 1.1,
-      "wickets": 0,
-      "bestFig": "0-19"
-    },
-    {
-      "name": "Sarmad Butt",
-      "overs": 1,
-      "wickets": 0,
-      "bestFig": "0-8"
-    },
-    {
-      "name": "Rohit Singh",
-      "overs": 1,
-      "wickets": 0,
-      "bestFig": "0-15"
+      "name": "Raja Yadavalli",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-13",
+          "l": "Best Fig"
+        },
+        {
+          "n": "6.50",
+          "l": "Average"
+        }
+      ]
     }
   ],
-  "mw-ar": [],
+  "mw-ar": [
+    {
+      "name": "Harsha Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Raja Yadavalli",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        }
+      ]
+    }
+  ],
   "cup-bat": [
     {
-      "name": "Ali Rizwan",
-      "runs": 365,
-      "hs": "131",
-      "avg": 91.25
-    },
-    {
-      "name": "Srini Nadakuditi",
-      "runs": 258,
-      "hs": "54",
-      "avg": 18.43
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "runs": 202,
-      "hs": "33",
-      "avg": 33.67
-    },
-    {
-      "name": "Anil Narra",
-      "runs": 183,
-      "hs": "49*",
-      "avg": 36.6
-    },
-    {
-      "name": "Rohit Singh",
-      "runs": 128,
-      "hs": "114",
-      "avg": 42.67
+      "name": "Kishan Karneedi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "32",
+          "l": "Runs"
+        },
+        {
+          "n": "27*",
+          "l": "High Score"
+        },
+        {
+          "n": "32.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Chandra Obula Reddy B",
-      "runs": 118,
-      "hs": "29",
-      "avg": 16.86
-    },
-    {
-      "name": "Ali Rizwan",
-      "runs": 111,
-      "hs": "29*",
-      "avg": 22.2
-    },
-    {
-      "name": "Kishan Karneedi",
-      "runs": 90,
-      "hs": "37",
-      "avg": 11.25
-    },
-    {
-      "name": "Sarmad Butt",
-      "runs": 73,
-      "hs": "27",
-      "avg": 18.25
-    },
-    {
-      "name": "Veerendra Babu Nagari",
-      "runs": 67,
-      "hs": "37",
-      "avg": 22.33
-    },
-    {
-      "name": "Charan Reddy Datla",
-      "runs": 59,
-      "hs": "22",
-      "avg": 11.8
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "5",
+          "l": "Runs"
+        },
+        {
+          "n": "5*",
+          "l": "High Score"
+        },
+        {
+          "n": "5.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Kiran Maheswaram",
-      "runs": 44,
-      "hs": "16*",
-      "avg": 6.29
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Veera SR Nimmakayala",
-      "runs": 37,
-      "hs": "37",
-      "avg": 37
-    },
-    {
-      "name": "Jaya Sukhavasi‡",
-      "runs": 25,
-      "hs": "20",
-      "avg": 12.5
-    },
-    {
-      "name": "Rohit Singh",
-      "runs": 19,
-      "hs": "19",
-      "avg": 19
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "11",
+          "l": "Runs"
+        },
+        {
+          "n": "6",
+          "l": "High Score"
+        },
+        {
+          "n": "5.50",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Harsha Sai",
-      "runs": 16,
-      "hs": "16",
-      "avg": 16
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Harsha Sai",
-      "runs": 14,
-      "hs": "14",
-      "avg": 4.67
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "62",
+          "l": "Runs"
+        },
+        {
+          "n": "62",
+          "l": "High Score"
+        },
+        {
+          "n": "31.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Srini Nadakuditi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "63",
+          "l": "Runs"
+        },
+        {
+          "n": "32",
+          "l": "High Score"
+        },
+        {
+          "n": "31.50",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "48",
+          "l": "Runs"
+        },
+        {
+          "n": "26",
+          "l": "High Score"
+        },
+        {
+          "n": "24.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Anil Narra",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "34",
+          "l": "Runs"
+        },
+        {
+          "n": "26",
+          "l": "High Score"
+        },
+        {
+          "n": "34.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Yaungicha Mirthivada",
-      "runs": 10,
-      "hs": "10*",
-      "avg": null
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Anshul Krishali",
-      "runs": 4,
-      "hs": "4",
-      "avg": 4
-    },
-    {
-      "name": "Hanu K",
-      "runs": 3,
-      "hs": "3*",
-      "avg": null
-    },
-    {
-      "name": "Banu Chand Kandukuri",
-      "runs": 2,
-      "hs": "2",
-      "avg": 2
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "runs": 2,
-      "hs": "2",
-      "avg": 2
-    },
-    {
-      "name": "Sharan Bezawada",
-      "runs": 2,
-      "hs": "2*",
-      "avg": null
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "runs": 157,
-      "hs": "62",
-      "avg": 39.25
-    },
-    {
-      "name": "Srini Nadakuditi",
-      "runs": 95,
-      "hs": "32",
-      "avg": 23.75
+      "name": "Charan Reddy Datla",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Rohit Singh",
-      "runs": 83,
-      "hs": "83",
-      "avg": 83
-    },
-    {
-      "name": "Anil Narra",
-      "runs": 61,
-      "hs": "26*",
-      "avg": 20.33
-    },
-    {
-      "name": "Kishan Karneedi",
-      "runs": 58,
-      "hs": "27*",
-      "avg": null
-    },
-    {
-      "name": "Ali Rizwan",
-      "runs": 48,
-      "hs": "26",
-      "avg": 24
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "runs": 27,
-      "hs": "17",
-      "avg": 27
-    },
-    {
-      "name": "Kiran Maheswaram",
-      "runs": 25,
-      "hs": "20*",
-      "avg": 25
-    },
-    {
-      "name": "Veerendra Babu Nagari",
-      "runs": 11,
-      "hs": "6",
-      "avg": 5.5
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "runs": 7,
-      "hs": "5*",
-      "avg": 7
-    },
-    {
-      "name": "Ali Rizwan",
-      "runs": 42,
-      "hs": "42",
-      "avg": 42
-    },
-    {
-      "name": "Asad Murtuza",
-      "runs": 36,
-      "hs": "36",
-      "avg": 36
-    },
-    {
-      "name": "Anil Narra",
-      "runs": 27,
-      "hs": "27",
-      "avg": 27
-    },
-    {
-      "name": "Kishan Karneedi",
-      "runs": 15,
-      "hs": "15",
-      "avg": 15
-    },
-    {
-      "name": "Tulasi Gangadhar Thatavarthi",
-      "runs": 13,
-      "hs": "13",
-      "avg": 13
-    },
-    {
-      "name": "Surya Pavan Teja Tummala",
-      "runs": 12,
-      "hs": "12",
-      "avg": 12
-    },
-    {
-      "name": "Arush Nimmagadda",
-      "runs": 5,
-      "hs": "5",
-      "avg": 5
-    },
-    {
-      "name": "Venkateswarrao Jyothi",
-      "runs": 4,
-      "hs": "4*",
-      "avg": null
-    },
-    {
-      "name": "Veerendra Babu Nagari",
-      "runs": 3,
-      "hs": "3",
-      "avg": 3
-    },
-    {
-      "name": "Vinay Tummala",
-      "runs": 1,
-      "hs": "1",
-      "avg": 1
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "83",
+          "l": "Runs"
+        },
+        {
+          "n": "83",
+          "l": "High Score"
+        },
+        {
+          "n": "83.00",
+          "l": "Average"
+        }
+      ]
     }
   ],
   "cup-bowl": [
     {
-      "name": "Chandra Obula Reddy B",
-      "overs": 47.4,
-      "wickets": 14,
-      "bestFig": "3-20"
-    },
-    {
-      "name": "Dushyanth Reddy B",
-      "overs": 38,
-      "wickets": 12,
-      "bestFig": "4-30"
-    },
-    {
       "name": "Kishan Karneedi",
-      "overs": 58.2,
-      "wickets": 10,
-      "bestFig": "2-24"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        },
+        {
+          "n": "3-12",
+          "l": "Best Fig"
+        },
+        {
+          "n": "11.75",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Harsha Sai",
-      "overs": 36,
-      "wickets": 9,
-      "bestFig": "3-15"
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-28",
+          "l": "Best Fig"
+        },
+        {
+          "n": "16.67",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Kiran Maheswaram",
-      "overs": 23.4,
-      "wickets": 7,
-      "bestFig": "2-11"
-    },
-    {
-      "name": "Yaungicha Mirthivada‡",
-      "overs": 12,
-      "wickets": 6,
-      "bestFig": "5-31"
-    },
-    {
-      "name": "Anil Narra",
-      "overs": 6,
-      "wickets": 4,
-      "bestFig": "2-14"
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "overs": 11,
-      "wickets": 3,
-      "bestFig": "2-25"
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "overs": 11,
-      "wickets": 3,
-      "bestFig": "2-22"
-    },
-    {
-      "name": "Madhu Yellanur",
-      "overs": 2.1,
-      "wickets": 3,
-      "bestFig": "3-14"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-9",
+          "l": "Best Fig"
+        },
+        {
+          "n": "12.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Veerendra Babu Nagari",
-      "overs": 16,
-      "wickets": 3,
-      "bestFig": "1-8"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "5",
+          "l": "Wickets"
+        },
+        {
+          "n": "4-13",
+          "l": "Best Fig"
+        },
+        {
+          "n": "12.60",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Anshul Krishali",
-      "overs": 4,
-      "wickets": 3,
-      "bestFig": "3-35"
-    },
-    {
-      "name": "Anshul Krishali‡",
-      "overs": 9,
-      "wickets": 2,
-      "bestFig": "1-4"
-    },
-    {
-      "name": "Jaya Sukhavasi",
-      "overs": 3,
-      "wickets": 2,
-      "bestFig": "2-26"
-    },
-    {
-      "name": "Charan Reddy Datla",
-      "overs": 3.2,
-      "wickets": 1,
-      "bestFig": "1-10"
-    },
-    {
-      "name": "Ali Rizwan",
-      "overs": 2,
-      "wickets": 1,
-      "bestFig": "1-13"
-    },
-    {
-      "name": "Rohit Singh",
-      "overs": 4,
-      "wickets": 1,
-      "bestFig": "1-33"
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "overs": 5,
-      "wickets": 1,
-      "bestFig": "1-20"
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "overs": 3,
-      "wickets": 1,
-      "bestFig": "1-24"
-    },
-    {
-      "name": "Rohit Singh",
-      "overs": 2,
-      "wickets": 1,
-      "bestFig": "1-36"
-    },
-    {
-      "name": "Madhu Yellanur",
-      "overs": 5,
-      "wickets": 1,
-      "bestFig": "1-22"
-    },
-    {
-      "name": "Ali Rizwan",
-      "overs": 1,
-      "wickets": 0,
-      "bestFig": "0-15"
-    },
-    {
-      "name": "Kishan Karneedi",
-      "overs": 14.3,
-      "wickets": 6,
-      "bestFig": "3-12"
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "overs": 7,
-      "wickets": 5,
-      "bestFig": "4-36"
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "overs": 14,
-      "wickets": 5,
-      "bestFig": "2-13"
-    },
-    {
-      "name": "Veerendra Babu Nagari",
-      "overs": 10,
-      "wickets": 5,
-      "bestFig": "4-13"
-    },
-    {
-      "name": "Anvesh Choudary Mannuru",
-      "overs": 4,
-      "wickets": 3,
-      "bestFig": "3-25"
+      "name": "Harsha Sai",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-23",
+          "l": "Best Fig"
+        },
+        {
+          "n": "44.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Dushyanth Reddy B",
-      "overs": 13,
-      "wickets": 3,
-      "bestFig": "1-16"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-18",
+          "l": "Best Fig"
+        },
+        {
+          "n": "22.50",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Srini Nadakuditi",
-      "overs": 2,
-      "wickets": 2,
-      "bestFig": "2-38"
-    },
-    {
-      "name": "Kiran Maheswaram",
-      "overs": 7,
-      "wickets": 2,
-      "bestFig": "1-9"
-    },
-    {
-      "name": "Harsha Sai",
-      "overs": 11,
-      "wickets": 1,
-      "bestFig": "1-23"
-    },
-    {
-      "name": "Anshul Krishali",
-      "overs": 3,
-      "wickets": 1,
-      "bestFig": "1-13"
-    },
-    {
-      "name": "Rohit Singh",
-      "overs": 1,
-      "wickets": 1,
-      "bestFig": "1-3"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-38",
+          "l": "Best Fig"
+        },
+        {
+          "n": "19.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Anil Narra",
-      "overs": 1,
-      "wickets": 0,
-      "bestFig": "0-12"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "-",
+          "l": "Best Fig"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
     },
     {
-      "name": "Surya Pavan Teja Tummala",
-      "overs": 8,
-      "wickets": 4,
-      "bestFig": "4-32"
-    },
+      "name": "Rohit Singh",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-3",
+          "l": "Best Fig"
+        },
+        {
+          "n": "3.00",
+          "l": "Average"
+        }
+      ]
+    }
+  ],
+  "cup-ar": [
     {
       "name": "Kishan Karneedi",
-      "overs": 8,
-      "wickets": 2,
-      "bestFig": "2-53"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "32",
+          "l": "Runs"
+        },
+        {
+          "n": "4",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "5",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
     },
     {
       "name": "Veerendra Babu Nagari",
-      "overs": 8,
-      "wickets": 1,
-      "bestFig": "1-72"
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "11",
+          "l": "Runs"
+        },
+        {
+          "n": "5",
+          "l": "Wickets"
+        }
+      ]
     },
     {
-      "name": "Venkateswarrao Jyothi",
-      "overs": 4,
-      "wickets": 0,
-      "bestFig": "0-39"
+      "name": "Dushyanth Reddy B",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "62",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        }
+      ]
     },
     {
-      "name": "Ali Rizwan",
-      "overs": 3,
-      "wickets": 0,
-      "bestFig": "0-27"
+      "name": "Srini Nadakuditi",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "63",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        }
+      ]
     },
     {
-      "name": "Deepak Sai",
-      "overs": 7,
-      "wickets": 0,
-      "bestFig": "0-41"
-    },
-    {
-      "name": "Vinay Tummala",
-      "overs": 2,
-      "wickets": 0,
-      "bestFig": "0-17"
+      "name": "Rohit Singh",
+      "jersey": "#TBD",
+      "cap": "TBD",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "83",
+          "l": "Runs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        }
+      ]
     }
-  ],
-  "cup-ar": []
+  ]
 }

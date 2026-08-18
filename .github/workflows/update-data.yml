@@ -51,6 +51,7 @@ jobs:
       - name: Compile Honours and Career Stats
         run: |
           node fetch_all.js
+          node scripts/fetch_season_stats.js 2026
           node scripts/scrape_scorecards.js
           node scripts/compile_honours.js
 

@@ -150,56 +150,6 @@
     "category": "half-century"
   },
   {
-    "name": "Asad Murtuza",
-    "record": "50*",
-    "type": "batting",
-    "date": "20th June 2026",
-    "opponent": "CSNI 5th",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Ali Rizwan",
-    "record": "127*",
-    "type": "batting",
-    "date": "27th June 2026",
-    "opponent": "Amigos Belfast 3rd",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "century"
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "record": "58*",
-    "type": "batting",
-    "date": "26th July 2026",
-    "opponent": "Ardent Blues 4th",
-    "league": "Junior League 10",
-    "season": "2026",
-    "category": "half-century"
-  },
-  {
-    "name": "Kishan Karneedi",
-    "record": "33*",
-    "type": "batting",
-    "date": "22nd July 2026",
-    "opponent": "CSNI MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "record": "30*",
-    "type": "batting",
-    "date": "22nd July 2026",
-    "opponent": "CSNI MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-30"
-  },
-  {
     "name": "Haneef Shaik",
     "record": "3-18",
     "type": "bowling",
@@ -218,16 +168,6 @@
     "league": "Midweek League",
     "season": "2026",
     "category": "midweek-3w"
-  },
-  {
-    "name": "Wasim SM",
-    "record": "66",
-    "type": "batting",
-    "date": "30th May 2026",
-    "opponent": "Saintfield 3rd",
-    "league": "Cup Matches",
-    "season": "2026",
-    "category": "half-century"
   },
   {
     "name": "Dushyanth Reddy B",
@@ -340,6 +280,16 @@
     "category": "half-century"
   },
   {
+    "name": "Vijaykumar Hugar",
+    "record": "58*",
+    "type": "batting",
+    "date": "26th July 2026",
+    "opponent": "Ardent Blues 4th",
+    "league": "NCU Junior League 10",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
     "name": "Vonga Vishnu",
     "record": "51",
     "type": "batting",
@@ -348,6 +298,26 @@
     "league": "NCU Mercury Senior League 3",
     "season": "2026",
     "category": "half-century"
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "record": "30*",
+    "type": "batting",
+    "date": "22nd July 2026",
+    "opponent": "CSNI MW",
+    "league": "NCU Midweek League Group B",
+    "season": "2026",
+    "category": "midweek-30"
+  },
+  {
+    "name": "Kishan Karneedi",
+    "record": "33*",
+    "type": "batting",
+    "date": "22nd July 2026",
+    "opponent": "CSNI MW",
+    "league": "NCU Midweek League Group B",
+    "season": "2026",
+    "category": "midweek-30"
   },
   {
     "name": "Ali Rizwan",
@@ -368,6 +338,16 @@
     "league": "NCU Midweek League Group B",
     "season": "2026",
     "category": "midweek-30"
+  },
+  {
+    "name": "Ali Rizwan",
+    "record": "127*",
+    "type": "batting",
+    "date": "12th July 2026",
+    "opponent": "Amigos Belfast 3rd",
+    "league": "NCU Junior League 10",
+    "season": "2026",
+    "category": "century"
   },
   {
     "name": "Asad Murtuza",
@@ -410,8 +390,28 @@
     "category": "midweek-30"
   },
   {
+    "name": "Asad Murtuza",
+    "record": "50*",
+    "type": "batting",
+    "date": "20th June 2026",
+    "opponent": "CSNI 5th",
+    "league": "NCU Development Cup",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
     "name": "Ali Rizwan",
     "record": "51",
+    "type": "batting",
+    "date": "30th May 2026",
+    "opponent": "Saintfield 3rd",
+    "league": "NCU Development Cup",
+    "season": "2026",
+    "category": "half-century"
+  },
+  {
+    "name": "Wasim SM",
+    "record": "66",
     "type": "batting",
     "date": "30th May 2026",
     "opponent": "Saintfield 3rd",
