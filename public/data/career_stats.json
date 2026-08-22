@@ -6,26 +6,11 @@
     "batting": {
       "runs": 411,
       "hs": "127",
-      "matches": 13
+      "matches": 12
     },
     "bowling": {
       "wickets": 0,
       "matches": 0
-    }
-  },
-  {
-    "name": "Kishan Karneedi",
-    "jersey": "#11",
-    "cap": "KK11",
-    "batting": {
-      "runs": 301,
-      "hs": "66",
-      "matches": 15
-    },
-    "bowling": {
-      "wickets": 17,
-      "bestFig": "3-22",
-      "matches": 15
     }
   },
   {
@@ -44,18 +29,18 @@
     }
   },
   {
-    "name": "Asad Murtuza",
-    "jersey": "#22",
-    "cap": "AM04",
+    "name": "Kishan Karneedi",
+    "jersey": "#11",
+    "cap": "KK11",
     "batting": {
-      "runs": 218,
-      "hs": "50",
-      "matches": 13
+      "runs": 288,
+      "hs": "66",
+      "matches": 14
     },
     "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 3
+      "wickets": 17,
+      "bestFig": "3-22",
+      "matches": 14
     }
   },
   {
@@ -65,7 +50,22 @@
     "batting": {
       "runs": 200,
       "hs": "58",
-      "matches": 11
+      "matches": 10
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 3
+    }
+  },
+  {
+    "name": "Asad Murtuza",
+    "jersey": "#22",
+    "cap": "AM04",
+    "batting": {
+      "runs": 187,
+      "hs": "50",
+      "matches": 12
     },
     "bowling": {
       "wickets": 0,
@@ -78,14 +78,14 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 195,
+      "runs": 172,
       "hs": "45",
-      "matches": 12
+      "matches": 11
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 6
+      "matches": 1
     }
   },
   {
@@ -93,29 +93,14 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 160,
+      "runs": 146,
       "hs": "49",
-      "matches": 12
+      "matches": 11
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
       "matches": 4
-    }
-  },
-  {
-    "name": "Chandra Obula Reddy B",
-    "jersey": "#45",
-    "cap": "CH45",
-    "batting": {
-      "runs": 125,
-      "hs": "34",
-      "matches": 10
-    },
-    "bowling": {
-      "wickets": 6,
-      "bestFig": "2-11",
-      "matches": 10
     }
   },
   {
@@ -149,17 +134,18 @@
     }
   },
   {
-    "name": "Srini Nadakuditi",
-    "jersey": "#3",
-    "cap": "SRI3",
+    "name": "Chandra Obula Reddy B",
+    "jersey": "#45",
+    "cap": "CH45",
     "batting": {
-      "runs": 86,
-      "hs": "27",
-      "matches": 6
+      "runs": 99,
+      "hs": "34",
+      "matches": 9
     },
     "bowling": {
-      "wickets": 0,
-      "matches": 0
+      "wickets": 6,
+      "bestFig": "2-11",
+      "matches": 9
     }
   },
   {
@@ -178,18 +164,32 @@
     }
   },
   {
+    "name": "Srini Nadakuditi",
+    "jersey": "#3",
+    "cap": "SRI3",
+    "batting": {
+      "runs": 75,
+      "hs": "27",
+      "matches": 5
+    },
+    "bowling": {
+      "wickets": 0,
+      "matches": 0
+    }
+  },
+  {
     "name": "Kiran Maheswaram",
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
-      "runs": 71,
+      "runs": 69,
       "hs": "28",
-      "matches": 9
+      "matches": 8
     },
     "bowling": {
       "wickets": 7,
       "bestFig": "3-25",
-      "matches": 9
+      "matches": 8
     }
   },
   {
@@ -229,12 +229,12 @@
     "batting": {
       "runs": 41,
       "hs": "27",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
       "wickets": 8,
       "bestFig": "2-25",
-      "matches": 11
+      "matches": 10
     }
   },
   {
@@ -289,12 +289,12 @@
     "batting": {
       "runs": 18,
       "hs": "12*",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
-      "wickets": 19,
-      "bestFig": "3-18",
-      "matches": 11
+      "wickets": 16,
+      "bestFig": "3-21",
+      "matches": 10
     }
   },
   {
