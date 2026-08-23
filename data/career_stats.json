@@ -4,9 +4,9 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 411,
+      "runs": 442,
       "hs": "127",
-      "matches": 12
+      "matches": 13
     },
     "bowling": {
       "wickets": 0,
@@ -18,14 +18,14 @@
     "jersey": "#15",
     "cap": "VV15",
     "batting": {
-      "runs": 294,
+      "runs": 303,
       "hs": "62",
-      "matches": 10
+      "matches": 11
     },
     "bowling": {
-      "wickets": 14,
+      "wickets": 15,
       "bestFig": "3-21",
-      "matches": 10
+      "matches": 11
     }
   },
   {
@@ -33,14 +33,29 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 288,
+      "runs": 295,
       "hs": "66",
-      "matches": 14
+      "matches": 15
     },
     "bowling": {
       "wickets": 17,
       "bestFig": "3-22",
-      "matches": 14
+      "matches": 15
+    }
+  },
+  {
+    "name": "Abubakar Rehmani",
+    "jersey": "#—",
+    "cap": "AR",
+    "batting": {
+      "runs": 201,
+      "hs": "77",
+      "matches": 6
+    },
+    "bowling": {
+      "wickets": 10,
+      "bestFig": "4-44",
+      "matches": 6
     }
   },
   {
@@ -48,9 +63,9 @@
     "jersey": "#—",
     "cap": "VH",
     "batting": {
-      "runs": 200,
+      "runs": 201,
       "hs": "58",
-      "matches": 10
+      "matches": 11
     },
     "bowling": {
       "wickets": 0,
@@ -63,9 +78,9 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 187,
+      "runs": 191,
       "hs": "50",
-      "matches": 12
+      "matches": 13
     },
     "bowling": {
       "wickets": 0,
@@ -93,29 +108,14 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 146,
+      "runs": 158,
       "hs": "49",
-      "matches": 11
+      "matches": 12
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
       "matches": 4
-    }
-  },
-  {
-    "name": "Abubakar Rehmani",
-    "jersey": "#—",
-    "cap": "AR",
-    "batting": {
-      "runs": 124,
-      "hs": "64",
-      "matches": 5
-    },
-    "bowling": {
-      "wickets": 10,
-      "bestFig": "4-44",
-      "matches": 5
     }
   },
   {
@@ -153,14 +153,14 @@
     "jersey": "#72",
     "cap": "AN72",
     "batting": {
-      "runs": 83,
+      "runs": 96,
       "hs": "65",
-      "matches": 5
+      "matches": 6
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 5
+      "matches": 6
     }
   },
   {
@@ -242,14 +242,14 @@
     "jersey": "#9",
     "cap": "VJ09",
     "batting": {
-      "runs": 37,
+      "runs": 40,
       "hs": "23",
-      "matches": 5
+      "matches": 6
     },
     "bowling": {
-      "wickets": 7,
+      "wickets": 9,
       "bestFig": "4-37",
-      "matches": 5
+      "matches": 6
     }
   },
   {
@@ -268,18 +268,33 @@
     }
   },
   {
+    "name": "Purvik Prasad",
+    "jersey": "#—",
+    "cap": "PP",
+    "batting": {
+      "runs": 22,
+      "hs": "16",
+      "matches": 7
+    },
+    "bowling": {
+      "wickets": 4,
+      "bestFig": "2-22",
+      "matches": 7
+    }
+  },
+  {
     "name": "Tulasi Gangadhar Thatavarthi",
     "jersey": "#7",
     "cap": "TT07",
     "batting": {
       "runs": 20,
       "hs": "13",
-      "matches": 3
+      "matches": 4
     },
     "bowling": {
       "wickets": 4,
       "bestFig": "3-25",
-      "matches": 3
+      "matches": 4
     }
   },
   {
@@ -324,21 +339,6 @@
     "bowling": {
       "wickets": 0,
       "matches": 0
-    }
-  },
-  {
-    "name": "Purvik Prasad",
-    "jersey": "#—",
-    "cap": "PP",
-    "batting": {
-      "runs": 6,
-      "hs": "4",
-      "matches": 6
-    },
-    "bowling": {
-      "wickets": 4,
-      "bestFig": "2-22",
-      "matches": 6
     }
   },
   {

@@ -6,11 +6,11 @@
       "cap": "AN72",
       "stats": [
         {
-          "n": "14",
+          "n": "15",
           "l": "Matches"
         },
         {
-          "n": "166",
+          "n": "179",
           "l": "Runs"
         },
         {
@@ -18,7 +18,7 @@
           "l": "High Score"
         },
         {
-          "n": "13.83",
+          "n": "13.77",
           "l": "Average"
         }
       ],
@@ -30,11 +30,11 @@
       "cap": "VJ09",
       "stats": [
         {
-          "n": "14",
+          "n": "15",
           "l": "Matches"
         },
         {
-          "n": "63",
+          "n": "66",
           "l": "Runs"
         },
         {
@@ -42,7 +42,30 @@
           "l": "High Score"
         },
         {
-          "n": "7.88",
+          "n": "8.25",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Abubakar Rehmani",
+      "jersey": "#—",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "13",
+          "l": "Matches"
+        },
+        {
+          "n": "268",
+          "l": "Runs"
+        },
+        {
+          "n": "77",
+          "l": "High Score"
+        },
+        {
+          "n": "22.33",
           "l": "Average"
         }
       ]
@@ -71,39 +94,16 @@
       ]
     },
     {
-      "name": "Abubakar Rehmani",
-      "jersey": "#—",
-      "cap": "AR",
-      "stats": [
-        {
-          "n": "12",
-          "l": "Matches"
-        },
-        {
-          "n": "191",
-          "l": "Runs"
-        },
-        {
-          "n": "64",
-          "l": "High Score"
-        },
-        {
-          "n": "17.36",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Asad Murtuza",
       "jersey": "#22",
       "cap": "AM04",
       "stats": [
         {
-          "n": "12",
+          "n": "13",
           "l": "Matches"
         },
         {
-          "n": "125",
+          "n": "129",
           "l": "Runs"
         },
         {
@@ -111,7 +111,30 @@
           "l": "High Score"
         },
         {
-          "n": "11.36",
+          "n": "10.75",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "11",
+          "l": "Matches"
+        },
+        {
+          "n": "164",
+          "l": "Runs"
+        },
+        {
+          "n": "47",
+          "l": "High Score"
+        },
+        {
+          "n": "14.91",
           "l": "Average"
         }
       ]
@@ -140,24 +163,47 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
+      "name": "Tulasi Gangadhar Thatavarthi",
+      "jersey": "#7",
+      "cap": "TT07",
+      "stats": [
+        {
+          "n": "11",
+          "l": "Matches"
+        },
+        {
+          "n": "39",
+          "l": "Runs"
+        },
+        {
+          "n": "13*",
+          "l": "High Score"
+        },
+        {
+          "n": "5.57",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "10",
           "l": "Matches"
         },
         {
-          "n": "157",
+          "n": "177",
           "l": "Runs"
         },
         {
-          "n": "47",
+          "n": "56",
           "l": "High Score"
         },
         {
-          "n": "15.70",
+          "n": "17.70",
           "l": "Average"
         }
       ]
@@ -186,62 +232,16 @@
       ]
     },
     {
-      "name": "Tulasi Gangadhar Thatavarthi",
-      "jersey": "#7",
-      "cap": "TT07",
-      "stats": [
-        {
-          "n": "10",
-          "l": "Matches"
-        },
-        {
-          "n": "39",
-          "l": "Runs"
-        },
-        {
-          "n": "13*",
-          "l": "High Score"
-        },
-        {
-          "n": "6.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
-      "stats": [
-        {
-          "n": "9",
-          "l": "Matches"
-        },
-        {
-          "n": "168",
-          "l": "Runs"
-        },
-        {
-          "n": "56",
-          "l": "High Score"
-        },
-        {
-          "n": "18.67",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Ali Rizwan",
       "jersey": "#16",
       "cap": "AR69",
       "stats": [
         {
-          "n": "6",
+          "n": "7",
           "l": "Matches"
         },
         {
-          "n": "115",
+          "n": "146",
           "l": "Runs"
         },
         {
@@ -249,7 +249,7 @@
           "l": "High Score"
         },
         {
-          "n": "23.00",
+          "n": "24.33",
           "l": "Average"
         }
       ]
@@ -260,11 +260,11 @@
       "cap": "AN30",
       "stats": [
         {
-          "n": "6",
+          "n": "7",
           "l": "Matches"
         },
         {
-          "n": "24",
+          "n": "36",
           "l": "Runs"
         },
         {
@@ -272,7 +272,7 @@
           "l": "High Score"
         },
         {
-          "n": "4.00",
+          "n": "5.14",
           "l": "Average"
         }
       ]
@@ -283,11 +283,11 @@
       "cap": "VH",
       "stats": [
         {
-          "n": "5",
+          "n": "6",
           "l": "Matches"
         },
         {
-          "n": "62",
+          "n": "63",
           "l": "Runs"
         },
         {
@@ -295,7 +295,7 @@
           "l": "High Score"
         },
         {
-          "n": "15.50",
+          "n": "12.60",
           "l": "Average"
         }
       ]
@@ -306,19 +306,19 @@
       "cap": "PP",
       "stats": [
         {
-          "n": "5",
+          "n": "6",
           "l": "Matches"
         },
         {
-          "n": "10",
+          "n": "26",
           "l": "Runs"
         },
         {
-          "n": "8",
+          "n": "16",
           "l": "High Score"
         },
         {
-          "n": "2.50",
+          "n": "5.20",
           "l": "Average"
         }
       ]
@@ -515,11 +515,11 @@
       "cap": "AR",
       "stats": [
         {
-          "n": "12",
+          "n": "13",
           "l": "Matches"
         },
         {
-          "n": "73.1",
+          "n": "80.1",
           "l": "Overs"
         },
         {
@@ -539,19 +539,42 @@
       "cap": "VJ09",
       "stats": [
         {
-          "n": "14",
+          "n": "15",
           "l": "Matches"
         },
         {
-          "n": "70",
+          "n": "78",
           "l": "Overs"
         },
         {
-          "n": "13",
+          "n": "15",
           "l": "Wickets"
         },
         {
           "n": "4-37",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Kishan Karneedi",
+      "jersey": "#11",
+      "cap": "KK11",
+      "stats": [
+        {
+          "n": "11",
+          "l": "Matches"
+        },
+        {
+          "n": "54",
+          "l": "Overs"
+        },
+        {
+          "n": "9",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-45",
           "l": "Best Fig"
         }
       ]
@@ -580,43 +603,20 @@
       ]
     },
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
+      "name": "Vonga Vishnu",
+      "jersey": "#15",
+      "cap": "VV15",
       "stats": [
         {
           "n": "10",
           "l": "Matches"
         },
         {
-          "n": "48",
+          "n": "48.4",
           "l": "Overs"
         },
         {
-          "n": "9",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-45",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
-      "name": "Vonga Vishnu",
-      "jersey": "#15",
-      "cap": "VV15",
-      "stats": [
-        {
-          "n": "9",
-          "l": "Matches"
-        },
-        {
-          "n": "40.4",
-          "l": "Overs"
-        },
-        {
-          "n": "7",
+          "n": "8",
           "l": "Wickets"
         },
         {
@@ -654,11 +654,11 @@
       "cap": "TT07",
       "stats": [
         {
-          "n": "10",
+          "n": "11",
           "l": "Matches"
         },
         {
-          "n": "22",
+          "n": "25",
           "l": "Overs"
         },
         {
@@ -690,6 +690,29 @@
         },
         {
           "n": "2-17",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
+      "stats": [
+        {
+          "n": "6",
+          "l": "Matches"
+        },
+        {
+          "n": "11",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-15",
           "l": "Best Fig"
         }
       ]
@@ -741,29 +764,6 @@
       ]
     },
     {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "5",
-          "l": "Matches"
-        },
-        {
-          "n": "3",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-15",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Kiran Maheswaram",
       "jersey": "#75",
       "cap": "KM75",
@@ -792,7 +792,7 @@
       "cap": "VH",
       "stats": [
         {
-          "n": "5",
+          "n": "6",
           "l": "Matches"
         },
         {
@@ -838,7 +838,7 @@
       "cap": "AN72",
       "stats": [
         {
-          "n": "14",
+          "n": "15",
           "l": "Matches"
         },
         {
@@ -1576,29 +1576,6 @@
       ]
     },
     {
-      "name": "Abubakar Rehmani",
-      "jersey": "#—",
-      "cap": "AR",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Overs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-22",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Anvesh Choudary Mannuru",
       "jersey": "#2",
       "cap": "AM28",
@@ -1640,6 +1617,29 @@
         },
         {
           "n": "1-13",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Abubakar Rehmani",
+      "jersey": "#—",
+      "cap": "AR",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "4",
+          "l": "Overs"
+        },
+        {
+          "n": "1",
+          "l": "Wickets"
+        },
+        {
+          "n": "1-22",
           "l": "Best Fig"
         }
       ]

@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Victoria 1st XI",
-      "date": "22nd August 2026",
-      "time": "12:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Senior League 3"
-    },
-    {
       "homeTeam": "Belfast Superkings 2nd XI",
       "awayTeam": "Arches 2nd XI",
       "date": "23rd August 2026",
@@ -418,7 +409,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Arches 1st XI won by 113 runs"
+    },
+    {
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Victoria 1st XI",
+      "date": "22nd August 2026",
+      "time": "12:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Senior League 3",
+      "result": "Victoria 1st XI won by 28 runs"
     }
   ],
-  "lastUpdated": "2026-08-22T01:12:44.593Z"
+  "lastUpdated": "2026-08-23T01:18:50.688Z"
 }

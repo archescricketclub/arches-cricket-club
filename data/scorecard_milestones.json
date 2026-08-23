@@ -1,5 +1,23 @@
 [
   {
+    "name": "Abubakar Rehmani",
+    "type": "batting",
+    "record": "77",
+    "runs": 77,
+    "date": "22nd August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Victoria 1st XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "201",
+    "runs": 201,
+    "date": "22nd August 2026",
+    "league": "NCU Mercury Senior League 3",
+    "opponent": "Victoria 1st XI"
+  },
+  {
     "name": "Dushyanth Reddy B",
     "type": "batting",
     "record": "55",
