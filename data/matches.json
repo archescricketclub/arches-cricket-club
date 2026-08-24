@@ -1,15 +1,6 @@
 {
   "fixtures": [
     {
-      "homeTeam": "Belfast Superkings 2nd XI",
-      "awayTeam": "Arches 2nd XI",
-      "date": "23rd August 2026",
-      "time": "1:00 PM",
-      "venue": "TBC",
-      "status": "",
-      "league": "Junior League 10"
-    },
-    {
       "homeTeam": "Arches 2nd XI",
       "awayTeam": "Belfast Superkings 3rd XI",
       "date": "31st August 2026",
@@ -419,7 +410,17 @@
       "status": "",
       "league": "Senior League 3",
       "result": "Victoria 1st XI won by 28 runs"
+    },
+    {
+      "homeTeam": "Belfast Superkings 2nd XI",
+      "awayTeam": "Arches 2nd XI",
+      "date": "23rd August 2026",
+      "time": "1:00 PM",
+      "venue": "TBC",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Belfast Superkings 2nd XI won by 4 wickets"
     }
   ],
-  "lastUpdated": "2026-08-23T12:39:25.532Z"
+  "lastUpdated": "2026-08-24T01:15:59.674Z"
 }

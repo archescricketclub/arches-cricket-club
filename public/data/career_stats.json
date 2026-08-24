@@ -4,8 +4,8 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 442,
-      "hs": "127",
+      "runs": 339,
+      "hs": "68",
       "matches": 13
     },
     "bowling": {
@@ -14,33 +14,48 @@
     }
   },
   {
-    "name": "Vonga Vishnu",
-    "jersey": "#15",
-    "cap": "VV15",
-    "batting": {
-      "runs": 303,
-      "hs": "62",
-      "matches": 11
-    },
-    "bowling": {
-      "wickets": 15,
-      "bestFig": "3-21",
-      "matches": 11
-    }
-  },
-  {
     "name": "Kishan Karneedi",
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 295,
+      "runs": 327,
       "hs": "66",
       "matches": 15
     },
     "bowling": {
-      "wickets": 17,
+      "wickets": 18,
       "bestFig": "3-22",
       "matches": 15
+    }
+  },
+  {
+    "name": "Vonga Vishnu",
+    "jersey": "#15",
+    "cap": "VV15",
+    "batting": {
+      "runs": 310,
+      "hs": "62",
+      "matches": 12
+    },
+    "bowling": {
+      "wickets": 15,
+      "bestFig": "3-21",
+      "matches": 12
+    }
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 235,
+      "hs": "58",
+      "matches": 11
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
     }
   },
   {
@@ -59,33 +74,18 @@
     }
   },
   {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 201,
-      "hs": "58",
-      "matches": 11
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 3
-    }
-  },
-  {
     "name": "Asad Murtuza",
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 191,
+      "runs": 200,
       "hs": "50",
       "matches": 13
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 3
+      "matches": 0
     }
   },
   {
@@ -93,7 +93,7 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 172,
+      "runs": 147,
       "hs": "45",
       "matches": 11
     },
@@ -108,7 +108,7 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 158,
+      "runs": 139,
       "hs": "49",
       "matches": 12
     },
@@ -140,12 +140,12 @@
     "batting": {
       "runs": 99,
       "hs": "34",
-      "matches": 9
+      "matches": 8
     },
     "bowling": {
-      "wickets": 6,
-      "bestFig": "2-11",
-      "matches": 9
+      "wickets": 4,
+      "bestFig": "2-41",
+      "matches": 8
     }
   },
   {
@@ -164,32 +164,18 @@
     }
   },
   {
-    "name": "Srini Nadakuditi",
-    "jersey": "#3",
-    "cap": "SRI3",
-    "batting": {
-      "runs": 75,
-      "hs": "27",
-      "matches": 5
-    },
-    "bowling": {
-      "wickets": 0,
-      "matches": 0
-    }
-  },
-  {
     "name": "Kiran Maheswaram",
     "jersey": "#75",
     "cap": "KM75",
     "batting": {
       "runs": 69,
       "hs": "28",
-      "matches": 8
+      "matches": 7
     },
     "bowling": {
-      "wickets": 7,
+      "wickets": 6,
       "bestFig": "3-25",
-      "matches": 8
+      "matches": 7
     }
   },
   {
@@ -197,14 +183,28 @@
     "jersey": "#44",
     "cap": "VB44",
     "batting": {
-      "runs": 53,
+      "runs": 58,
       "hs": "48",
-      "matches": 2
+      "matches": 3
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "2-31",
+      "matches": 3
+    }
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "jersey": "#3",
+    "cap": "SRI3",
+    "batting": {
+      "runs": 48,
+      "hs": "19",
+      "matches": 4
     },
     "bowling": {
       "wickets": 0,
-      "bestFig": "-",
-      "matches": 2
+      "matches": 0
     }
   },
   {
@@ -232,7 +232,7 @@
       "matches": 10
     },
     "bowling": {
-      "wickets": 8,
+      "wickets": 9,
       "bestFig": "2-25",
       "matches": 10
     }
@@ -274,12 +274,12 @@
     "batting": {
       "runs": 22,
       "hs": "16",
-      "matches": 7
+      "matches": 8
     },
     "bowling": {
       "wickets": 4,
       "bestFig": "2-22",
-      "matches": 7
+      "matches": 8
     }
   },
   {
@@ -304,12 +304,27 @@
     "batting": {
       "runs": 18,
       "hs": "12*",
-      "matches": 10
+      "matches": 9
     },
     "bowling": {
-      "wickets": 16,
+      "wickets": 14,
       "bestFig": "3-21",
-      "matches": 10
+      "matches": 9
+    }
+  },
+  {
+    "name": "Jaya Sukhavasi",
+    "jersey": "#—",
+    "cap": "JAYA",
+    "batting": {
+      "runs": 18,
+      "hs": "18",
+      "matches": 1
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 0
     }
   },
   {

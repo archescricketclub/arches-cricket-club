@@ -1,5 +1,14 @@
 [
   {
+    "name": "Total",
+    "type": "batting",
+    "record": "168",
+    "runs": 168,
+    "date": "23rd August 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Belfast Superkings 2nd XI"
+  },
+  {
     "name": "Abubakar Rehmani",
     "type": "batting",
     "record": "77",
@@ -685,14 +694,5 @@
     "date": "26th May 2026",
     "league": "NCU Midweek League Group B",
     "opponent": "Ardent Blues MW2 XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "99",
-    "runs": 99,
-    "date": "23rd May 2026",
-    "league": "NCU Mercury Senior League 3",
-    "opponent": "Drumaness Superkings 1st XI"
   }
 ]

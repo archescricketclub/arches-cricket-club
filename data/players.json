@@ -962,6 +962,29 @@
   ],
   "t2-bat": [
     {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "5",
+          "l": "Runs"
+        },
+        {
+          "n": "5",
+          "l": "High Score"
+        },
+        {
+          "n": "5.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
       "name": "Asad Murtuza",
       "jersey": "#22",
       "cap": "AM04",
@@ -971,7 +994,7 @@
           "l": "Matches"
         },
         {
-          "n": "13",
+          "n": "22",
           "l": "Runs"
         },
         {
@@ -979,30 +1002,7 @@
           "l": "High Score"
         },
         {
-          "n": "13.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Anil Narra",
-      "jersey": "#30",
-      "cap": "AN30",
-      "stats": [
-        {
-          "n": "4",
-          "l": "Matches"
-        },
-        {
-          "n": "88",
-          "l": "Runs"
-        },
-        {
-          "n": "49",
-          "l": "High Score"
-        },
-        {
-          "n": "29.33",
+          "n": "11.00",
           "l": "Average"
         }
       ]
@@ -1017,7 +1017,7 @@
           "l": "Matches"
         },
         {
-          "n": "66",
+          "n": "100",
           "l": "Runs"
         },
         {
@@ -1025,7 +1025,7 @@
           "l": "High Score"
         },
         {
-          "n": "66.00",
+          "n": "50.00",
           "l": "Average"
         }
       ]
@@ -1040,19 +1040,65 @@
           "l": "Matches"
         },
         {
-          "n": "45",
+          "n": "20",
           "l": "Runs"
         },
         {
-          "n": "39",
+          "n": "14",
           "l": "High Score"
         },
         {
-          "n": "15.00",
+          "n": "6.67",
           "l": "Average"
         }
       ],
       "badge": "Top Scorer T2"
+    },
+    {
+      "name": "Anil Narra",
+      "jersey": "#30",
+      "cap": "AN30",
+      "stats": [
+        {
+          "n": "4",
+          "l": "Matches"
+        },
+        {
+          "n": "69",
+          "l": "Runs"
+        },
+        {
+          "n": "49",
+          "l": "High Score"
+        },
+        {
+          "n": "23.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "92",
+          "l": "Runs"
+        },
+        {
+          "n": "63",
+          "l": "High Score"
+        },
+        {
+          "n": "46.00",
+          "l": "Average"
+        }
+      ]
     },
     {
       "name": "Vonga Vishnu",
@@ -1060,11 +1106,11 @@
       "cap": "VV15",
       "stats": [
         {
-          "n": "2",
+          "n": "3",
           "l": "Matches"
         },
         {
-          "n": "94",
+          "n": "101",
           "l": "Runs"
         },
         {
@@ -1072,7 +1118,30 @@
           "l": "High Score"
         },
         {
-          "n": "47.00",
+          "n": "33.67",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Jaya Sukhavasi",
+      "jersey": "#—",
+      "cap": "JS",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "18",
+          "l": "Runs"
+        },
+        {
+          "n": "18",
+          "l": "High Score"
+        },
+        {
+          "n": "18.00",
           "l": "Average"
         }
       ]
@@ -1087,7 +1156,7 @@
           "l": "Matches"
         },
         {
-          "n": "88",
+          "n": "120",
           "l": "Runs"
         },
         {
@@ -1095,53 +1164,7 @@
           "l": "High Score"
         },
         {
-          "n": "44.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Matches"
-        },
-        {
-          "n": "38",
-          "l": "Runs"
-        },
-        {
-          "n": "34",
-          "l": "High Score"
-        },
-        {
-          "n": "38.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Matches"
-        },
-        {
-          "n": "0",
-          "l": "Runs"
-        },
-        {
-          "n": "0",
-          "l": "High Score"
-        },
-        {
-          "n": "0.00",
+          "n": "60.00",
           "l": "Average"
         }
       ]
@@ -1165,6 +1188,52 @@
         },
         {
           "n": "1.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "0",
+          "l": "Runs"
+        },
+        {
+          "n": "0",
+          "l": "High Score"
+        },
+        {
+          "n": "0.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "38",
+          "l": "Runs"
+        },
+        {
+          "n": "34",
+          "l": "High Score"
+        },
+        {
+          "n": "38.00",
           "l": "Average"
         }
       ]
@@ -1198,7 +1267,7 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "4",
+          "n": "3",
           "l": "Matches"
         },
         {
@@ -1221,7 +1290,7 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "3",
+          "n": "2",
           "l": "Matches"
         },
         {
@@ -1239,47 +1308,24 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Matches"
-        },
-        {
-          "n": "195",
-          "l": "Runs"
-        },
-        {
-          "n": "127",
-          "l": "High Score"
-        },
-        {
-          "n": "195.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Srini Nadakuditi",
       "jersey": "#3",
       "cap": "SRI3",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "39",
+          "n": "12",
           "l": "Runs"
         },
         {
-          "n": "27",
+          "n": "12",
           "l": "High Score"
         },
         {
-          "n": "19.50",
+          "n": "12.00",
           "l": "Average"
         }
       ]
@@ -1310,24 +1356,24 @@
   ],
   "t2-bowl": [
     {
-      "name": "Asad Murtuza",
-      "jersey": "#22",
-      "cap": "AM04",
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
       "stats": [
         {
-          "n": "3",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "0",
+          "n": "2",
           "l": "Wickets"
         },
         {
-          "n": "-",
+          "n": "2-31",
           "l": "Best Fig"
         },
         {
-          "n": "0.00",
+          "n": "15.50",
           "l": "Average"
         }
       ]
@@ -1356,35 +1402,12 @@
       ]
     },
     {
-      "name": "Vijaykumar Hugar",
-      "jersey": "#—",
-      "cap": "VH",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Matches"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "-",
-          "l": "Best Fig"
-        },
-        {
-          "n": "0.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
       "name": "Vonga Vishnu",
       "jersey": "#15",
       "cap": "VV15",
       "stats": [
         {
-          "n": "2",
+          "n": "3",
           "l": "Matches"
         },
         {
@@ -1396,7 +1419,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "32.00",
+          "n": "55.50",
           "l": "Average"
         }
       ]
@@ -1411,7 +1434,7 @@
           "l": "Matches"
         },
         {
-          "n": "7",
+          "n": "8",
           "l": "Wickets"
         },
         {
@@ -1419,53 +1442,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "14.57",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Matches"
-        },
-        {
-          "n": "5",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-11",
-          "l": "Best Fig"
-        },
-        {
-          "n": "17.40",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Purvik Prasad",
-      "jersey": "#—",
-      "cap": "PP",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Matches"
-        },
-        {
-          "n": "3",
-          "l": "Wickets"
-        },
-        {
-          "n": "2-22",
-          "l": "Best Fig"
-        },
-        {
-          "n": "15.33",
+          "n": "12.13",
           "l": "Average"
         }
       ]
@@ -1480,15 +1457,61 @@
           "l": "Matches"
         },
         {
-          "n": "2",
+          "n": "3",
           "l": "Wickets"
         },
         {
-          "n": "1-20",
+          "n": "2-50",
           "l": "Best Fig"
         },
         {
-          "n": "52.50",
+          "n": "45.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Purvik Prasad",
+      "jersey": "#—",
+      "cap": "PP",
+      "stats": [
+        {
+          "n": "3",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-22",
+          "l": "Best Fig"
+        },
+        {
+          "n": "24.00",
+          "l": "Average"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
+      "stats": [
+        {
+          "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "3",
+          "l": "Wickets"
+        },
+        {
+          "n": "2-41",
+          "l": "Best Fig"
+        },
+        {
+          "n": "25.33",
           "l": "Average"
         }
       ]
@@ -1499,11 +1522,11 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "4",
+          "n": "3",
           "l": "Matches"
         },
         {
-          "n": "9",
+          "n": "7",
           "l": "Wickets"
         },
         {
@@ -1511,7 +1534,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "11.44",
+          "n": "9.71",
           "l": "Average"
         }
       ],
@@ -1523,11 +1546,11 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "3",
+          "n": "2",
           "l": "Matches"
         },
         {
-          "n": "2",
+          "n": "1",
           "l": "Wickets"
         },
         {
@@ -1535,7 +1558,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "35.50",
+          "n": "44.00",
           "l": "Average"
         }
       ]
@@ -1566,16 +1589,35 @@
   ],
   "t2-ar": [
     {
+      "name": "Veerendra Babu Nagari",
+      "jersey": "#44",
+      "cap": "VB44",
+      "stats": [
+        {
+          "n": "1",
+          "l": "Matches"
+        },
+        {
+          "n": "5",
+          "l": "Runs"
+        },
+        {
+          "n": "2",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
       "name": "Vonga Vishnu",
       "jersey": "#15",
       "cap": "VV15",
       "stats": [
         {
-          "n": "2",
+          "n": "3",
           "l": "Matches"
         },
         {
-          "n": "94",
+          "n": "101",
           "l": "Runs"
         },
         {
@@ -1594,30 +1636,11 @@
           "l": "Matches"
         },
         {
-          "n": "88",
+          "n": "120",
           "l": "Runs"
         },
         {
-          "n": "7",
-          "l": "Wickets"
-        }
-      ]
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
-      "stats": [
-        {
-          "n": "3",
-          "l": "Matches"
-        },
-        {
-          "n": "38",
-          "l": "Runs"
-        },
-        {
-          "n": "5",
+          "n": "8",
           "l": "Wickets"
         }
       ]
@@ -1636,7 +1659,26 @@
           "l": "Runs"
         },
         {
+          "n": "3",
+          "l": "Wickets"
+        }
+      ]
+    },
+    {
+      "name": "Chandra Obula Reddy B",
+      "jersey": "#45",
+      "cap": "CH45",
+      "stats": [
+        {
           "n": "2",
+          "l": "Matches"
+        },
+        {
+          "n": "38",
+          "l": "Runs"
+        },
+        {
+          "n": "3",
           "l": "Wickets"
         }
       ]
@@ -1647,7 +1689,7 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "3",
+          "n": "2",
           "l": "Matches"
         },
         {
@@ -1655,7 +1697,7 @@
           "l": "Runs"
         },
         {
-          "n": "2",
+          "n": "1",
           "l": "Wickets"
         }
       ]
