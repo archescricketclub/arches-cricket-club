@@ -1,31 +1,17 @@
 [
   {
-    "name": "Ali Rizwan",
-    "jersey": "#16",
-    "cap": "AR69",
-    "batting": {
-      "runs": 339,
-      "hs": "68",
-      "matches": 13
-    },
-    "bowling": {
-      "wickets": 0,
-      "matches": 0
-    }
-  },
-  {
     "name": "Kishan Karneedi",
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 327,
+      "runs": 311,
       "hs": "66",
-      "matches": 15
+      "matches": 14
     },
     "bowling": {
-      "wickets": 18,
+      "wickets": 17,
       "bestFig": "3-22",
-      "matches": 15
+      "matches": 14
     }
   },
   {
@@ -44,13 +30,27 @@
     }
   },
   {
+    "name": "Ali Rizwan",
+    "jersey": "#16",
+    "cap": "AR69",
+    "batting": {
+      "runs": 305,
+      "hs": "68",
+      "matches": 12
+    },
+    "bowling": {
+      "wickets": 0,
+      "matches": 0
+    }
+  },
+  {
     "name": "Vijaykumar Hugar",
     "jersey": "#—",
     "cap": "VH",
     "batting": {
-      "runs": 235,
+      "runs": 206,
       "hs": "58",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
       "wickets": 0,
@@ -78,9 +78,9 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 200,
+      "runs": 168,
       "hs": "50",
-      "matches": 13
+      "matches": 12
     },
     "bowling": {
       "wickets": 0,
@@ -93,9 +93,9 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 147,
+      "runs": 140,
       "hs": "45",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
       "wickets": 0,
@@ -108,9 +108,9 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 139,
+      "runs": 118,
       "hs": "49",
-      "matches": 12
+      "matches": 11
     },
     "bowling": {
       "wickets": 0,
@@ -138,14 +138,14 @@
     "jersey": "#45",
     "cap": "CH45",
     "batting": {
-      "runs": 99,
+      "runs": 97,
       "hs": "34",
-      "matches": 8
+      "matches": 7
     },
     "bowling": {
       "wickets": 4,
       "bestFig": "2-41",
-      "matches": 8
+      "matches": 7
     }
   },
   {
@@ -170,12 +170,12 @@
     "batting": {
       "runs": 69,
       "hs": "28",
-      "matches": 7
+      "matches": 6
     },
     "bowling": {
-      "wickets": 6,
+      "wickets": 5,
       "bestFig": "3-25",
-      "matches": 7
+      "matches": 6
     }
   },
   {
@@ -194,20 +194,6 @@
     }
   },
   {
-    "name": "Srini Nadakuditi",
-    "jersey": "#3",
-    "cap": "SRI3",
-    "batting": {
-      "runs": 48,
-      "hs": "19",
-      "matches": 4
-    },
-    "bowling": {
-      "wickets": 0,
-      "matches": 0
-    }
-  },
-  {
     "name": "Veera SR Nimmakayala",
     "jersey": "#88",
     "cap": "VN88",
@@ -220,21 +206,6 @@
       "wickets": 4,
       "bestFig": "4-30",
       "matches": 1
-    }
-  },
-  {
-    "name": "Harsha Sai",
-    "jersey": "#8",
-    "cap": "VK18",
-    "batting": {
-      "runs": 41,
-      "hs": "27",
-      "matches": 10
-    },
-    "bowling": {
-      "wickets": 9,
-      "bestFig": "2-25",
-      "matches": 10
     }
   },
   {
@@ -253,6 +224,21 @@
     }
   },
   {
+    "name": "Harsha Sai",
+    "jersey": "#8",
+    "cap": "VK18",
+    "batting": {
+      "runs": 37,
+      "hs": "27",
+      "matches": 9
+    },
+    "bowling": {
+      "wickets": 7,
+      "bestFig": "2-25",
+      "matches": 9
+    }
+  },
+  {
     "name": "Surya Pavan Teja Tummala",
     "jersey": "#14",
     "cap": "PA14",
@@ -265,6 +251,20 @@
       "wickets": 1,
       "bestFig": "1-58",
       "matches": 3
+    }
+  },
+  {
+    "name": "Srini Nadakuditi",
+    "jersey": "#3",
+    "cap": "SRI3",
+    "batting": {
+      "runs": 31,
+      "hs": "19",
+      "matches": 3
+    },
+    "bowling": {
+      "wickets": 0,
+      "matches": 0
     }
   },
   {
@@ -304,12 +304,12 @@
     "batting": {
       "runs": 18,
       "hs": "12*",
-      "matches": 9
+      "matches": 8
     },
     "bowling": {
-      "wickets": 14,
+      "wickets": 12,
       "bestFig": "3-21",
-      "matches": 9
+      "matches": 8
     }
   },
   {
