@@ -676,23 +676,5 @@
     "date": "30th May 2026",
     "league": "NCU Development Cup",
     "opponent": "Saintfield 3rd XI"
-  },
-  {
-    "name": "Vonga Vishnu",
-    "type": "batting",
-    "record": "35*",
-    "runs": 35,
-    "date": "26th May 2026",
-    "league": "NCU Midweek League Group B",
-    "opponent": "Ardent Blues MW2 XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "115",
-    "runs": 115,
-    "date": "26th May 2026",
-    "league": "NCU Midweek League Group B",
-    "opponent": "Ardent Blues MW2 XI"
   }
 ]
