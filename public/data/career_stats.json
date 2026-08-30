@@ -1,20 +1,5 @@
 [
   {
-    "name": "Kishan Karneedi",
-    "jersey": "#11",
-    "cap": "KK11",
-    "batting": {
-      "runs": 311,
-      "hs": "66",
-      "matches": 14
-    },
-    "bowling": {
-      "wickets": 17,
-      "bestFig": "3-22",
-      "matches": 14
-    }
-  },
-  {
     "name": "Vonga Vishnu",
     "jersey": "#15",
     "cap": "VV15",
@@ -34,13 +19,28 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 305,
+      "runs": 289,
       "hs": "68",
-      "matches": 12
+      "matches": 11
     },
     "bowling": {
       "wickets": 0,
       "matches": 0
+    }
+  },
+  {
+    "name": "Kishan Karneedi",
+    "jersey": "#11",
+    "cap": "KK11",
+    "batting": {
+      "runs": 279,
+      "hs": "66",
+      "matches": 13
+    },
+    "bowling": {
+      "wickets": 16,
+      "bestFig": "3-22",
+      "matches": 13
     }
   },
   {
@@ -93,9 +93,9 @@
     "jersey": "#1",
     "cap": "WSM1",
     "batting": {
-      "runs": 140,
+      "runs": 118,
       "hs": "45",
-      "matches": 10
+      "matches": 9
     },
     "bowling": {
       "wickets": 0,
@@ -140,12 +140,12 @@
     "batting": {
       "runs": 97,
       "hs": "34",
-      "matches": 7
+      "matches": 6
     },
     "bowling": {
       "wickets": 4,
       "bestFig": "2-41",
-      "matches": 7
+      "matches": 6
     }
   },
   {
@@ -160,21 +160,6 @@
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 6
-    }
-  },
-  {
-    "name": "Kiran Maheswaram",
-    "jersey": "#75",
-    "cap": "KM75",
-    "batting": {
-      "runs": 69,
-      "hs": "28",
-      "matches": 6
-    },
-    "bowling": {
-      "wickets": 5,
-      "bestFig": "3-25",
       "matches": 6
     }
   },
@@ -194,18 +179,18 @@
     }
   },
   {
-    "name": "Veera SR Nimmakayala",
-    "jersey": "#88",
-    "cap": "VN88",
+    "name": "Kiran Maheswaram",
+    "jersey": "#75",
+    "cap": "KM75",
     "batting": {
-      "runs": 45,
-      "hs": "45*",
-      "matches": 1
+      "runs": 41,
+      "hs": "25",
+      "matches": 5
     },
     "bowling": {
-      "wickets": 4,
-      "bestFig": "4-30",
-      "matches": 1
+      "wickets": 5,
+      "bestFig": "3-25",
+      "matches": 5
     }
   },
   {
@@ -230,12 +215,12 @@
     "batting": {
       "runs": 37,
       "hs": "27",
-      "matches": 9
+      "matches": 8
     },
     "bowling": {
       "wickets": 7,
       "bestFig": "2-25",
-      "matches": 9
+      "matches": 8
     }
   },
   {
@@ -251,20 +236,6 @@
       "wickets": 1,
       "bestFig": "1-58",
       "matches": 3
-    }
-  },
-  {
-    "name": "Srini Nadakuditi",
-    "jersey": "#3",
-    "cap": "SRI3",
-    "batting": {
-      "runs": 31,
-      "hs": "19",
-      "matches": 3
-    },
-    "bowling": {
-      "wickets": 0,
-      "matches": 0
     }
   },
   {
@@ -304,12 +275,12 @@
     "batting": {
       "runs": 18,
       "hs": "12*",
-      "matches": 8
+      "matches": 7
     },
     "bowling": {
       "wickets": 12,
       "bestFig": "3-21",
-      "matches": 8
+      "matches": 7
     }
   },
   {
@@ -349,7 +320,7 @@
     "batting": {
       "runs": 15,
       "hs": "14",
-      "matches": 5
+      "matches": 4
     },
     "bowling": {
       "wickets": 0,
@@ -357,18 +328,17 @@
     }
   },
   {
-    "name": "Yashwanth",
-    "jersey": "#777",
-    "cap": "CY777",
+    "name": "Srini Nadakuditi",
+    "jersey": "#3",
+    "cap": "SRI3",
     "batting": {
-      "runs": 4,
-      "hs": "4",
-      "matches": 1
+      "runs": 12,
+      "hs": "12",
+      "matches": 2
     },
     "bowling": {
-      "wickets": 1,
-      "bestFig": "1-33",
-      "matches": 1
+      "wickets": 0,
+      "matches": 0
     }
   },
   {

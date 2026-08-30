@@ -2288,19 +2288,19 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "32",
+          "n": "0",
           "l": "Runs"
         },
         {
-          "n": "32",
+          "n": "0",
           "l": "High Score"
         },
         {
-          "n": "16.00",
+          "n": "0.00",
           "l": "Average"
         }
       ]
@@ -2311,7 +2311,7 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2357,19 +2357,19 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "29",
+          "n": "1",
           "l": "Runs"
         },
         {
-          "n": "28",
+          "n": "1",
           "l": "High Score"
         },
         {
-          "n": "29.00",
+          "n": "1.00",
           "l": "Average"
         }
       ]
@@ -2380,7 +2380,7 @@
       "cap": "VK18",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2403,11 +2403,11 @@
       "cap": "AR69",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "84",
+          "n": "68",
           "l": "Runs"
         },
         {
@@ -2415,7 +2415,7 @@
           "l": "High Score"
         },
         {
-          "n": "42.00",
+          "n": "68.00",
           "l": "Average"
         }
       ]
@@ -2449,19 +2449,19 @@
       "cap": "WSM1",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "23",
+          "n": "1",
           "l": "Runs"
         },
         {
-          "n": "22",
+          "n": "1",
           "l": "High Score"
         },
         {
-          "n": "11.50",
+          "n": "1.00",
           "l": "Average"
         }
       ],
@@ -2519,7 +2519,7 @@
       "cap": "CR99",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2535,98 +2535,6 @@
           "l": "Average"
         }
       ]
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "0",
-          "l": "Runs"
-        },
-        {
-          "n": "0",
-          "l": "High Score"
-        },
-        {
-          "n": "0.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "jersey": "#88",
-      "cap": "VN88",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "45",
-          "l": "Runs"
-        },
-        {
-          "n": "45*",
-          "l": "High Score"
-        },
-        {
-          "n": "45.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Yashwanth",
-      "jersey": "#777",
-      "cap": "CY777",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Runs"
-        },
-        {
-          "n": "4",
-          "l": "High Score"
-        },
-        {
-          "n": "4.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Srini Nadakuditi",
-      "jersey": "#3",
-      "cap": "SRI3",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "19",
-          "l": "Runs"
-        },
-        {
-          "n": "19",
-          "l": "High Score"
-        },
-        {
-          "n": "19.00",
-          "l": "Average"
-        }
-      ]
     }
   ],
   "cup-bowl": [
@@ -2636,19 +2544,19 @@
       "cap": "KK11",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "2",
+          "n": "1",
           "l": "Wickets"
         },
         {
-          "n": "1-27",
+          "n": "1-36",
           "l": "Best Fig"
         },
         {
-          "n": "31.50",
+          "n": "36.00",
           "l": "Average"
         }
       ],
@@ -2660,7 +2568,7 @@
       "cap": "HS77",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2672,7 +2580,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "69.00",
+          "n": "42.00",
           "l": "Average"
         }
       ]
@@ -2706,7 +2614,7 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2718,7 +2626,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "64.00",
+          "n": "51.00",
           "l": "Average"
         }
       ]
@@ -2729,7 +2637,7 @@
       "cap": "VK18",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2741,76 +2649,7 @@
           "l": "Best Fig"
         },
         {
-          "n": "78.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Chandra Obula Reddy B",
-      "jersey": "#45",
-      "cap": "CH45",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "-",
-          "l": "Best Fig"
-        },
-        {
-          "n": "0.00",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "jersey": "#88",
-      "cap": "VN88",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
-          "l": "Wickets"
-        },
-        {
-          "n": "4-30",
-          "l": "Best Fig"
-        },
-        {
-          "n": "7.50",
-          "l": "Average"
-        }
-      ]
-    },
-    {
-      "name": "Yashwanth",
-      "jersey": "#777",
-      "cap": "CY777",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        },
-        {
-          "n": "1-33",
-          "l": "Best Fig"
-        },
-        {
-          "n": "33.00",
+          "n": "54.00",
           "l": "Average"
         }
       ]
@@ -2818,31 +2657,12 @@
   ],
   "cup-ar": [
     {
-      "name": "Kishan Karneedi",
-      "jersey": "#11",
-      "cap": "KK11",
-      "stats": [
-        {
-          "n": "2",
-          "l": "Matches"
-        },
-        {
-          "n": "32",
-          "l": "Runs"
-        },
-        {
-          "n": "2",
-          "l": "Wickets"
-        }
-      ]
-    },
-    {
       "name": "Haneef Shaik",
       "jersey": "#77",
       "cap": "HS77",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
@@ -2880,11 +2700,11 @@
       "cap": "KM75",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
-          "n": "29",
+          "n": "1",
           "l": "Runs"
         },
         {
@@ -2899,49 +2719,11 @@
       "cap": "VK18",
       "stats": [
         {
-          "n": "2",
+          "n": "1",
           "l": "Matches"
         },
         {
           "n": "27",
-          "l": "Runs"
-        },
-        {
-          "n": "1",
-          "l": "Wickets"
-        }
-      ]
-    },
-    {
-      "name": "Veera SR Nimmakayala",
-      "jersey": "#88",
-      "cap": "VN88",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "45",
-          "l": "Runs"
-        },
-        {
-          "n": "4",
-          "l": "Wickets"
-        }
-      ]
-    },
-    {
-      "name": "Yashwanth",
-      "jersey": "#777",
-      "cap": "CY777",
-      "stats": [
-        {
-          "n": "1",
-          "l": "Matches"
-        },
-        {
-          "n": "4",
           "l": "Runs"
         },
         {
