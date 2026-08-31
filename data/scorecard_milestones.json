@@ -649,32 +649,5 @@
     "date": "2nd June 2026",
     "league": "NCU Midweek League Group B",
     "opponent": "Belfast MW XI"
-  },
-  {
-    "name": "Ali Rizwan",
-    "type": "batting",
-    "record": "51",
-    "runs": 51,
-    "date": "30th May 2026",
-    "league": "NCU Development Cup",
-    "opponent": "Saintfield 3rd XI"
-  },
-  {
-    "name": "Wasim SM",
-    "type": "batting",
-    "record": "66",
-    "runs": 66,
-    "date": "30th May 2026",
-    "league": "NCU Development Cup",
-    "opponent": "Saintfield 3rd XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "183",
-    "runs": 183,
-    "date": "30th May 2026",
-    "league": "NCU Development Cup",
-    "opponent": "Saintfield 3rd XI"
   }
 ]
