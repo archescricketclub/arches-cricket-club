@@ -1,5 +1,32 @@
 [
   {
+    "name": "Ali Rizwan",
+    "type": "batting",
+    "record": "80*",
+    "runs": 80,
+    "date": "31st August 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Belfast Superkings 3rd XI"
+  },
+  {
+    "name": "Wasim SM",
+    "type": "batting",
+    "record": "80",
+    "runs": 80,
+    "date": "31st August 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Belfast Superkings 3rd XI"
+  },
+  {
+    "name": "Total",
+    "type": "batting",
+    "record": "222",
+    "runs": 222,
+    "date": "31st August 2026",
+    "league": "NCU Junior League 10",
+    "opponent": "Belfast Superkings 3rd XI"
+  },
+  {
     "name": "Total",
     "type": "batting",
     "record": "168",

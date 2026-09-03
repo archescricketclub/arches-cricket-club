@@ -1,15 +1,5 @@
 {
-  "fixtures": [
-    {
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Belfast Superkings 3rd XI",
-      "date": "31st August 2026",
-      "time": "1:00 PM",
-      "venue": "Londonderry Park",
-      "status": "",
-      "league": "Junior League 10"
-    }
-  ],
+  "fixtures": [],
   "results": [
     {
       "homeTeam": "Arches 1st XI",
@@ -420,7 +410,17 @@
       "status": "",
       "league": "Junior League 10",
       "result": "Belfast Superkings 2nd XI won by 4 wickets"
+    },
+    {
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Belfast Superkings 3rd XI",
+      "date": "31st August 2026",
+      "time": "1:00 PM",
+      "venue": "Londonderry Park",
+      "status": "",
+      "league": "Junior League 10",
+      "result": "Arches 2nd XI won by 14 runs"
     }
   ],
-  "lastUpdated": "2026-09-03T03:11:56.342Z"
+  "lastUpdated": "2026-09-03T15:53:52.845Z"
 }
