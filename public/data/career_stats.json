@@ -48,9 +48,9 @@
     "jersey": "#—",
     "cap": "VH",
     "batting": {
-      "runs": 206,
+      "runs": 205,
       "hs": "58",
-      "matches": 10
+      "matches": 9
     },
     "bowling": {
       "wickets": 0,
@@ -63,14 +63,14 @@
     "jersey": "#—",
     "cap": "AR",
     "batting": {
-      "runs": 201,
+      "runs": 182,
       "hs": "77",
-      "matches": 6
+      "matches": 5
     },
     "bowling": {
-      "wickets": 10,
+      "wickets": 8,
       "bestFig": "4-44",
-      "matches": 6
+      "matches": 5
     }
   },
   {
@@ -78,9 +78,9 @@
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 168,
+      "runs": 148,
       "hs": "50",
-      "matches": 12
+      "matches": 11
     },
     "bowling": {
       "wickets": 0,
@@ -125,12 +125,12 @@
     "batting": {
       "runs": 112,
       "hs": "55",
-      "matches": 4
+      "matches": 3
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 4
+      "matches": 3
     }
   },
   {
@@ -155,27 +155,12 @@
     "batting": {
       "runs": 96,
       "hs": "65",
-      "matches": 6
+      "matches": 5
     },
     "bowling": {
       "wickets": 0,
       "bestFig": "-",
-      "matches": 6
-    }
-  },
-  {
-    "name": "Veerendra Babu Nagari",
-    "jersey": "#44",
-    "cap": "VB44",
-    "batting": {
-      "runs": 58,
-      "hs": "48",
-      "matches": 3
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "2-31",
-      "matches": 3
+      "matches": 5
     }
   },
   {
@@ -198,14 +183,14 @@
     "jersey": "#9",
     "cap": "VJ09",
     "batting": {
-      "runs": 40,
+      "runs": 39,
       "hs": "23",
-      "matches": 6
+      "matches": 5
     },
     "bowling": {
       "wickets": 9,
       "bestFig": "4-37",
-      "matches": 6
+      "matches": 5
     }
   },
   {
@@ -230,12 +215,12 @@
     "batting": {
       "runs": 35,
       "hs": "27",
-      "matches": 3
+      "matches": 2
     },
     "bowling": {
       "wickets": 1,
       "bestFig": "1-58",
-      "matches": 3
+      "matches": 2
     }
   },
   {
@@ -243,14 +228,14 @@
     "jersey": "#—",
     "cap": "PP",
     "batting": {
-      "runs": 22,
+      "runs": 20,
       "hs": "16",
-      "matches": 8
+      "matches": 7
     },
     "bowling": {
       "wickets": 4,
       "bestFig": "2-22",
-      "matches": 8
+      "matches": 7
     }
   },
   {
@@ -258,14 +243,14 @@
     "jersey": "#7",
     "cap": "TT07",
     "batting": {
-      "runs": 20,
+      "runs": 19,
       "hs": "13",
-      "matches": 4
+      "matches": 3
     },
     "bowling": {
-      "wickets": 4,
-      "bestFig": "3-25",
-      "matches": 4
+      "wickets": 1,
+      "bestFig": "1-69",
+      "matches": 3
     }
   },
   {
@@ -342,18 +327,18 @@
     }
   },
   {
-    "name": "Deepak Sai",
-    "jersey": "#50",
-    "cap": "AD39",
+    "name": "Veerendra Babu Nagari",
+    "jersey": "#44",
+    "cap": "VB44",
     "batting": {
-      "runs": 3,
-      "hs": "3*",
-      "matches": 1
+      "runs": 10,
+      "hs": "5",
+      "matches": 2
     },
     "bowling": {
-      "wickets": 1,
-      "bestFig": "1-5",
-      "matches": 1
+      "wickets": 2,
+      "bestFig": "2-31",
+      "matches": 2
     }
   },
   {

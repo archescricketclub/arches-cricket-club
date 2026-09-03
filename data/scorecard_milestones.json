@@ -613,41 +613,5 @@
     "date": "6th June 2026",
     "league": "NCU Junior League 10",
     "opponent": "Lurgan 3rd XI"
-  },
-  {
-    "name": "Ali Rizwan",
-    "type": "batting",
-    "record": "33*",
-    "runs": 33,
-    "date": "2nd June 2026",
-    "league": "NCU Midweek League Group B",
-    "opponent": "Belfast MW XI"
-  },
-  {
-    "name": "Srini Nadakuditi",
-    "type": "batting",
-    "record": "33*",
-    "runs": 33,
-    "date": "2nd June 2026",
-    "league": "NCU Midweek League Group B",
-    "opponent": "Belfast MW XI"
-  },
-  {
-    "name": "Extras",
-    "type": "batting",
-    "record": "35",
-    "runs": 35,
-    "date": "2nd June 2026",
-    "league": "NCU Midweek League Group B",
-    "opponent": "Belfast MW XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "152",
-    "runs": 152,
-    "date": "2nd June 2026",
-    "league": "NCU Midweek League Group B",
-    "opponent": "Belfast MW XI"
   }
 ]
