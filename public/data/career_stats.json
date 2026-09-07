@@ -4,9 +4,9 @@
     "jersey": "#16",
     "cap": "AR69",
     "batting": {
-      "runs": 364,
+      "runs": 363,
       "hs": "80",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
       "wickets": 0,
@@ -18,14 +18,14 @@
     "jersey": "#15",
     "cap": "VV15",
     "batting": {
-      "runs": 313,
+      "runs": 311,
       "hs": "62",
-      "matches": 13
+      "matches": 12
     },
     "bowling": {
-      "wickets": 15,
+      "wickets": 14,
       "bestFig": "3-21",
-      "matches": 13
+      "matches": 12
     }
   },
   {
@@ -33,44 +33,14 @@
     "jersey": "#11",
     "cap": "KK11",
     "batting": {
-      "runs": 258,
+      "runs": 225,
       "hs": "66",
-      "matches": 13
+      "matches": 12
     },
     "bowling": {
-      "wickets": 15,
+      "wickets": 13,
       "bestFig": "2-20",
-      "matches": 13
-    }
-  },
-  {
-    "name": "Vijaykumar Hugar",
-    "jersey": "#—",
-    "cap": "VH",
-    "batting": {
-      "runs": 206,
-      "hs": "58",
-      "matches": 10
-    },
-    "bowling": {
-      "wickets": 1,
-      "bestFig": "1-25",
-      "matches": 4
-    }
-  },
-  {
-    "name": "Wasim SM",
-    "jersey": "#1",
-    "cap": "WSM1",
-    "batting": {
-      "runs": 198,
-      "hs": "80",
-      "matches": 9
-    },
-    "bowling": {
-      "wickets": 0,
-      "bestFig": "-",
-      "matches": 1
+      "matches": 12
     }
   },
   {
@@ -89,13 +59,43 @@
     }
   },
   {
+    "name": "Wasim SM",
+    "jersey": "#1",
+    "cap": "WSM1",
+    "batting": {
+      "runs": 177,
+      "hs": "80",
+      "matches": 8
+    },
+    "bowling": {
+      "wickets": 0,
+      "bestFig": "-",
+      "matches": 1
+    }
+  },
+  {
+    "name": "Vijaykumar Hugar",
+    "jersey": "#—",
+    "cap": "VH",
+    "batting": {
+      "runs": 176,
+      "hs": "58",
+      "matches": 9
+    },
+    "bowling": {
+      "wickets": 1,
+      "bestFig": "1-25",
+      "matches": 4
+    }
+  },
+  {
     "name": "Asad Murtuza",
     "jersey": "#22",
     "cap": "AM04",
     "batting": {
-      "runs": 148,
+      "runs": 127,
       "hs": "50",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
       "wickets": 0,
@@ -108,9 +108,9 @@
     "jersey": "#30",
     "cap": "AN30",
     "batting": {
-      "runs": 115,
+      "runs": 113,
       "hs": "49",
-      "matches": 11
+      "matches": 10
     },
     "bowling": {
       "wickets": 0,
@@ -149,33 +149,18 @@
     }
   },
   {
-    "name": "Chandra Obula Reddy B",
-    "jersey": "#45",
-    "cap": "CH45",
-    "batting": {
-      "runs": 63,
-      "hs": "26",
-      "matches": 5
-    },
-    "bowling": {
-      "wickets": 2,
-      "bestFig": "1-27",
-      "matches": 5
-    }
-  },
-  {
     "name": "Harsha Sai",
     "jersey": "#8",
     "cap": "VK18",
     "batting": {
       "runs": 56,
       "hs": "27",
-      "matches": 8
+      "matches": 7
     },
     "bowling": {
-      "wickets": 7,
-      "bestFig": "2-25",
-      "matches": 8
+      "wickets": 5,
+      "bestFig": "2-50",
+      "matches": 7
     }
   },
   {
@@ -191,6 +176,21 @@
       "wickets": 9,
       "bestFig": "4-37",
       "matches": 5
+    }
+  },
+  {
+    "name": "Chandra Obula Reddy B",
+    "jersey": "#45",
+    "cap": "CH45",
+    "batting": {
+      "runs": 37,
+      "hs": "22",
+      "matches": 4
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "1-27",
+      "matches": 4
     }
   },
   {
@@ -254,36 +254,6 @@
     }
   },
   {
-    "name": "Haneef Shaik",
-    "jersey": "#77",
-    "cap": "HS77",
-    "batting": {
-      "runs": 18,
-      "hs": "12*",
-      "matches": 7
-    },
-    "bowling": {
-      "wickets": 11,
-      "bestFig": "3-29",
-      "matches": 7
-    }
-  },
-  {
-    "name": "Kiran Maheswaram",
-    "jersey": "#75",
-    "cap": "KM75",
-    "batting": {
-      "runs": 16,
-      "hs": "14",
-      "matches": 4
-    },
-    "bowling": {
-      "wickets": 5,
-      "bestFig": "3-25",
-      "matches": 4
-    }
-  },
-  {
     "name": "Charan Reddy Datla",
     "jersey": "#99",
     "cap": "CR99",
@@ -295,6 +265,21 @@
     "bowling": {
       "wickets": 0,
       "matches": 0
+    }
+  },
+  {
+    "name": "Haneef Shaik",
+    "jersey": "#77",
+    "cap": "HS77",
+    "batting": {
+      "runs": 13,
+      "hs": "12*",
+      "matches": 6
+    },
+    "bowling": {
+      "wickets": 10,
+      "bestFig": "3-29",
+      "matches": 6
     }
   },
   {
@@ -310,6 +295,21 @@
       "wickets": 2,
       "bestFig": "2-31",
       "matches": 2
+    }
+  },
+  {
+    "name": "Kiran Maheswaram",
+    "jersey": "#75",
+    "cap": "KM75",
+    "batting": {
+      "runs": 2,
+      "hs": "1*",
+      "matches": 3
+    },
+    "bowling": {
+      "wickets": 2,
+      "bestFig": "1-23",
+      "matches": 3
     }
   },
   {

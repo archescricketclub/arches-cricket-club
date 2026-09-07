@@ -150,16 +150,6 @@
     "category": "half-century"
   },
   {
-    "name": "Kiran Maheswaram",
-    "record": "3-25",
-    "type": "bowling",
-    "date": "22nd July 2026",
-    "opponent": "CSNI MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-3w"
-  },
-  {
     "name": "Ali Rizwan",
     "record": "80*",
     "type": "batting",
@@ -338,6 +328,16 @@
     "league": "NCU Midweek League Group B",
     "season": "2026",
     "category": "midweek-30"
+  },
+  {
+    "name": "Kiran Maheswaram",
+    "record": "3-25",
+    "type": "bowling",
+    "date": "22nd July 2026",
+    "opponent": "CSNI MW",
+    "league": "NCU Midweek League Group B",
+    "season": "2026",
+    "category": "midweek-3w"
   },
   {
     "name": "Ali Rizwan",

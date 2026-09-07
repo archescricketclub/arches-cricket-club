@@ -622,23 +622,5 @@
     "date": "7th June 2026",
     "league": "NCU Junior League 10",
     "opponent": "CI 5th XI"
-  },
-  {
-    "name": "Abubakar Rehmani",
-    "type": "batting",
-    "record": "50",
-    "runs": 50,
-    "date": "6th June 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "Lurgan 3rd XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "147",
-    "runs": 147,
-    "date": "6th June 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "Lurgan 3rd XI"
   }
 ]
