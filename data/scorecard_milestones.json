@@ -604,23 +604,5 @@
     "date": "13th June 2026",
     "league": "NCU Mercury Senior League 3",
     "opponent": "Amigos Belfast 1st XI"
-  },
-  {
-    "name": "Ali Rizwan",
-    "type": "batting",
-    "record": "60",
-    "runs": 60,
-    "date": "7th June 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "CI 5th XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "148",
-    "runs": 148,
-    "date": "7th June 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "CI 5th XI"
   }
 ]
