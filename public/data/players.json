@@ -810,29 +810,6 @@
       ]
     },
     {
-      "name": "Arush Nimmagadda",
-      "jersey": "#72",
-      "cap": "AN72",
-      "stats": [
-        {
-          "n": "15",
-          "l": "Matches"
-        },
-        {
-          "n": "2",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-26",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Chandra Obula Reddy B",
       "jersey": "#45",
       "cap": "CH45",
@@ -851,6 +828,29 @@
         },
         {
           "n": "0-21",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Arush Nimmagadda",
+      "jersey": "#72",
+      "cap": "AN72",
+      "stats": [
+        {
+          "n": "15",
+          "l": "Matches"
+        },
+        {
+          "n": "2",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-26",
           "l": "Best Fig"
         }
       ]
@@ -1691,29 +1691,6 @@
       ]
     },
     {
-      "name": "Ali Rizwan",
-      "jersey": "#16",
-      "cap": "AR69",
-      "stats": [
-        {
-          "n": "10",
-          "l": "Matches"
-        },
-        {
-          "n": "1",
-          "l": "Overs"
-        },
-        {
-          "n": "0",
-          "l": "Wickets"
-        },
-        {
-          "n": "0-3",
-          "l": "Best Fig"
-        }
-      ]
-    },
-    {
       "name": "Anil Narra",
       "jersey": "#30",
       "cap": "AN30",
@@ -1732,6 +1709,29 @@
         },
         {
           "n": "0-11",
+          "l": "Best Fig"
+        }
+      ]
+    },
+    {
+      "name": "Ali Rizwan",
+      "jersey": "#16",
+      "cap": "AR69",
+      "stats": [
+        {
+          "n": "10",
+          "l": "Matches"
+        },
+        {
+          "n": "1",
+          "l": "Overs"
+        },
+        {
+          "n": "0",
+          "l": "Wickets"
+        },
+        {
+          "n": "0-3",
           "l": "Best Fig"
         }
       ]
