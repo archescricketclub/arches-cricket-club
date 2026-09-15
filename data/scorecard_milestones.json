@@ -577,23 +577,5 @@
     "date": "16th June 2026",
     "league": "NCU Midweek League Group B",
     "opponent": "Cregagh MW XI"
-  },
-  {
-    "name": "Ali Rizwan",
-    "type": "batting",
-    "record": "61*",
-    "runs": 61,
-    "date": "14th June 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "North Down 4th XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "130",
-    "runs": 130,
-    "date": "14th June 2026",
-    "league": "NCU Junior League 10",
-    "opponent": "North Down 4th XI"
   }
 ]
