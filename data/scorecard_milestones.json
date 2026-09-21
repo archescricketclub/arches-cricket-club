@@ -504,42 +504,5 @@
     "date": "21st June 2026",
     "league": "NCU Junior League 10",
     "opponent": "Templepatrick 4th XI"
-  },
-  {
-    "name": "Asad Murtuza",
-    "type": "batting",
-    "record": "50*",
-    "runs": 50,
-    "date": "20th June 2026",
-    "league": "NCU Development Cup",
-    "opponent": "CSNI 5th XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "95",
-    "runs": 95,
-    "date": "20th June 2026",
-    "league": "NCU Development Cup",
-    "opponent": "CSNI 5th XI"
-  },
-  {
-    "name": "Total",
-    "type": "batting",
-    "record": "121",
-    "runs": 121,
-    "date": "20th June 2026",
-    "league": "NCU Mercury Senior League 3",
-    "opponent": "Dundrum 1st XI"
-  },
-  {
-    "name": "Abubakar Rehmani",
-    "type": "bowling",
-    "record": "8-7",
-    "wickets": 8,
-    "runs": 7,
-    "date": "20th June 2026",
-    "league": "NCU Mercury Senior League 3",
-    "opponent": "Dundrum 1st XI"
   }
 ]
