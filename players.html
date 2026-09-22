@@ -573,6 +573,11 @@
                         <p style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
                     </div>
                     <div style="display:flex; gap:1rem; align-items:center;">
+                        <select id="careerSeasonFilter" class="sort-filter" onchange="filterCareerStats()">
+                            <option value="all">All-Time (Merged)</option>
+                            <option value="2026">2026 Season Only</option>
+                            <option value="2025">2025 Season Only</option>
+                        </select>
                         <select id="careerSortFilter" class="sort-filter" onchange="sortCareerStats()">
                             <option value="">Sort By</option>
                             <option value="az">A - Z</option>
@@ -666,6 +671,6 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
-    <script src="js/players.js?v=20260922h"></script>
+    <script src="js/players.js?v=20260922j"></script>
 </body>
 </html>

@@ -307,9 +307,11 @@
         function filterCareerStats() {
             const query = document.getElementById('careerSearchInput').value.toLowerCase().trim();
             const sortDropdown = document.getElementById('careerSortFilter');
+            const seasonDropdown = document.getElementById('careerSeasonFilter');
             const sortType = sortDropdown ? sortDropdown.value : '';
+            const seasonType = seasonDropdown ? seasonDropdown.value : 'all';
             
-            let listToRender = CAREER_STATS.all ? [...CAREER_STATS.all] : [...CAREER_STATS];
+            let listToRender = CAREER_STATS[seasonType] ? [...CAREER_STATS[seasonType]] : (CAREER_STATS.all ? [...CAREER_STATS.all] : [...CAREER_STATS]);
             
             if (query) {
                 listToRender = listToRender.filter(p => p.name.toLowerCase().includes(query));
