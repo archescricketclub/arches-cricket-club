@@ -10,7 +10,7 @@
             showLoading('career-roster');
             try {
                 const [playersRes, rosterRes, careerRes] = await Promise.all([
-                    fetch(`data/players.json?v=${new Date().getTime()}`),
+                    fetch(`data/players_2026.json?v=${new Date().getTime()}`),
                     fetch(`data/roster.json?v=${new Date().getTime()}`),
                     fetch(`data/career_stats.json?v=${new Date().getTime()}`)
                 ]);
