@@ -69,8 +69,9 @@ function processStatsMap(playersObj, careerMap) {
         }
         if (!p.stats) return;
         const matches = parseInt(p.stats[0].n) || 0;
-        const wickets = parseInt(p.stats[1].n) || 0;
-        const bestFig = p.stats[2].n;
+        // In players.json, bowling stats are: 0:Matches, 1:Overs, 2:Wickets, 3:Best Fig
+        const wickets = parseInt(p.stats[2].n) || 0;
+        const bestFig = p.stats[3].n || '-';
         
         careerMap[p.name].bowling.matches += matches;
         careerMap[p.name].bowling.wickets += wickets;
