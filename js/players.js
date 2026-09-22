@@ -254,8 +254,8 @@
         function renderCareerStats(filteredList = null) {
             const el = document.getElementById('career-roster');
             if (!el) return;
-            const listToRender = filteredList || CAREER_STATS;
-            if (listToRender.length === 0) {
+            const listToRender = filteredList || (CAREER_STATS.all ? CAREER_STATS.all : CAREER_STATS);
+            if (!listToRender || listToRender.length === 0) {
                 el.innerHTML = `
                   <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--muted); font-style: italic;">
                     No career stats found matching your search.
@@ -307,10 +307,11 @@
         function filterCareerStats() {
             const query = document.getElementById('careerSearchInput').value.toLowerCase().trim();
             if (!query) {
-                renderCareerStats(CAREER_STATS);
+                renderCareerStats(CAREER_STATS.all ? CAREER_STATS.all : CAREER_STATS);
                 return;
             }
-            const filtered = CAREER_STATS.filter(p => p.name.toLowerCase().includes(query));
+            const listToSearch = CAREER_STATS.all ? CAREER_STATS.all : CAREER_STATS;
+            const filtered = listToSearch.filter(p => p.name.toLowerCase().includes(query));
             renderCareerStats(filtered);
         }
 
