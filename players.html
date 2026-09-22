@@ -572,10 +572,22 @@
                     <div>
                         <p style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
                     </div>
-                    <div class="search-box">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="text" id="careerSearchInput" placeholder="Search player name..." aria-label="Search by player name" oninput="filterCareerStats()">
-                        <i class="fa-solid fa-search"></i>
+                    <div style="display:flex; gap:1rem; align-items:center;">
+                        <select id="careerSortFilter" class="sort-filter" onchange="sortCareerStats()">
+                            <option value="">Sort By</option>
+                            <option value="az">A - Z</option>
+                            <option value="za">Z - A</option>
+                            <option value="runs">Runs</option>
+                            <option value="matches">Matches</option>
+                            <option value="hs">Highest Score</option>
+                            <option value="wickets">Wickets</option>
+                            <option value="bestfig">Best Fig</option>
+                        </select>
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="careerSearchInput" placeholder="Search player name..." aria-label="Search by player name" oninput="filterCareerStats()">
+                            <i class="fa-solid fa-search"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="squad-grid" id="career-roster"></div>

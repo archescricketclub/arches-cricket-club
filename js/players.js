@@ -306,13 +306,44 @@
 
         function filterCareerStats() {
             const query = document.getElementById('careerSearchInput').value.toLowerCase().trim();
-            if (!query) {
-                renderCareerStats(CAREER_STATS.all ? CAREER_STATS.all : CAREER_STATS);
-                return;
+            const sortDropdown = document.getElementById('careerSortFilter');
+            const sortType = sortDropdown ? sortDropdown.value : '';
+            
+            let listToRender = CAREER_STATS.all ? [...CAREER_STATS.all] : [...CAREER_STATS];
+            
+            if (query) {
+                listToRender = listToRender.filter(p => p.name.toLowerCase().includes(query));
             }
-            const listToSearch = CAREER_STATS.all ? CAREER_STATS.all : CAREER_STATS;
-            const filtered = listToSearch.filter(p => p.name.toLowerCase().includes(query));
-            renderCareerStats(filtered);
+            
+            if (sortType) {
+                if (sortType === 'az') {
+                    listToRender.sort((a, b) => a.name.localeCompare(b.name));
+                } else if (sortType === 'za') {
+                    listToRender.sort((a, b) => b.name.localeCompare(a.name));
+                } else {
+                    listToRender.sort((a, b) => {
+                        const getVal = (p) => {
+                            if (sortType === 'runs') return p.batting.runs !== undefined ? parseInt(p.batting.runs) : 0;
+                            if (sortType === 'matches') return Math.max(p.batting.matches || 0, p.bowling.matches || 0);
+                            if (sortType === 'hs') return parseInt((p.batting.hs || '0').replace('*', '')) || 0;
+                            if (sortType === 'wickets') return p.bowling.wickets !== undefined ? parseInt(p.bowling.wickets) : 0;
+                            if (sortType === 'bestfig') {
+                                const parts = (p.bowling.bestFig || '-').split('-');
+                                if (parts.length === 2) return parseInt(parts[0]) * 1000 - parseInt(parts[1]);
+                                return 0;
+                            }
+                            return 0;
+                        };
+                        return getVal(b) - getVal(a);
+                    });
+                }
+            }
+            
+            renderCareerStats(listToRender);
+        }
+
+        function sortCareerStats() {
+            filterCareerStats();
         }
 
         // Initialize on DOM load
