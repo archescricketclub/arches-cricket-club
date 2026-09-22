@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const IN_PLAYERS_2025 = 'data/players_2025.json';
-const IN_PLAYERS_2026 = 'data/players.json';
+const IN_PLAYERS_2026 = 'data/players_2026.json';
 const OUT_CAREER_1 = 'data/career_stats.json';
 const OUT_CAREER_2 = 'public/data/career_stats.json';
 const ROSTER_PATH = 'data/roster.json';
