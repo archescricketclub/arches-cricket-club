@@ -38,6 +38,26 @@ function compareBowlingFigs(fig1, fig2) {
 
 // Normalize name for robust matching
 function matchPlayer(scrapedName, roster) {
+  const aliases = {
+    'sri tummala': 'Vinay Tummala',
+    'surya tummala': 'Surya Pavan Teja Tummala',
+    'surya pavan tummala': 'Surya Pavan Teja Tummala',
+    'venkat j': 'Venkateswarrao Jyothi',
+    'venkateswarararo jyothi': 'Venkateswarrao Jyothi',
+    'tulasi tatavarthi': 'Tulasi Gangadhar Thatavarthi',
+    'jaya sukavasi': 'Jayasurya Sukhavasi',
+    'jayasurya sukavasi': 'Jayasurya Sukhavasi',
+    'jaya sukhavasi': 'Jayasurya Sukhavasi',
+    'veerendra nagari': 'Veerendra Babu Nagari',
+    'vb nagari': 'Veerendra Babu Nagari'
+  };
+
+  const nameLower = scrapedName.toLowerCase().trim();
+  if (aliases[nameLower]) {
+    const matched = roster.find(r => r.name === aliases[nameLower]);
+    if (matched) return matched;
+  }
+
   const cleanScraped = scrapedName.toLowerCase().replace(/[^a-z0-9\s]/g, '');
   const scrapedTokens = cleanScraped.split(/\s+/).filter(t => t.length > 1);
   let bestMatch = null;
