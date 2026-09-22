@@ -237,18 +237,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (h1) h1.textContent = "Recent Matches";
                 const h2 = document.getElementById('other-fixtures-heading');
                 if (h2) h2.textContent = "Earlier Matches";
+
+                const sectionLabel = document.getElementById('upcoming-section-label');
+                if (sectionLabel) sectionLabel.innerHTML = "🏏 Recent Results";
+                const sectionTitle = document.getElementById('upcoming-section-title');
+                if (sectionTitle) sectionTitle.innerHTML = "Latest On The Pitch";
+                const sectionSub = document.getElementById('upcoming-section-sub');
+                if (sectionSub) sectionSub.innerHTML = "Recent league, midweek, and cup matches";
                 
                 renderMatchCards(pastMatches.slice(0, 3), 'upcoming-home', 0);
                 renderMatchCards(pastMatches.slice(3, 6), 'upcoming-other', 3);
             }
             
             // --- 4. STATS LOGIC ---
-            const statMatches = document.getElementById('hero-stat-matches');
-            if (statMatches) statMatches.textContent = pastMatches.length;
-            
-            const statVictories = document.getElementById('hero-stat-victories');
             const victories = pastMatches.filter(m => m.result && m.result.toLowerCase().includes('arches') && m.result.toLowerCase().includes('won')).length + pastMatches.filter(m => m.result && m.result.toLowerCase().includes('arches') && m.result.toLowerCase().includes('beat')).length;
-            if (statVictories) statVictories.textContent = victories;
             
             const statWinRate = document.getElementById('hero-win-rate');
             if (statWinRate && pastMatches.length > 0) {
@@ -265,33 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             renderTicker(tickerMatches);
             
-            // --- 4. STATS LOGIC ---
-            let wins = 0;
-            let played = 0;
-            rawResults.forEach(match => {
-                const resLower = (match.result || '').toLowerCase();
-                const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'unplayed'];
-                let isNoResult = noResultKeywords.some(k => resLower.includes(k));
-                
-                if (!isNoResult) {
-                    played++;
-                    // Win logic: Starts with arches, or explicitly says arches won/beat/walkover
-                    const isWin = resLower.startsWith('arches') || resLower.includes('arches won') || resLower.includes('arches beat') || resLower.includes('walkover to arches');
-                    if (isWin) {
-                        wins++;
-                    }
-                }
-            });
-            
-            const heroMatches = document.getElementById('hero-stat-matches');
-            if (heroMatches) { heroMatches.dataset.target = played; animateCount(heroMatches, played, 1500); }
-            const statsMatches = document.getElementById('stats-matches');
-            if (statsMatches) { statsMatches.dataset.target = played; animateCount(statsMatches, played, 1500); }
-            
-            const heroVictories = document.getElementById('hero-stat-victories');
-            if (heroVictories) { heroVictories.dataset.target = wins; animateCount(heroVictories, wins, 1500); }
-            const statsVictories = document.getElementById('stats-victories');
-            if (statsVictories) { statsVictories.dataset.target = wins; animateCount(statsVictories, wins, 1500); }
+            // Note: Stats for matches played and victories are hardcoded in index.html,
+            // as matches.json only contains a subset of all historical matches.
             
         })
         .catch(err => {
