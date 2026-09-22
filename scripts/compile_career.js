@@ -1,0 +1,113 @@
+const fs = require('fs');
+
+const IN_PLAYERS_2025 = 'data/players_2025.json';
+const IN_PLAYERS_2026 = 'data/players.json';
+const OUT_CAREER_1 = 'data/career_stats.json';
+const OUT_CAREER_2 = 'public/data/career_stats.json';
+
+// Helper to compare high scores (e.g. "50*" vs "60")
+function compareHighScores(hs1, hs2) {
+  if (!hs1 || hs1 === '-') return hs2;
+  if (!hs2 || hs2 === '-') return hs1;
+  const val1 = parseInt(hs1.replace('*', ''));
+  const val2 = parseInt(hs2.replace('*', ''));
+  if (val1 > val2) return hs1;
+  if (val2 > val1) return hs2;
+  return hs1.includes('*') ? hs1 : hs2;
+}
+
+// Helper to parse bowling figures (e.g. "5-20")
+function parseBowlingFig(fig) {
+  if (!fig || fig === '-') return { w: -1, r: 999 };
+  const parts = fig.split('-');
+  if (parts.length === 2) return { w: parseInt(parts[0]), r: parseInt(parts[1]) };
+  return { w: -1, r: 999 };
+}
+
+// Helper to compare bowling figures
+function compareBowlingFigs(fig1, fig2) {
+  if (fig1 === '-' || !fig1) return fig2;
+  if (fig2 === '-' || !fig2) return fig1;
+  const f1 = parseBowlingFig(fig1);
+  const f2 = parseBowlingFig(fig2);
+  if (f2.w > f1.w) return fig2;
+  if (f2.w === f1.w && f2.r < f1.r) return fig2;
+  return fig1;
+}
+
+function processStatsMap(playersObj, careerMap) {
+  for (const [key, players] of Object.entries(playersObj)) {
+    if (key.endsWith('-bat')) {
+      players.forEach(p => {
+        if (!careerMap[p.name]) {
+          careerMap[p.name] = {
+            name: p.name,
+            jersey: p.jersey || '#—',
+            cap: p.cap || p.name.substring(0,4).toUpperCase(),
+            batting: { runs: 0, hs: '0', matches: 0 },
+            bowling: { wickets: 0, bestFig: '-', matches: 0 }
+          };
+        }
+        if (!p.stats) return;
+        const matches = parseInt(p.stats[0].n) || 0;
+        const runs = parseInt(p.stats[1].n) || 0;
+        const hs = p.stats[2].n;
+        careerMap[p.name].batting.matches += matches;
+        careerMap[p.name].batting.runs += runs;
+        careerMap[p.name].batting.hs = compareHighScores(careerMap[p.name].batting.hs, hs);
+      });
+    } else if (key.endsWith('-bowl')) {
+      players.forEach(p => {
+        if (!careerMap[p.name]) {
+          careerMap[p.name] = {
+            name: p.name,
+            jersey: p.jersey || '#—',
+            cap: p.cap || p.name.substring(0,4).toUpperCase(),
+            batting: { runs: 0, hs: '0', matches: 0 },
+            bowling: { wickets: 0, bestFig: '-', matches: 0 }
+          };
+        }
+        if (!p.stats) return;
+        const matches = parseInt(p.stats[0].n) || 0;
+        const wickets = parseInt(p.stats[1].n) || 0;
+        const bestFig = p.stats[2].n;
+        
+        careerMap[p.name].bowling.matches += matches;
+        careerMap[p.name].bowling.wickets += wickets;
+        careerMap[p.name].bowling.bestFig = compareBowlingFigs(careerMap[p.name].bowling.bestFig, bestFig);
+      });
+    }
+  }
+}
+
+function sortCareerMap(map) {
+  const list = Object.values(map).filter(p => p.batting.runs > 0 || p.bowling.wickets > 0);
+  list.sort((a, b) => b.batting.runs - a.batting.runs);
+  return list;
+}
+
+const players2025 = JSON.parse(fs.readFileSync(IN_PLAYERS_2025, 'utf8'));
+const players2026 = JSON.parse(fs.readFileSync(IN_PLAYERS_2026, 'utf8'));
+
+const allMap = {};
+const map2026 = {};
+const map2025 = {};
+
+processStatsMap(players2025, allMap);
+processStatsMap(players2026, allMap);
+
+processStatsMap(players2025, map2025);
+processStatsMap(players2026, map2026);
+
+const finalObj = {
+  all: sortCareerMap(allMap),
+  "2026": sortCareerMap(map2026),
+  "2025": sortCareerMap(map2025)
+};
+
+console.log(`Unified Career Statistics has ${finalObj.all.length} players.`);
+
+fs.writeFileSync(OUT_CAREER_1, JSON.stringify(finalObj, null, 2));
+fs.writeFileSync(OUT_CAREER_2, JSON.stringify(finalObj, null, 2));
+
+console.log('Saved data/career_stats.json and public/data/career_stats.json successfully!');

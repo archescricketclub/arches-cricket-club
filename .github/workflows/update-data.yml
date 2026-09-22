@@ -1,8 +1,8 @@
 name: Update Cricket Club Data
 
 on:
-  schedule:
-    - cron: '0 0,12 * * *'   # twice a day UTC
+  # schedule:
+  #   - cron: '0 0,12 * * *'   # twice a day UTC
   workflow_dispatch:          # manual trigger
 
 jobs:
@@ -54,6 +54,7 @@ jobs:
           node scripts/fetch_season_stats.js 2026
           node scripts/scrape_scorecards.js
           node scripts/compile_honours.js
+          node scripts/compile_career.js
 
       # --------------------------------------------------
       # 7️⃣ Commit and push all generated JSON files

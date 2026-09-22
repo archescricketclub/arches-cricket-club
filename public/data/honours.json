@@ -150,26 +150,6 @@
     "category": "half-century"
   },
   {
-    "name": "Haneef Shaik",
-    "record": "3-18",
-    "type": "bowling",
-    "date": "2nd June 2026",
-    "opponent": "Belfast MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-3w"
-  },
-  {
-    "name": "Kiran Maheswaram",
-    "record": "3-25",
-    "type": "bowling",
-    "date": "22nd July 2026",
-    "opponent": "CSNI MW",
-    "league": "Midweek League",
-    "season": "2026",
-    "category": "midweek-3w"
-  },
-  {
     "name": "Dushyanth Reddy B",
     "record": "55",
     "type": "batting",
@@ -318,6 +298,16 @@
     "league": "NCU Midweek League Group B",
     "season": "2026",
     "category": "midweek-30"
+  },
+  {
+    "name": "Kiran Maheswaram",
+    "record": "3-25",
+    "type": "bowling",
+    "date": "22nd July 2026",
+    "opponent": "CSNI MW",
+    "league": "NCU Midweek League Group B",
+    "season": "2026",
+    "category": "midweek-3w"
   },
   {
     "name": "Ali Rizwan",
