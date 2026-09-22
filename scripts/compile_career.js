@@ -4,6 +4,7 @@ const IN_PLAYERS_2025 = 'data/players_2025.json';
 const IN_PLAYERS_2026 = 'data/players.json';
 const OUT_CAREER_1 = 'data/career_stats.json';
 const OUT_CAREER_2 = 'public/data/career_stats.json';
+const ROSTER_PATH = 'data/roster.json';
 
 // Helper to compare high scores (e.g. "50*" vs "60")
 function compareHighScores(hs1, hs2) {
@@ -35,57 +36,82 @@ function compareBowlingFigs(fig1, fig2) {
   return fig1;
 }
 
-function processStatsMap(playersObj, careerMap) {
+// Normalize name for robust matching
+function matchPlayer(scrapedName, roster) {
+  const cleanScraped = scrapedName.toLowerCase().replace(/[^a-z0-9\s]/g, '');
+  const scrapedTokens = cleanScraped.split(/\s+/).filter(t => t.length > 1);
+  let bestMatch = null;
+  let bestScore = 0;
+  for (const player of roster) {
+    const cleanRoster = player.name.toLowerCase().replace(/[^a-z0-9\s]/g, '');
+    const rosterTokens = cleanRoster.split(/\s+/).filter(t => t.length > 1);
+    let matchCount = 0;
+    for (const token of scrapedTokens) {
+      if (rosterTokens.includes(token)) {
+        matchCount++;
+      }
+    }
+    let score = matchCount / Math.max(scrapedTokens.length, 1);
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = player;
+    }
+  }
+  if (bestScore >= 0.5) {
+    return bestMatch;
+  }
+  const cleanScrapedFull = cleanScraped.replace(/\s+/g, '');
+  for (const player of roster) {
+    const cleanRosterFull = player.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (cleanRosterFull.includes(cleanScrapedFull) || cleanScrapedFull.includes(cleanRosterFull)) {
+      return player;
+    }
+  }
+  return null;
+}
+
+function processStatsMap(playersObj, careerMap, roster) {
   for (const [key, players] of Object.entries(playersObj)) {
-    if (key.endsWith('-bat')) {
+    if (key.endsWith('-bat') || key.endsWith('-bowl')) {
       players.forEach(p => {
-        if (!careerMap[p.name]) {
-          careerMap[p.name] = {
-            name: p.name,
-            jersey: p.jersey || '#—',
-            cap: p.cap || p.name.substring(0,4).toUpperCase(),
+        const match = matchPlayer(p.name, roster);
+        const canonicalName = match ? match.name : p.name;
+
+        if (!careerMap[canonicalName]) {
+          careerMap[canonicalName] = {
+            name: canonicalName,
+            jersey: match ? match.jersey : (p.jersey || '#—'),
+            cap: match ? match.cap : (p.cap || p.name.substring(0,4).toUpperCase()),
             batting: { runs: 0, hs: '0', matches: 0 },
             bowling: { wickets: 0, bestFig: '-', matches: 0 }
           };
         }
+        
         if (!p.stats) return;
+        
         const findStat = (lbl) => {
             const s = p.stats.find(x => x.l === lbl);
             return s ? s.n : '0';
         };
-        const matches = parseInt(findStat('Matches')) || 0;
-        const runs = parseInt(findStat('Runs')) || 0;
-        const hs = findStat('High Score') !== '0' ? findStat('High Score') : findStat('HS'); // fallback just in case
-        
-        careerMap[p.name].batting.matches += matches;
-        careerMap[p.name].batting.runs += runs;
-        careerMap[p.name].batting.hs = compareHighScores(careerMap[p.name].batting.hs, hs);
-      });
-    } else if (key.endsWith('-bowl')) {
-      players.forEach(p => {
-        if (!careerMap[p.name]) {
-          careerMap[p.name] = {
-            name: p.name,
-            jersey: p.jersey || '#—',
-            cap: p.cap || p.name.substring(0,4).toUpperCase(),
-            batting: { runs: 0, hs: '0', matches: 0 },
-            bowling: { wickets: 0, bestFig: '-', matches: 0 }
-          };
+
+        if (key.endsWith('-bat')) {
+            const matches = parseInt(findStat('Matches')) || 0;
+            const runs = parseInt(findStat('Runs')) || 0;
+            const hs = findStat('High Score') !== '0' ? findStat('High Score') : findStat('HS');
+            
+            careerMap[canonicalName].batting.matches += matches;
+            careerMap[canonicalName].batting.runs += runs;
+            careerMap[canonicalName].batting.hs = compareHighScores(careerMap[canonicalName].batting.hs, hs);
+        } else {
+            const matches = parseInt(findStat('Matches')) || 0;
+            const wickets = parseInt(findStat('Wickets')) || 0;
+            let bestFig = findStat('Best Fig');
+            if (bestFig === '0') bestFig = '-';
+            
+            careerMap[canonicalName].bowling.matches += matches;
+            careerMap[canonicalName].bowling.wickets += wickets;
+            careerMap[canonicalName].bowling.bestFig = compareBowlingFigs(careerMap[canonicalName].bowling.bestFig, bestFig);
         }
-        if (!p.stats) return;
-        const findStat = (lbl) => {
-            const s = p.stats.find(x => x.l === lbl);
-            return s ? s.n : '0';
-        };
-        
-        const matches = parseInt(findStat('Matches')) || 0;
-        const wickets = parseInt(findStat('Wickets')) || 0;
-        let bestFig = findStat('Best Fig');
-        if (bestFig === '0') bestFig = '-';
-        
-        careerMap[p.name].bowling.matches += matches;
-        careerMap[p.name].bowling.wickets += wickets;
-        careerMap[p.name].bowling.bestFig = compareBowlingFigs(careerMap[p.name].bowling.bestFig, bestFig);
       });
     }
   }
@@ -97,6 +123,7 @@ function sortCareerMap(map) {
   return list;
 }
 
+const roster = JSON.parse(fs.readFileSync(ROSTER_PATH, 'utf8'));
 const players2025 = JSON.parse(fs.readFileSync(IN_PLAYERS_2025, 'utf8'));
 const players2026 = JSON.parse(fs.readFileSync(IN_PLAYERS_2026, 'utf8'));
 
@@ -104,11 +131,11 @@ const allMap = {};
 const map2026 = {};
 const map2025 = {};
 
-processStatsMap(players2025, allMap);
-processStatsMap(players2026, allMap);
+processStatsMap(players2025, allMap, roster);
+processStatsMap(players2026, allMap, roster);
 
-processStatsMap(players2025, map2025);
-processStatsMap(players2026, map2026);
+processStatsMap(players2025, map2025, roster);
+processStatsMap(players2026, map2026, roster);
 
 const finalObj = {
   all: sortCareerMap(allMap),

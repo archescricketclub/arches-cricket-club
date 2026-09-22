@@ -2,8 +2,8 @@
   "2025": [
     {
       "name": "Dushyanth Reddy B",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#23",
+      "cap": "DB23",
       "batting": {
         "runs": 258,
         "hs": "73",
@@ -17,8 +17,8 @@
     },
     {
       "name": "Srini Nadakuditi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#3",
+      "cap": "SRI3",
       "batting": {
         "runs": 223,
         "hs": "54",
@@ -32,8 +32,8 @@
     },
     {
       "name": "Rohit Singh",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#98",
+      "cap": "RS98",
       "batting": {
         "runs": 211,
         "hs": "114",
@@ -47,8 +47,8 @@
     },
     {
       "name": "Ali Rizwan",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#16",
+      "cap": "AR69",
       "batting": {
         "runs": 170,
         "hs": "36",
@@ -62,8 +62,8 @@
     },
     {
       "name": "Anil Narra",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#30",
+      "cap": "AN30",
       "batting": {
         "runs": 132,
         "hs": "33",
@@ -77,8 +77,8 @@
     },
     {
       "name": "Asad Murtuza",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#22",
+      "cap": "AM04",
       "batting": {
         "runs": 122,
         "hs": "68",
@@ -92,8 +92,8 @@
     },
     {
       "name": "Veerendra Babu Nagari",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#44",
+      "cap": "VB44",
       "batting": {
         "runs": 90,
         "hs": "37",
@@ -107,8 +107,8 @@
     },
     {
       "name": "Kishan Karneedi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#11",
+      "cap": "KK11",
       "batting": {
         "runs": 88,
         "hs": "27*",
@@ -122,8 +122,8 @@
     },
     {
       "name": "Chandra Obula Reddy B",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#45",
+      "cap": "CH45",
       "batting": {
         "runs": 83,
         "hs": "29",
@@ -137,8 +137,8 @@
     },
     {
       "name": "Veera SR Nimmakayala",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#88",
+      "cap": "VN88",
       "batting": {
         "runs": 60,
         "hs": "37",
@@ -152,8 +152,8 @@
     },
     {
       "name": "Deepak Sai",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#50",
+      "cap": "AD39",
       "batting": {
         "runs": 58,
         "hs": "46",
@@ -167,8 +167,8 @@
     },
     {
       "name": "Tulasi Gangadhar Thatavarthi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#7",
+      "cap": "TT07",
       "batting": {
         "runs": 57,
         "hs": "37",
@@ -182,8 +182,8 @@
     },
     {
       "name": "Surya Pavan Teja Tummala",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#14",
+      "cap": "PA14",
       "batting": {
         "runs": 47,
         "hs": "27",
@@ -197,8 +197,8 @@
     },
     {
       "name": "Charan Reddy Datla",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#99",
+      "cap": "CR99",
       "batting": {
         "runs": 32,
         "hs": "12",
@@ -241,9 +241,9 @@
       }
     },
     {
-      "name": "Sri Tummala",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Vinay Tummala",
+      "jersey": "#10",
+      "cap": "VT10",
       "batting": {
         "runs": 17,
         "hs": "7",
@@ -257,8 +257,8 @@
     },
     {
       "name": "Sarmad Butt",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#56",
+      "cap": "SB56",
       "batting": {
         "runs": 17,
         "hs": "16",
@@ -272,8 +272,8 @@
     },
     {
       "name": "Harsha Sai",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#8",
+      "cap": "VK18",
       "batting": {
         "runs": 15,
         "hs": "14",
@@ -287,8 +287,8 @@
     },
     {
       "name": "Kiran Maheswaram",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#75",
+      "cap": "KM75",
       "batting": {
         "runs": 13,
         "hs": "6",
@@ -302,8 +302,8 @@
     },
     {
       "name": "Arush Nimmagadda",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#72",
+      "cap": "AN72",
       "batting": {
         "runs": 11,
         "hs": "11",
@@ -317,8 +317,8 @@
     },
     {
       "name": "Venkateswarrao Jyothi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#9",
+      "cap": "VJ09",
       "batting": {
         "runs": 6,
         "hs": "6*",
@@ -331,9 +331,9 @@
       }
     },
     {
-      "name": "Hanu Kolagani",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Hanu K",
+      "jersey": "#4",
+      "cap": "HK04",
       "batting": {
         "runs": 4,
         "hs": "4",
@@ -346,9 +346,9 @@
       }
     },
     {
-      "name": "Raja Yadavalli",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Raja Mouli Yadavalli",
+      "jersey": "#18",
+      "cap": "RY18",
       "batting": {
         "runs": 4,
         "hs": "2",
@@ -376,9 +376,9 @@
       }
     },
     {
-      "name": "Yellanur Madhu Soodhan",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Madhu Yellanur",
+      "jersey": "#5",
+      "cap": "MY05",
       "batting": {
         "runs": 1,
         "hs": "1",
@@ -876,8 +876,8 @@
   "all": [
     {
       "name": "Ali Rizwan",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#16",
+      "cap": "AR69",
       "batting": {
         "runs": 1167,
         "hs": "127*",
@@ -891,8 +891,8 @@
     },
     {
       "name": "Asad Murtuza",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#22",
+      "cap": "AM04",
       "batting": {
         "runs": 602,
         "hs": "68",
@@ -921,8 +921,8 @@
     },
     {
       "name": "Kishan Karneedi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#11",
+      "cap": "KK11",
       "batting": {
         "runs": 570,
         "hs": "66",
@@ -951,8 +951,8 @@
     },
     {
       "name": "Anil Narra",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#30",
+      "cap": "AN30",
       "batting": {
         "runs": 494,
         "hs": "58",
@@ -966,8 +966,8 @@
     },
     {
       "name": "Srini Nadakuditi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#3",
+      "cap": "SRI3",
       "batting": {
         "runs": 467,
         "hs": "54",
@@ -981,8 +981,8 @@
     },
     {
       "name": "Dushyanth Reddy B",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#23",
+      "cap": "DB23",
       "batting": {
         "runs": 414,
         "hs": "73",
@@ -1011,8 +1011,8 @@
     },
     {
       "name": "Chandra Obula Reddy B",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#45",
+      "cap": "CH45",
       "batting": {
         "runs": 308,
         "hs": "34*",
@@ -1026,8 +1026,8 @@
     },
     {
       "name": "Veerendra Babu Nagari",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#44",
+      "cap": "VB44",
       "batting": {
         "runs": 267,
         "hs": "48",
@@ -1056,8 +1056,8 @@
     },
     {
       "name": "Rohit Singh",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#98",
+      "cap": "RS98",
       "batting": {
         "runs": 217,
         "hs": "114",
@@ -1071,8 +1071,8 @@
     },
     {
       "name": "Arush Nimmagadda",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#72",
+      "cap": "AN72",
       "batting": {
         "runs": 194,
         "hs": "65",
@@ -1086,8 +1086,8 @@
     },
     {
       "name": "Kiran Maheswaram",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#75",
+      "cap": "KM75",
       "batting": {
         "runs": 135,
         "hs": "28*",
@@ -1101,8 +1101,8 @@
     },
     {
       "name": "Surya Pavan Teja Tummala",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#14",
+      "cap": "PA14",
       "batting": {
         "runs": 124,
         "hs": "27*",
@@ -1116,8 +1116,8 @@
     },
     {
       "name": "Harsha Sai",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#8",
+      "cap": "VK18",
       "batting": {
         "runs": 118,
         "hs": "27",
@@ -1131,8 +1131,8 @@
     },
     {
       "name": "Tulasi Gangadhar Thatavarthi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#7",
+      "cap": "TT07",
       "batting": {
         "runs": 111,
         "hs": "37",
@@ -1146,8 +1146,8 @@
     },
     {
       "name": "Veera SR Nimmakayala",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#88",
+      "cap": "VN88",
       "batting": {
         "runs": 105,
         "hs": "45*",
@@ -1161,8 +1161,8 @@
     },
     {
       "name": "Deepak Sai",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#50",
+      "cap": "AD39",
       "batting": {
         "runs": 78,
         "hs": "46",
@@ -1176,8 +1176,8 @@
     },
     {
       "name": "Venkateswarrao Jyothi",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#9",
+      "cap": "VJ09",
       "batting": {
         "runs": 73,
         "hs": "23",
@@ -1206,8 +1206,8 @@
     },
     {
       "name": "Charan Reddy Datla",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#99",
+      "cap": "CR99",
       "batting": {
         "runs": 53,
         "hs": "14",
@@ -1236,8 +1236,8 @@
     },
     {
       "name": "Sarmad Butt",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "jersey": "#56",
+      "cap": "SB56",
       "batting": {
         "runs": 36,
         "hs": "16",
@@ -1265,6 +1265,21 @@
       }
     },
     {
+      "name": "Vinay Tummala",
+      "jersey": "#10",
+      "cap": "VT10",
+      "batting": {
+        "runs": 24,
+        "hs": "7",
+        "matches": 7
+      },
+      "bowling": {
+        "wickets": 3,
+        "bestFig": "2-46",
+        "matches": 5
+      }
+    },
+    {
       "name": "Haneef Shaik",
       "jersey": "#77",
       "cap": "HS77",
@@ -1277,21 +1292,6 @@
         "wickets": 36,
         "bestFig": "4-47",
         "matches": 24
-      }
-    },
-    {
-      "name": "Sri Tummala",
-      "jersey": "#TBD",
-      "cap": "TBD",
-      "batting": {
-        "runs": 17,
-        "hs": "7",
-        "matches": 5
-      },
-      "bowling": {
-        "wickets": 3,
-        "bestFig": "2-46",
-        "matches": 5
       }
     },
     {
@@ -1325,24 +1325,9 @@
       }
     },
     {
-      "name": "Vinay Tummala",
-      "jersey": "#10",
-      "cap": "VT10",
-      "batting": {
-        "runs": 7,
-        "hs": "5",
-        "matches": 2
-      },
-      "bowling": {
-        "wickets": 0,
-        "bestFig": "-",
-        "matches": 0
-      }
-    },
-    {
-      "name": "Hanu Kolagani",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Hanu K",
+      "jersey": "#4",
+      "cap": "HK04",
       "batting": {
         "runs": 4,
         "hs": "4",
@@ -1355,18 +1340,18 @@
       }
     },
     {
-      "name": "Raja Yadavalli",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Raja Mouli Yadavalli",
+      "jersey": "#18",
+      "cap": "RY18",
       "batting": {
         "runs": 4,
         "hs": "2",
         "matches": 3
       },
       "bowling": {
-        "wickets": 3,
+        "wickets": 5,
         "bestFig": "2-13",
-        "matches": 3
+        "matches": 5
       }
     },
     {
@@ -1385,9 +1370,9 @@
       }
     },
     {
-      "name": "Yellanur Madhu Soodhan",
-      "jersey": "#TBD",
-      "cap": "TBD",
+      "name": "Madhu Yellanur",
+      "jersey": "#5",
+      "cap": "MY05",
       "batting": {
         "runs": 1,
         "hs": "1",
@@ -1412,21 +1397,6 @@
         "wickets": 1,
         "bestFig": "1-13",
         "matches": 3
-      }
-    },
-    {
-      "name": "Raja Mouli Yadavalli",
-      "jersey": "#18",
-      "cap": "RY18",
-      "batting": {
-        "runs": 0,
-        "hs": "0",
-        "matches": 0
-      },
-      "bowling": {
-        "wickets": 2,
-        "bestFig": "2-28",
-        "matches": 2
       }
     }
   ]
