@@ -49,9 +49,14 @@ function processStatsMap(playersObj, careerMap) {
           };
         }
         if (!p.stats) return;
-        const matches = parseInt(p.stats[0].n) || 0;
-        const runs = parseInt(p.stats[1].n) || 0;
-        const hs = p.stats[2].n;
+        const findStat = (lbl) => {
+            const s = p.stats.find(x => x.l === lbl);
+            return s ? s.n : '0';
+        };
+        const matches = parseInt(findStat('Matches')) || 0;
+        const runs = parseInt(findStat('Runs')) || 0;
+        const hs = findStat('High Score') !== '0' ? findStat('High Score') : findStat('HS'); // fallback just in case
+        
         careerMap[p.name].batting.matches += matches;
         careerMap[p.name].batting.runs += runs;
         careerMap[p.name].batting.hs = compareHighScores(careerMap[p.name].batting.hs, hs);
@@ -68,10 +73,15 @@ function processStatsMap(playersObj, careerMap) {
           };
         }
         if (!p.stats) return;
-        const matches = parseInt(p.stats[0].n) || 0;
-        // In players.json, bowling stats are: 0:Matches, 1:Overs, 2:Wickets, 3:Best Fig
-        const wickets = parseInt(p.stats[2].n) || 0;
-        const bestFig = p.stats[3].n || '-';
+        const findStat = (lbl) => {
+            const s = p.stats.find(x => x.l === lbl);
+            return s ? s.n : '0';
+        };
+        
+        const matches = parseInt(findStat('Matches')) || 0;
+        const wickets = parseInt(findStat('Wickets')) || 0;
+        let bestFig = findStat('Best Fig');
+        if (bestFig === '0') bestFig = '-';
         
         careerMap[p.name].bowling.matches += matches;
         careerMap[p.name].bowling.wickets += wickets;
