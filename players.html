@@ -567,15 +567,30 @@
             #panel-career > div:first-child {
                 flex-direction: column;
                 align-items: stretch !important;
+                margin-bottom: 1.15rem !important;
+                gap: 0.65rem !important;
+            }
+
+            #panel-career #careerStatsDesc {
+                display: none;
             }
 
             #panel-career > div:first-child > div:last-child {
-                flex-direction: column;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem;
                 width: 100%;
             }
 
-            #panel-career .sort-filter,
+            #panel-career .sort-filter {
+                width: 100% !important;
+                max-width: 100% !important;
+                font-size: 0.75rem !important;
+                padding: 0.45rem 1.6rem 0.45rem 0.75rem !important;
+            }
+
             #panel-career .search-box {
+                grid-column: span 2;
                 width: 100% !important;
                 max-width: 100% !important;
             }
@@ -698,7 +713,7 @@
                         </select>
                         <div class="search-box">
                             <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                            <input type="text" id="careerSearchInput" placeholder="Search player name..." aria-label="Search by player name" oninput="filterCareerStats()">
+                            <input type="text" id="careerSearchInput" class="search-input" placeholder="Search player name..." aria-label="Search by player name" oninput="filterCareerStats()">
                         </div>
                     </div>
                 </div>
