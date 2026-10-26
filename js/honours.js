@@ -116,12 +116,13 @@ function filterData() {
   `;
 
   tableHTML += filtered.map((item, index) => {
+    const opp = (item.opponent || 'Opposition TBD').replace(/^vs\.?\s+/i, '');
     return `
       <tr>
         <td class="table-sno" data-label="S.No">${index + 1}</td>
         <td class="table-player" data-label="Player Name">${escapeHTML(item.name)}</td>
         ${!isHatTrick ? `<td class="table-record" data-label="${escapeHTML(recordHeader)}">${escapeHTML(item.record)}</td>` : ''}
-        <td class="table-opp" data-label="Opposition">vs ${escapeHTML(item.opponent || 'Opposition TBD')}</td>
+        <td class="table-opp" data-label="Opposition">vs ${escapeHTML(opp)}</td>
         <td class="table-date" data-label="Date">${escapeHTML(item.date || 'Date TBD')}</td>
         <td class="table-league" data-label="League">${escapeHTML(item.league || 'League TBD')}</td>
       </tr>

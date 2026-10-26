@@ -390,7 +390,7 @@
 
     <section class="page-hero">
         <div class="container page-hero-content">
-            <div class="hero-eyebrow" style="display:inline-flex;margin-bottom:1rem;"><i class="fa-solid fa-circle"
+            <div class="hero-eyebrow" id="heroSeasonBadge" style="display:inline-flex;margin-bottom:1rem;"><i class="fa-solid fa-circle"
                     style="font-size:.4rem;"></i> 2026 Season</div>
             <h1 class="page-hero-title">Our Squad</h1>
         </div>
@@ -398,13 +398,28 @@
 
     <section class="section page-top-padding">
         <div class="container">
+            <!-- SEASON SELECTOR -->
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label for="playerSeasonSelect" style="color: var(--amber); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px; font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-calendar" style="margin-right: 6px;"></i> Season:</label>
+                <select id="playerSeasonSelect" class="form-select" style="width: auto; padding: 0.45rem 2.2rem 0.45rem 1rem; background: var(--panel); border: 1px solid var(--border-accent); border-radius: 30px; color: var(--text); font-weight: 600; font-size: 0.85rem; cursor: pointer;" onchange="switchPlayerSeason(this.value)">
+                  <option value="2026" selected>2026 Season</option>
+                  <option value="2025">2025 Season</option>
+                  <option value="all">All Seasons (Career)</option>
+                </select>
+              </div>
+              <div id="playerSeasonBadge" style="display: flex; align-items: center; gap: 6px; padding: 0.4rem 1rem; background: rgba(245, 158, 11, 0.12); border: 1px solid var(--border-accent); border-radius: 20px; font-size: 0.78rem; color: var(--amber); font-weight: 600;">
+                <i class="fa-solid fa-bolt"></i> <span id="playerSeasonBadgeText">Viewing 2026 Season</span>
+              </div>
+            </div>
+
             <div class="team-tabs" id="teamTabs">
-                <button class="team-tab active" onclick="switchTeam('all',this)">All Players</button>
-                <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
-                <button class="team-tab" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
+                <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
                 <button class="team-tab" onclick="switchTeam('t2',this)">Team 2 · Junior League</button>
                 <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
                 <button class="team-tab" onclick="switchTeam('cup',this)">Cup Matches</button>
+                <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
+                <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
             </div>
 
             <select class="mobile-tab-select" onchange="switchTeam(this.value, null)">
@@ -569,7 +584,7 @@
             <div class="team-panel" id="panel-career">
                 <div style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
                     <div>
-                        <p style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
+                        <p id="careerStatsDesc" style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
                     </div>
                     <div style="display:flex; gap:1rem; align-items:center;">
                         <select id="careerSeasonFilter" class="sort-filter" onchange="filterCareerStats()">
