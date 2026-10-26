@@ -660,14 +660,14 @@
                 </div>
                 <div class="season-select-wrapper">
                   <select id="playerSeasonSelect" class="season-dropdown" onchange="switchPlayerSeason(this.value)">
-                    <option value="2026" selected>2026 Season</option>
+                    <option value="all" selected>All Seasons</option>
+                    <option value="2026">2026 Season</option>
                     <option value="2025">2025 Season</option>
-                    <option value="all">All Seasons (Career)</option>
                   </select>
                 </div>
               </div>
               <div id="playerSeasonBadge" class="season-pill-badge">
-                <i class="fa-solid fa-bolt"></i> <span id="playerSeasonBadgeText">Viewing 2026 Season</span>
+                <i class="fa-solid fa-bolt"></i> <span id="playerSeasonBadgeText">Viewing All Seasons</span>
               </div>
             </div>
 
@@ -697,7 +697,7 @@
                     </div>
                     <div style="display:flex; gap:1rem; align-items:center;">
                         <select id="careerSeasonFilter" class="sort-filter" onchange="filterCareerStats()">
-                            <option value="all">All-Time (Merged)</option>
+                            <option value="all" selected>All Seasons</option>
                             <option value="2026">2026 Season Only</option>
                             <option value="2025">2025 Season Only</option>
                         </select>

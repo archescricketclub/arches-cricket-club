@@ -6,7 +6,7 @@ let PLAYERS_2025 = {};
 let PLAYERS_ALL = {};
 let ALL_PLAYERS = [];
 let CAREER_STATS = { 2025: [], 2026: [], all: [] };
-let currentSeason = '2026';
+let currentSeason = 'all';
 let CURRENT_SORTS = {};
 
 /* ─── STATS CALCULATION HELPERS ──────────────────────────────────── */
@@ -239,7 +239,7 @@ async function initData() {
 
         const urlParams = new URLSearchParams(window.location.search);
         const seasonParam = urlParams.get('season');
-        const initialSeason = (seasonParam === '2025' || seasonParam === 'all' || seasonParam === '2026') ? seasonParam : '2026';
+        const initialSeason = (seasonParam === '2025' || seasonParam === 'all' || seasonParam === '2026') ? seasonParam : 'all';
 
         switchPlayerSeason(initialSeason);
         renderRoster();
@@ -270,7 +270,7 @@ function switchPlayerSeason(season) {
         DATA = PLAYERS_2026;
     }
 
-    const label = season === '2025' ? '2025 Season' : (season === 'all' ? 'All Seasons (Career)' : '2026 Season');
+    const label = season === '2025' ? '2025 Season' : (season === 'all' ? 'All Seasons' : '2026 Season');
 
     // Update Hero eyebrow
     const heroBadge = document.getElementById('heroSeasonBadge');
