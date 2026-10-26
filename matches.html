@@ -105,26 +105,26 @@
     <div class="container">
       
       <!-- Stats Summary (hidden by default, shown in Results mode) -->
-      <div id="stats-summary" class="season-summary-grid" style="display:none;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:3rem;">
-        <div class="glass-card reveal" style="padding:1.5rem;text-align:center;">
-          <div id="stat-total-matches" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">0</div>
-          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Matches</div>
+      <div id="stats-summary" class="season-summary-bar" style="display:none;">
+        <div class="stat-card-item reveal">
+          <div id="stat-total-matches" class="stat-num">0</div>
+          <div class="stat-lbl">Matches</div>
         </div>
-        <div class="glass-card reveal reveal-delay-1" style="padding:1.5rem;text-align:center;">
-          <div id="stat-total-wins" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--amber);">0</div>
-          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Wins</div>
+        <div class="stat-card-item reveal reveal-delay-1">
+          <div id="stat-total-wins" class="stat-num stat-win">0</div>
+          <div class="stat-lbl">Wins</div>
         </div>
-        <div class="glass-card reveal reveal-delay-2" style="padding:1.5rem;text-align:center;">
-          <div id="stat-total-losses" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:#f87171;">0</div>
-          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Losses</div>
+        <div class="stat-card-item reveal reveal-delay-2">
+          <div id="stat-total-losses" class="stat-num stat-loss">0</div>
+          <div class="stat-lbl">Losses</div>
         </div>
-        <div class="glass-card reveal reveal-delay-3" style="padding:1.5rem;text-align:center;">
-          <div id="stat-total-nr" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);">0</div>
-          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">No Result</div>
+        <div class="stat-card-item reveal reveal-delay-3">
+          <div id="stat-total-nr" class="stat-num stat-nr">0</div>
+          <div class="stat-lbl">No Result</div>
         </div>
-        <div class="glass-card reveal reveal-delay-4" style="padding:1.5rem;text-align:center;">
-          <div id="stat-total-winrate" style="font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--text);">0%</div>
-          <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;">Win Rate</div>
+        <div class="stat-card-item reveal reveal-delay-4">
+          <div id="stat-total-winrate" class="stat-num">0%</div>
+          <div class="stat-lbl">Win Rate</div>
         </div>
       </div>
 

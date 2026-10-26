@@ -25,6 +25,13 @@ if (!fs.existsSync(archiveDir)) {
   fs.mkdirSync(archiveDir, { recursive: true });
 }
 
+const { isSeasonLocked } = require('./season_guard');
+
+if (isSeasonLocked(seasonYear)) {
+  console.log(`\x1b[33m[LOCKED] Season ${seasonYear} is permanently locked in data/seasons_lock.json. No modifications permitted.\x1b[0m`);
+  process.exit(0);
+}
+
 console.log(`Starting season archiving process for Season ${seasonYear}...`);
 
 // 1. Archive Matches

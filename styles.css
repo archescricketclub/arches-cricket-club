@@ -2729,3 +2729,265 @@ button {
 .matches-league-tab:hover:not(.active) {
   border-bottom: 3px solid rgba(245, 158, 11, 0.4);
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   MATCH CARD LIST VIEW (Desktop & Mobile - No Horizontal Scroll)
+   ══════════════════════════════════════════════════════════════════ */
+.match-league-group {
+  margin-bottom: 2.5rem;
+}
+
+.match-league-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 1.75rem 0 1rem;
+}
+
+.match-cards-container {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.match-card-item {
+  padding: 1.15rem 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.match-card-item:last-child {
+  border-bottom: none;
+}
+
+.match-card-item:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.mci-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.mci-date {
+  color: #94A3B8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.mci-venue {
+  color: var(--muted);
+  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-align: right;
+}
+
+.mci-venue i {
+  color: var(--amber);
+  font-size: 0.75rem;
+}
+
+.mci-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.mci-teams {
+  flex: 1;
+  min-width: 0;
+}
+
+.mci-team-home {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.mci-team-away {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 3px;
+  line-height: 1.25;
+}
+
+.mci-team-arches {
+  color: var(--amber) !important;
+  font-weight: 700;
+}
+
+.mci-status-col {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.mci-outcome {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.mci-outcome-win {
+  color: #22c55e;
+}
+
+.mci-outcome-loss {
+  color: #f87171;
+}
+
+.mci-outcome-tied {
+  color: var(--amber);
+}
+
+.mci-outcome-nr {
+  color: #94A3B8;
+}
+
+.mci-outcome-fixture {
+  color: #38bdf8;
+}
+
+.mci-scorecard-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-top: 5px;
+  transition: color 0.2s;
+}
+
+.mci-scorecard-link:hover {
+  color: var(--amber);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   STATS SUMMARY BAR (Responsive: 1-line on mobile, cards on desktop)
+   ══════════════════════════════════════════════════════════════════ */
+.season-summary-bar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card-item {
+  flex: 1;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.stat-card-item:hover {
+  border-color: var(--border-accent);
+}
+
+.stat-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.stat-win {
+  color: var(--amber) !important;
+}
+
+.stat-loss {
+  color: #f87171 !important;
+}
+
+.stat-nr {
+  color: var(--gold) !important;
+}
+
+.stat-lbl {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+}
+
+/* MOBILE: Sleek Single-Line Stats Ribbon */
+@media (max-width: 768px) {
+  .season-summary-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    background: var(--panel) !important;
+    border: 1px solid var(--border-accent) !important;
+    border-radius: 12px !important;
+    padding: 0.5rem 0.2rem !important;
+    margin-bottom: 1.5rem !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .stat-card-item {
+    flex: 1 1 0 !important;
+    min-width: 55px !important;
+    background: transparent !important;
+    border: none !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 0 !important;
+    padding: 0.35rem 0.15rem !important;
+    box-shadow: none !important;
+    text-align: center !important;
+  }
+  .stat-card-item:last-child {
+    border-right: none !important;
+  }
+  .stat-num {
+    font-size: 1.2rem !important;
+    line-height: 1.1 !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 800 !important;
+  }
+  .stat-lbl {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 3px !important;
+    color: var(--muted) !important;
+    white-space: nowrap !important;
+  }
+
+  .match-card-item {
+    padding: 0.95rem 1rem;
+  }
+  .mci-date {
+    font-size: 0.74rem;
+  }
+  .mci-venue {
+    font-size: 0.75rem;
+  }
+  .mci-team-home {
+    font-size: 0.96rem;
+  }
+  .mci-team-away {
+    font-size: 0.84rem;
+  }
+  .mci-outcome {
+    font-size: 0.88rem;
+  }
+}

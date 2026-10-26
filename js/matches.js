@@ -87,7 +87,7 @@ function toggleMatchesMode(mode, btn) {
   const stats = document.getElementById('stats-summary');
   const venue = document.getElementById('venue-info');
   if (mode === 'results') {
-    if (stats) stats.style.display = 'grid';
+    if (stats) stats.style.display = 'flex';
     if (venue) venue.style.display = 'none';
     updateStatsSummary();
   } else {
@@ -195,6 +195,20 @@ function calculateStats(results) {
   if (elWinRate) elWinRate.textContent = `${winRate}%`;
 }
 
+function formatCardDate(dateStr) {
+  if (!dateStr) return 'DATE TBD';
+  const clean = cleanText(dateStr).trim();
+  const d = parseMatchDate(clean);
+  if (d && !isNaN(d.getTime())) {
+    const day = d.getDate();
+    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const month = months[d.getMonth()];
+    const year = d.getFullYear();
+    return `${day} ${month} ${year}`;
+  }
+  return clean.toUpperCase();
+}
+
 function renderMatches() {
   const container = document.getElementById('matches-content');
   if (!container) return;
@@ -237,20 +251,9 @@ function renderMatches() {
     if (leagueName.includes('Midweek') || leagueName.includes('T20')) colorClass = '#3b82f6';
     
     html += `
-      <div class="reveal visible" style="margin-bottom: 2rem;">
-        <h2 style="font-size:1.5rem;color:${colorClass};margin:2rem 0 1.25rem;">${escapeHTML(leagueName)}</h2>
-        <div class="table-section">
-          <table class="data-table data-table--responsive">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Match</th>
-                ${currentMode === 'fixtures' ? '<th>Time</th>' : ''}
-                <th>Ground</th>
-                ${currentMode === 'results' ? '<th>Result</th>' : ''}
-              </tr>
-            </thead>
-            <tbody>
+      <div class="match-league-group reveal visible">
+        <h2 class="match-league-title" style="color:${colorClass};">${escapeHTML(leagueName)}</h2>
+        <div class="match-cards-container">
     `;
     
     matches.forEach(match => {
@@ -258,74 +261,118 @@ function renderMatches() {
       const awayLower = (match.awayTeam || '').toLowerCase();
       const resLower = (match.result || '').toLowerCase();
       const involvesArches = homeLower.includes('arches') || awayLower.includes('arches') || resLower.includes('arches');
+      const isHomeArches = homeLower.includes('arches');
+      const isAwayArches = awayLower.includes('arches');
       
       const safeHome = escapeHTML(match.homeTeam || 'TBA');
       const safeAway = escapeHTML(match.awayTeam || 'TBA');
-      const safeDate = escapeHTML(cleanText(match.date));
+      const displayDate = escapeHTML(formatCardDate(match.date));
       const safeVenue = escapeHTML(cleanText(match.venue)) || 'TBD';
-      
-      const homeDisplay = involvesArches && homeLower.includes('arches') ? `<strong class="text-amber">${safeHome}</strong>` : safeHome;
-      const awayDisplay = involvesArches && awayLower.includes('arches') ? `<strong class="text-amber">${safeAway}</strong>` : safeAway;
 
-      let resultCol = '';
-      let timeCol = '';
+      let outcomeText = '';
+      let outcomeClass = 'mci-outcome-nr';
 
       if (currentMode === 'results') {
-        let resultSpan = '';
-        const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)', 'match tied', 'tied with'];
+        const res = (match.result || '').trim();
+        const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)'];
         let isNoResult = noResultKeywords.some(k => resLower.includes(k));
+        let isTied = resLower.includes('tied');
         let isWin = false;
         let isLoss = false;
 
-        if (!isNoResult && involvesArches) {
-          if (resLower.includes('beat')) {
-            const winnerPart = resLower.split('beat')[0];
-            if (winnerPart.includes('arches')) isWin = true;
+        if (isTied) {
+          outcomeText = 'TIED · Match Tied';
+          outcomeClass = 'mci-outcome-tied';
+        } else if (isNoResult) {
+          const detail = resLower.includes('abandoned') ? 'Abandoned' : (resLower.includes('postponed') ? 'Postponed' : 'No Result');
+          outcomeText = `NO RESULT · ${detail}`;
+          outcomeClass = 'mci-outcome-nr';
+        } else if (involvesArches) {
+          const winner = (match.winner || '').toLowerCase();
+          if (winner.includes('arches')) {
+            isWin = true;
+          } else if (winner.includes('opponent')) {
+            isLoss = true;
+          } else if (resLower.includes('beat')) {
+            const parts = resLower.split('beat');
+            if (parts[0].includes('arches')) isWin = true;
             else isLoss = true;
           } else if (resLower.includes('won by') || resLower.includes('won')) {
-            const winnerPart = resLower.split('won')[0];
-            if (winnerPart.includes('arches')) isWin = true;
+            const parts = resLower.split(/won by|won/i);
+            if (parts[0].includes('arches')) isWin = true;
             else isLoss = true;
           } else if (resLower.includes('walkover')) {
-             if (resLower.includes('arches') && (resLower.includes('to arches') || resLower.includes('won by'))) isWin = true;
-             else isLoss = true;
+            if (resLower.includes('arches') && (resLower.includes('to arches') || resLower.includes('won by'))) isWin = true;
+            else isLoss = true;
           } else if (resLower.includes('lost') || resLower.includes('defeat')) {
             isLoss = true;
-          } else {
-            isNoResult = true;
           }
-        }
 
-        const safeResult = escapeHTML(match.result || 'N/R');
-        if (involvesArches && isWin) {
-          resultSpan = `<span class="result-win">WIN</span><br><small>${safeResult}</small>`;
-        } else if (involvesArches && isLoss) {
-          resultSpan = `<span class="result-loss">LOSS</span><br><small>${safeResult}</small>`;
+          let detail = '';
+          const byMatch = res.match(/\b(by\s+[^,\.\(]+)/i);
+          if (byMatch) {
+            detail = byMatch[1].trim();
+            detail = detail.charAt(0).toUpperCase() + detail.slice(1);
+          } else if (resLower.includes('walkover')) {
+            detail = 'By walkover';
+          } else if (resLower.includes('awarded')) {
+            detail = 'Awarded';
+          } else {
+            detail = res;
+          }
+
+          if (isWin) {
+            outcomeText = `WIN · ${detail}`;
+            outcomeClass = 'mci-outcome-win';
+          } else if (isLoss) {
+            outcomeText = `LOSS · ${detail}`;
+            outcomeClass = 'mci-outcome-loss';
+          } else {
+            outcomeText = res || 'Completed';
+            outcomeClass = 'mci-outcome-nr';
+          }
         } else {
-          resultSpan = `<span class="result-nr">${safeResult}</span>`;
+          outcomeText = res || 'Completed';
+          outcomeClass = 'mci-outcome-nr';
         }
-        resultCol = `<td data-label="Result">${resultSpan}</td>`;
       } else {
-        const safeTime = escapeHTML(cleanText(match.time)) || 'TBD';
-        timeCol = `<td data-label="Time">${safeTime}</td>`;
+        const time = match.time ? cleanText(match.time) : '12:00 PM';
+        outcomeText = `UPCOMING · ${time}`;
+        outcomeClass = 'mci-outcome-fixture';
       }
 
-      const rowClass = involvesArches ? 'match-row-arches' : 'match-row-other';
+      let scorecardHtml = '';
+      if (match.scorecard_url && match.scorecard_url.startsWith('http')) {
+        scorecardHtml = `
+          <div>
+            <a href="${escapeHTML(match.scorecard_url)}" target="_blank" rel="noopener" class="mci-scorecard-link" onclick="event.stopPropagation()">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Scorecard
+            </a>
+          </div>
+        `;
+      }
 
       html += `
-        <tr class="${rowClass}">
-          <td data-label="Date">${safeDate}</td>
-          <td data-label="Match">${homeDisplay} vs ${awayDisplay}</td>
-          ${timeCol}
-          <td data-label="Ground">${safeVenue}</td>
-          ${resultCol}
-        </tr>
+        <div class="match-card-item">
+          <div class="mci-top">
+            <span class="mci-date">${displayDate}</span>
+            <span class="mci-venue"><i class="fa-solid fa-location-dot"></i> ${safeVenue}</span>
+          </div>
+          <div class="mci-main">
+            <div class="mci-teams">
+              <div class="mci-team-home ${isHomeArches ? 'mci-team-arches' : ''}">${safeHome}</div>
+              <div class="mci-team-away ${isAwayArches ? 'mci-team-arches' : ''}">vs ${safeAway}</div>
+            </div>
+            <div class="mci-status-col">
+              <div class="mci-outcome ${outcomeClass}">${escapeHTML(outcomeText)}</div>
+              ${scorecardHtml}
+            </div>
+          </div>
+        </div>
       `;
     });
     
     html += `
-            </tbody>
-          </table>
         </div>
       </div>
     `;
