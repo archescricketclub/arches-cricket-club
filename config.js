@@ -1,7 +1,12 @@
 // Arches Cricket Club Website Configuration
 const CONFIG = {
-  // Replace this with your Google Apps Script Web App URL after deploying the custom script.
+  // Google Apps Script Web App URL for email notifications & backups
   SCRIPT_URL: "https://script.google.com/macros/s/AKfycby6yPpAFHWMxLRI__oo2u5f1zZx1sXGgLQ-VvJ7mgfkBEOC-32_oD-mKOoW4GMXiBsy/exec",
+
+  // ─── CLOUD DATABASE CONFIG (SUPABASE POSTGRESQL) ───
+  // Free, secure cloud database preventing duplicate or missing data.
+  SUPABASE_URL: "https://lmmdvmjplbvovtzktdyx.supabase.co",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxtbWR2bWpwbGJ2b3Z0emt0ZHl4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMwMTQzNDIsImV4cCI6MjEwODU5MDM0Mn0.JQr1_L987leubcRhres4zwG5imwXIN9og52TsRhbDGQ",
 
   /**
    * Helper to submit payloads to Google Apps Script.
@@ -23,7 +28,6 @@ const CONFIG = {
       try {
         data = JSON.parse(text);
       } catch (e) {
-        // If Google Apps Script returns plain text "Success", convert to standard response format
         const cleanText = text.trim().toLowerCase();
         if (cleanText === 'success' || cleanText.indexOf('success') !== -1) {
           data = { result: 'success' };
@@ -35,3 +39,5 @@ const CONFIG = {
     });
   }
 };
+
+window.CONFIG = CONFIG;

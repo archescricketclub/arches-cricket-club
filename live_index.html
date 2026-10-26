@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Arches Cricket Club | Belfast's Premier Cricket Team</title>
     <meta name="description"
         content="Arches Cricket Club — Belfast's premier cricket club. Passion, Performance, Pride. Playing in the Northern Ireland Cricket League.">
@@ -85,7 +85,7 @@
                         <span>Passion</span> &nbsp;·&nbsp; <span>Performance</span> &nbsp;·&nbsp; <span>Pride</span>
                     </p>
                     <div class="hero-buttons">
-                        <a href="fixtures.html" class="btn btn-primary">
+                        <a href="matches.html" class="btn btn-primary">
                             <i class="fa-solid fa-calendar-days"></i> View Fixtures
                         </a>
                         <a href="join.html" class="btn btn-outline">
@@ -146,9 +146,9 @@
     <section class="section">
         <div class="container">
             <div class="section-header reveal">
-                <p class="section-label">⚡ Upcoming Fixtures</p>
-                <h2 class="section-title">Next On The Pitch</h2>
-                <p class="section-sub">Scheduled league, midweek, and cup matches</p>
+                <p class="section-label" id="upcoming-section-label">⚡ Upcoming Fixtures</p>
+                <h2 class="section-title" id="upcoming-section-title">Next On The Pitch</h2>
+                <p class="section-sub" id="upcoming-section-sub">Scheduled league, midweek, and cup matches</p>
             </div>
             
             <div style="margin-top: 2rem;">
@@ -168,7 +168,7 @@
             </div>
 
             <div style="text-align:center; margin-top:3rem;">
-                <a href="fixtures.html" class="btn btn-ghost">View All Fixtures <i
+                <a href="matches.html" class="btn btn-ghost">View All Fixtures <i
                         class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
@@ -317,7 +317,7 @@
                         <h3 class="news-title">2026 Season Fixtures Released — Exciting Matchups Ahead</h3>
                         <p class="news-excerpt">The Northern Ireland Cricket League has released the complete fixture
                             list for the 2026 season with some fantastic teams in the division.</p>
-                        <a href="fixtures.html" class="news-link">View Fixtures <span
+                        <a href="matches.html" class="news-link">View Fixtures <span
                                 class="news-link-arrow">→</span></a>
                     </div>
                 </div>
@@ -491,28 +491,28 @@
                 <div class="form-card reveal reveal-delay-2">
                     <div class="form-title">Register Your Interest</div>
                     <div class="form-subtitle">Get in touch and we'll reach out within 48 hours.</div>
-                    <form action="mailto:archescricketclub@gmail.com" method="post" enctype="text/plain">
+                    <form id="homeRegisterForm" onsubmit="handleHomeRegister(event)">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label">First Name</label>
-                                <input type="text" class="form-input" placeholder="John" required>
+                                <input type="text" id="homeFirstName" class="form-input" placeholder="John" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Last Name</label>
-                                <input type="text" class="form-input" placeholder="Smith" required>
+                                <input type="text" id="homeLastName" class="form-input" placeholder="Smith" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-input" placeholder="john@example.com" required>
+                            <input type="email" id="homeEmail" class="form-input" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Phone Number</label>
-                            <input type="tel" class="form-input" placeholder="+44 7xxx xxxxxx">
+                            <input type="tel" id="homePhone" class="form-input" placeholder="+44 7xxx xxxxxx">
                         </div>
                         <div class="form-group">
                             <label class="form-label">Playing Role</label>
-                            <select class="form-select">
+                            <select id="homeRole" class="form-select">
                                 <option value="">Select your role...</option>
                                 <option>Batsman</option>
                                 <option>Bowler</option>
@@ -523,7 +523,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Experience Level</label>
-                            <select class="form-select">
+                            <select id="homeExperience" class="form-select">
                                 <option value="">Select experience...</option>
                                 <option>Beginner</option>
                                 <option>Intermediate</option>
@@ -531,14 +531,19 @@
                                 <option>Professional</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary"
+                        <button type="submit" id="homeSubmitBtn" class="btn btn-primary"
                             style="width:100%;justify-content:center;margin-top:0.5rem;">
                             <i class="fa-solid fa-paper-plane"></i> Submit Registration
                         </button>
                     </form>
+                    <div id="homeRegisterSuccess" style="display:none;text-align:center;padding:2rem 1rem;">
+                        <div style="font-size:3rem;margin-bottom:0.75rem;">🏏</div>
+                        <h3 style="font-size:1.4rem;color:var(--text);margin-bottom:0.5rem;">Registration Received!</h3>
+                        <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;">Thank you for registering your interest with Arches Cricket Club. We will review your details and reach out within 48 hours.</p>
+                    </div>
                     <p style="text-align:center;font-size:0.75rem;color:var(--muted);margin-top:1rem;">
-                        Or email us directly: <a href="mailto:archescricketclub@gmail.com"
-                            style="color:var(--amber);">archescricketclub@gmail.com</a>
+                        Or email us directly: <a href="mailto:info@archescricket.club"
+                            style="color:var(--amber);">info@archescricket.club</a>
                     </p>
                 </div>
             </div>
@@ -546,7 +551,7 @@
     </section>
 
     <!-- ─── FOOTER ─── -->
-    
+    <footer id="footer">
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-grid">
@@ -576,8 +581,8 @@
                     <div>
                         <div class="footer-col-title">Quick Links</div>
                         <div class="footer-links">
-                            <a href="fixtures.html">Fixtures 2026</a>
-                            <a href="results.html">Results</a>
+                            <a href="matches.html">Fixtures 2026</a>
+                            <a href="matches.html#results">Results</a>
                             <a href="players.html">Our Squad</a>
                             <a href="gallery.html">Gallery</a>
                             <a href="sponsors.html">Sponsors</a>
@@ -591,9 +596,8 @@
                         <div class="footer-links">
                             <a href="join.html">Join The Club</a>
                             <a href="contact.html">Contact Us</a>
-                            <a href="#">About Arches CC</a>
-                            <a href="#">Code of Conduct</a>
-                            <a href="#">Privacy Policy</a>
+                            <a href="about.html">About Arches CC</a>
+                            <a href="data_policy.html">Data Policy</a>
                         </div>
                     </div>
 
@@ -601,7 +605,7 @@
                         <div class="footer-col-title">Contact</div>
                         <div class="footer-contact-item">
                             <i class="fa-solid fa-envelope footer-contact-icon"></i>
-                            <a href="mailto:archescricketclub@gmail.com">archescricketclub@gmail.com</a>
+                            <a href="mailto:info@archescricket.club">info@archescricket.club</a>
                         </div>
                         <div class="footer-contact-item">
                             <i class="fa-solid fa-location-dot footer-contact-icon"></i>
@@ -612,18 +616,10 @@
                 </div>
 
                 <div class="footer-bottom">
-                    </div>
-                </div>
-            </div>
-        </div>
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-inner" style="padding-top:3rem;">
-                <div class="footer-bottom">
-                    <div class="footer-copy">© 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
+                    <div class="footer-copy">© 2026 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland</div>
                     <div class="footer-legal">
                         <a href="data_policy.html">Data Policy</a>
-                            <a href="dls.html">DLS</a>
+                        <a href="dls.html">DLS</a>
                         <a href="contact.html">Contact</a>
                         <a href="join.html">Join</a>
                     </div>
@@ -635,17 +631,54 @@
             </div>
         </div>
     </footer>
-    
 
     <!-- ──────────────────────────────────────── -->
-    <!-- SCRIPTS (GSAP only — no Three.js) -->
+    <!-- SCRIPTS -->
     <!-- ──────────────────────────────────────── -->
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/db.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script src="js/main.js"></script>
-  <script src="js/index.js?v=1786372768"></script>
+    <script src="js/main.js?v=1786374039"></script>
+    <script src="js/index.js?v=1786372768"></script>
+    <script>
+      function handleHomeRegister(e) {
+        e.preventDefault();
+        const btn = document.getElementById('homeSubmitBtn');
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
 
+        const payload = {
+          action: 'register',
+          'Source Form': 'Homepage Quick Registration',
+          'First Name': document.getElementById('homeFirstName').value,
+          'Last Name': document.getElementById('homeLastName').value,
+          'Email Address': document.getElementById('homeEmail').value,
+          'Phone Number': document.getElementById('homePhone').value || 'N/A',
+          'Playing Role': document.getElementById('homeRole').value || 'Unspecified',
+          'Experience Level': document.getElementById('homeExperience').value || 'Unspecified'
+        };
+
+        CONFIG.submitForm(payload)
+          .then(data => {
+            if (data.result === 'success') {
+              document.getElementById('homeRegisterForm').style.display = 'none';
+              document.getElementById('homeRegisterSuccess').style.display = 'block';
+            } else {
+              throw new Error(data.error || "Submission failed");
+            }
+          })
+          .catch(err => {
+            console.error("Registration error:", err);
+            alert("Registration submission failed. Please reach out to info@archescricket.club directly.");
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+          });
+      }
+    </script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Matches | Arches Cricket Club</title>
   <meta name="description" content="Match fixtures, results, and tables for Arches Cricket Club.">
   <link rel="icon" type="image/png" href="logo.png">
@@ -70,6 +70,18 @@
         <h6 class="matches-subtitle" style="color: var(--amber); font-family: 'Bebas Neue', cursive; letter-spacing: 2px; font-size: 1.1rem; margin-bottom: -5px;">MATCHES</h6>
         <h1 class="matches-title" style="font-family: 'Bebas Neue', cursive; font-size: 4rem; color: #fff; margin-bottom: 2rem;">FIXTURES & RESULTS</h1>
         
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label for="seasonSelect" style="color: var(--amber); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px; font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-calendar" style="margin-right: 6px;"></i> Season Archive:</label>
+            <select id="seasonSelect" class="form-select" style="width: auto; padding: 0.45rem 2.2rem 0.45rem 1rem; background: var(--panel); border: 1px solid var(--border-accent); border-radius: 30px; color: var(--text); font-weight: 600; font-size: 0.85rem; cursor: pointer;" onchange="switchSeason(this.value)">
+              <option value="2026" selected>2026 Season (Current)</option>
+              <option value="2025">2025 Season (Archive)</option>
+            </select>
+          </div>
+          <div id="archiveBadge" style="display: none; align-items: center; gap: 6px; padding: 0.4rem 1rem; background: rgba(245, 158, 11, 0.12); border: 1px solid var(--border-accent); border-radius: 20px; font-size: 0.78rem; color: var(--amber); font-weight: 600;">
+            <i class="fa-solid fa-box-archive"></i> Viewing 2025 Completed Season Archive
+          </div>
+        </div>
         <div class="matches-nav-row">
           <div class="matches-pill-nav">
             <button class="matches-pill active" data-mode="fixtures" onclick="toggleMatchesMode('fixtures', this)">Fixtures</button>
@@ -167,7 +179,7 @@
       <div class="footer-inner" style="padding-top:3rem;">
           <div class="footer-bottom">
             <div class="footer-copy">
-              © 2024 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland · All rights reserved.
+              © 2026 <a href="index.html">Arches Cricket Club</a> · Belfast, Northern Ireland · All rights reserved.
             </div>
             <div class="footer-legal">
               <a href="data_policy.html">Data Policy</a>
@@ -183,6 +195,9 @@
     </div>
   </footer>
 
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/db.js"></script>
   <script src="js/main.js"></script>
   <script src="js/matches.js"></script>
 </body>

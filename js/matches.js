@@ -1,5 +1,6 @@
 let currentMode = 'fixtures';
 let currentLeague = 'all';
+let selectedSeason = '2026';
 let allFixtures = [];
 let allResults = [];
 
@@ -41,7 +42,7 @@ function parseMatchDate(dateStr) {
   const parts = cleanStr.split(/\s+/);
   let day = null;
   let month = null;
-  let year = 2026; // default
+  let year = parseInt(selectedSeason, 10) || 2026;
   for (const part of parts) {
     const upper = part.toUpperCase();
     const dayMatch = part.match(/^(\d{1,2})(?:st|nd|rd|th)?$/i);
@@ -72,19 +73,25 @@ function sortMatches(list, descending = false) {
 }
 
 function toggleMatchesMode(mode, btn) {
-  if (btn) {
-    document.querySelectorAll('.matches-pill').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-  }
   currentMode = mode;
+  document.querySelectorAll('.matches-pill').forEach(t => {
+    if (t.dataset.mode === mode) {
+      t.classList.add('active');
+    } else {
+      t.classList.remove('active');
+    }
+  });
   
-  document.getElementById('matches-content').style.display = 'block';
+  const content = document.getElementById('matches-content');
+  if (content) content.style.display = 'block';
+  const stats = document.getElementById('stats-summary');
+  const venue = document.getElementById('venue-info');
   if (mode === 'results') {
-    document.getElementById('stats-summary').style.display = 'grid';
-    document.getElementById('venue-info').style.display = 'none';
+    if (stats) stats.style.display = 'grid';
+    if (venue) venue.style.display = 'none';
   } else {
-    document.getElementById('stats-summary').style.display = 'none';
-    document.getElementById('venue-info').style.display = 'flex';
+    if (stats) stats.style.display = 'none';
+    if (venue) venue.style.display = 'flex';
   }
   renderMatches();
 }
@@ -100,10 +107,10 @@ function filterMatches(league, btn) {
 
 function getLeagueKey(leagueName) {
   const ln = (leagueName || '').toLowerCase();
-  if (ln.includes('senior league')) return 'team1';
-  if (ln.includes('junior league')) return 'team2';
+  if (ln.includes('senior league') || ln.includes('senior') || ln.includes('1st')) return 'team1';
+  if (ln.includes('junior league') || ln.includes('junior') || ln.includes('2nd')) return 'team2';
   if (ln.includes('midweek')) return 'midweek';
-  if (ln.includes('cup')) return 'cups';
+  if (ln.includes('cup') || ln.includes('shield')) return 'cups';
   return 'other';
 }
 
@@ -165,15 +172,22 @@ function calculateStats(results) {
   const totalPlayed = wins + losses + nr;
   const winRate = totalPlayed > 0 ? Math.round((wins / totalPlayed) * 100) : 0;
   
-  document.getElementById('stat-total-matches').textContent = totalPlayed;
-  document.getElementById('stat-total-wins').textContent = wins;
-  document.getElementById('stat-total-losses').textContent = losses;
-  document.getElementById('stat-total-nr').textContent = nr;
-  document.getElementById('stat-total-winrate').textContent = `${winRate}%`;
+  const elMatches = document.getElementById('stat-total-matches');
+  const elWins = document.getElementById('stat-total-wins');
+  const elLosses = document.getElementById('stat-total-losses');
+  const elNr = document.getElementById('stat-total-nr');
+  const elWinRate = document.getElementById('stat-total-winrate');
+
+  if (elMatches) elMatches.textContent = totalPlayed;
+  if (elWins) elWins.textContent = wins;
+  if (elLosses) elLosses.textContent = losses;
+  if (elNr) elNr.textContent = nr;
+  if (elWinRate) elWinRate.textContent = `${winRate}%`;
 }
 
 function renderMatches() {
   const container = document.getElementById('matches-content');
+  if (!container) return;
   const dataList = currentMode === 'results' ? allResults : allFixtures;
   
   let filtered = dataList.filter(match => {
@@ -186,7 +200,7 @@ function renderMatches() {
     if (currentMode === 'fixtures') {
       container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
         <h3 style="color:var(--text); margin-bottom: 0.5rem;">No Fixtures found</h3>
-        <p style="color:var(--muted);">There are no upcoming fixtures for this year.</p>
+        <p style="color:var(--muted);">${selectedSeason === '2025' ? 'All 2025 matches have completed and moved to results archive.' : 'There are no upcoming fixtures scheduled for this selection.'}</p>
       </div>`;
     } else {
       container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
@@ -207,7 +221,6 @@ function renderMatches() {
   
   let html = '';
   for (const [leagueName, matches] of Object.entries(grouped)) {
-    // Generate color based on league (matching old site colors)
     let colorClass = 'var(--text)';
     if (leagueName.includes('Senior') || leagueName.includes('Junior Cup')) colorClass = 'var(--amber)';
     if (leagueName.includes('Junior League') || leagueName.includes('Development')) colorClass = 'var(--gold)';
@@ -311,29 +324,113 @@ function renderMatches() {
   container.innerHTML = html;
 }
 
-function loadData() {
-  const v = new Date().getTime();
-  Promise.all([
-    fetch(`data/matches.json?v=${v}`).then(res => res.ok ? res.json() : {}).catch(() => ({})),
-    fetch(`old_matches.json?v=${v}`).then(res => res.ok ? res.json() : {}).catch(() => ({}))
-  ]).then(([newData, oldData]) => {
-    let currentFixtures = [];
-    if (newData.fixtures) currentFixtures = currentFixtures.concat(newData.fixtures);
-    
-    let currentResults = [];
-    if (newData.results) currentResults = currentResults.concat(newData.results);
-    
-    let allTimeResults = [...currentResults];
-    if (oldData.results) allTimeResults = allTimeResults.concat(oldData.results);
-    
-    // Sort and store ONLY current year data for display
-    allFixtures = sortMatches(currentFixtures, false);
-    allResults = sortMatches(currentResults, true);
-    
-    // Calculate all-time stats using the merged results
-    calculateStats(allTimeResults);
-    toggleMatchesMode(currentMode); // Render initial view
-  });
+function switchSeason(season) {
+  selectedSeason = season;
+  const badge = document.getElementById('archiveBadge');
+  if (badge) {
+    badge.style.display = (season === '2025') ? 'inline-flex' : 'none';
+  }
+  
+  // If viewing archive, default to results view
+  if (season === '2025' && currentMode === 'fixtures') {
+    currentMode = 'results';
+    document.querySelectorAll('.matches-pill').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.mode === 'results');
+    });
+  }
+
+  loadData(season);
 }
 
-document.addEventListener('DOMContentLoaded', loadData);
+async function loadData(season = selectedSeason) {
+  const container = document.getElementById('matches-content');
+  if (container) {
+    container.innerHTML = `<div class="loading-state"><div class="spinner"></div><p style="color:var(--muted);font-size:0.9rem;">Loading ${season} matches...</p></div>`;
+  }
+
+  let seasonData = null;
+
+  // 1. Try Supabase cloud database if connected
+  if (window.DB && window.DB.client) {
+    try {
+      const { data, error } = await window.DB.client
+        .from('matches')
+        .select('*')
+        .eq('season', season);
+      if (!error && data && data.length > 0) {
+        const fixtures = data.filter(m => m.status === 'scheduled').map(m => ({
+          date: m.date_display,
+          league: m.league,
+          homeTeam: m.home_team,
+          awayTeam: m.away_team,
+          venue: m.venue,
+          result: m.result
+        }));
+        const results = data.filter(m => m.status === 'completed').map(m => ({
+          date: m.date_display,
+          league: m.league,
+          homeTeam: m.home_team,
+          awayTeam: m.away_team,
+          venue: m.venue,
+          result: m.result
+        }));
+        seasonData = { fixtures, results };
+      }
+    } catch (err) {
+      console.warn('[Matches] Supabase query error, fallback to JSON:', err);
+    }
+  }
+
+  // 2. Fallback to local segregated JSON files
+  if (!seasonData) {
+    const v = Date.now();
+    try {
+      let targetUrl = `data/matches_2026.json?v=${v}`;
+      if (season === '2025') {
+        targetUrl = `data/archive/matches_2025.json?v=${v}`;
+      }
+      const res = await fetch(targetUrl);
+      if (res.ok) {
+        seasonData = await res.json();
+      } else {
+        const fallbackRes = await fetch(`data/matches.json?v=${v}`);
+        seasonData = await fallbackRes.json();
+      }
+    } catch (e) {
+      console.error('Error loading matches JSON:', e);
+      seasonData = { fixtures: [], results: [] };
+    }
+  }
+
+  allFixtures = sortMatches(seasonData.fixtures || [], false);
+  allResults = sortMatches(seasonData.results || [], true);
+
+  calculateStats(allResults);
+
+  if (window.location.hash === '#results') {
+    currentMode = 'results';
+  } else if (window.location.hash === '#fixtures') {
+    currentMode = 'fixtures';
+  } else if (window.location.hash === '#archive') {
+    selectedSeason = '2025';
+    const select = document.getElementById('seasonSelect');
+    if (select) select.value = '2025';
+    const badge = document.getElementById('archiveBadge');
+    if (badge) badge.style.display = 'inline-flex';
+    currentMode = 'results';
+  }
+
+  toggleMatchesMode(currentMode);
+}
+
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#results') {
+    toggleMatchesMode('results');
+  } else if (window.location.hash === '#fixtures') {
+    toggleMatchesMode('fixtures');
+  } else if (window.location.hash === '#archive') {
+    switchSeason('2025');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => loadData(selectedSeason));

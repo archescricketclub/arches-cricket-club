@@ -64,7 +64,7 @@ function handleRegistration(data) {
   logToSheet("Registrations", payload);
   
   // Send Email Notification
-  var emailRecipient = "archescricketclub@gmail.com";
+  var emailRecipient = "info@archescricket.club";
   var applicantName = data['Full Name'] || (data['First Name'] && data['Last Name'] ? (data['First Name'] + " " + data['Last Name']) : "Anonymous");
   var subject = "🏏 New Registration: " + applicantName + " (" + (data['Source Form'] || "General") + ")";
   
@@ -151,7 +151,7 @@ function handlePhotoUpload(data) {
   }
   
   // Send Email Notification
-  var emailRecipient = "archescricketclub@gmail.com";
+  var emailRecipient = "info@archescricket.club";
   var subject = "📸 New Photo Submission: " + senderName + " (" + images.length + " photos)";
   
   var emailBodyText = "New photos submitted to Arches CC gallery!\n\n" +
@@ -208,7 +208,7 @@ function handleContact(data) {
   
   logToSheet("Contact Messages", payload);
   
-  var emailRecipient = "archescricketclub@gmail.com";
+  var emailRecipient = "info@archescricket.club";
   var senderName = (data['First Name'] || "") + " " + (data['Last Name'] || "");
   var subject = "✉️ New Website Message: " + (data['Subject'] || "General Inquiry");
   
