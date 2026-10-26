@@ -59,244 +59,381 @@
         }
 
         .cat-block {
-            margin-bottom: 3rem
+            margin-bottom: 2.5rem;
         }
 
         .cat-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1.25rem
+            gap: 0.5rem;
+            margin-bottom: 1.1rem;
         }
 
         .cat-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.5rem;
-            letter-spacing: 1px;
+            font-size: 1.6rem;
+            letter-spacing: 1.5px;
             display: flex;
             align-items: center;
-            gap: .6rem
+            gap: .65rem;
+            margin: 0;
+            color: #ffffff;
         }
 
         .cat-title span {
             font-size: .65rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             padding: 3px 10px;
             border-radius: 20px;
-            font-family: 'Inter', sans-serif
+            font-family: 'Inter', sans-serif;
         }
 
         .cat-bat span {
             color: var(--gold);
             background: rgba(250, 204, 21, .1);
-            border: 1px solid rgba(250, 204, 21, .25)
+            border: 1px solid rgba(250, 204, 21, .3);
         }
 
         .cat-bowl span {
             color: var(--fire);
             background: rgba(249, 115, 22, .1);
-            border: 1px solid rgba(249, 115, 22, .25)
+            border: 1px solid rgba(249, 115, 22, .3);
         }
 
         .cat-ar span {
             color: var(--amber);
             background: rgba(245, 158, 11, .1);
-            border: 1px solid rgba(245, 158, 11, .25)
+            border: 1px solid rgba(245, 158, 11, .3);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .sort-filter {
+            background: #060d1d;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            color: var(--amber);
+            font-size: .78rem;
+            font-weight: 700;
+            padding: .42rem 1.8rem .42rem .85rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: .25s;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23F59E0B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right .65rem center;
+            background-size: .55em auto;
+        }
+
+        .sort-filter:focus, .sort-filter:hover {
+            border-color: var(--amber);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+        }
+
+        .sort-filter option {
+            background: #09101f;
+            color: #ffffff;
         }
 
         .view-all-btn {
-            background: none;
-            border: 1px solid var(--border-accent);
+            background: #060d1d;
+            border: 1px solid rgba(245, 158, 11, 0.35);
             color: var(--amber);
-            font-size: .75rem;
+            font-size: .78rem;
             font-weight: 700;
-            letter-spacing: 1px;
-            padding: .45rem 1.1rem;
-            border-radius: 20px;
+            letter-spacing: .5px;
+            padding: .42rem .85rem;
+            border-radius: 8px;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
             transition: .25s;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: .4rem
+            gap: .4rem;
+            white-space: nowrap;
         }
 
         .view-all-btn:hover {
-            background: var(--amber-soft)
+            background: rgba(245, 158, 11, 0.12);
+            border-color: var(--amber);
         }
 
+        /* ══ TOP CONTROLS (Season Bar) ══ */
+        .player-season-box {
+            background: rgba(11, 19, 41, 0.7);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            margin-bottom: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .season-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        .season-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--amber);
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1.5px;
+            font-size: 1.25rem;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .season-select-wrapper {
+            position: relative;
+            flex-grow: 1;
+            max-width: 240px;
+        }
+
+        .season-dropdown {
+            width: 100%;
+            padding: 0.5rem 2rem 0.5rem 1rem;
+            background: #060d1d;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23F59E0B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.85rem center;
+            background-size: 0.6em auto;
+            transition: border-color 0.2s;
+        }
+
+        .season-dropdown:focus, .season-dropdown:hover {
+            border-color: var(--amber);
+        }
+
+        .season-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            gap: 6px;
+            padding: 0.35rem 0.9rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 20px;
+            font-size: 0.78rem;
+            color: var(--amber);
+            font-weight: 600;
+        }
+
+        /* ══ SQUAD GRID ══ */
         .squad-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1.1rem
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.15rem;
         }
 
-        .pc {
+        /* ══ HORIZONTAL PLAYER CARDS (Reference Image 3) ══ */
+        .pc.pc-card-horizontal {
             background: var(--panel);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            overflow: hidden;
-            transition: transform .3s, border-color .3s, box-shadow .3s;
-            position: relative
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .pc:hover {
-            border-color: var(--border-accent);
-            transform: translateY(-6px);
-            box-shadow: 0 18px 50px rgba(0, 0, 0, .5), 0 0 35px rgba(245, 158, 11, .15)
+        .pc.pc-card-horizontal:hover {
+            border-color: rgba(245, 158, 11, 0.45);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(245, 158, 11, 0.12);
         }
 
-        .pc.hidden {
-            display: none
+        .pc.pc-card-horizontal.hidden {
+            display: none !important;
         }
 
-        .pc-top {
-            height: 100px;
-            background: linear-gradient(145deg, var(--panel2), var(--surface));
+        .pc-horiz-badge {
+            align-self: flex-start;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid rgba(250, 204, 21, 0.28);
+            border-radius: 12px;
+            padding: 2px 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 0.6rem;
+        }
+
+        .pc-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+
+        .pc-card-left {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .pc-jersey-badge {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 10px;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            background: rgba(245, 158, 11, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--amber);
         }
 
-        .pc-jersey {
-            position: absolute;
-            top: .65rem;
-            left: .8rem;
-            font-family: 'Orbitron', sans-serif;
-            font-size: .62rem;
+        .pc-card-info {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .pc-card-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.2px;
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .pc-card-meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 3px;
+        }
+
+        .pc-card-right {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            flex-shrink: 0;
+        }
+
+        .pc-primary-stat {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.7rem;
             font-weight: 700;
             color: var(--amber);
-            background: rgba(245, 158, 11, .1);
-            border: 1px solid rgba(245, 158, 11, .2);
-            padding: 2px 8px;
-            border-radius: 20px
-        }
-
-        .pc-cap {
-            position: absolute;
-            top: .65rem;
-            right: .8rem;
-            font-size: .58rem;
-            color: var(--muted);
-            font-weight: 700;
-            letter-spacing: .8px
-        }
-
-        .pc-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            opacity: .85
-        }
-
-        .pc-top-badge {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: linear-gradient(135deg, var(--amber), var(--fire));
-            color: #030712;
-            font-size: .52rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 3px 8px;
-            border-bottom-left-radius: 10px
-        }
-
-        .pc-body {
-            padding: .9rem 1rem
-        }
-
-        .pc-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
             line-height: 1;
-            margin-bottom: .35rem
+            letter-spacing: 0.5px;
         }
 
-        .pc-meta {
-            font-size: .62rem;
-            color: var(--muted);
-            font-weight: 600;
-            letter-spacing: .8px;
-            text-transform: uppercase;
-            margin-bottom: .8rem
+        .pc-card-arrow {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-left: 2px;
+            transition: transform 0.2s, color 0.2s;
         }
 
-        .pc-stats {
-            display: flex;
-            border-top: 1px solid var(--border)
+        .pc.pc-card-horizontal:hover .pc-card-arrow {
+            color: var(--amber);
+            transform: translateX(2px);
         }
 
-        .pcs {
-            flex: 1;
-            padding: .6rem .4rem;
+        .pc-card-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.07);
+            margin: 0.85rem 0 0.75rem 0;
+            width: 100%;
+        }
+
+        .pc-card-bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            width: 100%;
+        }
+
+        .pc-bottom-stat {
             text-align: center;
-            border-right: 1px solid var(--border)
+            padding: 0 0.5rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        .pcs:last-child {
-            border-right: none
+        .pc-bottom-stat:last-child {
+            border-right: none;
         }
 
-        .pcs-n {
-            font-family: 'Orbitron', sans-serif;
-            font-size: .88rem;
+        .pc-bottom-n {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: var(--text)
+            color: #f1f5f9;
+            line-height: 1.2;
         }
 
-        .pcs-l {
-            font-size: .5rem;
-            color: var(--muted);
+        .pc-bottom-l {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 600;
+            color: #94a3b8;
             text-transform: uppercase;
-            letter-spacing: .7px;
-            margin-top: 2px
-        }
-
-        .pc-nostats {
-            text-align: center;
-            padding: .75rem;
-            color: var(--muted2);
-            font-size: .75rem;
-            font-style: italic;
-            border-top: 1px solid var(--border)
+            letter-spacing: 0.6px;
+            margin-top: 3px;
         }
 
         .team-panel {
-            display: none
+            display: none;
         }
 
         .team-panel.active {
-            display: block
+            display: block;
         }
 
-        @media(max-width:500px) {
-            .squad-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: .65rem
-            }
-
-            .pc-name {
-                font-size: 1rem
-            }
-        }
-
-        @media(max-width:400px) {
-            .squad-grid {
-                grid-template-columns: 1fr;
-                gap: .75rem
-            }
-        }
         .search-box {
             position: relative;
             width: 100%;
             max-width: 320px;
         }
+
         .search-input {
             width: 100%;
             background: var(--panel);
@@ -309,10 +446,12 @@
             outline: none;
             transition: var(--trans);
         }
+
         .search-input:focus {
             border-color: var(--amber);
             box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
         }
+
         .search-icon {
             position: absolute;
             left: 1rem;
@@ -321,25 +460,154 @@
             color: var(--muted);
             font-size: 0.85rem;
         }
-        .sort-filter {
-            background: var(--panel);
-            border: 1px solid var(--border-accent);
-            color: var(--amber);
-            font-size: .75rem;
-            font-weight: 700;
-            padding: .45rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            outline: none;
-            transition: .25s;
+
+        /* ══ RESPONSIVE ADJUSTMENTS ══ */
+        @media (min-width: 769px) {
+            .page-hero {
+                padding: 100px 0 2rem;
+            }
+
+            .section.page-top-padding {
+                padding-top: 1.5rem !important;
+            }
+
+            .player-season-box {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1.5rem;
+            }
+
+            .season-row {
+                width: auto;
+            }
+
+            .season-pill-badge {
+                align-self: center;
+            }
         }
-        .sort-filter:focus, .sort-filter:hover {
-            border-color: var(--amber);
-        }
-        .sort-filter option {
-            background: var(--panel2);
-            color: var(--text);
+
+        @media (max-width: 768px) {
+            .page-hero {
+                display: none !important;
+            }
+
+            .section.page-top-padding {
+                padding-top: 75px !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .container {
+                padding-left: 0.85rem !important;
+                padding-right: 0.85rem !important;
+            }
+
+            .squad-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+
+            .pc.pc-card-horizontal {
+                padding: 0.85rem 0.95rem;
+            }
+
+            .pc-card-top {
+                gap: 0.5rem;
+            }
+
+            .pc-card-left {
+                gap: 0.65rem;
+            }
+
+            .pc-jersey-badge {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                font-size: 0.88rem;
+            }
+
+            .pc-card-name {
+                font-size: 0.98rem;
+            }
+
+            .pc-primary-stat {
+                font-size: 1.55rem;
+            }
+
+            .cat-block {
+                margin-bottom: 1.85rem;
+            }
+
+            .cat-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.35rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .cat-title {
+                font-size: 1.35rem;
+                gap: 0.35rem;
+            }
+
+            .cat-title span {
+                font-size: 0.6rem;
+                padding: 2px 7px;
+            }
+
+            .cat-title i {
+                display: none;
+            }
+
+            .header-actions {
+                display: flex;
+                align-items: center;
+                gap: 0.35rem;
+                flex-shrink: 0;
+            }
+
+            .sort-filter {
+                font-size: 0.72rem;
+                padding: 0.38rem 1.45rem 0.38rem 0.65rem;
+                background-position: right 0.45rem center;
+                background-size: 0.5em auto;
+            }
+
+            .view-all-btn {
+                font-size: 0.72rem;
+                padding: 0.38rem 0.65rem;
+                gap: 0.3rem;
+            }
+
+            .mobile-tab-select {
+                display: block !important;
+                background: #060d1d;
+                border: 1px solid rgba(245, 158, 11, 0.35);
+                border-radius: 10px;
+                color: var(--amber);
+                font-weight: 700;
+                font-size: 0.95rem;
+                padding: 0.75rem 2.2rem 0.75rem 1rem;
+                margin-bottom: 1.15rem !important;
+            }
+
+            #panel-career > div:first-child {
+                flex-direction: column;
+                align-items: stretch !important;
+            }
+
+            #panel-career > div:first-child > div:last-child {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #panel-career .sort-filter,
+            #panel-career .search-box {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
         }
     </style>
 </head>
@@ -398,17 +666,21 @@
 
     <section class="section page-top-padding">
         <div class="container">
-            <!-- SEASON SELECTOR -->
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <label for="playerSeasonSelect" style="color: var(--amber); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px; font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-calendar" style="margin-right: 6px;"></i> Season:</label>
-                <select id="playerSeasonSelect" class="form-select" style="width: auto; padding: 0.45rem 2.2rem 0.45rem 1rem; background: var(--panel); border: 1px solid var(--border-accent); border-radius: 30px; color: var(--text); font-weight: 600; font-size: 0.85rem; cursor: pointer;" onchange="switchPlayerSeason(this.value)">
-                  <option value="2026" selected>2026 Season</option>
-                  <option value="2025">2025 Season</option>
-                  <option value="all">All Seasons (Career)</option>
-                </select>
+            <!-- SEASON SELECTOR CARD (Per Reference Image 3) -->
+            <div class="player-season-box">
+              <div class="season-row">
+                <div class="season-label">
+                  <i class="fa-solid fa-calendar"></i> SEASON:
+                </div>
+                <div class="season-select-wrapper">
+                  <select id="playerSeasonSelect" class="season-dropdown" onchange="switchPlayerSeason(this.value)">
+                    <option value="2026" selected>2026 Season</option>
+                    <option value="2025">2025 Season</option>
+                    <option value="all">All Seasons (Career)</option>
+                  </select>
+                </div>
               </div>
-              <div id="playerSeasonBadge" style="display: flex; align-items: center; gap: 6px; padding: 0.4rem 1rem; background: rgba(245, 158, 11, 0.12); border: 1px solid var(--border-accent); border-radius: 20px; font-size: 0.78rem; color: var(--amber); font-weight: 600;">
+              <div id="playerSeasonBadge" class="season-pill-badge">
                 <i class="fa-solid fa-bolt"></i> <span id="playerSeasonBadgeText">Viewing 2026 Season</span>
               </div>
             </div>
@@ -438,8 +710,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
                                 style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('t1-bat',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('t1-bat',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="t1-bat"></div>
                 </div>
@@ -448,8 +719,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-wind"
                                 style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('t1-bowl',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('t1-bowl',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="t1-bowl"></div>
                 </div>
@@ -459,8 +729,7 @@
                         <div class="cat-title"><i class="fa-solid fa-star"
                                 style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
                         </div>
-                        <button class="view-all-btn" onclick="toggleAll('t1-ar',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('t1-ar',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="t1-ar"></div>
                 </div>
@@ -473,8 +742,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
                                 style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('t2-bat',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('t2-bat',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="t2-bat"></div>
                 </div>
@@ -483,8 +751,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-wind"
                                 style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('t2-bowl',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('t2-bowl',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="t2-bowl"></div>
                 </div>
@@ -494,8 +761,7 @@
                         <div class="cat-title"><i class="fa-solid fa-star"
                                 style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
                         </div>
-                        <button class="view-all-btn" onclick="toggleAll('t2-ar',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('t2-ar',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="t2-ar"></div>
                 </div>
@@ -508,8 +774,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
                                 style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('mw-bat',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('mw-bat',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="mw-bat"></div>
                 </div>
@@ -518,8 +783,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-wind"
                                 style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('mw-bowl',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('mw-bowl',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="mw-bowl"></div>
                 </div>
@@ -529,8 +793,7 @@
                         <div class="cat-title"><i class="fa-solid fa-star"
                                 style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
                         </div>
-                        <button class="view-all-btn" onclick="toggleAll('mw-ar',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('mw-ar',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="mw-ar"></div>
                 </div>
@@ -543,8 +806,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-cricket-bat-ball"
                                 style="color:var(--gold);font-size:1.1rem;"></i> Batsmen <span>Batting</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('cup-bat',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('cup-bat',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="cup-bat"></div>
                 </div>
@@ -553,8 +815,7 @@
                     <div class="cat-header">
                         <div class="cat-title"><i class="fa-solid fa-wind"
                                 style="color:var(--fire);font-size:1.1rem;"></i> Bowlers <span>Bowling</span></div>
-                        <button class="view-all-btn" onclick="toggleAll('cup-bowl',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('cup-bowl',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="cup-bowl"></div>
                 </div>
@@ -564,8 +825,7 @@
                         <div class="cat-title"><i class="fa-solid fa-star"
                                 style="color:var(--amber);font-size:1.1rem;"></i> All-Rounders <span>All-Round</span>
                         </div>
-                        <button class="view-all-btn" onclick="toggleAll('cup-ar',this)"><i
-                                class="fa-solid fa-chevron-down"></i> View All</button>
+                        <button class="view-all-btn" onclick="toggleAll('cup-ar',this)">View All <i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <div class="squad-grid" id="cup-ar"></div>
                 </div>

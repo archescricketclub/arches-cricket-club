@@ -312,40 +312,95 @@ function switchPlayerSeason(season) {
 }
 
 /* ─── RENDER PLAYER CARDS ────────────────────────────────────────── */
-function makeCard(p, idx, isExpanded = false) {
+function makeCard(p, idx, isExpanded = false, categoryType = '') {
     const hidden = (!isExpanded && idx >= 5) ? 'hidden' : '';
-    const badge = p.badge ? `<div class="pc-top-badge">${escapeHTML(p.badge)}</div>` : '';
-    const body = p.stats && p.stats.length
-        ? `<div class="pc-stats">${p.stats.map(s => `<div class="pcs"><div class="pcs-n">${escapeHTML(s.n)}</div><div class="pcs-l">${escapeHTML(s.l)}</div></div>`).join('')}</div>`
-        : `<div class="pc-stats"><div class="pcs" style="flex:1"><div class="pcs-n" style="color:var(--muted)">—</div><div class="pcs-l">No stats available</div></div></div>`;
-    return `<div class="pc ${hidden}">
-    ${badge}
-    <div class="pc-top">
-      <div class="pc-jersey">${escapeHTML(p.jersey || '#—')}</div>
-      <div class="pc-cap">${escapeHTML(p.cap || '—')}</div>
-      <img src="player-avatar.svg" class="pc-icon" alt="Player">
-    </div>
-    <div class="pc-body">
-      <div class="pc-name">${escapeHTML(p.name)}</div>
-      <div class="pc-meta">Jersey ${escapeHTML(p.jersey || '#—')} · Cap ${escapeHTML(p.cap || '—')}</div>
-    </div>
-    ${body}
-  </div>`;
+    const badgeHtml = p.badge ? `<div class="pc-horiz-badge"><i class="fa-solid fa-crown"></i> ${escapeHTML(p.badge)}</div>` : '';
+
+    const getStat = (label) => {
+        const s = (p.stats || []).find(x => x.l === label);
+        return s ? s.n : '-';
+    };
+
+    let primaryVal = '-';
+    let bottomStats = [];
+
+    if (categoryType === 'bat') {
+        primaryVal = getStat('Runs');
+        bottomStats = [
+            { n: getStat('Matches'), l: 'Matches' },
+            { n: getStat('High Score'), l: 'High Score' },
+            { n: getStat('Average'), l: 'Average' }
+        ];
+    } else if (categoryType === 'bowl') {
+        primaryVal = getStat('Wickets');
+        bottomStats = [
+            { n: getStat('Matches'), l: 'Matches' },
+            { n: getStat('Overs'), l: 'Overs' },
+            { n: getStat('Best Fig'), l: 'Best Fig' }
+        ];
+    } else if (categoryType === 'ar') {
+        primaryVal = getStat('Runs');
+        bottomStats = [
+            { n: getStat('Matches'), l: 'Matches' },
+            { n: getStat('Wickets'), l: 'Wickets' },
+            { n: getStat('Best Fig'), l: 'Best Fig' }
+        ];
+    } else {
+        const stats = p.stats || [];
+        primaryVal = stats[1] ? stats[1].n : (stats[0] ? stats[0].n : '-');
+        bottomStats = stats.filter((_, i) => i !== 1).slice(0, 3).map(s => ({ n: s.n, l: s.l }));
+        if (bottomStats.length === 0) {
+            bottomStats = [
+                { n: '-', l: 'Matches' },
+                { n: '-', l: 'High Score' },
+                { n: '-', l: 'Average' }
+            ];
+        }
+    }
+
+    const bottomStatsHtml = bottomStats.map(s => `
+        <div class="pc-bottom-stat">
+            <div class="pc-bottom-n">${escapeHTML(s.n)}</div>
+            <div class="pc-bottom-l">${escapeHTML(s.l)}</div>
+        </div>
+    `).join('');
+
+    return `
+    <div class="pc pc-card-horizontal ${hidden}">
+        ${badgeHtml}
+        <div class="pc-card-top">
+            <div class="pc-card-left">
+                <div class="pc-jersey-badge">${escapeHTML(p.jersey || '#—')}</div>
+                <div class="pc-card-info">
+                    <div class="pc-card-name">${escapeHTML(p.name)}</div>
+                    <div class="pc-card-meta">JERSEY ${escapeHTML(p.jersey || '#—')} · CAP ${escapeHTML(p.cap || '—')}</div>
+                </div>
+            </div>
+            <div class="pc-card-right">
+                <div class="pc-primary-stat">${escapeHTML(primaryVal)}</div>
+                <i class="fa-solid fa-chevron-right pc-card-arrow"></i>
+            </div>
+        </div>
+        <div class="pc-card-divider"></div>
+        <div class="pc-card-bottom">
+            ${bottomStatsHtml}
+        </div>
+    </div>`;
 }
 
 function injectSortFilters() {
     const categories = {
         'bat': [
-            {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'},
-            {val: 'runs', label: 'Runs'}, {val: 'matches', label: 'Matches'}, {val: 'hs', label: 'Highest Score'}
+            {val: 'runs', label: 'Runs'}, {val: 'matches', label: 'Matches'}, {val: 'hs', label: 'High Score'},
+            {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'}
         ],
         'bowl': [
-            {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'},
-            {val: 'wickets', label: 'Wickets'}, {val: 'matches', label: 'Matches'}, {val: 'bestfig', label: 'Best Fig'}
+            {val: 'wickets', label: 'Wickets'}, {val: 'matches', label: 'Matches'}, {val: 'bestfig', label: 'Best Fig'},
+            {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'}
         ],
         'ar': [
-            {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'},
-            {val: 'runs', label: 'Runs'}, {val: 'wickets', label: 'Wickets'}
+            {val: 'runs', label: 'Runs'}, {val: 'wickets', label: 'Wickets'}, {val: 'matches', label: 'Matches'},
+            {val: 'az', label: 'A - Z'}, {val: 'za', label: 'Z - A'}
         ]
     };
 
@@ -367,14 +422,10 @@ function injectSortFilters() {
 
         const wrapper = document.createElement('div');
         wrapper.className = 'header-actions';
-        wrapper.style.display = 'flex';
-        wrapper.style.gap = '0.5rem';
-        wrapper.style.alignItems = 'center';
 
         const select = document.createElement('select');
         select.className = 'sort-filter';
-        select.innerHTML = '<option value="">Sort By</option>' +
-            categories[type].map(o => `<option value="${o.val}">${o.label}</option>`).join('');
+        select.innerHTML = categories[type].map(o => `<option value="${o.val}">${o.label}</option>`).join('');
         select.onchange = (e) => sortCategory(gridId, e.target.value);
 
         btn.parentNode.insertBefore(wrapper, btn);
@@ -391,10 +442,15 @@ function sortCategory(key, sortType) {
 function applySortAndRender(key) {
     if (!DATA || !DATA[key]) return;
 
-    let defaultSort = 'az';
-    if (key.includes('-bat')) defaultSort = 'runs';
-    else if (key.includes('-bowl')) defaultSort = 'wickets';
-    else if (key.includes('-ar')) defaultSort = 'runs';
+    let defaultSort = 'runs';
+    let catType = 'bat';
+    if (key.includes('-bowl')) {
+        defaultSort = 'wickets';
+        catType = 'bowl';
+    } else if (key.includes('-ar')) {
+        defaultSort = 'runs';
+        catType = 'ar';
+    }
 
     const sortType = CURRENT_SORTS[key] || defaultSort;
 
@@ -444,7 +500,7 @@ function applySortAndRender(key) {
     if (list.length === 0) {
         el.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 2.5rem 1rem; color: var(--muted2); font-style: italic;">No records in this category for the selected season.</div>`;
     } else {
-        el.innerHTML = list.map((p, i) => makeCard(p, i, isExpanded)).join('');
+        el.innerHTML = list.map((p, i) => makeCard(p, i, isExpanded, catType)).join('');
     }
 
     if (btn) {
@@ -467,20 +523,38 @@ function renderRoster() {
     const el = document.getElementById('all-roster');
     if (!el) return;
     el.innerHTML = ALL_PLAYERS.map(p => `
-  <div class="pc">
-    <div class="pc-top">
-      <div class="pc-jersey">${escapeHTML(p.jersey || '#—')}</div>
-      <div class="pc-cap">${escapeHTML(p.cap || '—')}</div>
-      <img src="player-avatar.svg" class="pc-icon" alt="Player">
-    </div>
-    <div class="pc-body">
-      <div class="pc-name">${escapeHTML(p.name)}</div>
-      <div class="pc-meta">Jersey&nbsp;${escapeHTML(p.jersey || '#—')} &middot; Cap&nbsp;${escapeHTML(p.cap || '—')}</div>
-    </div>
-    <div class="pc-stats">
-      <div class="pcs" style="flex:1"><div class="pcs-n" style="color:var(--amber);font-size:1.1rem">&#9679;</div><div class="pcs-l">Registered</div></div>
-    </div>
-  </div>`).join('');
+    <div class="pc pc-card-horizontal">
+        <div class="pc-card-top">
+            <div class="pc-card-left">
+                <div class="pc-jersey-badge">${escapeHTML(p.jersey || '#—')}</div>
+                <div class="pc-card-info">
+                    <div class="pc-card-name">${escapeHTML(p.name)}</div>
+                    <div class="pc-card-meta">JERSEY ${escapeHTML(p.jersey || '#—')} · CAP ${escapeHTML(p.cap || '—')}</div>
+                </div>
+            </div>
+            <div class="pc-card-right">
+                <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.75rem;font-weight:700;color:var(--emerald);background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);border-radius:20px;padding:3px 10px;">
+                    <i class="fa-solid fa-circle" style="font-size:0.45rem;"></i> Active
+                </span>
+                <i class="fa-solid fa-chevron-right pc-card-arrow"></i>
+            </div>
+        </div>
+        <div class="pc-card-divider"></div>
+        <div class="pc-card-bottom">
+            <div class="pc-bottom-stat">
+                <div class="pc-bottom-n">${escapeHTML(p.jersey || '#—')}</div>
+                <div class="pc-bottom-l">Jersey</div>
+            </div>
+            <div class="pc-bottom-stat">
+                <div class="pc-bottom-n">${escapeHTML(p.cap || '—')}</div>
+                <div class="pc-bottom-l">Cap Number</div>
+            </div>
+            <div class="pc-bottom-stat" style="border-right:none;">
+                <div class="pc-bottom-n">Arches CC</div>
+                <div class="pc-bottom-l">Club Squad</div>
+            </div>
+        </div>
+    </div>`).join('');
 }
 
 function renderCareerStats(filteredList = null) {
@@ -506,36 +580,39 @@ function renderCareerStats(filteredList = null) {
         const best = bowling.bestFig || '-';
         const matches = Math.max(batting.matches || 0, bowling.matches || 0);
 
-        return `<div class="pc">
-            <div class="pc-top">
-                <div class="pc-jersey">${escapeHTML(p.jersey || '#—')}</div>
-                <div class="pc-cap">${escapeHTML(p.cap || '—')}</div>
-                <img src="player-avatar.svg" class="pc-icon" alt="Player">
+        const primaryStat = (runs > 0 || wkts === 0) ? runs : wkts;
+
+        return `<div class="pc pc-card-horizontal">
+            <div class="pc-card-top">
+                <div class="pc-card-left">
+                    <div class="pc-jersey-badge">${escapeHTML(p.jersey || '#—')}</div>
+                    <div class="pc-card-info">
+                        <div class="pc-card-name">${escapeHTML(p.name)}</div>
+                        <div class="pc-card-meta">JERSEY ${escapeHTML(p.jersey || '#—')} · CAP ${escapeHTML(p.cap || '—')}</div>
+                    </div>
+                </div>
+                <div class="pc-card-right">
+                    <div class="pc-primary-stat">${primaryStat}</div>
+                    <i class="fa-solid fa-chevron-right pc-card-arrow"></i>
+                </div>
             </div>
-            <div class="pc-body">
-                <div class="pc-name">${escapeHTML(p.name)}</div>
-                <div class="pc-meta">Jersey ${escapeHTML(p.jersey || '#—')} · Cap ${escapeHTML(p.cap || '—')}</div>
-            </div>
-            <div class="pc-stats">
-                <div class="pcs">
-                    <div class="pcs-n">${matches}</div>
-                    <div class="pcs-l">Matches</div>
+            <div class="pc-card-divider"></div>
+            <div class="pc-card-bottom" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="pc-bottom-stat">
+                    <div class="pc-bottom-n">${matches}</div>
+                    <div class="pc-bottom-l">Matches</div>
                 </div>
-                <div class="pcs">
-                    <div class="pcs-n">${runs}</div>
-                    <div class="pcs-l">Runs</div>
+                <div class="pc-bottom-stat">
+                    <div class="pc-bottom-n">${runs}</div>
+                    <div class="pc-bottom-l">Runs (HS ${escapeHTML(hs)})</div>
                 </div>
-                <div class="pcs">
-                    <div class="pcs-n">${hs}</div>
-                    <div class="pcs-l">HS</div>
+                <div class="pc-bottom-stat">
+                    <div class="pc-bottom-n">${wkts}</div>
+                    <div class="pc-bottom-l">Wickets</div>
                 </div>
-                <div class="pcs">
-                    <div class="pcs-n">${wkts}</div>
-                    <div class="pcs-l">Wkts</div>
-                </div>
-                <div class="pcs">
-                    <div class="pcs-n">${best}</div>
-                    <div class="pcs-l">Best Bowl</div>
+                <div class="pc-bottom-stat" style="border-right:none;">
+                    <div class="pc-bottom-n">${escapeHTML(best)}</div>
+                    <div class="pc-bottom-l">Best Bowl</div>
                 </div>
             </div>
         </div>`;
@@ -593,12 +670,12 @@ function toggleAll(gridId, btn) {
     const isExpanded = btn.dataset.expanded === '1';
     if (!isExpanded) {
         hidden.forEach(c => c.classList.remove('hidden'));
-        btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Show Less';
+        btn.innerHTML = 'Show Less <i class="fa-solid fa-chevron-up"></i>';
         btn.dataset.expanded = '1';
     } else {
         const cards = document.querySelectorAll(`#${gridId} .pc`);
         cards.forEach((c, i) => { if (i >= 5) c.classList.add('hidden'); });
-        btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> View All';
+        btn.innerHTML = 'View All <i class="fa-solid fa-chevron-down"></i>';
         btn.dataset.expanded = '0';
     }
 }
