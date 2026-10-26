@@ -13,15 +13,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* ══ PAGE HEADER ══ */
+    .honours-header {
+      margin-bottom: 2rem;
+    }
+
+    .honours-pre {
+      color: var(--amber);
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 2.5px;
+      font-size: 1.15rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 0.25rem;
+    }
+
+    .honours-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3.8rem;
+      color: #ffffff;
+      line-height: 1;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: 1px;
+    }
+
+    .honours-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 650px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ══ CATEGORY TABS (DESKTOP) ══ */
     .tabs-row {
       display: flex;
-      gap: .5rem;
+      gap: 0.5rem;
       flex-wrap: nowrap;
       overflow-x: auto;
       padding-bottom: 4px;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       -webkit-overflow-scrolling: touch;
-      border-bottom: 1px solid var(--border);
     }
 
     .tabs-row::-webkit-scrollbar {
@@ -35,67 +68,116 @@
 
     .tab-btn {
       flex-shrink: 0;
-      padding: .65rem 1.6rem;
-      border-radius: 50px 50px 0 0;
-      border: 1px solid transparent;
+      padding: 0.6rem 1.45rem;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      background: var(--panel);
       color: var(--muted);
-      font-size: .82rem;
+      font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
-      transition: .25s;
+      transition: all 0.25s ease;
       font-family: 'Inter', sans-serif;
-      margin-bottom: -1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .tab-btn.active {
-      background: var(--panel);
-      color: var(--amber);
-      border-color: var(--border) var(--border) transparent var(--border);
-      border-bottom: 1.5px solid var(--amber);
+      background: linear-gradient(135deg, var(--amber), var(--fire));
+      color: #030712;
+      border-color: transparent;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+      font-weight: 700;
     }
 
     .tab-btn:hover:not(.active) {
+      border-color: var(--border-accent);
       color: var(--text);
     }
 
+    /* ══ MOBILE SELECT ══ */
+    .mobile-tab-select {
+      display: none;
+      width: 100%;
+      background: #060d1d;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 10px;
+      color: var(--amber);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.75rem 2.2rem 0.75rem 1rem;
+      margin-bottom: 1.15rem;
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23F59E0B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 0.75rem auto;
+    }
+
+    /* ══ FILTERS BAR ══ */
     .filters-bar {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .filter-group {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
 
     .filter-select {
-      background: var(--panel);
-      border: 1px solid var(--border);
+      background: #060d1d;
+      border: 1px solid var(--border-accent);
       color: var(--text);
-      padding: 0.55rem 1.25rem;
+      padding: 0.55rem 2.2rem 0.55rem 1.1rem;
       border-radius: 20px;
       font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
       outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23F59E0B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.85rem center;
+      background-size: 0.65rem auto;
       transition: var(--trans);
     }
 
     .filter-select:focus,
     .filter-select:hover {
-      border-color: var(--border-accent);
+      border-color: var(--amber);
+    }
+
+    .record-count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--amber);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
     .search-box {
       position: relative;
       width: 100%;
-      max-width: 320px;
+      max-width: 300px;
     }
 
     .search-input {
@@ -103,10 +185,10 @@
       background: var(--panel);
       border: 1px solid var(--border);
       color: var(--text);
-      padding: 0.55rem 1.25rem 0.55rem 2.5rem;
+      padding: 0.55rem 1.25rem 0.55rem 2.4rem;
       border-radius: 20px;
       font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       outline: none;
       transition: var(--trans);
     }
@@ -118,14 +200,16 @@
 
     .search-icon {
       position: absolute;
-      left: 1rem;
+      left: 0.95rem;
       top: 50%;
       transform: translateY(-50%);
       color: var(--muted);
       font-size: 0.85rem;
     }
 
-    .honours-table-container {
+    /* ══ DESKTOP TABLE ══ */
+    .honours-desktop-table {
+      display: block;
       width: 100%;
       overflow-x: auto;
       background: var(--panel);
@@ -148,7 +232,7 @@
       color: var(--amber);
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       padding: 1.1rem 1.25rem;
@@ -167,40 +251,218 @@
     }
 
     .honours-table tr:hover {
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(245, 158, 11, 0.03);
     }
 
     .table-sno {
       font-weight: 700;
       color: var(--muted);
       width: 60px;
+      font-family: 'Orbitron', monospace;
     }
 
     .table-player {
-      font-weight: 600;
-      color: var(--text);
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 0.95rem;
     }
 
     .table-record {
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
       color: var(--amber);
+      font-size: 1.05rem;
+      text-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
     }
 
     .table-opp {
       color: var(--text);
+      font-weight: 500;
     }
 
     .table-date {
       color: var(--muted);
       white-space: nowrap;
+      font-size: 0.82rem;
     }
 
     .table-league {
-      color: var(--muted);
-      font-size: 0.78rem;
+      color: #94a3b8;
+      font-size: 0.8rem;
     }
 
+    /* ══ MOBILE CARDS (Athletic Milestone Cards) ══ */
+    .honours-mobile-cards {
+      display: none;
+    }
+
+    .honour-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.95rem 1rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .honour-card:hover {
+      border-color: rgba(245, 158, 11, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .honour-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .honour-card-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .honour-card-rank {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', monospace;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--amber);
+    }
+
+    .honour-card-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .honour-card-player {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.25;
+    }
+
+    .honour-card-vs {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .honour-card-vs i {
+      color: var(--amber);
+      font-size: 0.72rem;
+    }
+
+    .honour-card-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+
+    .honour-card-record {
+      font-family: 'Orbitron', monospace;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1.1;
+      text-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+    }
+
+    .honour-card-record-lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 2px;
+    }
+
+    .honour-card-badge-hattrick {
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-family: 'Orbitron', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .honour-card-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.07);
+      margin: 0.75rem 0 0.65rem 0;
+      width: 100%;
+    }
+
+    .honour-card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    .honour-card-meta {
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .honour-card-pills {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .honour-card-league {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .honour-card-season {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--amber);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    /* ══ EMPTY STATE ══ */
     .empty-state {
       text-align: center;
       padding: 4rem 2rem;
@@ -226,7 +488,69 @@
       color: var(--muted);
       font-size: 0.85rem;
     }
+
+    /* ══ RESPONSIVE ADJUSTMENTS ══ */
+    @media (max-width: 768px) {
+      .section.page-top-padding {
+        padding-top: 75px !important;
+        padding-bottom: 2rem !important;
+      }
+
+      .honours-header {
+        margin-bottom: 1.25rem;
+      }
+
+      .honours-title {
+        font-size: 2.4rem;
+      }
+
+      .honours-desc {
+        display: none;
+      }
+
+      .tabs-row {
+        display: none !important;
+      }
+
+      .mobile-tab-select {
+        display: block !important;
+      }
+
+      .filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .filter-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .filter-select {
+        flex: 1;
+        max-width: 180px;
+      }
+
+      .search-box {
+        max-width: 100%;
+      }
+
+      .honours-desktop-table {
+        display: none !important;
+      }
+
+      .honours-mobile-cards {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
   </style>
+
 </head>
 
 <body>
@@ -274,37 +598,46 @@
         </a>
     </div>
 
-  <section class="section page-top-padding">
+  <section class="section honours-page-section page-top-padding">
     <div class="container">
-      <div class="tabs-row" id="honoursTabs">
-        <button class="tab-btn active" onclick="switchCategory('century', this)">Centuries (100+)</button>
-        <button class="tab-btn" onclick="switchCategory('half-century', this)">Half-Centuries 50+</button>
-        <button class="tab-btn" onclick="switchCategory('five-wickets', this)">5 Wicket Haul</button>
-        <button class="tab-btn" onclick="switchCategory('midweek-30', this)">Midweek Batting (30+)</button>
-        <button class="tab-btn" onclick="switchCategory('midweek-3w', this)">Midweek Bowling (3+ Wkts)</button>
-        <button class="tab-btn" onclick="switchCategory('hat-trick', this)">Hat-Tricks</button>
+      <div class="honours-header">
+        <div class="honours-pre"><i class="fa-solid fa-award"></i> ARCHES CC</div>
+        <h1 class="honours-title">HONOURS BOARD</h1>
+        <p class="honours-desc">Individual milestones, centuries, five-wicket hauls, and hat-tricks across all competitive matches.</p>
       </div>
 
-      <select class="mobile-tab-select" onchange="switchCategory(this.value, null)">
-        <option value="century">Centuries (100+)</option>
-        <option value="half-century">Half-Centuries 50+</option>
-        <option value="five-wickets">5 Wicket Haul</option>
-        <option value="midweek-30">Midweek Batting (30+)</option>
-        <option value="midweek-3w">Midweek Bowling (3+ Wkts)</option>
-        <option value="hat-trick">Hat-Tricks</option>
+      <div class="tabs-row" id="honoursTabs">
+        <button class="tab-btn active" data-cat="century" onclick="switchCategory('century', this)"><i class="fa-solid fa-crown" style="margin-right: 6px;"></i> Centuries (100+)</button>
+        <button class="tab-btn" data-cat="half-century" onclick="switchCategory('half-century', this)"><i class="fa-solid fa-medal" style="margin-right: 6px;"></i> Half-Centuries (50+)</button>
+        <button class="tab-btn" data-cat="five-wickets" onclick="switchCategory('five-wickets', this)"><i class="fa-solid fa-fire" style="margin-right: 6px;"></i> 5 Wicket Haul</button>
+        <button class="tab-btn" data-cat="midweek-30" onclick="switchCategory('midweek-30', this)"><i class="fa-solid fa-bolt" style="margin-right: 6px;"></i> Midweek Batting (30+)</button>
+        <button class="tab-btn" data-cat="midweek-3w" onclick="switchCategory('midweek-3w', this)"><i class="fa-solid fa-baseball-bat-ball" style="margin-right: 6px;"></i> Midweek Bowling (3+ Wkts)</button>
+        <button class="tab-btn" data-cat="hat-trick" onclick="switchCategory('hat-trick', this)"><i class="fa-solid fa-wand-magic-sparkles" style="margin-right: 6px;"></i> Hat-Tricks</button>
+      </div>
+
+      <select class="mobile-tab-select" id="mobileHonoursSelect" onchange="switchCategory(this.value, null)">
+        <option value="century">👑 Centuries (100+)</option>
+        <option value="half-century">🎖️ Half-Centuries (50+)</option>
+        <option value="five-wickets">🔥 5 Wicket Haul</option>
+        <option value="midweek-30">⚡ Midweek Batting (30+)</option>
+        <option value="midweek-3w">🎯 Midweek Bowling (3+ Wkts)</option>
+        <option value="hat-trick">✨ Hat-Tricks</option>
       </select>
 
       <div class="filters-bar">
         <div class="filter-group">
           <select id="seasonFilter" class="filter-select" onchange="filterData()">
-            <option value="all">All Seasons</option>
+            <option value="all" selected>All Seasons</option>
             <option value="2026">2026 Season</option>
             <option value="2025">2025 Season</option>
           </select>
+          <div id="recordCountBadge" class="record-count-badge">
+            0 Milestones
+          </div>
         </div>
         <div class="search-box">
-          <i class="fa-solid fa-search"></i>
-          <input type="text" id="searchInput" placeholder="Search Player Name..." aria-label="Search by player name" oninput="filterData()">
+          <i class="fa-solid fa-search search-icon"></i>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search Player Name..." aria-label="Search by player name" oninput="filterData()">
         </div>
       </div>
 
@@ -313,6 +646,8 @@
       </div>
     </div>
   </section>
+
+
 
   <footer id="footer">
     <div class="container">

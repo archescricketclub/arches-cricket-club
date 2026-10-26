@@ -274,23 +274,6 @@
             display: none !important;
         }
 
-        .pc-horiz-badge {
-            align-self: flex-start;
-            font-size: 0.62rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: var(--gold);
-            background: rgba(250, 204, 21, 0.1);
-            border: 1px solid rgba(250, 204, 21, 0.28);
-            border-radius: 12px;
-            padding: 2px 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            margin-bottom: 0.6rem;
-        }
-
         .pc-card-top {
             display: flex;
             align-items: center;
@@ -364,18 +347,6 @@
             color: var(--amber);
             line-height: 1;
             letter-spacing: 0.5px;
-        }
-
-        .pc-card-arrow {
-            color: #64748b;
-            font-size: 0.85rem;
-            margin-left: 2px;
-            transition: transform 0.2s, color 0.2s;
-        }
-
-        .pc.pc-card-horizontal:hover .pc-card-arrow {
-            color: var(--amber);
-            transform: translateX(2px);
         }
 
         .pc-card-divider {
@@ -686,25 +657,56 @@
             </div>
 
             <div class="team-tabs" id="teamTabs">
-                <button class="team-tab active" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
+                <button class="team-tab active" onclick="switchTeam('career',this)">All-Time Career Stats</button>
+                <button class="team-tab" onclick="switchTeam('t1',this)">Team 1 · Senior League</button>
                 <button class="team-tab" onclick="switchTeam('t2',this)">Team 2 · Junior League</button>
                 <button class="team-tab" onclick="switchTeam('mw',this)">Midweek League</button>
                 <button class="team-tab" onclick="switchTeam('cup',this)">Cup Matches</button>
                 <button class="team-tab" onclick="switchTeam('all',this)">All Players</button>
-                <button class="team-tab" onclick="switchTeam('career',this)">All-Time Career Stats</button>
             </div>
 
             <select class="mobile-tab-select" onchange="switchTeam(this.value, null)">
+                <option value="career" selected>All-Time Career Stats</option>
                 <option value="t1">Team 1 · Senior League</option>
                 <option value="t2">Team 2 · Junior League</option>
                 <option value="mw">Midweek League</option>
                 <option value="cup">Cup Matches</option>
                 <option value="all">All Players</option>
-                <option value="career">All-Time Career Stats</option>
             </select>
 
+            <!-- ══ ALL-TIME CAREER STATS (DEFAULT) ══ -->
+            <div class="team-panel active" id="panel-career">
+                <div style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+                    <div>
+                        <p id="careerStatsDesc" style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
+                    </div>
+                    <div style="display:flex; gap:1rem; align-items:center;">
+                        <select id="careerSeasonFilter" class="sort-filter" onchange="filterCareerStats()">
+                            <option value="all">All-Time (Merged)</option>
+                            <option value="2026">2026 Season Only</option>
+                            <option value="2025">2025 Season Only</option>
+                        </select>
+                        <select id="careerSortFilter" class="sort-filter" onchange="sortCareerStats()">
+                            <option value="">Sort By</option>
+                            <option value="az">A - Z</option>
+                            <option value="za">Z - A</option>
+                            <option value="runs">Runs</option>
+                            <option value="matches">Matches</option>
+                            <option value="hs">Highest Score</option>
+                            <option value="wickets">Wickets</option>
+                            <option value="bestfig">Best Fig</option>
+                        </select>
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="careerSearchInput" placeholder="Search player name..." aria-label="Search by player name" oninput="filterCareerStats()">
+                        </div>
+                    </div>
+                </div>
+                <div class="squad-grid" id="career-roster"></div>
+            </div>
+
             <!-- ══ TEAM 1 ══ -->
-            <div class="team-panel active" id="panel-t1">
+            <div class="team-panel" id="panel-t1">
 
                 <div class="cat-block cat-bat">
                     <div class="cat-header">
@@ -840,37 +842,7 @@
                 <div class="squad-grid" id="all-roster"></div>
             </div>
 
-            <!-- ALL-TIME CAREER STATS -->
-            <div class="team-panel" id="panel-career">
-                <div style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
-                    <div>
-                        <p id="careerStatsDesc" style="color:var(--muted);font-size:.9rem; margin:0;">All-Time Career Stats since 2025 (merged 2025 & 2026 seasons).</p>
-                    </div>
-                    <div style="display:flex; gap:1rem; align-items:center;">
-                        <select id="careerSeasonFilter" class="sort-filter" onchange="filterCareerStats()">
-                            <option value="all">All-Time (Merged)</option>
-                            <option value="2026">2026 Season Only</option>
-                            <option value="2025">2025 Season Only</option>
-                        </select>
-                        <select id="careerSortFilter" class="sort-filter" onchange="sortCareerStats()">
-                            <option value="">Sort By</option>
-                            <option value="az">A - Z</option>
-                            <option value="za">Z - A</option>
-                            <option value="runs">Runs</option>
-                            <option value="matches">Matches</option>
-                            <option value="hs">Highest Score</option>
-                            <option value="wickets">Wickets</option>
-                            <option value="bestfig">Best Fig</option>
-                        </select>
-                        <div class="search-box">
-                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                            <input type="text" id="careerSearchInput" placeholder="Search player name..." aria-label="Search by player name" oninput="filterCareerStats()">
-                            <i class="fa-solid fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="squad-grid" id="career-roster"></div>
-            </div>
+
 
             <div
                 style="margin-top:3rem;padding:2rem;background:var(--panel2);border:1px solid var(--border);border-radius:14px;text-align:center;">

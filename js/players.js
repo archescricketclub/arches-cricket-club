@@ -314,7 +314,6 @@ function switchPlayerSeason(season) {
 /* ─── RENDER PLAYER CARDS ────────────────────────────────────────── */
 function makeCard(p, idx, isExpanded = false, categoryType = '') {
     const hidden = (!isExpanded && idx >= 5) ? 'hidden' : '';
-    const badgeHtml = p.badge ? `<div class="pc-horiz-badge"><i class="fa-solid fa-crown"></i> ${escapeHTML(p.badge)}</div>` : '';
 
     const getStat = (label) => {
         const s = (p.stats || []).find(x => x.l === label);
@@ -367,7 +366,6 @@ function makeCard(p, idx, isExpanded = false, categoryType = '') {
 
     return `
     <div class="pc pc-card-horizontal ${hidden}">
-        ${badgeHtml}
         <div class="pc-card-top">
             <div class="pc-card-left">
                 <div class="pc-jersey-badge">${escapeHTML(p.jersey || '#—')}</div>
@@ -378,7 +376,6 @@ function makeCard(p, idx, isExpanded = false, categoryType = '') {
             </div>
             <div class="pc-card-right">
                 <div class="pc-primary-stat">${escapeHTML(primaryVal)}</div>
-                <i class="fa-solid fa-chevron-right pc-card-arrow"></i>
             </div>
         </div>
         <div class="pc-card-divider"></div>
@@ -536,7 +533,6 @@ function renderRoster() {
                 <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.75rem;font-weight:700;color:var(--emerald);background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);border-radius:20px;padding:3px 10px;">
                     <i class="fa-solid fa-circle" style="font-size:0.45rem;"></i> Active
                 </span>
-                <i class="fa-solid fa-chevron-right pc-card-arrow"></i>
             </div>
         </div>
         <div class="pc-card-divider"></div>
@@ -593,7 +589,6 @@ function renderCareerStats(filteredList = null) {
                 </div>
                 <div class="pc-card-right">
                     <div class="pc-primary-stat">${primaryStat}</div>
-                    <i class="fa-solid fa-chevron-right pc-card-arrow"></i>
                 </div>
             </div>
             <div class="pc-card-divider"></div>
@@ -715,6 +710,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const b = document.querySelector(".team-tab[onclick*='" + t + "']");
         if (b) switchTeam(t, b);
         else switchTeam(t);
+    } else {
+        switchTeam('career');
     }
     initData();
 });

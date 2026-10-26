@@ -18,11 +18,24 @@ async function loadHonours() {
 }
 
 function switchCategory(cat, btn) {
-  if (btn) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  currentCategory = cat;
+
+  // Sync desktop tabs
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    const bCat = b.getAttribute('data-cat') || (b.getAttribute('onclick')?.match(/switchCategory\('([^']+)'/)?.[1]);
+    if (bCat === cat) {
+      b.classList.add('active');
+    } else {
+      b.classList.remove('active');
+    }
+  });
+
+  // Sync mobile select dropdown
+  const mobSelect = document.getElementById('mobileHonoursSelect');
+  if (mobSelect && mobSelect.value !== cat) {
+    mobSelect.value = cat;
   }
-  currentCategory = cat; 
+
   if (window.history.replaceState) { 
     window.history.replaceState(null, null, '#' + cat); 
   } else { 
@@ -50,8 +63,8 @@ function parseDate(dateStr) {
 }
 
 function filterData() {
-  const season = document.getElementById('seasonFilter').value;
-  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+  const season = document.getElementById('seasonFilter')?.value || 'all';
+  const search = document.getElementById('searchInput')?.value.toLowerCase().trim() || '';
   const grid = document.getElementById('honoursGrid');
   if (!grid) return;
 
@@ -63,7 +76,13 @@ function filterData() {
     return matchCat && matchSeason && matchSearch;
   });
 
-  // Sort by date oldest to newest (ascending), then by record descending
+  // Update badge count
+  const badge = document.getElementById('recordCountBadge');
+  if (badge) {
+    badge.innerHTML = `<i class="fa-solid fa-award" style="color:var(--amber);margin-right:4px;"></i> ${filtered.length} Milestone${filtered.length === 1 ? '' : 's'}`;
+  }
+
+  // Sort by date newest to oldest (descending) or chronological
   filtered.sort((a, b) => {
     const dA = parseDate(a.date);
     const dB = parseDate(b.date);
@@ -99,8 +118,9 @@ function filterData() {
   const isHatTrick = currentCategory === 'hat-trick';
   const recordHeader = isBowling ? 'Figures' : 'Score';
 
-  let tableHTML = `
-    <div class="honours-table-container">
+  // Desktop Table HTML
+  let desktopTableHTML = `
+    <div class="honours-desktop-table">
       <table class="honours-table">
         <thead>
           <tr>
@@ -115,34 +135,75 @@ function filterData() {
         <tbody>
   `;
 
-  tableHTML += filtered.map((item, index) => {
+  desktopTableHTML += filtered.map((item, index) => {
     const opp = (item.opponent || 'Opposition TBD').replace(/^vs\.?\s+/i, '');
     return `
       <tr>
-        <td class="table-sno" data-label="S.No">${index + 1}</td>
-        <td class="table-player" data-label="Player Name">${escapeHTML(item.name)}</td>
-        ${!isHatTrick ? `<td class="table-record" data-label="${escapeHTML(recordHeader)}">${escapeHTML(item.record)}</td>` : ''}
-        <td class="table-opp" data-label="Opposition">vs ${escapeHTML(opp)}</td>
-        <td class="table-date" data-label="Date">${escapeHTML(item.date || 'Date TBD')}</td>
-        <td class="table-league" data-label="League">${escapeHTML(item.league || 'League TBD')}</td>
+        <td class="table-sno">#${index + 1}</td>
+        <td class="table-player">${escapeHTML(item.name)}</td>
+        ${!isHatTrick ? `<td class="table-record">${escapeHTML(item.record)}</td>` : ''}
+        <td class="table-opp">vs ${escapeHTML(opp)}</td>
+        <td class="table-date">${escapeHTML(item.date || 'Date TBD')}</td>
+        <td class="table-league"><span style="color:#cbd5e1;">${escapeHTML(item.league || 'Arches CC')}</span> <span style="color:var(--amber);margin-left:4px;font-size:0.75rem;">(${escapeHTML(item.season || '2025')})</span></td>
       </tr>
     `;
   }).join('');
 
-  tableHTML += `
+  desktopTableHTML += `
         </tbody>
       </table>
     </div>
   `;
 
-  grid.innerHTML = tableHTML;
+  // Mobile Cards HTML (Zero horizontal scroll, responsive athletic cards)
+  let mobileCardsHTML = `
+    <div class="honours-mobile-cards">
+  `;
+
+  mobileCardsHTML += filtered.map((item, index) => {
+    const opp = (item.opponent || 'Opposition TBD').replace(/^vs\.?\s+/i, '');
+    return `
+      <div class="honour-card">
+        <div class="honour-card-top">
+          <div class="honour-card-left">
+            <div class="honour-card-rank">#${index + 1}</div>
+            <div class="honour-card-info">
+              <div class="honour-card-player">${escapeHTML(item.name)}</div>
+              <div class="honour-card-vs"><i class="fa-solid fa-shield-halved"></i> vs ${escapeHTML(opp)}</div>
+            </div>
+          </div>
+          <div class="honour-card-right">
+            ${!isHatTrick ? `
+              <div class="honour-card-record">${escapeHTML(item.record)}</div>
+              <div class="honour-card-record-lbl">${isBowling ? 'FIGURES' : 'RUNS'}</div>
+            ` : `
+              <div class="honour-card-badge-hattrick"><i class="fa-solid fa-wand-magic-sparkles"></i> HAT-TRICK</div>
+            `}
+          </div>
+        </div>
+        <div class="honour-card-divider"></div>
+        <div class="honour-card-bottom">
+          <div class="honour-card-meta"><i class="fa-regular fa-calendar"></i> ${escapeHTML(item.date || 'Date TBD')}</div>
+          <div class="honour-card-pills">
+            <span class="honour-card-league">${escapeHTML(item.league || 'Arches CC')}</span>
+            <span class="honour-card-season">${escapeHTML(item.season || '2025')}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  mobileCardsHTML += `
+    </div>
+  `;
+
+  grid.innerHTML = desktopTableHTML + mobileCardsHTML;
 }
 
 document.addEventListener('DOMContentLoaded', () => { 
   if (window.location.hash) { 
     const cat = window.location.hash.substring(1); 
-    const btn = document.querySelector(".tab-btn[onclick*='" + cat + "']"); 
-    if (btn) { switchCategory(cat, btn); } else { switchCategory(cat); } 
+    switchCategory(cat); 
   } 
   loadHonours(); 
 });
