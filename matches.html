@@ -72,14 +72,14 @@
         
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
           <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <label for="seasonSelect" style="color: var(--amber); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px; font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-calendar" style="margin-right: 6px;"></i> Season Archive:</label>
+            <label for="seasonSelect" style="color: var(--amber); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px; font-size: 1.15rem; margin: 0;"><i class="fa-solid fa-calendar" style="margin-right: 6px;"></i> Season:</label>
             <select id="seasonSelect" class="form-select" style="width: auto; padding: 0.45rem 2.2rem 0.45rem 1rem; background: var(--panel); border: 1px solid var(--border-accent); border-radius: 30px; color: var(--text); font-weight: 600; font-size: 0.85rem; cursor: pointer;" onchange="switchSeason(this.value)">
-              <option value="2026" selected>2026 Season (Current)</option>
-              <option value="2025">2025 Season (Archive)</option>
+              <option value="2026" selected>2026 Season</option>
+              <option value="2025">2025 Season</option>
             </select>
           </div>
           <div id="archiveBadge" style="display: none; align-items: center; gap: 6px; padding: 0.4rem 1rem; background: rgba(245, 158, 11, 0.12); border: 1px solid var(--border-accent); border-radius: 20px; font-size: 0.78rem; color: var(--amber); font-weight: 600;">
-            <i class="fa-solid fa-box-archive"></i> Viewing 2025 Completed Season Archive
+            <i class="fa-solid fa-clock-rotate-left"></i> Viewing 2025 Season
           </div>
         </div>
         <div class="matches-nav-row">

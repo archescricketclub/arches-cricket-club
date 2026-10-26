@@ -161,58 +161,58 @@ ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = 
 
 -- B. 2025 SEASON MATCHES (54 matches - Archived Season)
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, 'TBD', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Dungannon 1st XI', 'TBC, TBC', 'scheduled', NULL, NULL)
+VALUES ('2025', true, 'TBD', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Dungannon 1st XI', 'TBC, TBC', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, 'SUN 12 JUL', 'Junior League 10', 'Arches 2nd XI', 'Amigos Belfast 3rd XI', 'Arches 2nd XI', 'TBC, TBC', 'scheduled', NULL, NULL)
+VALUES ('2025', true, 'SUN 12 JUL', 'Junior League 10', 'Arches 2nd XI', 'Amigos Belfast 3rd XI', 'Arches 2nd XI', 'TBC, TBC', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, 'TBD', 'Midweek League', 'Arches Midweek XI', 'Muckamore MW2 XI', 'Arches MW XI', 'Moylena, Muckamore', 'scheduled', NULL, NULL)
+VALUES ('2025', true, 'TBD', 'Midweek League', 'Arches Midweek XI', 'Muckamore MW2 XI', 'Arches MW XI', 'Moylena, Muckamore', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, 'TBD', 'Midweek League', 'Arches Midweek XI', 'Arches MW XI', 'Dunmurry MW2 XI', 'TBC, TBC', 'scheduled', NULL, NULL)
+VALUES ('2025', true, 'TBD', 'Midweek League', 'Arches Midweek XI', 'Arches MW XI', 'Dunmurry MW2 XI', 'TBC, TBC', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '4th July', 'Senior League 3', 'Arches 1st XI', 'Ards & Donaghadee', 'Arches 1st XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '4th July', 'Senior League 3', 'Arches 1st XI', 'Ards & Donaghadee', 'Arches 1st XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '18th July', 'Senior League 3', 'Arches 1st XI', 'Arches 1st XI', 'Belfast Superkings', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '18th July', 'Senior League 3', 'Arches 1st XI', 'Arches 1st XI', 'Belfast Superkings', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '1st August', 'Senior League 3', 'Arches 1st XI', 'Arches 1st XI', 'NIMACC', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '1st August', 'Senior League 3', 'Arches 1st XI', 'Arches 1st XI', 'NIMACC', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '8th August', 'Senior League 3', 'Arches 1st XI', 'Dundrum', 'Arches 1st XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '8th August', 'Senior League 3', 'Arches 1st XI', 'Dundrum', 'Arches 1st XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '5th July', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Dungannon', 'Victoria Park, Belfast', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '5th July', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Dungannon', 'Victoria Park, Belfast', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '12th July', 'Junior League 10', 'Arches 2nd XI', 'Amigos Belfast 3', 'Arches 2nd XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '12th July', 'Junior League 10', 'Arches 2nd XI', 'Amigos Belfast 3', 'Arches 2nd XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '19th July', 'Junior League 10', 'Arches 2nd XI', 'Downpatrick 3', 'Arches 2nd XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '19th July', 'Junior League 10', 'Arches 2nd XI', 'Downpatrick 3', 'Arches 2nd XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '26th July', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Ardent Blues 4', 'Victoria Park, Belfast', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '26th July', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Ardent Blues 4', 'Victoria Park, Belfast', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '9th August', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Cooke Collegians 4', 'Victoria Park, Belfast', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '9th August', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Cooke Collegians 4', 'Victoria Park, Belfast', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '23rd August', 'Junior League 10', 'Arches 2nd XI', 'Belfast Superkings 2', 'Arches 2nd XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '23rd August', 'Junior League 10', 'Arches 2nd XI', 'Belfast Superkings 2', 'Arches 2nd XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '29th August', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Belfast Superkings 3', 'Victoria Park, Belfast', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '29th August', 'Junior League 10', 'Arches 2nd XI', 'Arches 2nd XI', 'Belfast Superkings 3', 'Victoria Park, Belfast', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '8th July', 'Midweek League', 'Arches Midweek XI', 'Muckamore 2', 'Arches MW XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '8th July', 'Midweek League', 'Arches Midweek XI', 'Muckamore 2', 'Arches MW XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '14th July', 'Midweek League', 'Arches Midweek XI', 'Arches MW XI', 'Dunmurry 2', 'Victoria Park, Belfast', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '14th July', 'Midweek League', 'Arches Midweek XI', 'Arches MW XI', 'Dunmurry 2', 'Victoria Park, Belfast', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
-VALUES ('2025', true, '22nd July', 'Midweek League', 'Arches Midweek XI', 'CSNI', 'Arches MW XI', 'TBD', 'scheduled', NULL, NULL)
+VALUES ('2025', true, '22nd July', 'Midweek League', 'Arches Midweek XI', 'CSNI', 'Arches MW XI', 'TBD', 'completed', 'Completed (No Result)', 'No Result')
 ON CONFLICT (season, date_display, home_team, away_team) DO UPDATE SET result = EXCLUDED.result, status = EXCLUDED.status, winner = EXCLUDED.winner;
 INSERT INTO public.matches (season, is_archived, date_display, league, team, home_team, away_team, venue, status, result, winner)
 VALUES ('2025', true, 'SAT 27 JUN', 'Senior League 3', 'Arches 1st XI', 'Arches 1st XI', 'Victoria 1st XI', 'Lurgan Park, Lurgan', 'completed', 'Victoria 1st XI won by 8 wickets', 'Opponent')

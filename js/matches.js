@@ -89,6 +89,7 @@ function toggleMatchesMode(mode, btn) {
   if (mode === 'results') {
     if (stats) stats.style.display = 'grid';
     if (venue) venue.style.display = 'none';
+    updateStatsSummary();
   } else {
     if (stats) stats.style.display = 'none';
     if (venue) venue.style.display = 'flex';
@@ -102,16 +103,25 @@ function filterMatches(league, btn) {
     btn.classList.add('active');
   }
   currentLeague = league;
+  updateStatsSummary();
   renderMatches();
 }
 
 function getLeagueKey(leagueName) {
   const ln = (leagueName || '').toLowerCase();
-  if (ln.includes('senior league') || ln.includes('senior') || ln.includes('1st')) return 'team1';
-  if (ln.includes('junior league') || ln.includes('junior') || ln.includes('2nd')) return 'team2';
-  if (ln.includes('midweek')) return 'midweek';
   if (ln.includes('cup') || ln.includes('shield')) return 'cups';
+  if (ln.includes('midweek')) return 'midweek';
+  if (ln.includes('senior') || ln.includes('1st')) return 'team1';
+  if (ln.includes('junior') || ln.includes('2nd')) return 'team2';
   return 'other';
+}
+
+function updateStatsSummary() {
+  let relevantResults = allResults;
+  if (currentLeague !== 'all') {
+    relevantResults = allResults.filter(match => getLeagueKey(match.league) === currentLeague);
+  }
+  calculateStats(relevantResults);
 }
 
 function calculateStats(results) {
@@ -122,11 +132,11 @@ function calculateStats(results) {
   results.forEach(match => {
     const homeLower = (match.homeTeam || '').toLowerCase();
     const awayLower = (match.awayTeam || '').toLowerCase();
-    const involvesArches = homeLower.includes('arches') || awayLower.includes('arches') || (match.result || '').toLowerCase().includes('arches');
+    const resLower = (match.result || '').toLowerCase();
+    const involvesArches = homeLower.includes('arches') || awayLower.includes('arches') || resLower.includes('arches');
     if (!involvesArches) return;
     
-    const resLower = (match.result || '').toLowerCase();
-    const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed'];
+    const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)'];
     let isNoResult = noResultKeywords.some(k => resLower.includes(k));
     
     let isWin = false;
@@ -200,7 +210,7 @@ function renderMatches() {
     if (currentMode === 'fixtures') {
       container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
         <h3 style="color:var(--text); margin-bottom: 0.5rem;">No Fixtures found</h3>
-        <p style="color:var(--muted);">${selectedSeason === '2025' ? 'All 2025 matches have completed and moved to results archive.' : 'There are no upcoming fixtures scheduled for this selection.'}</p>
+        <p style="color:var(--muted);">${selectedSeason === '2025' ? 'The 2025 season has completed. All match results are recorded in the Results tab.' : 'There are no upcoming fixtures scheduled for this selection.'}</p>
       </div>`;
     } else {
       container.innerHTML = `<div class="glass-card" style="padding:3rem; text-align:center;">
@@ -246,7 +256,8 @@ function renderMatches() {
     matches.forEach(match => {
       const homeLower = (match.homeTeam || '').toLowerCase();
       const awayLower = (match.awayTeam || '').toLowerCase();
-      const involvesArches = homeLower.includes('arches') || awayLower.includes('arches') || (match.result || '').toLowerCase().includes('arches');
+      const resLower = (match.result || '').toLowerCase();
+      const involvesArches = homeLower.includes('arches') || awayLower.includes('arches') || resLower.includes('arches');
       
       const safeHome = escapeHTML(match.homeTeam || 'TBA');
       const safeAway = escapeHTML(match.awayTeam || 'TBA');
@@ -261,8 +272,7 @@ function renderMatches() {
 
       if (currentMode === 'results') {
         let resultSpan = '';
-        const resLower = (match.result || '').toLowerCase();
-        const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed'];
+        const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)'];
         let isNoResult = noResultKeywords.some(k => resLower.includes(k));
         let isWin = false;
         let isLoss = false;
@@ -331,8 +341,8 @@ function switchSeason(season) {
     badge.style.display = (season === '2025') ? 'inline-flex' : 'none';
   }
   
-  // If viewing archive, default to results view
-  if (season === '2025' && currentMode === 'fixtures') {
+  // If viewing 2025 (completed season), default to results view
+  if (season === '2025') {
     currentMode = 'results';
     document.querySelectorAll('.matches-pill').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.mode === 'results');
@@ -343,6 +353,7 @@ function switchSeason(season) {
 }
 
 async function loadData(season = selectedSeason) {
+  selectedSeason = season;
   const container = document.getElementById('matches-content');
   if (container) {
     container.innerHTML = `<div class="loading-state"><div class="spinner"></div><p style="color:var(--muted);font-size:0.9rem;">Loading ${season} matches...</p></div>`;
@@ -358,23 +369,36 @@ async function loadData(season = selectedSeason) {
         .select('*')
         .eq('season', season);
       if (!error && data && data.length > 0) {
-        const fixtures = data.filter(m => m.status === 'scheduled').map(m => ({
-          date: m.date_display,
-          league: m.league,
-          homeTeam: m.home_team,
-          awayTeam: m.away_team,
-          venue: m.venue,
-          result: m.result
-        }));
-        const results = data.filter(m => m.status === 'completed').map(m => ({
-          date: m.date_display,
-          league: m.league,
-          homeTeam: m.home_team,
-          awayTeam: m.away_team,
-          venue: m.venue,
-          result: m.result
-        }));
-        seasonData = { fixtures, results };
+        if (season === '2025') {
+          // 2025 is a completed season: all matches are in results
+          const results = data.map(m => ({
+            date: m.date_display,
+            league: m.league,
+            homeTeam: m.home_team,
+            awayTeam: m.away_team,
+            venue: m.venue,
+            result: m.result || 'Completed (No Result)'
+          }));
+          seasonData = { fixtures: [], results };
+        } else {
+          const fixtures = data.filter(m => m.status === 'scheduled').map(m => ({
+            date: m.date_display,
+            league: m.league,
+            homeTeam: m.home_team,
+            awayTeam: m.away_team,
+            venue: m.venue,
+            result: m.result
+          }));
+          const results = data.filter(m => m.status === 'completed').map(m => ({
+            date: m.date_display,
+            league: m.league,
+            homeTeam: m.home_team,
+            awayTeam: m.away_team,
+            venue: m.venue,
+            result: m.result
+          }));
+          seasonData = { fixtures, results };
+        }
       }
     } catch (err) {
       console.warn('[Matches] Supabase query error, fallback to JSON:', err);
@@ -402,10 +426,24 @@ async function loadData(season = selectedSeason) {
     }
   }
 
+  // If season is 2025, guarantee that any fixture items in JSON are merged into results
+  if (season === '2025' && seasonData.fixtures && seasonData.fixtures.length > 0) {
+    const extraResults = seasonData.fixtures.map(f => ({
+      date: f.date,
+      league: f.league,
+      homeTeam: f.homeTeam,
+      awayTeam: f.awayTeam,
+      venue: f.venue,
+      result: f.result || 'Completed (No Result)'
+    }));
+    seasonData.results = [...(seasonData.results || []), ...extraResults];
+    seasonData.fixtures = [];
+  }
+
   allFixtures = sortMatches(seasonData.fixtures || [], false);
   allResults = sortMatches(seasonData.results || [], true);
 
-  calculateStats(allResults);
+  updateStatsSummary();
 
   if (window.location.hash === '#results') {
     currentMode = 'results';

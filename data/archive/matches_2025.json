@@ -1,170 +1,7 @@
 {
   "season": "2025",
   "isArchived": true,
-  "fixtures": [
-    {
-      "date": "TBD",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Dungannon 1st XI",
-      "venue": "TBC, TBC",
-      "result": null
-    },
-    {
-      "date": "SUN 12 JUL",
-      "time": "SUN\n12 JUL",
-      "league": "Junior League 10",
-      "homeTeam": "Amigos Belfast 3rd XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBC, TBC",
-      "result": null
-    },
-    {
-      "date": "TBD",
-      "time": "",
-      "league": "Midweek League",
-      "homeTeam": "Muckamore MW2 XI",
-      "awayTeam": "Arches MW XI",
-      "venue": "Moylena, Muckamore",
-      "result": null
-    },
-    {
-      "date": "TBD",
-      "time": "",
-      "league": "Midweek League",
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Dunmurry MW2 XI",
-      "venue": "TBC, TBC",
-      "result": null
-    },
-    {
-      "date": "4th July",
-      "time": "11:00 AM",
-      "league": "Senior League 3",
-      "homeTeam": "Ards & Donaghadee",
-      "awayTeam": "Arches 1st XI",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "18th July",
-      "time": "11:00 AM",
-      "league": "Senior League 3",
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Belfast Superkings",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "1st August",
-      "time": "11:00 AM",
-      "league": "Senior League 3",
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "NIMACC",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "8th August",
-      "time": "11:00 AM",
-      "league": "Senior League 3",
-      "homeTeam": "Dundrum",
-      "awayTeam": "Arches 1st XI",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "5th July",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Dungannon",
-      "venue": "Victoria Park, Belfast",
-      "result": null
-    },
-    {
-      "date": "12th July",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Amigos Belfast 3",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "19th July",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Downpatrick 3",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "26th July",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Ardent Blues 4",
-      "venue": "Victoria Park, Belfast",
-      "result": null
-    },
-    {
-      "date": "9th August",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Cooke Collegians 4",
-      "venue": "Victoria Park, Belfast",
-      "result": null
-    },
-    {
-      "date": "23rd August",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Belfast Superkings 2",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "29th August",
-      "time": "11:00 AM",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Belfast Superkings 3",
-      "venue": "Victoria Park, Belfast",
-      "result": null
-    },
-    {
-      "date": "8th July",
-      "time": "11:00 AM",
-      "league": "Midweek League",
-      "homeTeam": "Muckamore 2",
-      "awayTeam": "Arches MW XI",
-      "venue": "TBD",
-      "result": null
-    },
-    {
-      "date": "14th July",
-      "time": "11:00 AM",
-      "league": "Midweek League",
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Dunmurry 2",
-      "venue": "Victoria Park, Belfast",
-      "result": null
-    },
-    {
-      "date": "22nd July",
-      "time": "11:00 AM",
-      "league": "Midweek League",
-      "homeTeam": "CSNI",
-      "awayTeam": "Arches MW XI",
-      "venue": "TBD",
-      "result": null
-    }
-  ],
+  "fixtures": [],
   "results": [
     {
       "date": "SAT 27 JUN",
@@ -489,6 +326,168 @@
       "awayTeam": "Arches 2nd XI",
       "venue": "TBC, TBC",
       "result": "Arches 2nd XI won by 5 wickets"
+    },
+    {
+      "date": "TBD",
+      "time": "",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dungannon 1st XI",
+      "venue": "TBC, TBC",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "SUN 12 JUL",
+      "time": "SUN\n12 JUL",
+      "league": "Junior League 10",
+      "homeTeam": "Amigos Belfast 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBC, TBC",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "TBD",
+      "time": "",
+      "league": "Midweek League",
+      "homeTeam": "Muckamore MW2 XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "Moylena, Muckamore",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "TBD",
+      "time": "",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "venue": "TBC, TBC",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "4th July",
+      "time": "11:00 AM",
+      "league": "Senior League 3",
+      "homeTeam": "Ards & Donaghadee",
+      "awayTeam": "Arches 1st XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "18th July",
+      "time": "11:00 AM",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "1st August",
+      "time": "11:00 AM",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "NIMACC",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "8th August",
+      "time": "11:00 AM",
+      "league": "Senior League 3",
+      "homeTeam": "Dundrum",
+      "awayTeam": "Arches 1st XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "5th July",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dungannon",
+      "venue": "Victoria Park, Belfast",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "12th July",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Amigos Belfast 3",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "19th July",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Downpatrick 3",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "26th July",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Ardent Blues 4",
+      "venue": "Victoria Park, Belfast",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "9th August",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Cooke Collegians 4",
+      "venue": "Victoria Park, Belfast",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "23rd August",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Belfast Superkings 2",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "29th August",
+      "time": "11:00 AM",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Belfast Superkings 3",
+      "venue": "Victoria Park, Belfast",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "8th July",
+      "time": "11:00 AM",
+      "league": "Midweek League",
+      "homeTeam": "Muckamore 2",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "14th July",
+      "time": "11:00 AM",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry 2",
+      "venue": "Victoria Park, Belfast",
+      "result": "Completed (No Result)"
+    },
+    {
+      "date": "22nd July",
+      "time": "11:00 AM",
+      "league": "Midweek League",
+      "homeTeam": "CSNI",
+      "awayTeam": "Arches MW XI",
+      "venue": "TBD",
+      "result": "Completed (No Result)"
     }
   ]
 }
