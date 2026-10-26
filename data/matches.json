@@ -1,267 +1,384 @@
 {
   "season": "2026",
-  "isArchived": false,
   "fixtures": [],
   "results": [
     {
-      "date": "31 August 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Belfast Superkings 3rd XI",
-      "venue": "Londonderry Park, Newtownards",
-      "result": "Arches 2nd XI won by 14 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/352374f9-2ac5-4f73-83f2-8052aabc3bac"
-    },
-    {
-      "date": "23 August 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Belfast Superkings 2nd XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBC, TBC",
-      "result": "Belfast Superkings 2nd XI won by 4 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/e33896a5-47ed-410d-9e77-3338fe016d58"
-    },
-    {
-      "date": "22 August 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
+      "date": "2 May 2026",
+      "league": "Senior League 3",
       "homeTeam": "Arches 1st XI",
-      "awayTeam": "Victoria 1st XI",
-      "venue": "TBC, TBC",
-      "result": "Victoria 1st XI won by 28 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/bb3eba57-6d27-41e4-acbc-49b938d4bd2c"
+      "awayTeam": "Ards & Donaghadee 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Ards & Donaghadee 1st XI won by 7 wickets",
+      "score": "Arches 84; Ards & Donaghadee 85-3"
     },
     {
-      "date": "15 August 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "Amigos Belfast 1st XI",
-      "venue": "City of Belfast Playing Fields (Amigos Belfast), Mallusk",
-      "result": "Arches 1st XI won by 113 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/ad23698e-75c0-402a-b50e-3e8a758b0e60"
-    },
-    {
-      "date": "9 August 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Cooke Collegians 4th XI",
-      "venue": "TBC, TBC",
-      "result": "Arches 2nd XI won by 64 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/2c050b03-9b65-4c04-90ca-5cea22ef166e"
-    },
-    {
-      "date": "8 August 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
-      "homeTeam": "Dundrum 1st XI",
+      "date": "17 May 2026",
+      "league": "Senior League 3",
+      "homeTeam": "NIMACC 1st XI",
       "awayTeam": "Arches 1st XI",
-      "venue": "The Meadow, Dundrum",
-      "result": "Dundrum 1st XI won by 80 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/a48b20db-a334-44bd-8c4d-c5d96743a69a"
+      "venue": "The Demesne, Saintfield",
+      "result": "NIMACC 1st XI won by 98 runs (DLS)",
+      "score": "NIMACC 258; Arches 88-6"
     },
     {
-      "date": "6 August 2026",
-      "time": "",
-      "league": "Midweek League Playoffs",
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Dunmurry MW2 XI",
-      "venue": "City of Belfast Playing Fields (Dunmurry), Mallusk",
-      "result": "Dunmurry MW2 XI won by 101 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/85f4dcb4-aea3-4acb-8c72-2d00a5272722"
-    },
-    {
-      "date": "2 August 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
-      "homeTeam": "Arches 1st XI",
-      "awayTeam": "NIMACC 1st XI",
-      "venue": "City of Belfast Playing Fields (NIMA), Mallusk",
-      "result": "Arches 1st XI won by 1 wicket",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/4d8f44b2-29e0-43b2-9fa3-c1d676a13ef6"
-    },
-    {
-      "date": "1 August 2026",
-      "time": "",
-      "league": "Development Cup",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Amigos Belfast 2nd XI",
-      "venue": "TBC, TBC",
-      "result": "Amigos Belfast 2nd XI won by 10 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/3a89fcf1-567b-4230-8e6d-eac41ef659eb"
-    },
-    {
-      "date": "29 July 2026",
-      "time": "",
-      "league": "Midweek League Playoffs",
-      "homeTeam": "Muckamore MW1 XI",
-      "awayTeam": "Arches MW XI",
-      "venue": "Moylena, Muckamore",
-      "result": "Arches MW XI won by 13 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/9d6c20d4-bf55-4ad8-a013-3d521a0cc24a"
-    },
-    {
-      "date": "26 July 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Ardent Blues 4th XI",
-      "venue": "TBC, TBC",
-      "result": "Arches 2nd XI won by 9 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/c8d2cfb6-b69d-4828-b2ee-1a305f5dd004"
-    },
-    {
-      "date": "25 July 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
+      "date": "23 May 2026",
+      "league": "Senior League 3",
       "homeTeam": "Drumaness Superkings 1st XI",
       "awayTeam": "Arches 1st XI",
-      "venue": "The Village Ground, Drumaness",
-      "result": "Drumaness Superkings 1st XI won by 37 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/24166874-1bf6-4c61-a13b-96301557e7ac"
+      "venue": "Drumaness",
+      "result": "Drumaness Superkings 1st XI won by 235 runs",
+      "score": "Drumaness Superkings 334-9; Arches 99"
     },
     {
-      "date": "22 July 2026",
-      "time": "",
-      "league": "Midweek League Group B",
-      "homeTeam": "CSNI MW XI",
-      "awayTeam": "Arches MW XI",
-      "venue": "Stormont, Belfast",
-      "result": "Arches MW XI won by 50 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/03878c09-aec0-4edd-aed3-6b8c2a24917e"
-    },
-    {
-      "date": "19 July 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Downpatrick 3rd XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBC, TBC",
-      "result": "Arches 2nd XI won by 22 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/37dd46b4-e2bc-4544-8bb0-0b21c42e636d"
-    },
-    {
-      "date": "19 July 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
+      "date": "13 June 2026",
+      "league": "Senior League 3",
       "homeTeam": "Arches 1st XI",
-      "awayTeam": "Belfast Superkings 1st XI",
-      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
-      "result": "Belfast Superkings 1st XI won by 4 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/8b50e82b-0af5-4ae4-a05b-75a06a67001a"
-    },
-    {
-      "date": "18 July 2026",
-      "time": "",
-      "league": "Development Cup",
-      "homeTeam": "Lisburn 5th XI",
-      "awayTeam": "Arches 2nd XI",
+      "awayTeam": "Amigos Belfast 1st XI",
       "venue": "Victoria Park, Belfast",
-      "result": "Arches 2nd XI won by 5 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/ba702836-b12d-4648-a793-969128180c54"
+      "result": "Amigos Belfast 1st XI won by 4 wickets",
+      "score": "Arches 88; Amigos Belfast 92-6"
     },
     {
-      "date": "14 July 2026",
-      "time": "",
-      "league": "Midweek League Group B",
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Dunmurry MW2 XI",
-      "venue": "TBC, TBC",
-      "result": "Arches MW XI won by 5 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/43dbf251-9006-401e-9ff8-1bee03739131"
+      "date": "20 June 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Dundrum 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 1st XI won by 36 runs",
+      "score": "Arches 121; Dundrum 85"
     },
     {
-      "date": "12 July 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Amigos Belfast 3rd XI",
-      "awayTeam": "Arches 2nd XI",
-      "venue": "TBC, TBC",
-      "result": "Arches 2nd XI won by 79 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/cfc11f4e-eeb1-462a-bb1c-9a249e682128"
-    },
-    {
-      "date": "8 July 2026",
-      "time": "",
-      "league": "Midweek League Group B",
-      "homeTeam": "Muckamore MW2 XI",
-      "awayTeam": "Arches MW XI",
-      "venue": "Moylena, Muckamore",
-      "result": "Muckamore MW2 XI won by 7 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/bd72db2e-eb7c-4bdb-90a8-83d32a2bd719"
-    },
-    {
-      "date": "5 July 2026",
-      "time": "",
-      "league": "Junior League 10",
-      "homeTeam": "Arches 2nd XI",
-      "awayTeam": "Dungannon 1st XI",
-      "venue": "TBC, TBC",
-      "result": "Dungannon 1st XI won by 31 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/ad26359d-98c5-4cc5-a788-8035a14ecb6b"
-    },
-    {
-      "date": "4 July 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
-      "homeTeam": "Ards & Donaghadee 1st XI",
+      "date": "24 June 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Belfast Superkings 1st XI",
       "awayTeam": "Arches 1st XI",
-      "venue": "Northfield, Donaghadee",
-      "result": "Ards & Donaghadee 1st XI won by 106 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/f492c80f-64d3-4df1-a3d0-415fb2f267e7"
-    },
-    {
-      "date": "30 June 2026",
-      "time": "",
-      "league": "Midweek League Group B",
-      "homeTeam": "Arches MW XI",
-      "awayTeam": "Cliftonville Academy MW XI",
-      "venue": "TBC, TBC",
-      "result": "Arches MW XI won by 7 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/d6f92803-9fae-4c72-9cd2-632b7fd5236b"
+      "venue": "Mallusk",
+      "result": "Belfast Superkings 1st XI won by 62 runs",
+      "score": "Belfast Superkings 122; Arches 60"
     },
     {
       "date": "27 June 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
+      "league": "Senior League 3",
       "homeTeam": "Victoria 1st XI",
       "awayTeam": "Arches 1st XI",
       "venue": "Lurgan Park, Lurgan",
       "result": "Victoria 1st XI won by 8 wickets",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/79b5303d-feb1-4a33-b0c2-6b4134218c08"
+      "score": "Arches 79; Victoria 80-2"
     },
     {
-      "date": "25 June 2026",
-      "time": "",
-      "league": "Lagan Valley Steels T20 Shield",
+      "date": "4 July 2026",
+      "league": "Senior League 3",
       "homeTeam": "Ards & Donaghadee 1st XI",
       "awayTeam": "Arches 1st XI",
       "venue": "Northfield, Donaghadee",
-      "result": "Ards & Donaghadee 1st XI won by 24 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/61057371-7652-4578-9f56-76ed38930428"
+      "result": "Ards & Donaghadee 1st XI won by 106 runs",
+      "score": "Ards & Donaghadee 224; Arches 118"
     },
     {
-      "date": "24 June 2026",
-      "time": "",
-      "league": "Mercury Senior League 3",
-      "homeTeam": "Belfast Superkings 1st XI",
+      "date": "19 July 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Belfast Superkings 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Belfast Superkings 1st XI won by 4 wickets",
+      "score": "Arches 125; Belfast Superkings 126-6"
+    },
+    {
+      "date": "25 July 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Drumaness Superkings 1st XI",
       "awayTeam": "Arches 1st XI",
-      "venue": "City of Belfast Playing Fields (BSK), Mallusk",
-      "result": "Belfast Superkings 1st XI won by 62 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/afc6cb9b-93fa-4497-bbc7-86da38b0a73e"
+      "venue": "Drumaness",
+      "result": "Drumaness Superkings 1st XI won by 37 runs",
+      "score": "Drumaness Superkings 358-9; Arches 321"
+    },
+    {
+      "date": "2 August 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "NIMACC 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 1st XI won by 1 wicket",
+      "score": "NIMACC 194-9; Arches 195-9"
+    },
+    {
+      "date": "8 August 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Dundrum 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "The Meadow, Dundrum",
+      "result": "Dundrum 1st XI won by 80 runs",
+      "score": "Dundrum 288-7; Arches 208"
+    },
+    {
+      "date": "15 August 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Amigos Belfast 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 1st XI won by 113 runs",
+      "score": "Arches 277-9; Amigos Belfast 164"
+    },
+    {
+      "date": "22 August 2026",
+      "league": "Senior League 3",
+      "homeTeam": "Arches 1st XI",
+      "awayTeam": "Victoria 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Victoria 1st XI won by 28 runs",
+      "score": "Victoria 229; Arches 201"
+    },
+    {
+      "date": "10 May 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "NIMACC 2nd XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2nd XI won (Awarded - ineligible player)",
+      "score": "Arches 2 193; NIMACC 2 played ineligible player"
+    },
+    {
+      "date": "6 June 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Lurgan 3rd XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Lurgan 3rd XI won by 4 wickets",
+      "score": "Arches 2 147-6; Lurgan 3 148-6"
+    },
+    {
+      "date": "7 June 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "CI 5th XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "CI 5th XI won by 2 wickets",
+      "score": "Arches 2 148-6; CI 5 151-8"
+    },
+    {
+      "date": "14 June 2026",
+      "league": "Junior League 10",
+      "homeTeam": "North Down 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "The Green, Comber",
+      "result": "Arches 2nd XI won by 7 wickets",
+      "score": "North Down 4 129-8; Arches 2 130-3"
+    },
+    {
+      "date": "21 June 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Templepatrick 4th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "The Cloughan",
+      "result": "Arches 2nd XI won by 5 wickets",
+      "score": "Templepatrick 4 106-8; Arches 2 110-5"
+    },
+    {
+      "date": "5 July 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Dungannon 1st XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Dungannon 1st XI won by 31 runs",
+      "score": "Dungannon 198; Arches 2 167-8"
+    },
+    {
+      "date": "12 July 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Amigos Belfast 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Mallusk",
+      "result": "Arches 2nd XI won by 79 runs",
+      "score": "Arches 2 242-3; Amigos Belfast 3 163-8"
+    },
+    {
+      "date": "19 July 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Downpatrick 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Strangford Road, Downpatrick",
+      "result": "Arches 2nd XI won by 22 runs",
+      "score": "Arches 2 170-8; Downpatrick 3 148"
+    },
+    {
+      "date": "26 July 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Ardent Blues 4th XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2nd XI won by 9 wickets",
+      "score": "Ardent Blues 4 179-9; Arches 2 180-1"
+    },
+    {
+      "date": "9 August 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Cooke Collegians 4th XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2nd XI won by 64 runs",
+      "score": "Arches 2 231-8; Cooke Collegians 4 167-7"
+    },
+    {
+      "date": "23 August 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Belfast Superkings 2nd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Mallusk",
+      "result": "Belfast Superkings 2nd XI won by 4 wickets",
+      "score": "Arches 2 168-8; Belfast Superkings 2 174-6"
+    },
+    {
+      "date": "31 August 2026",
+      "league": "Junior League 10",
+      "homeTeam": "Arches 2nd XI",
+      "awayTeam": "Belfast Superkings 3rd XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches 2nd XI won by 14 runs",
+      "score": "Arches 2 222-6; Belfast Superkings 3 208-7"
+    },
+    {
+      "date": "26 May 2026",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Ardent Blues MW2 XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Ardent Blues MW2 XI won by 7 wickets",
+      "score": "Arches 115-9; Ardent Blues 2 won"
+    },
+    {
+      "date": "2 June 2026",
+      "league": "Midweek League",
+      "homeTeam": "Belfast MW XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "Belfast",
+      "result": "Arches MW XI won by 9 wickets",
+      "score": "Belfast 151-4; Arches 152-1"
+    },
+    {
+      "date": "16 June 2026",
+      "league": "Midweek League",
+      "homeTeam": "Cregagh MW XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "Gibson Park, Belfast",
+      "result": "Arches MW XI won by 9 wickets",
+      "score": "Cregagh 145-9; Arches 147-1"
     },
     {
       "date": "23 June 2026",
-      "time": "",
-      "league": "Midweek League Group B",
+      "league": "Midweek League",
       "homeTeam": "Cooke Collegians MW XI",
       "awayTeam": "Arches MW XI",
       "venue": "Pirrie Park, Belfast",
       "result": "Arches MW XI won by 27 runs",
-      "scorecardUrl": "https://cricketireland.nvplay.com/match/2cba90aa-9a4d-48e9-bd19-f9f00b3627bf"
+      "score": "Arches 183-5; Cooke Collegians 156-6"
+    },
+    {
+      "date": "30 June 2026",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Cliftonville Academy MW XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches MW XI won by 7 wickets",
+      "score": "Cliftonville Academy 157-5; Arches 160-3"
+    },
+    {
+      "date": "8 July 2026",
+      "league": "Midweek League",
+      "homeTeam": "Muckamore MW2 XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "Moylena, Muckamore",
+      "result": "Muckamore MW2 XI won by 7 wickets",
+      "score": "Arches 138-8; Muckamore 2 142-3"
+    },
+    {
+      "date": "14 July 2026",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "venue": "Victoria Park, Belfast",
+      "result": "Arches MW XI won by 5 wickets",
+      "score": "Dunmurry 2 177-7; Arches 181-5"
+    },
+    {
+      "date": "22 July 2026",
+      "league": "Midweek League",
+      "homeTeam": "CSNI MW XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "Stormont, Belfast",
+      "result": "Arches MW XI won by 50 runs",
+      "score": "Arches 178-7; CSNI 128"
+    },
+    {
+      "date": "29 July 2026",
+      "league": "Midweek League",
+      "homeTeam": "Muckamore MW1 XI",
+      "awayTeam": "Arches MW XI",
+      "venue": "Moylena, Muckamore",
+      "result": "Arches MW XI won by 13 runs",
+      "score": "Arches 169-6; Muckamore 1 156-7 (Semi-Final)"
+    },
+    {
+      "date": "6 August 2026",
+      "league": "Midweek League",
+      "homeTeam": "Arches MW XI",
+      "awayTeam": "Dunmurry MW2 XI",
+      "venue": "Mallusk",
+      "result": "Dunmurry MW2 XI won by 101 runs",
+      "score": "Dunmurry 2 198-5; Arches 97 (Final)"
+    },
+    {
+      "date": "9 May 2026",
+      "league": "Junior Cup",
+      "homeTeam": "BISC",
+      "awayTeam": "Arches 1st XI",
+      "venue": "Civil Service, Stormont",
+      "result": "BISC won by 87 runs",
+      "score": "BISC 207-9; Arches 120"
+    },
+    {
+      "date": "30 May 2026",
+      "league": "Development Cup",
+      "homeTeam": "Saintfield 3rd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "The Demesne, Saintfield",
+      "result": "Arches 2nd XI won by 5 wickets",
+      "score": "Saintfield 3 178-9; Arches 2 183-5"
+    },
+    {
+      "date": "20 June 2026",
+      "league": "Development Cup",
+      "homeTeam": "CSNI 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Stormont, Belfast",
+      "result": "Arches 2nd XI won by 7 wickets",
+      "score": "CSNI 5 91-8; Arches 2 95-3"
+    },
+    {
+      "date": "25 June 2026",
+      "league": "T20 Shield Cup",
+      "homeTeam": "Ards & Donaghadee 1st XI",
+      "awayTeam": "Arches 1st XI",
+      "venue": "Northfield, Donaghadee",
+      "result": "Ards & Donaghadee 1st XI won by 24 runs",
+      "score": "Ards & Donaghadee 150; Arches 126 (Quarter-Final)"
+    },
+    {
+      "date": "18 July 2026",
+      "league": "Development Cup",
+      "homeTeam": "Lisburn 5th XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Wallace Park, Lisburn",
+      "result": "Arches 2nd XI won by 5 wickets",
+      "score": "Lisburn 5 197-7; Arches 2 200-5 (Quarter-Final)"
+    },
+    {
+      "date": "1 August 2026",
+      "league": "Development Cup",
+      "homeTeam": "Amigos Belfast 2nd XI",
+      "awayTeam": "Arches 2nd XI",
+      "venue": "Mallusk",
+      "result": "Amigos Belfast 2nd XI won by 10 runs",
+      "score": "Amigos Belfast 2 214-8; Arches 2 204 (Semi-Final)"
     }
   ]
 }

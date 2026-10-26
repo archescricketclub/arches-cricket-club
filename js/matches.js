@@ -49,9 +49,9 @@ function parseMatchDate(dateStr) {
     const yearMatch = part.match(/^(20\d{2})$/);
     if (yearMatch) {
       year = parseInt(yearMatch[1], 10);
-    } else if (dayMatch) {
+    } else if (dayMatch && day === null) {
       day = parseInt(dayMatch[1], 10);
-    } else if (months[upper] !== undefined) {
+    } else if (months[upper] !== undefined && month === null) {
       month = months[upper];
     }
   }
@@ -136,7 +136,7 @@ function calculateStats(results) {
     const involvesArches = homeLower.includes('arches') || awayLower.includes('arches') || resLower.includes('arches');
     if (!involvesArches) return;
     
-    const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)'];
+    const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)', 'match tied', 'tied with'];
     let isNoResult = noResultKeywords.some(k => resLower.includes(k));
     
     let isWin = false;
@@ -272,7 +272,7 @@ function renderMatches() {
 
       if (currentMode === 'results') {
         let resultSpan = '';
-        const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)'];
+        const noResultKeywords = ['postponed', 'abandoned', 'no result', 'cancelled', 'tbd', 'to be decided', 'postponement', 'match postponed', 'unplayed', 'completed (no result)', 'match tied', 'tied with'];
         let isNoResult = noResultKeywords.some(k => resLower.includes(k));
         let isWin = false;
         let isLoss = false;
@@ -361,83 +361,57 @@ async function loadData(season = selectedSeason) {
 
   let seasonData = null;
 
-  // 1. Try Supabase cloud database if connected
-  if (window.DB && window.DB.client) {
+  // 1. Load verified segregated JSON dataset
+  const v = Date.now();
+  try {
+    let targetUrl = `data/matches_2026.json?v=${v}`;
+    if (season === '2025') {
+      targetUrl = `data/archive/matches_2025.json?v=${v}`;
+    }
+    const res = await fetch(targetUrl);
+    if (res.ok) {
+      seasonData = await res.json();
+    } else {
+      const fallbackRes = await fetch(`data/matches.json?v=${v}`);
+      seasonData = await fallbackRes.json();
+    }
+  } catch (e) {
+    console.warn('Error loading local matches JSON:', e);
+  }
+
+  // 2. Fallback to Supabase cloud database if local fetch was unavailable
+  if ((!seasonData || !seasonData.results || seasonData.results.length === 0) && window.DB && window.DB.client) {
     try {
       const { data, error } = await window.DB.client
         .from('matches')
         .select('*')
         .eq('season', season);
       if (!error && data && data.length > 0) {
-        if (season === '2025') {
-          // 2025 is a completed season: all matches are in results
-          const results = data.map(m => ({
-            date: m.date_display,
-            league: m.league,
-            homeTeam: m.home_team,
-            awayTeam: m.away_team,
-            venue: m.venue,
-            result: m.result || 'Completed (No Result)'
-          }));
-          seasonData = { fixtures: [], results };
-        } else {
-          const fixtures = data.filter(m => m.status === 'scheduled').map(m => ({
-            date: m.date_display,
-            league: m.league,
-            homeTeam: m.home_team,
-            awayTeam: m.away_team,
-            venue: m.venue,
-            result: m.result
-          }));
-          const results = data.filter(m => m.status === 'completed').map(m => ({
-            date: m.date_display,
-            league: m.league,
-            homeTeam: m.home_team,
-            awayTeam: m.away_team,
-            venue: m.venue,
-            result: m.result
-          }));
-          seasonData = { fixtures, results };
-        }
+        const results = data.filter(m => m.status === 'completed' || season === '2025').map(m => ({
+          date: m.date_display,
+          league: m.league,
+          homeTeam: m.home_team,
+          awayTeam: m.away_team,
+          venue: m.venue,
+          result: m.result || 'Completed (No Result)'
+        }));
+        const fixtures = data.filter(m => m.status === 'scheduled' && season !== '2025').map(m => ({
+          date: m.date_display,
+          league: m.league,
+          homeTeam: m.home_team,
+          awayTeam: m.away_team,
+          venue: m.venue,
+          result: m.result
+        }));
+        seasonData = { fixtures, results };
       }
     } catch (err) {
-      console.warn('[Matches] Supabase query error, fallback to JSON:', err);
+      console.warn('[Matches] Supabase query error:', err);
     }
   }
 
-  // 2. Fallback to local segregated JSON files
   if (!seasonData) {
-    const v = Date.now();
-    try {
-      let targetUrl = `data/matches_2026.json?v=${v}`;
-      if (season === '2025') {
-        targetUrl = `data/archive/matches_2025.json?v=${v}`;
-      }
-      const res = await fetch(targetUrl);
-      if (res.ok) {
-        seasonData = await res.json();
-      } else {
-        const fallbackRes = await fetch(`data/matches.json?v=${v}`);
-        seasonData = await fallbackRes.json();
-      }
-    } catch (e) {
-      console.error('Error loading matches JSON:', e);
-      seasonData = { fixtures: [], results: [] };
-    }
-  }
-
-  // If season is 2025, guarantee that any fixture items in JSON are merged into results
-  if (season === '2025' && seasonData.fixtures && seasonData.fixtures.length > 0) {
-    const extraResults = seasonData.fixtures.map(f => ({
-      date: f.date,
-      league: f.league,
-      homeTeam: f.homeTeam,
-      awayTeam: f.awayTeam,
-      venue: f.venue,
-      result: f.result || 'Completed (No Result)'
-    }));
-    seasonData.results = [...(seasonData.results || []), ...extraResults];
-    seasonData.fixtures = [];
+    seasonData = { fixtures: [], results: [] };
   }
 
   allFixtures = sortMatches(seasonData.fixtures || [], false);
